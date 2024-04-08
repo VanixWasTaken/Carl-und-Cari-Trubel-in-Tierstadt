@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://d0sg81cbdx27u"]
+
+[ext_resource type="Texture2D" uid="uid://hrdjx0863o5d" path="res://Assets/Test/map_test.png" id="1_mdafp"]
+[ext_resource type="Script" path="res://Scenes and Scripts/map_house_test.gd" id="2_e7gsj"]
+[ext_resource type="Texture2D" uid="uid://cdk034lnactt1" path="res://Assets/Test/House Animation/map_house_animation_test0.png" id="2_s8uy4"]
+[ext_resource type="Texture2D" uid="uid://s7np8vn7a40x" path="res://Assets/Test/House Animation/map_house_animation_test1.png" id="4_ek0bm"]
+[ext_resource type="Texture2D" uid="uid://dulbumr0rh2st" path="res://Assets/Test/House Animation/map_house_animation_test2.png" id="5_u4elg"]
+[ext_resource type="Texture2D" uid="uid://cqtp0uxkli3co" path="res://Assets/Test/House Animation/map_house_animation_test3.png" id="6_aa40f"]
+[ext_resource type="Script" path="res://Scenes and Scripts/job_notes.gd" id="7_ogfj7"]
+[ext_resource type="Texture2D" uid="uid://buqy3fnj1b2cp" path="res://Assets/Test/Jobzettel_Button_.png" id="7_yoxky"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_unxvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s8uy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ek0bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u4elg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_aa40f")
+}],
+"loop": true,
+"name": &"house_animation_test",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab4lo"]
+size = Vector2(349.217, 432.553)
+
+[node name="Map" type="Node2D"]
+
+[node name="MapTest" type="Node2D" parent="."]
+position = Vector2(1080, 813)
+
+[node name="Sprite2D" type="Sprite2D" parent="MapTest"]
+texture = ExtResource("1_mdafp")
+
+[node name="MapHouseTest" type="Node2D" parent="."]
+script = ExtResource("2_e7gsj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MapHouseTest"]
+position = Vector2(1080, 816)
+sprite_frames = SubResource("SpriteFrames_unxvv")
+animation = &"house_animation_test"
+
+[node name="Area2D" type="Area2D" parent="MapHouseTest"]
+position = Vector2(1080, 813)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapHouseTest/Area2D"]
+polygon = PackedVector2Array(-479, -282, -385, -389, -304, -312, -313, -228, -440, -185)
+
+[node name="JobNotes" type="Node2D" parent="."]
+script = ExtResource("7_ogfj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="JobNotes"]
+position = Vector2(183, 165)
+scale = Vector2(0.503984, 0.503984)
+texture = ExtResource("7_yoxky")
+
+[node name="Area2D" type="Area2D" parent="JobNotes"]
+position = Vector2(183, 165)
+scale = Vector2(0.503984, 0.503984)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JobNotes/Area2D"]
+position = Vector2(-19.8418, -17.8576)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ab4lo")
+
+[connection signal="mouse_entered" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_exited"]
