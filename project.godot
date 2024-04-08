@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Carl und Cari Trubel in Tierstadt"
+run/main_scene="res://Scenes and Scripts/map.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,7 +21,12 @@ window/size/viewport_width=2160
 window/size/viewport_height=1620
 window/size/mode=3
 window/stretch/aspect="ignore"
-window/stretch/scale=0.8
+window/stretch/scale=0.5
+
+[internationalization]
+
+rendering/main_scene="res://Scenes and Scripts/map.tscn"
+rendering/stretch/scale=0.5
 
 [rendering]
 
