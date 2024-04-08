@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buqy3fnj1b2cp"
-path="res://.godot/imported/jobzettel_button_.png-001a1991c9690edd3c8035f36ea9b60d.ctex"
+uid="uid://cm4hcr8fw4k5a"
+path="res://.godot/imported/job_note1.PNG-cb64d2d4ca0f009c7282e9e2c9944e58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Test/jobzettel_button_.png"
-dest_files=["res://.godot/imported/jobzettel_button_.png-001a1991c9690edd3c8035f36ea9b60d.ctex"]
+source_file="res://Assets/job_note1.PNG"
+dest_files=["res://.godot/imported/job_note1.PNG-cb64d2d4ca0f009c7282e9e2c9944e58.ctex"]
 
 [params]
 
