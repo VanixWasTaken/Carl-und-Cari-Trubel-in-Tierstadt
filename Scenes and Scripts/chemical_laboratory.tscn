@@ -1,0 +1,314 @@
+[gd_scene load_steps=49 format=3 uid="uid://v8l885c1xsm5"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/chemical_laboratory.gd" id="1_b2cfh"]
+[ext_resource type="Texture2D" uid="uid://djwgsl8qdi8h6" path="res://Assets/Test/drink_holder_empty.png" id="2_ujlwc"]
+[ext_resource type="Texture2D" uid="uid://b1yh636oam2rh" path="res://Assets/Test/drink_holder_water_1.png" id="3_36t6l"]
+[ext_resource type="Texture2D" uid="uid://d4iyf3lnxq1wn" path="res://Assets/Test/drink_holder_mix_1.png" id="4_nlbyv"]
+[ext_resource type="Texture2D" uid="uid://cfulhdsnb3fah" path="res://Assets/Test/drink_holder_water_2.png" id="5_djt46"]
+[ext_resource type="Texture2D" uid="uid://cbmbnaxkt46eo" path="res://Assets/Test/drink_holder_mix_2.png" id="6_uxdrq"]
+[ext_resource type="Texture2D" uid="uid://bq1xm3raio57n" path="res://Assets/Test/drink_holder_water_3.png" id="7_65v5q"]
+[ext_resource type="Texture2D" uid="uid://c5y5pjca633gs" path="res://Assets/Test/drink_holder_mix_3.png" id="8_g4a82"]
+[ext_resource type="Texture2D" uid="uid://dx31ix0iyfenf" path="res://Assets/Test/scale.png" id="9_62uh1"]
+[ext_resource type="Script" path="res://Scenes and Scripts/drink_holder.gd" id="9_hvdtc"]
+[ext_resource type="Texture2D" uid="uid://bnovic5wao87g" path="res://Assets/Test/water_pitcher.png" id="10_0ugwe"]
+[ext_resource type="Script" path="res://Scenes and Scripts/water_cup.gd" id="11_jiefe"]
+[ext_resource type="Texture2D" uid="uid://dfyjg6o1xhf1c" path="res://Assets/Test/pulver_2.png" id="12_n7av0"]
+[ext_resource type="Script" path="res://Scenes and Scripts/pulver.gd" id="13_yairb"]
+[ext_resource type="Texture2D" uid="uid://bktfrqapes445" path="res://Assets/Test/pulver_3.png" id="14_n0lm2"]
+[ext_resource type="Texture2D" uid="uid://bji7bvp2gh3q4" path="res://Assets/Test/pulver_1.png" id="15_s57kk"]
+[ext_resource type="Texture2D" uid="uid://n7l3pox5by56" path="res://Assets/Test/pulver_vessel_empty.png" id="16_ac3qq"]
+[ext_resource type="Texture2D" uid="uid://chesqpjaa5e11" path="res://Assets/Test/pulver_vessel_purple_1.png" id="17_ykirh"]
+[ext_resource type="Texture2D" uid="uid://c1g8h77fdxeq1" path="res://Assets/Test/pulver_vessel_purple_2.png" id="18_ydxxs"]
+[ext_resource type="Texture2D" uid="uid://8602atlhoqm6" path="res://Assets/Test/pulver_vessel_purple_3.png" id="19_hdagi"]
+[ext_resource type="Texture2D" uid="uid://bur6vn7toyo4b" path="res://Assets/Test/pulver_vessel_purple_4.png" id="20_l8u2w"]
+[ext_resource type="Texture2D" uid="uid://byo7i7iafl1ji" path="res://Assets/Test/pulver_vessel_red_1.png" id="21_3vbhw"]
+[ext_resource type="Texture2D" uid="uid://dy7m3h423mt6d" path="res://Assets/Test/pulver_vessel_red_2.png" id="22_0mkdw"]
+[ext_resource type="Texture2D" uid="uid://d01562voj2hp1" path="res://Assets/Test/pulver_vessel_red_3.png" id="23_p5sn3"]
+[ext_resource type="Texture2D" uid="uid://batyjaith7krl" path="res://Assets/Test/pulver_vessel_red_4.png" id="24_wkruo"]
+[ext_resource type="Texture2D" uid="uid://cfcy8h47gj22i" path="res://Assets/Test/pulver_vessel_red_5.png" id="25_0482o"]
+[ext_resource type="Texture2D" uid="uid://crbst52s2nri5" path="res://Assets/Test/pulver_vessel_red_6.png" id="26_qjftv"]
+[ext_resource type="Texture2D" uid="uid://c4q2pwnwtjv5n" path="res://Assets/Test/pulver_vessel_yellow_1.png" id="27_tycnb"]
+[ext_resource type="Texture2D" uid="uid://cvhjre4ahx4n8" path="res://Assets/Test/pulver_vessel_yellow_2.png" id="28_lhjea"]
+[ext_resource type="Texture2D" uid="uid://dguutvf3y6a2a" path="res://Assets/Test/pulver_vessel_yellow_3.png" id="29_0hk8d"]
+[ext_resource type="Texture2D" uid="uid://7gx1pjwrf130" path="res://Assets/Test/pulver_vessel_yellow_4.png" id="30_qu5ct"]
+[ext_resource type="Texture2D" uid="uid://c1mtjn0dvt5lk" path="res://Assets/Test/pulver_vessel_yellow_5.png" id="31_xnyqc"]
+[ext_resource type="Script" path="res://Scenes and Scripts/pulver_bowl.gd" id="32_ebx3t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mrjln"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ujlwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_36t6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nlbyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_djt46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uxdrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_65v5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_g4a82")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbfg1"]
+size = Vector2(198, 350)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_828ff"]
+size = Vector2(184, 366)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nk3i"]
+size = Vector2(182, 377)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqi52"]
+size = Vector2(358, 501)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_owpuh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_0ugwe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqc8m"]
+size = Vector2(367, 443)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6dnwd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_n7av0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc7aw"]
+size = Vector2(350, 293)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mtd7m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_n0lm2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcvw4"]
+size = Vector2(355, 284)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c2ujo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_s57kk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5hvy"]
+size = Vector2(369, 306)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ogow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ac3qq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ykirh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ydxxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hdagi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_l8u2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_3vbhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0mkdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_p5sn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_wkruo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0482o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qjftv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_tycnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_lhjea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0hk8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_qu5ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_xnyqc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rewly"]
+size = Vector2(279, 91)
+
+[node name="ChemicalLaboratory" type="Node2D"]
+script = ExtResource("1_b2cfh")
+
+[node name="DrinkHolder" type="AnimatedSprite2D" parent="."]
+position = Vector2(1035, 435)
+sprite_frames = SubResource("SpriteFrames_mrjln")
+script = ExtResource("9_hvdtc")
+
+[node name="Area2D" type="Area2D" parent="DrinkHolder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkHolder/Area2D"]
+position = Vector2(-167, -35)
+shape = SubResource("RectangleShape2D_fbfg1")
+
+[node name="Area2D2" type="Area2D" parent="DrinkHolder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkHolder/Area2D2"]
+position = Vector2(37, -32)
+shape = SubResource("RectangleShape2D_828ff")
+
+[node name="Area2D3" type="Area2D" parent="DrinkHolder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkHolder/Area2D3"]
+position = Vector2(227, -39.5)
+shape = SubResource("RectangleShape2D_6nk3i")
+
+[node name="Scale" type="Sprite2D" parent="."]
+position = Vector2(1056, 1138)
+texture = ExtResource("9_62uh1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Scale"]
+offset_left = -39.0
+offset_top = 98.0
+offset_right = 202.0
+offset_bottom = 149.0
+theme_override_colors/default_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/normal_font_size = 37
+text = "Gewicht Hier
+"
+scroll_active = false
+
+[node name="Area2D" type="Area2D" parent="Scale"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scale/Area2D"]
+position = Vector2(54, -199.5)
+shape = SubResource("RectangleShape2D_iqi52")
+
+[node name="WaterCup" type="AnimatedSprite2D" parent="."]
+position = Vector2(214, 395)
+sprite_frames = SubResource("SpriteFrames_owpuh")
+script = ExtResource("11_jiefe")
+
+[node name="WaterCup" type="Area2D" parent="WaterCup"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterCup/WaterCup"]
+position = Vector2(-4.5, -0.5)
+shape = SubResource("RectangleShape2D_rqc8m")
+
+[node name="RedPulver" type="AnimatedSprite2D" parent="."]
+position = Vector2(430, 837)
+sprite_frames = SubResource("SpriteFrames_6dnwd")
+script = ExtResource("13_yairb")
+metadata/_edit_group_ = true
+
+[node name="RedPulver" type="Area2D" parent="RedPulver"]
+position = Vector2(-13, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedPulver/RedPulver"]
+position = Vector2(16, -2.5)
+shape = SubResource("RectangleShape2D_xc7aw")
+
+[node name="YellowPulver" type="AnimatedSprite2D" parent="."]
+position = Vector2(317, 1325)
+sprite_frames = SubResource("SpriteFrames_mtd7m")
+script = ExtResource("13_yairb")
+metadata/_edit_group_ = true
+
+[node name="YellowPulver" type="Area2D" parent="YellowPulver"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YellowPulver/YellowPulver"]
+position = Vector2(3.5, 5)
+shape = SubResource("RectangleShape2D_tcvw4")
+
+[node name="PurplePulver" type="AnimatedSprite2D" parent="."]
+position = Vector2(1907, 785)
+sprite_frames = SubResource("SpriteFrames_c2ujo")
+script = ExtResource("13_yairb")
+metadata/_edit_group_ = true
+
+[node name="PurplePulver" type="Area2D" parent="PurplePulver"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PurplePulver/PurplePulver"]
+position = Vector2(3.5, -6)
+shape = SubResource("RectangleShape2D_a5hvy")
+
+[node name="PulverBowl" type="AnimatedSprite2D" parent="."]
+position = Vector2(1115, 1076)
+sprite_frames = SubResource("SpriteFrames_4ogow")
+script = ExtResource("32_ebx3t")
+metadata/_edit_group_ = true
+
+[node name="PulverBowl" type="Area2D" parent="PulverBowl"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PulverBowl/PulverBowl"]
+position = Vector2(-3.5, -0.5)
+shape = SubResource("RectangleShape2D_rewly")
+
+[connection signal="area_entered" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="DrinkHolder/Area2D2" to="DrinkHolder" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="DrinkHolder/Area2D3" to="DrinkHolder" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Scale/Area2D" to="PulverBowl" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Scale/Area2D" to="PulverBowl" method="_on_area_2d_area_exited"]
+[connection signal="mouse_entered" from="WaterCup/WaterCup" to="WaterCup" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="WaterCup/WaterCup" to="WaterCup" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="RedPulver/RedPulver" to="RedPulver" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="RedPulver/RedPulver" to="RedPulver" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="YellowPulver/YellowPulver" to="YellowPulver" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="YellowPulver/YellowPulver" to="YellowPulver" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="PurplePulver/PurplePulver" to="PurplePulver" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="PurplePulver/PurplePulver" to="PurplePulver" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="PulverBowl/PulverBowl" to="PulverBowl" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="PulverBowl/PulverBowl" to="PulverBowl" method="_on_area_2d_mouse_exited"]
