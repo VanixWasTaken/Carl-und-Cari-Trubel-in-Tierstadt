@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dulbumr0rh2st" path="res://Assets/Test/House Animation/map_house_animation_test2.png" id="5_u4elg"]
 [ext_resource type="Texture2D" uid="uid://cqtp0uxkli3co" path="res://Assets/Test/House Animation/map_house_animation_test3.png" id="6_aa40f"]
 [ext_resource type="Script" path="res://Scenes and Scripts/job_notes.gd" id="7_ogfj7"]
-[ext_resource type="Texture2D" uid="uid://buqy3fnj1b2cp" path="res://Assets/Test/jobzettel_button_.png" id="7_yoxky"]
+[ext_resource type="Texture2D" uid="uid://buqy3fnj1b2cp" path="res://Assets/Test/Jobzettel_Button_.png" id="7_yoxky"]
 [ext_resource type="Texture2D" uid="uid://b3tvfgcp4gink" path="res://Assets/Test/hud_background.png" id="9_cvvni"]
 [ext_resource type="Script" path="res://Scenes and Scripts/exit_button.gd" id="10_0oi3s"]
 [ext_resource type="Texture2D" uid="uid://c2vqnkipjixlw" path="res://Assets/Test/in_map_menu_job_note.png" id="10_kbx72"]
@@ -119,18 +119,33 @@ texture = ExtResource("10_kbx72")
 position = Vector2(404.5, 377)
 shape = SubResource("RectangleShape2D_8raen")
 
-[node name="JobNote1" type="Node2D" parent="JobNotes/JobNoteMenu/InJobMenuJobNote1"]
+[node name="JobNote1" type="Node2D" parent="JobNotes/JobNoteMenu"]
 
-[node name="Sprite2D" type="Sprite2D" parent="JobNotes/JobNoteMenu/InJobMenuJobNote1/JobNote1"]
+[node name="Sprite2D" type="Sprite2D" parent="JobNotes/JobNoteMenu/JobNote1"]
 position = Vector2(921, 543)
 scale = Vector2(0.81471, 0.81471)
 texture = ExtResource("13_2x76a")
 
+[node name="QuitButton" type="Sprite2D" parent="JobNotes/JobNoteMenu/JobNote1/Sprite2D"]
+position = Vector2(238.122, -407.507)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_8vqrx")
+
+[node name="PaperQuit" type="Area2D" parent="JobNotes/JobNoteMenu/JobNote1/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit"]
+position = Vector2(235.667, -406.28)
+polygon = PackedVector2Array(-47.8698, 29.4583, -51.5521, -57.6892, -81.0104, -103.104, -33.1406, -87.1476, 15.9565, -49.0972, 50.3246, -7.36458, 81.0104, 47.8698, 94.5121, 105.559, 96.967, 157.111, 67.5087, 100.649, 22.0938, 56.4618)
+
 [connection signal="mouse_entered" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_exited"]
+[connection signal="deactivate_house" from="JobNotes" to="MapHouseTest" method="_on_job_notes_deactivate_house"]
+[connection signal="reactivate_house" from="JobNotes" to="MapHouseTest" method="_on_job_notes_reactivate_house"]
 [connection signal="mouse_entered" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="JobNotes/JobNoteMenu/ExitButton/Area2D" to="JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="JobNotes/JobNoteMenu/ExitButton/Area2D" to="JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D" to="JobNotes" method="_on_area_2d_InJobMenuJobNote1_mouse_entered"]
 [connection signal="mouse_exited" from="JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D" to="JobNotes" method="_on_area_2d_InJobMenuJobNote1_mouse_exited"]
+[connection signal="mouse_entered" from="JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="JobNotes" method="_on_paper_quit_mouse_entered"]
+[connection signal="mouse_exited" from="JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="JobNotes" method="_on_paper_quit_mouse_exited"]
