@@ -14,16 +14,13 @@ var open_note1 = 0
 func _process(delta):
 
 		  # Deactivates the houses Area2D, so you cant click it when the notes are open
-	if !$JobNoteMenu.visible:
-		emit_signal("reactivate_house")
-	else:
+	if !$JobNoteMenu.visible and mouse_inside and Input.is_action_just_pressed("left_click"):
 		emit_signal("deactivate_house")
-
-		   # Handles input to open and close the notes menu via clicking the notes icon
-	if mouse_inside and Input.is_action_just_pressed("left_click"):
 		$JobNoteMenu.visible = true
-	elif mouse_inside and Input.is_action_just_pressed("left_click") and $JobNoteMenu.visible:
+	elif $JobNoteMenu.visible and mouse_inside and Input.is_action_just_pressed("left_click"):
+		emit_signal("reactivate_house")
 		$JobNoteMenu.visible = false
+
 
 		 # lets the player close the menu by pressing rmb, which is a cool additional feature
 	if Input.is_action_just_pressed("right_click") and $JobNoteMenu.visible:
