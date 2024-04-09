@@ -23,7 +23,6 @@ Global="*res://Scenes and Scripts/global.gd"
 
 window/size/viewport_width=2160
 window/size/viewport_height=1620
-window/size/mode=3
 window/stretch/aspect="ignore"
 window/stretch/scale=0.5
 

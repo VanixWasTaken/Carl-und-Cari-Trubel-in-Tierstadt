@@ -3,6 +3,9 @@ extends AnimatedSprite2D
 var start_position
 var mouse_on = false
 var mouse_position
+@export var color: String
+@export var minimum_weight: float
+@export var maximum_weight: float
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	start_position = position
