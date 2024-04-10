@@ -9,11 +9,13 @@ var mouse_inside_big_note = false
 var outline_shader = preload("res://Shader/outline.tres")
 var no_shader = preload("res://Shader/no_shader.tres")
 var open_note1 = 0
-var hover_sound = preload("res://Assets/Sound Test/sfx_hub_ui_hover_var.mp3")
-var click_sound = preload("res://Assets/Sound Test/sfx_hub_ui_click_var.mp3")
 
 func _process(delta):
+	if mouse_inside:
+		Global.moving_allowed = false
+
 	if $JobNoteMenu.visible:
+		Global.moving_allowed = false
 		if Input.is_action_just_pressed("left_click"):
 			if mouse_inside:
 				emit_signal("deactivate_house")
@@ -22,9 +24,7 @@ func _process(delta):
 				_randomize_sounds()
 
 		elif Input.is_action_just_pressed("right_click"):
-			emit_signal("reactivate_house")
-			$JobNoteMenu.visible = false
-			$JobNoteMenu/JobNote1.visible = false
+			close_menu()
 
 	elif !$JobNoteMenu.visible:
 		if Input.is_action_just_pressed("left_click"):
@@ -46,6 +46,13 @@ func _process(delta):
 	elif mouse_inside_big_note and Input.is_action_just_pressed("left_click"):
 		$JobNoteMenu/JobNote1.visible = false
 		_randomize_sounds()
+
+func close_menu():
+	emit_signal("reactivate_house")
+	$JobNoteMenu.visible = false
+	$JobNoteMenu/JobNote1.visible = false
+	_randomize_sounds()
+	Global.moving_allowed = true
 
 # for shaders
 func _on_area_2d_mouse_entered():

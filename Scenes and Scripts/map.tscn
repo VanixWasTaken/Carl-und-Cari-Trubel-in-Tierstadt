@@ -1,26 +1,23 @@
-
-[gd_scene load_steps=24 format=3 uid="uid://d0sg81cbdx27u"]
-
+[gd_scene load_steps=25 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/map_house_test.gd" id="2_e7gsj"]
 [ext_resource type="Texture2D" uid="uid://cdk034lnactt1" path="res://Assets/Test/House Animation/map_house_animation_test0.png" id="2_s8uy4"]
 [ext_resource type="Texture2D" uid="uid://s7np8vn7a40x" path="res://Assets/Test/House Animation/map_house_animation_test1.png" id="4_ek0bm"]
 [ext_resource type="Texture2D" uid="uid://dulbumr0rh2st" path="res://Assets/Test/House Animation/map_house_animation_test2.png" id="5_u4elg"]
 [ext_resource type="Texture2D" uid="uid://cqtp0uxkli3co" path="res://Assets/Test/House Animation/map_house_animation_test3.png" id="6_aa40f"]
-[ext_resource type="Script" path="res://Scenes and Scripts/job_notes.gd" id="7_ogfj7"]
 [ext_resource type="Texture2D" uid="uid://buqy3fnj1b2cp" path="res://Assets/Test/Jobzettel_Button_.png" id="7_yoxky"]
-[ext_resource type="Texture2D" uid="uid://b3tvfgcp4gink" path="res://Assets/Test/hud_background.png" id="9_cvvni"]
+[ext_resource type="Script" path="res://Scenes and Scripts/job_notes.gd" id="9_vqn8c"]
 [ext_resource type="Script" path="res://Scenes and Scripts/exit_button.gd" id="10_0oi3s"]
+[ext_resource type="Texture2D" uid="uid://cch5cjlssxc7x" path="res://Assets/Test/UI/UI_hud.PNG" id="10_dyp1j"]
 [ext_resource type="Texture2D" uid="uid://c2vqnkipjixlw" path="res://Assets/Test/in_map_menu_job_note.png" id="10_kbx72"]
 [ext_resource type="Texture2D" uid="uid://xl63shls5bm8" path="res://Assets/Test/exit_button.png" id="11_8vqrx"]
 [ext_resource type="Texture2D" uid="uid://cm4hcr8fw4k5a" path="res://Assets/job_note1.PNG" id="13_2x76a"]
 [ext_resource type="PackedScene" uid="uid://daswfhvjsa7jh" path="res://Scenes and Scripts/Player/player.tscn" id="14_0uuvf"]
 [ext_resource type="Shader" path="res://Shader/blur.gdshader" id="14_jp8ps"]
 [ext_resource type="Texture2D" uid="uid://b3ik703sl8ot0" path="res://Assets/Test/marp.png" id="15_45808"]
-[ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/white_screen.png" id="15_jo7ff"]
 [ext_resource type="AudioStream" uid="uid://bvdhlmb8shojl" path="res://Assets/Sound Test/sfx_hub_ui_click_var.mp3" id="15_bdydr"]
+[ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/white_screen.png" id="15_jo7ff"]
 [ext_resource type="AudioStream" uid="uid://d1gbq7bddhbqe" path="res://Assets/Sound Test/sfx_hub_ui_hover_var.mp3" id="16_ciapm"]
-
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_unxvv"]
 animations = [{
@@ -43,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ab4lo"]
-size = Vector2(286.644, 373.924)
+size = Vector2(338.273, 401.403)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h683o"]
 radius = 56.0803
@@ -66,10 +63,10 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 position = Vector2(1080, 813)
 
 [node name="TextureRect" type="TextureRect" parent="MapTest"]
-offset_left = -1087.0
-offset_top = -816.0
-offset_right = 844.0
-offset_bottom = 259.0
+offset_left = -1080.0
+offset_top = -812.0
+offset_right = 840.0
+offset_bottom = 268.0
 texture = ExtResource("15_45808")
 
 [node name="MapHouseTest" type="Node2D" parent="."]
@@ -89,7 +86,7 @@ position = Vector2(1080, 813)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapHouseTest/Area2D"]
 position = Vector2(-820, -651)
 scale = Vector2(0.6625, 0.6625)
-polygon = PackedVector2Array(-630.943, -329.057, -451.321, -460.377, -10.566, -440.755, 21.1321, 22.6415, -492.075, 46.7924)
+polygon = PackedVector2Array(-581.132, -341.132, -451.321, -460.377, -10.566, -440.755, 21.1321, 22.6415, -492.075, 46.7924)
 
 [node name="Hover" type="AudioStreamPlayer" parent="MapHouseTest"]
 stream = ExtResource("16_ciapm")
@@ -97,34 +94,38 @@ stream = ExtResource("16_ciapm")
 [node name="Click" type="AudioStreamPlayer" parent="MapHouseTest"]
 stream = ExtResource("15_bdydr")
 
+[node name="Player" parent="." instance=ExtResource("14_0uuvf")]
+position = Vector2(287, 535)
+
 [node name="JobNotes" type="Node2D" parent="."]
-
-visible = false
-position = Vector2(6, -20)
-
+position = Vector2(-73, -50)
+script = ExtResource("9_vqn8c")
 
 [node name="Sprite2D" type="Sprite2D" parent="JobNotes"]
-position = Vector2(125.076, 110.75)
-scale = Vector2(0.287849, 0.287849)
+position = Vector2(135, 139)
+scale = Vector2(0.287313, 0.292829)
 texture = ExtResource("7_yoxky")
+metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="JobNotes"]
-position = Vector2(117, 106)
+position = Vector2(121, 125)
 scale = Vector2(0.331094, 0.331094)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JobNotes/Area2D"]
-position = Vector2(-6.04057, 24.1623)
+position = Vector2(21.1421, 28.8408)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ab4lo")
 
 [node name="JobNoteMenu" type="Node2D" parent="JobNotes"]
+visible = false
+position = Vector2(-36, -15)
 
 [node name="Sprite2D" type="Sprite2D" parent="JobNotes/JobNoteMenu"]
-position = Vector2(960, 540)
-rotation = 1.5708
-texture = ExtResource("9_cvvni")
+position = Vector2(1068, 610)
+texture = ExtResource("10_dyp1j")
 
 [node name="ExitButton" type="Node2D" parent="JobNotes/JobNoteMenu"]
-position = Vector2(155, -150)
+position = Vector2(266, -99)
 script = ExtResource("10_0oi3s")
 metadata/_edit_group_ = true
 
@@ -145,7 +146,7 @@ stream = ExtResource("16_ciapm")
 stream = ExtResource("15_bdydr")
 
 [node name="InJobMenuJobNote1" type="Node2D" parent="JobNotes/JobNoteMenu"]
-position = Vector2(-267, -30)
+position = Vector2(-113, -118)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="JobNotes/JobNoteMenu/InJobMenuJobNote1"]
@@ -189,16 +190,12 @@ stream = ExtResource("16_ciapm")
 [node name="Click" type="AudioStreamPlayer" parent="JobNotes"]
 stream = ExtResource("15_bdydr")
 
-[node name="Player" parent="." instance=ExtResource("14_0uuvf")]
-position = Vector2(287, 535)
-
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(0, 6)
 navigation_polygon = SubResource("NavigationPolygon_8wyy8")
 
 [connection signal="mouse_entered" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_exited"]
-[connection signal="deactivate_house" from="JobNotes" to="MapHouseTest" method="_on_job_notes_deactivate_house"]
-[connection signal="reactivate_house" from="JobNotes" to="MapHouseTest" method="_on_job_notes_reactivate_house"]
 [connection signal="mouse_entered" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="JobNotes/JobNoteMenu/ExitButton/Area2D" to="JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_entered"]

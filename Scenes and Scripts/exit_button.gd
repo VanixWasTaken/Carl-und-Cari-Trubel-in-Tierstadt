@@ -13,6 +13,7 @@ func _process(delta):
 		var house_thing = note_menu.get_parent()
 		house_thing.emit_signal("reactivate_house")
 		note_menu.visible = false
+		Global.moving_allowed = true
 		var children = note_menu.get_children()
 		for child in children:
 			if child.name == "JobNote1":
