@@ -44,7 +44,7 @@ func _on_area_2d_mouse_exited():
 
 func _on_area_2d_area_entered(area):
 	area_name = area.get_name()
-	if area_name != "PulverBowl":
+	if area_name != "PulverBowl" && area_name != "WaterCup":
 		if needed_pulver == area.get_parent().color:
 			if bowl_full == false || pulver_color == "Red":
 				if area.name == "RedPulver":
@@ -122,7 +122,7 @@ func purple_pulver():
 func _on_area_2d_area_exited(area):
 	var area_parent = area.get_parent()
 	area_name = area.get_name()
-	if area_name != "PulverBowl":
+	if area_name != "PulverBowl" && area_name != "WaterCup":
 		if weight < area_parent.minimum_weight:
 			too_little = true
 			$"../TextureRect".visible = true
