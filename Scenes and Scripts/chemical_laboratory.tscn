@@ -89,7 +89,7 @@ size = Vector2(184, 366)
 size = Vector2(182, 377)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqi52"]
-size = Vector2(33, 507)
+size = Vector2(123, 507)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owpuh"]
 animations = [{
@@ -286,6 +286,7 @@ position = Vector2(-167, -35)
 shape = SubResource("RectangleShape2D_fbfg1")
 
 [node name="Area2D2" type="Area2D" parent="DrinkHolder"]
+visible = false
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkHolder/Area2D2"]
@@ -293,6 +294,7 @@ position = Vector2(37, -32)
 shape = SubResource("RectangleShape2D_828ff")
 
 [node name="Area2D3" type="Area2D" parent="DrinkHolder"]
+visible = false
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkHolder/Area2D3"]
@@ -318,7 +320,7 @@ scroll_active = false
 [node name="Area2D" type="Area2D" parent="Scale"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scale/Area2D"]
-position = Vector2(47.5, -202.5)
+position = Vector2(48.5, -202.5)
 shape = SubResource("RectangleShape2D_iqi52")
 
 [node name="WaterCup" type="AnimatedSprite2D" parent="."]
