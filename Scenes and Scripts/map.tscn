@@ -88,6 +88,7 @@ position = Vector2(7.69284, -9.35703)
 shape = SubResource("RectangleShape2D_ab4lo")
 
 [node name="JobNoteMenu" type="Node2D" parent="JobNotes"]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="JobNotes/JobNoteMenu"]
 position = Vector2(960, 540)
@@ -120,6 +121,7 @@ position = Vector2(404.5, 377)
 shape = SubResource("RectangleShape2D_8raen")
 
 [node name="JobNote1" type="Node2D" parent="JobNotes/JobNoteMenu"]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="JobNotes/JobNoteMenu/JobNote1"]
 position = Vector2(921, 543)
