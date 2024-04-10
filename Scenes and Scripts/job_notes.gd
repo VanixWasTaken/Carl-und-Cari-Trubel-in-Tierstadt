@@ -18,22 +18,26 @@ func _process(delta):
 				emit_signal("deactivate_house")
 				$JobNoteMenu.visible = false
 				$JobNoteMenu/JobNote1.visible = false
+
 		elif Input.is_action_just_pressed("right_click"):
 			emit_signal("reactivate_house")
 			$JobNoteMenu.visible = false
 			$JobNoteMenu/JobNote1.visible = false
+
 	elif !$JobNoteMenu.visible:
 		if Input.is_action_just_pressed("left_click"):
 			if mouse_inside:
 				emit_signal("deactivate_house")
 				$JobNoteMenu.visible = true
 
-
 		   # Handles input to open and close the steckbrief via clicking its icon
-	if mouse_inside_job_note1 and Input.is_action_just_pressed("left_click") and !$JobNoteMenu/JobNote1.visible:
-		$JobNoteMenu/JobNote1.visible = true
-	elif mouse_inside_job_note1 and Input.is_action_just_pressed("left_click") and $JobNoteMenu/JobNote1.visible:
-		$JobNoteMenu/JobNote1.visible = false
+	if mouse_inside_job_note1 and Input.is_action_just_pressed("left_click"):
+		if !$JobNoteMenu/JobNote1.visible:
+			$JobNoteMenu/JobNote1.visible = true
+		elif $JobNoteMenu/JobNote1:
+			$JobNoteMenu/JobNote1.visible = false
+
+
 	elif mouse_inside_big_note and Input.is_action_just_pressed("left_click"):
 		$JobNoteMenu/JobNote1.visible = false
 
