@@ -9,7 +9,13 @@ func _process(delta):
 			# Handles Input to close the menu via the quit button
 	if mouse_inside and Input.is_action_just_pressed("left_click"):
 		var note_menu = get_parent()
+		var house_thing = note_menu.get_parent()
+		house_thing.emit_signal("reactivate_house")
 		note_menu.visible = false
+		var children = note_menu.get_children()
+		for child in children:
+			if child.name == "JobNote1":
+				child.visible = false
 
 
 	  # for shaders
