@@ -14,10 +14,12 @@ func _process(delta):
 	else:
 		$AnimatedSprite2D.stop()
 	if mouse_inside and Input.is_action_just_pressed("left_click"):
+		$Click.play()
 		$"../Player"._get_clicked_object(my_name, scene_name)
 
 func _on_area_2d_mouse_entered():
 	mouse_inside = true
+	$Hover.play()
 func _on_area_2d_mouse_exited():
 	mouse_inside = false
 

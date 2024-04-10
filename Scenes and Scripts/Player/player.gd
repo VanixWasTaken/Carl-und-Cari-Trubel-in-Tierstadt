@@ -11,6 +11,7 @@ func _physics_process(delta):
 		if Global.moving_allowed == true:
 			nav.target_position = get_global_mouse_position()
 			$AnimatedSprite2D.play("default")
+			$Footsteps.play()
 			if position.distance_to(nav.target_position) > 10:
 				speed = 300
 
@@ -22,11 +23,13 @@ func _physics_process(delta):
 		if nav.is_navigation_finished():
 			speed = 0
 			$AnimatedSprite2D.stop()
+			$Footsteps.stop()
 
 	elif nav.is_target_reachable() == true:
 		if position.distance_to(nav.target_position) <= 10:
 			speed = 0
 			$AnimatedSprite2D.stop()
+			$Footsteps.stop()
 
 func _get_clicked_object(objects_name, scenes_name):
 	object_name = objects_name

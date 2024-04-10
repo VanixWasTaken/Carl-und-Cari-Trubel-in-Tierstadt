@@ -1,4 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://d0sg81cbdx27u"]
+
+[gd_scene load_steps=24 format=3 uid="uid://d0sg81cbdx27u"]
+
 
 [ext_resource type="Script" path="res://Scenes and Scripts/map_house_test.gd" id="2_e7gsj"]
 [ext_resource type="Texture2D" uid="uid://cdk034lnactt1" path="res://Assets/Test/House Animation/map_house_animation_test0.png" id="2_s8uy4"]
@@ -7,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cqtp0uxkli3co" path="res://Assets/Test/House Animation/map_house_animation_test3.png" id="6_aa40f"]
 [ext_resource type="Script" path="res://Scenes and Scripts/job_notes.gd" id="7_ogfj7"]
 [ext_resource type="Texture2D" uid="uid://buqy3fnj1b2cp" path="res://Assets/Test/Jobzettel_Button_.png" id="7_yoxky"]
+[ext_resource type="Texture2D" uid="uid://b3tvfgcp4gink" path="res://Assets/Test/hud_background.png" id="9_cvvni"]
 [ext_resource type="Script" path="res://Scenes and Scripts/exit_button.gd" id="10_0oi3s"]
-[ext_resource type="Texture2D" uid="uid://cch5cjlssxc7x" path="res://Assets/Test/UI/UI_hud.PNG" id="10_4734c"]
 [ext_resource type="Texture2D" uid="uid://c2vqnkipjixlw" path="res://Assets/Test/in_map_menu_job_note.png" id="10_kbx72"]
 [ext_resource type="Texture2D" uid="uid://xl63shls5bm8" path="res://Assets/Test/exit_button.png" id="11_8vqrx"]
 [ext_resource type="Texture2D" uid="uid://cm4hcr8fw4k5a" path="res://Assets/job_note1.PNG" id="13_2x76a"]
@@ -16,6 +18,9 @@
 [ext_resource type="Shader" path="res://Shader/blur.gdshader" id="14_jp8ps"]
 [ext_resource type="Texture2D" uid="uid://b3ik703sl8ot0" path="res://Assets/Test/marp.png" id="15_45808"]
 [ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/white_screen.png" id="15_jo7ff"]
+[ext_resource type="AudioStream" uid="uid://bvdhlmb8shojl" path="res://Assets/Sound Test/sfx_hub_ui_click_var.mp3" id="15_bdydr"]
+[ext_resource type="AudioStream" uid="uid://d1gbq7bddhbqe" path="res://Assets/Sound Test/sfx_hub_ui_hover_var.mp3" id="16_ciapm"]
+
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_unxvv"]
 animations = [{
@@ -86,13 +91,17 @@ position = Vector2(-820, -651)
 scale = Vector2(0.6625, 0.6625)
 polygon = PackedVector2Array(-630.943, -329.057, -451.321, -460.377, -10.566, -440.755, 21.1321, 22.6415, -492.075, 46.7924)
 
-[node name="Player" parent="." instance=ExtResource("14_0uuvf")]
-position = Vector2(287, 535)
+[node name="Hover" type="AudioStreamPlayer" parent="MapHouseTest"]
+stream = ExtResource("16_ciapm")
+
+[node name="Click" type="AudioStreamPlayer" parent="MapHouseTest"]
+stream = ExtResource("15_bdydr")
 
 [node name="JobNotes" type="Node2D" parent="."]
+
 visible = false
 position = Vector2(6, -20)
-script = ExtResource("7_ogfj7")
+
 
 [node name="Sprite2D" type="Sprite2D" parent="JobNotes"]
 position = Vector2(125.076, 110.75)
@@ -111,7 +120,8 @@ shape = SubResource("RectangleShape2D_ab4lo")
 
 [node name="Sprite2D" type="Sprite2D" parent="JobNotes/JobNoteMenu"]
 position = Vector2(960, 540)
-texture = ExtResource("10_4734c")
+rotation = 1.5708
+texture = ExtResource("9_cvvni")
 
 [node name="ExitButton" type="Node2D" parent="JobNotes/JobNoteMenu"]
 position = Vector2(155, -150)
@@ -127,6 +137,12 @@ texture = ExtResource("11_8vqrx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JobNotes/JobNoteMenu/ExitButton/Area2D"]
 position = Vector2(1626, 299)
 shape = SubResource("CircleShape2D_h683o")
+
+[node name="Hover" type="AudioStreamPlayer" parent="JobNotes/JobNoteMenu/ExitButton"]
+stream = ExtResource("16_ciapm")
+
+[node name="Click" type="AudioStreamPlayer" parent="JobNotes/JobNoteMenu/ExitButton"]
+stream = ExtResource("15_bdydr")
 
 [node name="InJobMenuJobNote1" type="Node2D" parent="JobNotes/JobNoteMenu"]
 position = Vector2(-267, -30)
@@ -166,6 +182,15 @@ texture = ExtResource("11_8vqrx")
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit"]
 position = Vector2(235.667, -406.28)
 polygon = PackedVector2Array(-47.8698, 29.4583, -51.5521, -57.6892, -81.0104, -103.104, -33.1406, -87.1476, 15.9565, -49.0972, 50.3246, -7.36458, 81.0104, 47.8698, 94.5121, 105.559, 96.967, 157.111, 67.5087, 100.649, 22.0938, 56.4618)
+
+[node name="Hover" type="AudioStreamPlayer" parent="JobNotes"]
+stream = ExtResource("16_ciapm")
+
+[node name="Click" type="AudioStreamPlayer" parent="JobNotes"]
+stream = ExtResource("15_bdydr")
+
+[node name="Player" parent="." instance=ExtResource("14_0uuvf")]
+position = Vector2(287, 535)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_8wyy8")
