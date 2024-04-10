@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://daswfhvjsa7jh"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Player/player.gd" id="1_pxkst"]
+[ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Test/Player/IMG_1931.PNG" id="1_uekr7"]
+[ext_resource type="Texture2D" uid="uid://fji17txvsqan" path="res://Assets/Test/Player/IMG_1932.PNG" id="2_3hmks"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hb2ux"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uekr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3hmks")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mykrf"]
+radius = 121.277
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_pxkst")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_hb2ux")
+frame_progress = 0.736102
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_mykrf")
