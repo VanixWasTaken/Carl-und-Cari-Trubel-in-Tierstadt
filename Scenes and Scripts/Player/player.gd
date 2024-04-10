@@ -1,7 +1,9 @@
 extends CharacterBody2D
-var speed = 600
+var speed = 300
 var acceleration = 50
 @onready var nav: NavigationAgent2D = $NavigationAgent2D
+var object_name 
+var scene_name
 
 func _physics_process(delta):
 	var direction = Vector2()
@@ -10,7 +12,7 @@ func _physics_process(delta):
 			nav.target_position = get_global_mouse_position()
 			$AnimatedSprite2D.play("default")
 			if position.distance_to(nav.target_position) > 10:
-				speed = 600
+				speed = 300
 
 	direction = nav.get_next_path_position() - global_position
 	direction = direction.normalized()
@@ -26,3 +28,11 @@ func _physics_process(delta):
 			speed = 0
 			$AnimatedSprite2D.stop()
 
+func _get_clicked_object(objects_name, scenes_name):
+	object_name = objects_name
+	scene_name = scenes_name
+
+func _on_area_2d_area_entered(area):
+	var area_name = area.get_parent().get_name()
+	if area_name == object_name:
+		get_tree().change_scene_to_file(scene_name)

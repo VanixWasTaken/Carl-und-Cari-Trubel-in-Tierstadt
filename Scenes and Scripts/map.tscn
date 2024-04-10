@@ -1,6 +1,5 @@
-[gd_scene load_steps=21 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=20 format=3 uid="uid://d0sg81cbdx27u"]
 
-[ext_resource type="Texture2D" uid="uid://hrdjx0863o5d" path="res://Assets/Test/map_test.png" id="1_mdafp"]
 [ext_resource type="Script" path="res://Scenes and Scripts/map_house_test.gd" id="2_e7gsj"]
 [ext_resource type="Texture2D" uid="uid://cdk034lnactt1" path="res://Assets/Test/House Animation/map_house_animation_test0.png" id="2_s8uy4"]
 [ext_resource type="Texture2D" uid="uid://s7np8vn7a40x" path="res://Assets/Test/House Animation/map_house_animation_test1.png" id="4_ek0bm"]
@@ -45,34 +44,32 @@ radius = 56.0803
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8raen"]
 size = Vector2(101, 120)
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_i3shb"]
-vertices = PackedVector2Array(3523, 2026, 3537, 2120, 1728, 2157, 2942, 2026, 3815, 1073, 3826, 1177, 2500, 1160, 2459, 1073, 1092, 521, 1073, 1, 1231, 12, 1214, 556, 1916, 21, 2044, 9, 2036, 680, 1890, 547, 671, 693, 502, 572, 521, 1214, 662, 1037, 863, 1955, 4, 1958, 16, 1822, 279, 1831, 3824, 484, 3835, 586, 3311, 618, 3212, 488, 3187, 668, 3311, 797, 2318, 833, 2178, 703, 2205, 900, 2312, 843, 3819, 1732, 3822, 1865, 2946, 1853, 2775, 1725, 2784, 2017, 1874, 2038, 1702, 1700, 1865, 1699, 1152, 1040, 1161, 1553, 1001, 1713, 1017, 2162, 896, 2170, 8, 1345, 20, 1191, 271, 1397, 2328, 1309, 2186, 1328, 2026, 1163, 2205, 1580, 2314, 1703, 2077, 927)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(15, 14, 16, 11), PackedInt32Array(8, 11, 16, 17), PackedInt32Array(18, 17, 16, 19), PackedInt32Array(20, 21, 22, 23), PackedInt32Array(24, 25, 26, 27), PackedInt32Array(28, 27, 26, 29), PackedInt32Array(28, 29, 30, 31), PackedInt32Array(32, 31, 30, 33), PackedInt32Array(34, 35, 36, 37), PackedInt32Array(38, 37, 36, 3), PackedInt32Array(38, 3, 2, 39), PackedInt32Array(39, 2, 40, 41), PackedInt32Array(18, 19, 42, 43, 44), PackedInt32Array(44, 45, 46, 20), PackedInt32Array(47, 48, 18, 49), PackedInt32Array(32, 33, 7, 6, 50, 51, 52), PackedInt32Array(44, 20, 23, 49, 18), PackedInt32Array(40, 44, 43, 53), PackedInt32Array(41, 40, 53), PackedInt32Array(54, 41, 53), PackedInt32Array(50, 54, 53, 51), PackedInt32Array(32, 52, 55)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(1242, 3, 1224, 546, 1880, 537, 1907, 12, 2055, -2, 2046, 690, 681, 703, 672, 1027, 1162, 1031, 1171, 1543, 2194, 1570, 2176, 1332, 2015, 1166, 2069, 919, 2194, 892, 2167, 694, 3178, 658, 3204, 479, 3833, 474, 3847, 596, 3321, 627, 3321, 807, 2324, 843, 2464, 1063, 3824, 1063, 3838, 1188, 2504, 1170, 2338, 1314, 2324, 1714, 1875, 1709, 1884, 2028, 2774, 2007, 2765, 1715, 3829, 1723, 3833, 1876, 2956, 1863, 2952, 2016, 3532, 2016, 3549, 2130, 1719, 2168, 1693, 1710, 1011, 1723, 1028, 2172, 888, 2181, 854, 1965, -6, 1969, 7, 1812, 269, 1821, 261, 1405, -2, 1354, 11, 1181, 511, 1204, 492, 563, 1082, 512, 1063, -9)])
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_8wyy8"]
+vertices = PackedVector2Array(469, 933, 11, 937, 164, 933, 464, 930, 1187, 502, 1193, 547, 1189, 538, 1177, 510, 1188, 577, 531, 548, 536, 804, 532, 799, 531, 550, 1896, 544, 1893, 556, 1199, 558, 1180, 603, 1158, 607, 1132, 638, 1119, 619, 1111, 637, 1430, 1040, 1745, 1043, 1747, 1053, 875, 1049, 878, 1036, 1133, 456, 1136, 473, 1638, 276, 1906, 276, 1905, 283, 1641, 277, 1632, 369, 1638, 372, 1141, 372, 1131, 368, 1121, 471, 1068, 489, 1059, 523, 1041, 520, 1050, 580, 1064, 570, 989, -5, 997, -6, 992, 300, 984, 298, 568, 298, 304, 316, 286, 304, 1084, 604, 1115, 807, 1124, 814, 880, 807, 287, 545, 298, 541, 574, 5, 578, 5, 575, 296, 181, 644, 3, 645, 3, 643, 286, 644, 1432, 883, 1909, 881, 1909, 882, 1440, 894, 1436, 1034, 474, 812, 474, 1062, 469, 1062, 461, 812, 873, 812, 176, 932, 187, 646, 294, 647)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 6, 5), PackedInt32Array(9, 10, 11, 12), PackedInt32Array(5, 13, 14, 15), PackedInt32Array(8, 5, 15), PackedInt32Array(8, 15, 16), PackedInt32Array(17, 8, 16, 18), PackedInt32Array(19, 17, 18, 20), PackedInt32Array(21, 22, 23, 24, 25), PackedInt32Array(26, 4, 7, 27), PackedInt32Array(28, 29, 30, 31), PackedInt32Array(32, 28, 31, 33), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 35, 34, 26), PackedInt32Array(36, 26, 27), PackedInt32Array(37, 36, 27, 38, 39), PackedInt32Array(40, 39, 38, 41), PackedInt32Array(42, 43, 44, 45), PackedInt32Array(46, 45, 44, 47, 48), PackedInt32Array(40, 41, 49), PackedInt32Array(20, 40, 49), PackedInt32Array(20, 49, 19), PackedInt32Array(50, 20, 18, 51), PackedInt32Array(50, 51, 52), PackedInt32Array(10, 50, 52), PackedInt32Array(9, 12, 53, 54), PackedInt32Array(55, 56, 57, 46), PackedInt32Array(58, 59, 60), PackedInt32Array(58, 60, 61), PackedInt32Array(62, 63, 64, 65), PackedInt32Array(21, 62, 65, 66), PackedInt32Array(67, 68, 69, 0), PackedInt32Array(47, 54, 53, 48), PackedInt32Array(70, 11, 10, 67), PackedInt32Array(21, 66, 22), PackedInt32Array(25, 24, 71, 52), PackedInt32Array(10, 52, 71, 67), PackedInt32Array(70, 67, 0, 3), PackedInt32Array(72, 3, 2), PackedInt32Array(72, 2, 58, 73), PackedInt32Array(73, 58, 61, 74), PackedInt32Array(53, 74, 61), PackedInt32Array(53, 61, 48), PackedInt32Array(45, 46, 57)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(980, -15, 974, 288, 585, 286, 588, -5, 564, -5, 558, 288, 276, 295, 284, 525, 276, 634, -7, 633, -6, 656, 170, 654, 155, 923, 0, 928, 2, 948, 459, 943, 460, 1071, 485, 1074, 484, 822, 863, 822, 866, 1059, 1760, 1064, 1754, 1034, 1446, 1024, 1450, 904, 1919, 892, 1920, 871, 1423, 874, 1420, 1030, 888, 1026, 890, 817, 1134, 825, 1142, 643, 1188, 610, 1206, 568, 1902, 566, 1910, 534, 1202, 537, 1197, 498, 1143, 452, 1150, 382, 1648, 382, 1651, 287, 1914, 294, 1918, 267, 1629, 266, 1623, 359, 1122, 358, 1112, 464, 1063, 480, 1031, 518, 1041, 585, 1101, 641, 1105, 797, 546, 794, 541, 539, 308, 531, 314, 326, 1002, 310, 1008, -17), PackedVector2Array(298, 555, 521, 560, 522, 791, 451, 804, 454, 920, 186, 922, 197, 656, 305, 658), PackedVector2Array(1070, 528, 1135, 486, 1169, 516, 1179, 540, 1178, 573, 1153, 598, 1120, 608, 1091, 596, 1074, 567)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="Map" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1923.0
-offset_bottom = 1082.0
-texture = ExtResource("15_45808")
-
 [node name="MapTest" type="Node2D" parent="."]
 position = Vector2(1080, 813)
 
-[node name="Sprite2D" type="Sprite2D" parent="MapTest"]
-position = Vector2(-369.333, -277)
-scale = Vector2(0.658025, 0.658025)
-texture = ExtResource("1_mdafp")
+[node name="TextureRect" type="TextureRect" parent="MapTest"]
+offset_left = -1087.0
+offset_top = -816.0
+offset_right = 844.0
+offset_bottom = 259.0
+texture = ExtResource("15_45808")
 
 [node name="MapHouseTest" type="Node2D" parent="."]
 position = Vector2(263, 127)
 script = ExtResource("2_e7gsj")
+scene_name = "res://Scenes and Scripts/chemical_laboratory.tscn"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MapHouseTest"]
-position = Vector2(707.333, 536.5)
-scale = Vector2(0.654938, 0.654938)
+position = Vector2(2356, 369)
+scale = Vector2(0.61713, 0.53395)
 sprite_frames = SubResource("SpriteFrames_unxvv")
 animation = &"house_animation_test"
 
@@ -80,12 +77,14 @@ animation = &"house_animation_test"
 position = Vector2(1080, 813)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapHouseTest/Area2D"]
-position = Vector2(323, -143)
+position = Vector2(-820, -651)
 scale = Vector2(0.6625, 0.6625)
-polygon = PackedVector2Array(-479, -282, -385, -389, -304, -312, -313, -228, -440, -185)
+polygon = PackedVector2Array(-630.943, -329.057, -451.321, -460.377, -10.566, -440.755, 21.1321, 22.6415, -492.075, 46.7924)
 
 [node name="JobNotes" type="Node2D" parent="."]
+position = Vector2(-74, -40)
 script = ExtResource("7_ogfj7")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="JobNotes"]
 position = Vector2(125.076, 110.75)
@@ -97,7 +96,7 @@ position = Vector2(117, 106)
 scale = Vector2(0.331094, 0.331094)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JobNotes/Area2D"]
-position = Vector2(7.69284, -9.35703)
+position = Vector2(-6.04057, 24.1623)
 shape = SubResource("RectangleShape2D_ab4lo")
 
 [node name="JobNoteMenu" type="Node2D" parent="JobNotes"]
@@ -153,10 +152,10 @@ position = Vector2(235.667, -406.28)
 polygon = PackedVector2Array(-47.8698, 29.4583, -51.5521, -57.6892, -81.0104, -103.104, -33.1406, -87.1476, 15.9565, -49.0972, 50.3246, -7.36458, 81.0104, 47.8698, 94.5121, 105.559, 96.967, 157.111, 67.5087, 100.649, 22.0938, 56.4618)
 
 [node name="Player" parent="." instance=ExtResource("14_0uuvf")]
-position = Vector2(591, 797)
+position = Vector2(287, 535)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-navigation_polygon = SubResource("NavigationPolygon_i3shb")
+navigation_polygon = SubResource("NavigationPolygon_8wyy8")
 
 [connection signal="mouse_entered" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_exited"]

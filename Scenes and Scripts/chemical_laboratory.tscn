@@ -276,9 +276,11 @@ size = Vector2(279, 91)
 script = ExtResource("1_b2cfh")
 
 [node name="DrinkHolder" type="AnimatedSprite2D" parent="."]
-position = Vector2(1035, 435)
+position = Vector2(975, 271)
+scale = Vector2(0.769601, 0.806024)
 sprite_frames = SubResource("SpriteFrames_mrjln")
 script = ExtResource("9_hvdtc")
+metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="DrinkHolder"]
 
@@ -303,8 +305,10 @@ position = Vector2(227, -39.5)
 shape = SubResource("RectangleShape2D_6nk3i")
 
 [node name="Scale" type="Sprite2D" parent="."]
-position = Vector2(1056, 1138)
+position = Vector2(1022, 884)
+scale = Vector2(0.754545, 0.741627)
 texture = ExtResource("9_62uh1")
+metadata/_edit_group_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Scale"]
 offset_left = -39.0
@@ -317,6 +321,7 @@ theme_override_font_sizes/normal_font_size = 61
 text = "Gewicht Hier
 "
 scroll_active = false
+metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="Scale"]
 
@@ -325,9 +330,11 @@ position = Vector2(48.5, -202.5)
 shape = SubResource("RectangleShape2D_iqi52")
 
 [node name="WaterCup" type="AnimatedSprite2D" parent="."]
-position = Vector2(214, 395)
+position = Vector2(172, 255)
+scale = Vector2(0.667183, 0.735443)
 sprite_frames = SubResource("SpriteFrames_owpuh")
 script = ExtResource("11_jiefe")
+metadata/_edit_group_ = true
 
 [node name="WaterCup" type="Area2D" parent="WaterCup"]
 
@@ -336,7 +343,8 @@ position = Vector2(-4.5, -0.5)
 shape = SubResource("RectangleShape2D_rqc8m")
 
 [node name="RedPulver" type="AnimatedSprite2D" parent="."]
-position = Vector2(1869, 1009)
+position = Vector2(1703, 907)
+scale = Vector2(0.746537, 0.819444)
 sprite_frames = SubResource("SpriteFrames_6dnwd")
 script = ExtResource("13_yairb")
 color = "Red"
@@ -352,7 +360,8 @@ position = Vector2(16, -2.5)
 shape = SubResource("RectangleShape2D_xc7aw")
 
 [node name="YellowPulver" type="AnimatedSprite2D" parent="."]
-position = Vector2(1874, 660)
+position = Vector2(1702, 616)
+scale = Vector2(0.705128, 0.775261)
 sprite_frames = SubResource("SpriteFrames_mtd7m")
 frame_progress = 0.0171763
 script = ExtResource("13_yairb")
@@ -368,7 +377,8 @@ position = Vector2(3.5, 5)
 shape = SubResource("RectangleShape2D_tcvw4")
 
 [node name="PurplePulver" type="AnimatedSprite2D" parent="."]
-position = Vector2(1856, 1395)
+position = Vector2(1702, 383.125)
+scale = Vector2(0.69663, 0.74827)
 sprite_frames = SubResource("SpriteFrames_c2ujo")
 script = ExtResource("13_yairb")
 color = "Purple"
@@ -383,7 +393,8 @@ position = Vector2(3.5, -6)
 shape = SubResource("RectangleShape2D_a5hvy")
 
 [node name="PulverBowl" type="AnimatedSprite2D" parent="."]
-position = Vector2(1115, 1076)
+position = Vector2(1061, 832)
+scale = Vector2(0.90411, 1.26405)
 sprite_frames = SubResource("SpriteFrames_4ogow")
 script = ExtResource("32_ebx3t")
 metadata/_edit_group_ = true
@@ -395,11 +406,12 @@ position = Vector2(-3.5, -0.5)
 shape = SubResource("RectangleShape2D_rewly")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 216.0
-offset_top = 908.0
-offset_right = 2092.0
-offset_bottom = 1636.0
+offset_left = 156.0
+offset_top = 356.0
+offset_right = 2032.0
+offset_bottom = 1084.0
 texture = ExtResource("47_mnims")
+metadata/_edit_use_anchors_ = true
 
 [node name="CharacterImage" type="Sprite2D" parent="TextureRect"]
 position = Vector2(1516, 364)
@@ -419,6 +431,7 @@ offset_bottom = -0.240005
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 54
 text = "Christina das Chameleon:"
+metadata/_edit_use_anchors_ = true
 
 [node name="DialogeText" type="RichTextLabel" parent="TextureRect"]
 layout_mode = 1
@@ -434,19 +447,26 @@ offset_bottom = -0.335999
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 40
 text = "\"Ich brauche deine Hilfe! Ich kann michr nicht mehr sichtbar machen. Du musst mir meine Visabel-Mischung machen. Fülle zuerst Wasser in das erste Reagenzglas. \""
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureButton" type="TextureButton" parent="TextureRect"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0362473
+anchor_top = 0.0260989
 offset_left = -203.0
 offset_top = 216.0
 offset_right = 68.0
 offset_bottom = 448.0
 texture_normal = ExtResource("49_gobe3")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Laborraum" type="TextureRect" parent="."]
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 1924.0
+offset_bottom = 1082.0
 texture = ExtResource("50_7lu8q")
 
 [node name="LaborArea2D" type="Area2D" parent="Laborraum"]
@@ -454,7 +474,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Laborraum/LaborArea2D"]
-polygon = PackedVector2Array(947, 726, 1567, 409, 2811, 1124, 2222, 1563)
+polygon = PackedVector2Array(468, 354, 709, 214, 1336, 565, 1069, 782)
 
 [connection signal="area_entered" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_exited"]

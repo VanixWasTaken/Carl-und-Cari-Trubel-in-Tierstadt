@@ -2,16 +2,19 @@ extends Node2D
 
 
 var mouse_inside = false
+var my_name = "null"
+@export var scene_name: String
 
+func _ready():
+	my_name = get_name()
+	
 func _process(delta):
 	if mouse_inside:
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
 	if mouse_inside and Input.is_action_just_pressed("left_click"):
-		get_tree().change_scene_to_file("res://Scenes and Scripts/chemical_laboratory.tscn")
-	
-
+		$"../Player"._get_clicked_object(my_name, scene_name)
 
 func _on_area_2d_mouse_entered():
 	mouse_inside = true
