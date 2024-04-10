@@ -9,7 +9,7 @@ func _process(delta):
 	else:
 		$AnimatedSprite2D.stop()
 	if mouse_inside and Input.is_action_just_pressed("left_click"):
-		get_tree().change_scene_to_file("res://Scenes and Scripts/test.tscn")
+		get_tree().change_scene_to_file("res://Scenes and Scripts/chemical_laboratory.tscn")
 	
 
 
