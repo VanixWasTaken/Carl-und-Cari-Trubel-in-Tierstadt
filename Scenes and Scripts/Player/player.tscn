@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://daswfhvjsa7jh"]
+[gd_scene load_steps=7 format=3 uid="uid://daswfhvjsa7jh"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Player/player.gd" id="1_pxkst"]
 [ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Test/Player/IMG_1931.PNG" id="1_uekr7"]
 [ext_resource type="Texture2D" uid="uid://fji17txvsqan" path="res://Assets/Test/Player/IMG_1932.PNG" id="2_3hmks"]
+[ext_resource type="AudioStream" uid="uid://xjmarfqqltkh" path="res://Assets/Sound Test/sfx_hub_foley_footsteps_var.mp3" id="4_bip16"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hb2ux"]
 animations = [{
@@ -35,5 +36,8 @@ frame_progress = 0.736102
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_mykrf")
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_bip16")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
