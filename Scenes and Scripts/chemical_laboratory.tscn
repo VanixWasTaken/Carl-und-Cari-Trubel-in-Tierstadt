@@ -478,7 +478,6 @@ stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="Laborraum" type="TextureRect" parent="."]
-visible = false
 offset_left = 4.0
 offset_top = 2.0
 offset_right = 1924.0
