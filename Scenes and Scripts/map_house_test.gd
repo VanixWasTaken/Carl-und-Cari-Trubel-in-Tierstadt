@@ -17,13 +17,14 @@ func _process(delta):
 		$Click.play()
 		$"../Player"._get_clicked_object(my_name, scene_name)
 
+# handles the input for clicking on the house to enter the level
 func _on_area_2d_mouse_entered():
 	mouse_inside = true
 	$Hover.play()
 func _on_area_2d_mouse_exited():
 	mouse_inside = false
 
-
+# deactivates the functionality of the house, by making the area2d invisible
 func _on_job_notes_deactivate_house():
 	$Area2D.visible = false
 
