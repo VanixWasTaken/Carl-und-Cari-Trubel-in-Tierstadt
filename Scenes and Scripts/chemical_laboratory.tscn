@@ -1,6 +1,7 @@
-[gd_scene load_steps=66 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=67 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/chemical_laboratory.gd" id="1_b2cfh"]
+[ext_resource type="Texture2D" uid="uid://c0h603nnswynw" path="res://Assets/grey_screen.png" id="2_qx6dl"]
 [ext_resource type="Texture2D" uid="uid://djwgsl8qdi8h6" path="res://Assets/Test/Chemical Laboratory/drink_holder_empty.png" id="2_ujlwc"]
 [ext_resource type="Texture2D" uid="uid://b1yh636oam2rh" path="res://Assets/Test/Chemical Laboratory/drink_holder_water_1.png" id="3_36t6l"]
 [ext_resource type="Texture2D" uid="uid://d4iyf3lnxq1wn" path="res://Assets/Test/Chemical Laboratory/drink_holder_mix_1.png" id="4_nlbyv"]
@@ -275,12 +276,12 @@ size = Vector2(279, 91)
 [node name="ChemicalLaboratory" type="Node2D"]
 script = ExtResource("1_b2cfh")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -129.0
-offset_top = -132.0
-offset_right = 2072.0
-offset_bottom = 1242.0
-color = Color(0.6, 0.6, 0.6, 1)
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -369.0
+offset_top = -345.0
+offset_right = 2572.0
+offset_bottom = 1343.0
+texture = ExtResource("2_qx6dl")
 
 [node name="DrinkHolder" type="AnimatedSprite2D" parent="."]
 position = Vector2(975, 271)
