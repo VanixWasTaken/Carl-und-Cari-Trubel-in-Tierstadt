@@ -308,13 +308,17 @@ shape = SubResource("RectangleShape2D_6nk3i")
 position = Vector2(1022, 884)
 scale = Vector2(0.754545, 0.741627)
 texture = ExtResource("9_62uh1")
-metadata/_edit_group_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Scale"]
-offset_left = -39.0
-offset_top = 98.0
-offset_right = 202.0
-offset_bottom = 149.0
+anchors_preset = -1
+anchor_left = -0.00972772
+anchor_top = -0.0406669
+anchor_right = 0.000642655
+anchor_bottom = -0.0496557
+offset_left = -31.4338
+offset_top = 146.097
+offset_right = 209.566
+offset_bottom = 197.097
 theme_override_colors/default_color = Color(0, 1, 0, 1)
 theme_override_fonts/normal_font = ExtResource("11_g8n2i")
 theme_override_font_sizes/normal_font_size = 61
@@ -406,6 +410,7 @@ position = Vector2(-3.5, -0.5)
 shape = SubResource("RectangleShape2D_rewly")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 offset_left = 156.0
 offset_top = 356.0
 offset_right = 2032.0
@@ -465,6 +470,7 @@ stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="Laborraum" type="TextureRect" parent="."]
+visible = false
 offset_left = 4.0
 offset_top = 2.0
 offset_right = 1924.0
