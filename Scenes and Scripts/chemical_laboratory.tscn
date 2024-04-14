@@ -238,16 +238,16 @@ animations = [{
 "texture": ExtResource("22_0mkdw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_p5sn3")
+"texture": ExtResource("26_qjftv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_wkruo")
+"texture": ExtResource("23_p5sn3")
 }, {
 "duration": 1.0,
 "texture": ExtResource("25_0482o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_qjftv")
+"texture": ExtResource("24_wkruo")
 }, {
 "duration": 1.0,
 "texture": ExtResource("27_tycnb")
@@ -312,7 +312,7 @@ texture = ExtResource("9_62uh1")
 [node name="RichTextLabel" type="RichTextLabel" parent="Scale"]
 anchors_preset = -1
 anchor_left = -0.00972772
-anchor_top = -0.0406669
+anchor_top = -0.0496557
 anchor_right = 0.000642655
 anchor_bottom = -0.0496557
 offset_left = -31.4338
@@ -397,7 +397,7 @@ position = Vector2(3.5, -6)
 shape = SubResource("RectangleShape2D_a5hvy")
 
 [node name="PulverBowl" type="AnimatedSprite2D" parent="."]
-position = Vector2(1061, 832)
+position = Vector2(1011, 746)
 scale = Vector2(0.90411, 1.26405)
 sprite_frames = SubResource("SpriteFrames_4ogow")
 script = ExtResource("32_ebx3t")
@@ -482,7 +482,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Laborraum/LaborArea2D"]
-polygon = PackedVector2Array(468, 354, 709, 214, 1336, 565, 1069, 782)
+polygon = PackedVector2Array(880, 577, 1211, 460, 1784, 634, 1465, 748)
 
 [connection signal="area_entered" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_exited"]
