@@ -89,9 +89,11 @@ polygon = PackedVector2Array(-581.132, -341.132, -451.321, -460.377, -10.566, -4
 
 [node name="Hover" type="AudioStreamPlayer" parent="MapHouseTest"]
 stream = ExtResource("16_ciapm")
+bus = &"SFX"
 
 [node name="Click" type="AudioStreamPlayer" parent="MapHouseTest"]
 stream = ExtResource("15_bdydr")
+bus = &"SFX"
 
 [node name="Player" parent="." instance=ExtResource("14_0uuvf")]
 position = Vector2(287, 535)
@@ -139,9 +141,11 @@ shape = SubResource("CircleShape2D_h683o")
 
 [node name="Hover" type="AudioStreamPlayer" parent="JobNotes/JobNoteMenu/ExitButton"]
 stream = ExtResource("16_ciapm")
+bus = &"SFX"
 
 [node name="Click" type="AudioStreamPlayer" parent="JobNotes/JobNoteMenu/ExitButton"]
 stream = ExtResource("15_bdydr")
+bus = &"SFX"
 
 [node name="InJobMenuJobNote1" type="Node2D" parent="JobNotes/JobNoteMenu"]
 position = Vector2(-113, -118)
@@ -185,9 +189,11 @@ polygon = PackedVector2Array(-47.8698, 29.4583, -51.5521, -57.6892, -81.0104, -1
 
 [node name="Hover" type="AudioStreamPlayer" parent="JobNotes"]
 stream = ExtResource("16_ciapm")
+bus = &"SFX"
 
 [node name="Click" type="AudioStreamPlayer" parent="JobNotes"]
 stream = ExtResource("15_bdydr")
+bus = &"SFX"
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(0, 6)

@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Scenes and Scripts/global.gd"
+MusicController="*res://Scenes and Scripts/MusicController.tscn"
 
 [display]
 

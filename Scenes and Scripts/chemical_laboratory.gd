@@ -6,6 +6,7 @@ var no_shader = preload("res://Shader/no_shader.tres")
 
 func _ready():
 	$TextureRect/DialogeText.text == "Ich brauche deine Hilfe! Ich kann michr nicht mehr sichtbar machen. Du musst mir meine Visabel-Mischung machen. Fülle zuerst Wasser in das erste Ragenzglas. "
+	MusicController._play_music("mayhem", "laboratory", -30)
 
 func _process(delta):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) && mouse_on == true:
