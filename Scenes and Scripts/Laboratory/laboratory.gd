@@ -14,7 +14,7 @@ func _ready():
 	name_text = $Dialoguebox/Name
 
 	name_text.text = "Carl"
-	text_text.text = "Hallo? Ist irgendjemand? Uns wurde gesagt, dass wir hier aushelfen sollen."
+	text_text.text = "Hallo? Ist hier irgendjemand? Uns wurde gesagt, dass wir hier aushelfen sollen."
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
