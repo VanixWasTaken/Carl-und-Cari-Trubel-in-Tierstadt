@@ -17,19 +17,19 @@ func _on_area_2d_area_entered(area):
 		if water_in_1 == false && pulver_in_1 == false:
 			$".".frame = 1
 			water_in_1 = true
-			$"../TextureRect".visible = true
-			$"../TextureRect/DialogeText".text = "Sehr gut. Jetzt musst du 0.2 - 0.45 Gramm von dem lilanen Pulver in die Schale auf der Waage schütten."
+			$"../Dialoguebox".visible = true
+			$"../Dialoguebox/Text".text = "Sehr gut. Jetzt musst du 0.2 - 0.45 Gramm von dem lilanen Pulver in die Schale auf der Waage schütten."
 		elif water_in_2 == false && pulver_in_1 == true:
 			$".".frame = 3
 			water_in_2 = true
-			$"../TextureRect".visible = true
-			$"../TextureRect/DialogeText".text = "Perfekt. Fülle jetzt 1.3 - 1.5 Gramm von dem roten Pulver in die Schale.."
+			$"../Dialoguebox".visible = true
+			$"../Dialoguebox/Text".text = "Perfekt. Fülle jetzt 1.3 - 1.5 Gramm von dem roten Pulver in die Schale.."
 
 		elif water_in_3 == false && pulver_in_2 == true:
 			$".".frame = 5
 			water_in_3 = true
-			$"../TextureRect".visible = true
-			$"../TextureRect/DialogeText".text = "Zu guter letzt musst du nur noch 1.5 - 2.0 Gramm von dem gelben Pulver in die Schale füllen."
+			$"../Dialoguebox".visible = true
+			$"../Dialoguebox/Text".text = "Zu guter letzt musst du nur noch 1.5 - 2.0 Gramm von dem gelben Pulver in die Schale füllen."
 
 
 	if area_name.contains("PulverBowl"):
@@ -53,21 +53,21 @@ func remove_glass():
 		$Area2D.position.y += 100000
 		$Area2D2.monitoring = true
 		needed_color = "Red"
-		$"../TextureRect".visible = true
-		$"../TextureRect/DialogeText".text = "Gute Arbeit. Füge jetzt Wasser zum nächsten Reagenzglaz hinzu."
+		$"../Dialoguebox".visible = true
+		$"../Dialoguebox/Text".text = "Gute Arbeit. Füge jetzt Wasser zum nächsten Reagenzglaz hinzu."
 
 	if pulver_in_2:
 		$Area2D2.position.y += 10000
 		$Area2D3.monitoring = true
 		needed_color = "Yellow"
-		$"../TextureRect".visible = true
-		$"../TextureRect/DialogeText".text = "Gut so. Füge nun Wasser in das letzte Reagenzglas hinzu."
+		$"../Dialoguebox".visible = true
+		$"../Dialoguebox/Text".text = "Gut so. Füge nun Wasser in das letzte Reagenzglas hinzu."
 
 	if pulver_in_3:
 		$Area2D2.position.y += 10000
 		needed_color = "NULL"
-		$"../TextureRect".visible = true
-		$"../TextureRect/DialogeText".text = "Perfekt. Jetzt haben wir alle Mixturen, die wir für die Visabel-Mischung brauchen! Lass uns zum nächsten Arbeitsschritt gehen."
+		$"../Dialoguebox".visible = true
+		$"../Dialoguebox/Text".text = "Perfekt. Jetzt haben wir alle Mixturen, die wir für die Visabel-Mischung brauchen! Lass uns zum nächsten Arbeitsschritt gehen."
 
 func _on_area_2d_area_exited(area):
 	if area_name.contains("WaterCup"):

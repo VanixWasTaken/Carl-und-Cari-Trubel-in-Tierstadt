@@ -5,7 +5,7 @@ var outline_shader = preload("res://Shader/outline.tres")
 var no_shader = preload("res://Shader/no_shader.tres")
 
 func _ready():
-	$TextureRect/DialogeText.text == "Ich brauche deine Hilfe! Ich kann michr nicht mehr sichtbar machen. Du musst mir meine Visabel-Mischung machen. Fülle zuerst Wasser in das erste Ragenzglas. "
+	$Dialoguebox/Text.text = "Fülle zunmächst einmal etwas Wasser in das linke Reagenzglas."
 
 
 func _process(delta):
@@ -13,7 +13,7 @@ func _process(delta):
 		$Laborraum.visible = false
 
 func _on_texture_button_button_down():
-	$TextureRect.visible = false
+	$Dialoguebox.visible = false
 
 
 func _on_labor_area_2d_mouse_entered():
