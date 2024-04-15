@@ -91,7 +91,7 @@ size = Vector2(184, 366)
 size = Vector2(182, 377)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqi52"]
-size = Vector2(123, 507)
+size = Vector2(261.084, 507)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owpuh"]
 animations = [{
@@ -271,7 +271,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rewly"]
-size = Vector2(279, 91)
+size = Vector2(399.288, 98.8885)
 
 [node name="ChemicalLaboratory" type="Node2D"]
 script = ExtResource("1_b2cfh")
@@ -338,7 +338,8 @@ metadata/_edit_use_anchors_ = true
 [node name="Area2D" type="Area2D" parent="Scale"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scale/Area2D"]
-position = Vector2(48.5, -202.5)
+position = Vector2(-20.5421, -202.5)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_iqi52")
 
 [node name="WaterCup" type="AnimatedSprite2D" parent="."]
@@ -407,16 +408,17 @@ position = Vector2(3.5, -6)
 shape = SubResource("RectangleShape2D_a5hvy")
 
 [node name="PulverBowl" type="AnimatedSprite2D" parent="."]
-position = Vector2(1011, 746)
+position = Vector2(1020, 827)
 scale = Vector2(0.90411, 1.26405)
 sprite_frames = SubResource("SpriteFrames_4ogow")
+offset = Vector2(6.645, -72.3)
 script = ExtResource("32_ebx3t")
 metadata/_edit_group_ = true
 
 [node name="PulverBowl" type="Area2D" parent="PulverBowl"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PulverBowl/PulverBowl"]
-position = Vector2(-3.5, -0.5)
+position = Vector2(9.40161, 10.6799)
 shape = SubResource("RectangleShape2D_rewly")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -480,6 +482,7 @@ stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="Laborraum" type="TextureRect" parent="."]
+visible = false
 offset_left = 4.0
 offset_top = 2.0
 offset_right = 1924.0
