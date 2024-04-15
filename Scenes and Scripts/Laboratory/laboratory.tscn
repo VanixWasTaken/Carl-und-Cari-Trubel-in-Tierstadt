@@ -106,6 +106,10 @@ collision_mask = 4
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/LaborArea2D"]
 polygon = PackedVector2Array(901, 781, 888, 546, 1211, 472, 1777, 610, 1774, 705, 1925, 750, 1923, 885, 1618, 970)
 
+[node name="Hover" type="AudioStreamPlayer" parent="Sprite2D"]
+
+[node name="Click" type="AudioStreamPlayer" parent="Sprite2D"]
+
 [connection signal="button_down" from="Dialoguebox/TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="mouse_entered" from="Sprite2D/LaborArea2D" to="." method="_on_labor_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Sprite2D/LaborArea2D" to="." method="_on_labor_area_2d_mouse_exited"]

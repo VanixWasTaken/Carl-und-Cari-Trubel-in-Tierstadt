@@ -20,12 +20,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if mouse_on and Input.is_action_just_pressed("left_click"):
+		$Sprite2D/Click.play()
 		get_tree().change_scene_to_file("res://Scenes and Scripts/Laboratory/chemical_laboratory.tscn")
 
 
 func _on_labor_area_2d_mouse_entered():
 	mouse_on = true
 	$Sprite2D.material = outline_shader
+	_randomize_sounds("click")
 
 
 func _on_labor_area_2d_mouse_exited():
@@ -81,3 +83,15 @@ func _on_texture_button_button_down():
 		await get_tree().create_timer(0.1).timeout
 		$Sprite2D.visible = true
 	move_textbox(dialogue_position)
+
+func _randomize_sounds(action: String):
+	var random = randi_range(1, 3) % 3
+	if action == "click":
+		match random:
+			0:
+				$Sprite2D/Click.stream = load("res://Assets/Sound Test/sfx_hub_ui_click_var1.mp3")
+			1:
+				$Sprite2D/Click.stream = load("res://Assets/Sound Test/sfx_hub_ui_click_var2.mp3")
+			2:
+				$Sprite2D/Click.stream = load("res://Assets/Sound Test/sfx_hub_ui_click_var3.mp3")
+		$Sprite2D/Click.play()
