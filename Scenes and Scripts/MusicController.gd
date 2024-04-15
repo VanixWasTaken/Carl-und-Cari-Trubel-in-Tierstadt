@@ -14,3 +14,9 @@ func _play_music(piece_name: String, area: String, volume: float = 0):
 	MusicController.stream = load("res://Assets/Sound Test/mus_" + area + "_" + piece_name + ".mp3")
 	MusicController.volume_db = volume
 	MusicController.play()
+
+func _stop_music(time: float = 0):
+	MusicController.stop()
+	if time > 0:
+		await get_tree().create_timer(time).timeout
+		MusicController.play()

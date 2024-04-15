@@ -201,6 +201,8 @@ navigation_polygon = SubResource("NavigationPolygon_8wyy8")
 
 [connection signal="mouse_entered" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_exited"]
+[connection signal="deactivate_house" from="JobNotes" to="MapHouseTest" method="_on_job_notes_deactivate_house"]
+[connection signal="reactivate_house" from="JobNotes" to="MapHouseTest" method="_on_job_notes_reactivate_house"]
 [connection signal="mouse_entered" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="JobNotes/JobNoteMenu/ExitButton/Area2D" to="JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_entered"]

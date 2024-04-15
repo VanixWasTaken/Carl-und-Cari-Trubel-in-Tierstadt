@@ -13,6 +13,8 @@ config_version=5
 config/name="Carl und Cari Trubel in Tierstadt"
 run/main_scene="res://Scenes and Scripts/map.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0.486275, 0.72549, 0.972549, 1)
+boot_splash/image="res://Assets/Test/Player/IMG_1932.PNG"
 config/icon="res://icon.svg"
 
 [autoload]

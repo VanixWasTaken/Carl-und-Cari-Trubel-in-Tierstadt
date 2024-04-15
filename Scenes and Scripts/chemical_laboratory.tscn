@@ -354,6 +354,8 @@ metadata/_edit_group_ = true
 position = Vector2(-4.5, -0.5)
 shape = SubResource("RectangleShape2D_rqc8m")
 
+[node name="Interact" type="AudioStreamPlayer" parent="WaterCup"]
+
 [node name="RedPulver" type="AnimatedSprite2D" parent="."]
 position = Vector2(1703, 907)
 scale = Vector2(0.746537, 0.819444)
