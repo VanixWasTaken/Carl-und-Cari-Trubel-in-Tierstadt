@@ -1,11 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=23 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Texture2D" uid="uid://ckctg6v1ekkvh" path="res://Assets/map.PNG" id="1_pn286"]
 [ext_resource type="Script" path="res://Scenes and Scripts/map_house_test.gd" id="2_e7gsj"]
-[ext_resource type="Texture2D" uid="uid://cdk034lnactt1" path="res://Assets/Test/House Animation/map_house_animation_test0.png" id="2_s8uy4"]
-[ext_resource type="Texture2D" uid="uid://s7np8vn7a40x" path="res://Assets/Test/House Animation/map_house_animation_test1.png" id="4_ek0bm"]
-[ext_resource type="Texture2D" uid="uid://dulbumr0rh2st" path="res://Assets/Test/House Animation/map_house_animation_test2.png" id="5_u4elg"]
-[ext_resource type="Texture2D" uid="uid://cqtp0uxkli3co" path="res://Assets/Test/House Animation/map_house_animation_test3.png" id="6_aa40f"]
+[ext_resource type="Texture2D" uid="uid://bhf7mcvws0om1" path="res://Assets/Map Assets/chemielabor_frame_1.png" id="3_cfeel"]
+[ext_resource type="Texture2D" uid="uid://ptf0564yiv2g" path="res://Assets/Map Assets/chemielabor_frame_2.png" id="4_5w03e"]
+[ext_resource type="Texture2D" uid="uid://b0brfbx8do4nc" path="res://Assets/Map Assets/chemielabor_frame_3.png" id="5_go8o6"]
 [ext_resource type="Script" path="res://Scenes and Scripts/job_notes.gd" id="9_vqn8c"]
 [ext_resource type="Script" path="res://Scenes and Scripts/exit_button.gd" id="10_0oi3s"]
 [ext_resource type="Texture2D" uid="uid://cch5cjlssxc7x" path="res://Assets/Test/UI/UI_hud.PNG" id="10_dyp1j"]
@@ -22,16 +21,13 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_s8uy4")
+"texture": ExtResource("3_cfeel")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_ek0bm")
+"texture": ExtResource("4_5w03e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_u4elg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_aa40f")
+"texture": ExtResource("5_go8o6")
 }],
 "loop": true,
 "name": &"house_animation_test",
@@ -68,30 +64,29 @@ offset_right = 840.0
 offset_bottom = 268.0
 texture = ExtResource("1_pn286")
 
-[node name="MapHouseTest" type="Node2D" parent="."]
+[node name="Laboratory Building" type="Node2D" parent="."]
 position = Vector2(263, 127)
 script = ExtResource("2_e7gsj")
 scene_name = "res://Scenes and Scripts/Laboratory/laboratory.tscn"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MapHouseTest"]
-position = Vector2(562, 371)
-scale = Vector2(1.29011, 1.11235)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Laboratory Building"]
+position = Vector2(15, 15)
 sprite_frames = SubResource("SpriteFrames_unxvv")
 animation = &"house_animation_test"
 
-[node name="Area2D" type="Area2D" parent="MapHouseTest"]
+[node name="Area2D" type="Area2D" parent="Laboratory Building"]
 position = Vector2(1080, 813)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapHouseTest/Area2D"]
-position = Vector2(-820, -651)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Laboratory Building/Area2D"]
+position = Vector2(-852, -671)
 scale = Vector2(0.6625, 0.6625)
 polygon = PackedVector2Array(-581.132, -341.132, -451.321, -460.377, -10.566, -440.755, 21.1321, 22.6415, -492.075, 46.7924)
 
-[node name="Hover" type="AudioStreamPlayer" parent="MapHouseTest"]
+[node name="Hover" type="AudioStreamPlayer" parent="Laboratory Building"]
 stream = ExtResource("16_ciapm")
 bus = &"SFX"
 
-[node name="Click" type="AudioStreamPlayer" parent="MapHouseTest"]
+[node name="Click" type="AudioStreamPlayer" parent="Laboratory Building"]
 stream = ExtResource("15_bdydr")
 bus = &"SFX"
 
@@ -199,10 +194,10 @@ bus = &"SFX"
 position = Vector2(0, 6)
 navigation_polygon = SubResource("NavigationPolygon_8wyy8")
 
-[connection signal="mouse_entered" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="MapHouseTest/Area2D" to="MapHouseTest" method="_on_area_2d_mouse_exited"]
-[connection signal="deactivate_house" from="JobNotes" to="MapHouseTest" method="_on_job_notes_deactivate_house"]
-[connection signal="reactivate_house" from="JobNotes" to="MapHouseTest" method="_on_job_notes_reactivate_house"]
+[connection signal="mouse_entered" from="Laboratory Building/Area2D" to="Laboratory Building" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Laboratory Building/Area2D" to="Laboratory Building" method="_on_area_2d_mouse_exited"]
+[connection signal="deactivate_house" from="JobNotes" to="Laboratory Building" method="_on_job_notes_deactivate_house"]
+[connection signal="reactivate_house" from="JobNotes" to="Laboratory Building" method="_on_job_notes_reactivate_house"]
 [connection signal="mouse_entered" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="JobNotes/JobNoteMenu/ExitButton/Area2D" to="JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_entered"]
