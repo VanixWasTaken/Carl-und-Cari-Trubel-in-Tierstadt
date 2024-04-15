@@ -86,10 +86,10 @@ func red_pulver():
 		red_pulver()
 
 func yellow_pulver():
-	bowl_full = true
+		bowl_full = true
 		if yellow_on == true:
-		await get_tree().create_timer(0.2).timeout
-	weight += 0.2
+			await get_tree().create_timer(0.2).timeout
+			weight += 0.2
 		if weight == 0.2:
 			$".".frame = 11
 		elif weight >= 0.5 && weight <= 0.8:
