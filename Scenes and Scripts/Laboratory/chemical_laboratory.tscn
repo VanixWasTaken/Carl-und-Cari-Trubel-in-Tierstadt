@@ -1,6 +1,6 @@
-[gd_scene load_steps=67 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=66 format=3 uid="uid://v8l885c1xsm5"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/chemical_laboratory.gd" id="1_b2cfh"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
 [ext_resource type="Texture2D" uid="uid://c0h603nnswynw" path="res://Assets/grey_screen.png" id="2_qx6dl"]
 [ext_resource type="Texture2D" uid="uid://djwgsl8qdi8h6" path="res://Assets/Test/Chemical Laboratory/drink_holder_empty.png" id="2_ujlwc"]
 [ext_resource type="Texture2D" uid="uid://b1yh636oam2rh" path="res://Assets/Test/Chemical Laboratory/drink_holder_water_1.png" id="3_36t6l"]
@@ -50,7 +50,6 @@
 [ext_resource type="Texture2D" uid="uid://dk38rs5iu72fh" path="res://Assets/Test/speech_bubble.png" id="47_mnims"]
 [ext_resource type="Texture2D" uid="uid://mmk63kndogd8" path="res://Assets/Test/queation_mark.png" id="48_y1lup"]
 [ext_resource type="Texture2D" uid="uid://bt06aexkeyf48" path="res://Assets/Test/Button.png" id="49_gobe3"]
-[ext_resource type="Texture2D" uid="uid://b05bruduxotgl" path="res://Assets/Test/laborraum platzkalter.png" id="50_7lu8q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mrjln"]
 animations = [{
@@ -91,7 +90,7 @@ size = Vector2(184, 366)
 size = Vector2(182, 377)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqi52"]
-size = Vector2(261.084, 507)
+size = Vector2(261.084, 332.813)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owpuh"]
 animations = [{
@@ -338,7 +337,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Area2D" type="Area2D" parent="Scale"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scale/Area2D"]
-position = Vector2(-20.5421, -202.5)
+position = Vector2(-20.5421, -115.406)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_iqi52")
 
@@ -481,21 +480,6 @@ texture_normal = ExtResource("49_gobe3")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Laborraum" type="TextureRect" parent="."]
-visible = false
-offset_left = 4.0
-offset_top = 2.0
-offset_right = 1924.0
-offset_bottom = 1082.0
-texture = ExtResource("50_7lu8q")
-
-[node name="LaborArea2D" type="Area2D" parent="Laborraum"]
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Laborraum/LaborArea2D"]
-polygon = PackedVector2Array(880, 577, 1211, 460, 1784, 634, 1465, 748)
-
 [connection signal="area_entered" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="DrinkHolder/Area2D2" to="DrinkHolder" method="_on_area_2d_area_entered"]
@@ -515,5 +499,3 @@ polygon = PackedVector2Array(880, 577, 1211, 460, 1784, 634, 1465, 748)
 [connection signal="mouse_entered" from="PulverBowl/PulverBowl" to="PulverBowl" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="PulverBowl/PulverBowl" to="PulverBowl" method="_on_area_2d_mouse_exited"]
 [connection signal="button_down" from="TextureRect/TextureButton" to="." method="_on_texture_button_button_down"]
-[connection signal="mouse_entered" from="Laborraum/LaborArea2D" to="." method="_on_labor_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Laborraum/LaborArea2D" to="." method="_on_labor_area_2d_mouse_exited"]

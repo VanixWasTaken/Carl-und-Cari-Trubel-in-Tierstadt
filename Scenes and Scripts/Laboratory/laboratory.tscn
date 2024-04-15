@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b73i1p5cw3b53"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Laboratory/laboratory.gd" id="1_vx07n"]
+[ext_resource type="Texture2D" uid="uid://b05bruduxotgl" path="res://Assets/Test/laborraum platzkalter.png" id="2_ikmwy"]
+
+[node name="Laboratory" type="Node2D"]
+script = ExtResource("1_vx07n")
+
+[node name="Laborraum" type="TextureRect" parent="."]
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 1924.0
+offset_bottom = 1082.0
+texture = ExtResource("2_ikmwy")
+
+[node name="LaborArea2D" type="Area2D" parent="Laborraum"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Laborraum/LaborArea2D"]
+polygon = PackedVector2Array(880, 577, 1211, 460, 1784, 634, 1465, 748)
+
+[connection signal="mouse_entered" from="Laborraum/LaborArea2D" to="." method="_on_labor_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Laborraum/LaborArea2D" to="." method="_on_labor_area_2d_mouse_exited"]
