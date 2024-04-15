@@ -66,6 +66,7 @@ func _on_area_2d_mouse_entered():
 func _on_area_2d_mouse_exited():
 	mouse_inside = false
 	$Sprite2D.material = no_shader
+	Global.moving_allowed = true
 
 	# checks for input on the note menu and handles its shaders and sounds
 func _on_area_2d_InJobMenuJobNote1_mouse_entered():

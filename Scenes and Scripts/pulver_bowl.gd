@@ -65,11 +65,11 @@ func _on_area_2d_area_entered(area):
 					purple_on = true
 					purple_pulver()
 					pulver_color = "Purple"
+			bowl_full = true
 
 func red_pulver():
-	bowl_full = true
+	await get_tree().create_timer(0.2).timeout
 	if red_on == true:
-		await get_tree().create_timer(0.2).timeout
 		weight += 0.1
 		if weight == 0.1:
 			$".".frame = 5
@@ -86,36 +86,34 @@ func red_pulver():
 		red_pulver()
 
 func yellow_pulver():
-		bowl_full = true
-		if yellow_on == true:
-			await get_tree().create_timer(0.2).timeout
-			weight += 0.2
+	await get_tree().create_timer(0.2).timeout
+	if yellow_on == true:
+		weight += 0.2
 		if weight == 0.2:
 			$".".frame = 11
 		elif weight >= 0.5 && weight <= 0.8:
 			$".".frame = 12
 		elif weight == 1.2:
-			$".".frame = 13
-		elif weight >= 1.6 && weight <= 1.9:
+				$".".frame = 13
+		elif weight >= 1.6 && weight <= 2.0:
 			$".".frame = 14
 		elif weight >= 2:
 			$".".frame = 15
 		yellow_pulver()
 
 func purple_pulver():
-		bowl_full = true
-		if purple_on == true:
-			await get_tree().create_timer(0.3).timeout
-			weight += 0.05
-			if weight == 0.05:
-				$".".frame = 1
-			elif weight >= 0.15 && weight <= 0.3:
-				$".".frame = 2
-			elif weight == 0.35:
-				$".".frame = 3
-			elif weight >= 0.5:
-				$".".frame = 4
-			purple_pulver()
+	await get_tree().create_timer(0.3).timeout
+	if purple_on == true:
+		weight += 0.05
+		if weight == 0.05:
+			$".".frame = 1
+		elif weight >= 0.15 && weight <= 0.3:
+			$".".frame = 2
+		elif weight == 0.35:
+			$".".frame = 3
+		elif weight >= 0.5:
+			$".".frame = 4
+		purple_pulver()
 
 func _on_area_2d_area_exited(area):
 	var area_parent = area.get_parent()

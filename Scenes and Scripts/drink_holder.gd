@@ -28,7 +28,7 @@ func _on_area_2d_area_entered(area):
 			$".".frame = 5
 			water_in_3 = true
 			$"../TextureRect".visible = true
-			$"../TextureRect/DialogeText".text = "Zu guter letzt musst du nur noch 1.6 - 1.9 Gramm von dem gelben Pulver in die Schale füllen."
+			$"../TextureRect/DialogeText".text = "Zu guter letzt musst du nur noch 1.5 - 2.0 Gramm von dem gelben Pulver in die Schale füllen."
 
 
 	if area_name.contains("PulverBowl"):
