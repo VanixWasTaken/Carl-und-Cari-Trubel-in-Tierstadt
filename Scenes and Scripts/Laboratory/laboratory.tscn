@@ -1,7 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://b73i1p5cw3b53"]
+[gd_scene load_steps=12 format=3 uid="uid://b73i1p5cw3b53"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Laboratory/laboratory.gd" id="1_vx07n"]
 [ext_resource type="Texture2D" uid="uid://b05bruduxotgl" path="res://Assets/Test/laborraum platzkalter.png" id="2_ikmwy"]
+[ext_resource type="Texture2D" uid="uid://c6vqwg8hs40td" path="res://Assets/Test/UI/speech_bubble.png" id="3_7j633"]
+[ext_resource type="Texture2D" uid="uid://bofvsfejo11vd" path="res://Assets/Test/UI/speech_bubble_left.png" id="4_o7f4r"]
+[ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Test/Player/IMG_1931.PNG" id="5_bhgf8"]
+[ext_resource type="Texture2D" uid="uid://ctcnsi4vmixqr" path="res://Assets/Test/Player/icon_carl1.PNG" id="6_rxi3x"]
+[ext_resource type="Texture2D" uid="uid://dpm70w5m3uweb" path="res://Assets/Test/Characters/Chameleon Headshot.png" id="7_i3486"]
+[ext_resource type="Texture2D" uid="uid://c727g3a4ej504" path="res://Assets/Test/UI/Button.png" id="8_4sfuo"]
+[ext_resource type="Texture2D" uid="uid://bhl7flv0cjgac" path="res://Assets/Test/UI/laboratory_table1.PNG" id="9_tgjy5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1na7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7j633")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o7f4r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3yb1s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bhgf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rxi3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i3486")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Laboratory" type="Node2D"]
 script = ExtResource("1_vx07n")
@@ -13,12 +51,61 @@ offset_right = 1924.0
 offset_bottom = 1082.0
 texture = ExtResource("2_ikmwy")
 
-[node name="LaborArea2D" type="Area2D" parent="Laborraum"]
+[node name="Dialoguebox" type="AnimatedSprite2D" parent="."]
+position = Vector2(1408, 788)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_t1na7")
+frame_progress = 0.626984
+metadata/_edit_use_anchors_ = true
+
+[node name="FaceSprite" type="AnimatedSprite2D" parent="Dialoguebox"]
+position = Vector2(208.667, -6)
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_3yb1s")
+frame = 1
+frame_progress = 0.761408
+
+[node name="Name" type="RichTextLabel" parent="Dialoguebox"]
+offset_left = -289.0
+offset_top = -79.0
+offset_right = 116.0
+offset_bottom = -32.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Carl
+"
+scroll_active = false
+
+[node name="Text" type="RichTextLabel" parent="Dialoguebox"]
+offset_left = -279.0
+offset_top = -40.0
+offset_right = 99.0
+offset_bottom = 47.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Haloo was läuft was läuft"
+scroll_active = false
+
+[node name="TextureButton" type="TextureButton" parent="Dialoguebox"]
+offset_left = -470.0
+offset_top = -67.333
+offset_right = -384.0
+offset_bottom = 8.667
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("8_4sfuo")
+stretch_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1410, 687)
+texture = ExtResource("9_tgjy5")
+
+[node name="LaborArea2D" type="Area2D" parent="Sprite2D"]
+position = Vector2(-1406, -685)
 collision_layer = 4
 collision_mask = 4
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Laborraum/LaborArea2D"]
-polygon = PackedVector2Array(880, 577, 1211, 460, 1784, 634, 1465, 748)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/LaborArea2D"]
+polygon = PackedVector2Array(901, 781, 888, 546, 1211, 472, 1777, 610, 1774, 705, 1925, 750, 1923, 885, 1618, 970)
 
-[connection signal="mouse_entered" from="Laborraum/LaborArea2D" to="." method="_on_labor_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Laborraum/LaborArea2D" to="." method="_on_labor_area_2d_mouse_exited"]
+[connection signal="button_down" from="Dialoguebox/TextureButton" to="." method="_on_texture_button_button_down"]
+[connection signal="mouse_entered" from="Sprite2D/LaborArea2D" to="." method="_on_labor_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite2D/LaborArea2D" to="." method="_on_labor_area_2d_mouse_exited"]
