@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlbqmb225i466"
+path="res://.godot/imported/sfx_laboratory_foley_beakersetdown_var1.mp3-b042d2da1a3b1f51ffccf8b3af017907.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var1.mp3"
+dest_files=["res://.godot/imported/sfx_laboratory_foley_beakersetdown_var1.mp3-b042d2da1a3b1f51ffccf8b3af017907.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

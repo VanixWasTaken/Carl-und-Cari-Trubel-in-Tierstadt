@@ -7,7 +7,8 @@ var my_name = "null"
 
 func _ready():
 	my_name = get_name()
-	MusicController._play_music("uplifting", "hub", -30)
+	MusicController._play_music("happyday", "hub", -20)
+
 func _process(delta):
 	if mouse_inside:
 		$AnimatedSprite2D.play()

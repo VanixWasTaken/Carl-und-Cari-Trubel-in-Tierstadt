@@ -1,7 +1,6 @@
 [gd_scene load_steps=66 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
-[ext_resource type="Texture2D" uid="uid://c0h603nnswynw" path="res://Assets/grey_screen.png" id="2_qx6dl"]
 [ext_resource type="Texture2D" uid="uid://djwgsl8qdi8h6" path="res://Assets/Test/Chemical Laboratory/drink_holder_empty.png" id="2_ujlwc"]
 [ext_resource type="Texture2D" uid="uid://b1yh636oam2rh" path="res://Assets/Test/Chemical Laboratory/drink_holder_water_1.png" id="3_36t6l"]
 [ext_resource type="Texture2D" uid="uid://d4iyf3lnxq1wn" path="res://Assets/Test/Chemical Laboratory/drink_holder_mix_1.png" id="4_nlbyv"]
@@ -50,6 +49,9 @@
 [ext_resource type="Texture2D" uid="uid://dk38rs5iu72fh" path="res://Assets/Test/speech_bubble.png" id="47_mnims"]
 [ext_resource type="Texture2D" uid="uid://mmk63kndogd8" path="res://Assets/Test/queation_mark.png" id="48_y1lup"]
 [ext_resource type="Texture2D" uid="uid://bt06aexkeyf48" path="res://Assets/Test/Button.png" id="49_gobe3"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_i7371"]
+specular_color = Color(0.745098, 0.854902, 0.807843, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mrjln"]
 animations = [{
@@ -276,11 +278,12 @@ size = Vector2(399.288, 98.8885)
 script = ExtResource("1_b2cfh")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0.745098, 0.854902, 0.807843, 1)
 offset_left = -369.0
 offset_top = -345.0
 offset_right = 2572.0
 offset_bottom = 1343.0
-texture = ExtResource("2_qx6dl")
+texture = SubResource("CanvasTexture_i7371")
 
 [node name="DrinkHolder" type="AnimatedSprite2D" parent="."]
 position = Vector2(975, 271)
@@ -355,6 +358,8 @@ position = Vector2(-4.5, -0.5)
 shape = SubResource("RectangleShape2D_rqc8m")
 
 [node name="Interact" type="AudioStreamPlayer" parent="WaterCup"]
+volume_db = -15.0
+bus = &"SFX"
 
 [node name="RedPulver" type="AnimatedSprite2D" parent="."]
 position = Vector2(1703, 907)
@@ -373,6 +378,10 @@ position = Vector2(-13, -1)
 position = Vector2(16, -2.5)
 shape = SubResource("RectangleShape2D_xc7aw")
 
+[node name="Interact" type="AudioStreamPlayer" parent="RedPulver"]
+volume_db = -15.0
+bus = &"SFX"
+
 [node name="YellowPulver" type="AnimatedSprite2D" parent="."]
 position = Vector2(1702, 616)
 scale = Vector2(0.705128, 0.775261)
@@ -390,6 +399,10 @@ metadata/_edit_group_ = true
 position = Vector2(3.5, 5)
 shape = SubResource("RectangleShape2D_tcvw4")
 
+[node name="Interact" type="AudioStreamPlayer" parent="YellowPulver"]
+volume_db = -15.0
+bus = &"SFX"
+
 [node name="PurplePulver" type="AnimatedSprite2D" parent="."]
 position = Vector2(1702, 383.125)
 scale = Vector2(0.69663, 0.74827)
@@ -406,6 +419,10 @@ metadata/_edit_group_ = true
 position = Vector2(3.5, -6)
 shape = SubResource("RectangleShape2D_a5hvy")
 
+[node name="Interact" type="AudioStreamPlayer" parent="PurplePulver"]
+volume_db = -15.0
+bus = &"SFX"
+
 [node name="PulverBowl" type="AnimatedSprite2D" parent="."]
 position = Vector2(1020, 827)
 scale = Vector2(0.90411, 1.26405)
@@ -419,6 +436,10 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PulverBowl/PulverBowl"]
 position = Vector2(9.40161, 10.6799)
 shape = SubResource("RectangleShape2D_rewly")
+
+[node name="Interact" type="AudioStreamPlayer" parent="PulverBowl"]
+volume_db = -15.0
+bus = &"SFX"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false

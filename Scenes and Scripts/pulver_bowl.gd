@@ -28,8 +28,10 @@ func _process(delta):
 			mouse_position = get_global_mouse_position()
 			position = mouse_position
 			Global.mouse_full = true
-		else:
+		elif Input.is_action_just_released("left_click"):
 			position = start_position
+			$Interact.stream = load("res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var.mp3")
+			_randomize_sounds("release")
 
 
 
@@ -160,3 +162,12 @@ func _reset_bowl():
 		bowl_full = false
 		pulver_color = "null"
 
+func _randomize_sounds(action: String):
+	var random = randi_range(1, 2) % 2
+	if action == "release":
+		match random:
+			0:
+				$Interact.stream = load("res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var1.mp3")
+			1:
+				$Interact.stream = load("res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var2.mp3")
+		$Interact.play()

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/mus_hub_happyday.mp3-7167b15bb341d2d6f4987cce
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

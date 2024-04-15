@@ -18,8 +18,9 @@ func _process(delta):
 			mouse_position = get_global_mouse_position()
 			position = mouse_position
 			Global.mouse_full = true
-		else:
+		elif Input.is_action_just_released("left_click"):
 			position = start_position
+			_randomize_sounds("release")
 
 
 func _on_area_2d_mouse_entered():
@@ -29,3 +30,13 @@ func _on_area_2d_mouse_entered():
 func _on_area_2d_mouse_exited():
 	mouse_on = false
 	Global.mouse_full = false
+
+func _randomize_sounds(action: String):
+	var random = randi_range(1, 2) % 2
+	if action == "release":
+		match random:
+			0:
+				$Interact.stream = load("res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var1.mp3")
+			1:
+				$Interact.stream = load("res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var2.mp3")
+		$Interact.play()
