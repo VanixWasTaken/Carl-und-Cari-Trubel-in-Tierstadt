@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=68 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
 [ext_resource type="Texture2D" uid="uid://djwgsl8qdi8h6" path="res://Assets/Test/Chemical Laboratory/drink_holder_empty.png" id="2_ujlwc"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dx31ix0iyfenf" path="res://Assets/Test/scale.png" id="9_62uh1"]
 [ext_resource type="Script" path="res://Scenes and Scripts/drink_holder.gd" id="9_hvdtc"]
 [ext_resource type="Texture2D" uid="uid://bnovic5wao87g" path="res://Assets/Test/Chemical Laboratory/water_pitcher.png" id="10_0ugwe"]
+[ext_resource type="AudioStream" uid="uid://cqqv5sjph5jnh" path="res://Assets/Sound Test/sfx_laboratory_foley_beakerpour_var1.mp3" id="10_gmevd"]
+[ext_resource type="AudioStream" uid="uid://dd2mln4san8k3" path="res://Assets/Sound Test/sfx_laboratory_foley_powderpour_var1.mp3" id="11_5gyvt"]
 [ext_resource type="FontFile" uid="uid://cndjys5rae2ut" path="res://Assets/digital-7.ttf" id="11_g8n2i"]
 [ext_resource type="Script" path="res://Scenes and Scripts/water_cup.gd" id="11_jiefe"]
 [ext_resource type="Texture2D" uid="uid://cp62gxaenms2k" path="res://Assets/Test/Chemical Laboratory/water_pitcher_tilted_1.png" id="12_0tl5x"]
@@ -440,6 +442,14 @@ shape = SubResource("RectangleShape2D_rewly")
 [node name="Interact" type="AudioStreamPlayer" parent="PulverBowl"]
 volume_db = -15.0
 bus = &"SFX"
+
+[node name="PouringWater" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("10_gmevd")
+
+[node name="PulverPour" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("11_5gyvt")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false

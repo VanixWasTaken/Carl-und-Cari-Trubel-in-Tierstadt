@@ -32,6 +32,7 @@ func _process(delta):
 			position = start_position
 			$Interact.stream = load("res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var.mp3")
 			_randomize_sounds("release")
+			%PulverPour.stop()
 
 
 
@@ -49,6 +50,7 @@ func _on_area_2d_area_entered(area):
 	area_name = area.get_name()
 	if area_name != "PulverBowl":
 		if needed_pulver == area.get_parent().color:
+			%PulverPour.play()
 			if bowl_full == false || pulver_color == "Red":
 				if area.name == "RedPulver":
 					area.get_parent().play("new_animation")
@@ -163,11 +165,18 @@ func _reset_bowl():
 		pulver_color = "null"
 
 func _randomize_sounds(action: String):
-	var random = randi_range(1, 2) % 2
+	var path = "res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var"
+	var random = randi_range(1, 5) % 5
 	if action == "release":
 		match random:
 			0:
-				$Interact.stream = load("res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var1.mp3")
+				$Interact.stream = load(path + "1.mp3")
 			1:
-				$Interact.stream = load("res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var2.mp3")
+				$Interact.stream = load(path + "2.mp3")
+			2:
+				$Interact.stream = load(path + "3.mp3")
+			3:
+				$Interact.stream = load(path + "4.mp3")
+			4:
+				$Interact.stream = load(path + "5.mp3")
 		$Interact.play()

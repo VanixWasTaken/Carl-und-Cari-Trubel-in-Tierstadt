@@ -13,6 +13,7 @@ func _on_area_2d_area_entered(area):
 	area_name = area.get_name()
 	if area_name.contains("WaterCup"):
 		area.get_parent().play("new_animation")
+		%PouringWater.play()
 		if water_in_1 == false && pulver_in_1 == false:
 			$".".frame = 1
 			water_in_1 = true

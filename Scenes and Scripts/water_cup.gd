@@ -18,6 +18,7 @@ func _process(delta):
 		elif Input.is_action_just_released("left_click"):
 			position = start_position
 			_randomize_sounds("release")
+			%PouringWater.stop()
 
 
 func _on_area_2d_mouse_entered():
@@ -30,11 +31,18 @@ func _on_area_2d_mouse_exited():
 	Global.mouse_full = false
 
 func _randomize_sounds(action: String):
-	var random = randi_range(1, 2) % 2
+	var path = "res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var"
+	var random = randi_range(1, 5) % 5
 	if action == "release":
 		match random:
 			0:
-				$Interact.stream = load("res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var1.mp3")
+				$Interact.stream = load(path + "1.mp3")
 			1:
-				$Interact.stream = load("res://Assets/Sound Test/sfx_laboratory_foley_beakersetdown_var2.mp3")
+				$Interact.stream = load(path + "2.mp3")
+			2:
+				$Interact.stream = load(path + "3.mp3")
+			3:
+				$Interact.stream = load(path + "4.mp3")
+			4:
+				$Interact.stream = load(path + "5.mp3")
 		$Interact.play()
