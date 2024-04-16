@@ -46,6 +46,8 @@ func move_textbox(dialogue_position):
 			text_text.text = "H-H-Hallo, ich b-b-bin hier."
 		elif dialogue_position == 4:
 			text_text.text = "Ich stehe d-d-direkt vor dir."
+			$Chameleon.visible = true
+			$Chameleon.play()
 		elif dialogue_position == 6:
 			text_text.text = "Ich b-b-bin Christina das Chemie Chamäleon. I-i-ich habe mich ausversehen u-u-unsichtbar gemacht und k-k-kann mich nicht zurückverwandeln."
 		elif dialogue_position == 7:

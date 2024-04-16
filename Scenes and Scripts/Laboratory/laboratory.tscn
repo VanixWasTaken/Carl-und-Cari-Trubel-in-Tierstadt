@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b73i1p5cw3b53"]
+[gd_scene load_steps=22 format=3 uid="uid://b73i1p5cw3b53"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Laboratory/laboratory.gd" id="1_vx07n"]
 [ext_resource type="Texture2D" uid="uid://b05bruduxotgl" path="res://Assets/Test/laborraum platzkalter.png" id="2_ikmwy"]
@@ -9,6 +9,50 @@
 [ext_resource type="Texture2D" uid="uid://dpm70w5m3uweb" path="res://Assets/Test/Characters/Chameleon Headshot.png" id="7_i3486"]
 [ext_resource type="Texture2D" uid="uid://c727g3a4ej504" path="res://Assets/Test/UI/Button.png" id="8_4sfuo"]
 [ext_resource type="Texture2D" uid="uid://bhl7flv0cjgac" path="res://Assets/Test/UI/laboratory_table1.PNG" id="9_tgjy5"]
+[ext_resource type="Texture2D" uid="uid://bgxyappsyfg8f" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_1.png" id="10_j6ruf"]
+[ext_resource type="Texture2D" uid="uid://bwwwg08enc432" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_2.png" id="11_cwpw7"]
+[ext_resource type="Texture2D" uid="uid://djhctqir0sqvw" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_3.png" id="12_ytbxl"]
+[ext_resource type="Texture2D" uid="uid://crpyhsytdp0qj" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_4.png" id="13_jbkeg"]
+[ext_resource type="Texture2D" uid="uid://bqmw1bd81f3n3" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_5.png" id="14_7ln02"]
+[ext_resource type="Texture2D" uid="uid://le5e3lrgfsht" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_6.png" id="15_ahrpm"]
+[ext_resource type="Texture2D" uid="uid://cafloj22nesm7" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_7.png" id="16_7vsmt"]
+[ext_resource type="Texture2D" uid="uid://btgtvtmxr866k" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_8.png" id="17_wbvby"]
+[ext_resource type="Texture2D" uid="uid://ba67vgnhh2ike" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_9.png" id="18_mi3uw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e8enl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_j6ruf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cwpw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ytbxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jbkeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7ln02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ahrpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7vsmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_wbvby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_mi3uw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t1na7"]
 animations = [{
@@ -50,6 +94,12 @@ offset_top = 2.0
 offset_right = 1924.0
 offset_bottom = 1082.0
 texture = ExtResource("2_ikmwy")
+
+[node name="Chameleon" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(1065, 578)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_e8enl")
 
 [node name="Dialoguebox" type="AnimatedSprite2D" parent="."]
 position = Vector2(1408, 788)
