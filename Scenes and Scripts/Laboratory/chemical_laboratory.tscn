@@ -402,7 +402,7 @@ position = Vector2(-4.5, -0.5)
 shape = SubResource("RectangleShape2D_rqc8m")
 
 [node name="Interact" type="AudioStreamPlayer" parent="WaterCup"]
-volume_db = -15.0
+volume_db = -25.0
 bus = &"SFX"
 
 [node name="RedPulver" type="AnimatedSprite2D" parent="."]
@@ -423,7 +423,7 @@ position = Vector2(16, -2.5)
 shape = SubResource("RectangleShape2D_xc7aw")
 
 [node name="Interact" type="AudioStreamPlayer" parent="RedPulver"]
-volume_db = -15.0
+volume_db = -25.0
 bus = &"SFX"
 
 [node name="YellowPulver" type="AnimatedSprite2D" parent="."]
@@ -444,7 +444,7 @@ position = Vector2(3.5, 5)
 shape = SubResource("RectangleShape2D_tcvw4")
 
 [node name="Interact" type="AudioStreamPlayer" parent="YellowPulver"]
-volume_db = -15.0
+volume_db = -25.0
 bus = &"SFX"
 
 [node name="PurplePulver" type="AnimatedSprite2D" parent="."]
@@ -464,7 +464,7 @@ position = Vector2(3.5, -6)
 shape = SubResource("RectangleShape2D_a5hvy")
 
 [node name="Interact" type="AudioStreamPlayer" parent="PurplePulver"]
-volume_db = -15.0
+volume_db = -25.0
 bus = &"SFX"
 
 [node name="PulverBowl" type="AnimatedSprite2D" parent="."]
@@ -482,16 +482,18 @@ position = Vector2(9.40161, 10.6799)
 shape = SubResource("RectangleShape2D_rewly")
 
 [node name="Interact" type="AudioStreamPlayer" parent="PulverBowl"]
-volume_db = -15.0
+volume_db = -25.0
 bus = &"SFX"
 
 [node name="PouringWater" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("10_gmevd")
+volume_db = -20.0
 
 [node name="PulverPour" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("11_5gyvt")
+volume_db = -20.0
 
 [node name="Dialoguebox" type="AnimatedSprite2D" parent="."]
 position = Vector2(1408, 788)
