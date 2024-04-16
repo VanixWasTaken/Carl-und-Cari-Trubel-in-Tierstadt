@@ -19,6 +19,37 @@
 [ext_resource type="Texture2D" uid="uid://btgtvtmxr866k" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_8.png" id="17_wbvby"]
 [ext_resource type="Texture2D" uid="uid://ba67vgnhh2ike" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_9.png" id="18_mi3uw"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1na7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7j633")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o7f4r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3yb1s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bhgf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rxi3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i3486")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_e8enl"]
 animations = [{
 "frames": [{
@@ -54,37 +85,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_t1na7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_7j633")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_o7f4r")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_3yb1s"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_bhgf8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_rxi3x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_i3486")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Laboratory" type="Node2D"]
 script = ExtResource("1_vx07n")
 
@@ -94,12 +94,6 @@ offset_top = 2.0
 offset_right = 1924.0
 offset_bottom = 1082.0
 texture = ExtResource("2_ikmwy")
-
-[node name="Chameleon" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(1065, 578)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_e8enl")
 
 [node name="Dialoguebox" type="AnimatedSprite2D" parent="."]
 position = Vector2(1408, 788)
@@ -142,6 +136,12 @@ offset_bottom = 8.667
 scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("8_4sfuo")
 stretch_mode = 0
+
+[node name="Chameleon" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(1065, 578)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_e8enl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
