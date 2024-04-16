@@ -526,11 +526,11 @@ text = "Haloo was läuft was läuft"
 scroll_active = false
 
 [node name="TextureButton" type="TextureButton" parent="Dialoguebox"]
-offset_left = -470.0
-offset_top = -67.333
-offset_right = -384.0
-offset_bottom = 8.667
-scale = Vector2(1.5, 1.5)
+offset_left = -500.0
+offset_top = -101.333
+offset_right = 611.0
+offset_bottom = 1050.67
+scale = Vector2(0.15, 0.15)
 texture_normal = ExtResource("54_d7li2")
 stretch_mode = 0
 

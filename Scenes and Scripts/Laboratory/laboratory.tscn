@@ -1,23 +1,50 @@
-[gd_scene load_steps=22 format=3 uid="uid://b73i1p5cw3b53"]
+[gd_scene load_steps=20 format=3 uid="uid://b73i1p5cw3b53"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Laboratory/laboratory.gd" id="1_vx07n"]
 [ext_resource type="Texture2D" uid="uid://b05bruduxotgl" path="res://Assets/Test/laborraum platzkalter.png" id="2_ikmwy"]
 [ext_resource type="Texture2D" uid="uid://c6vqwg8hs40td" path="res://Assets/Test/UI/speech_bubble.png" id="3_7j633"]
 [ext_resource type="Texture2D" uid="uid://bofvsfejo11vd" path="res://Assets/Test/UI/speech_bubble_left.png" id="4_o7f4r"]
+[ext_resource type="Texture2D" uid="uid://dsrxoltpg6iom" path="res://Assets/Test/Characters/Chameleon/chameleon_001.png" id="4_y87p1"]
 [ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Test/Player/IMG_1931.PNG" id="5_bhgf8"]
+[ext_resource type="Texture2D" uid="uid://djxubsy22fhwe" path="res://Assets/Test/Characters/Chameleon/chameleon_002.png" id="5_xvx8k"]
 [ext_resource type="Texture2D" uid="uid://ctcnsi4vmixqr" path="res://Assets/Test/Player/icon_carl1.PNG" id="6_rxi3x"]
+[ext_resource type="Texture2D" uid="uid://clx51sk6di2et" path="res://Assets/Test/Characters/Chameleon/chameleon_003.png" id="6_wovyu"]
+[ext_resource type="Texture2D" uid="uid://8e227vieqtam" path="res://Assets/Test/Characters/Chameleon/chameleon_004.png" id="7_h0hsi"]
 [ext_resource type="Texture2D" uid="uid://dpm70w5m3uweb" path="res://Assets/Test/Characters/Chameleon Headshot.png" id="7_i3486"]
 [ext_resource type="Texture2D" uid="uid://c727g3a4ej504" path="res://Assets/Test/UI/Button.png" id="8_4sfuo"]
+[ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Test/Characters/Chameleon/chameleon_005.png" id="8_cekpt"]
+[ext_resource type="Texture2D" uid="uid://b76ies1ylcj0t" path="res://Assets/Test/Characters/Chameleon/chameleon_006.png" id="9_cqjc2"]
 [ext_resource type="Texture2D" uid="uid://bhl7flv0cjgac" path="res://Assets/Test/UI/laboratory_table1.PNG" id="9_tgjy5"]
-[ext_resource type="Texture2D" uid="uid://bgxyappsyfg8f" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_1.png" id="10_j6ruf"]
-[ext_resource type="Texture2D" uid="uid://bwwwg08enc432" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_2.png" id="11_cwpw7"]
-[ext_resource type="Texture2D" uid="uid://djhctqir0sqvw" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_3.png" id="12_ytbxl"]
-[ext_resource type="Texture2D" uid="uid://crpyhsytdp0qj" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_4.png" id="13_jbkeg"]
-[ext_resource type="Texture2D" uid="uid://bqmw1bd81f3n3" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_5.png" id="14_7ln02"]
-[ext_resource type="Texture2D" uid="uid://le5e3lrgfsht" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_6.png" id="15_ahrpm"]
-[ext_resource type="Texture2D" uid="uid://cafloj22nesm7" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_7.png" id="16_7vsmt"]
-[ext_resource type="Texture2D" uid="uid://btgtvtmxr866k" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_8.png" id="17_wbvby"]
-[ext_resource type="Texture2D" uid="uid://ba67vgnhh2ike" path="res://Assets/Test/Characters/Chameleon/chameleon_animated_9.png" id="18_mi3uw"]
+[ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Test/Characters/Chameleon/chameleon_007.png" id="10_txsdk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e8enl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_y87p1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xvx8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wovyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_h0hsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cekpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cqjc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_txsdk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t1na7"]
 animations = [{
@@ -50,41 +77,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_e8enl"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_j6ruf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_cwpw7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_ytbxl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_jbkeg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_7ln02")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_ahrpm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_7vsmt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_wbvby")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_mi3uw")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Laboratory" type="Node2D"]
 script = ExtResource("1_vx07n")
 
@@ -95,11 +87,35 @@ offset_right = 1924.0
 offset_bottom = 1082.0
 texture = ExtResource("2_ikmwy")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1410, 687)
+texture = ExtResource("9_tgjy5")
+
+[node name="LaborArea2D" type="Area2D" parent="Sprite2D"]
+position = Vector2(-1406, -685)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/LaborArea2D"]
+polygon = PackedVector2Array(901, 781, 888, 546, 1211, 472, 1777, 610, 1774, 705, 1925, 750, 1923, 885, 1618, 970)
+
+[node name="Hover" type="AudioStreamPlayer" parent="Sprite2D"]
+
+[node name="Click" type="AudioStreamPlayer" parent="Sprite2D"]
+
+[node name="Chameleon" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(1065, 578)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_e8enl")
+frame = 6
+frame_progress = 0.960774
+
 [node name="Dialoguebox" type="AnimatedSprite2D" parent="."]
 position = Vector2(1408, 788)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_t1na7")
-frame_progress = 0.626984
 metadata/_edit_use_anchors_ = true
 
 [node name="FaceSprite" type="AnimatedSprite2D" parent="Dialoguebox"]
@@ -129,37 +145,14 @@ text = "Haloo was läuft was läuft"
 scroll_active = false
 
 [node name="TextureButton" type="TextureButton" parent="Dialoguebox"]
-offset_left = -470.0
-offset_top = -67.333
-offset_right = -384.0
-offset_bottom = 8.667
-scale = Vector2(1.5, 1.5)
+offset_left = -497.333
+offset_top = -103.333
+offset_right = 613.667
+offset_bottom = 1048.67
+scale = Vector2(0.15, 0.15)
 texture_normal = ExtResource("8_4sfuo")
 stretch_mode = 0
 
-[node name="Chameleon" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(1065, 578)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_e8enl")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1410, 687)
-texture = ExtResource("9_tgjy5")
-
-[node name="LaborArea2D" type="Area2D" parent="Sprite2D"]
-position = Vector2(-1406, -685)
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/LaborArea2D"]
-polygon = PackedVector2Array(901, 781, 888, 546, 1211, 472, 1777, 610, 1774, 705, 1925, 750, 1923, 885, 1618, 970)
-
-[node name="Hover" type="AudioStreamPlayer" parent="Sprite2D"]
-
-[node name="Click" type="AudioStreamPlayer" parent="Sprite2D"]
-
-[connection signal="button_down" from="Dialoguebox/TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="mouse_entered" from="Sprite2D/LaborArea2D" to="." method="_on_labor_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Sprite2D/LaborArea2D" to="." method="_on_labor_area_2d_mouse_exited"]
+[connection signal="button_down" from="Dialoguebox/TextureButton" to="." method="_on_texture_button_button_down"]

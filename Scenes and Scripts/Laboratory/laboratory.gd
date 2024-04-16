@@ -61,18 +61,22 @@ func move_textbox(dialogue_position):
 			$Dialoguebox/TextureButton.position.x = -470
 		if dialogue_position == 1:
 			$Dialoguebox/FaceSprite.frame = 0
+			$Dialoguebox.frame = 0
 			name_text.text = "Cari"
 			text_text.text = "Vielleicht sollten wir später wiederkommen."
 		elif dialogue_position == 3:
 			$Dialoguebox/FaceSprite.frame = 1
+			$Dialoguebox.frame = 0
 			name_text.text = "Carl"
 			text_text.text = "Wer hat das gesagt? Zeig dich!"
 		elif dialogue_position == 5:
 			$Dialoguebox/FaceSprite.frame = 0
+			$Dialoguebox.frame = 0
 			name_text.text = "Cari"
 			text_text.text = "Wer bist du und warum können wir dich nicht sehen?"
 		elif dialogue_position == 8:
 			$Dialoguebox/FaceSprite.frame = 1
+			$Dialoguebox.frame = 0
 			name_text.text = "Carl"
 			text_text.text = "Natürlich! Was sollen wir tun?"
 
