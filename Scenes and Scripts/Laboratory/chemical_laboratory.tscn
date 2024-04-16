@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=74 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
 [ext_resource type="Texture2D" uid="uid://djwgsl8qdi8h6" path="res://Assets/Test/Chemical Laboratory/drink_holder_empty.png" id="2_ujlwc"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bnovic5wao87g" path="res://Assets/Test/Chemical Laboratory/water_pitcher.png" id="10_0ugwe"]
 [ext_resource type="AudioStream" uid="uid://cqqv5sjph5jnh" path="res://Assets/Sound Test/sfx_laboratory_foley_beakerpour_var1.mp3" id="10_gmevd"]
 [ext_resource type="AudioStream" uid="uid://dd2mln4san8k3" path="res://Assets/Sound Test/sfx_laboratory_foley_powderpour_var1.mp3" id="11_5gyvt"]
-[ext_resource type="FontFile" uid="uid://cndjys5rae2ut" path="res://Assets/digital-7.ttf" id="11_g8n2i"]
+[ext_resource type="FontFile" uid="uid://cndjys5rae2ut" path="res://Assets/Font/digital-7.ttf" id="11_g8n2i"]
 [ext_resource type="Script" path="res://Scenes and Scripts/water_cup.gd" id="11_jiefe"]
 [ext_resource type="Texture2D" uid="uid://cp62gxaenms2k" path="res://Assets/Test/Chemical Laboratory/water_pitcher_tilted_1.png" id="12_0tl5x"]
 [ext_resource type="Texture2D" uid="uid://dfyjg6o1xhf1c" path="res://Assets/Test/Chemical Laboratory/pulver_2.png" id="12_n7av0"]
@@ -54,6 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Test/Player/IMG_1931.PNG" id="52_g4ju0"]
 [ext_resource type="Texture2D" uid="uid://ctcnsi4vmixqr" path="res://Assets/Test/Player/icon_carl1.PNG" id="53_sajjr"]
 [ext_resource type="Texture2D" uid="uid://c727g3a4ej504" path="res://Assets/Test/UI/Button.png" id="54_d7li2"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="54_jaff3"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_i7371"]
 specular_color = Color(0.745098, 0.854902, 0.807843, 1)
@@ -512,6 +513,7 @@ offset_top = -79.0
 offset_right = 116.0
 offset_bottom = -32.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("54_jaff3")
 text = "Carl
 "
 scroll_active = false
@@ -522,6 +524,7 @@ offset_top = -40.0
 offset_right = 99.0
 offset_bottom = 47.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("54_jaff3")
 text = "Haloo was läuft was läuft"
 scroll_active = false
 

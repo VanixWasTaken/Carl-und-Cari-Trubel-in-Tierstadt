@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cndjys5rae2ut"
-path="res://.godot/imported/digital-7.ttf-9cc77635726adace8d0ba46b215b033e.fontdata"
+uid="uid://dchkjqker6h15"
+path="res://.godot/imported/Margarine-Regular.ttf-5c731680b3257eac29d9d296bff5acbc.fontdata"
 
 [deps]
 
-source_file="res://Assets/digital-7.ttf"
-dest_files=["res://.godot/imported/digital-7.ttf-9cc77635726adace8d0ba46b215b033e.fontdata"]
+source_file="res://Assets/Font/Margarine-Regular.ttf"
+dest_files=["res://.godot/imported/Margarine-Regular.ttf-5c731680b3257eac29d9d296bff5acbc.fontdata"]
 
 [params]
 
