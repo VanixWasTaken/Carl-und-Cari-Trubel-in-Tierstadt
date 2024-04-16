@@ -6,6 +6,7 @@ var chameleon_talking = true
 var dialogue_position = 0
 var outline_shader = preload("res://Shader/outline.tres")
 var no_shader = preload("res://Shader/no_shader.tres")
+@onready var naea = preload("res://Assets/Test/UI/speech_bubble_right.png")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	MusicController._play_music("mayhem", "laboratory", -35)
