@@ -48,7 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://7gx1pjwrf130" path="res://Assets/Test/Chemical Laboratory/pulver_vessel_yellow_4.png" id="30_qu5ct"]
 [ext_resource type="Texture2D" uid="uid://c1mtjn0dvt5lk" path="res://Assets/Test/Chemical Laboratory/pulver_vessel_yellow_5.png" id="31_xnyqc"]
 [ext_resource type="Script" path="res://Scenes and Scripts/pulver_bowl.gd" id="32_ebx3t"]
-[ext_resource type="Texture2D" uid="uid://c6vqwg8hs40td" path="res://Assets/Test/UI/speech_bubble.png" id="49_gfwiu"]
+[ext_resource type="Texture2D" uid="uid://mbsqejlr2wu8" path="res://Assets/Test/UI/speech_bubble_right.png" id="49_r4tkm"]
 [ext_resource type="Texture2D" uid="uid://bofvsfejo11vd" path="res://Assets/Test/UI/speech_bubble_left.png" id="50_wyhfg"]
 [ext_resource type="Texture2D" uid="uid://dpm70w5m3uweb" path="res://Assets/Test/Characters/Chameleon Headshot.png" id="51_s812k"]
 [ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Test/Player/IMG_1931.PNG" id="52_g4ju0"]
@@ -283,7 +283,7 @@ size = Vector2(399.288, 98.8885)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("49_gfwiu")
+"texture": ExtResource("49_r4tkm")
 }, {
 "duration": 1.0,
 "texture": ExtResource("50_wyhfg")
