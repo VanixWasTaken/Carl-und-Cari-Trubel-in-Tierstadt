@@ -1,0 +1,107 @@
+[gd_scene load_steps=15 format=3 uid="uid://ducsr1iwag28u"]
+
+[ext_resource type="Texture2D" uid="uid://508f1cguiybw" path="res://Assets/Test/UI/menu_placeholder.png" id="1_0fyoy"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Main Menu/main_menu.gd" id="1_3f1tb"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="2_wt0x7"]
+[ext_resource type="Texture2D" uid="uid://c6kwarbqc26ve" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_1.png" id="3_eixau"]
+[ext_resource type="Texture2D" uid="uid://dgpaqqbdf6olr" path="res://Assets/Test/UI/Test Buttons/button_mid_placeholder.png" id="3_x2fxl"]
+[ext_resource type="Texture2D" uid="uid://5ufynigj2u5c" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_2.png" id="4_0v51r"]
+[ext_resource type="Texture2D" uid="uid://c6vcujk8ofy0d" path="res://Assets/Test/UI/Test Buttons/button_dark_placeholder.png" id="4_lpojf"]
+[ext_resource type="Texture2D" uid="uid://cp6dwvrmrjb4s" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_3.png" id="5_mc0ma"]
+[ext_resource type="Texture2D" uid="uid://buebu1nwnhkqv" path="res://Assets/Test/UI/Test Buttons/button_light_placeholder.png" id="5_ntlfl"]
+[ext_resource type="Texture2D" uid="uid://bbm67wfvia6" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_4.png" id="6_rmhqu"]
+[ext_resource type="Texture2D" uid="uid://ckaw87aqeqqql" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_5.png" id="7_j6yru"]
+[ext_resource type="Texture2D" uid="uid://c4ur6h04qm2ct" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_6.png" id="8_8j70n"]
+[ext_resource type="Texture2D" uid="uid://bs0qrpu0y6yce" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_7.png" id="9_t7x3a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_17etq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0fyoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eixau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0v51r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mc0ma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rmhqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j6yru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8j70n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t7x3a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_3f1tb")
+
+[node name="Backround" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_17etq")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1121.0
+offset_top = 44.0
+offset_right = 1875.0
+offset_bottom = 303.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wt0x7")
+theme_override_font_sizes/font_size = 80
+text = "Carl und Cari:
+Trubel in Tierstadt"
+horizontal_alignment = 1
+
+[node name="Start" type="TextureButton" parent="."]
+offset_left = 33.0
+offset_top = 27.0
+offset_right = 579.0
+offset_bottom = 257.0
+texture_normal = ExtResource("3_x2fxl")
+texture_pressed = ExtResource("4_lpojf")
+texture_hover = ExtResource("5_ntlfl")
+
+[node name="Options" type="TextureButton" parent="."]
+offset_left = 33.0
+offset_top = 268.0
+offset_right = 579.0
+offset_bottom = 498.0
+texture_normal = ExtResource("3_x2fxl")
+texture_pressed = ExtResource("4_lpojf")
+texture_hover = ExtResource("5_ntlfl")
+
+[node name="Credits" type="TextureButton" parent="."]
+offset_left = 33.0
+offset_top = 529.0
+offset_right = 579.0
+offset_bottom = 759.0
+texture_normal = ExtResource("3_x2fxl")
+texture_pressed = ExtResource("4_lpojf")
+texture_hover = ExtResource("5_ntlfl")
+
+[node name="Quit" type="TextureButton" parent="."]
+offset_left = 33.0
+offset_top = 759.0
+offset_right = 579.0
+offset_bottom = 989.0
+texture_normal = ExtResource("3_x2fxl")
+texture_pressed = ExtResource("4_lpojf")
+texture_hover = ExtResource("5_ntlfl")
+
+[connection signal="button_up" from="Start" to="." method="_on_start_button_up"]
+[connection signal="button_up" from="Options" to="." method="_on_options_button_up"]
+[connection signal="button_up" from="Credits" to="." method="_on_credits_button_up"]
+[connection signal="button_up" from="Quit" to="." method="_on_quit_button_up"]
