@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_carl_button_button_up():
-	Global.Character = "Carl"
+	Global.character = "Carl"
 	get_tree().change_scene_to_file("res://Scenes and Scripts/map.tscn")
 
 func _on_cari_button_button_up():
