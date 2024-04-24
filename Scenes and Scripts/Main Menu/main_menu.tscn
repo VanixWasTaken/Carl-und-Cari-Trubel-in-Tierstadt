@@ -159,10 +159,10 @@ text = "SPIEL BEENDEN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Credits2" parent="." instance=ExtResource("14_jvmj7")]
+[node name="CreditsMenu" parent="." instance=ExtResource("14_jvmj7")]
 visible = false
 
-[node name="Options2" parent="." instance=ExtResource("15_nlixp")]
+[node name="OptionsMenu" parent="." instance=ExtResource("15_nlixp")]
 visible = false
 
 [connection signal="button_down" from="Start" to="." method="_on_start_button_down"]
