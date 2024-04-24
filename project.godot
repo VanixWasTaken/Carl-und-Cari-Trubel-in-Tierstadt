@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Carl und Cari Trubel in Tierstadt"
-run/main_scene="res://Scenes and Scripts/map.tscn"
+run/main_scene="res://Scenes and Scripts/Pre Intro Screens/pre_intro_screens.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/fullsize=false
