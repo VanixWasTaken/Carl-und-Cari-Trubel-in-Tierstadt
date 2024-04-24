@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=3 uid="uid://dw4yj8qddg3gp"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Title Screen/titel_screen.gd" id="1_dr1xc"]
+[ext_resource type="Texture2D" uid="uid://dva1s7lqgkxvk" path="res://Assets/Test/UI/Title Screen/titlescreen_placeholder.png" id="2_ybom7"]
+[ext_resource type="Texture2D" uid="uid://c6kwarbqc26ve" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_1.png" id="3_dlddl"]
+[ext_resource type="Texture2D" uid="uid://5ufynigj2u5c" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_2.png" id="4_b5ngf"]
+[ext_resource type="Texture2D" uid="uid://cp6dwvrmrjb4s" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_3.png" id="5_4r2qp"]
+[ext_resource type="Texture2D" uid="uid://bbm67wfvia6" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_4.png" id="6_n2q5c"]
+[ext_resource type="Texture2D" uid="uid://ckaw87aqeqqql" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_5.png" id="7_n1x53"]
+[ext_resource type="Texture2D" uid="uid://c4ur6h04qm2ct" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_6.png" id="8_0am8n"]
+[ext_resource type="Texture2D" uid="uid://bs0qrpu0y6yce" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_7.png" id="9_mq2eh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kcucr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ybom7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dlddl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b5ngf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4r2qp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_n2q5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n1x53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0am8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mq2eh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Title Screen" type="Node2D"]
+script = ExtResource("1_dr1xc")
+
+[node name="Backround" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_kcucr")
+
+[node name="Button" type="Button" parent="."]
+show_behind_parent = true
+offset_left = -262.0
+offset_top = -1755.0
+offset_right = 2035.0
+offset_bottom = -255.0
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
