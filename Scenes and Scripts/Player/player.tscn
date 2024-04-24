@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://daswfhvjsa7jh"]
+[gd_scene load_steps=9 format=3 uid="uid://daswfhvjsa7jh"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Player/player.gd" id="1_pxkst"]
 [ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Test/Player/IMG_1931.PNG" id="1_uekr7"]
 [ext_resource type="Texture2D" uid="uid://fji17txvsqan" path="res://Assets/Test/Player/IMG_1932.PNG" id="2_3hmks"]
 [ext_resource type="AudioStream" uid="uid://xjmarfqqltkh" path="res://Assets/Sound Test/sfx_hub_foley_footsteps_var.mp3" id="4_bip16"]
+[ext_resource type="Texture2D" uid="uid://ctcnsi4vmixqr" path="res://Assets/Test/Player/icon_carl1.PNG" id="4_q3ciq"]
+[ext_resource type="Texture2D" uid="uid://bwahyatf0uvai" path="res://Assets/Test/Player/icon_carl2.PNG" id="5_5msf1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hb2ux"]
 animations = [{
@@ -15,8 +17,19 @@ animations = [{
 "texture": ExtResource("2_3hmks")
 }],
 "loop": true,
-"name": &"default",
+"name": &"cari_animation",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_q3ciq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5msf1")
+}],
+"loop": true,
+"name": &"carl_animation",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mykrf"]
@@ -28,7 +41,7 @@ script = ExtResource("1_pxkst")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_hb2ux")
-frame_progress = 0.736102
+animation = &"carl_animation"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 

@@ -17,11 +17,11 @@ func _on_start_button_up():
 
 
 func _on_options_button_up():
-	get_tree().change_scene_to_file("res://Scenes and Scripts/Options/options.tscn")
+	$OptionsMenu.visible = true
 
 
 func _on_credits_button_up():
-	get_tree().change_scene_to_file("res://Scenes and Scripts/Credits/credits.tscn")
+	$CreditsMenu.visible = true
 
 
 func _on_quit_button_up():

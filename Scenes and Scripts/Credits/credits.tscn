@@ -1,3 +1,66 @@
-[gd_scene format=3 uid="uid://c2x7jbyx8j6bh"]
+[gd_scene load_steps=10 format=3 uid="uid://c2x7jbyx8j6bh"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Credits/credits.gd" id="1_xdd0t"]
+[ext_resource type="Shader" path="res://Shader/blur.gdshader" id="2_766sl"]
+[ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/white_screen.png" id="3_rk3c3"]
+[ext_resource type="Texture2D" uid="uid://bh04a74eikbdh" path="res://Assets/Test/UI/Credits/CNEDITS.png" id="4_2omw0"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_6wmcq"]
+[ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/UI/Text Button Backrounds/menu_button_mid.png" id="6_kivgi"]
+[ext_resource type="Texture2D" uid="uid://b78qo42a06loa" path="res://Assets/UI/Text Button Backrounds/menu_button_dark.png" id="7_ud4wy"]
+[ext_resource type="Texture2D" uid="uid://cs0vi7dtksnoo" path="res://Assets/UI/Text Button Backrounds/menu_button_light.png" id="8_m7bma"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w4ti6"]
+shader = ExtResource("2_766sl")
 
 [node name="Credits" type="Node2D"]
+script = ExtResource("1_xdd0t")
+
+[node name="Shader" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_w4ti6")
+offset_left = -111.0
+offset_top = -102.0
+offset_right = 2028.0
+offset_bottom = 1324.0
+texture = ExtResource("3_rk3c3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 1820.0
+offset_bottom = 980.0
+texture = ExtResource("4_2omw0")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_right = 1712.0
+offset_bottom = 743.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_6wmcq")
+theme_override_font_sizes/font_size = 75
+text = "Wenn man zu viel Semmeknedl oder ähnliches ißt, kann es passieren das die Verdauung verrückt spielt. Das Bandprojekt wurde 2010 gegründet und besteht aus 3 Personen, und zwar aus DJ Semmelknedl und die 2 Gruaba Buam. Der ironische Song hat eine eingängige Melodielinie und lädt zum mitsingen ein."
+autowrap_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1359.0
+offset_top = 822.0
+offset_right = 2271.0
+offset_bottom = 1129.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("6_kivgi")
+texture_pressed = ExtResource("7_ud4wy")
+texture_hover = ExtResource("8_m7bma")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 40.0
+offset_right = 870.0
+offset_bottom = 268.0
+theme_override_fonts/font = ExtResource("5_6wmcq")
+theme_override_font_sizes/font_size = 150
+text = "Zurück"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]

@@ -5,12 +5,22 @@ var acceleration = 50
 var object_name 
 var scene_name
 
+func _ready():
+	if Global.character =="Carl":
+		$AnimatedSprite2D.play("carl_animation")
+	elif Global.character == "Cari":
+		$AnimatedSprite2D.play("cari_animation")
+	$AnimatedSprite2D.stop()
+
 func _physics_process(delta):
 	var direction = Vector2()
 	if Input.is_action_just_pressed("left_click"):
 		if Global.moving_allowed == true:
 			nav.target_position = get_global_mouse_position()
-			$AnimatedSprite2D.play("default")
+			if Global.character =="Carl":
+				$AnimatedSprite2D.play("carl_animation")
+			elif Global.character == "Cari":
+					$AnimatedSprite2D.play("cari_animation")
 			$Footsteps.play()
 			if position.distance_to(nav.target_position) > 10:
 				speed = 300
