@@ -87,5 +87,11 @@ text = "CARI"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="button_down" from="Carl Button" to="." method="_on_carl_button_button_up"]
-[connection signal="button_down" from="Cari Button" to="." method="_on_cari_button_button_up"]
+[node name="UI" type="AudioStreamPlayer" parent="."]
+
+[connection signal="button_down" from="Carl Button" to="." method="_on_carl_button_button_down"]
+[connection signal="button_up" from="Carl Button" to="." method="_on_carl_button_button_up"]
+[connection signal="mouse_entered" from="Carl Button" to="." method="_on_carl_button_mouse_entered"]
+[connection signal="button_down" from="Cari Button" to="." method="_on_cari_button_button_down"]
+[connection signal="button_up" from="Cari Button" to="." method="_on_cari_button_button_up"]
+[connection signal="mouse_entered" from="Cari Button" to="." method="_on_cari_button_mouse_entered"]
