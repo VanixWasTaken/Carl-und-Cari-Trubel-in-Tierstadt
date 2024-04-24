@@ -15,7 +15,7 @@
 [ext_resource type="Shader" path="res://Shader/blur.gdshader" id="14_jp8ps"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound Test/sfx_hub_ui_click_var1.mp3" id="15_bdydr"]
 [ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/white_screen.png" id="15_jo7ff"]
-[ext_resource type="AudioStream" uid="uid://d1gbq7bddhbqe" path="res://Assets/Sound Test/sfx_hub_ui_hover_var.mp3" id="16_ciapm"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound Test/sfx_hub_ui_hover_var1.mp3" id="16_ciapm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_unxvv"]
 animations = [{
