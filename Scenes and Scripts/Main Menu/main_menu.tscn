@@ -165,6 +165,8 @@ visible = false
 [node name="OptionsMenu" parent="." instance=ExtResource("15_nlixp")]
 visible = false
 
+[node name="UI" type="AudioStreamPlayer" parent="."]
+
 [connection signal="button_down" from="Start" to="." method="_on_start_button_down"]
 [connection signal="button_up" from="Start" to="." method="_on_start_button_up"]
 [connection signal="mouse_entered" from="Start" to="." method="_on_start_mouse_entered"]
