@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=17 format=3 uid="uid://ducsr1iwag28u"]
 
 [ext_resource type="Texture2D" uid="uid://kbhn1t4hxhfv" path="res://Assets/Test/UI/menu_placeholder-1.png" id="1_0fyoy"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Main Menu/main_menu.gd" id="1_3f1tb"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/UI/Text Button Backrounds/menu_button_mid.png" id="11_l40h3"]
 [ext_resource type="Texture2D" uid="uid://b78qo42a06loa" path="res://Assets/UI/Text Button Backrounds/menu_button_dark.png" id="12_s4c5n"]
 [ext_resource type="Texture2D" uid="uid://cs0vi7dtksnoo" path="res://Assets/UI/Text Button Backrounds/menu_button_light.png" id="13_e66sn"]
+[ext_resource type="PackedScene" uid="uid://ex8idjxdm1hh" path="res://Scenes and Scripts/Options/options.tscn" id="14_yms4q"]
+[ext_resource type="PackedScene" uid="uid://c2x7jbyx8j6bh" path="res://Scenes and Scripts/Credits/credits.tscn" id="15_6bkqx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_17etq"]
 animations = [{
@@ -157,7 +159,16 @@ text = "SPIEL BEENDEN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+<<<<<<< Updated upstream
 [connection signal="button_down" from="Start" to="." method="_on_start_button_down"]
+=======
+[node name="OptionsMenu" parent="." instance=ExtResource("14_yms4q")]
+visible = false
+
+[node name="CreditsMenu" parent="." instance=ExtResource("15_6bkqx")]
+visible = false
+
+>>>>>>> Stashed changes
 [connection signal="button_up" from="Start" to="." method="_on_start_button_up"]
 [connection signal="mouse_entered" from="Start" to="." method="_on_start_mouse_entered"]
 [connection signal="button_down" from="Options" to="." method="_on_options_button_down"]
