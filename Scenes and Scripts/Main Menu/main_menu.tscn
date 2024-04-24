@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=16 format=3 uid="uid://ducsr1iwag28u"]
 
-[ext_resource type="Texture2D" uid="uid://508f1cguiybw" path="res://Assets/Test/UI/menu_placeholder.png" id="1_0fyoy"]
+[ext_resource type="Texture2D" uid="uid://kbhn1t4hxhfv" path="res://Assets/Test/UI/menu_placeholder-1.png" id="1_0fyoy"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Main Menu/main_menu.gd" id="1_3f1tb"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="2_wt0x7"]
 [ext_resource type="Texture2D" uid="uid://c6kwarbqc26ve" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_1.png" id="3_eixau"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ckaw87aqeqqql" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_5.png" id="7_j6yru"]
 [ext_resource type="Texture2D" uid="uid://c4ur6h04qm2ct" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_6.png" id="8_8j70n"]
 [ext_resource type="Texture2D" uid="uid://bs0qrpu0y6yce" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_7.png" id="9_t7x3a"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound Test/sfx_hub_ui_click_var3.mp3" id="14_sbe8y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_17etq"]
 animations = [{
@@ -101,7 +102,18 @@ texture_normal = ExtResource("3_x2fxl")
 texture_pressed = ExtResource("4_lpojf")
 texture_hover = ExtResource("5_ntlfl")
 
+[node name="UI" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_sbe8y")
+
+[connection signal="button_down" from="Start" to="." method="_on_start_button_down"]
 [connection signal="button_up" from="Start" to="." method="_on_start_button_up"]
+[connection signal="mouse_entered" from="Start" to="." method="_on_start_mouse_entered"]
+[connection signal="button_down" from="Options" to="." method="_on_options_button_down"]
 [connection signal="button_up" from="Options" to="." method="_on_options_button_up"]
+[connection signal="mouse_entered" from="Options" to="." method="_on_options_mouse_entered"]
+[connection signal="button_down" from="Credits" to="." method="_on_credits_button_down"]
 [connection signal="button_up" from="Credits" to="." method="_on_credits_button_up"]
+[connection signal="mouse_entered" from="Credits" to="." method="_on_credits_mouse_entered"]
+[connection signal="button_down" from="Quit" to="." method="_on_quit_button_down"]
 [connection signal="button_up" from="Quit" to="." method="_on_quit_button_up"]
+[connection signal="mouse_entered" from="Quit" to="." method="_on_quit_mouse_entered"]
