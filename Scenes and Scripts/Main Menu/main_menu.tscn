@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://ducsr1iwag28u"]
 
-[ext_resource type="Texture2D" uid="uid://508f1cguiybw" path="res://Assets/Test/UI/menu_placeholder.png" id="1_0fyoy"]
+[ext_resource type="Texture2D" uid="uid://kbhn1t4hxhfv" path="res://Assets/Test/UI/menu_placeholder-1.png" id="1_0fyoy"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Main Menu/main_menu.gd" id="1_3f1tb"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="2_wt0x7"]
 [ext_resource type="Texture2D" uid="uid://c6kwarbqc26ve" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_1.png" id="3_eixau"]
@@ -157,7 +157,15 @@ text = "SPIEL BEENDEN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="button_down" from="Start" to="." method="_on_start_button_down"]
 [connection signal="button_up" from="Start" to="." method="_on_start_button_up"]
+[connection signal="mouse_entered" from="Start" to="." method="_on_start_mouse_entered"]
+[connection signal="button_down" from="Options" to="." method="_on_options_button_down"]
 [connection signal="button_up" from="Options" to="." method="_on_options_button_up"]
+[connection signal="mouse_entered" from="Options" to="." method="_on_options_mouse_entered"]
+[connection signal="button_down" from="Credits" to="." method="_on_credits_button_down"]
 [connection signal="button_up" from="Credits" to="." method="_on_credits_button_up"]
+[connection signal="mouse_entered" from="Credits" to="." method="_on_credits_mouse_entered"]
+[connection signal="button_down" from="Quit" to="." method="_on_quit_button_down"]
 [connection signal="button_up" from="Quit" to="." method="_on_quit_button_up"]
+[connection signal="mouse_entered" from="Quit" to="." method="_on_quit_mouse_entered"]

@@ -49,6 +49,7 @@ func _on_quit_button_down():
 	_play_ui_sound("click")
 
 
+# used to randomize UI sounds, based off the action thats fed into the function
 func _play_ui_sound(action: String):
 	var random = randi() % 3
 	
@@ -70,9 +71,3 @@ func _play_ui_sound(action: String):
 				sound.stream = load("res://Assets/Sound Test/sfx_hub_ui_click_var3.mp3")
 	
 	sound.play()
-
-
-
-
-
-
