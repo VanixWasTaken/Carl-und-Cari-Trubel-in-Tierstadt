@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://1qmkagu18oq0"]
+[gd_scene load_steps=5 format=3 uid="uid://1qmkagu18oq0"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/player_test.gd" id="1_haq7x"]
 [ext_resource type="Texture2D" uid="uid://c3lklu7i8ptv1" path="res://Assets/Characters/Carl/carl_fullbody.png.PNG" id="1_j1dih"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oce2j"]
 size = Vector3(3.08044, 6.00006, 1.12958)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ypar3"]
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_haq7x")
@@ -18,3 +20,12 @@ texture = ExtResource("1_j1dih")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0540161, 0.05966, 0.0647888)
 shape = SubResource("BoxShape3D_oce2j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.004, 0, 0, 0, 0.00655305, 0, 0, 0, 0.0026634, 0, -2.94729, 0)
+mesh = SubResource("CapsuleMesh_ypar3")
+skeleton = NodePath("../Pivot/Sprite3D")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_desired_distance = 0.1
+target_desired_distance = 0.1
