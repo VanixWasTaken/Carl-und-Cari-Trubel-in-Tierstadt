@@ -1,59 +1,31 @@
-[gd_scene load_steps=10 format=3 uid="uid://1qmkagu18oq0"]
+[gd_scene load_steps=5 format=3 uid="uid://1qmkagu18oq0"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/player_test.gd" id="1_haq7x"]
-[ext_resource type="Texture2D" uid="uid://cdv3lh2p0efnb" path="res://Assets/Test/Player Animation/idle1_test.png" id="2_81clg"]
-[ext_resource type="Texture2D" uid="uid://bprrvkyr3c0u8" path="res://Assets/Test/Player Animation/idle2_test.png" id="3_6u8f7"]
-[ext_resource type="Texture2D" uid="uid://bb3o1wqdip2x1" path="res://Assets/Test/Player Animation/run_left1_test.png" id="3_kgj8s"]
-[ext_resource type="Texture2D" uid="uid://bey8od7a60oxr" path="res://Assets/Test/Player Animation/run_left2_test.png" id="4_rgbto"]
-[ext_resource type="Texture2D" uid="uid://rgvwfx6mp2lr" path="res://Assets/Test/Player Animation/run_right1_test.png" id="5_m7vvs"]
-[ext_resource type="Texture2D" uid="uid://cyul2ovy74qtx" path="res://Assets/Test/Player Animation/run_right2_test.png" id="6_p3i6k"]
+[ext_resource type="Texture2D" uid="uid://c3lklu7i8ptv1" path="res://Assets/Characters/Carl/carl_fullbody.png.PNG" id="1_j1dih"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oce2j"]
 size = Vector3(3.08044, 6.00006, 1.12958)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_sbvny"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_81clg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_6u8f7")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_kgj8s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_rgbto")
-}],
-"loop": true,
-"name": &"walk_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_m7vvs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_p3i6k")
-}],
-"loop": true,
-"name": &"walk_right",
-"speed": 5.0
-}]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ypar3"]
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_haq7x")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="Pivot"]
+transform = Transform3D(0.123104, 0, 0, 0, 0.123104, 0, 0, 0, 0.123104, 0, 0, 0)
+texture = ExtResource("1_j1dih")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0540161, 0.05966, 0.0647888)
 shape = SubResource("BoxShape3D_oce2j")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-sprite_frames = SubResource("SpriteFrames_sbvny")
-animation = &"idle"
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.004, 0, 0, 0, 0.00655305, 0, 0, 0, 0.0026634, 0, -2.94729, 0)
+mesh = SubResource("CapsuleMesh_ypar3")
+skeleton = NodePath("../Pivot/Sprite3D")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_desired_distance = 0.1
+target_desired_distance = 0.1

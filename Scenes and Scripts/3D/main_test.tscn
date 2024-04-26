@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=23 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
@@ -43,6 +43,13 @@ size = Vector2(10, 16)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_rj48n"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
+vertices = PackedVector3Array(-29.1383, 1.6171, -5.01159, -29.1383, 1.6171, 4.98841, 29.1117, 1.6171, 4.98841, 29.1117, 1.6171, -5.01159)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+cell_height = 0.01
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_e0ovh"]
+
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("1_trbh3")
@@ -50,7 +57,7 @@ script = ExtResource("1_trbh3")
 [node name="Player" parent="." instance=ExtResource("1_ihxr4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.67341, 0)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.215482, 8.28902, 13.1534)
 fov = 60.0
 
@@ -129,3 +136,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/FrontWall"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 2.5)
 shape = SubResource("WorldBoundaryShape3D_rj48n")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.61655, 0)
+navigation_mesh = SubResource("NavigationMesh_5mby5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
+transform = Transform3D(29.6383, 0, 0, 0, 1, 0, 0, 0, 5.51159, 0, 1.5971, 0)
+mesh = SubResource("PlaneMesh_e0ovh")
