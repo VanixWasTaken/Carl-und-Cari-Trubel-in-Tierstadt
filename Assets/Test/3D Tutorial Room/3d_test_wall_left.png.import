@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://15nr2ieo1xrx"
-path.s3tc="res://.godot/imported/3d_test_left_wall.png-40037faca6f00e467c474c664faa65fd.s3tc.ctex"
+uid="uid://cp1iqc051wsrm"
+path.s3tc="res://.godot/imported/3d_test_wall_left.png-f626bbbc01865caa849a5859e41915f1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Test/3D Tutorial Room/3d_test_left_wall.png"
-dest_files=["res://.godot/imported/3d_test_left_wall.png-40037faca6f00e467c474c664faa65fd.s3tc.ctex"]
+source_file="res://Assets/Test/3D Tutorial Room/3d_test_wall_left.png"
+dest_files=["res://.godot/imported/3d_test_wall_left.png-f626bbbc01865caa849a5859e41915f1.s3tc.ctex"]
 
 [params]
 
