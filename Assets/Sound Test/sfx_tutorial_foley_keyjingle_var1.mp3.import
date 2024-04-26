@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cl7u1nc357hhq"
+path="res://.godot/imported/sfx_tutorial_foley_keyjingle_var1.mp3-044b8e276e6ba4a04a8b5906ae1ea054.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/sfx_tutorial_foley_keyjingle_var1.mp3"
+dest_files=["res://.godot/imported/sfx_tutorial_foley_keyjingle_var1.mp3-044b8e276e6ba4a04a8b5906ae1ea054.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
