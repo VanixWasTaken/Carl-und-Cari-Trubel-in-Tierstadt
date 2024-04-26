@@ -1,13 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=21 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
+[ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
 [ext_resource type="Texture2D" uid="uid://dkvpbpudxwsot" path="res://Assets/Test/3D Tutorial Room/3d_test_wall_floor.png" id="2_p6kiu"]
 [ext_resource type="Texture2D" uid="uid://bjkmlf7r0368u" path="res://Assets/Test/3D Tutorial Room/3d_test_wall_back.png" id="3_4sgk3"]
 [ext_resource type="Texture2D" uid="uid://cp1iqc051wsrm" path="res://Assets/Test/3D Tutorial Room/3d_test_wall_left.png" id="4_ur8p8"]
 [ext_resource type="Texture2D" uid="uid://boh7xr3w5f14b" path="res://Assets/Test/3D Tutorial Room/3d_test_wall_right.png" id="5_7p0c0"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_v6ci6"]
-size = Vector3(59, 1, 10)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a7v7b"]
+load_path = "res://.godot/imported/3d_test_back_wall.png-7adbe3c56c320f4211bf9805fcb53349.s3tc.ctex"
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yb72r"]
 albedo_texture = ExtResource("2_p6kiu")
@@ -15,101 +18,115 @@ albedo_texture = ExtResource("2_p6kiu")
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_uqp8x"]
-size = Vector3(59, 10, 1)
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_bu88b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q1mwg"]
 albedo_texture = ExtResource("3_4sgk3")
 
 [sub_resource type="QuadMesh" id="QuadMesh_mw0nr"]
-size = Vector2(59, 20)
+size = Vector2(59, 16)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_h6y5r"]
-size = Vector3(10, 10, 1)
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_sgslh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x2dnd"]
 albedo_texture = ExtResource("4_ur8p8")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t24k3"]
-size = Vector2(10, 20)
+size = Vector2(10, 16)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6vvle"]
-size = Vector3(10, 10, 1)
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_rvegi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_meu7a"]
 albedo_texture = ExtResource("5_7p0c0")
 
 [sub_resource type="QuadMesh" id="QuadMesh_iqs2f"]
-size = Vector2(10, 20)
+size = Vector2(10, 16)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a7v7b"]
-load_path = "res://.godot/imported/3d_test_back_wall.png-7adbe3c56c320f4211bf9805fcb53349.s3tc.ctex"
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_rj48n"]
 
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("1_trbh3")
 
 [node name="Player" parent="." instance=ExtResource("1_ihxr4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.67341, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.215482, 1.61561, 14.1534)
-
-[node name="Ground" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
-shape = SubResource("BoxShape3D_v6ci6")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/CollisionShape3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.5, 0)
-material_override = SubResource("StandardMaterial3D_yb72r")
-mesh = SubResource("QuadMesh_t244t")
-
-[node name="WallBack" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -5)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WallBack"]
-shape = SubResource("BoxShape3D_uqp8x")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="WallBack/CollisionShape3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0.5)
-material_override = SubResource("StandardMaterial3D_q1mwg")
-mesh = SubResource("QuadMesh_mw0nr")
-
-[node name="WallLeft" type="StaticBody3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 4, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WallLeft"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, 1)
-shape = SubResource("BoxShape3D_h6y5r")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="WallLeft/CollisionShape3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0.5)
-material_override = SubResource("StandardMaterial3D_x2dnd")
-mesh = SubResource("QuadMesh_t24k3")
-
-[node name="WallRight" type="StaticBody3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29, 4, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WallRight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, 1)
-shape = SubResource("BoxShape3D_6vvle")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="WallRight/CollisionShape3D"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 5, -0.5)
-material_override = SubResource("StandardMaterial3D_meu7a")
-mesh = SubResource("QuadMesh_iqs2f")
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.215482, 8.28902, 13.1534)
+fov = 60.0
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 visible = false
 texture = SubResource("CompressedTexture2D_a7v7b")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 0.737277, 0.67559, 0, -0.67559, 0.737277, 0, 16, 13)
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(-4.37114e-08, -0.393942, 0.919135, 0, 0.919135, 0.393942, -1, 1.72197e-08, -4.01767e-08, 23, 16, 0)
 
-[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(-4.37114e-08, 0.515038, -0.857167, 0, 0.857167, 0.515038, 1, 2.2513e-08, -3.7468e-08, -16, 16, 0)
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="Ground" type="StaticBody3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.5)
+shape = SubResource("WorldBoundaryShape3D_858ri")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/Ground"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.5, 0.5)
+material_override = SubResource("StandardMaterial3D_yb72r")
+mesh = SubResource("QuadMesh_t244t")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="WallBack" type="StaticBody3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/WallBack"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.5)
+shape = SubResource("WorldBoundaryShape3D_bu88b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/WallBack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0.5)
+material_override = SubResource("StandardMaterial3D_q1mwg")
+mesh = SubResource("QuadMesh_mw0nr")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="WallLeft" type="StaticBody3D" parent="Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 4, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/WallLeft"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.5, 1, 1.5)
+shape = SubResource("WorldBoundaryShape3D_sgslh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/WallLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 4, 1.5)
+material_override = SubResource("StandardMaterial3D_x2dnd")
+mesh = SubResource("QuadMesh_t24k3")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="WallRight" type="StaticBody3D" parent="Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29, 4, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/WallRight"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.5, 1, 0.5)
+shape = SubResource("WorldBoundaryShape3D_rvegi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/WallRight"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 4, 0.5)
+material_override = SubResource("StandardMaterial3D_meu7a")
+mesh = SubResource("QuadMesh_iqs2f")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="FrontWall" type="StaticBody3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/FrontWall"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 2.5)
+shape = SubResource("WorldBoundaryShape3D_rj48n")
