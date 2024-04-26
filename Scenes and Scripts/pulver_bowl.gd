@@ -125,6 +125,7 @@ func _on_area_2d_area_exited(area):
 	if area_name != "PulverBowl" && area_name != "WaterCup":
 		if weight < area_parent.minimum_weight:
 			too_little = true
+			enough = false
 			$"../Dialoguebox".visible = true
 			$"../Dialoguebox/Text".text = "Das ist noch nicht genug. Gib noch ein bisschen mehr von dem Pulver hinzu."
 		elif weight >= area_parent.minimum_weight && weight <= area_parent.maximum_weight:
@@ -133,7 +134,6 @@ func _on_area_2d_area_exited(area):
 			$"../Dialoguebox".visible = true
 			$"../Dialoguebox/Text".text = "Sehr gut. Jetzt füge das Pulver dem Wasser hinzu."
 		elif weight > area_parent.maximum_weight:
-			too_little = false
 			enough = false
 			too_much = true
 			$"../Dialoguebox".visible = true
