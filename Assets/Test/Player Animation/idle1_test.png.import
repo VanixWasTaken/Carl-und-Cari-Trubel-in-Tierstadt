@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpxicxp01l3mx"
-path.s3tc="res://.godot/imported/carl_full_body.png-daf78f38231a4a746575fb625567d7ed.s3tc.ctex"
+uid="uid://cdv3lh2p0efnb"
+path.s3tc="res://.godot/imported/idle1_test.png-92af4c30891012129b99a563e1b67c40.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Characters/Carl/carl_full_body.png"
-dest_files=["res://.godot/imported/carl_full_body.png-daf78f38231a4a746575fb625567d7ed.s3tc.ctex"]
+source_file="res://Assets/Test/Player Animation/idle1_test.png"
+dest_files=["res://.godot/imported/idle1_test.png-92af4c30891012129b99a563e1b67c40.s3tc.ctex"]
 
 [params]
 

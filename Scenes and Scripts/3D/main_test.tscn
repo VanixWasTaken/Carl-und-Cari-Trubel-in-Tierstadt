@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://boh7xr3w5f14b" path="res://Assets/Test/3D Tutorial Room/3d_test_wall_right.png" id="5_7p0c0"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a7v7b"]
-load_path = "res://.godot/imported/3d_test_back_wall.png-7adbe3c56c320f4211bf9805fcb53349.s3tc.ctex"
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 

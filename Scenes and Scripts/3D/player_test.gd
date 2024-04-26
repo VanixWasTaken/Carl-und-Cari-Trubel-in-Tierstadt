@@ -38,3 +38,19 @@ func _physics_process(delta):
 	# Moving the Character
 	velocity = target_velocity
 	move_and_slide()
+
+
+
+	#######################
+	#        Walk Animation
+	########################
+	
+	#if $".".global_position.x == 0:
+		#$AnimatedSprite3D.play("idle")
+	if direction.x < 0:
+		$AnimatedSprite3D.play("walk_left")
+	if direction.x > 0:
+		$AnimatedSprite3D.play("walk_right")
+	if direction.x == 0:
+		$AnimatedSprite3D.play("idle")
+
