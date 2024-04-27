@@ -96,7 +96,7 @@ skeleton = NodePath("../CollisionShape3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -5)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/WallBack"]
-transform = Transform3D(2.99894, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.5)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.5)
 shape = SubResource("WorldBoundaryShape3D_bu88b")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/WallBack"]
