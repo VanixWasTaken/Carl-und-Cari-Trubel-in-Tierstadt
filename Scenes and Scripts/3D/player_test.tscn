@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://rgvwfx6mp2lr" path="res://Assets/Test/Player Animation/run_right1_test.png" id="6_x32y3"]
 [ext_resource type="Texture2D" uid="uid://cyul2ovy74qtx" path="res://Assets/Test/Player Animation/run_right2_test.png" id="7_clgj0"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_oce2j"]
+size = Vector3(3.08044, 6.00006, 1.12958)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_7sd0m"]
 animations = [{
 "frames": [{
@@ -44,19 +47,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_oce2j"]
-size = Vector3(3.08044, 6.00006, 1.12958)
-
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_haq7x")
-
-[node name="Pivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.38419e-07, 0)
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67664, 0)
-sprite_frames = SubResource("SpriteFrames_7sd0m")
-animation = &"idle"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0540161, 3.00902, 0.0647888)
@@ -67,3 +59,8 @@ path_desired_distance = 0.1
 target_desired_distance = 0.1
 path_max_distance = 0.01
 navigation_layers = 65535
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67664, 0)
+sprite_frames = SubResource("SpriteFrames_7sd0m")
+animation = &"idle"

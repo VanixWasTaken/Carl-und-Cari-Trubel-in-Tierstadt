@@ -3,14 +3,15 @@ extends CharacterBody3D
 var speed = 15
 
 func _process(delta):
-	if(navigation_agent.is_navigation_finished()):
+	if navigation_agent.is_navigation_finished():
 		return
 	move_to_target(delta)
 
 func move_to_target(delta):
+	navigation_agent.target_desired_distance = 0.5
+
 	var target_position = navigation_agent.get_next_path_position()
 	var direction = global_position.direction_to(target_position)
-	
 	velocity = direction * speed
 	move_and_slide()
 
@@ -18,14 +19,23 @@ func move_to_target(delta):
 
 	#######################
 	#        Walk Animation
-	########################
-	
-	#if direction.x < 0:
-		#$AnimatedSprite3D.play("walk_left")
-	#if direction.x > 0:
-		#$AnimatedSprite3D.play("walk_right")
-	#if direction.x == 0:
-		#$AnimatedSprite3D.play("idle")
+	#######################
+	if direction.x <= 0:
+		$AnimatedSprite3D.play("walk_left")
+	if direction.x > 0:
+		$AnimatedSprite3D.play("walk_right")
+	if navigation_agent.is_target_reachable() == true:
+		if navigation_agent.is_navigation_finished():
+			$AnimatedSprite3D.play("idle")
+	elif navigation_agent.is_target_reachable() == false:
+		if !navigation_agent.is_navigation_finished():
+			print(navigation_agent.is_navigation_finished())
+			if direction.x <= 0 && $".".global_position - navigation_agent.get_final_position() <= Vector3(1,1,1):
+				$AnimatedSprite3D.play("idle")
+				navigation_agent.target_position = $".".global_position
+			elif direction.x > 0 && $".".global_position - navigation_agent.get_final_position() >= Vector3(-1,-1,-1):
+				navigation_agent.target_position = $".".global_position
+				$AnimatedSprite3D.play("idle")
 
 func _input(event):
 # https://www.youtube.com/watch?v=KT06pv06Q1U Das ganze movement, versteh das alles nicht so 100 aber scheint erstmal zu klappen
@@ -40,6 +50,5 @@ func _input(event):
 		ray_query.from = from
 		ray_query.to = to
 		var result = space.intersect_ray(ray_query) #schießt den rayab und sag mir womit der intersected
-		print(result)
 		navigation_agent.target_position = result.position
 
