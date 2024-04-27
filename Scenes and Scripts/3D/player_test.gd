@@ -20,8 +20,6 @@ func move_to_target(delta):
 	#        Walk Animation
 	########################
 	
-	#if $".".global_position.x == 0:
-		#$AnimatedSprite3D.play("idle")
 	if direction.x < 0:
 		$AnimatedSprite3D.play("walk_left")
 	if direction.x > 0:
