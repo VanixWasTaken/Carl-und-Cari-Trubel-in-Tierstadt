@@ -22,12 +22,12 @@ func move_to_target(delta):
 	
 	#if $".".global_position.x == 0:
 		#$AnimatedSprite3D.play("idle")
-	#if direction.x < 0:
-		#$AnimatedSprite3D.play("walk_left")
-	#if direction.x > 0:
-		#$AnimatedSprite3D.play("walk_right")
-	#if direction.x == 0:
-		#$AnimatedSprite3D.play("idle")
+	if direction.x < 0:
+		$AnimatedSprite3D.play("walk_left")
+	if direction.x > 0:
+		$AnimatedSprite3D.play("walk_right")
+	if direction.x == 0:
+		$AnimatedSprite3D.play("idle")
 
 func _input(event):
 # https://www.youtube.com/watch?v=KT06pv06Q1U Das ganze movement, versteh das alles nicht so 100 aber scheint erstmal zu klappen
@@ -43,6 +43,6 @@ func _input(event):
 		ray_query.to = to
 		var result = space.intersect_ray(ray_query) #schießt den rayab und sag mir womit der intersected
 		print(result)
-		if result.size > 1:
-			navigation_agent.target_position = result.position
+		
+		navigation_agent.target_position = result.position
 
