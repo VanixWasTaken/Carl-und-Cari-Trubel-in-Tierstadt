@@ -15,10 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://l08ksamalu3d" path="res://Assets/Test/POI/poi6.png" id="12_2adt4"]
 [ext_resource type="Texture2D" uid="uid://bwh4idphs1t7b" path="res://Assets/Test/POI/poi7.png" id="13_vjxjg"]
 [ext_resource type="Texture2D" uid="uid://cu377og2cdn71" path="res://Assets/Test/POI/poi8.png" id="14_jsl5s"]
-[ext_resource type="AudioStream" uid="uid://f18twvm4iqhp" path="res://Assets/Sound Test/sfx_tutorial_ui_poi_var1.mp3" id="16_ppsj8"]
+[ext_resource type="AudioStream" uid="uid://bp6lx67q3j2wv" path="res://Assets/Sound Test/sfx_tutorial_ui_poi_var1.mp3" id="16_ppsj8"]
 [ext_resource type="Texture2D" uid="uid://ixceyj528ei" path="res://Assets/Test/Mouse/Mouse 1.png" id="17_j2pn1"]
-[ext_resource type="AudioStream" uid="uid://cqeu7cv6aysyw" path="res://Assets/Sound Test/sfx_tutorial_ui_poi_var2.mp3" id="17_wv2rx"]
-[ext_resource type="AudioStream" uid="uid://c0obf3breesbd" path="res://Assets/Sound Test/sfx_tutorial_ui_poi_var3.mp3" id="18_6228x"]
+[ext_resource type="AudioStream" uid="uid://dbrcs07px8ed3" path="res://Assets/Sound Test/sfx_tutorial_ui_poi_var2.mp3" id="17_wv2rx"]
+[ext_resource type="AudioStream" uid="uid://daefyhpqmvx8c" path="res://Assets/Sound Test/sfx_tutorial_ui_poi_var3.mp3" id="18_6228x"]
 [ext_resource type="Texture2D" uid="uid://cqxpxq8brdi8k" path="res://Assets/Test/Mouse/Mouse 2.png" id="18_ng3in"]
 [ext_resource type="Texture2D" uid="uid://5lxaa8tak8x6" path="res://index.png" id="19_1y00q"]
 [ext_resource type="Texture2D" uid="uid://dplo7xnwbkke" path="res://Assets/Test/Mouse/Mouse 3.png" id="19_fmywx"]
@@ -276,6 +276,7 @@ material_overlay = SubResource("StandardMaterial3D_vu4x2")
 emitting = false
 amount = 15
 one_shot = true
+preprocess = 0.5
 mesh = SubResource("QuadMesh_82xm3")
 direction = Vector3(0, 1, 0)
 spread = 34.55

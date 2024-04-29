@@ -49,3 +49,9 @@ func _on_area_2d_area_entered(area):
 	var area_name = area.get_parent().get_name()
 	if area_name == object_name:
 		get_tree().change_scene_to_file(scene_name)
+
+
+
+func _on_footsteps_finished():
+	if speed > 0:
+		$Footsteps.play()
