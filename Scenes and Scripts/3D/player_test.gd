@@ -8,10 +8,12 @@ func _process(delta):
 	move_to_target(delta)
 
 func move_to_target(delta):
-	navigation_agent.target_desired_distance = 0.5
+	navigation_agent.target_desired_distance = 0.1
 
 	var target_position = navigation_agent.get_next_path_position()
 	var direction = global_position.direction_to(target_position)
+	var distance_to_target = global_position - target_position
+	print(distance_to_target)
 	velocity = direction * speed
 	move_and_slide()
 
@@ -19,10 +21,10 @@ func move_to_target(delta):
 
 	#######################
 	#        Walk Animation
-	#######################
-	if direction.x <= 0:
+	######################
+	if distance_to_target.x >= 0:
 		$AnimatedSprite3D.play("walk_left")
-	if direction.x > 0:
+	if distance_to_target.x < 0:
 		$AnimatedSprite3D.play("walk_right")
 	if navigation_agent.is_target_reachable() == true:
 		if navigation_agent.is_navigation_finished():
@@ -51,4 +53,5 @@ func _input(event):
 		ray_query.to = to
 		var result = space.intersect_ray(ray_query) #schießt den rayab und sag mir womit der intersected
 		navigation_agent.target_position = result.position
+		
 
