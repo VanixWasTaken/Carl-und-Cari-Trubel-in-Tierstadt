@@ -8,7 +8,7 @@ func _process(delta):
 
 			# Handles Input to close the menu via the quit button
 	if mouse_inside and Input.is_action_just_pressed("left_click"):
-		_randomize_sounds()
+		%Click.play()
 		var note_menu = get_parent()
 		var house_thing = note_menu.get_parent()
 		house_thing.emit_signal("reactivate_house")
@@ -24,18 +24,15 @@ func _process(delta):
 func _on_area_2d_mouse_entered():
 	mouse_inside = true
 	$Sprite2D.material = outline_shader
-	$Hover.play()
+	_hover()
 func _on_area_2d_mouse_exited():
 	mouse_inside = false
 	$Sprite2D.material = no_shader
 
-func _randomize_sounds():
-	var random = randi_range(1, 3) % 3
-	match random:
-		0:
-			$Click.stream = load("res://Assets/Sound Test/sfx_hub_ui_click_var1.mp3")
-		1:
-			$Click.stream = load("res://Assets/Sound Test/sfx_hub_ui_click_var2.mp3")
-		2:
-			$Click.stream = load("res://Assets/Sound Test/sfx_hub_ui_click_var3.mp3")
-	$Click.play()
+
+func _hover():
+	var stream = AudioStreamRandomizer.new()
+	stream.add_stream(0, load("res://Assets/Sound Test/sfx_hub_ui_hover_var1.mp3"))
+	stream.add_stream(1, load("res://Assets/Sound Test/sfx_hub_ui_hover_var3.mp3"))
+	%Hover.stream = stream
+	%Hover.play()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=25 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Texture2D" uid="uid://ckctg6v1ekkvh" path="res://Assets/map.PNG" id="1_pn286"]
 [ext_resource type="Script" path="res://Scenes and Scripts/map_house_test.gd" id="2_e7gsj"]
@@ -15,7 +15,8 @@
 [ext_resource type="Shader" path="res://Shader/blur.gdshader" id="14_jp8ps"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound Test/sfx_hub_ui_click_var1.mp3" id="15_bdydr"]
 [ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/white_screen.png" id="15_jo7ff"]
-[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound Test/sfx_hub_ui_hover_var1.mp3" id="16_ciapm"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound Test/sfx_hub_ui_click_var2.mp3" id="16_18o2f"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound Test/sfx_hub_ui_click_var3.mp3" id="17_v78te"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_unxvv"]
 animations = [{
@@ -52,6 +53,15 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Arr
 outlines = Array[PackedVector2Array]([PackedVector2Array(980, -15, 974, 288, 585, 286, 588, -5, 564, -5, 558, 288, 276, 295, 284, 525, 276, 634, -7, 633, -6, 656, 170, 654, 155, 923, 0, 928, 2, 948, 459, 943, 460, 1071, 485, 1074, 484, 822, 863, 822, 866, 1059, 1760, 1064, 1754, 1034, 1446, 1024, 1450, 904, 1919, 892, 1920, 871, 1423, 874, 1420, 1030, 888, 1026, 890, 817, 1134, 825, 1142, 643, 1188, 610, 1206, 568, 1902, 566, 1910, 534, 1202, 537, 1197, 498, 1143, 452, 1150, 382, 1648, 382, 1651, 287, 1914, 294, 1918, 267, 1629, 266, 1623, 359, 1122, 358, 1112, 464, 1063, 480, 1031, 518, 1041, 585, 1101, 641, 1105, 797, 546, 794, 541, 539, 308, 531, 314, 326, 1002, 310, 1008, -17), PackedVector2Array(298, 555, 521, 560, 522, 791, 451, 804, 454, 920, 186, 922, 197, 656, 305, 658), PackedVector2Array(1070, 528, 1135, 486, 1169, 516, 1179, 540, 1178, 573, 1153, 598, 1120, 608, 1091, 596, 1074, 567)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_46f6v"]
+streams_count = 3
+stream_0/stream = ExtResource("15_bdydr")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("16_18o2f")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("17_v78te")
+stream_2/weight = 1.0
+
 [node name="Map" type="Node2D"]
 
 [node name="MapTest" type="Node2D" parent="."]
@@ -81,14 +91,6 @@ position = Vector2(1080, 813)
 position = Vector2(-852, -671)
 scale = Vector2(0.6625, 0.6625)
 polygon = PackedVector2Array(-581.132, -341.132, -451.321, -460.377, -10.566, -440.755, 21.1321, 22.6415, -492.075, 46.7924)
-
-[node name="Hover" type="AudioStreamPlayer" parent="Laboratory Building"]
-stream = ExtResource("16_ciapm")
-bus = &"SFX"
-
-[node name="Click" type="AudioStreamPlayer" parent="Laboratory Building"]
-stream = ExtResource("15_bdydr")
-bus = &"SFX"
 
 [node name="Player" parent="." instance=ExtResource("14_0uuvf")]
 position = Vector2(287, 535)
@@ -134,14 +136,6 @@ texture = ExtResource("11_8vqrx")
 position = Vector2(1626, 299)
 shape = SubResource("CircleShape2D_h683o")
 
-[node name="Hover" type="AudioStreamPlayer" parent="JobNotes/JobNoteMenu/ExitButton"]
-stream = ExtResource("16_ciapm")
-bus = &"SFX"
-
-[node name="Click" type="AudioStreamPlayer" parent="JobNotes/JobNoteMenu/ExitButton"]
-stream = ExtResource("15_bdydr")
-bus = &"SFX"
-
 [node name="InJobMenuJobNote1" type="Node2D" parent="JobNotes/JobNoteMenu"]
 position = Vector2(-113, -118)
 metadata/_edit_group_ = true
@@ -182,17 +176,18 @@ texture = ExtResource("11_8vqrx")
 position = Vector2(235.667, -406.28)
 polygon = PackedVector2Array(-47.8698, 29.4583, -51.5521, -57.6892, -81.0104, -103.104, -33.1406, -87.1476, 15.9565, -49.0972, 50.3246, -7.36458, 81.0104, 47.8698, 94.5121, 105.559, 96.967, 157.111, 67.5087, 100.649, 22.0938, 56.4618)
 
-[node name="Hover" type="AudioStreamPlayer" parent="JobNotes"]
-stream = ExtResource("16_ciapm")
-bus = &"SFX"
-
-[node name="Click" type="AudioStreamPlayer" parent="JobNotes"]
-stream = ExtResource("15_bdydr")
-bus = &"SFX"
-
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(0, 6)
 navigation_polygon = SubResource("NavigationPolygon_8wyy8")
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -15.0
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_46f6v")
+volume_db = -18.0
 
 [connection signal="mouse_entered" from="Laboratory Building/Area2D" to="Laboratory Building" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Laboratory Building/Area2D" to="Laboratory Building" method="_on_area_2d_mouse_exited"]
