@@ -2,12 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
-[ext_resource type="Texture2D" uid="uid://bto65sslwm24m" path="res://Assets/Test/3D Tutorial Room/tutorial_wall_back.png" id="3_nhq27"]
-[ext_resource type="Texture2D" uid="uid://cs5bq6tjxi1ff" path="res://Assets/Test/3D Tutorial Room/tutorial_wall_left.png" id="4_63sp7"]
-[ext_resource type="AudioStream" uid="uid://vdwrow33dp76" path="res://Assets/Sound Test/sfx_tutorial_ambience_fridge_var1.mp3" id="5_5w3ah"]
-[ext_resource type="Texture2D" uid="uid://ctfwwf886vlm8" path="res://Assets/Test/3D Tutorial Room/tutorial_wall_right.png" id="5_bi1k4"]
-[ext_resource type="AudioStream" uid="uid://mp0vsqch8x7t" path="res://Assets/Sound Test/sfx_tutorial_ambience_faucet_var1.mp3" id="6_18156"]
-[ext_resource type="Texture2D" uid="uid://bkf4i1trkh1je" path="res://Assets/Test/3D Tutorial Room/floor_wip.png" id="6_oyxwy"]
+[ext_resource type="Texture2D" uid="uid://0dinqy1yps4v" path="res://Assets/Test/grid_floor.png" id="3_7cn8f"]
+[ext_resource type="Texture2D" uid="uid://56rrm2dhixoy" path="res://Assets/Test/grid_sides.png" id="3_u3wwo"]
+[ext_resource type="Texture2D" uid="uid://kwgtec3t0s8l" path="res://Assets/Test/grid_back.png" id="4_v3frb"]
+[ext_resource type="Texture2D" uid="uid://c5yyduf5h4wde" path="res://Assets/Test/tutorial_wall_left_sketch.png" id="5_bsfs4"]
 [ext_resource type="Texture2D" uid="uid://bhf0ep2wic717" path="res://Assets/Test/POI/poi1.png" id="7_55g8d"]
 [ext_resource type="Texture2D" uid="uid://bo0v03fwi088l" path="res://Assets/Test/POI/poi2.png" id="8_kx77v"]
 [ext_resource type="Texture2D" uid="uid://cv0xkrwguao6h" path="res://Assets/Test/POI/poi3.png" id="9_btvri"]
@@ -27,7 +25,7 @@
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wff4f"]
-albedo_texture = ExtResource("6_oyxwy")
+albedo_texture = ExtResource("3_7cn8f")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)
@@ -35,7 +33,7 @@ size = Vector2(59, 10)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_bu88b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i20v4"]
-albedo_texture = ExtResource("3_nhq27")
+albedo_texture = ExtResource("4_v3frb")
 
 [sub_resource type="QuadMesh" id="QuadMesh_mw0nr"]
 size = Vector2(59, 16)
@@ -43,15 +41,15 @@ size = Vector2(59, 16)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_sgslh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j105o"]
-albedo_texture = ExtResource("4_63sp7")
+albedo_texture = ExtResource("5_bsfs4")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t24k3"]
 size = Vector2(10, 16)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_rvegi"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrmtd"]
-albedo_texture = ExtResource("5_bi1k4")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbjrq"]
+albedo_texture = ExtResource("3_u3wwo")
 
 [sub_resource type="QuadMesh" id="QuadMesh_iqs2f"]
 size = Vector2(10, 16)
@@ -129,7 +127,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("1_trbh3")
 
 [node name="Player" parent="." instance=ExtResource("1_ihxr4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0600805, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.0600805, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.215482, 8.28902, 13.1534)
@@ -217,7 +215,7 @@ shape = SubResource("WorldBoundaryShape3D_rvegi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/WallRight"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 4, 0.5)
-material_override = SubResource("StandardMaterial3D_nrmtd")
+material_override = SubResource("StandardMaterial3D_gbjrq")
 mesh = SubResource("QuadMesh_iqs2f")
 skeleton = NodePath("../CollisionShape3D")
 
