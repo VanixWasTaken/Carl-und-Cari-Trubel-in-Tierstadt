@@ -63,3 +63,6 @@ navigation_layers = 65535
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67664, 0)
 sprite_frames = SubResource("SpriteFrames_7sd0m")
 animation = &"idle"
+
+[node name="AudioListener3D" type="AudioListener3D" parent="."]
+current = true
