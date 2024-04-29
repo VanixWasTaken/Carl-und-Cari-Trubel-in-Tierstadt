@@ -56,7 +56,6 @@ shape = SubResource("BoxShape3D_oce2j")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 0.1
-target_desired_distance = 0.1
 path_max_distance = 0.01
 navigation_layers = 65535
 
