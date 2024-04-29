@@ -2,6 +2,8 @@ extends Control
 signal HelpOpened
 signal HelpClosed
 var helpbuttonopen = false
+@onready var outline_shader = preload("res://Shader/outline.tres")
+@onready var no_shader = preload("res://Shader/no_shader.tres")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,8 +13,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-
 
 func _on_texture_button_button_up():
 	if !helpbuttonopen:
@@ -24,4 +24,9 @@ func _on_texture_button_button_up():
 		#emit_signal("HelpClosed")
 		#helpbuttonopen = false
 	
+func _on_texture_button_mouse_entered():
+	$TextureButton.material = outline_shader
 
+
+func _on_texture_button_mouse_exited():
+	$TextureButton.material = no_shader
