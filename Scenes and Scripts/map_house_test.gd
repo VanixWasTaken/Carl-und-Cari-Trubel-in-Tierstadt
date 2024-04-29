@@ -4,6 +4,8 @@ extends Node2D
 var mouse_inside = false
 var my_name = "null"
 @export var scene_name: String
+@onready var outline_shader = preload("res://Shader/outline.tres")
+@onready var no_shader = preload("res://Shader/no_shader.tres")
 
 func _ready():
 	my_name = get_name()
@@ -39,3 +41,11 @@ func _hover():
 	stream.add_stream(1, load("res://Assets/Sound Test/sfx_hub_ui_hover_var3.mp3"))
 	%Hover.stream = stream
 	%Hover.play()
+
+
+func _on_control_help_opened():
+	$AnimatedSprite2D.material = outline_shader
+
+
+func _on_control_help_closed():
+	$AnimatedSprite2D.material = no_shader

@@ -17,9 +17,11 @@ func _process(delta):
 func _on_texture_button_button_up():
 	if !helpbuttonopen:
 		emit_signal("HelpOpened")
-		helpbuttonopen = true
-	elif helpbuttonopen:
+		await get_tree().create_timer(7).timeout
 		emit_signal("HelpClosed")
-		helpbuttonopen = false
+		#helpbuttonopen = true
+	#elif helpbuttonopen:
+		#emit_signal("HelpClosed")
+		#helpbuttonopen = false
 	
 

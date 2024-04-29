@@ -101,3 +101,10 @@ func _randomize_sounds(action: String):
 			2:
 				$Sprite2D/Click.stream = load("res://Assets/Sound Test/sfx_hub_ui_click_var3.mp3")
 		$Sprite2D/Click.play()
+
+
+func _on_control_help_opened():
+	$Sprite2D.material = outline_shader
+	
+func _on_control_help_closed():
+	$Sprite2D.material = no_shader
