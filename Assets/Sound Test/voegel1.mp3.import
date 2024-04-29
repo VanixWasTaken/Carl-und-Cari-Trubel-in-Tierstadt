@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://drl6p3koakgwh"
+uid="uid://2cfblgp3u8an"
 path="res://.godot/imported/voegel1.mp3-6dcf3bedfc4f25d9109f0f0fa83d2353.mp3str"
 
 [deps]
@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/voegel1.mp3-6dcf3bedfc4f25d9109f0f0fa83d2353.
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://bx8vmd813ypmx"
+uid="uid://dsyakv5gp2csn"
 path="res://.godot/imported/kuehlschrank1.mp3-fa4ee2add741a0056a6b5d31e1197660.mp3str"
 
 [deps]
@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/kuehlschrank1.mp3-fa4ee2add741a0056a6b5d31e11
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

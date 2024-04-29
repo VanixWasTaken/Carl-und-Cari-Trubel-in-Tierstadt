@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://fk6rqutctnmu"
+uid="uid://bvrot4gune23t"
 path="res://.godot/imported/wasserhahn3.mp3-29df48de5764046722a7d8250da4e1e7.mp3str"
 
 [deps]
@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/wasserhahn3.mp3-29df48de5764046722a7d8250da4e
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

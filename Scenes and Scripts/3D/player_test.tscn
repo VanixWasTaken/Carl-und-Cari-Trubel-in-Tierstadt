@@ -64,5 +64,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67664, 0)
 sprite_frames = SubResource("SpriteFrames_7sd0m")
 animation = &"idle"
 
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0937849, 48.2244, -0.00444877)
+target_position = Vector3(1.665, 0, 0)
+collision_mask = 32768
+
+[node name="RayCast3D2" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.331127, 48.2287, -0.0609252)
+target_position = Vector3(-1.415, 0, 0)
+collision_mask = 32768
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
 current = true

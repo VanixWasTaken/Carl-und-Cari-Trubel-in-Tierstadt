@@ -1,20 +1,33 @@
 extends CharacterBody3D
 @onready var navigation_agent:= $NavigationAgent3D
 var speed = 15
+var result
+
 
 func _process(delta):
 	if navigation_agent.is_navigation_finished():
 		return
 	move_to_target(delta)
+	
+
+	
 
 func move_to_target(delta):
-	navigation_agent.target_desired_distance = 0.1
+	navigation_agent.target_desired_distance = 0.2
 
 	var target_position = navigation_agent.get_next_path_position()
+	if result != null:
+		if result.collider.is_in_group("Ground"):
+			navigation_agent.set_target_position(target_position)
 	var direction = global_position.direction_to(target_position)
 	var distance_to_target = global_position - target_position
-	print(distance_to_target)
 	velocity = direction * speed
+	#print("Final Position: " + str(navigation_agent.get_final_position()))
+	#print("Target Position: " + str(navigation_agent.get_target_position()))
+	#print("Fake Target: " + str(target_position))
+	#print(navigation_agent.distance_to_target())
+	
+	
 	move_and_slide()
 
 
@@ -22,26 +35,31 @@ func move_to_target(delta):
 	#######################
 	#        Walk Animation
 	######################
-	if distance_to_target.x >= 0:
+	if distance_to_target.x > 0:
 		$AnimatedSprite3D.play("walk_left")
 	if distance_to_target.x < 0:
 		$AnimatedSprite3D.play("walk_right")
 	if navigation_agent.is_target_reachable() == true:
-		if navigation_agent.is_navigation_finished():
+		if navigation_agent.distance_to_target() <= 0.3:
+			speed = 0
 			$AnimatedSprite3D.play("idle")
+			navigation_agent.target_position = global_position
 	elif navigation_agent.is_target_reachable() == false:
-		if !navigation_agent.is_navigation_finished():
-			print(navigation_agent.is_navigation_finished())
-			if direction.x <= 0 && $".".global_position - navigation_agent.get_final_position() <= Vector3(1,1,1):
-				$AnimatedSprite3D.play("idle")
-				navigation_agent.target_position = $".".global_position
-			elif direction.x > 0 && $".".global_position - navigation_agent.get_final_position() >= Vector3(-1,-1,-1):
-				navigation_agent.target_position = $".".global_position
-				$AnimatedSprite3D.play("idle")
+		if str($RayCast3D.get_collider()) !=  "<Object#null>" || str($RayCast3D2.get_collider()) !=  "<Object#null>":
+			speed = 0
+			$AnimatedSprite3D.play("idle")
+			navigation_agent.target_position = global_position
+		if direction.x <= 0 && global_position - navigation_agent.get_final_position() <= Vector3(1,1,1):
+			$AnimatedSprite3D.play("idle")
+			navigation_agent.target_position = global_position
+		elif direction.x > 0 && global_position - navigation_agent.get_final_position() >= Vector3(-1,-1,-1):
+			navigation_agent.target_position = global_position
+			$AnimatedSprite3D.play("idle")
 
 func _input(event):
 # https://www.youtube.com/watch?v=KT06pv06Q1U Das ganze movement, versteh das alles nicht so 100 aber scheint erstmal zu klappen
 	if Input.is_action_just_pressed("left_click"):
+		speed = 15
 		var camera = get_tree().get_nodes_in_group("Camera")[0] #Holt die Kamera, da die Raycatsts von diueser aus entstehen die zur bewegung benötigt werden
 		var mouse_position = get_viewport().get_mouse_position() #als 2d value
 		var ray_length = 100 # Wie lang ist der raycast der geschossen wird?
@@ -51,7 +69,5 @@ func _input(event):
 		var ray_query = PhysicsRayQueryParameters3D.new() # beschrebt , was der raycast ist und was der macht
 		ray_query.from = from
 		ray_query.to = to
-		var result = space.intersect_ray(ray_query) #schießt den rayab und sag mir womit der intersected
+		result = space.intersect_ray(ray_query) #schießt den rayab und sag mir womit der intersected
 		navigation_agent.target_position = result.position
-		
-
