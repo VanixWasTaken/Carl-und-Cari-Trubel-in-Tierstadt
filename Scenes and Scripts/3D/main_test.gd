@@ -18,5 +18,5 @@ func _process(delta):
 
 
 func _on_area_3d_body_entered(body):
-	if body.get_name == "Player":
+	if body.get_name() == "Player":
 		get_tree().change_scene_to_file("res://Scenes and Scripts/map.tscn")
