@@ -1,11 +1,12 @@
-[gd_scene load_steps=33 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=35 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
 [ext_resource type="Texture2D" uid="uid://bto65sslwm24m" path="res://Assets/Test/3D Tutorial Room/tutorial_wall_back.png" id="3_nhq27"]
 [ext_resource type="Texture2D" uid="uid://cs5bq6tjxi1ff" path="res://Assets/Test/3D Tutorial Room/tutorial_wall_left.png" id="4_63sp7"]
-[ext_resource type="AudioStream" uid="uid://bx8vmd813ypmx" path="res://Assets/Sound Test/kuehlschrank1.mp3" id="5_6onhm"]
+[ext_resource type="AudioStream" uid="uid://vdwrow33dp76" path="res://Assets/Sound Test/sfx_tutorial_ambience_fridge_var1.mp3" id="5_5w3ah"]
 [ext_resource type="Texture2D" uid="uid://ctfwwf886vlm8" path="res://Assets/Test/3D Tutorial Room/tutorial_wall_right.png" id="5_bi1k4"]
+[ext_resource type="AudioStream" uid="uid://mp0vsqch8x7t" path="res://Assets/Sound Test/sfx_tutorial_ambience_faucet_var1.mp3" id="6_18156"]
 [ext_resource type="Texture2D" uid="uid://bkf4i1trkh1je" path="res://Assets/Test/3D Tutorial Room/floor_wip.png" id="6_oyxwy"]
 [ext_resource type="Texture2D" uid="uid://bhf0ep2wic717" path="res://Assets/Test/POI/poi1.png" id="7_55g8d"]
 [ext_resource type="Texture2D" uid="uid://bo0v03fwi088l" path="res://Assets/Test/POI/poi2.png" id="8_kx77v"]
@@ -92,6 +93,9 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_75e5b"]
+polyphony = 3
+
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("1_trbh3")
@@ -148,7 +152,13 @@ skeleton = NodePath("../CollisionShape3D")
 
 [node name="FridgeSound" type="AudioStreamPlayer3D" parent="Walls/WallBack"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.24579, -3.99994, 0.794574)
-stream = ExtResource("5_6onhm")
+stream = ExtResource("5_5w3ah")
+autoplay = true
+max_distance = 78.02
+
+[node name="FaucetSound" type="AudioStreamPlayer3D" parent="Walls/WallBack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9466, -3.99994, 5.11186)
+stream = ExtResource("6_18156")
 autoplay = true
 max_distance = 78.02
 
@@ -200,3 +210,6 @@ sprite_frames = SubResource("SpriteFrames_s8a0u")
 autoplay = "default"
 frame = 4
 frame_progress = 0.00285532
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPolyphonic_75e5b")
