@@ -22,7 +22,7 @@ func _process(delta):
 				emit_signal("reactivate_house")
 				$JobNoteMenu.visible = false
 				$JobNoteMenu/JobNote1.visible = false
-				_randomize_sounds("click")
+				%Click.play()
 
 		 # lets players close the note-menu by pressing rmb
 		elif Input.is_action_just_pressed("right_click"):
@@ -34,35 +34,35 @@ func _process(delta):
 			if mouse_inside:
 				emit_signal("deactivate_house")
 				$JobNoteMenu.visible = true
-				_randomize_sounds("click")
+				%Click.play()
 
 		   # Handles input to open and close the steckbrief via clicking its icon
 	if mouse_inside_job_note1 and Input.is_action_just_pressed("left_click"):
 		if !$JobNoteMenu/JobNote1.visible:
 			$JobNoteMenu/JobNote1.visible = true
-			_randomize_sounds("click")
+			%Click.play()
 		elif $JobNoteMenu/JobNote1:
 			$JobNoteMenu/JobNote1.visible = false
-			_randomize_sounds("click")
+			%Click.play()
 
 	  # handles input to close the big-note via its exit-button
 	elif mouse_inside_big_note and Input.is_action_just_pressed("left_click"):
 		$JobNoteMenu/JobNote1.visible = false
-		_randomize_sounds("click")
+		%Click.play()
 
 # function to close the entire menu and reactivate the house
 func close_menu():
 	emit_signal("reactivate_house")
 	$JobNoteMenu.visible = false
 	$JobNoteMenu/JobNote1.visible = false
-	_randomize_sounds("click")
+	%Click.play()
 	Global.moving_allowed = true
 
 # for shaders
 func _on_area_2d_mouse_entered():
 	mouse_inside = true
 	$Sprite2D.material = outline_shader
-	_randomize_sounds("hover")
+	_paper_hover()
 func _on_area_2d_mouse_exited():
 	mouse_inside = false
 	$Sprite2D.material = no_shader
@@ -72,7 +72,7 @@ func _on_area_2d_mouse_exited():
 func _on_area_2d_InJobMenuJobNote1_mouse_entered():
 	mouse_inside_job_note1 = true
 	$JobNoteMenu/InJobMenuJobNote1/Sprite2D.material = outline_shader
-	_randomize_sounds("hover")
+	_paper_hover()
 func _on_area_2d_InJobMenuJobNote1_mouse_exited():
 	mouse_inside_job_note1 = false
 	$JobNoteMenu/InJobMenuJobNote1/Sprite2D.material = no_shader
@@ -81,29 +81,15 @@ func _on_area_2d_InJobMenuJobNote1_mouse_exited():
 func _on_paper_quit_mouse_entered():
 	mouse_inside_big_note = true
 	$JobNoteMenu/JobNote1/Sprite2D/QuitButton.material = outline_shader
-	_randomize_sounds("hover")
+	_paper_hover()
 func _on_paper_quit_mouse_exited():
 	mouse_inside_big_note = false
 	$JobNoteMenu/JobNote1/Sprite2D/QuitButton.material = no_shader
 
-   # randomizes the click sounds
-func _randomize_sounds(action: String):
-	var random = randi_range(1, 3) % 3
-	if action == "click":
-		match random:
-			0:
-				$Click.stream = load("res://Assets/Sound Test/sfx_hub_ui_click_var1.mp3")
-			1:
-				$Click.stream = load("res://Assets/Sound Test/sfx_hub_ui_click_var2.mp3")
-			2:
-				$Click.stream = load("res://Assets/Sound Test/sfx_hub_ui_click_var3.mp3")
-		$Click.play()
-	elif action == "hover":
-		match random:
-			0:
-				$Hover.stream = load("res://Assets/Sound Test/sfx_hub_ui_paper_var1.mp3")
-			1:
-				$Hover.stream = load("res://Assets/Sound Test/sfx_hub_ui_paper_var2.mp3")
-			2:
-				$Hover.stream = load("res://Assets/Sound Test/sfx_hub_ui_paper_var3.mp3")
-		$Hover.play()
+func _paper_hover():
+	var stream = AudioStreamRandomizer.new()
+	stream.add_stream(0, load("res://Assets/Sound Test/sfx_hub_ui_paper_var1.mp3"))
+	stream.add_stream(1, load("res://Assets/Sound Test/sfx_hub_ui_paper_var2.mp3"))
+	stream.add_stream(2, load("res://Assets/Sound Test/sfx_hub_ui_paper_var3.mp3"))
+	%Hover.stream = stream
+	%Hover.play()

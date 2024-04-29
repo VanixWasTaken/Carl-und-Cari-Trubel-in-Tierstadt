@@ -1,5 +1,7 @@
 extends Node2D
 
+signal hover
+signal click
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,3 +15,10 @@ func _process(delta):
 
 func _on_texture_button_button_up():
 	$".".visible = false
+
+
+func _on_texture_button_mouse_entered():
+	emit_signal("hover")
+
+func _on_texture_button_button_down():
+	emit_signal("click")

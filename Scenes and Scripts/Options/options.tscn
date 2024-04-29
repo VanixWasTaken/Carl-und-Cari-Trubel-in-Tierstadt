@@ -52,4 +52,6 @@ text = "Zurück"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]

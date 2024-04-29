@@ -15,13 +15,14 @@ func _process(delta):
 	else:
 		$AnimatedSprite2D.stop()
 	if mouse_inside and Input.is_action_just_pressed("left_click"):
-		$Click.play()
+		%Click.play()
 		$"../Player"._get_clicked_object(my_name, scene_name)
 
 # handles the input for clicking on the house to enter the level
 func _on_area_2d_mouse_entered():
 	mouse_inside = true
-	$Hover.play()
+	%Hover.play()
+	_hover()
 func _on_area_2d_mouse_exited():
 	mouse_inside = false
 
@@ -31,3 +32,10 @@ func _on_job_notes_deactivate_house():
 
 func _on_job_notes_reactivate_house():
 	$Area2D.visible = true
+
+func _hover():
+	var stream = AudioStreamRandomizer.new()
+	stream.add_stream(0, load("res://Assets/Sound Test/sfx_hub_ui_hover_var1.mp3"))
+	stream.add_stream(1, load("res://Assets/Sound Test/sfx_hub_ui_hover_var3.mp3"))
+	%Hover.stream = stream
+	%Hover.play()
