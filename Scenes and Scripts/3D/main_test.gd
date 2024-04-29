@@ -20,3 +20,9 @@ func _process(delta):
 func _on_area_3d_body_entered(body):
 	if body.get_name() == "Player":
 		get_tree().change_scene_to_file("res://Scenes and Scripts/map.tscn")
+
+
+func _on_poi_sound_finished():
+	await get_tree().create_timer(randf_range(5, 10)).timeout
+	$"POI/POI Sound".play()
+	$POI/CPUParticles3D.emitting = true
