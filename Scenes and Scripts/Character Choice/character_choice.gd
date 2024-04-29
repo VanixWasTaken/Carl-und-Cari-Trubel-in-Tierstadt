@@ -13,11 +13,11 @@ func _process(delta):
 
 func _on_carl_button_button_up():
 	Global.character = "Carl"
-	get_tree().change_scene_to_file("res://Scenes and Scripts/3D/main_test.tscn")
+	get_tree().change_scene_to_file("res://Scenes and Scripts/map.tscn")
 
 func _on_cari_button_button_up():
 	Global.character = "Cari"
-	get_tree().change_scene_to_file("res://Scenes and Scripts/3D/main_test.tscn")
+	get_tree().change_scene_to_file("res://Scenes and Scripts/map.tscn")
 
 func _on_carl_button_button_down():
 	play_ui_sound()

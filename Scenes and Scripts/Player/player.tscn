@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Player/player.gd" id="1_pxkst"]
 [ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Test/Player/IMG_1931.PNG" id="1_uekr7"]
 [ext_resource type="Texture2D" uid="uid://fji17txvsqan" path="res://Assets/Test/Player/IMG_1932.PNG" id="2_3hmks"]
-[ext_resource type="AudioStream" uid="uid://xjmarfqqltkh" path="res://Assets/Sound Test/sfx_hub_foley_footsteps_var.mp3" id="4_bip16"]
+[ext_resource type="AudioStream" uid="uid://dc1vs6qw5sspl" path="res://Assets/Sound Test/sfx_world_foley_footstep_var1.mp3" id="4_bip16"]
 [ext_resource type="Texture2D" uid="uid://ctcnsi4vmixqr" path="res://Assets/Test/Player/icon_carl1.PNG" id="4_q3ciq"]
 [ext_resource type="Texture2D" uid="uid://bwahyatf0uvai" path="res://Assets/Test/Player/icon_carl2.PNG" id="5_5msf1"]
 
