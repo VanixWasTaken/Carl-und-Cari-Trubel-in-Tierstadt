@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=49 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
@@ -15,8 +15,12 @@
 [ext_resource type="Texture2D" uid="uid://l08ksamalu3d" path="res://Assets/Test/POI/poi6.png" id="12_2adt4"]
 [ext_resource type="Texture2D" uid="uid://bwh4idphs1t7b" path="res://Assets/Test/POI/poi7.png" id="13_vjxjg"]
 [ext_resource type="Texture2D" uid="uid://cu377og2cdn71" path="res://Assets/Test/POI/poi8.png" id="14_jsl5s"]
+[ext_resource type="AudioStream" uid="uid://f18twvm4iqhp" path="res://Assets/Sound Test/sfx_tutorial_ui_poi_var1.mp3" id="16_ppsj8"]
 [ext_resource type="Texture2D" uid="uid://ixceyj528ei" path="res://Assets/Test/Mouse/Mouse 1.png" id="17_j2pn1"]
+[ext_resource type="AudioStream" uid="uid://cqeu7cv6aysyw" path="res://Assets/Sound Test/sfx_tutorial_ui_poi_var2.mp3" id="17_wv2rx"]
+[ext_resource type="AudioStream" uid="uid://c0obf3breesbd" path="res://Assets/Sound Test/sfx_tutorial_ui_poi_var3.mp3" id="18_6228x"]
 [ext_resource type="Texture2D" uid="uid://cqxpxq8brdi8k" path="res://Assets/Test/Mouse/Mouse 2.png" id="18_ng3in"]
+[ext_resource type="Texture2D" uid="uid://5lxaa8tak8x6" path="res://index.png" id="19_1y00q"]
 [ext_resource type="Texture2D" uid="uid://dplo7xnwbkke" path="res://Assets/Test/Mouse/Mouse 3.png" id="19_fmywx"]
 [ext_resource type="Texture2D" uid="uid://baxrtbt1g5vga" path="res://Assets/Test/Mouse/Mouse 4.png" id="20_q3ps5"]
 [ext_resource type="Texture2D" uid="uid://3mlcqu2grcej" path="res://Assets/Test/Mouse/Mouse 5.png" id="21_opjsw"]
@@ -96,6 +100,23 @@ animations = [{
 "name": &"default",
 "speed": 12.0
 }]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_g3j5u"]
+streams_count = 3
+stream_0/stream = ExtResource("16_ppsj8")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("17_wv2rx")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("18_6228x")
+stream_2/weight = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkhka"]
+albedo_texture = ExtResource("19_1y00q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vu4x2"]
+albedo_texture = ExtResource("19_1y00q")
+
+[sub_resource type="QuadMesh" id="QuadMesh_82xm3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_62bun"]
 animations = [{
@@ -242,6 +263,30 @@ autoplay = "default"
 frame = 4
 frame_progress = 0.00285532
 
+[node name="POI Sound" type="AudioStreamPlayer3D" parent="POI"]
+stream = SubResource("AudioStreamRandomizer_g3j5u")
+max_db = -3.0
+autoplay = true
+max_distance = 40.0
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="POI"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42528, 0)
+material_override = SubResource("StandardMaterial3D_tkhka")
+material_overlay = SubResource("StandardMaterial3D_vu4x2")
+emitting = false
+amount = 15
+one_shot = true
+mesh = SubResource("QuadMesh_82xm3")
+direction = Vector3(0, 1, 0)
+spread = 34.55
+gravity = Vector3(-10, -10, -10)
+initial_velocity_min = 20.0
+initial_velocity_max = 25.0
+linear_accel_min = -38.38
+linear_accel_max = -22.22
+angle_max = 276.4
+color = Color(1, 0.384698, 0.991142, 1)
+
 [node name="Mouse" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1.53, 0, 0, 0, 1.53, 0, 0, 0, 1.53, 13.2089, 2.346, 1.91759)
 sprite_frames = SubResource("SpriteFrames_62bun")
@@ -255,4 +300,5 @@ stream = SubResource("AudioStreamPolyphonic_75e5b")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.034, 0.174387, -3.89445)
 shape = SubResource("BoxShape3D_dbdf1")
 
+[connection signal="finished" from="POI/POI Sound" to="." method="_on_poi_sound_finished"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
