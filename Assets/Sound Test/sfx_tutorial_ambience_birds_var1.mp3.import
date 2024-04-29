@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nesopoqucc3l"
+path="res://.godot/imported/sfx_tutorial_ambience_birds_var1.mp3-5bb174688ccd0729845a5b337f82468c.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/sfx_tutorial_ambience_birds_var1.mp3"
+dest_files=["res://.godot/imported/sfx_tutorial_ambience_birds_var1.mp3-5bb174688ccd0729845a5b337f82468c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
