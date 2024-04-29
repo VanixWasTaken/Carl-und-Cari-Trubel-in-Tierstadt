@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=48 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
@@ -19,7 +19,13 @@
 [ext_resource type="Texture2D" uid="uid://cqxpxq8brdi8k" path="res://Assets/Test/Mouse/Mouse 2.png" id="18_ng3in"]
 [ext_resource type="Texture2D" uid="uid://dplo7xnwbkke" path="res://Assets/Test/Mouse/Mouse 3.png" id="19_fmywx"]
 [ext_resource type="Texture2D" uid="uid://baxrtbt1g5vga" path="res://Assets/Test/Mouse/Mouse 4.png" id="20_q3ps5"]
+[ext_resource type="Texture2D" uid="uid://c3umkrrncqb84" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_table.png.PNG" id="21_0khoi"]
 [ext_resource type="Texture2D" uid="uid://3mlcqu2grcej" path="res://Assets/Test/Mouse/Mouse 5.png" id="21_opjsw"]
+[ext_resource type="Texture2D" uid="uid://csr0m07mkrx8" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_staircase.png.PNG" id="22_rpuhg"]
+[ext_resource type="Texture2D" uid="uid://bbukthhg2fphx" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_pictures.png.PNG" id="23_q52pq"]
+[ext_resource type="Texture2D" uid="uid://ceo1lqviagjsk" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_jacket.png.PNG" id="24_gv2gc"]
+[ext_resource type="Texture2D" uid="uid://bix552nvkmisl" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_chair1.png.PNG" id="25_yfk7p"]
+[ext_resource type="Texture2D" uid="uid://bh261ixo47skg" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_chair3.png.PNG" id="26_drce0"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a7v7b"]
 
@@ -63,7 +69,7 @@ cell_height = 0.01
 [sub_resource type="BoxMesh" id="BoxMesh_d47h4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i151x"]
-size = Vector3(19.3163, 1, 0.597778)
+size = Vector3(19.3163, 1, 0.566955)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s8a0u"]
 animations = [{
@@ -126,12 +132,15 @@ polyphony = 3
 [sub_resource type="BoxShape3D" id="BoxShape3D_dbdf1"]
 size = Vector3(7.86162, 2.19092, 3.75842)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_p81xv"]
+size = Vector3(7.73792, 2.14551, 0.875286)
+
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("1_trbh3")
 
 [node name="Player" parent="." instance=ExtResource("1_ihxr4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0600805, 0)
+transform = Transform3D(1.35, 0, 0, 0, 1.35, 0, 0, 0, 1.35, 0, -0.0600805, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.215482, 8.28902, 13.1534)
@@ -231,7 +240,7 @@ mesh = SubResource("BoxMesh_d47h4")
 transform = Transform3D(0.0337401, 0, 0, 0, 1, 0, 0, 0, 0.181436, 0, -1.5971, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D"]
-transform = Transform3D(1.24158, 0, 0, 0, 2.08749, 0, 0, 0, 15.6264, 0.18616, 0, -2.71926)
+transform = Transform3D(1.24158, 0, 0, 0, 2.08749, 0, 0, 0, 15.6266, 0.18616, 0, -2.96008)
 shape = SubResource("BoxShape3D_i151x")
 
 [node name="POI" type="AnimatedSprite3D" parent="."]
@@ -254,5 +263,43 @@ stream = SubResource("AudioStreamPolyphonic_75e5b")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.034, 0.174387, -3.89445)
 shape = SubResource("BoxShape3D_dbdf1")
+
+[node name="Room Objects" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.251872)
+
+[node name="Table" type="Sprite3D" parent="Room Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1692, 2.51051, 0.290251)
+texture = ExtResource("21_0khoi")
+
+[node name="Stairs" type="Sprite3D" parent="Room Objects"]
+transform = Transform3D(2.215, 0, 0, 0, 2.215, 0, 0, 0, 2.215, 8.003, 5.70051, -4.104)
+texture = ExtResource("22_rpuhg")
+
+[node name="Wall Pictures" type="Sprite3D" parent="Room Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81355, 7.14937, -4.40202)
+texture = ExtResource("23_q52pq")
+
+[node name="Jacket Hang" type="Sprite3D" parent="Room Objects"]
+transform = Transform3D(-9.92248e-08, 0, -2.27, 0, 2.27, 0, 2.27, 0, -9.92248e-08, 29.4944, 6.43728, 0)
+texture = ExtResource("24_gv2gc")
+
+[node name="Chair 1" type="Sprite3D" parent="Room Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5386, 3.60878, 1.02636)
+sorting_offset = 1.0
+texture = ExtResource("25_yfk7p")
+
+[node name="Chair 2" type="Sprite3D" parent="Room Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0815, 2.23694, 0)
+texture = ExtResource("26_drce0")
+
+[node name="Chair 3" type="Sprite3D" parent="Room Objects"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.968, 2.30712, 0.0667109)
+texture = ExtResource("26_drce0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Room Objects"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room Objects/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.057, -0.572754, 0.170492)
+shape = SubResource("BoxShape3D_p81xv")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
