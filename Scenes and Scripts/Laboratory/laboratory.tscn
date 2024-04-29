@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b73i1p5cw3b53"]
+[gd_scene load_steps=22 format=3 uid="uid://b73i1p5cw3b53"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Laboratory/laboratory.gd" id="1_vx07n"]
 [ext_resource type="Texture2D" uid="uid://b05bruduxotgl" path="res://Assets/Test/laborraum platzkalter.png" id="2_ikmwy"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Characters/Chemie Chamäleon/Animation/chameleon_007.png" id="10_txsdk"]
 [ext_resource type="Texture2D" uid="uid://mbsqejlr2wu8" path="res://Assets/Test/UI/speech_bubble_right.png" id="11_ke86d"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="16_ln43l"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="18_ahv68"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e8enl"]
 animations = [{
@@ -156,6 +157,15 @@ scale = Vector2(0.15, 0.15)
 texture_normal = ExtResource("8_4sfuo")
 stretch_mode = 0
 
+[node name="Control" parent="." instance=ExtResource("18_ahv68")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
 [connection signal="mouse_entered" from="Sprite2D/LaborArea2D" to="." method="_on_labor_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Sprite2D/LaborArea2D" to="." method="_on_labor_area_2d_mouse_exited"]
 [connection signal="button_down" from="Dialoguebox/TextureButton" to="." method="_on_texture_button_button_down"]
+[connection signal="HelpClosed" from="Control" to="." method="_on_control_help_closed"]
+[connection signal="HelpOpened" from="Control" to="." method="_on_control_help_opened"]

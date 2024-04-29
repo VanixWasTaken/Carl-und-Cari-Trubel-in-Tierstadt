@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=26 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Texture2D" uid="uid://ckctg6v1ekkvh" path="res://Assets/map.PNG" id="1_pn286"]
 [ext_resource type="Script" path="res://Scenes and Scripts/map_house_test.gd" id="2_e7gsj"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/white_screen.png" id="15_jo7ff"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound Test/sfx_hub_ui_click_var2.mp3" id="16_18o2f"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound Test/sfx_hub_ui_click_var3.mp3" id="17_v78te"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="18_bp1yi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_unxvv"]
 animations = [{
@@ -189,6 +190,13 @@ unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_46f6v")
 volume_db = -18.0
 
+[node name="Control" parent="." instance=ExtResource("18_bp1yi")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
 [connection signal="mouse_entered" from="Laboratory Building/Area2D" to="Laboratory Building" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Laboratory Building/Area2D" to="Laboratory Building" method="_on_area_2d_mouse_exited"]
 [connection signal="deactivate_house" from="JobNotes" to="Laboratory Building" method="_on_job_notes_deactivate_house"]
@@ -201,3 +209,5 @@ volume_db = -18.0
 [connection signal="mouse_exited" from="JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D" to="JobNotes" method="_on_area_2d_InJobMenuJobNote1_mouse_exited"]
 [connection signal="mouse_entered" from="JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="JobNotes" method="_on_paper_quit_mouse_entered"]
 [connection signal="mouse_exited" from="JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="JobNotes" method="_on_paper_quit_mouse_exited"]
+[connection signal="HelpClosed" from="Control" to="Laboratory Building" method="_on_control_help_closed"]
+[connection signal="HelpOpened" from="Control" to="Laboratory Building" method="_on_control_help_opened"]
