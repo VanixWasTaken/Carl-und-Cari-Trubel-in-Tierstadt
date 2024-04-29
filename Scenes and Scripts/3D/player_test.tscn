@@ -73,3 +73,5 @@ collision_mask = 32768
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.331127, 48.2287, -0.0609252)
 target_position = Vector3(-1.415, 0, 0)
 collision_mask = 32768
+[node name="AudioListener3D" type="AudioListener3D" parent="."]
+current = true
