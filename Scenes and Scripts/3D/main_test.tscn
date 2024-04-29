@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=42 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
@@ -123,6 +123,9 @@ animations = [{
 
 [sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_75e5b"]
 polyphony = 3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dbdf1"]
+size = Vector3(7.86162, 2.19092, 3.75842)
 
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -250,3 +253,11 @@ sprite_frames = SubResource("SpriteFrames_62bun")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPolyphonic_75e5b")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.034, 0.174387, -3.89445)
+shape = SubResource("BoxShape3D_dbdf1")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
