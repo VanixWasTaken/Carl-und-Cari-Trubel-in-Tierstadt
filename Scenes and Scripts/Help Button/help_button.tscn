@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7d1nwvtnotji"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Help Button/help_button.gd" id="1_autkf"]
+[ext_resource type="Texture2D" uid="uid://btmhuvj7taj46" path="res://Assets/Test/button_help.png.PNG" id="2_lcldv"]
+[ext_resource type="Texture2D" uid="uid://cwlcurl4dsslf" path="res://Assets/Test/93eeyq563wo11.png" id="3_jx0ya"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_autkf")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1746.0
+offset_top = 13.0
+offset_right = 2550.0
+offset_bottom = 513.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("2_lcldv")
+texture_pressed = ExtResource("2_lcldv")
+texture_hover = ExtResource("3_jx0ya")
+
+[connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
