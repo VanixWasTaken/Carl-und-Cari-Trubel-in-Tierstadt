@@ -49,6 +49,11 @@ func _process(delta):
 	elif mouse_inside_big_note and Input.is_action_just_pressed("left_click"):
 		$JobNoteMenu/JobNote1.visible = false
 		%Click.play()
+	
+	if $JobNoteMenu.visible:
+		%Control.visible = false
+	elif !$JobNoteMenu.visible:
+		%Control.visible = true
 
 # function to close the entire menu and reactivate the house
 func close_menu():
@@ -93,3 +98,5 @@ func _paper_hover():
 	stream.add_stream(2, load("res://Assets/Sound Test/sfx_hub_ui_paper_var3.mp3"))
 	%Hover.stream = stream
 	%Hover.play()
+	
+	
