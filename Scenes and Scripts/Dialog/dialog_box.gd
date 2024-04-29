@@ -7,6 +7,7 @@ extends Control
 var dialogs = 1
 var dialog_side = ["left", "right"]
 var finished = false
+var same_speaker = false
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
@@ -21,9 +22,10 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 6:
+	if dialogs == 8:
 		queue_free()
 ##########################################################################################
+
 
 
 func add_left_dialog_box():
@@ -33,22 +35,28 @@ func add_left_dialog_box():
 ##################################  WRITE DIALOG HERE  ###################################
 	
 	if dialogs == 1:
-		$SpeechBubbleLeft/RichTextLabel.text = "Kennst du Kasper Freh?"
-		$SpeechBubbleLeft/TextureRect.texture = PRESET1
-		dialogs += 1
-		
-	if dialogs == 3:
-		$SpeechBubbleLeft/RichTextLabel.text = "Wohl eher ... SmallSchlongJohnsen"
-		$SpeechBubbleLeft/TextureRect.texture = PRESET1
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		short_node_text.text = "Kennst du Kasper Freh?"
+		short_node_rect.texture = PRESET1
 		dialogs += 1
 	
-	if dialogs == 5:
+	elif dialogs == 3:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		short_node_text.text = "Wohl eher ... SmallSchlongJohnsen"
+		short_node_rect.texture = PRESET1
 		dialogs += 1
 	
-	
-	
-	
-	
+	elif dialogs == 6:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		short_node_text.text = "ja genau der."
+		short_node_rect.texture = PRESET1
+		dialogs += 1
 	
 	
 	
@@ -59,7 +67,7 @@ func add_left_dialog_box():
 	
 	
 ##########################################################################################
-	
+
 
 func add_right_dialog_box():
 	var node = r_bubble_node.instantiate()
@@ -68,26 +76,33 @@ func add_right_dialog_box():
 ##################################  WRITE DIALOG HERE  ###################################
 	
 	if dialogs == 2:
-		$SpeechBubbleRight/RichTextLabel.text = "meinst du LongSchlongJohnsen?"
-		$SpeechBubbleRight/TextureRect.texture = PRESET2
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		short_node_text.text = "meinst du LongSchlongJohnsen?"
+		short_node_rect.texture = PRESET2
 		dialogs += 1
 	
-	if dialogs == 4:
-		$SpeechBubbleRight/RichTextLabel.text = "HAHAHAHAHA LOL WAR DAS WITZIG"
-		$SpeechBubbleRight/TextureRect.texture = PRESET2
+	elif dialogs == 4:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		short_node_text.text = "HAHAHAHAHA LOL WAR DAS WITZIG"
+		short_node_rect.texture = PRESET2
 		dialogs += 1
+		same_speaker = true
 	
+	elif dialogs == 5:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		short_node_text.text = "oh man ich kann nicht mehr"
+		short_node_rect.texture = PRESET2
+		dialogs += 1
+		same_speaker = false
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	elif dialogs == 7:
+		dialogs += 1
 	
 	
 	
@@ -98,7 +113,7 @@ func add_right_dialog_box():
 	
 	
 ##########################################################################################
-	
+
 
 
 
@@ -109,12 +124,14 @@ func add_right_dialog_box():
 
 
 func _on_skip_button_pressed():
+	var short_node = get_child(1)
 	$SkipButton.visible = false
-	if $"."/SpeechBubbleLeft != null:
-			$"."/SpeechBubbleLeft.queue_free()
-	if $"."/SpeechBubbleRight != null:
-			$"."/SpeechBubbleRight.queue_free()
-	if dialog_side == "left" and !finished:
+	short_node.queue_free()
+	if dialog_side == "left" and !finished and same_speaker:
+		add_left_dialog_box()
+	elif dialog_side == "left" and !finished:
+		add_right_dialog_box()
+	elif dialog_side == "right" and !finished and same_speaker:
 		add_right_dialog_box()
 	elif dialog_side == "right" and !finished:
 		add_left_dialog_box()
@@ -125,3 +142,5 @@ func _on_skip_button_pressed():
 
 func _on_skip_button_timer_timeout():
 	$SkipButton.visible = true
+
+
