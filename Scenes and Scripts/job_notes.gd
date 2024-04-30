@@ -51,9 +51,9 @@ func _process(delta):
 		%Click.play()
 	
 	if $JobNoteMenu.visible:
-		%Control.visible = false
+		%HelpButton.visible = false
 	elif !$JobNoteMenu.visible:
-		%Control.visible = true
+		%HelpButton.visible = true
 
 # function to close the entire menu and reactivate the house
 func close_menu():

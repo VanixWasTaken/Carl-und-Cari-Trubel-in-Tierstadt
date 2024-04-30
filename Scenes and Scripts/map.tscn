@@ -36,18 +36,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab4lo"]
-size = Vector2(338.273, 401.403)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_h683o"]
-radius = 56.0803
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8raen"]
-size = Vector2(101, 120)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_myy3n"]
-shader = ExtResource("14_jp8ps")
-
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8wyy8"]
 vertices = PackedVector2Array(469, 933, 11, 937, 164, 933, 464, 930, 1187, 502, 1193, 547, 1189, 538, 1177, 510, 1188, 577, 531, 548, 536, 804, 532, 799, 531, 550, 1896, 544, 1893, 556, 1199, 558, 1180, 603, 1158, 607, 1132, 638, 1119, 619, 1111, 637, 1430, 1040, 1745, 1043, 1747, 1053, 875, 1049, 878, 1036, 1133, 456, 1136, 473, 1638, 276, 1906, 276, 1905, 283, 1641, 277, 1632, 369, 1638, 372, 1141, 372, 1131, 368, 1121, 471, 1068, 489, 1059, 523, 1041, 520, 1050, 580, 1064, 570, 989, -5, 997, -6, 992, 300, 984, 298, 568, 298, 304, 316, 286, 304, 1084, 604, 1115, 807, 1124, 814, 880, 807, 287, 545, 298, 541, 574, 5, 578, 5, 575, 296, 181, 644, 3, 645, 3, 643, 286, 644, 1432, 883, 1909, 881, 1909, 882, 1440, 894, 1436, 1034, 474, 812, 474, 1062, 469, 1062, 461, 812, 873, 812, 176, 932, 187, 646, 294, 647)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 6, 5), PackedInt32Array(9, 10, 11, 12), PackedInt32Array(5, 13, 14, 15), PackedInt32Array(8, 5, 15), PackedInt32Array(8, 15, 16), PackedInt32Array(17, 8, 16, 18), PackedInt32Array(19, 17, 18, 20), PackedInt32Array(21, 22, 23, 24, 25), PackedInt32Array(26, 4, 7, 27), PackedInt32Array(28, 29, 30, 31), PackedInt32Array(32, 28, 31, 33), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 35, 34, 26), PackedInt32Array(36, 26, 27), PackedInt32Array(37, 36, 27, 38, 39), PackedInt32Array(40, 39, 38, 41), PackedInt32Array(42, 43, 44, 45), PackedInt32Array(46, 45, 44, 47, 48), PackedInt32Array(40, 41, 49), PackedInt32Array(20, 40, 49), PackedInt32Array(20, 49, 19), PackedInt32Array(50, 20, 18, 51), PackedInt32Array(50, 51, 52), PackedInt32Array(10, 50, 52), PackedInt32Array(9, 12, 53, 54), PackedInt32Array(55, 56, 57, 46), PackedInt32Array(58, 59, 60), PackedInt32Array(58, 60, 61), PackedInt32Array(62, 63, 64, 65), PackedInt32Array(21, 62, 65, 66), PackedInt32Array(67, 68, 69, 0), PackedInt32Array(47, 54, 53, 48), PackedInt32Array(70, 11, 10, 67), PackedInt32Array(21, 66, 22), PackedInt32Array(25, 24, 71, 52), PackedInt32Array(10, 52, 71, 67), PackedInt32Array(70, 67, 0, 3), PackedInt32Array(72, 3, 2), PackedInt32Array(72, 2, 58, 73), PackedInt32Array(73, 58, 61, 74), PackedInt32Array(53, 74, 61), PackedInt32Array(53, 61, 48), PackedInt32Array(45, 46, 57)])
@@ -62,6 +50,18 @@ stream_1/stream = ExtResource("16_18o2f")
 stream_1/weight = 1.0
 stream_2/stream = ExtResource("17_v78te")
 stream_2/weight = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab4lo"]
+size = Vector2(338.273, 401.403)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h683o"]
+radius = 56.0803
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8raen"]
+size = Vector2(101, 120)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_myy3n"]
+shader = ExtResource("14_jp8ps")
 
 [node name="Map" type="Node2D"]
 
@@ -96,86 +96,9 @@ polygon = PackedVector2Array(-581.132, -341.132, -451.321, -460.377, -10.566, -4
 [node name="Player" parent="." instance=ExtResource("14_0uuvf")]
 position = Vector2(287, 535)
 
-[node name="JobNotes" type="Node2D" parent="."]
-position = Vector2(-73, -50)
-script = ExtResource("9_vqn8c")
-
-[node name="Sprite2D" type="Sprite2D" parent="JobNotes"]
-position = Vector2(140, 139)
-scale = Vector2(1.29, 1.31477)
-texture = ExtResource("11_8qsr6")
-metadata/_edit_group_ = true
-
-[node name="Area2D" type="Area2D" parent="JobNotes"]
-position = Vector2(132, 126)
-scale = Vector2(0.331094, 0.331094)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="JobNotes/Area2D"]
-position = Vector2(21.1421, 28.8408)
-shape = SubResource("RectangleShape2D_ab4lo")
-
-[node name="JobNoteMenu" type="Node2D" parent="JobNotes"]
-visible = false
-position = Vector2(-36, -15)
-
-[node name="Sprite2D" type="Sprite2D" parent="JobNotes/JobNoteMenu"]
-position = Vector2(1068, 610)
-texture = ExtResource("10_dyp1j")
-
-[node name="ExitButton" type="Node2D" parent="JobNotes/JobNoteMenu"]
-position = Vector2(266, -99)
-script = ExtResource("10_0oi3s")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="JobNotes/JobNoteMenu/ExitButton"]
-position = Vector2(1632, 296)
-texture = ExtResource("11_8vqrx")
-
-[node name="Area2D" type="Area2D" parent="JobNotes/JobNoteMenu/ExitButton"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="JobNotes/JobNoteMenu/ExitButton/Area2D"]
-position = Vector2(1626, 299)
-shape = SubResource("CircleShape2D_h683o")
-
-[node name="InJobMenuJobNote1" type="Node2D" parent="JobNotes/JobNoteMenu"]
-position = Vector2(-113, -118)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="JobNotes/JobNoteMenu/InJobMenuJobNote1"]
-position = Vector2(404, 377)
-scale = Vector2(1.37, 1.37)
-texture = ExtResource("11_8qsr6")
-
-[node name="Area2D" type="Area2D" parent="JobNotes/JobNoteMenu/InJobMenuJobNote1"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D"]
-position = Vector2(404.5, 377)
-shape = SubResource("RectangleShape2D_8raen")
-
-[node name="JobNote1" type="Node2D" parent="JobNotes/JobNoteMenu"]
-visible = false
-
-[node name="WhiteScreen" type="Sprite2D" parent="JobNotes/JobNoteMenu/JobNote1"]
-material = SubResource("ShaderMaterial_myy3n")
-position = Vector2(925, 561.5)
-scale = Vector2(7.6125, 7.29445)
-texture = ExtResource("15_jo7ff")
-
-[node name="Sprite2D" type="Sprite2D" parent="JobNotes/JobNoteMenu/JobNote1"]
-position = Vector2(1054, 606)
-scale = Vector2(1.01, 1.01)
-texture = ExtResource("13_2x76a")
-
-[node name="QuitButton" type="Sprite2D" parent="JobNotes/JobNoteMenu/JobNote1/Sprite2D"]
-position = Vector2(238.122, -407.507)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_8vqrx")
-
-[node name="PaperQuit" type="Area2D" parent="JobNotes/JobNoteMenu/JobNote1/Sprite2D"]
-
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit"]
-position = Vector2(235.667, -406.28)
-polygon = PackedVector2Array(-47.8698, 29.4583, -51.5521, -57.6892, -81.0104, -103.104, -33.1406, -87.1476, 15.9565, -49.0972, 50.3246, -7.36458, 81.0104, 47.8698, 94.5121, 105.559, 96.967, 157.111, 67.5087, 100.649, 22.0938, 56.4618)
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(0, 6)
@@ -190,7 +113,90 @@ unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_46f6v")
 volume_db = -18.0
 
-[node name="Control" parent="." instance=ExtResource("18_bp1yi")]
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="JobNotes" type="Node2D" parent="HUD"]
+position = Vector2(-73, -50)
+script = ExtResource("9_vqn8c")
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes"]
+position = Vector2(140, 139)
+scale = Vector2(1.29, 1.31477)
+texture = ExtResource("11_8qsr6")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="HUD/JobNotes"]
+position = Vector2(132, 126)
+scale = Vector2(0.331094, 0.331094)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/Area2D"]
+position = Vector2(21.1421, 28.8408)
+shape = SubResource("RectangleShape2D_ab4lo")
+
+[node name="JobNoteMenu" type="Node2D" parent="HUD/JobNotes"]
+visible = false
+position = Vector2(-36, -15)
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu"]
+position = Vector2(1068, 610)
+texture = ExtResource("10_dyp1j")
+
+[node name="ExitButton" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
+position = Vector2(266, -99)
+script = ExtResource("10_0oi3s")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/ExitButton"]
+position = Vector2(1632, 296)
+texture = ExtResource("11_8vqrx")
+
+[node name="Area2D" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/ExitButton"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/JobNoteMenu/ExitButton/Area2D"]
+position = Vector2(1626, 299)
+shape = SubResource("CircleShape2D_h683o")
+
+[node name="InJobMenuJobNote1" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
+position = Vector2(-113, -118)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1"]
+position = Vector2(404, 377)
+scale = Vector2(1.37, 1.37)
+texture = ExtResource("11_8qsr6")
+
+[node name="Area2D" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D"]
+position = Vector2(404.5, 377)
+shape = SubResource("RectangleShape2D_8raen")
+
+[node name="JobNote1" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
+visible = false
+
+[node name="WhiteScreen" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1"]
+material = SubResource("ShaderMaterial_myy3n")
+position = Vector2(925, 561.5)
+scale = Vector2(7.6125, 7.29445)
+texture = ExtResource("15_jo7ff")
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1"]
+position = Vector2(1054, 606)
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("13_2x76a")
+
+[node name="QuitButton" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D"]
+position = Vector2(238.122, -407.507)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_8vqrx")
+
+[node name="PaperQuit" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit"]
+position = Vector2(235.667, -406.28)
+polygon = PackedVector2Array(-47.8698, 29.4583, -51.5521, -57.6892, -81.0104, -103.104, -33.1406, -87.1476, 15.9565, -49.0972, 50.3246, -7.36458, 81.0104, 47.8698, 94.5121, 105.559, 96.967, 157.111, 67.5087, 100.649, 22.0938, 56.4618)
+
+[node name="HelpButton" parent="HUD" instance=ExtResource("18_bp1yi")]
 unique_name_in_owner = true
 anchors_preset = 0
 anchor_right = 0.0
@@ -200,15 +206,15 @@ grow_vertical = 1
 
 [connection signal="mouse_entered" from="Laboratory Building/Area2D" to="Laboratory Building" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Laboratory Building/Area2D" to="Laboratory Building" method="_on_area_2d_mouse_exited"]
-[connection signal="deactivate_house" from="JobNotes" to="Laboratory Building" method="_on_job_notes_deactivate_house"]
-[connection signal="reactivate_house" from="JobNotes" to="Laboratory Building" method="_on_job_notes_reactivate_house"]
-[connection signal="mouse_entered" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="JobNotes/Area2D" to="JobNotes" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="JobNotes/JobNoteMenu/ExitButton/Area2D" to="JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="JobNotes/JobNoteMenu/ExitButton/Area2D" to="JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D" to="JobNotes" method="_on_area_2d_InJobMenuJobNote1_mouse_entered"]
-[connection signal="mouse_exited" from="JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D" to="JobNotes" method="_on_area_2d_InJobMenuJobNote1_mouse_exited"]
-[connection signal="mouse_entered" from="JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="JobNotes" method="_on_paper_quit_mouse_entered"]
-[connection signal="mouse_exited" from="JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="JobNotes" method="_on_paper_quit_mouse_exited"]
-[connection signal="HelpClosed" from="Control" to="Laboratory Building" method="_on_control_help_closed"]
-[connection signal="HelpOpened" from="Control" to="Laboratory Building" method="_on_control_help_opened"]
+[connection signal="deactivate_house" from="HUD/JobNotes" to="Laboratory Building" method="_on_job_notes_deactivate_house"]
+[connection signal="reactivate_house" from="HUD/JobNotes" to="Laboratory Building" method="_on_job_notes_reactivate_house"]
+[connection signal="mouse_entered" from="HUD/JobNotes/Area2D" to="HUD/JobNotes" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/JobNotes/Area2D" to="HUD/JobNotes" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="HUD/JobNotes/JobNoteMenu/ExitButton/Area2D" to="HUD/JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/ExitButton/Area2D" to="HUD/JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D" to="HUD/JobNotes" method="_on_area_2d_InJobMenuJobNote1_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D" to="HUD/JobNotes" method="_on_area_2d_InJobMenuJobNote1_mouse_exited"]
+[connection signal="mouse_entered" from="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="HUD/JobNotes" method="_on_paper_quit_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="HUD/JobNotes" method="_on_paper_quit_mouse_exited"]
+[connection signal="HelpClosed" from="HUD/HelpButton" to="Laboratory Building" method="_on_control_help_closed"]
+[connection signal="HelpOpened" from="HUD/HelpButton" to="Laboratory Building" method="_on_control_help_opened"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Help Button/help_button.gd" id="1_autkf"]
 [ext_resource type="Texture2D" uid="uid://btmhuvj7taj46" path="res://Assets/Test/button_help.png.PNG" id="2_lcldv"]
 
-[node name="Control" type="Control"]
+[node name="HelpButton" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
