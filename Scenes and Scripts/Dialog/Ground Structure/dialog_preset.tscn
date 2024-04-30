@@ -15,6 +15,7 @@ grow_vertical = 2
 script = ExtResource("1_m857t")
 
 [node name="SkipButton" type="Button" parent="DialogBox"]
+visible = false
 clip_contents = true
 layout_mode = 1
 anchors_preset = 15

@@ -1,6 +1,5 @@
 extends Node3D
 
-@onready var dialog = preload("res://Scenes and Scripts/Dialog/dialog.tscn")
 
 func _ready():
 	var playback: AudioStreamPlaybackPolyphonic
@@ -16,10 +15,6 @@ func _ready():
 func _process(delta):
 	if $Player.position.x <= 19.5 and $Player.position.x >= -19.5:
 		$Camera3D.position.x = $Player.position.x
-	if Input.is_action_just_pressed("ui_accept"):
-		var node = dialog.instantiate()
-		$".".add_child(node)
-
 
 func _on_area_3d_body_entered(body):
 	if body.get_name() == "Player":
