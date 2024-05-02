@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://j2eyqt4t2ow8"
+path="res://.godot/imported/vo_npc_cari_tutorial01_var1.mp3-b310e09fed47b1497f6e0839e3e798e3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/Voice Over/Tutorial/NPC Lines/vo_npc_cari_tutorial01_var1.mp3"
+dest_files=["res://.godot/imported/vo_npc_cari_tutorial01_var1.mp3-b310e09fed47b1497f6e0839e3e798e3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

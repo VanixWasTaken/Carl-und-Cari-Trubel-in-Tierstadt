@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://be3iqjlh4laao"
+path="res://.godot/imported/vo_npc_carl_tutorial05_var1.mp3-61bbca945ae7d5d9c28196345c2bb335.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/Voice Over/Tutorial/NPC Lines/vo_npc_carl_tutorial05_var1.mp3"
+dest_files=["res://.godot/imported/vo_npc_carl_tutorial05_var1.mp3-61bbca945ae7d5d9c28196345c2bb335.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

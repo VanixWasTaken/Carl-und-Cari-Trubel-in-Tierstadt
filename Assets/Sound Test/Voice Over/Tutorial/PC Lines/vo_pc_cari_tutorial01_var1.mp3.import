@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://caxrarlknpxji"
+path="res://.godot/imported/vo_pc_cari_tutorial01_var1.mp3-86746be594f42925503eb57eecf062b1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/Voice Over/Tutorial/PC Lines/vo_pc_cari_tutorial01_var1.mp3"
+dest_files=["res://.godot/imported/vo_pc_cari_tutorial01_var1.mp3-86746be594f42925503eb57eecf062b1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
