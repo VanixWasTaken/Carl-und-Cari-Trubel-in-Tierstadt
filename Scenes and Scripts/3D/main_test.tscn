@@ -20,7 +20,6 @@
 [ext_resource type="AudioStream" uid="uid://dbrcs07px8ed3" path="res://Assets/Sound Test/sfx_tutorial_ui_poi_var2.mp3" id="17_wv2rx"]
 [ext_resource type="AudioStream" uid="uid://daefyhpqmvx8c" path="res://Assets/Sound Test/sfx_tutorial_ui_poi_var3.mp3" id="18_6228x"]
 [ext_resource type="Texture2D" uid="uid://cqxpxq8brdi8k" path="res://Assets/Test/Mouse/Mouse 2.png" id="18_ng3in"]
-[ext_resource type="Texture2D" uid="uid://5lxaa8tak8x6" path="res://index.png" id="19_1y00q"]
 [ext_resource type="Texture2D" uid="uid://dplo7xnwbkke" path="res://Assets/Test/Mouse/Mouse 3.png" id="19_fmywx"]
 [ext_resource type="Texture2D" uid="uid://baxrtbt1g5vga" path="res://Assets/Test/Mouse/Mouse 4.png" id="20_q3ps5"]
 [ext_resource type="Texture2D" uid="uid://3mlcqu2grcej" path="res://Assets/Test/Mouse/Mouse 5.png" id="21_opjsw"]
@@ -118,11 +117,14 @@ stream_1/weight = 1.0
 stream_2/stream = ExtResource("18_6228x")
 stream_2/weight = 1.0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dbi6i"]
+load_path = "res://.godot/imported/2f6f906f732c65d43487a453fe842796.jpg-9bb9ceae656518b7d4db030511c4ed61.ctex"
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkhka"]
-albedo_texture = ExtResource("19_1y00q")
+albedo_texture = SubResource("CompressedTexture2D_dbi6i")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vu4x2"]
-albedo_texture = ExtResource("19_1y00q")
+albedo_texture = SubResource("CompressedTexture2D_dbi6i")
 
 [sub_resource type="QuadMesh" id="QuadMesh_82xm3"]
 
