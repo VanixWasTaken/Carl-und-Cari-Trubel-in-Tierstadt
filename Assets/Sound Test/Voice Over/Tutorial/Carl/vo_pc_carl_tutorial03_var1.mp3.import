@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cn86rxohdrmit"
+path="res://.godot/imported/vo_pc_carl_tutorial03_var1.mp3-d22f46c45d876bf9720f01fac3b5a2b0.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_pc_carl_tutorial03_var1.mp3"
+dest_files=["res://.godot/imported/vo_pc_carl_tutorial03_var1.mp3-d22f46c45d876bf9720f01fac3b5a2b0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

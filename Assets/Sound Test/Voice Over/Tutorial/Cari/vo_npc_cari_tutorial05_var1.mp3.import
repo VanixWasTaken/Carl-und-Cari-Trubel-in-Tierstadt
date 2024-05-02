@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ohb06fnlvib7"
+path="res://.godot/imported/vo_npc_cari_tutorial05_var1.mp3-881c5fc48fd33d46dae4d6efc30a9494.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_npc_cari_tutorial05_var1.mp3"
+dest_files=["res://.godot/imported/vo_npc_cari_tutorial05_var1.mp3-881c5fc48fd33d46dae4d6efc30a9494.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
