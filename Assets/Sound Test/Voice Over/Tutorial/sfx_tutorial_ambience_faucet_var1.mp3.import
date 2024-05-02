@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mp0vsqch8x7t"
+path="res://.godot/imported/sfx_tutorial_ambience_faucet_var1.mp3-2504c28c53b7b262722a15356419bd92.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/Voice Over/Tutorial/sfx_tutorial_ambience_faucet_var1.mp3"
+dest_files=["res://.godot/imported/sfx_tutorial_ambience_faucet_var1.mp3-2504c28c53b7b262722a15356419bd92.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

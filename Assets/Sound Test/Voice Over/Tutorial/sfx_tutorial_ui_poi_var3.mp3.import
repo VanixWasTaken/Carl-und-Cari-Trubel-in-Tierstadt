@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://daefyhpqmvx8c"
+path="res://.godot/imported/sfx_tutorial_ui_poi_var3.mp3-4cdb7481485cd03f5518cf221de599a3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/Voice Over/Tutorial/sfx_tutorial_ui_poi_var3.mp3"
+dest_files=["res://.godot/imported/sfx_tutorial_ui_poi_var3.mp3-4cdb7481485cd03f5518cf221de599a3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

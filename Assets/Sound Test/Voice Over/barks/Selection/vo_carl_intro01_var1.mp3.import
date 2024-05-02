@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://o3e48dg8c87"
+path="res://.godot/imported/vo_carl_intro01_var1.mp3-36eb49d234175b572f2c61fe4267545a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/Voice Over/barks/Selection/vo_carl_intro01_var1.mp3"
+dest_files=["res://.godot/imported/vo_carl_intro01_var1.mp3-36eb49d234175b572f2c61fe4267545a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
