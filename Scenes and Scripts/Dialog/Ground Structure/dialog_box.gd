@@ -22,6 +22,7 @@ var PRESET2 = preload("res://Assets/Characters/Chemie Chamäleon/Chameleon Heads
 
 
 func _ready():
+	Global.moving_allowed = false
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -125,7 +126,7 @@ func add_right_dialog_box():
 	#
 	#elif dialogs == 7:
 		#dialogs += 1
-	#
+		#Global.moving_allowed = true
 	#
 	#
 	#

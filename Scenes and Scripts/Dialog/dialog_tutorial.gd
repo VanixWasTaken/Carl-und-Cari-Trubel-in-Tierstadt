@@ -22,6 +22,7 @@ var PRESET2 = preload("res://index.png")
 
 
 func _ready():
+	Global.moving_allowed = false
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
 ##########################################################################################
@@ -60,7 +61,7 @@ func add_left_dialog_box():
 
 	elif dialogs == 4:
 		dialogs += 1
-	
+		Global.moving_allowed = true
 
 	
 ##########################################################################################

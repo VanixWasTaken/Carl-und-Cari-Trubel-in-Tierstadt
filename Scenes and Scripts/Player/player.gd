@@ -55,3 +55,6 @@ func _on_area_2d_area_entered(area):
 func _on_footsteps_finished():
 	if speed > 0:
 		$Footsteps.play()
+
+
+

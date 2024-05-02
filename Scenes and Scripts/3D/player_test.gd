@@ -27,8 +27,8 @@ func move_to_target(delta):
 	#print("Fake Target: " + str(target_position))
 	#print(navigation_agent.distance_to_target())
 	
-	
-	move_and_slide()
+	if Global.moving_allowed:
+		move_and_slide()
 
 
 
