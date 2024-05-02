@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=63 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://cqxpxq8brdi8k" path="res://Assets/Test/Mouse/Mouse 2.png" id="18_ng3in"]
 [ext_resource type="Texture2D" uid="uid://5lxaa8tak8x6" path="res://index.png" id="19_1y00q"]
 [ext_resource type="Texture2D" uid="uid://dplo7xnwbkke" path="res://Assets/Test/Mouse/Mouse 3.png" id="19_fmywx"]
+[ext_resource type="AudioStream" uid="uid://g44803lil2dk" path="res://Assets/Sound Test/fart-with-reverb.mp3" id="20_3kffq"]
 [ext_resource type="Texture2D" uid="uid://baxrtbt1g5vga" path="res://Assets/Test/Mouse/Mouse 4.png" id="20_q3ps5"]
 [ext_resource type="Texture2D" uid="uid://3mlcqu2grcej" path="res://Assets/Test/Mouse/Mouse 5.png" id="21_opjsw"]
 [ext_resource type="Texture2D" uid="uid://csr0m07mkrx8" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_staircase.png.PNG" id="25_4u1ge"]
@@ -30,6 +31,11 @@
 [ext_resource type="Texture2D" uid="uid://c3umkrrncqb84" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_table.png.PNG" id="28_rqlad"]
 [ext_resource type="Texture2D" uid="uid://bix552nvkmisl" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_chair1.png.PNG" id="29_nbrok"]
 [ext_resource type="Texture2D" uid="uid://bh261ixo47skg" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_chair3.png.PNG" id="30_ui0gk"]
+[ext_resource type="PackedScene" uid="uid://d1vovatlehj8g" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/npc_tutorial.tscn" id="31_kwirw"]
+[ext_resource type="Texture2D" uid="uid://bjpwsvopmm1me" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/Cupboard.png" id="31_q7dj8"]
+[ext_resource type="PackedScene" uid="uid://66h31lf2a4gu" path="res://Scenes and Scripts/Tutorial/key.tscn" id="33_0v8a6"]
+[ext_resource type="Texture2D" uid="uid://f0mkog1guw4q" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/door_closed.png" id="33_t0mx6"]
+[ext_resource type="Texture2D" uid="uid://cvhojpgbsqety" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/door_open.png" id="34_3jnpo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a7v7b"]
 
@@ -126,6 +132,9 @@ albedo_texture = ExtResource("19_1y00q")
 
 [sub_resource type="QuadMesh" id="QuadMesh_82xm3"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ccovc"]
+size = Vector3(3.4883, 1, 3.18408)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_62bun"]
 animations = [{
 "frames": [{
@@ -152,15 +161,29 @@ animations = [{
 [sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_75e5b"]
 polyphony = 3
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2sxb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_t0mx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_3jnpo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_dbdf1"]
 size = Vector3(7.86162, 2.19092, 3.75842)
 
-[node name="Main" type="Node3D"]
+[node name="Main" type="Node3D" groups=["Root"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("1_trbh3")
 
 [node name="Player" parent="." instance=ExtResource("1_ihxr4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0600805, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.21879, -0.0600805, 1.91358)
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.215482, 8.28902, 13.1534)
@@ -266,7 +289,7 @@ mesh = SubResource("QuadMesh_iqs2f")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="POI" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2113, 0.236768, 2.05709)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9824, 0.236768, -2.1194)
 axis = 1
 sprite_frames = SubResource("SpriteFrames_s8a0u")
 autoplay = "default"
@@ -298,49 +321,78 @@ linear_accel_max = -22.22
 angle_max = 276.4
 color = Color(1, 0.384698, 0.991142, 1)
 
-[node name="Mouse" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1.53, 0, 0, 0, 1.53, 0, 0, 0, 1.53, 13.2089, 2.346, 1.91759)
+[node name="POI Area" type="Area3D" parent="POI"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="POI/POI Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00488281, -0.0573306, -0.225209)
+shape = SubResource("BoxShape3D_ccovc")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="POI"]
+stream = ExtResource("20_3kffq")
+
+[node name="Mouse" type="AnimatedSprite3D" parent="POI"]
+transform = Transform3D(1.53, 0, 0, 0, 1.53, 0, 0, 0, 1.53, -0.0278244, 1.69179, -0.164841)
 sprite_frames = SubResource("SpriteFrames_62bun")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPolyphonic_75e5b")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Objects" type="Node3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.034, 0.174387, -3.89445)
-shape = SubResource("BoxShape3D_dbdf1")
-
-[node name="Node3D" type="Node3D" parent="."]
-
-[node name="Stairs" type="Sprite3D" parent="Node3D"]
+[node name="Stairs" type="Sprite3D" parent="Objects"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 9.77774, 4.58213, -4.5655)
 texture = ExtResource("25_4u1ge")
 
-[node name="Coat" type="Sprite3D" parent="Node3D"]
+[node name="Coat" type="Sprite3D" parent="Objects"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 27.308, 5.94835, -4.46674)
 texture = ExtResource("26_j0c3k")
 
-[node name="Pictures" type="Sprite3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56412, 5.55327, -3.16781)
+[node name="Pictures" type="Sprite3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56412, 5.55327, -4.58232)
 texture = ExtResource("27_55bcl")
 
-[node name="Table" type="Sprite3D" parent="Node3D"]
+[node name="Table" type="Sprite3D" parent="Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.21969, 2.57695, 0)
 texture = ExtResource("28_rqlad")
 
-[node name="Chair" type="Sprite3D" parent="Node3D"]
+[node name="Chair" type="Sprite3D" parent="Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.55389, 2.93843, 0)
 sorting_offset = 1.0
 texture = ExtResource("29_nbrok")
 
-[node name="Chair 2" type="Sprite3D" parent="Node3D"]
+[node name="Chair 2" type="Sprite3D" parent="Objects"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.09939, 2.44876, -1.04275)
 texture = ExtResource("30_ui0gk")
 
-[node name="Chair 3" type="Sprite3D" parent="Node3D"]
+[node name="Chair 3" type="Sprite3D" parent="Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.94209, 2.23312, -0.774289)
 texture = ExtResource("30_ui0gk")
 
+[node name="Cupboard" type="Sprite3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0431, 1.72736, -4.13573)
+texture = ExtResource("31_q7dj8")
+
+[node name="Door" type="AnimatedSprite3D" parent="Objects"]
+transform = Transform3D(2.135, 0, 0, 0, 2.135, 0, 0, 0, 2.135, 22.754, 4.22125, -4.54811)
+sprite_frames = SubResource("SpriteFrames_i2sxb")
+
+[node name="Area3D" type="Area3D" parent="Objects/Door"]
+transform = Transform3D(0.468384, 0, 0, 0, 0.468384, 0, 0, 0, 0.468384, -0.126759, -1.97717, -11.9358)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Door/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.466, 0.174, 16.92)
+shape = SubResource("BoxShape3D_dbdf1")
+
+[node name="NPC Tutorial" parent="." instance=ExtResource("31_kwirw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4152, 0.093152, 1.88371)
+
+[node name="Key" parent="." instance=ExtResource("33_0v8a6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8121, 3.40223, -4.17132)
+
 [connection signal="finished" from="POI/POI Sound" to="." method="_on_poi_sound_finished"]
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="POI/POI Area" to="." method="_on_poi_area_body_entered"]
+[connection signal="finished" from="POI/AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
+[connection signal="body_entered" from="Objects/Door/Area3D" to="." method="_on_area_3d_body_entered"]
+
+[editable path="NPC Tutorial"]
+[editable path="NPC Tutorial/DialogTutorial"]

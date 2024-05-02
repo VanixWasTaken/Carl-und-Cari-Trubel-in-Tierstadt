@@ -1,6 +1,5 @@
 extends Control
 
-
 @onready var l_bubble_node = preload("res://Scenes and Scripts/Dialog/Ground Structure/speech_bubble_left.tscn")
 @onready var r_bubble_node = preload("res://Scenes and Scripts/Dialog/Ground Structure/speech_bubble_right.tscn")
 
@@ -18,8 +17,6 @@ var Cari = preload("res://Assets/Test/Player/IMG_1932.PNG")
 
 ##########################################################################################
 
-
-
 func _ready():
 	Global.moving_allowed = false
 	pc = Global.character
@@ -30,7 +27,7 @@ func _ready():
 		PRESET2 = Carl
 		PRESET1 = Cari
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_right_dialog_box()
+	add_left_dialog_box()
 ##########################################################################################
 
 
@@ -41,7 +38,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 5:
+	if dialogs == 4:
 		queue_free()
 ##########################################################################################
 
@@ -57,19 +54,18 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 2:
-		var short_node = get_child(2)
+	if dialogs == 1:
+		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
-		short_node_text.text = "Ist ja gut, bin ja gleich so weit, hast du meinen Schlüssel irgendwo gesehen?"
+		short_node_text.text = "Ah, hab ih gefunden. Jetzt bin ich bereit zu gehen."
 		short_node_rect.texture = PRESET1
 		dialogs += 1
 
-	elif dialogs == 4:
+	elif dialogs == 3:
 		dialogs += 1
 		Global.moving_allowed = true
 
-	
 ##########################################################################################
 
 
@@ -84,24 +80,14 @@ func add_right_dialog_box():
 	$".".add_child(node)
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
-	
-	if dialogs == 1:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		short_node_text.text = "Komm schon " + str(pc) + ", es ist Zeit aufzubrechen!"
-		short_node_rect.texture = PRESET2
-		dialogs += 1
-	
-	elif dialogs == 3:
+
+	if dialogs == 2:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
-		short_node_text.text = "Vielleicht liegt er ja dort drüben. [Bewege die Maus auf den roten Kreis und Drücke die linke Maustaste, um dich dorthin zu bewegen]."
+		short_node_text.text = "Perfekt, komm kurz noch zu mir und sprich mit mir."
 		short_node_rect.texture = PRESET2
 		dialogs += 1
-
-
 
 
 ##########################################################################################
