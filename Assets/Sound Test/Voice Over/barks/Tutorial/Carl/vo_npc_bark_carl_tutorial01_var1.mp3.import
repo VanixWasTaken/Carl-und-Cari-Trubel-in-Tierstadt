@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4b8km475dqjg"
+path="res://.godot/imported/vo_npc_bark_carl_tutorial01_var1.mp3-3e91dac260851b7221337b2610ec1c48.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Test/Voice Over/barks/Tutorial/Carl/vo_npc_bark_carl_tutorial01_var1.mp3"
+dest_files=["res://.godot/imported/vo_npc_bark_carl_tutorial01_var1.mp3-3e91dac260851b7221337b2610ec1c48.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
