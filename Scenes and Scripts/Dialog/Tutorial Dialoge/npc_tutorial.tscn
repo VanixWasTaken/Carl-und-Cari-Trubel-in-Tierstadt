@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1vovatlehj8g"]
+
+[ext_resource type="Texture2D" uid="uid://c8ry4iqpetpaf" path="res://Assets/Characters/Cari/cari_fullbody.png.PNG" id="1_gx8sb"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/npc_tutorial.gd" id="1_yadtb"]
+[ext_resource type="Texture2D" uid="uid://dpxicxp01l3mx" path="res://Assets/Characters/Carl/carl_full_body.png" id="2_f1hcj"]
+[ext_resource type="PackedScene" uid="uid://raesadnfh01o" path="res://Scenes and Scripts/Dialog/dialog_tutorial.tscn" id="3_s786n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1pjmw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gx8sb")
+}],
+"loop": true,
+"name": &"Cari",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_f1hcj")
+}],
+"loop": true,
+"name": &"Carl",
+"speed": 5.0
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xvexm"]
+radius = 4.04568
+
+[node name="NPC Tutorial" type="Node3D"]
+script = ExtResource("1_yadtb")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0, 3.48504, 0)
+sprite_frames = SubResource("SpriteFrames_1pjmw")
+animation = &"Carl"
+
+[node name="DialogTutorial" parent="." instance=ExtResource("3_s786n")]
+
+[node name="DialogeArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DialogeArea3D"]
+shape = SubResource("CylinderShape3D_xvexm")
