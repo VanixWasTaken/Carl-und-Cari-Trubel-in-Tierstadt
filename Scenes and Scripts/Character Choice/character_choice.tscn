@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0kmxo1xwctr3"]
+[gd_scene load_steps=13 format=3 uid="uid://d0kmxo1xwctr3"]
 
 [ext_resource type="Texture2D" uid="uid://dbqhqg33mmhlt" path="res://Assets/Test/UI/Charcater Selection/character_selection_background_sketch.png" id="1_3ays3"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Character Choice/character_choice.gd" id="1_8e8kp"]
@@ -8,6 +8,19 @@
 [ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/UI/Text Button Backrounds/menu_button_mid.png" id="6_asiqt"]
 [ext_resource type="Texture2D" uid="uid://c8ry4iqpetpaf" path="res://Assets/Characters/Cari/cari_fullbody.png.PNG" id="6_dva17"]
 [ext_resource type="Texture2D" uid="uid://tjvo1bj0vtoi" path="res://Assets/Characters/Cari/cari_fullbody_highlight.png" id="7_d2qru"]
+[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound Test/sfx_hub_ui_click_var1.mp3" id="9_dgysj"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound Test/sfx_hub_ui_click_var2.mp3" id="10_k8t00"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound Test/sfx_hub_ui_click_var3.mp3" id="11_kpxxl"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bloo3"]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("9_dgysj")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("10_k8t00")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("11_kpxxl")
+stream_2/weight = 1.0
 
 [node name="Character Choice" type="Node2D"]
 script = ExtResource("1_8e8kp")
@@ -88,6 +101,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="UI" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_bloo3")
+volume_db = -18.0
+
+[node name="VO" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_bloo3")
+volume_db = -18.0
 
 [connection signal="button_down" from="Carl Button" to="." method="_on_carl_button_button_down"]
 [connection signal="button_up" from="Carl Button" to="." method="_on_carl_button_button_up"]
