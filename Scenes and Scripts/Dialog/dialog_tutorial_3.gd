@@ -27,7 +27,7 @@ func _ready():
 		PRESET2 = Carl
 		PRESET1 = Cari
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_left_dialog_box()
+	add_right_dialog_box()
 ##########################################################################################
 
 
@@ -56,13 +56,12 @@ func add_left_dialog_box():
 ##################################  WRITE DIALOG HERE  ###################################
 	
 	if dialogs == 3:
-		var short_node = get_child(1)
+		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		short_node_text.text = "Alles klar. Dann lass uns ein Abenteuer erleben!"
 		short_node_rect.texture = PRESET1
 		dialogs += 1
-		same_speaker = true
 
 
 ##########################################################################################
@@ -93,11 +92,10 @@ func add_right_dialog_box():
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
-		short_node_text.text = "Falls du Hilfe brauchst, kannst du mich immer fragen. Ich bin immer unten links auf dem Bildschrim zu finden."
+		short_node_text.text = "Falls du Hilfe brauchst, kannst du mich immer fragen. Ich bin immer unten links auf dem Bildschirm zu finden."
 		short_node_rect.texture = PRESET1
 		dialogs += 1
-		same_speaker = true
-	
+		same_speaker = false
 	
 	elif dialogs == 4:
 		dialogs += 1

@@ -386,6 +386,9 @@ shape = SubResource("BoxShape3D_dbdf1")
 [node name="NPC Tutorial" parent="." instance=ExtResource("31_kwirw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4152, 0.093152, 1.88371)
 
+[node name="DialogeArea3D" parent="NPC Tutorial" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.21636, 0)
+
 [node name="Key" parent="." instance=ExtResource("33_0v8a6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8121, 3.40223, -4.17132)
 
@@ -393,6 +396,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8121, 3.40223, -4.17132)
 [connection signal="body_entered" from="POI/POI Area" to="." method="_on_poi_area_body_entered"]
 [connection signal="finished" from="POI/AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
 [connection signal="body_entered" from="Objects/Door/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="NPC Tutorial/DialogeArea3D" to="." method="_on_dialog_area_3d_body_entered"]
+[connection signal="body_exited" from="NPC Tutorial/DialogeArea3D" to="." method="_on_dialog_area_3d_body_exited"]
 
 [editable path="NPC Tutorial"]
 [editable path="NPC Tutorial/DialogTutorial"]

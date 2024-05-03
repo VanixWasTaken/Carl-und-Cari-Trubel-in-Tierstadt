@@ -42,3 +42,15 @@ func _on_audio_stream_player_3d_finished():
 	$POI.queue_free()
 	var dialogue_instance = second_dialogue.instantiate()
 	$"NPC Tutorial".add_child(dialogue_instance)
+	$"NPC Tutorial/DialogeArea3D".position.y = 0.174
+
+
+func _on_dialog_area_3d_body_entered(body):
+	if body.get_name() == "Player":
+		var dialogue_instance = third_dialogue.instantiate()
+		$"NPC Tutorial".add_child(dialogue_instance)
+
+
+func _on_dialog_area_3d_body_exited(body):
+	if body.get_name() == "Player":
+		$"NPC Tutorial/DialogeArea3D".queue_free()
