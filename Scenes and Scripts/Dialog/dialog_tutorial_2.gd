@@ -12,8 +12,8 @@ var PRESET1
 var PRESET2
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
-var Carl = preload("res://Assets/Test/Player/icon_carl1.PNG")
-var Cari = preload("res://Assets/Test/Player/IMG_1932.PNG")
+var Carl = preload("res://Assets/Test/carl_dialog.png")
+var Cari = preload("res://Assets/Test/cari_dialog.png")
 
 ##########################################################################################
 
@@ -21,9 +21,11 @@ func _ready():
 	Global.moving_allowed = false
 	pc = Global.character
 	if Global.character == "Carl":
+		print(Global.character)
 		PRESET1 = Carl
 		PRESET2 = Cari
 	elif Global.character == "Cari":
+		print(Global.character)
 		PRESET2 = Carl
 		PRESET1 = Cari
 ###############################  PUT THE STARTING SIDE HERE  #############################
@@ -61,6 +63,12 @@ func add_left_dialog_box():
 		short_node_text.text = "Ah, hab ih gefunden. Jetzt bin ich bereit zu gehen."
 		short_node_rect.texture = PRESET1
 		dialogs += 1
+		if Global.character == "Carl":
+			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_pc_carl_tutorial02_var1.mp3")
+			$"../Voice Over".play()
+		elif Global.character == "Cari":
+			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_pc_cari_tutorial02_var1.mp3")
+			$"../Voice Over".play()
 
 	elif dialogs == 3:
 		dialogs += 1
@@ -88,6 +96,12 @@ func add_right_dialog_box():
 		short_node_text.text = "Perfekt, komm kurz noch zu mir und sprich mit mir."
 		short_node_rect.texture = PRESET2
 		dialogs += 1
+		if Global.character == "Carl":
+			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_npc_cari_tutorial03_var1.mp3")
+			$"../Voice Over".play()
+		elif Global.character == "Cari":
+			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_npc_carl_tutorial03_var1.mp3")
+			$"../Voice Over".play()
 
 
 ##########################################################################################
@@ -115,7 +129,6 @@ func _on_skip_button_pressed():
 		add_left_dialog_box()
 	await get_tree().create_timer(1).timeout
 	$SkipButton.visible = true
-
 
 
 func _on_skip_button_timer_timeout():

@@ -12,8 +12,8 @@ var PRESET1
 var PRESET2
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
-var Carl = preload("res://Assets/Test/Player/icon_carl1.PNG")
-var Cari = preload("res://Assets/Test/Player/IMG_1932.PNG")
+var Carl = preload("res://Assets/Test/carl_dialog.png")
+var Cari = preload("res://Assets/Test/cari_dialog.png")
 
 ##########################################################################################
 
@@ -62,6 +62,12 @@ func add_left_dialog_box():
 		short_node_text.text = "Alles klar. Dann lass uns ein Abenteuer erleben!"
 		short_node_rect.texture = PRESET1
 		dialogs += 1
+		if Global.character == "Carl":
+			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_pc_carl_tutorial03_var1.mp3")
+			$"../Voice Over".play()
+		elif Global.character == "Cari":
+			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_pc_cari_tutorial03_var1.mp3")
+			$"../Voice Over".play()
 
 
 ##########################################################################################
@@ -84,18 +90,30 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		short_node_text.text = "Bevor wir gehen, gebe ich dir noch einen Tipp."
-		short_node_rect.texture = PRESET1
+		short_node_rect.texture = PRESET2
 		dialogs += 1
 		same_speaker = true
+		if Global.character == "Carl":
+			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_npc_cari_tutorial04_var1.mp3")
+			$"../Voice Over".play()
+		elif Global.character == "Cari":
+			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_npc_carl_tutorial04_var1.mp3")
+			$"../Voice Over".play()
 
 	elif dialogs == 2:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		short_node_text.text = "Falls du Hilfe brauchst, kannst du mich immer fragen. Ich bin immer unten links auf dem Bildschirm zu finden."
-		short_node_rect.texture = PRESET1
+		short_node_rect.texture = PRESET2
 		dialogs += 1
 		same_speaker = false
+		if Global.character == "Carl":
+			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_npc_cari_tutorial05_var1.mp3")
+			$"../Voice Over".play()
+		elif Global.character == "Cari":
+			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_npc_carl_tutorial05_var1.mp3")
+			$"../Voice Over".play()
 	
 	elif dialogs == 4:
 		dialogs += 1
@@ -125,8 +143,10 @@ func _on_skip_button_pressed():
 		add_right_dialog_box()
 	elif dialog_side == "right" and !finished:
 		add_left_dialog_box()
+
 	await get_tree().create_timer(1).timeout
 	$SkipButton.visible = true
+
 
 
 

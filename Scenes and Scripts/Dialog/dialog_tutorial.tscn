@@ -35,5 +35,7 @@ wait_time = 1.5
 one_shot = true
 autostart = true
 
+[node name="Voice Over" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_pressed"]
 [connection signal="timeout" from="SkipButtonTimer" to="DialogBox" method="_on_skip_button_timer_timeout"]
