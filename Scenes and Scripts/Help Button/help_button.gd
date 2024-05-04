@@ -6,8 +6,8 @@ var menu_open = false
 var mouse_inside = false
 @onready var outline_shader = preload("res://Shader/outline.tres")
 @onready var no_shader = preload("res://Shader/no_shader.tres")
-
-
+var tutorial_help = preload("res://Scenes and Scripts/Dialog/Ground Structure/hilfe_tutorial.tscn")
+var help
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if Global.character == "Carl":
@@ -18,6 +18,8 @@ func _ready():
 		$TextureButton.texture_normal = load("res://Assets/Test/button_help.png.PNG")
 		$TextureButton.texture_pressed = load("res://Assets/Test/button_help.png.PNG")
 		$TextureButton.texture_hover = load("res://Assets/Test/button_help.png.PNG")
+	if get_tree().get_current_scene().get_name() == "Main":
+		help = tutorial_help
 	
 func _process(delta):
 	if menu_open || mouse_inside:
@@ -29,6 +31,8 @@ func _process(delta):
 
 func _on_texture_button_button_up():
 	menu_open = true
+	var instance = tutorial_help.instantiate()
+	add_child(instance)
 	if !helpbuttonopen and Global.character == "Cari":
 		emit_signal("HelpOpened")
 		$TextureButton.texture_normal = load("res://Assets/Test/button_help_gray.png")

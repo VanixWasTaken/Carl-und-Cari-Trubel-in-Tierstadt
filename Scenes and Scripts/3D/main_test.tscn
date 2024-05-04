@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=66 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
@@ -38,7 +38,6 @@
 [ext_resource type="Texture2D" uid="uid://f0mkog1guw4q" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/door_closed.png" id="33_t0mx6"]
 [ext_resource type="Texture2D" uid="uid://cvhojpgbsqety" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/door_open.png" id="34_3jnpo"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="38_vunj5"]
-[ext_resource type="PackedScene" uid="uid://d0cw8i1e7fb86" path="res://Scenes and Scripts/Dialog/Ground Structure/hilfe_tutorial.tscn" id="39_tqw8v"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a7v7b"]
 
@@ -191,6 +190,10 @@ size = Vector3(7.86162, 2.19092, 3.75842)
 [node name="Main" type="Node3D" groups=["Root"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("1_trbh3")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HelpButton" parent="UI" instance=ExtResource("38_vunj5")]
 
 [node name="Player" parent="." instance=ExtResource("1_ihxr4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.21879, -0.0600805, 1.91358)
@@ -402,13 +405,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.21636, 0)
 [node name="Key" parent="." instance=ExtResource("33_0v8a6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8121, 3.40223, -4.17132)
 
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="HelpButton" parent="UI" instance=ExtResource("38_vunj5")]
-
-[node name="DialogTutorial" parent="UI/HelpButton" instance=ExtResource("39_tqw8v")]
-visible = false
-
 [connection signal="finished" from="POI/POI Sound" to="." method="_on_poi_sound_finished"]
 [connection signal="body_entered" from="POI/POI Area" to="." method="_on_poi_area_body_entered"]
 [connection signal="finished" from="POI/AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
@@ -416,6 +412,6 @@ visible = false
 [connection signal="body_entered" from="NPC Tutorial/DialogeArea3D" to="." method="_on_dialog_area_3d_body_entered"]
 [connection signal="body_exited" from="NPC Tutorial/DialogeArea3D" to="." method="_on_dialog_area_3d_body_exited"]
 
+[editable path="UI/HelpButton"]
 [editable path="NPC Tutorial"]
 [editable path="NPC Tutorial/DialogTutorial"]
-[editable path="UI/HelpButton"]

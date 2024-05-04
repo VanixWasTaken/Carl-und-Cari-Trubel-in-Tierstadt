@@ -7,7 +7,7 @@ extends Control
 var dialogs = 1
 var dialog_side = ["left", "right"]
 var finished = false
-var same_speaker = true
+var same_speaker = false
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
@@ -56,41 +56,14 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		if Global.character == "Carl":
-			short_node_text.text = "hilf Cari dabei ihre Schlüssel wieder zu finden."
+			short_node_text.text = "Hilf Carl dabei ihre Schlüssel wieder zu finden."
 			short_node_rect.texture = PRESET2
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "hilf Carl dabei ihre Schlüssel wieder zu finden."
+			short_node_text.text = "Hilf Cari dabei ihre Schlüssel wieder zu finden."
 			short_node_rect.texture = PRESET1
 			dialogs += 1
-		
-		
-		
-	#
-	#elif dialogs == 3:
-		#var short_node = get_child(2)
-		#var short_node_text = short_node.get_child(0)
-		#var short_node_rect = short_node.get_child(1)
-		#short_node_text.text = "Wohl eher ... SmallSchlongJohnsen"
-		#short_node_rect.texture = PRESET1
-		#dialogs += 1
-	#
-	#elif dialogs == 6:
-		#var short_node = get_child(2)
-		#var short_node_text = short_node.get_child(0)
-		#var short_node_rect = short_node.get_child(1)
-		#short_node_text.text = "ja genau der."
-		#short_node_rect.texture = PRESET1
-		#dialogs += 1
-	#
-	#
-	#
-	#
-	
-	
-	
-	
-	
+
 ##########################################################################################
 
 
@@ -105,44 +78,9 @@ func add_right_dialog_box():
 	$".".add_child(node)
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
-	
-	#if dialogs == 2:
-		#var short_node = get_child(2)
-		#var short_node_text = short_node.get_child(0)
-		#var short_node_rect = short_node.get_child(1)
-		#short_node_text.text = "meinst du LongSchlongJohnsen?"
-		#short_node_rect.texture = PRESET2
-		#dialogs += 1
-	#
-	#elif dialogs == 4:
-		#var short_node = get_child(2)
-		#var short_node_text = short_node.get_child(0)
-		#var short_node_rect = short_node.get_child(1)
-		#short_node_text.text = "HAHAHAHAHA LOL WAR DAS WITZIG"
-		#short_node_rect.texture = PRESET2
-		#dialogs += 1
-		#same_speaker = true
-	#
-	#elif dialogs == 5:
-		#var short_node = get_child(2)
-		#var short_node_text = short_node.get_child(0)
-		#var short_node_rect = short_node.get_child(1)
-		#short_node_text.text = "oh man ich kann nicht mehr"
-		#short_node_rect.texture = PRESET2
-		#dialogs += 1
-		#same_speaker = false
-	#
 	if dialogs == 2:
 		dialogs += 1
 		Global.moving_allowed = true
-	#
-	#
-	#
-	#
-	
-	
-	
-	
 ##########################################################################################
 
 

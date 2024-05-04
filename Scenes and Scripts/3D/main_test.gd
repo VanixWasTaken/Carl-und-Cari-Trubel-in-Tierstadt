@@ -13,7 +13,7 @@ func _ready():
 	
 	MusicController._play_music("learning_by_doing", "tutorial")
 	
-	$UI/HelpButton/DialogTutorial.visible = false
+	#$UI/HelpButton/DialogTutorial.visible = false
 
 func _process(delta):
 	if $Player.position.x <= 19.5 and $Player.position.x >= -19.5:
@@ -57,5 +57,3 @@ func _on_dialog_area_3d_body_exited(body):
 	if body.get_name() == "Player":
 		$"NPC Tutorial/DialogeArea3D".queue_free()
 
-func _on_control_help_opened():
-	$UI/HelpButton/DialogTutorial.visible = true
