@@ -50,7 +50,9 @@ func _on_texture_button_button_up():
 
 
 func _on_texture_button_mouse_entered():
-	$TextureButton.material = outline_shader
+	if $TextureButton.disabled == false:
+		$TextureButton.material = outline_shader
+	
 	Global.moving_allowed = false
 	mouse_inside = true
 
