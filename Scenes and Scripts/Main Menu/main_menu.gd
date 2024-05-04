@@ -28,3 +28,6 @@ func _on_button_hovered():
 # Handles the Click sounds
 func _on_button_click():
 	$Click.play()
+
+func _on_clouds_animation_finished():
+	$Clouds.visible = false

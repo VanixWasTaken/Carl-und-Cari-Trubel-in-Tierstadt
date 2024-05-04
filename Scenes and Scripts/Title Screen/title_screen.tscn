@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Title Screen/titel_screen.gd" id="1_dr1xc"]
 [ext_resource type="Texture2D" uid="uid://dvan86jwcaiwk" path="res://Assets/Title Screen/Title Screen/titlescreen_001.png" id="2_6mpyp"]
-[ext_resource type="Texture2D" uid="uid://kbhn1t4hxhfv" path="res://Assets/Test/UI/menu_placeholder-1.png" id="2_prebs"]
 [ext_resource type="Texture2D" uid="uid://c4ef51edb5b86" path="res://Assets/Title Screen/Title Screen/titlescreen_002.png" id="3_dffur"]
 [ext_resource type="Texture2D" uid="uid://gxfj776b47jt" path="res://Assets/Title Screen/Title Screen/titlescreen_003.png" id="4_yc75j"]
 [ext_resource type="Texture2D" uid="uid://2b4hng52s73j" path="res://Assets/Title Screen/Title Screen/titlescreen_004.png" id="5_5x4bu"]
@@ -11,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dwjsgg1ola36e" path="res://Assets/Title Screen/Title Screen/titlescreen_007.png" id="8_t4nob"]
 [ext_resource type="Texture2D" uid="uid://jwo7sgonjjt0" path="res://Assets/Title Screen/Title Screen/titlescreen_008.png" id="9_6tbre"]
 [ext_resource type="Texture2D" uid="uid://dhfd8vkvnth22" path="res://Assets/Title Screen/Title Screen/titlescreen_009.png" id="10_61olo"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="12_nygy2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4jj7q"]
 animations = [{
@@ -51,19 +51,11 @@ animations = [{
 script = ExtResource("1_dr1xc")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 2.0
-offset_top = 3.0
+modulate = Color(0.113725, 0.619608, 0.764706, 1)
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0.113725, 0.619608, 0.764706, 1)
 
-[node name="TierstadtBackground" type="TextureRect" parent="."]
-visible = false
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("2_prebs")
-
-[node name="Background" type="AnimatedSprite2D" parent="."]
+[node name="Clouds" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_4jj7q")
 autoplay = "default"
@@ -76,5 +68,35 @@ offset_left = -262.0
 offset_top = -1755.0
 offset_right = 2035.0
 offset_bottom = -255.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 139.0
+offset_right = 1485.0
+offset_bottom = 409.0
+theme_override_colors/font_outline_color = Color(0.0681613, 0.456021, 0.56641, 1)
+theme_override_constants/outline_size = 40
+theme_override_fonts/font = ExtResource("12_nygy2")
+theme_override_font_sizes/font_size = 200
+text = "Carl & Cari"
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 604.0
+offset_top = 359.0
+offset_right = 1601.0
+offset_bottom = 521.0
+theme_override_colors/font_outline_color = Color(0.0666667, 0.454902, 0.564706, 1)
+theme_override_constants/outline_size = 40
+theme_override_fonts/font = ExtResource("12_nygy2")
+theme_override_font_sizes/font_size = 120
+text = "Trubel in Tierstadt"
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
