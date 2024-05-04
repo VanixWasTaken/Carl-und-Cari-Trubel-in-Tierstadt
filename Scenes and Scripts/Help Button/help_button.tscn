@@ -22,7 +22,7 @@ offset_bottom = 1470.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("2_lcldv")
 texture_pressed = ExtResource("3_dmdbb")
-texture_hover = ExtResource("3_dmdbb")
+texture_hover = ExtResource("2_lcldv")
 
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
