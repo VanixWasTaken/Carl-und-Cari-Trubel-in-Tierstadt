@@ -22,7 +22,7 @@ func _ready():
 		help = tutorial_help
 	
 func _process(delta):
-	if menu_open || mouse_inside:
+	if menu_open || mouse_inside || Global.dialog_playing:
 		Global.moving_allowed = false
 	elif !mouse_inside && !menu_open:
 		Global.moving_allowed = true

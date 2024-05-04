@@ -19,6 +19,7 @@ var Cari = preload("res://Assets/Test/cari_dialog.png")
 
 func _ready():
 	Global.moving_allowed = false
+	Global.dialog_playing= true
 	pc = Global.character
 	if Global.character == "Carl":
 		print(Global.character)
@@ -42,6 +43,7 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 4:
 		queue_free()
+		Global.dialog_playing= false
 ##########################################################################################
 
 

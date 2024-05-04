@@ -274,7 +274,7 @@ autoplay = true
 max_distance = 78.02
 
 [node name="WallLeft" type="StaticBody3D" parent="NavigationRegion3D/Walls" groups=["Side Wall"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.304718, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.895, -0.356, 0)
 collision_layer = 32769
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/WallLeft"]
@@ -282,7 +282,7 @@ transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 
 shape = SubResource("WorldBoundaryShape3D_sgslh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallLeft"]
-transform = Transform3D(0.03919, 0, 0.999232, 0, 1, 0, -0.999232, 0, 0.03919, -28.9293, 8.40001, 0.288007)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.6141, 8.35748, 0.288007)
 material_override = SubResource("StandardMaterial3D_j105o")
 mesh = SubResource("QuadMesh_t24k3")
 skeleton = NodePath("../CollisionShape3D")
