@@ -20,7 +20,6 @@ var PRESET2 = preload("res://Assets/Characters/Chemie Chamäleon/Chameleon Heads
 
 
 
-
 func _ready():
 	Global.moving_allowed = false
 ###############################  PUT THE STARTING SIDE HERE  #############################
@@ -55,29 +54,35 @@ func add_left_dialog_box():
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Kennst du Kasper Freh?"
 		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
 		dialogs += 1
-	#
-	#elif dialogs == 3:
-		#var short_node = get_child(2)
-		#var short_node_text = short_node.get_child(0)
-		#var short_node_rect = short_node.get_child(1)
-		#short_node_text.text = "Wohl eher ... SmallSchlongJohnsen"
-		#short_node_rect.texture = PRESET1
-		#dialogs += 1
-	#
-	#elif dialogs == 6:
-		#var short_node = get_child(2)
-		#var short_node_text = short_node.get_child(0)
-		#var short_node_rect = short_node.get_child(1)
-		#short_node_text.text = "ja genau der."
-		#short_node_rect.texture = PRESET1
-		#dialogs += 1
-	#
-	#
-	#
-	#
+	
+	elif dialogs == 3:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Wohl eher ... SmallSchlongJohnsen"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+	
+	elif dialogs == 6:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "ja genau der."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+	
+	
+	
+	
 	
 	
 	
@@ -98,39 +103,45 @@ func add_right_dialog_box():
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	#if dialogs == 2:
-		#var short_node = get_child(2)
-		#var short_node_text = short_node.get_child(0)
-		#var short_node_rect = short_node.get_child(1)
-		#short_node_text.text = "meinst du LongSchlongJohnsen?"
-		#short_node_rect.texture = PRESET2
-		#dialogs += 1
-	#
-	#elif dialogs == 4:
-		#var short_node = get_child(2)
-		#var short_node_text = short_node.get_child(0)
-		#var short_node_rect = short_node.get_child(1)
-		#short_node_text.text = "HAHAHAHAHA LOL WAR DAS WITZIG"
-		#short_node_rect.texture = PRESET2
-		#dialogs += 1
-		#same_speaker = true
-	#
-	#elif dialogs == 5:
-		#var short_node = get_child(2)
-		#var short_node_text = short_node.get_child(0)
-		#var short_node_rect = short_node.get_child(1)
-		#short_node_text.text = "oh man ich kann nicht mehr"
-		#short_node_rect.texture = PRESET2
-		#dialogs += 1
-		#same_speaker = false
-	#
-	#elif dialogs == 7:
-		#dialogs += 1
-		#Global.moving_allowed = true
-	#
-	#
-	#
-	#
+	if dialogs == 2:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "meinst du LongSchlongJohnsen?"
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+	
+	elif dialogs == 4:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "HAHAHAHAHA LOL WAR DAS WITZIG"
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+		same_speaker = true
+	
+	elif dialogs == 5:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "oh man ich kann nicht mehr"
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+		same_speaker = false
+	
+	elif dialogs == 7:
+		dialogs += 1
+		Global.moving_allowed = true
+	
+	
+	
+	
 	
 	
 	

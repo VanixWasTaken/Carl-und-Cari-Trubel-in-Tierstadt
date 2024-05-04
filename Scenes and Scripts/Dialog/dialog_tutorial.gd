@@ -66,15 +66,19 @@ func add_left_dialog_box():
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Ist ja gut, bin ja gleich so weit, hast du meinen Schlüssel irgendwo gesehen?"
 		short_node_rect.texture = PRESET1
 		dialogs += 1
 		if Global.character == "Carl":
+			short_node_name.text = "Carl"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_pc_carl_tutorial01_var1.mp3")
 			$"../Voice Over".play()
 		elif Global.character == "Cari":
+			short_node_name.text = "Cari"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_pc_cari_tutorial01_var1.mp3")
 			$"../Voice Over".play()
+	
 	elif dialogs == 4:
 		dialogs += 1
 		Global.moving_allowed = true
@@ -99,13 +103,16 @@ func add_right_dialog_box():
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Komm schon " + str(pc) + ", es ist Zeit aufzubrechen!"
 		short_node_rect.texture = PRESET2
 		dialogs += 1
 		if Global.character == "Carl":
+			short_node_name.text = "Cari"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_npc_cari_tutorial01_var1.mp3")
 			$"../Voice Over".play()
 		elif Global.character == "Cari":
+			short_node_name.text = "Carl"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_npc_carl_tutorial01_var1.mp3")
 			$"../Voice Over".play()
 
@@ -113,13 +120,16 @@ func add_right_dialog_box():
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Vielleicht liegt er ja dort drüben. [Bewege die Maus auf den roten Kreis und Drücke die linke Maustaste, um dich dorthin zu bewegen]."
 		short_node_rect.texture = PRESET2
 		dialogs += 1
 		if Global.character == "Carl":
+			short_node_name.text = "Cari"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_npc_cari_tutorial02_var1.mp3")
 			$"../Voice Over".play()
 		elif Global.character == "Cari":
+			short_node_name.text = "Carl"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_npc_carl_tutorial02_var1.mp3")
 			$"../Voice Over".play()
 

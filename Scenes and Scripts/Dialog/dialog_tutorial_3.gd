@@ -61,13 +61,16 @@ func add_left_dialog_box():
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Alles klar. Dann lass uns ein Abenteuer erleben!"
 		short_node_rect.texture = PRESET1
 		dialogs += 1
 		if Global.character == "Carl":
+			short_node_name.text = "Carl"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_pc_carl_tutorial03_var1.mp3")
 			$"../Voice Over".play()
 		elif Global.character == "Cari":
+			short_node_name.text = "Cari"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_pc_cari_tutorial03_var1.mp3")
 			$"../Voice Over".play()
 
@@ -91,14 +94,17 @@ func add_right_dialog_box():
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Bevor wir gehen, gebe ich dir noch einen Tipp."
 		short_node_rect.texture = PRESET2
 		dialogs += 1
 		same_speaker = true
 		if Global.character == "Carl":
+			short_node_name.text = "Cari"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_npc_cari_tutorial04_var1.mp3")
 			$"../Voice Over".play()
 		elif Global.character == "Cari":
+			short_node_name.text = "Carl"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_npc_carl_tutorial04_var1.mp3")
 			$"../Voice Over".play()
 
@@ -106,14 +112,17 @@ func add_right_dialog_box():
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Falls du Hilfe brauchst, kannst du mich immer fragen. Ich bin immer unten links auf dem Bildschirm zu finden."
 		short_node_rect.texture = PRESET2
 		dialogs += 1
 		same_speaker = false
 		if Global.character == "Carl":
+			short_node_name.text = "Cari"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Cari/vo_npc_cari_tutorial05_var1.mp3")
 			$"../Voice Over".play()
 		elif Global.character == "Cari":
+			short_node_name.text = "Carl"
 			$"../Voice Over".stream = load("res://Assets/Sound Test/Voice Over/Tutorial/Carl/vo_npc_carl_tutorial05_var1.mp3")
 			$"../Voice Over".play()
 	
