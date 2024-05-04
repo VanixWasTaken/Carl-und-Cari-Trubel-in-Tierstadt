@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=65 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
@@ -20,10 +20,12 @@
 [ext_resource type="AudioStream" uid="uid://dbrcs07px8ed3" path="res://Assets/Sound Test/SFX/Tutorial/sfx_tutorial_ui_poi_var2.mp3" id="17_wv2rx"]
 [ext_resource type="AudioStream" uid="uid://daefyhpqmvx8c" path="res://Assets/Sound Test/SFX/Tutorial/sfx_tutorial_ui_poi_var3.mp3" id="18_6228x"]
 [ext_resource type="Texture2D" uid="uid://cqxpxq8brdi8k" path="res://Assets/Test/Mouse/Mouse 2.png" id="18_ng3in"]
+[ext_resource type="AudioStream" uid="uid://cl7u1nc357hhq" path="res://Assets/Sound Test/SFX/Tutorial/sfx_tutorial_foley_keyjingle_var1.mp3" id="19_422gf"]
 [ext_resource type="Texture2D" uid="uid://dplo7xnwbkke" path="res://Assets/Test/Mouse/Mouse 3.png" id="19_fmywx"]
-[ext_resource type="AudioStream" uid="uid://g44803lil2dk" path="res://Assets/Sound Test/fart-with-reverb.mp3" id="20_3kffq"]
+[ext_resource type="AudioStream" uid="uid://ryytyr4ae8eh" path="res://Assets/Sound Test/SFX/Tutorial/sfx_tutorial_foley_keyjingle_var2.mp3" id="20_gxt36"]
 [ext_resource type="Texture2D" uid="uid://baxrtbt1g5vga" path="res://Assets/Test/Mouse/Mouse 4.png" id="20_q3ps5"]
 [ext_resource type="Texture2D" uid="uid://3mlcqu2grcej" path="res://Assets/Test/Mouse/Mouse 5.png" id="21_opjsw"]
+[ext_resource type="AudioStream" uid="uid://buqs1583t6vuw" path="res://Assets/Sound Test/SFX/Tutorial/sfx_tutorial_foley_keyjingle_var3.mp3" id="21_tdi0n"]
 [ext_resource type="Texture2D" uid="uid://csr0m07mkrx8" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_staircase.png.PNG" id="25_4u1ge"]
 [ext_resource type="Texture2D" uid="uid://ceo1lqviagjsk" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_jacket.png.PNG" id="26_j0c3k"]
 [ext_resource type="Texture2D" uid="uid://bbukthhg2fphx" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_pictures.png.PNG" id="27_55bcl"]
@@ -131,6 +133,15 @@ stream_2/weight = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ccovc"]
 size = Vector3(3.4883, 1, 3.18408)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_e7jq4"]
+streams_count = 3
+stream_0/stream = ExtResource("19_422gf")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("20_gxt36")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("21_tdi0n")
+stream_2/weight = 1.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_62bun"]
 animations = [{
@@ -325,7 +336,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00488281, -0.0573306, -0.2
 shape = SubResource("BoxShape3D_ccovc")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="POI"]
-stream = ExtResource("20_3kffq")
+stream = SubResource("AudioStreamRandomizer_e7jq4")
 
 [node name="Mouse" type="AnimatedSprite3D" parent="POI"]
 transform = Transform3D(1.53, 0, 0, 0, 1.53, 0, 0, 0, 1.53, -0.0278244, 1.69179, -0.164841)
