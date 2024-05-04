@@ -1,41 +1,46 @@
-[gd_scene load_steps=11 format=3 uid="uid://dw4yj8qddg3gp"]
+[gd_scene load_steps=13 format=3 uid="uid://dw4yj8qddg3gp"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Title Screen/titel_screen.gd" id="1_dr1xc"]
-[ext_resource type="Texture2D" uid="uid://dva1s7lqgkxvk" path="res://Assets/Test/UI/Title Screen/titlescreen_placeholder.png" id="2_ybom7"]
-[ext_resource type="Texture2D" uid="uid://c6kwarbqc26ve" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_1.png" id="3_dlddl"]
-[ext_resource type="Texture2D" uid="uid://5ufynigj2u5c" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_2.png" id="4_b5ngf"]
-[ext_resource type="Texture2D" uid="uid://cp6dwvrmrjb4s" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_3.png" id="5_4r2qp"]
-[ext_resource type="Texture2D" uid="uid://bbm67wfvia6" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_4.png" id="6_n2q5c"]
-[ext_resource type="Texture2D" uid="uid://ckaw87aqeqqql" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_5.png" id="7_n1x53"]
-[ext_resource type="Texture2D" uid="uid://c4ur6h04qm2ct" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_6.png" id="8_0am8n"]
-[ext_resource type="Texture2D" uid="uid://bs0qrpu0y6yce" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_7.png" id="9_mq2eh"]
+[ext_resource type="Texture2D" uid="uid://dvan86jwcaiwk" path="res://Assets/Title Screen/Title Screen/titlescreen_001.png" id="2_6mpyp"]
+[ext_resource type="Texture2D" uid="uid://kbhn1t4hxhfv" path="res://Assets/Test/UI/menu_placeholder-1.png" id="2_prebs"]
+[ext_resource type="Texture2D" uid="uid://c4ef51edb5b86" path="res://Assets/Title Screen/Title Screen/titlescreen_002.png" id="3_dffur"]
+[ext_resource type="Texture2D" uid="uid://gxfj776b47jt" path="res://Assets/Title Screen/Title Screen/titlescreen_003.png" id="4_yc75j"]
+[ext_resource type="Texture2D" uid="uid://2b4hng52s73j" path="res://Assets/Title Screen/Title Screen/titlescreen_004.png" id="5_5x4bu"]
+[ext_resource type="Texture2D" uid="uid://givgnr45d5ga" path="res://Assets/Title Screen/Title Screen/titlescreen_005.png" id="6_bn1ty"]
+[ext_resource type="Texture2D" uid="uid://fulxujmfhays" path="res://Assets/Title Screen/Title Screen/titlescreen_006.png" id="7_p0fkp"]
+[ext_resource type="Texture2D" uid="uid://dwjsgg1ola36e" path="res://Assets/Title Screen/Title Screen/titlescreen_007.png" id="8_t4nob"]
+[ext_resource type="Texture2D" uid="uid://jwo7sgonjjt0" path="res://Assets/Title Screen/Title Screen/titlescreen_008.png" id="9_6tbre"]
+[ext_resource type="Texture2D" uid="uid://dhfd8vkvnth22" path="res://Assets/Title Screen/Title Screen/titlescreen_009.png" id="10_61olo"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_kcucr"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_4jj7q"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ybom7")
+"texture": ExtResource("2_6mpyp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_dlddl")
+"texture": ExtResource("3_dffur")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_b5ngf")
+"texture": ExtResource("4_yc75j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_4r2qp")
+"texture": ExtResource("5_5x4bu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_n2q5c")
+"texture": ExtResource("6_bn1ty")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_n1x53")
+"texture": ExtResource("7_p0fkp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_0am8n")
+"texture": ExtResource("8_t4nob")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_mq2eh")
+"texture": ExtResource("9_6tbre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_61olo")
 }],
 "loop": true,
 "name": &"default",
@@ -45,9 +50,25 @@ animations = [{
 [node name="Title Screen" type="Node2D"]
 script = ExtResource("1_dr1xc")
 
-[node name="Backround" type="AnimatedSprite2D" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.113725, 0.619608, 0.764706, 1)
+
+[node name="TierstadtBackground" type="TextureRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_prebs")
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
-sprite_frames = SubResource("SpriteFrames_kcucr")
+sprite_frames = SubResource("SpriteFrames_4jj7q")
+autoplay = "default"
+frame = 1
+frame_progress = 0.123975
 
 [node name="Button" type="Button" parent="."]
 show_behind_parent = true

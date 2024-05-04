@@ -1,15 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=26 format=3 uid="uid://ducsr1iwag28u"]
 
 [ext_resource type="Texture2D" uid="uid://kbhn1t4hxhfv" path="res://Assets/Test/UI/menu_placeholder-1.png" id="1_0fyoy"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Main Menu/main_menu.gd" id="1_3f1tb"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="2_wt0x7"]
-[ext_resource type="Texture2D" uid="uid://c6kwarbqc26ve" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_1.png" id="3_eixau"]
-[ext_resource type="Texture2D" uid="uid://5ufynigj2u5c" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_2.png" id="4_0v51r"]
-[ext_resource type="Texture2D" uid="uid://cp6dwvrmrjb4s" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_3.png" id="5_mc0ma"]
-[ext_resource type="Texture2D" uid="uid://bbm67wfvia6" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_4.png" id="6_rmhqu"]
-[ext_resource type="Texture2D" uid="uid://ckaw87aqeqqql" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_5.png" id="7_j6yru"]
-[ext_resource type="Texture2D" uid="uid://c4ur6h04qm2ct" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_6.png" id="8_8j70n"]
-[ext_resource type="Texture2D" uid="uid://bs0qrpu0y6yce" path="res://Assets/Test/UI/Main Menu Animation/menu_placeholder_7.png" id="9_t7x3a"]
 [ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/UI/Text Button Backrounds/menu_button_mid.png" id="11_l40h3"]
 [ext_resource type="Texture2D" uid="uid://b78qo42a06loa" path="res://Assets/UI/Text Button Backrounds/menu_button_dark.png" id="12_s4c5n"]
 [ext_resource type="Texture2D" uid="uid://cs0vi7dtksnoo" path="res://Assets/UI/Text Button Backrounds/menu_button_light.png" id="13_e66sn"]
@@ -21,34 +14,64 @@
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound Test/sfx_hub_ui_hover_var1.mp3" id="19_v2mri"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound Test/sfx_hub_ui_hover_var3.mp3" id="21_w12sd"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_woj6c"]
+load_path = "res://.godot/imported/titlescreen_start_001.png-b0f09d921568d4c2298c8d0baa3009c9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r1ewu"]
+load_path = "res://.godot/imported/titlescreen_start_002.png-aff4e4df62578f9994f8d65dcbd34e59.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xt6k0"]
+load_path = "res://.godot/imported/titlescreen_start_003.png-650f92f6dde853d2a7d28d069c29c4dd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2lx0q"]
+load_path = "res://.godot/imported/titlescreen_start_004.png-783062f5b2fe6afa2c051aa33b665dd8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ldy1g"]
+load_path = "res://.godot/imported/titlescreen_start_005.png-5160b6d69072206740ff08d21cd751df.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nbpnq"]
+load_path = "res://.godot/imported/titlescreen_start_006.png-673375cc21d3826763fba3d8fdc9e2bb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mym4s"]
+load_path = "res://.godot/imported/titlescreen_start_007.png-13bdc6abc5c80131edc933022759282d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l32rl"]
+load_path = "res://.godot/imported/titlescreen_start_008.png-80ace796b0541bef2418ec16246eb180.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1l5p0"]
+load_path = "res://.godot/imported/titlescreen_start_009.png-6d56d099b5172576e2eed22cbd55498f.ctex"
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_17etq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_0fyoy")
+"texture": SubResource("CompressedTexture2D_woj6c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_eixau")
+"texture": SubResource("CompressedTexture2D_r1ewu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_0v51r")
+"texture": SubResource("CompressedTexture2D_xt6k0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_mc0ma")
+"texture": SubResource("CompressedTexture2D_2lx0q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_rmhqu")
+"texture": SubResource("CompressedTexture2D_ldy1g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_j6yru")
+"texture": SubResource("CompressedTexture2D_nbpnq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_8j70n")
+"texture": SubResource("CompressedTexture2D_mym4s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_t7x3a")
+"texture": SubResource("CompressedTexture2D_l32rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_1l5p0")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }]
@@ -74,9 +97,17 @@ stream_1/weight = 1.0
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_3f1tb")
 
+[node name="TierstadtBackground" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_0fyoy")
+
 [node name="Backround" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_17etq")
+autoplay = "default"
+frame = 2
+frame_progress = 0.71293
 
 [node name="Label" type="Label" parent="."]
 offset_left = 1121.0
