@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Ground Structure/hilfe_tutorial.gd" id="1_2it6a"]
 [ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/UI/Text Button Backrounds/menu_button_mid.png" id="2_m5n1f"]
 
-[node name="DialogTutorial" type="CanvasLayer"]
+[node name="hilfeTutorial" type="CanvasLayer"]
 
 [node name="DialogBox" type="Control" parent="."]
 layout_mode = 3
