@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=67 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://f0mkog1guw4q" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/door_closed.png" id="33_t0mx6"]
 [ext_resource type="Texture2D" uid="uid://cvhojpgbsqety" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/door_open.png" id="34_3jnpo"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="38_vunj5"]
+[ext_resource type="PackedScene" uid="uid://d0cw8i1e7fb86" path="res://Scenes and Scripts/Dialog/Ground Structure/hilfe_tutorial.tscn" id="39_tqw8v"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a7v7b"]
 
@@ -405,6 +406,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8121, 3.40223, -4.17132)
 
 [node name="HelpButton" parent="UI" instance=ExtResource("38_vunj5")]
 
+[node name="DialogTutorial" parent="UI/HelpButton" instance=ExtResource("39_tqw8v")]
+visible = false
+
 [connection signal="finished" from="POI/POI Sound" to="." method="_on_poi_sound_finished"]
 [connection signal="body_entered" from="POI/POI Area" to="." method="_on_poi_area_body_entered"]
 [connection signal="finished" from="POI/AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
@@ -414,3 +418,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8121, 3.40223, -4.17132)
 
 [editable path="NPC Tutorial"]
 [editable path="NPC Tutorial/DialogTutorial"]
+[editable path="UI/HelpButton"]

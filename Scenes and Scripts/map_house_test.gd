@@ -42,10 +42,9 @@ func _hover():
 	%Hover.stream = stream
 	%Hover.play()
 
-
+#help button function
 func _on_control_help_opened():
 	$AnimatedSprite2D.material = outline_shader
-
 
 func _on_control_help_closed():
 	$AnimatedSprite2D.material = no_shader
