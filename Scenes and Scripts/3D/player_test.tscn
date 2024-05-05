@@ -1,7 +1,80 @@
-[gd_scene load_steps=23 format=3 uid="uid://1qmkagu18oq0"]
+[gd_scene load_steps=42 format=3 uid="uid://1qmkagu18oq0"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/player_test.gd" id="1_haq7x"]
+[ext_resource type="Texture2D" uid="uid://b6metd5yw6mmu" path="res://Assets/Characters/Cari/cari_animation_walk_spritesheet.png.PNG" id="2_3dvpr"]
 [ext_resource type="Texture2D" uid="uid://bqdfwecf4ta4n" path="res://Assets/Characters/Carl/carl_animation_walk_spritesheet.png.PNG" id="2_geqys"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooddu"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(320, 0, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyidi"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(640, 0, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sgei"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(960, 0, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_houoy"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(1280, 0, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqpo6"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(1600, 0, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rerqh"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(1920, 0, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq5lg"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(2240, 0, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwur4"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(2560, 0, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uk0g"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(2560, 639, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4covq"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(0, 0, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx5tl"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(2240, 639, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g00dy"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(1920, 639, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smqhs"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(1600, 639, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ukgq"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(1280, 639, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whxsu"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(960, 639, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld85s"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(640, 639, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml6ro"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(320, 639, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_piafw"]
+atlas = ExtResource("2_3dvpr")
+region = Rect2(0, 639, 320, 639)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_spfjb"]
 atlas = ExtResource("2_geqys")
@@ -77,6 +150,75 @@ region = Rect2(2560, 0, 320, 639)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7sd0m"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooddu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyidi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sgei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_houoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqpo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rerqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq5lg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwur4")
+}],
+"loop": true,
+"name": &"car_walk_right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uk0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4covq")
+}],
+"loop": true,
+"name": &"cari_idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx5tl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g00dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smqhs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ukgq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whxsu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ld85s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ml6ro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_piafw")
+}],
+"loop": true,
+"name": &"cari_walk_left",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_spfjb")
@@ -163,8 +305,9 @@ debug_enabled = true
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67664, 0)
 sprite_frames = SubResource("SpriteFrames_7sd0m")
-animation = &"idle"
-frame_progress = 0.410625
+animation = &"car_walk_right"
+frame = 7
+frame_progress = 0.887533
 
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
 current = true
