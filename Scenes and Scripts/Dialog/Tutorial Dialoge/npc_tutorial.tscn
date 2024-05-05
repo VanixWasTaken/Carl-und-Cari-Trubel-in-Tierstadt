@@ -38,6 +38,8 @@ animation = &"Carl"
 [node name="DialogTutorial" parent="." instance=ExtResource("3_s786n")]
 
 [node name="DialogeArea3D" type="Area3D" parent="."]
+collision_layer = 9
+collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogeArea3D"]
 shape = SubResource("CylinderShape3D_xvexm")

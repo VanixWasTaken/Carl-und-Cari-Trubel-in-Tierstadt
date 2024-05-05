@@ -366,6 +366,8 @@ angle_max = 276.4
 color = Color(1, 0.384698, 0.991142, 1)
 
 [node name="POI Area" type="Area3D" parent="POI"]
+collision_layer = 9
+collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="POI/POI Area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00488281, -0.0573306, -0.225209)
@@ -426,6 +428,8 @@ sprite_frames = SubResource("SpriteFrames_i2sxb")
 
 [node name="Area3D" type="Area3D" parent="Objects/Door"]
 transform = Transform3D(0.468384, 0, 0, 0, 0.468384, 0, 0, 0, 0.468384, -0.126759, -1.97717, -11.9358)
+collision_layer = 9
+collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Door/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.466, 0.174, 16.92)
