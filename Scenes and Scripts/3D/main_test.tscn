@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=69 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
@@ -51,9 +51,6 @@ agent_max_climb = 0.0
 agent_max_slope = 0.02
 region_merge_size = 7.37
 filter_ledge_spans = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pmc5o"]
-albedo_texture = ExtResource("4_na5hb")
 
 [sub_resource type="BoxMesh" id="BoxMesh_d47h4"]
 
@@ -215,10 +212,10 @@ script = ExtResource("1_trbh3")
 [node name="HelpButton" parent="UI" instance=ExtResource("38_vunj5")]
 
 [node name="Player" parent="." instance=ExtResource("1_ihxr4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.857, 4.78235)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.857, 4.782)
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -15, 8.289, 13.05)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -10, 8.289, 13.05)
 fov = 60.0
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
@@ -243,7 +240,6 @@ use_edge_connections = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(58.1989, 0, 0, 0, 1, 0, 0, 0, 11.635, 0, 1.5513, 0)
-material_override = SubResource("StandardMaterial3D_pmc5o")
 mesh = SubResource("BoxMesh_d47h4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/MeshInstance3D"]
