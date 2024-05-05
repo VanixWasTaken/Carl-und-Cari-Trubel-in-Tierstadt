@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://1qmkagu18oq0"]
+[gd_scene load_steps=9 format=3 uid="uid://1qmkagu18oq0"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/player_test.gd" id="1_haq7x"]
 [ext_resource type="Texture2D" uid="uid://cdv3lh2p0efnb" path="res://Assets/Test/Player Animation/idle1_test.png" id="2_j1mo6"]
@@ -7,9 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bey8od7a60oxr" path="res://Assets/Test/Player Animation/run_left2_test.png" id="5_8cwfe"]
 [ext_resource type="Texture2D" uid="uid://rgvwfx6mp2lr" path="res://Assets/Test/Player Animation/run_right1_test.png" id="6_x32y3"]
 [ext_resource type="Texture2D" uid="uid://cyul2ovy74qtx" path="res://Assets/Test/Player Animation/run_right2_test.png" id="7_clgj0"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_oce2j"]
-size = Vector3(3.08044, 6.00006, 1.12958)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7sd0m"]
 animations = [{
@@ -51,13 +48,8 @@ animations = [{
 transform = Transform3D(1.31, 0, 0, 0, 1.31, 0, 0, 0, 1.31, 0, 0, 0)
 script = ExtResource("1_haq7x")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0540161, 3.00902, 0.0647888)
-shape = SubResource("BoxShape3D_oce2j")
-
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 0.1
-path_max_distance = 0.01
 debug_enabled = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]

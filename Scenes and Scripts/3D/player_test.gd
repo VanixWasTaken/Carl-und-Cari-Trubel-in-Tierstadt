@@ -15,7 +15,7 @@ func _process(delta):
 func move_to_target(delta):
 	navigation_agent.target_desired_distance = 0.2
 
-	var target_position = navigation_agent.target_position
+	var target_position = navigation_agent.get_next_path_position()
 	if result != null:
 		if result.collider.is_in_group("Ground"):
 			navigation_agent.set_target_position(target_position)

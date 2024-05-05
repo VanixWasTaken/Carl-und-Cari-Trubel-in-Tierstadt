@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=68 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
@@ -42,11 +42,13 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a7v7b"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
-vertices = PackedVector3Array(-28.7591, 2.08046, -3.8175, -28.7591, 2.08046, 5.1825, 28.9909, 2.08046, 5.1825, 28.9909, 2.08046, -3.8175)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+vertices = PackedVector3Array(-8.5091, 2.34204, 5.4325, -8.2591, 2.34204, 1.1825, -10.0091, 2.34204, 0.9325, -9.7591, 2.34204, -2.0675, -4.7591, 2.34204, -2.0675, -4.7591, 2.34204, -2.5675, -28.7591, 2.34204, -2.5675, -10.0091, 2.34204, 0.9325, -28.7591, 2.34204, -2.5675, -28.7591, 2.34204, 5.4325, -8.5091, 2.34204, 5.4325, -10.0091, 2.34204, 0.9325, -9.7591, 2.34204, -2.0675, -28.7591, 2.34204, -2.5675, 13.2409, 2.34204, 5.4325, 13.4909, 2.34204, 3.6825, 11.4909, 2.34204, 3.4325, 11.4909, 2.34204, 1.1825, 13.7409, 2.34204, 0.9325, 13.7409, 2.34204, -2.5675, -0.00909996, 2.34204, -2.0675, 0.2409, 2.34204, 0.9325, 0.2409, 2.34204, 0.9325, -1.5091, 2.34204, 1.1825, -1.2591, 2.34204, 5.4325, 13.2409, 2.34204, 5.4325, 11.4909, 2.34204, 3.4325, -4.7591, 2.34204, -2.5675, -4.7591, 2.34204, -2.0675, -0.00909996, 2.34204, -2.0675, 13.7409, 2.34204, -2.5675, 0.2409, 2.34204, 0.9325, 11.4909, 2.34204, 3.4325, 11.4909, 2.34204, 1.1825, 13.7409, 2.34204, 0.9325, 15.2409, 2.34204, 0.9325, 15.2409, 2.34204, -2.5675, 13.7409, 2.34204, -2.5675, 17.4909, 2.34204, 3.4325, 15.4909, 2.34204, 3.6825, 15.7409, 2.34204, 5.4325, 28.9909, 2.34204, 5.4325, 15.2409, 2.34204, -2.5675, 15.2409, 2.34204, 0.9325, 17.4909, 2.34204, 1.1825, 28.9909, 2.34204, -2.5675, 17.4909, 2.34204, 1.1825, 17.4909, 2.34204, 3.4325, 28.9909, 2.34204, 5.4325, 28.9909, 2.34204, -2.5675, -8.5091, 2.34204, 5.4325, -1.2591, 2.34204, 5.4325, -1.5091, 2.34204, 1.1825, -8.2591, 2.34204, 1.1825, 13.2409, 2.34204, 5.4325, 15.7409, 2.34204, 5.4325, 15.4909, 2.34204, 3.6825, 13.4909, 2.34204, 3.6825)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(10, 9, 7), PackedInt32Array(7, 9, 8), PackedInt32Array(13, 12, 11), PackedInt32Array(16, 15, 14), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 21), PackedInt32Array(19, 21, 20), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 26), PackedInt32Array(24, 26, 25), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 30), PackedInt32Array(33, 32, 31), PackedInt32Array(37, 36, 34), PackedInt32Array(34, 36, 35), PackedInt32Array(39, 38, 40), PackedInt32Array(40, 38, 41), PackedInt32Array(43, 42, 44), PackedInt32Array(44, 42, 45), PackedInt32Array(47, 46, 48), PackedInt32Array(48, 46, 49), PackedInt32Array(53, 52, 50), PackedInt32Array(50, 52, 51), PackedInt32Array(57, 56, 54), PackedInt32Array(54, 56, 55)]
 geometry_parsed_geometry_type = 2
 geometry_collision_mask = 1
 cell_height = 0.01
+agent_max_climb = 0.0
+agent_max_slope = 0.02
 region_merge_size = 7.37
 filter_ledge_spans = true
 
@@ -86,6 +88,12 @@ albedo_texture = ExtResource("7_eahr4")
 
 [sub_resource type="QuadMesh" id="QuadMesh_iqs2f"]
 size = Vector2(10, 16)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8j6hp"]
+size = Vector3(8.90192, 0.75518, 2.08038)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nfgcj"]
+size = Vector3(4.80275, 2.76379, 1.57007)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s8a0u"]
 animations = [{
@@ -220,7 +228,7 @@ transform = Transform3D(-4.37114e-08, -0.393942, 0.919135, 0, 0.919135, 0.393942
 transform = Transform3D(-4.37114e-08, 0.515038, -0.857167, 0, 0.857167, 0.515038, 1, 2.2513e-08, -3.7468e-08, -16, 16, 0)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." groups=["NavRegion"]]
-transform = Transform3D(1, 0, 0, 0, 1.43292, 0, 0, 0, 1, -0.0355263, -2.73762, -0.196125)
+transform = Transform3D(1, 0, 0, 0, 1.43292, 0, 0, 0, 1, -0.171009, -2.82786, -0.200979)
 navigation_mesh = SubResource("NavigationMesh_5mby5")
 use_edge_connections = false
 
@@ -232,7 +240,7 @@ mesh = SubResource("BoxMesh_d47h4")
 transform = Transform3D(0.0428997, 0, 0, 0, 1, 0, 0, 0, 0.277781, 0, -1.5971, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D"]
-transform = Transform3D(1.24158, 0, 0, 0, 2.08749, 0, 0, 0, 15.6264, 0.18616, 0, 0.469634)
+transform = Transform3D(1.24158, 0, 0, 0, 2.08749, 0, 0, 0, 15.6264, 0.18616, 1.3339, 0.469634)
 shape = SubResource("BoxShape3D_i151x")
 
 [node name="Walls" type="Node3D" parent="NavigationRegion3D"]
@@ -305,6 +313,22 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 
 material_override = SubResource("StandardMaterial3D_nrmtd")
 mesh = SubResource("QuadMesh_iqs2f")
 skeleton = NodePath("../CollisionShape3D")
+
+[node name="Objects" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="Table" type="StaticBody3D" parent="NavigationRegion3D/Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.12393, 0, -2.27355)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Objects/Table"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279633, 2.1064, 1.87774)
+shape = SubResource("BoxShape3D_8j6hp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2812, 0.272043, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Objects/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.262535, 0.881897, 2.26925)
+shape = SubResource("BoxShape3D_nfgcj")
 
 [node name="POI" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9824, 0.236768, -2.1194)
