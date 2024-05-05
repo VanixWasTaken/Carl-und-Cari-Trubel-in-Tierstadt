@@ -15,17 +15,13 @@ func _process(delta):
 func move_to_target(delta):
 	navigation_agent.target_desired_distance = 0.2
 
-	var target_position = navigation_agent.get_next_path_position()
+	var target_position = navigation_agent.target_position
 	if result != null:
 		if result.collider.is_in_group("Ground"):
 			navigation_agent.set_target_position(target_position)
 	var direction = global_position.direction_to(target_position)
 	var distance_to_target = global_position - target_position
 	velocity = direction * speed
-	#print("Final Position: " + str(navigation_agent.get_final_position()))
-	#print("Target Position: " + str(navigation_agent.get_target_position()))
-	#print("Fake Target: " + str(target_position))
-	#print(navigation_agent.distance_to_target())
 	
 	if Global.moving_allowed:
 		move_and_slide()
@@ -45,16 +41,7 @@ func move_to_target(delta):
 			$AnimatedSprite3D.play("idle")
 			navigation_agent.target_position = global_position
 	elif navigation_agent.is_target_reachable() == false:
-		if str($RayCast3D.get_collider()) !=  "<Object#null>" || str($RayCast3D2.get_collider()) !=  "<Object#null>":
-			speed = 0
-			$AnimatedSprite3D.play("idle")
-			navigation_agent.target_position = global_position
-		if direction.x <= 0 && global_position - navigation_agent.get_final_position() <= Vector3(1,1,1):
-			$AnimatedSprite3D.play("idle")
-			navigation_agent.target_position = global_position
-		elif direction.x > 0 && global_position - navigation_agent.get_final_position() >= Vector3(-1,-1,-1):
-			navigation_agent.target_position = global_position
-			$AnimatedSprite3D.play("idle")
+		navigation_agent.target_position = navigation_agent.get_final_position()
 
 func _input(event):
 # https://www.youtube.com/watch?v=KT06pv06Q1U Das ganze movement, versteh das alles nicht so 100 aber scheint erstmal zu klappen

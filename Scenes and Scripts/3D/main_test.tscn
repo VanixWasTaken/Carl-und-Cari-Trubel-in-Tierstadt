@@ -42,16 +42,18 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a7v7b"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
-vertices = PackedVector3Array(-28.75, 1.01045, -6.38376, 29.75, 1.01045, -6.13376, 29.75, 1.01045, -23.1338, -28.75, 1.01045, -23.1338, -28.25, 2.08045, -3.88376, -28.5, 2.08045, 2.36624, -28.5, 2.08045, 5.11624, 29, 2.08045, 5.11624, 29, 2.08045, -3.88376)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 8), PackedInt32Array(6, 8, 7)]
+vertices = PackedVector3Array(-28.7591, 2.08046, -3.8175, -28.7591, 2.08046, 5.1825, 28.9909, 2.08046, 5.1825, 28.9909, 2.08046, -3.8175)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 geometry_parsed_geometry_type = 2
+geometry_collision_mask = 1
 cell_height = 0.01
+region_merge_size = 7.37
 filter_ledge_spans = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_d47h4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i151x"]
-size = Vector3(19.3163, 1, 0.597778)
+size = Vector3(19.3163, 1, 0.189636)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
@@ -196,10 +198,10 @@ script = ExtResource("1_trbh3")
 [node name="HelpButton" parent="UI" instance=ExtResource("38_vunj5")]
 
 [node name="Player" parent="." instance=ExtResource("1_ihxr4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.21879, -0.0600805, 1.91358)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.21879, -0.0600805, 2.80223)
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.215482, 8.28902, 13.1534)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.215482, 8.28902, 13.0503)
 fov = 60.0
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
@@ -218,8 +220,9 @@ transform = Transform3D(-4.37114e-08, -0.393942, 0.919135, 0, 0.919135, 0.393942
 transform = Transform3D(-4.37114e-08, 0.515038, -0.857167, 0, 0.857167, 0.515038, 1, 2.2513e-08, -3.7468e-08, -16, 16, 0)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." groups=["NavRegion"]]
-transform = Transform3D(1, 0, 0, 0, 1.43292, 0, 0, 0, 1, -0.0355263, -2.73762, -0.0930443)
+transform = Transform3D(1, 0, 0, 0, 1.43292, 0, 0, 0, 1, -0.0355263, -2.73762, -0.196125)
 navigation_mesh = SubResource("NavigationMesh_5mby5")
+use_edge_connections = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(58.1989, 0, 0, 0, 1, 0, 0, 0, 11.635, 0, 1.5513, 0)
@@ -229,7 +232,7 @@ mesh = SubResource("BoxMesh_d47h4")
 transform = Transform3D(0.0428997, 0, 0, 0, 1, 0, 0, 0, 0.277781, 0, -1.5971, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D"]
-transform = Transform3D(1.24158, 0, 0, 0, 2.08749, 0, 0, 0, 15.6264, 0.18616, 0, -2.71926)
+transform = Transform3D(1.24158, 0, 0, 0, 2.08749, 0, 0, 0, 15.6264, 0.18616, 0, 0.469634)
 shape = SubResource("BoxShape3D_i151x")
 
 [node name="Walls" type="Node3D" parent="NavigationRegion3D"]
@@ -368,7 +371,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 27.308, 5.94835, -4.46674)
 texture = ExtResource("26_j0c3k")
 
 [node name="Pictures" type="Sprite3D" parent="Objects"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56412, 5.55327, -4.58232)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56412, 5.55327, -4.65642)
+sorting_offset = 4.0
 texture = ExtResource("27_55bcl")
 
 [node name="Table" type="Sprite3D" parent="Objects"]

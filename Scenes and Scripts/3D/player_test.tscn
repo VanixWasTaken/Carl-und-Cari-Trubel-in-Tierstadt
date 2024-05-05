@@ -58,22 +58,12 @@ shape = SubResource("BoxShape3D_oce2j")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 0.1
 path_max_distance = 0.01
-navigation_layers = 65535
+debug_enabled = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67664, 0)
 sprite_frames = SubResource("SpriteFrames_7sd0m")
 animation = &"idle"
-
-[node name="RayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4432, 3.40762, -0.00444877)
-target_position = Vector3(1.665, 0, 0)
-collision_mask = 32768
-
-[node name="RayCast3D2" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.203839, 3.335, -0.061)
-target_position = Vector3(-1.415, 0, 0)
-collision_mask = 32768
 
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
 current = true
