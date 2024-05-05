@@ -13,6 +13,17 @@ func _ready():
 	
 	MusicController._play_music("learning_by_doing", "tutorial")
 	
+	#                   BARKS
+	var barkies = AudioStreamRandomizer.new()
+	$"NPC Tutorial/Barks".stream = barkies
+	for i in 3:
+		var f = i + 1
+		if Global.character == "Cari":
+			barkies.add_stream(i, load("res://Assets/Sound Test/Voice Over/barks/Tutorial/Carl/vo_npc_bark_carl_tutorial01_var" + str(f) + ".mp3"))
+		
+		elif Global.character == "Carl":
+			barkies.add_stream(i, load("res://Assets/Sound Test/Voice Over/barks/Tutorial/Cari/vo_npc_bark_cari_tutorial01_var" + str(f) + ".mp3"))
+	
 	#$UI/HelpButton/DialogTutorial.visible = false
 
 func _process(delta):
@@ -57,3 +68,27 @@ func _on_dialog_area_3d_body_exited(body):
 	if body.get_name() == "Player":
 		$"NPC Tutorial/DialogeArea3D".queue_free()
 
+
+#                                 BARKS
+func _on_timer_timeout():
+	
+	if got_key:
+		var playback = AudioStreamRandomizer.new()
+		$Barks.stream = playback
+		
+		for i in 3:
+			var f = i + 1
+			if Global.character == "Cari":
+				playback.add_stream(i, load("res://Assets/Sound Test/Voice Over/barks/Tutorial/Carl/vo_npc_bark_carl_tutorial02_var" + str(f) + ".mp3"))
+			
+			elif Global.character == "Carl":
+				playback.add_stream(i, load("res://Assets/Sound Test/Voice Over/barks/Tutorial/Cari/vo_npc_bark_cari_tutorial02_var" + str(f) + ".mp3"))
+			
+
+	
+	
+	if !Global.dialog_playing:
+		$"NPC Tutorial/Barks".play()
+	
+	$"NPC Tutorial/Barks/Timer".wait_time = randf_range(10, 20)
+	$"NPC Tutorial/Barks/Timer".start()
