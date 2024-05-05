@@ -31,26 +31,43 @@ func _process(delta):
 
 func _on_texture_button_button_up():
 	menu_open = true
-	var instance = tutorial_help.instantiate()
-	add_child(instance)
+	if get_tree().get_current_scene().get_name() == "Main":
+		var instance = tutorial_help.instantiate()
+		add_child(instance)
 	if !helpbuttonopen and Global.character == "Cari":
 		emit_signal("HelpOpened")
 		$TextureButton.texture_normal = load("res://Assets/Test/button_help_gray.png")
 		$TextureButton.disabled = true
-		await get_tree().create_timer(7).timeout
-		emit_signal("HelpClosed")
-		menu_open = false
-		$TextureButton.disabled = false
-		$TextureButton.texture_normal = load("res://Assets/Test/button_help.png.PNG")
+		if get_tree().get_current_scene().get_name() == "Main":
+			await get_tree().create_timer(0.1).timeout
+			emit_signal("HelpClosed")
+			menu_open = false
+			$TextureButton.disabled = false
+			$TextureButton.texture_normal = load("res://Assets/Test/button_help.png.PNG")
+		elif get_tree().get_current_scene().get_name() == "Map":
+			await get_tree().create_timer(0.1).timeout
+			menu_open = false
+			await get_tree().create_timer(7).timeout
+			emit_signal("HelpClosed")
+			$TextureButton.disabled = false
+			$TextureButton.texture_normal = load("res://Assets/Test/button_help.png.PNG")
 	elif !helpbuttonopen and Global.character == "Carl":
 		emit_signal("HelpOpened")
 		$TextureButton.texture_normal = load("res://Assets/Test/button_help_cari_grey.png")
 		$TextureButton.disabled = true
-		await get_tree().create_timer(7).timeout
-		emit_signal("HelpClosed")
-		menu_open = false
-		$TextureButton.disabled = false
-		$TextureButton.texture_normal = load("res://Assets/Test/button_help_cari.png")
+		if get_tree().get_current_scene().get_name() == "Main":
+			await get_tree().create_timer(0.1).timeout
+			emit_signal("HelpClosed")
+			menu_open = false
+			$TextureButton.disabled = false
+			$TextureButton.texture_normal = load("res://Assets/Test/button_help_cari.png")
+		elif get_tree().get_current_scene().get_name() == "Map":
+			await get_tree().create_timer(0.1).timeout
+			menu_open = false
+			await get_tree().create_timer(7).timeout
+			emit_signal("HelpClosed")
+			$TextureButton.disabled = false
+			$TextureButton.texture_normal = load("res://Assets/Test/button_help_cari.png")
 
 
 func _on_texture_button_mouse_entered():
