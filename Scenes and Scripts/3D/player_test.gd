@@ -3,6 +3,11 @@ extends CharacterBody3D
 var speed = 15
 var result
 
+func _ready():
+	if Global.character == "Carl":
+		$AnimatedSprite3D.play("carl_idle")
+	elif Global.character == "Cari" || Global.character == "":
+		$AnimatedSprite3D.play("cari_idle")
 
 func _process(delta):
 	if navigation_agent.is_navigation_finished():
