@@ -8,6 +8,7 @@ func _process(delta):
 	if navigation_agent.is_navigation_finished():
 		return
 	move_to_target(delta)
+
 	
 
 	
@@ -44,7 +45,7 @@ func move_to_target(delta):
 		elif navigation_agent.is_target_reachable() == false:
 			navigation_agent.target_position = navigation_agent.get_final_position()
 
-	elif Global.character == "Cari":
+	elif Global.character == "Cari" || Global.character == "":
 		if distance_to_target.x > 0:
 			$AnimatedSprite3D.play("cari_walk_left")
 		if distance_to_target.x < 0:
