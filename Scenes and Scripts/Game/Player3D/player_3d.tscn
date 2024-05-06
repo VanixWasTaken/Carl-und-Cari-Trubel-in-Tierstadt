@@ -1,8 +1,8 @@
 [gd_scene load_steps=42 format=3 uid="uid://1qmkagu18oq0"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Player3D/player3d.gd" id="1_haq7x"]
-[ext_resource type="Texture2D" uid="uid://b6metd5yw6mmu" path="res://Assets/Art/Characters/Cari/Full Body/cari_animation_walk_spritesheet.png.PNG" id="2_3dvpr"]
-[ext_resource type="Texture2D" uid="uid://bqdfwecf4ta4n" path="res://Assets/Art/Characters/Carl/Full Body/carl_animation_walk_spritesheet.png.PNG" id="2_geqys"]
+[ext_resource type="Texture2D" uid="uid://dgwkyr8rfx646" path="res://Assets/Art/Characters/Cari/Full Body/cari_animation_walk_spritesheet.png.PNG" id="2_3dvpr"]
+[ext_resource type="Texture2D" uid="uid://vak1rr1ahdoj" path="res://Assets/Art/Characters/Carl/Full Body/carl_animation_walk_spritesheet.png.PNG" id="2_geqys"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8uk0g"]
 atlas = ExtResource("2_3dvpr")
@@ -289,8 +289,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_4kkv0"]
-size = Vector3(3.78674, 5.77942, 0.92334)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_064v7"]
+height = 2.10676
+radius = 0.559534
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1.31, 0, 0, 0, 1.31, 0, 0, 0, 1.31, 0, 0, 0)
@@ -313,5 +314,5 @@ animation = &"carl_walk_right"
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104675, 2.54772, 0.0383301)
-shape = SubResource("BoxShape3D_4kkv0")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.134269, 0.543359, 0.00958456)
+shape = SubResource("CylinderShape3D_064v7")

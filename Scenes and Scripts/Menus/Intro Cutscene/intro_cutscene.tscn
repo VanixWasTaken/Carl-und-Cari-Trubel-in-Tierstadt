@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://skc43dl2o124"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.gd" id="1_jfymc"]
+[ext_resource type="Texture2D" uid="uid://dcwdarpqj4kyp" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame1.png.PNG" id="1_wajoa"]
+[ext_resource type="Texture2D" uid="uid://j0ki0uktabxe" path="res://Assets/Art/Cutscenes/Intro Cutsene/characters_talking.png" id="2_g7dl1"]
+[ext_resource type="Texture2D" uid="uid://difq00t427k63" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame2.png.PNG" id="2_yxpgr"]
+[ext_resource type="Texture2D" uid="uid://lb4g6drr5o27" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame3.png.PNG" id="3_yp0o1"]
+[ext_resource type="Texture2D" uid="uid://dylkrlenvgssl" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame4.png.PNG" id="4_tq0bh"]
+[ext_resource type="Texture2D" uid="uid://qnbeqle7ae0q" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame5.png.PNG" id="5_jng2a"]
+
+[sub_resource type="Animation" id="Animation_jv6g1"]
+resource_name = "Glide"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1920, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_thudc"]
+_data = {
+"Glide": SubResource("Animation_jv6g1")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2624k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yxpgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yp0o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tq0bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jng2a")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Intro Cutscene" type="Node2D"]
+script = ExtResource("1_jfymc")
+
+[node name="Characters Talking" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_g7dl1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_thudc")
+}
+autoplay = "Glide"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_2624k")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 3840.0
+offset_bottom = 1080.0
+texture = ExtResource("1_wajoa")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

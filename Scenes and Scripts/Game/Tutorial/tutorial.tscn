@@ -463,5 +463,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2073, 5.7314, -2.28901)
 [connection signal="timeout" from="NPC Tutorial/Barks/Timer" to="." method="_on_timer_timeout"]
 
 [editable path="UI/HelpButton"]
+[editable path="Player"]
 [editable path="NPC Tutorial"]
 [editable path="NPC Tutorial/DialogTutorial"]

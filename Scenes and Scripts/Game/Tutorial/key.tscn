@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://66h31lf2a4gu"]
 
-[ext_resource type="Texture2D" uid="uid://bphwlt6yy2mve" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/key.png" id="1_jdx81"]
-[ext_resource type="Texture2D" uid="uid://cf2ktsbjhp5xb" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/key2.png" id="2_an5yt"]
-[ext_resource type="Texture2D" uid="uid://df4w0g65epqud" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/key3.png" id="3_bl40h"]
-[ext_resource type="Texture2D" uid="uid://c8aq54oom2133" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/5key.png" id="4_h4fyi"]
-[ext_resource type="Texture2D" uid="uid://dcfbhh4f3fhr8" path="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/key4.png" id="5_j3oa3"]
+[ext_resource type="Texture2D" uid="uid://bphwlt6yy2mve" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/key.png" id="1_jdx81"]
+[ext_resource type="Texture2D" uid="uid://cf2ktsbjhp5xb" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/key2.png" id="2_an5yt"]
+[ext_resource type="Texture2D" uid="uid://df4w0g65epqud" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/key3.png" id="3_bl40h"]
+[ext_resource type="Texture2D" uid="uid://c8aq54oom2133" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/5key.png" id="4_h4fyi"]
+[ext_resource type="Texture2D" uid="uid://dcfbhh4f3fhr8" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/key4.png" id="5_j3oa3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hjspa"]
 animations = [{
