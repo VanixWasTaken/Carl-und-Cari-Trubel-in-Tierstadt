@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dwjsgg1ola36e" path="res://Assets/Title Screen/Title Screen/titlescreen_007.png" id="8_t4nob"]
 [ext_resource type="Texture2D" uid="uid://jwo7sgonjjt0" path="res://Assets/Title Screen/Title Screen/titlescreen_008.png" id="9_6tbre"]
 [ext_resource type="Texture2D" uid="uid://dhfd8vkvnth22" path="res://Assets/Title Screen/Title Screen/titlescreen_009.png" id="10_61olo"]
-[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="12_nygy2"]
+[ext_resource type="Texture2D" uid="uid://dy3e7gs2uw0ut" path="res://Assets/Title Screen/title_font.svg" id="11_vjaha"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4jj7q"]
 animations = [{
@@ -69,34 +69,8 @@ offset_top = -1755.0
 offset_right = 2035.0
 offset_bottom = -255.0
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 375.0
-offset_top = 139.0
-offset_right = 1485.0
-offset_bottom = 409.0
-theme_override_colors/font_outline_color = Color(0.0681613, 0.456021, 0.56641, 1)
-theme_override_constants/outline_size = 40
-theme_override_fonts/font = ExtResource("12_nygy2")
-theme_override_font_sizes/font_size = 200
-text = "Carl & Cari"
-
-[node name="Label2" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 604.0
-offset_top = 359.0
-offset_right = 1601.0
-offset_bottom = 521.0
-theme_override_colors/font_outline_color = Color(0.0666667, 0.454902, 0.564706, 1)
-theme_override_constants/outline_size = 40
-theme_override_fonts/font = ExtResource("12_nygy2")
-theme_override_font_sizes/font_size = 120
-text = "Trubel in Tierstadt"
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(945, 353)
+texture = ExtResource("11_vjaha")
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
