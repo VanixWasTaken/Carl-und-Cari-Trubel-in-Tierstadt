@@ -29,6 +29,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 icon = ExtResource("2_m5n1f")
+flat = true
 
 [node name="SkipButtonTimer" type="Timer" parent="."]
 wait_time = 1.5

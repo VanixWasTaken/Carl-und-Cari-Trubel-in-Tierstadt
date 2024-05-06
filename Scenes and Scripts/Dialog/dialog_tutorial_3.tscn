@@ -21,14 +21,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 712.0
-offset_top = 912.0
-offset_right = -288.0
-offset_bottom = 147.0
+offset_left = 810.0
+offset_top = 976.0
+offset_right = -190.0
+offset_bottom = 211.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 icon = ExtResource("2_vikps")
+flat = true
 
 [node name="SkipButtonTimer" type="Timer" parent="."]
 wait_time = 1.5
