@@ -50,6 +50,7 @@ _data = {
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.992143, 0)
+sorting_offset = 1.0
 sprite_frames = SubResource("SpriteFrames_hjspa")
 autoplay = "default"
 frame_progress = 0.730752

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csr0m07mkrx8"
-path.s3tc="res://.godot/imported/tutorial_staircase.png.PNG-570fc888c466e6a587bc48d3ae91cda8.s3tc.ctex"
+uid="uid://bcen8o4dx5qdo"
+path.s3tc="res://.godot/imported/tutorial_chair_back.png-16658b9eb7802c04ade13a98d8f717e1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_staircase.png.PNG"
-dest_files=["res://.godot/imported/tutorial_staircase.png.PNG-570fc888c466e6a587bc48d3ae91cda8.s3tc.ctex"]
+source_file="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_chair_back.png"
+dest_files=["res://.godot/imported/tutorial_chair_back.png-16658b9eb7802c04ade13a98d8f717e1.s3tc.ctex"]
 
 [params]
 
