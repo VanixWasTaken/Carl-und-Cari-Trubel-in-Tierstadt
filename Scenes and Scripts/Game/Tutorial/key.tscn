@@ -1,16 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://66h31lf2a4gu"]
+[gd_scene load_steps=6 format=3 uid="uid://66h31lf2a4gu"]
 
-[ext_resource type="Texture2D" uid="uid://crc2xommq0fof" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_key.png" id="1_ij6fv"]
+[ext_resource type="Texture2D" uid="uid://bxnewjg8engq" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_key.png" id="1_ij6fv"]
+[ext_resource type="Texture2D" uid="uid://by05px4wad7xa" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_key2.png" id="2_tln07"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hjspa"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_ij6fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tln07")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="Animation" id="Animation_ccnlm"]
@@ -33,11 +37,11 @@ _data = {
 [node name="Key" type="Node3D"]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.992143, 0)
+transform = Transform3D(0.278873, 0, 0, 0, 0.278873, 0, 0, 0, 0.278873, 0, 0.992143, 0)
 sorting_offset = 1.0
 sprite_frames = SubResource("SpriteFrames_hjspa")
 autoplay = "default"
-frame_progress = 0.730752
+frame_progress = 0.21954
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
