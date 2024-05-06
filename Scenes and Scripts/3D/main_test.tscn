@@ -76,7 +76,6 @@ albedo_texture = ExtResource("5_vdeea")
 [sub_resource type="QuadMesh" id="QuadMesh_mw0nr"]
 size = Vector2(59, 16)
 
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_sahrs"]
 size = Vector3(10.0164, 1, 15.8657)
 
@@ -218,7 +217,7 @@ script = ExtResource("1_trbh3")
 [node name="HelpButton" parent="UI" instance=ExtResource("38_vunj5")]
 
 [node name="Player" parent="." instance=ExtResource("1_ihxr4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.857, 4.782)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.92566, 0.857, 4.782)
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -10, 8.289, 13.05)
@@ -299,7 +298,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.895, -0.356, 0)
 collision_layer = 32769
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/WallLeft"]
-
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -27.4528, 8.43286, 0.4552)
 shape = SubResource("BoxShape3D_sahrs")
 
@@ -394,7 +392,7 @@ bus = &"SFX"
 [node name="Objects" type="Node3D" parent="."]
 
 [node name="Stairs" type="Sprite3D" parent="Objects"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.77774, 7.61062, -3.29723)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.77774, 7.61062, -4.65809)
 texture = ExtResource("29_alfcp")
 
 [node name="Table" type="Sprite3D" parent="Objects"]
