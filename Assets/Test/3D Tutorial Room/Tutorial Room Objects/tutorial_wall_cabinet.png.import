@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6g4mgxs61dtd"
-path.s3tc="res://.godot/imported/tutorial_chair2.png.PNG-3d8e45f04e800daf68feb817a8073f38.s3tc.ctex"
+uid="uid://8hophgkxosug"
+path.s3tc="res://.godot/imported/tutorial_wall_cabinet.png-b55e62f9dfd0c884ee12574c64588cd8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_chair2.png.PNG"
-dest_files=["res://.godot/imported/tutorial_chair2.png.PNG-3d8e45f04e800daf68feb817a8073f38.s3tc.ctex"]
+source_file="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_wall_cabinet.png"
+dest_files=["res://.godot/imported/tutorial_wall_cabinet.png-b55e62f9dfd0c884ee12574c64588cd8.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbukthhg2fphx"
-path.s3tc="res://.godot/imported/tutorial_pictures.png.PNG-c977a8a7b071570a6af0c156aa9c59e0.s3tc.ctex"
+uid="uid://do6hom35jnrhu"
+path.s3tc="res://.godot/imported/tutorial_table.png-e1adcbb0932e5199953637b7c1a45ec8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_pictures.png.PNG"
-dest_files=["res://.godot/imported/tutorial_pictures.png.PNG-c977a8a7b071570a6af0c156aa9c59e0.s3tc.ctex"]
+source_file="res://Assets/Test/3D Tutorial Room/Tutorial Room Objects/tutorial_table.png"
+dest_files=["res://.godot/imported/tutorial_table.png-e1adcbb0932e5199953637b7c1a45ec8.s3tc.ctex"]
 
 [params]
 

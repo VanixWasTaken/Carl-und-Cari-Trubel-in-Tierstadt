@@ -289,8 +289,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_f8u84"]
-radius = 0.773913
+[sub_resource type="BoxShape3D" id="BoxShape3D_4kkv0"]
+size = Vector3(3.78674, 5.77942, 0.92334)
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1.31, 0, 0, 0, 1.31, 0, 0, 0, 1.31, 0, 0, 0)
@@ -313,4 +313,5 @@ animation = &"carl_walk_right"
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CylinderShape3D_f8u84")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104675, 2.54772, 0.0383301)
+shape = SubResource("BoxShape3D_4kkv0")
