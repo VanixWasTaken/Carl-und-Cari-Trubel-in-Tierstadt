@@ -23,6 +23,7 @@ var PRESET2 = preload("res://Assets/Test/cari_dialog.png")
 
 func _ready():
 	Global.moving_allowed = false
+	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -36,6 +37,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 3:
+		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
 
@@ -80,7 +82,6 @@ func add_right_dialog_box():
 ##################################  WRITE DIALOG HERE  ###################################
 	if dialogs == 2:
 		dialogs += 1
-		Global.moving_allowed = true
 ##########################################################################################
 
 
