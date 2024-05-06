@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7d1nwvtnotji"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Help Button/help_button.gd" id="1_autkf"]
-[ext_resource type="Texture2D" uid="uid://btmhuvj7taj46" path="res://Assets/Test/button_help.png.PNG" id="2_lcldv"]
-[ext_resource type="Texture2D" uid="uid://co60hvsfkjcfd" path="res://Assets/Test/button_help_gray.png" id="3_dmdbb"]
+[ext_resource type="Texture2D" uid="uid://btmhuvj7taj46" path="res://Assets/Art/UI/Buttons/button_help.png.PNG" id="2_lcldv"]
+[ext_resource type="Texture2D" uid="uid://co60hvsfkjcfd" path="res://Assets/Art/UI/Buttons/button_help_gray.png" id="3_dmdbb"]
 
 [node name="HelpButton" type="Control"]
 layout_mode = 3

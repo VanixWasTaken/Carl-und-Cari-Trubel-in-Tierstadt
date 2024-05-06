@@ -11,8 +11,8 @@ var same_speaker = false
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
-var PRESET1 = preload("res://Assets/Test/Player/icon_carl1.PNG")
-var PRESET2 = preload("res://Assets/Characters/Chemie Chamäleon/Chameleon Headshot.png")
+var PRESET1 = preload("res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG")
+var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png")
 
 ##########################################################################################
 

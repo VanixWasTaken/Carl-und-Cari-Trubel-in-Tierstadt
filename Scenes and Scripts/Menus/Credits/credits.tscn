@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c167vkgb61a1m"]
+
+[ext_resource type="PackedScene" uid="uid://ex8idjxdm1hh" path="res://Scenes and Scripts/Menus/Options/options.tscn" id="1_cfe8j"]
+
+[node name="Credits" instance=ExtResource("1_cfe8j")]
+
+[node name="Label" parent="Settings" index="0"]
+text = "Credits
+"

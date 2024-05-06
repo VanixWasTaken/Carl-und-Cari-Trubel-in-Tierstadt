@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0cw8i1e7fb86"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/hilfe_tutorial.gd" id="1_2it6a"]
+[ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/Art/UI/Buttons/menu_button_mid.png" id="2_m5n1f"]
+
+[node name="hilfeTutorial" type="CanvasLayer"]
+
+[node name="DialogBox" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2it6a")
+
+[node name="SkipButton" type="Button" parent="DialogBox"]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 712.0
+offset_top = 912.0
+offset_right = -288.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("2_m5n1f")
+
+[node name="SkipButtonTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_pressed"]
+[connection signal="timeout" from="SkipButtonTimer" to="DialogBox" method="_on_skip_button_timer_timeout"]
