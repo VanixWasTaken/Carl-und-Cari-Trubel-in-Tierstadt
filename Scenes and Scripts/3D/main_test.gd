@@ -42,7 +42,6 @@ func _on_poi_sound_finished():
 	await get_tree().create_timer(randf_range(5, 10)).timeout
 	if !got_key:
 		$"POI/POI Sound".play()
-		$POI/CPUParticles3D.emitting = true
 
 func _on_poi_area_body_entered(body):
 	if body.get_name() == "Player":
@@ -74,7 +73,7 @@ func _on_timer_timeout():
 	
 	if got_key:
 		var playback = AudioStreamRandomizer.new()
-		$Barks.stream = playback
+		$"NPC Tutorial/Barks".stream = playback
 		
 		for i in 3:
 			var f = i + 1
