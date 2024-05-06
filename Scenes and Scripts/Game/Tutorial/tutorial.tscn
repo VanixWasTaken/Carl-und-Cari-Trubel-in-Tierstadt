@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=65 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Tutorial/tutorial.gd" id="1_trbh3"]
@@ -189,12 +189,6 @@ animations = [{
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dbdf1"]
 size = Vector3(7.86162, 2.19092, 3.75842)
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1uie4"]
-streams_count = 3
-stream_0/weight = 1.0
-stream_1/weight = 1.0
-stream_2/weight = 1.0
 
 [node name="Main" type="Node3D" groups=["Root"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -434,15 +428,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4152, 0.093152, 1.88371)
 [node name="DialogeArea3D" parent="NPC Tutorial" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.21636, 0)
 
-[node name="Barks" type="AudioStreamPlayer3D" parent="NPC Tutorial"]
-stream = SubResource("AudioStreamRandomizer_1uie4")
-
-[node name="Timer" type="Timer" parent="NPC Tutorial/Barks"]
-one_shot = true
-autostart = true
-
 [node name="Key" parent="." instance=ExtResource("33_0v8a6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2073, 5.7314, -2.28901)
+
+[node name="Barks" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4152, 0.093152, 1.88371)
+
+[node name="Timer" type="Timer" parent="Barks"]
 
 [connection signal="finished" from="POI/POI Sound" to="." method="_on_poi_sound_finished"]
 [connection signal="body_entered" from="POI/POI Area" to="." method="_on_poi_area_body_entered"]
@@ -450,7 +442,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2073, 5.7314, -2.28901)
 [connection signal="body_entered" from="Objects/Door/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="NPC Tutorial/DialogeArea3D" to="." method="_on_dialog_area_3d_body_entered"]
 [connection signal="body_exited" from="NPC Tutorial/DialogeArea3D" to="." method="_on_dialog_area_3d_body_exited"]
-[connection signal="timeout" from="NPC Tutorial/Barks/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Barks/Timer" to="." method="_on_timer_timeout"]
 
 [editable path="UI/HelpButton"]
 [editable path="NPC Tutorial"]

@@ -15,7 +15,7 @@ func _ready():
 	
 	#                   BARKS
 	var barkies = AudioStreamRandomizer.new()
-	$"NPC Tutorial/Barks".stream = barkies
+	$Barks.stream = barkies
 	for i in 3:
 		var f = i + 1
 		if Global.character == "Cari":
@@ -73,7 +73,7 @@ func _on_timer_timeout():
 	
 	if got_key:
 		var playback = AudioStreamRandomizer.new()
-		$"NPC Tutorial/Barks".stream = playback
+		$Barks.stream = playback
 		
 		for i in 3:
 			var f = i + 1
@@ -87,7 +87,7 @@ func _on_timer_timeout():
 	
 	
 	if !Global.dialog_playing:
-		$"NPC Tutorial/Barks".play()
+		$Barks.play()
 	
-	$"NPC Tutorial/Barks/Timer".wait_time = randf_range(10, 20)
-	$"NPC Tutorial/Barks/Timer".start()
+	$Barks/Timer.wait_time = randf_range(10, 20)
+	$Barks/Timer.start()
