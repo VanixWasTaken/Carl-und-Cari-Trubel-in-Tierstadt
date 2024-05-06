@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ijtjyiyfn7ek"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Ground Structure/dialog_box.gd" id="1_m857t"]
-[ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/UI/Text Button Backrounds/menu_button_mid.png" id="2_okyg1"]
+[ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/Art/UI/Buttons/menu_button_mid.png" id="2_okyg1"]
 
 [node name="DialogTutorial" type="CanvasLayer"]
 

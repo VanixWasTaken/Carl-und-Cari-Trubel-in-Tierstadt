@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8aq54oom2133"
-path.s3tc="res://.godot/imported/5key.png-f6ea626e124365e7300fc1bb86086ec8.s3tc.ctex"
+uid="uid://pkbt4uivo72d"
+path.s3tc="res://.godot/imported/poi_mouse_pressed.png-e3319119ce138283fb3f06a0f2cde57f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Tutorial/Objects/5key.png"
-dest_files=["res://.godot/imported/5key.png-f6ea626e124365e7300fc1bb86086ec8.s3tc.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse_pressed.png"
+dest_files=["res://.godot/imported/poi_mouse_pressed.png-e3319119ce138283fb3f06a0f2cde57f.s3tc.ctex"]
 
 [params]
 

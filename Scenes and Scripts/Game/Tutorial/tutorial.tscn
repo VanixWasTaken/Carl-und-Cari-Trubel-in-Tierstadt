@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=66 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Tutorial/tutorial.gd" id="1_trbh3"]
@@ -17,16 +17,13 @@
 [ext_resource type="Texture2D" uid="uid://bfp8cn2vk4jry" path="res://Assets/Art/Environment/Rooms/Tutorial/POI/poi7.png" id="13_vjxjg"]
 [ext_resource type="Texture2D" uid="uid://b75vp1k7swby5" path="res://Assets/Art/Environment/Rooms/Tutorial/POI/poi8.png" id="14_jsl5s"]
 [ext_resource type="AudioStream" uid="uid://bp6lx67q3j2wv" path="res://Assets/Sound/SFX/UI/Specific/Tutorial/sfx_tutorial_ui_poi_var1.mp3" id="16_ppsj8"]
-[ext_resource type="Texture2D" uid="uid://cgvbvnuhapt5f" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/Mouse 1.png" id="17_j2pn1"]
 [ext_resource type="AudioStream" uid="uid://dbrcs07px8ed3" path="res://Assets/Sound/SFX/UI/Specific/Tutorial/sfx_tutorial_ui_poi_var2.mp3" id="17_wv2rx"]
 [ext_resource type="AudioStream" uid="uid://daefyhpqmvx8c" path="res://Assets/Sound/SFX/UI/Specific/Tutorial/sfx_tutorial_ui_poi_var3.mp3" id="18_6228x"]
-[ext_resource type="Texture2D" uid="uid://cqxpxq8brdi8k" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/Mouse 2.png" id="18_ng3in"]
 [ext_resource type="AudioStream" uid="uid://cl7u1nc357hhq" path="res://Assets/Sound/SFX/Foley/Tutorial/sfx_tutorial_foley_keyjingle_var1.mp3" id="19_422gf"]
-[ext_resource type="Texture2D" uid="uid://dplo7xnwbkke" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/Mouse 3.png" id="19_fmywx"]
 [ext_resource type="AudioStream" uid="uid://ryytyr4ae8eh" path="res://Assets/Sound/SFX/Foley/Tutorial/sfx_tutorial_foley_keyjingle_var2.mp3" id="20_gxt36"]
-[ext_resource type="Texture2D" uid="uid://baxrtbt1g5vga" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/Mouse 4.png" id="20_q3ps5"]
-[ext_resource type="Texture2D" uid="uid://3mlcqu2grcej" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/Mouse 5.png" id="21_opjsw"]
 [ext_resource type="AudioStream" uid="uid://buqs1583t6vuw" path="res://Assets/Sound/SFX/Foley/Tutorial/sfx_tutorial_foley_keyjingle_var3.mp3" id="21_tdi0n"]
+[ext_resource type="Texture2D" uid="uid://pkbt4uivo72d" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse_pressed.png" id="24_llxkm"]
+[ext_resource type="Texture2D" uid="uid://sipuj2avuffd" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse.png" id="25_8y1ie"]
 [ext_resource type="Texture2D" uid="uid://bcaouu48ouqx0" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_staircase.png" id="29_alfcp"]
 [ext_resource type="PackedScene" uid="uid://d1vovatlehj8g" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/npc_tutorial.tscn" id="31_kwirw"]
 [ext_resource type="Texture2D" uid="uid://do6hom35jnrhu" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_table.png" id="31_tpvp4"]
@@ -163,23 +160,14 @@ stream_2/weight = 1.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("17_j2pn1")
+"texture": ExtResource("24_llxkm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_ng3in")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_fmywx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_q3ps5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_opjsw")
+"texture": ExtResource("25_8y1ie")
 }],
 "loop": true,
 "name": &"default",
-"speed": 8.0
+"speed": 4.0
 }]
 
 [sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_75e5b"]
@@ -381,9 +369,11 @@ volume_db = -12.0
 bus = &"SFX"
 
 [node name="Mouse" type="AnimatedSprite3D" parent="POI"]
-transform = Transform3D(1.53, 0, 0, 0, 1.53, 0, 0, 0, 1.53, -0.0278244, 1.69179, 0.83554)
+transform = Transform3D(0.751423, 0, 0, 0, 0.751423, 0, 0, 0, 0.751423, -0.0278244, 2.71416, 0.83554)
 sorting_offset = 5.0
 sprite_frames = SubResource("SpriteFrames_62bun")
+frame = 1
+frame_progress = 0.666809
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPolyphonic_75e5b")
