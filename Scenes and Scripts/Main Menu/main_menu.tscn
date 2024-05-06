@@ -1,8 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=29 format=3 uid="uid://ducsr1iwag28u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Main Menu/main_menu.gd" id="1_3f1tb"]
 [ext_resource type="Texture2D" uid="uid://g5oqa1su2b6c" path="res://Assets/key_art.PNG" id="2_2irwl"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="2_wt0x7"]
+[ext_resource type="Texture2D" uid="uid://dy3e7gs2uw0ut" path="res://Assets/Title Screen/title_font.svg" id="3_ntd4h"]
 [ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/UI/Text Button Backrounds/menu_button_mid.png" id="11_l40h3"]
 [ext_resource type="Texture2D" uid="uid://b78qo42a06loa" path="res://Assets/UI/Text Button Backrounds/menu_button_dark.png" id="12_s4c5n"]
 [ext_resource type="Texture2D" uid="uid://cs0vi7dtksnoo" path="res://Assets/UI/Text Button Backrounds/menu_button_light.png" id="13_e66sn"]
@@ -93,7 +94,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3xisq"]
@@ -142,35 +143,10 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.71293
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 1191.0
-offset_top = 54.0
-offset_right = 2301.0
-offset_bottom = 324.0
-theme_override_colors/font_outline_color = Color(0.0681613, 0.456021, 0.56641, 1)
-theme_override_constants/outline_size = 20
-theme_override_fonts/font = ExtResource("2_wt0x7")
-theme_override_font_sizes/font_size = 100
-text = "Carl & Cari"
-
-[node name="Label2" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 1336.0
-offset_top = 170.0
-offset_right = 2333.0
-offset_bottom = 332.0
-theme_override_colors/font_outline_color = Color(0.0666667, 0.454902, 0.564706, 1)
-theme_override_constants/outline_size = 20
-theme_override_fonts/font = ExtResource("2_wt0x7")
-theme_override_font_sizes/font_size = 60
-text = "Trubel in Tierstadt"
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(1507, 241)
+scale = Vector2(0.647268, 0.647268)
+texture = ExtResource("3_ntd4h")
 
 [node name="Start" type="TextureButton" parent="."]
 offset_left = 33.0
