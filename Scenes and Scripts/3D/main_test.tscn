@@ -63,7 +63,8 @@ albedo_texture = ExtResource("4_na5hb")
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_bu88b"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_8d8lt"]
+size = Vector3(59.08, 1, 15.4632)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_grqfl"]
 albedo_texture = ExtResource("5_vdeea")
@@ -71,7 +72,8 @@ albedo_texture = ExtResource("5_vdeea")
 [sub_resource type="QuadMesh" id="QuadMesh_mw0nr"]
 size = Vector2(59, 16)
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_sgslh"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_sahrs"]
+size = Vector3(10.0164, 1, 15.8657)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tl2g7"]
 albedo_texture = ExtResource("8_g5uk2")
@@ -79,7 +81,8 @@ albedo_texture = ExtResource("8_g5uk2")
 [sub_resource type="QuadMesh" id="QuadMesh_t24k3"]
 size = Vector2(10, 16)
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_rvegi"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_rxpew"]
+size = Vector3(11.3256, 1, 15.9534)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ps745"]
 albedo_texture = ExtResource("9_1f0t3")
@@ -257,8 +260,8 @@ skeleton = NodePath("../CollisionShape3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -5)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/WallBack"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.61351)
-shape = SubResource("WorldBoundaryShape3D_bu88b")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.0893326, 3.18751, -0.00838947)
+shape = SubResource("BoxShape3D_8d8lt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallBack"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0.5)
@@ -285,8 +288,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.895, -0.356, 0)
 collision_layer = 32769
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/WallLeft"]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -29.0547, 1, 1.5)
-shape = SubResource("WorldBoundaryShape3D_sgslh")
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -27.4528, 8.43286, 0.4552)
+shape = SubResource("BoxShape3D_sahrs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallLeft"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.6141, 8.35748, 0.288007)
@@ -299,8 +302,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29, 4,
 collision_layer = 32768
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/WallRight"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.5, 1, 0.5)
-shape = SubResource("WorldBoundaryShape3D_rvegi")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.101868, 4.26485, -0.556541)
+shape = SubResource("BoxShape3D_rxpew")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallRight"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 4, 0.5)
