@@ -94,7 +94,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3xisq"]
