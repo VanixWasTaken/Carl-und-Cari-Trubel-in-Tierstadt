@@ -31,17 +31,31 @@ func move_to_target(delta):
 	#######################
 	#        Walk Animation
 	######################
-	if distance_to_target.x > 0:
-		$AnimatedSprite3D.play("walk_left")
-	if distance_to_target.x < 0:
-		$AnimatedSprite3D.play("walk_right")
-	if navigation_agent.is_target_reachable() == true:
-		if navigation_agent.distance_to_target() <= 0.3:
-			speed = 0
-			$AnimatedSprite3D.play("idle")
-			navigation_agent.target_position = global_position
-	elif navigation_agent.is_target_reachable() == false:
-		navigation_agent.target_position = navigation_agent.get_final_position()
+	if Global.character == "Carl":
+		if distance_to_target.x > 0:
+			$AnimatedSprite3D.play("carl_walk_left")
+		if distance_to_target.x < 0:
+			$AnimatedSprite3D.play("carl_walk_right")
+		if navigation_agent.is_target_reachable() == true:
+			if navigation_agent.distance_to_target() <= 0.3:
+				speed = 0
+				$AnimatedSprite3D.play("carl_idle")
+				navigation_agent.target_position = global_position
+		elif navigation_agent.is_target_reachable() == false:
+			navigation_agent.target_position = navigation_agent.get_final_position()
+
+	elif Global.character == "Cari":
+		if distance_to_target.x > 0:
+			$AnimatedSprite3D.play("cari_walk_left")
+		if distance_to_target.x < 0:
+			$AnimatedSprite3D.play("cari_walk_right")
+		if navigation_agent.is_target_reachable() == true:
+			if navigation_agent.distance_to_target() <= 0.3:
+				speed = 0
+				$AnimatedSprite3D.play("cari_idle")
+				navigation_agent.target_position = global_position
+		elif navigation_agent.is_target_reachable() == false:
+			navigation_agent.target_position = navigation_agent.get_final_position()
 
 func _input(event):
 # https://www.youtube.com/watch?v=KT06pv06Q1U Das ganze movement, versteh das alles nicht so 100 aber scheint erstmal zu klappen

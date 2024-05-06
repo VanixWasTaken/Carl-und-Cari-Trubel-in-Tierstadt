@@ -20,7 +20,7 @@ config/icon="res://Assets/Test/Player/IMG_1931.PNG"
 [autoload]
 
 Global="*res://Scenes and Scripts/global.gd"
-MusicController="*res://Scenes and Scripts/MusicController.tscn"
+MusicController="*res://Scenes and Scripts/music_controller.tscn"
 
 [display]
 
