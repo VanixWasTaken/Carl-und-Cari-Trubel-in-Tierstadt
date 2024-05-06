@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=65 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/3D/player_test.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/3D/main_test.gd" id="1_trbh3"]
@@ -133,12 +133,6 @@ stream_1/stream = ExtResource("17_wv2rx")
 stream_1/weight = 1.0
 stream_2/stream = ExtResource("18_6228x")
 stream_2/weight = 1.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkhka"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vu4x2"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_82xm3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ccovc"]
 size = Vector3(3.4883, 1, 3.18408)
@@ -345,25 +339,6 @@ max_db = -3.0
 autoplay = true
 max_distance = 40.0
 bus = &"SFX"
-
-[node name="CPUParticles3D" type="CPUParticles3D" parent="POI"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42528, 0)
-material_override = SubResource("StandardMaterial3D_tkhka")
-material_overlay = SubResource("StandardMaterial3D_vu4x2")
-emitting = false
-amount = 15
-one_shot = true
-preprocess = 0.5
-mesh = SubResource("QuadMesh_82xm3")
-direction = Vector3(0, 1, 0)
-spread = 34.55
-gravity = Vector3(-10, -10, -10)
-initial_velocity_min = 20.0
-initial_velocity_max = 25.0
-linear_accel_min = -38.38
-linear_accel_max = -22.22
-angle_max = 276.4
-color = Color(1, 0.384698, 0.991142, 1)
 
 [node name="POI Area" type="Area3D" parent="POI"]
 collision_layer = 9
