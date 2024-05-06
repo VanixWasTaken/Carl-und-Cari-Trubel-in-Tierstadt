@@ -10,7 +10,7 @@ func _process(delta):
 
 # Input for usability
 func _on_start_button_up():
-	get_tree().change_scene_to_file("res://Scenes and Scripts/Menus/Character Selection/character_choice.tscn")
+	get_tree().change_scene_to_file("res://Scenes and Scripts/Menus/Character Selection/character_selection.tscn")
 
 func _on_options_button_up():
 	$OptionsMenu.visible = true

@@ -13,8 +13,8 @@ var PRESET1
 var PRESET2
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
-var Carl = preload("res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG")
-var Cari = preload("res://Assets/Art/Characters/Cari/Headshot/icon_cari1.PNG")
+var Carl = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
+var Cari = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
 
 ##########################################################################################
 
