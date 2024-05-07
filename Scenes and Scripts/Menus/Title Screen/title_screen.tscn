@@ -70,7 +70,7 @@ offset_right = 2035.0
 offset_bottom = -255.0
 
 [node name="Title" type="Sprite2D" parent="."]
-position = Vector2(945, 353)
+position = Vector2(931, 444)
 texture = ExtResource("11_vjaha")
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

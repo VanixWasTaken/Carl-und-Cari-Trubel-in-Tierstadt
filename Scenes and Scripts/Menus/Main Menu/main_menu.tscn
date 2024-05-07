@@ -1,9 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=30 format=3 uid="uid://ducsr1iwag28u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Main Menu/main_menu.gd" id="1_3f1tb"]
 [ext_resource type="Texture2D" uid="uid://g5oqa1su2b6c" path="res://Assets/Art/UI/Menus/Main Menu/key_art.PNG" id="2_2irwl"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="2_wt0x7"]
 [ext_resource type="Texture2D" uid="uid://dy3e7gs2uw0ut" path="res://Assets/Art/UI/Menus/Title Screen/title_font.svg" id="3_ntd4h"]
+[ext_resource type="Texture2D" uid="uid://bfajlu0njqmg5" path="res://Assets/Art/UI/Menus/Title Screen/title_font_background.png" id="4_i4qrr"]
 [ext_resource type="PackedScene" uid="uid://c167vkgb61a1m" path="res://Scenes and Scripts/Menus/Credits/credits.tscn" id="8_e5ggp"]
 [ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/Art/UI/Buttons/menu_button_mid.png" id="11_l40h3"]
 [ext_resource type="Texture2D" uid="uid://b78qo42a06loa" path="res://Assets/Art/UI/Buttons/menu_button_dark.png" id="12_s4c5n"]
@@ -144,7 +145,18 @@ frame = 2
 frame_progress = 0.71293
 
 [node name="Title" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1507, 241)
+scale = Vector2(0.647268, 0.647268)
+texture = ExtResource("3_ntd4h")
+
+[node name="UnbenanntesProjekt(22)" type="Sprite2D" parent="."]
+position = Vector2(1526.82, 307.725)
+scale = Vector2(0.798274, 1.22634)
+texture = ExtResource("4_i4qrr")
+
+[node name="Title2" type="Sprite2D" parent="."]
+position = Vector2(1518.08, 291.867)
 scale = Vector2(0.647268, 0.647268)
 texture = ExtResource("3_ntd4h")
 

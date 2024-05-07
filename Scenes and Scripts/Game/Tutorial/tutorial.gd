@@ -30,10 +30,12 @@ func _process(delta):
 	if $Player.position.x <= 19.5 and $Player.position.x >= -19.5:
 		$Camera3D.position.x = $Player.position.x
 	if Global.open_tutorial_door:
-		$Objects/Door.frame = 1
-		$Objects/Door/Area3D/CollisionShape3D.position.z = 27
+		$Objects/Door.rotation = (Vector3(0, 1.5707963268, 0))
+		$Objects/Door.position = (Vector3(25, 6, -1))
+		$Objects/DoorArea3D.position.z = -12
+		$NavigationRegion3D/Objects/DoorAfterOpen/CollisionShape3D.disabled = false
 
-func _on_area_3d_body_entered(body):
+func _on_door_area_3d_body_entered(body):
 	if body.get_name() == "Player":
 		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Map/map.tscn")
 
@@ -91,3 +93,6 @@ func _on_timer_timeout():
 	
 	$Barks/Timer.wait_time = randf_range(10, 20)
 	$Barks/Timer.start()
+
+
+
