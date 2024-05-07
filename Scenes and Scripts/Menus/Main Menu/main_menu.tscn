@@ -144,18 +144,12 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.71293
 
-[node name="Title" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1507, 241)
-scale = Vector2(0.647268, 0.647268)
-texture = ExtResource("3_ntd4h")
-
-[node name="UnbenanntesProjekt(22)" type="Sprite2D" parent="."]
+[node name="TitleBackground" type="Sprite2D" parent="."]
 position = Vector2(1526.82, 307.725)
 scale = Vector2(0.798274, 1.22634)
 texture = ExtResource("4_i4qrr")
 
-[node name="Title2" type="Sprite2D" parent="."]
+[node name="Title" type="Sprite2D" parent="."]
 position = Vector2(1518.08, 291.867)
 scale = Vector2(0.647268, 0.647268)
 texture = ExtResource("3_ntd4h")
@@ -176,7 +170,9 @@ offset_left = 48.0
 offset_top = 48.0
 offset_right = 862.0
 offset_bottom = 262.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.635294, 0.329412, 1)
+theme_override_colors/font_outline_color = Color(0.870588, 0.0980392, 0.341176, 1)
+theme_override_constants/outline_size = 30
 theme_override_fonts/font = ExtResource("2_wt0x7")
 theme_override_font_sizes/font_size = 107
 text = "START"
@@ -199,7 +195,9 @@ offset_left = 49.0
 offset_top = 49.0
 offset_right = 862.0
 offset_bottom = 265.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.635294, 0.329412, 1)
+theme_override_colors/font_outline_color = Color(0.870588, 0.0980392, 0.341176, 1)
+theme_override_constants/outline_size = 30
 theme_override_fonts/font = ExtResource("2_wt0x7")
 theme_override_font_sizes/font_size = 107
 text = "EINSTELLUNGEN"
@@ -222,7 +220,9 @@ offset_left = 48.0
 offset_top = 45.0
 offset_right = 865.0
 offset_bottom = 263.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.635294, 0.329412, 1)
+theme_override_colors/font_outline_color = Color(0.870588, 0.0980392, 0.341176, 1)
+theme_override_constants/outline_size = 30
 theme_override_fonts/font = ExtResource("2_wt0x7")
 theme_override_font_sizes/font_size = 107
 text = "MITWIRKENDE"
@@ -245,7 +245,9 @@ offset_left = 49.0
 offset_top = 43.0
 offset_right = 862.0
 offset_bottom = 266.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.635294, 0.329412, 1)
+theme_override_colors/font_outline_color = Color(0.870588, 0.0980392, 0.341176, 1)
+theme_override_constants/outline_size = 30
 theme_override_fonts/font = ExtResource("2_wt0x7")
 theme_override_font_sizes/font_size = 107
 text = "SPIEL BEENDEN"

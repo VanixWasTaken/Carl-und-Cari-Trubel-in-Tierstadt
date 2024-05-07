@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/job_notes.gd" id="9_vqn8c"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/exit_button.gd" id="10_0oi3s"]
 [ext_resource type="Texture2D" uid="uid://cch5cjlssxc7x" path="res://Assets/Art/UI/HUD/Map/UI_hud.PNG" id="10_dyp1j"]
-[ext_resource type="Texture2D" uid="uid://dgea2mleptd0" path="res://Assets/Art/UI/Buttons/UI_inventory_icon.PNG" id="11_8qsr6"]
+[ext_resource type="Texture2D" uid="uid://ct5jp2pxvyrqc" path="res://Assets/Art/UI/Buttons/UI_inventory_icon.PNG" id="11_8qsr6"]
 [ext_resource type="Texture2D" uid="uid://dkm78622qqie7" path="res://Assets/Art/UI/Buttons/exit_button.png" id="11_8vqrx"]
 [ext_resource type="Texture2D" uid="uid://cm4hcr8fw4k5a" path="res://Assets/Art/UI/HUD/Map/job_note1.PNG" id="13_2x76a"]
 [ext_resource type="PackedScene" uid="uid://daswfhvjsa7jh" path="res://Scenes and Scripts/Game/Player/player.tscn" id="14_0uuvf"]
