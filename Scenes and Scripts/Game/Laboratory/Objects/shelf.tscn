@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b53g660kym05b"]
+
+[ext_resource type="Texture2D" uid="uid://d3kmgnim1tnmw" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_shelf.png" id="1_eqw7b"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/shelf.gd" id="2_3d15d"]
+
+[node name="Shelf" type="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1017, 9.93146, -3.29207)
+texture = ExtResource("1_eqw7b")
+script = ExtResource("2_3d15d")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
+polygon = PackedVector2Array(-3.57688, 3.50114, -4.69259, 1.33262, -5.22231, -3.09822, 5.0544, -3.44073, 5.50472, 0.78681, 3.55605, 3.57305)
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

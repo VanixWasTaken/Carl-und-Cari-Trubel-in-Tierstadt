@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx0gnhwrby4rh"]
+
+[ext_resource type="Texture2D" uid="uid://1ktwkrfraby6" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_sink.png" id="1_ci2pc"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/sink.gd" id="2_deg83"]
+
+[node name="Sink" type="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.9957, 5.02609, 0)
+texture = ExtResource("1_ci2pc")
+script = ExtResource("2_deg83")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
+polygon = PackedVector2Array(-3.15161, 5.02439, 2.21003, 5.18676, 2.30163, 1.16954, 1.20933, 0.656799, 2.78063, -0.868515, 2.66471, -3.71421, 0.593206, -4.69855, -3.91314, -1.38624, -3.60625, 1.09292, -1.92515, 2.00932, -3.37149, 3.1708)
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

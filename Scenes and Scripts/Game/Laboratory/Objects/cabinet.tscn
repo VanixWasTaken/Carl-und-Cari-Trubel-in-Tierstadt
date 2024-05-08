@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7vej1yq0wues"]
+
+[ext_resource type="Texture2D" uid="uid://bf74d53mvr50a" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet.png" id="1_56ua0"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/cabinet.gd" id="2_ii3qh"]
+
+[node name="Cabinet" type="Sprite3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, -0.0368061, 7.37877, -3.46081)
+texture = ExtResource("1_56ua0")
+script = ExtResource("2_ii3qh")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
+polygon = PackedVector2Array(1.49505, 0.308689, 1.71532, 2.46439, 1.55128, 2.84696, -0.615936, 2.92163, -1.36965, 2.29657, -1.85809, -3.43638, 1.53137, -3.53038)
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

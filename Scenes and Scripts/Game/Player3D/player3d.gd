@@ -14,9 +14,6 @@ func _process(delta):
 		return
 	move_to_target(delta)
 
-	
-
-	
 
 func move_to_target(delta):
 	navigation_agent.target_desired_distance = 0.2

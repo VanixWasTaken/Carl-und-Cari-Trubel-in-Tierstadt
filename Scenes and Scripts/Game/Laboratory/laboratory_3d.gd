@@ -1,5 +1,9 @@
 extends Node3D
 
+var mouse_on = false
+var outline_shader = preload("res://Shader/outline.tres")
+var no_shader = preload("res://Shader/no_shader.tres")
+
 func _ready():
 	var playback: AudioStreamPlaybackPolyphonic
 	$Ambience.play()
@@ -17,3 +21,4 @@ func _process(delta):
 func _on_door_area_3d_body_entered(body):
 	if body.get_name() == "Player":
 		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Map/map.tscn")
+

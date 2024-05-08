@@ -78,7 +78,7 @@ texture = ExtResource("1_pn286")
 [node name="Laboratory Building" type="Node2D" parent="."]
 position = Vector2(263, 127)
 script = ExtResource("2_e7gsj")
-scene_name = "res://Scenes and Scripts/Game/Laboratory/laboratory.tscn"
+scene_name = "res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Laboratory Building"]
 position = Vector2(15, 15)

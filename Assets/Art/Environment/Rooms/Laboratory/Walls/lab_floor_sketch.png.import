@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm275h5fsqja2"
-path.s3tc="res://.godot/imported/menu_button_mid.png-0ccb4b9a0bb665a995037bbc3c3d492a.s3tc.ctex"
+uid="uid://cgvodtne4hswt"
+path.s3tc="res://.godot/imported/lab_floor_sketch.png-6111e094e6f29c7322ddcca191c6b65d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Art/UI/Buttons/menu_button_mid.png"
-dest_files=["res://.godot/imported/menu_button_mid.png-0ccb4b9a0bb665a995037bbc3c3d492a.s3tc.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_floor_sketch.png"
+dest_files=["res://.godot/imported/lab_floor_sketch.png-6111e094e6f29c7322ddcca191c6b65d.s3tc.ctex"]
 
 [params]
 

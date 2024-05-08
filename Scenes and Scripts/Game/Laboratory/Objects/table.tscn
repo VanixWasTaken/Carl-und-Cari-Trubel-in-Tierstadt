@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://caxx8cohbsnx2"]
+
+[ext_resource type="Texture2D" uid="uid://c7x51ljlpm8al" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_table.png" id="1_11xg1"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/table.gd" id="2_uoknu"]
+
+[node name="Table" type="Sprite3D"]
+transform = Transform3D(3.16, 0, 0, 0, 2.31, 0, 0, 0, 2, 5.35779, 4.01622, 2.43743)
+texture = ExtResource("1_11xg1")
+script = ExtResource("2_uoknu")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
+polygon = PackedVector2Array(-0.162124, 0.709039, 1.7446, 0.680018, 2.27973, -0.200396, 2.31297, -0.82103, 1.98187, -0.783323, 1.93139, -1.55066, -1.61646, -1.47739, -1.50602, -0.469119, -2.00092, -0.523554, -2.12675, -0.0196745, -1.50425, 0.747739)
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]
