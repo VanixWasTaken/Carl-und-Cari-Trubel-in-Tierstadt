@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://fggcy6mftilk"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/npc_tutorial.gd" id="1_nlbif"]
+[ext_resource type="Texture2D" uid="uid://t7s3m88vvxfh" path="res://Assets/Art/Characters/Cari/Full Body/cari_animation_walk_spritesheet.png" id="2_5qg1q"]
+[ext_resource type="Texture2D" uid="uid://bsr6d5agqlws2" path="res://Assets/Art/Characters/Carl/Full Body/carl_animation_walk_spritesheet.png" id="3_04w8o"]
+[ext_resource type="PackedScene" uid="uid://raesadnfh01o" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial.tscn" id="4_j5f3j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psdav"]
+atlas = ExtResource("2_5qg1q")
+region = Rect2(2560, 639, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gptn4"]
+atlas = ExtResource("2_5qg1q")
+region = Rect2(0, 0, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lil2w"]
+atlas = ExtResource("3_04w8o")
+region = Rect2(0, 0, 320, 639)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hli72"]
+atlas = ExtResource("3_04w8o")
+region = Rect2(0, 639, 320, 639)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1pjmw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psdav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gptn4")
+}],
+"loop": true,
+"name": &"Cari",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lil2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hli72")
+}],
+"loop": true,
+"name": &"Carl",
+"speed": 1.0
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xvexm"]
+radius = 4.04568
+
+[node name="NPC Tutorial" type="Node3D"]
+script = ExtResource("1_nlbif")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.48504, 0)
+sprite_frames = SubResource("SpriteFrames_1pjmw")
+animation = &"Cari"
+autoplay = "Cari"
+
+[node name="DialogTutorial" parent="." instance=ExtResource("4_j5f3j")]
+
+[node name="DialogeArea3D" type="Area3D" parent="."]
+collision_layer = 9
+collision_mask = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DialogeArea3D"]
+shape = SubResource("CylinderShape3D_xvexm")

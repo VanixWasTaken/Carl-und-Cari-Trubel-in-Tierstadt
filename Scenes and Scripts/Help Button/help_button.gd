@@ -22,9 +22,9 @@ func _ready():
 		help = tutorial_help
 	
 func _process(delta):
-	if menu_open || mouse_inside || Global.dialog_playing:
+	if menu_open || mouse_inside || Global.dialog_playing || Global.cutscene_playing:
 		Global.moving_allowed = false
-	elif !mouse_inside && !Global.dialog_playing:
+	elif !mouse_inside && !Global.dialog_playing && !Global.cutscene_playing:
 		Global.moving_allowed = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
