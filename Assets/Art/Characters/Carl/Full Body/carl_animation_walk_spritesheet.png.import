@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfott5tyl1hi2"
-path="res://.godot/imported/tutorial_staircase.png-80f1d9e7dc4e39a2f0cad6949b9f2313.ctex"
+uid="uid://bsr6d5agqlws2"
+path="res://.godot/imported/carl_animation_walk_spritesheet.png-1848f8553b35ef11c7ae7e2e9abb08a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_staircase.png"
-dest_files=["res://.godot/imported/tutorial_staircase.png-80f1d9e7dc4e39a2f0cad6949b9f2313.ctex"]
+source_file="res://Assets/Art/Characters/Carl/Full Body/carl_animation_walk_spritesheet.png"
+dest_files=["res://.godot/imported/carl_animation_walk_spritesheet.png-1848f8553b35ef11c7ae7e2e9abb08a9.ctex"]
 
 [params]
 
