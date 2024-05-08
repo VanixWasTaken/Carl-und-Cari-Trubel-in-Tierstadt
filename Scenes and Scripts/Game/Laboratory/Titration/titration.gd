@@ -13,6 +13,7 @@ func _ready():
 func _process(delta):
 	if ready_to_pour and Input.is_action_just_pressed("left_click"):
 		
+		######################## HANDLES THE POURING ANIMATIONS OF THE CLAMP ###########################
 		if tube_counter <= 3:
 			if tube_counter == 1:
 				$PouringClamp/PouringClampAnim.play("pouring_green")
@@ -23,9 +24,10 @@ func _process(delta):
 			else:
 				$PouringClamp.visible = false
 		
-		
+		# Timer duh
 		await get_tree().create_timer(3).timeout
 		
+		# makes invisibile ooooo
 		$PouringClamp.visible = false
 		
 		############################## HANDLES THE JUG AND STAND SPRITES ################################
@@ -71,6 +73,8 @@ func _on_clamp_pouring_time():
 			$PouringClamp/PouringClampAnim.play("idle_orange")
 			$Stand/StandArea/Glasses.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtubes_stage7.PNG")
 			ready_to_pour = true
+		else:
+			$Clamp.visible = true
 	else:
 		$Clamp.visible = true
 	
