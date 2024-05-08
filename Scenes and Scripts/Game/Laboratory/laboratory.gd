@@ -8,7 +8,7 @@ var outline_shader = preload("res://Shader/outline.tres")
 var no_shader = preload("res://Shader/no_shader.tres")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	MusicController._play_music("mayhem", "laboratory", -35)
+	MusicController._play_music("titration_trap", "laboratory", -25)
 	await get_tree().create_timer(0.1).timeout
 	text_text = $Dialoguebox/Text
 	name_text = $Dialoguebox/Name
