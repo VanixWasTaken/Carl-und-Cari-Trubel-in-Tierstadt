@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dybgu3xutq1sa"
-path="res://.godot/imported/minigame2_testtubeholder.png-af5a7ad98d279825b337e843642a4e7f.ctex"
+uid="uid://de2qkipx58pyo"
+path="res://.godot/imported/minigame2_testtube_green.png-e2e305378540d2bcee5d810c8b556791.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_testtubeholder.png"
-dest_files=["res://.godot/imported/minigame2_testtubeholder.png-af5a7ad98d279825b337e843642a4e7f.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtube_green.png"
+dest_files=["res://.godot/imported/minigame2_testtube_green.png-e2e305378540d2bcee5d810c8b556791.ctex"]
 
 [params]
 

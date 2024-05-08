@@ -1,0 +1,161 @@
+[gd_scene load_steps=22 format=3 uid="uid://dfm6sf40klc1x"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/titration.gd" id="1_rdept"]
+[ext_resource type="Texture2D" uid="uid://r82vd54v48ed" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG" id="1_tyn2s"]
+[ext_resource type="Texture2D" uid="uid://vw8qofpwgyb6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_phscale.png" id="2_e2340"]
+[ext_resource type="Texture2D" uid="uid://b4toblcow5vk5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_arrow.png" id="3_gdcxm"]
+[ext_resource type="Texture2D" uid="uid://b3al8u2mvobig" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigames2_testtuberag.png" id="4_gt4bg"]
+[ext_resource type="Texture2D" uid="uid://c17na0m652jpr" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtubes_stage1.PNG" id="6_jpfr7"]
+[ext_resource type="Texture2D" uid="uid://g0kefuwfgve4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Jug/minigame2_glass_stage1.png" id="6_qaj4p"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/clamp.gd" id="7_0ec6f"]
+[ext_resource type="Texture2D" uid="uid://dybgu3xutq1sa" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Clamp/minigame2_testtubeholder.png" id="7_cionp"]
+[ext_resource type="Texture2D" uid="uid://de2qkipx58pyo" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtube_green.png" id="9_typ40"]
+[ext_resource type="Texture2D" uid="uid://dd3f74o1r7sf7" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtube_orange.png" id="11_2kycb"]
+[ext_resource type="Texture2D" uid="uid://b5w5nu1jj1we6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtube_purple.png" id="12_7sn8v"]
+[ext_resource type="Texture2D" uid="uid://0mgs7rtsoy5j" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Green/minigame2_testtubeholder_green_anim1.PNG" id="13_8tu8w"]
+[ext_resource type="Texture2D" uid="uid://vwxdh1orsgmi" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Green/minigame2_testtubeholder_green_anim2.PNG" id="14_d0ejp"]
+[ext_resource type="Texture2D" uid="uid://uf7rld20e5b5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Orange/minigame2_testtubeholder_orange_anim1.PNG" id="15_ovnp4"]
+[ext_resource type="Texture2D" uid="uid://cgsc4yi27gqc0" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Orange/minigame2_testtubeholder_orange_anim2.PNG" id="16_5swtm"]
+[ext_resource type="Texture2D" uid="uid://gibiwr2efchp" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Purple/minigame2_testtubeholder_purple_anim1.PNG" id="17_frm04"]
+[ext_resource type="Texture2D" uid="uid://bh8r22b5qh00s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Purple/minigame2_testtubeholder_purple_anim2.PNG" id="18_ueop8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_op731"]
+size = Vector2(443, 376)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_en00i"]
+radius = 47.5384
+height = 494.842
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ui1i3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_typ40")
+}],
+"loop": true,
+"name": &"idle_green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_2kycb")
+}],
+"loop": true,
+"name": &"idle_orange",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_7sn8v")
+}],
+"loop": true,
+"name": &"idle_purple",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"no",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_8tu8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d0ejp")
+}],
+"loop": true,
+"name": &"pouring_green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ovnp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5swtm")
+}],
+"loop": true,
+"name": &"pouring_orange",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_frm04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ueop8")
+}],
+"loop": true,
+"name": &"pouring_purple",
+"speed": 5.0
+}]
+
+[node name="Titration" type="Node2D"]
+script = ExtResource("1_rdept")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.419813, 0.419813, 0.419813, 1)
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_tyn2s")
+
+[node name="PH-Scale" type="Node2D" parent="."]
+position = Vector2(1714, 311)
+
+[node name="Glass" type="Sprite2D" parent="PH-Scale"]
+texture = ExtResource("2_e2340")
+
+[node name="Arrow" type="Sprite2D" parent="PH-Scale"]
+texture = ExtResource("3_gdcxm")
+
+[node name="Stand" type="Node2D" parent="."]
+position = Vector2(1495, 842)
+
+[node name="StandArea" type="Area2D" parent="Stand"]
+
+[node name="Stand" type="Sprite2D" parent="Stand/StandArea"]
+texture = ExtResource("4_gt4bg")
+
+[node name="Glasses" type="Sprite2D" parent="Stand/StandArea"]
+texture = ExtResource("6_jpfr7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand/StandArea"]
+position = Vector2(3.5, -7)
+shape = SubResource("RectangleShape2D_op731")
+
+[node name="Jug" type="Node2D" parent="."]
+position = Vector2(404, 809)
+
+[node name="Jug" type="Sprite2D" parent="Jug"]
+texture = ExtResource("6_qaj4p")
+
+[node name="TitrationTube" type="Sprite2D" parent="Jug"]
+
+[node name="Clamp" type="Node2D" parent="."]
+position = Vector2(938, 965)
+script = ExtResource("7_0ec6f")
+
+[node name="ClampArea" type="Area2D" parent="Clamp"]
+
+[node name="Clamp" type="Sprite2D" parent="Clamp/ClampArea"]
+texture = ExtResource("7_cionp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clamp/ClampArea"]
+position = Vector2(4, -5)
+rotation = -1.309
+shape = SubResource("CapsuleShape2D_en00i")
+
+[node name="PouringClamp" type="Node2D" parent="."]
+visible = false
+position = Vector2(617, 352)
+
+[node name="PouringClampAnim" type="AnimatedSprite2D" parent="PouringClamp"]
+sprite_frames = SubResource("SpriteFrames_ui1i3")
+animation = &"no"
+
+[connection signal="pouring_time" from="Clamp" to="." method="_on_clamp_pouring_time"]
+[connection signal="area_entered" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_area_entered"]
+[connection signal="area_exited" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_area_exited"]
+[connection signal="mouse_entered" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_mouse_entered"]
+[connection signal="mouse_exited" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_mouse_exited"]

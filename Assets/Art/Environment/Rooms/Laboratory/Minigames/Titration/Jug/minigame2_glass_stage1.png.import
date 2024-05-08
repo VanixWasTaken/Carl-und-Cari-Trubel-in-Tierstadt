@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhq4ah3p7lopg"
-path="res://.godot/imported/minigame2_glass_stage2.png-879dc264c45793752ab8cea1fa3a58c7.ctex"
+uid="uid://g0kefuwfgve4"
+path="res://.godot/imported/minigame2_glass_stage1.png-fbcb864f3c8918aba22b5bcd6366cc81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_glass_stage2.png"
-dest_files=["res://.godot/imported/minigame2_glass_stage2.png-879dc264c45793752ab8cea1fa3a58c7.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Jug/minigame2_glass_stage1.png"
+dest_files=["res://.godot/imported/minigame2_glass_stage1.png-fbcb864f3c8918aba22b5bcd6366cc81.ctex"]
 
 [params]
 
