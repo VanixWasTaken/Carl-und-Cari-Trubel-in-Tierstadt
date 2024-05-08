@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dpxicxp01l3mx" path="res://Assets/Art/Characters/Carl/Full Body/carl_full_body.png" id="4_ds3o0"]
 [ext_resource type="Texture2D" uid="uid://b4ex5e210hbfm" path="res://Assets/Art/Characters/Carl/Full Body/carl_fullbody_highlight.PNG" id="5_l0e11"]
 [ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/Art/UI/Buttons/menu_button_mid.png" id="6_23f7r"]
-[ext_resource type="Texture2D" uid="uid://c8ry4iqpetpaf" path="res://Assets/Art/Characters/Cari/Full Body/cari_fullbody.png.PNG" id="7_qh14g"]
+[ext_resource type="Texture2D" uid="uid://b0i1cgm2qkvhx" path="res://Assets/Art/Characters/Cari/Full Body/cari_fullbody.png" id="7_qh14g"]
 [ext_resource type="Texture2D" uid="uid://tjvo1bj0vtoi" path="res://Assets/Art/Characters/Cari/Full Body/cari_fullbody_highlight.png" id="8_f3s0g"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="9_5o4jd"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="10_jit2i"]

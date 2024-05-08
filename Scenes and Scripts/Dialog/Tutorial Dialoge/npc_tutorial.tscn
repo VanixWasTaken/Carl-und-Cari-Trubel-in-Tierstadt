@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://d1vovatlehj8g"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/npc_tutorial.gd" id="1_yadtb"]
-[ext_resource type="Texture2D" uid="uid://dgwkyr8rfx646" path="res://Assets/Art/Characters/Cari/Full Body/cari_animation_walk_spritesheet.png.PNG" id="2_m0q8h"]
-[ext_resource type="Texture2D" uid="uid://vak1rr1ahdoj" path="res://Assets/Art/Characters/Carl/Full Body/carl_animation_walk_spritesheet.png.PNG" id="3_qlsiw"]
+[ext_resource type="Texture2D" uid="uid://t7s3m88vvxfh" path="res://Assets/Art/Characters/Cari/Full Body/cari_animation_walk_spritesheet.png" id="2_m0q8h"]
+[ext_resource type="Texture2D" uid="uid://bsr6d5agqlws2" path="res://Assets/Art/Characters/Carl/Full Body/carl_animation_walk_spritesheet.png" id="3_qlsiw"]
 [ext_resource type="PackedScene" uid="uid://raesadnfh01o" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial.tscn" id="3_s786n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_psdav"]

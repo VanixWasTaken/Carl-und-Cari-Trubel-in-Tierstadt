@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://66h31lf2a4gu"]
 
-[ext_resource type="Texture2D" uid="uid://bxnewjg8engq" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_key.png" id="1_ij6fv"]
-[ext_resource type="Texture2D" uid="uid://by05px4wad7xa" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_key2.png" id="2_tln07"]
+[ext_resource type="Texture2D" uid="uid://bx6dcpturysy0" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_key.png" id="1_ij6fv"]
+[ext_resource type="Texture2D" uid="uid://bwouojaaq2ry8" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_key2.png" id="2_tln07"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hjspa"]
 animations = [{

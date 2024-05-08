@@ -50,7 +50,7 @@ script = ExtResource("1_pxkst")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_hb2ux")
-animation = &"carl_animation"
+animation = &"cari_animation"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
