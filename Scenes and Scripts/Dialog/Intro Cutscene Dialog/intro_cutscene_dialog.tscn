@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://xx6ngym7oxkc"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Intro Cutscene Dialog/intro_cutscene_dialog.gd" id="1_dv8nx"]
-[ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/weiter_button.png" id="2_vyq6u"]
-[ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/weiter_button_dark.png" id="3_e6d7k"]
-[ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/weiter_button_light.png" id="4_xu5eq"]
+[ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_vyq6u"]
+[ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="3_e6d7k"]
+[ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="4_xu5eq"]
 
 [node name="DialogTutorial" type="CanvasLayer"]
 

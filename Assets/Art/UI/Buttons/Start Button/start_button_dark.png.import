@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct3w6scrg08y8"
-path="res://.godot/imported/weiter_button_light.png-f8ab048ab7c4bc585dc3347d218aa968.ctex"
+uid="uid://178887epa2g4"
+path="res://.godot/imported/start_button_dark.png-754eea9225f9f940abc6281b01c4a495.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/UI/Buttons/weiter_button_light.png"
-dest_files=["res://.godot/imported/weiter_button_light.png-f8ab048ab7c4bc585dc3347d218aa968.ctex"]
+source_file="res://Assets/Art/UI/Buttons/Start Button/start_button_dark.png"
+dest_files=["res://.godot/imported/start_button_dark.png-754eea9225f9f940abc6281b01c4a495.ctex"]
 
 [params]
 

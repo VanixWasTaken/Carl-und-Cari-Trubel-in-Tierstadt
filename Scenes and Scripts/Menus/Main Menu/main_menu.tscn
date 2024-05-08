@@ -1,8 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=38 format=3 uid="uid://ducsr1iwag28u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Main Menu/main_menu.gd" id="1_3f1tb"]
 [ext_resource type="Texture2D" uid="uid://g5oqa1su2b6c" path="res://Assets/Art/UI/Menus/Main Menu/key_art.PNG" id="2_2irwl"]
-[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="2_wt0x7"]
 [ext_resource type="Texture2D" uid="uid://clcn17unia2fj" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_001.png" id="3_1kg1d"]
 [ext_resource type="Texture2D" uid="uid://dy3e7gs2uw0ut" path="res://Assets/Art/UI/Menus/Title Screen/title_font.svg" id="3_ntd4h"]
 [ext_resource type="Texture2D" uid="uid://bm7gcry1ns620" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_002.png" id="4_h203a"]
@@ -15,15 +14,24 @@
 [ext_resource type="Texture2D" uid="uid://6y6y5emfkd32" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_007.png" id="9_2ahhp"]
 [ext_resource type="Texture2D" uid="uid://dr2bfsjonrajn" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_008.png" id="10_drrmn"]
 [ext_resource type="Texture2D" uid="uid://dbb2ejkecaweq" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_009.png" id="11_5twst"]
-[ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/Art/UI/Buttons/menu_button_mid.png" id="11_l40h3"]
-[ext_resource type="Texture2D" uid="uid://b78qo42a06loa" path="res://Assets/Art/UI/Buttons/menu_button_dark.png" id="12_s4c5n"]
-[ext_resource type="Texture2D" uid="uid://cs0vi7dtksnoo" path="res://Assets/Art/UI/Buttons/menu_button_light.png" id="13_e66sn"]
+[ext_resource type="Texture2D" uid="uid://blllg5vmvvl41" path="res://Assets/Art/UI/Buttons/Start Button/start_button.png" id="14_5avqw"]
 [ext_resource type="PackedScene" uid="uid://ex8idjxdm1hh" path="res://Scenes and Scripts/Menus/Options/options.tscn" id="15_nlixp"]
+[ext_resource type="Texture2D" uid="uid://178887epa2g4" path="res://Assets/Art/UI/Buttons/Start Button/start_button_dark.png" id="15_w52nx"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="16_ibkjm"]
+[ext_resource type="Texture2D" uid="uid://dgogerhcje2p5" path="res://Assets/Art/UI/Buttons/Start Button/start_button_light.png" id="16_woyou"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="17_5xys2"]
+[ext_resource type="Texture2D" uid="uid://2qwwdqwx72f6" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button.png" id="17_66u7n"]
+[ext_resource type="Texture2D" uid="uid://dhfx6ap4mxj60" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button_dark.png" id="18_4fchb"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="18_8hw22"]
+[ext_resource type="Texture2D" uid="uid://b6a5jl8gfvl6d" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button_light.png" id="19_jhnkh"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="19_v2mri"]
+[ext_resource type="Texture2D" uid="uid://bdi0pp3q7rxdf" path="res://Assets/Art/UI/Buttons/Mitwirkende Button/mitwirkende_button.png" id="20_ltb8o"]
+[ext_resource type="Texture2D" uid="uid://bmugy1s3pg22p" path="res://Assets/Art/UI/Buttons/Mitwirkende Button/mitwirkende_button_dark.png" id="21_m1fq5"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="21_w12sd"]
+[ext_resource type="Texture2D" uid="uid://crvb4tyvfd5qq" path="res://Assets/Art/UI/Buttons/Mitwirkende Button/mitwirkende_button_light.png" id="22_72qen"]
+[ext_resource type="Texture2D" uid="uid://vwbp2p85gxum" path="res://Assets/Art/UI/Buttons/Spiel Beenden Button/spiel_beenden_button.png" id="23_boxkr"]
+[ext_resource type="Texture2D" uid="uid://nn4e73tfqro5" path="res://Assets/Art/UI/Buttons/Spiel Beenden Button/spiel_beenden_button_dark.png" id="24_488dv"]
+[ext_resource type="Texture2D" uid="uid://cnxktqflk3e60" path="res://Assets/Art/UI/Buttons/Spiel Beenden Button/spiel_beenden_button_light.png" id="25_5uc03"]
 
 [sub_resource type="Animation" id="Animation_gk0aj"]
 resource_name = "new_animation"
@@ -142,24 +150,9 @@ offset_top = 100.0
 offset_right = 945.0
 offset_bottom = 407.0
 scale = Vector2(0.65, 0.65)
-texture_normal = ExtResource("11_l40h3")
-texture_pressed = ExtResource("12_s4c5n")
-texture_hover = ExtResource("13_e66sn")
-
-[node name="Label" type="Label" parent="Start"]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 48.0
-offset_right = 862.0
-offset_bottom = 262.0
-theme_override_colors/font_color = Color(1, 0.635294, 0.329412, 1)
-theme_override_colors/font_outline_color = Color(0.870588, 0.0980392, 0.341176, 1)
-theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("2_wt0x7")
-theme_override_font_sizes/font_size = 107
-text = "START"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture_normal = ExtResource("14_5avqw")
+texture_pressed = ExtResource("15_w52nx")
+texture_hover = ExtResource("16_woyou")
 
 [node name="Options" type="TextureButton" parent="."]
 offset_left = 33.0
@@ -167,24 +160,9 @@ offset_top = 335.0
 offset_right = 945.0
 offset_bottom = 642.0
 scale = Vector2(0.65, 0.65)
-texture_normal = ExtResource("11_l40h3")
-texture_pressed = ExtResource("12_s4c5n")
-texture_hover = ExtResource("13_e66sn")
-
-[node name="Label" type="Label" parent="Options"]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 49.0
-offset_right = 862.0
-offset_bottom = 265.0
-theme_override_colors/font_color = Color(1, 0.635294, 0.329412, 1)
-theme_override_colors/font_outline_color = Color(0.870588, 0.0980392, 0.341176, 1)
-theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("2_wt0x7")
-theme_override_font_sizes/font_size = 107
-text = "EINSTELLUNGEN"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture_normal = ExtResource("17_66u7n")
+texture_pressed = ExtResource("18_4fchb")
+texture_hover = ExtResource("19_jhnkh")
 
 [node name="Credits" type="TextureButton" parent="."]
 offset_left = 33.0
@@ -192,24 +170,9 @@ offset_top = 570.0
 offset_right = 945.0
 offset_bottom = 877.0
 scale = Vector2(0.65, 0.65)
-texture_normal = ExtResource("11_l40h3")
-texture_pressed = ExtResource("12_s4c5n")
-texture_hover = ExtResource("13_e66sn")
-
-[node name="Label" type="Label" parent="Credits"]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 45.0
-offset_right = 865.0
-offset_bottom = 263.0
-theme_override_colors/font_color = Color(1, 0.635294, 0.329412, 1)
-theme_override_colors/font_outline_color = Color(0.870588, 0.0980392, 0.341176, 1)
-theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("2_wt0x7")
-theme_override_font_sizes/font_size = 107
-text = "MITWIRKENDE"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture_normal = ExtResource("20_ltb8o")
+texture_pressed = ExtResource("21_m1fq5")
+texture_hover = ExtResource("22_72qen")
 
 [node name="Quit" type="TextureButton" parent="."]
 offset_left = 33.0
@@ -217,24 +180,9 @@ offset_top = 805.0
 offset_right = 945.0
 offset_bottom = 1112.0
 scale = Vector2(0.65, 0.65)
-texture_normal = ExtResource("11_l40h3")
-texture_pressed = ExtResource("12_s4c5n")
-texture_hover = ExtResource("13_e66sn")
-
-[node name="Label" type="Label" parent="Quit"]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 43.0
-offset_right = 862.0
-offset_bottom = 266.0
-theme_override_colors/font_color = Color(1, 0.635294, 0.329412, 1)
-theme_override_colors/font_outline_color = Color(0.870588, 0.0980392, 0.341176, 1)
-theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("2_wt0x7")
-theme_override_font_sizes/font_size = 107
-text = "SPIEL BEENDEN"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture_normal = ExtResource("23_boxkr")
+texture_pressed = ExtResource("24_488dv")
+texture_hover = ExtResource("25_5uc03")
 
 [node name="CreditsMenu" parent="." instance=ExtResource("8_e5ggp")]
 visible = false
