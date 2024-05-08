@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/mus_title_welcome.mp3-fab91b1fb7755506e3e91f4
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
