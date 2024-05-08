@@ -1,0 +1,190 @@
+[gd_scene load_steps=25 format=3 uid="uid://0lsquv7hjhxv"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_wjluf"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_p3flp"]
+[ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_cifdl"]
+[ext_resource type="Texture2D" uid="uid://bsld80bjwoc0t" path="res://Assets/Grids/grid_floor.png" id="4_ar5vn"]
+[ext_resource type="Texture2D" uid="uid://0wy17083vmt4" path="res://Assets/Grids/grid_back.png" id="5_w3cxn"]
+[ext_resource type="AudioStream" uid="uid://vdwrow33dp76" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_fridge_var1.mp3" id="6_ommrp"]
+[ext_resource type="AudioStream" uid="uid://mp0vsqch8x7t" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_faucet_var1.mp3" id="7_88m4q"]
+[ext_resource type="Texture2D" uid="uid://cy12qpbosu8y" path="res://Assets/Grids/grid_sides.png" id="8_p66t4"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
+vertices = PackedVector3Array(-29.1293, 13.0344, -5.0675, -29.1293, 13.0344, -4.8175, 29.1207, 13.0344, -4.8175, 29.1207, 13.0344, -5.0675, -28.3793, 13.0944, -4.0675, -28.3793, 13.0944, 5.1825, -28.1293, 13.0944, 5.1825, -28.1293, 13.0944, -4.0675, -28.3793, 2.34435, -3.5675, -28.3793, 2.34435, 5.1825, -28.1293, 2.34435, 5.1825, -28.1293, 2.34435, -3.5675, -27.3793, 2.34435, -3.5675, -27.3793, 2.34435, 5.6825, 29.1207, 2.34435, 5.6825, 29.1207, 2.34435, -3.5675)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13)]
+geometry_parsed_geometry_type = 2
+geometry_collision_mask = 1
+cell_height = 0.01
+agent_radius = 0.1
+agent_max_climb = 0.0
+agent_max_slope = 0.02
+region_merge_size = 7.37
+edge_max_error = 0.55
+filter_ledge_spans = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_d47h4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i151x"]
+size = Vector3(19.3163, 1, 0.201752)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vis0"]
+albedo_texture = ExtResource("4_ar5vn")
+
+[sub_resource type="QuadMesh" id="QuadMesh_t244t"]
+size = Vector2(59, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8d8lt"]
+size = Vector3(59.08, 1, 15.4632)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wn6hy"]
+albedo_texture = ExtResource("5_w3cxn")
+
+[sub_resource type="QuadMesh" id="QuadMesh_mw0nr"]
+size = Vector2(59, 16)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sahrs"]
+size = Vector3(10.0164, 1, 15.8657)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0t12x"]
+albedo_texture = ExtResource("8_p66t4")
+
+[sub_resource type="QuadMesh" id="QuadMesh_t24k3"]
+size = Vector2(10, 16)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rxpew"]
+size = Vector3(11.3256, 1, 15.9534)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r1li7"]
+albedo_texture = ExtResource("8_p66t4")
+
+[sub_resource type="QuadMesh" id="QuadMesh_iqs2f"]
+size = Vector2(10, 16)
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_75e5b"]
+polyphony = 3
+
+[node name="Main" type="Node3D" groups=["Root"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("1_wjluf")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HelpButton" parent="UI" instance=ExtResource("2_p3flp")]
+
+[node name="Player" parent="." instance=ExtResource("3_cifdl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.857, 4.782)
+
+[node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -10, 8.289, 13.05)
+fov = 60.0
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 0.737277, 0.67559, 0, -0.67559, 0.737277, 0, 16, 13)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(-4.37114e-08, -0.393942, 0.919135, 0, 0.919135, 0.393942, -1, 1.72197e-08, -4.01767e-08, 23, 16, 0)
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(-4.37114e-08, 0.515038, -0.857167, 0, 0.857167, 0.515038, 1, 2.2513e-08, -3.7468e-08, -16, 16, 0)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." groups=["NavRegion"]]
+transform = Transform3D(1, 0, 0, 0, 1.43292, 0, 0, 0, 1, -0.171009, -2.82786, -0.200979)
+navigation_mesh = SubResource("NavigationMesh_5mby5")
+use_edge_connections = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
+transform = Transform3D(58.1989, 0, 0, 0, 1, 0, 0, 0, 11.635, 0, 1.5513, 0)
+mesh = SubResource("BoxMesh_d47h4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/MeshInstance3D"]
+transform = Transform3D(0.0428997, 0, 0, 0, 1, 0, 0, 0, 0.277781, 0, -1.5971, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1.24158, 0, 0, 0, 2.08749, 0, 0, 0, 15.6264, 0.18616, 1.3339, 0.374973)
+shape = SubResource("BoxShape3D_i151x")
+
+[node name="Walls" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 0.697876, 0, 0, 0, 1, 0, 1.91052, 0)
+
+[node name="Ground" type="StaticBody3D" parent="NavigationRegion3D/Walls" groups=["Ground"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.5)
+shape = SubResource("WorldBoundaryShape3D_858ri")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/Ground"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.716671, 0.5)
+material_override = SubResource("StandardMaterial3D_7vis0")
+mesh = SubResource("QuadMesh_t244t")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="WallBack" type="StaticBody3D" parent="NavigationRegion3D/Walls" groups=["Back Wall"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/WallBack"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.0893326, 3.18751, -0.00838947)
+shape = SubResource("BoxShape3D_8d8lt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallBack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0.5)
+material_override = SubResource("StandardMaterial3D_wn6hy")
+mesh = SubResource("QuadMesh_mw0nr")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="FridgeSound" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Walls/WallBack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.24579, -3.99994, 0.794574)
+stream = ExtResource("6_ommrp")
+autoplay = true
+max_distance = 78.02
+bus = &"SFX"
+
+[node name="FaucetSound" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Walls/WallBack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9466, -3.99994, 5.11186)
+stream = ExtResource("7_88m4q")
+autoplay = true
+max_distance = 78.02
+bus = &"SFX"
+
+[node name="WallLeft" type="StaticBody3D" parent="NavigationRegion3D/Walls" groups=["Side Wall"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.895, -0.356, 0)
+collision_layer = 32769
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/WallLeft"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -27.4528, 8.43286, 0.4552)
+shape = SubResource("BoxShape3D_sahrs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallLeft"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.6141, 8.35748, 0.288007)
+material_override = SubResource("StandardMaterial3D_0t12x")
+mesh = SubResource("QuadMesh_t24k3")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="WallRight" type="StaticBody3D" parent="NavigationRegion3D/Walls" groups=["Side Wall"]]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29, 4, 0)
+collision_layer = 32768
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/WallRight"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.101868, 4.26485, -0.556541)
+shape = SubResource("BoxShape3D_rxpew")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallRight"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 4, 0.5)
+material_override = SubResource("StandardMaterial3D_r1li7")
+mesh = SubResource("QuadMesh_iqs2f")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="Objects" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPolyphonic_75e5b")
+bus = &"SFX"
+
+[node name="Objects" type="Node3D" parent="."]
+
+[editable path="UI/HelpButton"]
+[editable path="Player"]

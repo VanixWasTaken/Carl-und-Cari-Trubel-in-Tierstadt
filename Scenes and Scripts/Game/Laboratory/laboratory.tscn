@@ -1,15 +1,13 @@
 [gd_scene load_steps=29 format=3 uid="uid://b73i1p5cw3b53"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/laboratory.gd" id="1_vx07n"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory.gd" id="1_vx07n"]
 [ext_resource type="Texture2D" uid="uid://c0xvgs33d27oo" path="res://Assets/Art/Environment/Rooms/Laboratory/Room/rendering_labor.PNG" id="2_ikmwy"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="4_ial47"]
 [ext_resource type="Texture2D" uid="uid://bofvsfejo11vd" path="res://Assets/Art/UI/Dialogue/speech_bubble_left.png" id="4_o7f4r"]
 [ext_resource type="Texture2D" uid="uid://dsrxoltpg6iom" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_001.png" id="4_y87p1"]
-[ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Art/Characters/Cari/Headshot/icon_cari1.PNG" id="5_bhgf8"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="5_bonay"]
 [ext_resource type="Texture2D" uid="uid://djxubsy22fhwe" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_002.png" id="5_xvx8k"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="6_ngvmm"]
-[ext_resource type="Texture2D" uid="uid://ctcnsi4vmixqr" path="res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG" id="6_rxi3x"]
 [ext_resource type="Texture2D" uid="uid://clx51sk6di2et" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_003.png" id="6_wovyu"]
 [ext_resource type="Texture2D" uid="uid://8e227vieqtam" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_004.png" id="7_h0hsi"]
 [ext_resource type="Texture2D" uid="uid://dpm70w5m3uweb" path="res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png" id="7_i3486"]
@@ -22,7 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_007.png" id="10_txsdk"]
 [ext_resource type="Texture2D" uid="uid://mbsqejlr2wu8" path="res://Assets/Art/UI/Dialogue/speech_bubble_right.png" id="11_ke86d"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="16_ln43l"]
+[ext_resource type="Texture2D" uid="uid://xumymdy4lywy" path="res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png" id="18_7811u"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="18_ahv68"]
+[ext_resource type="Texture2D" uid="uid://co55uwsttxpdl" path="res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png" id="19_atufw"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2sjpx"]
 streams_count = 3
@@ -87,10 +87,10 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_bhgf8")
+"texture": ExtResource("18_7811u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_rxi3x")
+"texture": ExtResource("19_atufw")
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_i3486")
@@ -149,7 +149,6 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(208.667, -6)
 scale = Vector2(0.35, 0.35)
 sprite_frames = SubResource("SpriteFrames_3yb1s")
-frame = 1
 frame_progress = 0.761408
 
 [node name="Name" type="RichTextLabel" parent="Dialoguebox"]
