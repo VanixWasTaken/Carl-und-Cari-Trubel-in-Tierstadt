@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=39 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -11,9 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://r1n1x0ysitrm" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_right_sketch.png" id="9_ktcms"]
 [ext_resource type="PackedScene" uid="uid://caxx8cohbsnx2" path="res://Scenes and Scripts/Game/Laboratory/Objects/table.tscn" id="10_1cvp0"]
 [ext_resource type="PackedScene" uid="uid://c7vej1yq0wues" path="res://Scenes and Scripts/Game/Laboratory/Objects/cabinet.tscn" id="11_rky6m"]
+[ext_resource type="PackedScene" uid="uid://d3c3s1nuw5me7" path="res://Scenes and Scripts/Game/Laboratory/Objects/reagenz_glasses.tscn" id="12_l2kf0"]
 [ext_resource type="PackedScene" uid="uid://b53g660kym05b" path="res://Scenes and Scripts/Game/Laboratory/Objects/shelf.tscn" id="12_q43od"]
 [ext_resource type="PackedScene" uid="uid://dx0gnhwrby4rh" path="res://Scenes and Scripts/Game/Laboratory/Objects/sink.tscn" id="13_daqka"]
+[ext_resource type="PackedScene" uid="uid://cenk56k5odi8x" path="res://Scenes and Scripts/Game/Laboratory/Objects/scale.tscn" id="13_nfct0"]
 [ext_resource type="Texture2D" uid="uid://dsrxoltpg6iom" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_001.png" id="14_5lhuu"]
+[ext_resource type="PackedScene" uid="uid://c6dhgxet661ke" path="res://Scenes and Scripts/Game/Laboratory/Objects/vessel.tscn" id="16_qbcfp"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
 vertices = PackedVector3Array(-29.1293, 13.0344, -5.0675, -29.1293, 13.0344, -4.8175, 29.1207, 13.0344, -4.8175, 29.1207, 13.0344, -5.0675, -4.12933, 3.30435, -5.0675, -4.12933, 3.30435, -4.8175, 4.12067, 3.30435, -4.8175, 4.12067, 3.30435, -5.0675, 23.1207, 3.77435, -5.0675, 23.1207, 3.77435, -4.8175, 29.1207, 3.77435, -4.8175, 29.1207, 3.77435, -5.0675, 29.8707, 3.77435, -5.0675, 29.8707, 3.77435, 1.4325, 30.1207, 3.77435, 1.4325, 30.1207, 3.77435, -5.0675, -28.3793, 13.0944, -4.0675, -28.3793, 13.0944, 5.1825, -28.1293, 13.0944, 5.1825, -28.1293, 13.0944, -4.0675, -4.12933, 3.30435, -4.0675, -4.12933, 3.30435, -2.5675, 4.12067, 3.30435, -2.5675, 4.12067, 3.30435, -4.0675, 23.1207, 3.77435, -4.0675, 23.1207, 3.77435, 1.4325, 29.1207, 3.77435, 1.4325, 29.1207, 3.77435, -4.0675, -28.3793, 2.34435, -3.5675, -28.3793, 2.34435, 5.1825, -28.1293, 2.34435, 5.1825, -28.1293, 2.34435, -3.5675, -2.87933, 2.34435, 4.1825, -2.87933, 2.34435, 3.9325, -3.12933, 2.34435, 3.9325, -27.3793, 2.34435, 5.6825, -3.12933, 2.34435, 1.6825, -2.87933, 2.34435, 1.6825, -2.87933, 2.34435, 1.4325, -4.62933, 2.34435, -1.8175, -4.62933, 2.34435, -2.0675, -4.87933, 2.34435, -2.0675, -0.879333, 2.34435, 5.6825, -0.879333, 2.34435, 4.1825, -2.87933, 2.34435, 4.1825, -27.3793, 2.34435, 5.6825, -2.87933, 2.34435, 1.4325, -1.37933, 2.34435, 1.4325, -1.62933, 2.34435, -1.8175, -2.87933, 2.34435, 1.4325, -1.62933, 2.34435, -1.8175, -4.62933, 2.34435, -1.8175, -3.12933, 2.34435, 1.6825, -4.87933, 2.34435, -2.0675, -4.87933, 2.34435, -3.5675, -27.3793, 2.34435, -3.5675, -3.12933, 2.34435, 1.6825, -4.62933, 2.34435, -1.8175, -4.87933, 2.34435, -2.0675, -27.3793, 2.34435, -3.5675, -27.3793, 2.34435, 5.6825, -3.12933, 2.34435, 3.9325, 4.87067, 2.34435, -2.0675, 4.62067, 2.34435, -2.0675, 4.62067, 2.34435, -1.8175, 4.62067, 2.34435, -1.8175, 3.12067, 2.34435, -1.8175, 3.37067, 2.34435, 1.4325, 4.87067, 2.34435, -2.0675, 4.62067, 2.34435, -1.8175, 3.37067, 2.34435, 1.4325, 11.8707, 2.34435, 1.4325, 11.8707, 2.34435, -3.5675, 11.8707, 2.34435, -3.5675, 4.87067, 2.34435, -3.5675, 4.87067, 2.34435, -2.0675, 13.8707, 2.34435, 1.4325, 13.8707, 2.34435, 1.6825, 14.1207, 2.34435, 1.6825, 14.1207, 2.34435, 3.9325, 13.8707, 2.34435, 3.9325, 13.8707, 2.34435, 4.1825, 22.6207, 2.34435, 2.1825, 22.6207, 2.34435, 1.9325, 22.3707, 2.34435, 1.9325, 13.8707, 2.34435, 4.1825, 11.8707, 2.34435, 4.1825, 11.8707, 2.34435, 5.6825, 24.6207, 2.34435, 5.6825, 24.6207, 2.34435, 2.1825, 22.6207, 2.34435, 2.1825, 24.6207, 2.34435, 5.6825, 22.6207, 2.34435, 2.1825, 22.3707, 2.34435, 1.9325, 13.8707, 2.34435, 4.1825, 11.8707, 2.34435, 5.6825, 11.8707, 2.34435, -3.5675, 11.8707, 2.34435, 1.4325, 13.8707, 2.34435, 1.4325, 11.8707, 2.34435, -3.5675, 13.8707, 2.34435, 1.4325, 14.1207, 2.34435, 1.6825, 22.3707, 2.34435, 1.9325, 22.3707, 2.34435, -3.5675, 22.3707, 2.34435, 1.9325, 14.1207, 2.34435, 3.9325, 13.8707, 2.34435, 4.1825, 22.3707, 2.34435, 1.9325, 14.1207, 2.34435, 1.6825, 14.1207, 2.34435, 3.9325, -1.37933, 2.34435, 1.4325, 3.37067, 2.34435, 1.4325, 3.12067, 2.34435, -1.8175, -1.62933, 2.34435, -1.8175, -2.37933, 2.92435, 2.1825, -2.37933, 2.92435, 3.4325, 13.3707, 2.92435, 3.4325, 13.3707, 2.92435, 2.1825, 24.6207, 2.34435, 5.6825, 29.1207, 2.34435, 5.6825, 29.1207, 2.34435, 2.1825, 24.6207, 2.34435, 2.1825, 29.8707, 2.34435, 2.1825, 29.8707, 2.34435, 5.6825, 30.1207, 2.34435, 5.6825, 30.1207, 2.34435, 2.1825, -0.879333, 2.34435, 5.6825, 11.8707, 2.34435, 5.6825, 11.8707, 2.34435, 4.1825, -0.879333, 2.34435, 4.1825)
@@ -244,12 +247,22 @@ bus = &"SFX"
 [node name="Objects" type="Node3D" parent="."]
 
 [node name="Table" parent="Objects" instance=ExtResource("10_1cvp0")]
+transform = Transform3D(3.16, 0, 0, 0, 2.31, 0, 0, 0, 2, 5.35779, 4.26083, 2.43743)
 
 [node name="Cabinet" parent="Objects" instance=ExtResource("11_rky6m")]
 
+[node name="Reagenz Glasses" parent="Objects/Cabinet" instance=ExtResource("12_l2kf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.169778, 0.309237, 0.369316)
+
 [node name="Shelf" parent="Objects" instance=ExtResource("12_q43od")]
 
+[node name="Scale" parent="Objects/Shelf" instance=ExtResource("13_nfct0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0251741, -2.78022, 1.32295)
+
 [node name="Sink" parent="Objects" instance=ExtResource("13_daqka")]
+
+[node name="Vessel" parent="Objects/Sink" instance=ExtResource("16_qbcfp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.69671, 0.253325, -0.100935)
 
 [node name="Chameleon" type="Sprite3D" parent="Objects"]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 5.07699, -2.07224)

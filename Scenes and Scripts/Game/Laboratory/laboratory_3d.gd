@@ -4,6 +4,9 @@ var mouse_on = false
 var outline_shader = preload("res://Shader/outline.tres")
 var no_shader = preload("res://Shader/no_shader.tres")
 var cutscene = true
+var picked_up_scale = false
+var picked_up_reagenz_glasses = false
+var picked_up_vessel = false
 
 func _ready():
 	if Global.lab_cutscene_played == false:

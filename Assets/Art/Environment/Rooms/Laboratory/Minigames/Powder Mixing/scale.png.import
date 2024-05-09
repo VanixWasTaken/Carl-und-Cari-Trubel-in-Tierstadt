@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djwgsl8qdi8h6"
-path.s3tc="res://.godot/imported/drink_holder_empty.png-3698e6480145f92a7114cea1c18c8b2d.s3tc.ctex"
+uid="uid://7fftkqwq8pwl"
+path.s3tc="res://.godot/imported/scale.png-10afcf88d78c63c6928471bb169aa859.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_empty.png"
-dest_files=["res://.godot/imported/drink_holder_empty.png-3698e6480145f92a7114cea1c18c8b2d.s3tc.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/scale.png"
+dest_files=["res://.godot/imported/scale.png-10afcf88d78c63c6928471bb169aa859.s3tc.ctex"]
 
 [params]
 

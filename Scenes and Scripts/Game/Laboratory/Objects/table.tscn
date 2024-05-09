@@ -1,17 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://caxx8cohbsnx2"]
+[gd_scene load_steps=7 format=3 uid="uid://caxx8cohbsnx2"]
 
 [ext_resource type="Texture2D" uid="uid://c7x51ljlpm8al" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_table.png" id="1_11xg1"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/table.gd" id="2_uoknu"]
+[ext_resource type="Texture2D" uid="uid://djwgsl8qdi8h6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_empty.png" id="3_oovfd"]
+[ext_resource type="Texture2D" uid="uid://7fftkqwq8pwl" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/scale.png" id="4_l0jaa"]
+[ext_resource type="Texture2D" uid="uid://bnovic5wao87g" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/water_pitcher.png" id="5_5ir8g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4t2f6"]
+size = Vector3(5.38983, 1, 5.75764)
 
 [node name="Table" type="Sprite3D"]
 transform = Transform3D(3.16, 0, 0, 0, 2.31, 0, 0, 0, 2, 5.35779, 4.01622, 2.43743)
 texture = ExtResource("1_11xg1")
 script = ExtResource("2_uoknu")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="MouseArea" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="MouseArea"]
 polygon = PackedVector2Array(-0.162124, 0.709039, 1.7446, 0.680018, 2.27973, -0.200396, 2.31297, -0.82103, 1.98187, -0.783323, 1.93139, -1.55066, -1.61646, -1.47739, -1.50602, -0.469119, -2.00092, -0.523554, -2.12675, -0.0196745, -1.50425, 0.747739)
 
-[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
-[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]
+[node name="ReagenzGlasses" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.384547, 0.372631)
+visible = false
+texture = ExtResource("3_oovfd")
+
+[node name="Scale" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -1.38779, 0.454086, 0.835466)
+visible = false
+texture = ExtResource("4_l0jaa")
+
+[node name="Vessel" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 1.41013, 0.44786, 0.699765)
+visible = false
+texture = ExtResource("5_5ir8g")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 9
+collision_mask = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163757, -1.58462, -0.754326)
+shape = SubResource("BoxShape3D_4t2f6")
+
+[connection signal="body_entered" from="MouseArea" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="MouseArea" to="." method="_on_area_3d_body_exited"]
+[connection signal="mouse_entered" from="MouseArea" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="MouseArea" to="." method="_on_area_3d_mouse_exited"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
