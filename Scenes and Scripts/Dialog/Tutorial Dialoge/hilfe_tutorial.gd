@@ -58,7 +58,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		if Global.character == "Carl":
-			short_node_text.text = "Hilf Carl dabei ihre Schlüssel wieder zu finden."
+			short_node_text.text = "Hilf Carl dabei seine Schlüssel wieder zu finden."
 			short_node_rect.texture = PRESET2
 			dialogs += 1
 		elif Global.character == "Cari":
