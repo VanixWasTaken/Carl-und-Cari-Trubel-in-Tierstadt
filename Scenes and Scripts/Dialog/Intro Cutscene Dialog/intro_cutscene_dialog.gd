@@ -124,3 +124,28 @@ func _on_skip_button_timer_timeout():
 	$SkipButton.visible = true
 
 
+
+
+func _on_skip_button_mouse_entered():
+	var playback = AudioStreamRandomizer.new()
+	$"../UI".stream = playback
+	
+	playback.playback_mode = AudioStreamRandomizer.PLAYBACK_RANDOM
+	
+	playback.add_stream(0, load("res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3"))
+	playback.add_stream(1, load("res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3"))
+	
+	$"../UI".play()
+
+
+func _on_skip_button_button_down():
+	var playback = AudioStreamRandomizer.new()
+	
+	playback.playback_mode = AudioStreamRandomizer.PLAYBACK_RANDOM
+	$"../UI".stream = playback
+	
+	for i in 3:
+		var f = i + 1
+		playback.add_stream(i, load("res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var" + str(f) + ".mp3"))
+	
+	$"../UI".play()

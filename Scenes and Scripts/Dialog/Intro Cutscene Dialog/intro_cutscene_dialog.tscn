@@ -43,5 +43,11 @@ autostart = true
 volume_db = -12.0
 bus = &"Dialogue"
 
+[node name="UI" type="AudioStreamPlayer" parent="."]
+volume_db = -12.0
+bus = &"SFX"
+
+[connection signal="button_down" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_button_down"]
+[connection signal="mouse_entered" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_mouse_entered"]
 [connection signal="pressed" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_pressed"]
 [connection signal="timeout" from="SkipButtonTimer" to="DialogBox" method="_on_skip_button_timer_timeout"]
