@@ -15,7 +15,7 @@ run/main_scene="res://Scenes and Scripts/Menus/StartUp/start_up.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/fullsize=false
-config/icon="res://Assets/Test/Player/IMG_1931.PNG"
+config/icon="res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG"
 
 [autoload]
 
