@@ -13,9 +13,6 @@ func _ready():
 		$CameraPan.play("camera pan")
 		Global.cutscene_playing = true
 		Global.moving_allowed = false
-	elif Global.lab_cutscene_played == true:
-		$Objects/Chameleon.queue_free()
-		$CameraPan.queue_free()
 	#var playback: AudioStreamPlaybackPolyphonic
 	#$Ambience.play()
 	#playback = $Ambience.get_stream_playback()
@@ -30,6 +27,7 @@ func _process(delta):
 		if $Player.position.x <= 19.5 and $Player.position.x >= -19.5:
 			$Camera3D.position.x = $Player.position.x
 
+
 func _on_door_area_3d_body_entered(body):
 	if body.get_name() == "Player":
 		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Map/map.tscn")
@@ -41,5 +39,17 @@ func _on_camera_pan_animation_finished(anim_name):
 	Global.lab_cutscene_played = true
 	Global.cutscene_playing = false
 	Global.moving_allowed = true
+	
+	################# ALLE OBJEKTE DER CUTSCENE ENTFERNEN + AUDIOLISTENER WECHSELN #########################
+	$Player/AudioListener3D.make_current()
+	$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps.queue_free()
+	$Camera3D/AudioListener3D.queue_free()
 	$Objects/Chameleon.queue_free()
 	$CameraPan.queue_free()
+
+
+func _on_timer_timeout():
+	if !Global.lab_cutscene_played:
+		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps.play()
+		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer.wait_time = 0.45
+		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer.start()
