@@ -1,11 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7vej1yq0wues"]
+[gd_scene load_steps=7 format=3 uid="uid://c7vej1yq0wues"]
 
 [ext_resource type="Texture2D" uid="uid://bf74d53mvr50a" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet.png" id="1_56ua0"]
+[ext_resource type="Texture2D" uid="uid://bf0n3tcm3bbub" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_highlight.png" id="2_3f1ww"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/cabinet.gd" id="2_ii3qh"]
+[ext_resource type="Texture2D" uid="uid://de77badun6map" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_open.png" id="3_e1rx1"]
+[ext_resource type="Texture2D" uid="uid://dyxf55fnvocp8" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_open_highlight.png" id="4_7kjcg"]
 
-[node name="Cabinet" type="Sprite3D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_gju4r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_56ua0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3f1ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e1rx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7kjcg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cabinet" type="AnimatedSprite3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, -0.0368061, 7.37877, -3.46081)
-texture = ExtResource("1_56ua0")
+sprite_frames = SubResource("SpriteFrames_gju4r")
 script = ExtResource("2_ii3qh")
 
 [node name="Area3D" type="Area3D" parent="."]

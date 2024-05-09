@@ -1,13 +1,26 @@
-extends Sprite3D
-
-var no_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet.png")
-var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_highlight.png")
-
-
-
-
+extends AnimatedSprite3D
+var door_open = false
+var mouse_inside = false
 func _on_area_3d_mouse_entered():
-	$".".texture = outline_shader
+	if door_open:
+		frame = 3
+	elif !door_open:
+		frame = 1
+	mouse_inside = true
 
 func _on_area_3d_mouse_exited():
-	$".".texture = no_shader
+	if door_open:
+		frame = 2
+	elif !door_open:
+		frame = 0
+	mouse_inside = false
+
+func _input(event):
+	if Input.is_action_just_pressed("left_click"):
+		if mouse_inside:
+			if !door_open:
+				door_open = true
+				frame = 3
+			elif door_open:
+				door_open = false
+				frame = 1
