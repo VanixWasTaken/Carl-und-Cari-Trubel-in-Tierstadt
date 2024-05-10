@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjutishj7qs76"
-path.s3tc="res://.godot/imported/laboratory_cabinet.png-69d583c0b510fbfb9fd06bc247c1d48c.s3tc.ctex"
+uid="uid://cbdxyqqksrgaf"
+path.s3tc="res://.godot/imported/lab_scale.png-ddc0ed34f71a7feeceb09815f6fe4d53.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet.png"
-dest_files=["res://.godot/imported/laboratory_cabinet.png-69d583c0b510fbfb9fd06bc247c1d48c.s3tc.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale.png"
+dest_files=["res://.godot/imported/lab_scale.png-ddc0ed34f71a7feeceb09815f6fe4d53.s3tc.ctex"]
 
 [params]
 

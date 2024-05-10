@@ -1,7 +1,7 @@
 extends Sprite3D
 
-var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_table_highlight.png")
-var no_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_table.png")
+var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_desk_island_highlight.png")
+var no_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_desk_island.png")
 var mouse_inside = false
 var can_interact = false
 var player_inside = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyxf55fnvocp8"
-path="res://.godot/imported/laboratory_cabinet_open_highlight.png-8ddc9913a4bbac7c3da950d9339ce568.ctex"
+uid="uid://b78wxgon00y5q"
+path="res://.godot/imported/lab_three_flasks_highlight.png-8bb9220266b09e6a81e926645d0d858e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_open_highlight.png"
-dest_files=["res://.godot/imported/laboratory_cabinet_open_highlight.png-8ddc9913a4bbac7c3da950d9339ce568.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks_highlight.png"
+dest_files=["res://.godot/imported/lab_three_flasks_highlight.png-8bb9220266b09e6a81e926645d0d858e.ctex"]
 
 [params]
 

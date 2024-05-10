@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmj42chs46gqt"
-path="res://.godot/imported/laboratory_sink_highlight.png-a8b694553828b1336d60553b4a2cc3c9.ctex"
+uid="uid://ddgurcbihtflv"
+path="res://.godot/imported/lab_lamp.png-352f1181a44a3ea93b9aef54a198ea5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_sink_highlight.png"
-dest_files=["res://.godot/imported/laboratory_sink_highlight.png-a8b694553828b1336d60553b4a2cc3c9.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_lamp.png"
+dest_files=["res://.godot/imported/lab_lamp.png-352f1181a44a3ea93b9aef54a198ea5b.ctex"]
 
 [params]
 
