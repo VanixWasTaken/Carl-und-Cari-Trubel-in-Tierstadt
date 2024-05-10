@@ -1,5 +1,7 @@
 extends Node3D
 
+var first_dialogue = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_1.tscn")
+
 var mouse_on = false
 var outline_shader = preload("res://Shader/outline.tres")
 var no_shader = preload("res://Shader/no_shader.tres")
@@ -38,7 +40,11 @@ func _on_camera_pan_animation_finished(anim_name):
 	cutscene = false
 	Global.lab_cutscene_played = true
 	Global.cutscene_playing = false
-	Global.moving_allowed = true
+	Global.dialog_playing = true
+	Global.moving_allowed = false
+	
+	var dialogue_instance = first_dialogue.instantiate()
+	add_child(dialogue_instance)
 	
 	################# ALLE OBJEKTE DER CUTSCENE ENTFERNEN + AUDIOLISTENER WECHSELN #########################
 	$Player/AudioListener3D.make_current()
