@@ -37,7 +37,7 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 12:
 		Global.moving_allowed = true
-		Global.dialogue_playing = false
+		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
 
