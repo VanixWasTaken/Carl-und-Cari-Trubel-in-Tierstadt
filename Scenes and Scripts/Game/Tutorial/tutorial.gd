@@ -49,7 +49,7 @@ func _on_poi_area_body_entered(body):
 	if body.get_name() == "Player":
 		got_key = true
 		$POI/AudioStreamPlayer3D.play()
-
+		Global.tutorial_help_button_state += 1
 
 func _on_audio_stream_player_3d_finished():
 	$Key.queue_free()
