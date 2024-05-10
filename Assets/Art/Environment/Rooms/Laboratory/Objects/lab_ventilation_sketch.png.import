@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3kmgnim1tnmw"
-path.s3tc="res://.godot/imported/laboratory_shelf.png-eec8fa4cf3332f5da2f0e1d0810e5b14.s3tc.ctex"
+uid="uid://1vsbt1wbeul7"
+path.s3tc="res://.godot/imported/lab_ventilation_sketch.png-8e3053b072af6a088988fcbb8000b2e7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_shelf.png"
-dest_files=["res://.godot/imported/laboratory_shelf.png-eec8fa4cf3332f5da2f0e1d0810e5b14.s3tc.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_ventilation_sketch.png"
+dest_files=["res://.godot/imported/lab_ventilation_sketch.png-8e3053b072af6a088988fcbb8000b2e7.s3tc.ctex"]
 
 [params]
 

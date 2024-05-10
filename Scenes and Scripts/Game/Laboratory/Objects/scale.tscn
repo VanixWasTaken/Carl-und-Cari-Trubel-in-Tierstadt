@@ -1,17 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://cenk56k5odi8x"]
 
-[ext_resource type="Texture2D" uid="uid://7fftkqwq8pwl" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/scale.png" id="1_rv2c0"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/scale.gd" id="1_sq6c2"]
-[ext_resource type="Texture2D" uid="uid://cxc42ocbharcy" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Unbenannt_highlighted.png" id="2_un6ac"]
+[ext_resource type="Texture2D" uid="uid://cbdxyqqksrgaf" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale.png" id="2_2aogq"]
+[ext_resource type="Texture2D" uid="uid://db7vi4lxj1otc" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale_highlight.png" id="3_8t2rj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6wgwi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_rv2c0")
+"texture": ExtResource("2_2aogq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_un6ac")
+"texture": ExtResource("3_8t2rj")
 }],
 "loop": true,
 "name": &"default",
@@ -19,27 +19,29 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nleoc"]
-size = Vector3(3.47409, 8.18432, 2.83698)
+size = Vector3(8.00668, 14.4968, 2.83698)
 
 [node name="Scale" type="Node3D"]
 script = ExtResource("1_sq6c2")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.0280508, 0.815911, 0.043722)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0280508, 0.815911, 0.043722)
+sorting_offset = 1.0
 sprite_frames = SubResource("SpriteFrames_6wgwi")
 
 [node name="Mouse_area" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0280508, -1.18409, 0.30331)
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Mouse_area"]
-polygon = PackedVector2Array(-0.813297, 2.46198, 0.29934, 2.52039, 0.970771, 1.75934, 0.950872, 1.43863, -0.418267, 1.40619, -0.839058, 2.06835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00644458, 0.0280582, -0.00541806)
+polygon = PackedVector2Array(-1.08862, 3.04565, 1.13132, 3.15027, 1.42567, 2.24939, 1.42492, 1.1335, -1.27886, 1.00991, -1.62669, 2.17225)
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 9
 collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.123947, -3.59217, 0.143159)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4307, -6.74839, 0.143159)
 shape = SubResource("BoxShape3D_nleoc")
 
 [connection signal="mouse_entered" from="Mouse_area" to="." method="_on_area_3d_mouse_entered"]

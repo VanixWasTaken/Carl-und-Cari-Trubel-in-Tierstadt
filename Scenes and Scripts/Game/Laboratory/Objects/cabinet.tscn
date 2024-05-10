@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://c7vej1yq0wues"]
 
-[ext_resource type="Texture2D" uid="uid://bf74d53mvr50a" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet.png" id="1_56ua0"]
-[ext_resource type="Texture2D" uid="uid://bf0n3tcm3bbub" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_highlight.png" id="2_3f1ww"]
+[ext_resource type="Texture2D" uid="uid://bjutishj7qs76" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet.png" id="1_56ua0"]
+[ext_resource type="Texture2D" uid="uid://bfe7swowjh56s" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_highlight.png" id="2_3f1ww"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/cabinet.gd" id="2_ii3qh"]
-[ext_resource type="Texture2D" uid="uid://de77badun6map" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_open.png" id="3_e1rx1"]
-[ext_resource type="Texture2D" uid="uid://dyxf55fnvocp8" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_open_highlight.png" id="4_7kjcg"]
+[ext_resource type="Texture2D" uid="uid://bpq127dkvgv42" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cabinet_shades_down_sketch.png" id="4_dypf5"]
+[ext_resource type="PackedScene" uid="uid://d3c3s1nuw5me7" path="res://Scenes and Scripts/Game/Laboratory/Objects/reagenz_glasses.tscn" id="5_6kera"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gju4r"]
 animations = [{
@@ -14,12 +14,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_3f1ww")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_e1rx1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_7kjcg")
 }],
 "loop": true,
 "name": &"default",
@@ -27,14 +21,21 @@ animations = [{
 }]
 
 [node name="Cabinet" type="AnimatedSprite3D"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, -0.0368061, 7.37877, -3.46081)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0368061, 3.71626, -3.03876)
 sprite_frames = SubResource("SpriteFrames_gju4r")
 script = ExtResource("2_ii3qh")
+
+[node name="Reagenz Glasses" parent="." instance=ExtResource("5_6kera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.027, -101.295, 0.056)
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
-polygon = PackedVector2Array(1.49505, 0.308689, 1.71532, 2.46439, 1.55128, 2.84696, -0.615936, 2.92163, -1.36965, 2.29657, -1.85809, -3.43638, 1.53137, -3.53038)
+polygon = PackedVector2Array(4.34463, -4.66924, 4.11385, 3.7616, 3.30116, 4.21639, -0.411783, 4.20135, -3.51429, 4.27178, -4.05737, 3.30474, -4.05557, -4.47957)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.215245)
+texture = ExtResource("4_dypf5")
 
 [connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

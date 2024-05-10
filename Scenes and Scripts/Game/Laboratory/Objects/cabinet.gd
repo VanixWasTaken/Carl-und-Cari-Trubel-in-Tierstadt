@@ -1,18 +1,13 @@
 extends AnimatedSprite3D
 var door_open = false
 var mouse_inside = false
+
 func _on_area_3d_mouse_entered():
-	if door_open:
-		frame = 3
-	elif !door_open:
-		frame = 1
+	frame = 1
 	mouse_inside = true
 
 func _on_area_3d_mouse_exited():
-	if door_open:
-		frame = 2
-	elif !door_open:
-		frame = 0
+	frame = 0
 	mouse_inside = false
 
 func _input(event):
@@ -20,7 +15,11 @@ func _input(event):
 		if mouse_inside:
 			if !door_open:
 				door_open = true
-				frame = 3
+				$Sprite3D.visible = false
+				if $"Reagenz Glasses" != null:
+					$"Reagenz Glasses".position.y += 100
 			elif door_open:
 				door_open = false
-				frame = 1
+				$Sprite3D.visible = true
+				if $"Reagenz Glasses" != null:
+					$"Reagenz Glasses".position.y -= 100

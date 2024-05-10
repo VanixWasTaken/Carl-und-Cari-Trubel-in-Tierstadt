@@ -16,7 +16,7 @@ func _input(event):
 		if mouse_inside:
 			can_pick_up = true
 			if player_inside:
-				get_tree().get_first_node_in_group("Root").picked_up_reagenz_glasses = true
+				get_tree().get_first_node_in_group("Root").picked_up_vessel = true
 				queue_free()
 		elif !mouse_inside:
 			can_pick_up = false
@@ -25,7 +25,7 @@ func _on_area_3d_body_entered(body):
 	if body.get_name() == "Player":
 		player_inside = true
 		if can_pick_up:
-			get_tree().get_first_node_in_group("Root").picked_up_reagenz_glasses = true
+			get_tree().get_first_node_in_group("Root").picked_up_vessel = true
 			queue_free()
 
 

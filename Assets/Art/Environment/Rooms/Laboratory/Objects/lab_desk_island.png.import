@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1ktwkrfraby6"
-path.s3tc="res://.godot/imported/laboratory_sink.png-a70d0c6314580304914729577b89cbf8.s3tc.ctex"
+uid="uid://chffu42twsa06"
+path.s3tc="res://.godot/imported/lab_desk_island.png-aebd589f75f507712f4e6576598deaaa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_sink.png"
-dest_files=["res://.godot/imported/laboratory_sink.png-a70d0c6314580304914729577b89cbf8.s3tc.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_desk_island.png"
+dest_files=["res://.godot/imported/lab_desk_island.png-aebd589f75f507712f4e6576598deaaa.s3tc.ctex"]
 
 [params]
 
