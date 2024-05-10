@@ -11,9 +11,8 @@ var same_speaker = false
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
-var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
-var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-var PRESET3 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png")
+var PRESET1
+var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png")
 
 ##########################################################################################
 
@@ -23,6 +22,10 @@ var PRESET3 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/C
 
 func _ready():
 	Global.moving_allowed = false
+	if Global.character == "Carl":
+		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
+	elif Global.character == "Cari":
+		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -35,7 +38,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 12:
+	if dialogs == 7:
 		Global.moving_allowed = true
 		Global.dialog_playing = false
 		queue_free()
@@ -60,7 +63,7 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Hallo? Ist hier irgendjemand? Uns wurde gesagt, dass wir hier aushelfen sollen."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
+		short_node_name.text = Global.character
 		dialogs += 1
 		same_speaker = true
 	
@@ -70,8 +73,8 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Vielleicht sollten wir später wiederkommen."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
 		dialogs += 1
 		same_speaker = false
 	
@@ -82,30 +85,10 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Wer hat das gesagt? Zeig dich!"
 		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
+		short_node_name.text = Global.character
 		dialogs += 1
 	
 	elif dialogs == 6:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Wer bist du und warum können wir dich nicht sehen?"
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
-		dialogs += 1
-	
-	elif dialogs == 9:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Natürlich! Was sollen wir tun?"
-		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
-		dialogs += 1
-	
-	elif dialogs == 11:
 		dialogs += 1
 		Global.moving_allowed = true
 	
@@ -132,7 +115,7 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "H-H-Hallo, ich b-b-bin hier."
-		short_node_rect.texture = PRESET3
+		short_node_rect.texture = PRESET2
 		short_node_name.text = "???"
 		dialogs += 1
 	
@@ -141,42 +124,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich stehe d-d-direkt vor dir."
-		short_node_rect.texture = PRESET3
+		short_node_text.text = "Ich s-s-stehe hier hinten, auf der a-a-anderen Seite des Raums! Komm doch k-k-kurz zu mir."
+		short_node_rect.texture = PRESET2
 		short_node_name.text = "???"
 		dialogs += 1
 	
-	elif dialogs == 7:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich b-b-bin Christina das Chemie Chamäleon. I-i-ich habe mich aus Versehen u-u-unsichtbar gemacht und k-k-kann mich nicht zurückverwandeln."
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Christina"
-		dialogs += 1
-		same_speaker = true
-	
-	elif dialogs == 8:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "K-k-könnt ihr mir helfen meine V-V-Visabel Chemikalie zu mixen? Mit der werde ich wieder sichtbar."
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Christina"
-		dialogs += 1
-		same_speaker = false
-	
-	elif dialogs == 10:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ihr m-m-müsst zuerst an d-d-dem Tisch dort drei Chemikalien mixen. Dort erkläre ich den nächsten Schritt."
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Christina"
-		dialogs += 1
 	
 	
 	
