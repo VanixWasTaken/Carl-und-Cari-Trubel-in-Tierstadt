@@ -53,7 +53,7 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 1:
+	if dialogs == 1 and Global.tutorial_help_button_state == 0:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -66,6 +66,18 @@ func add_left_dialog_box():
 			short_node_rect.texture = PRESET1
 			dialogs += 1
 
+	if dialogs == 1 and Global.tutorial_help_button_state == 1:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		if Global.character == "Carl":
+			short_node_text.text = "Verlasse das Haus."
+			short_node_rect.texture = PRESET2
+			dialogs += 1
+		elif Global.character == "Cari":
+			short_node_text.text = "Verlasse das Haus."
+			short_node_rect.texture = PRESET1
+			dialogs += 1
 ##########################################################################################
 
 
