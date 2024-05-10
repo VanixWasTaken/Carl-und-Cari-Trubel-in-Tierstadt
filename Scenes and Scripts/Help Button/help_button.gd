@@ -19,10 +19,6 @@ func _ready():
 		$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/button_help.png.PNG")
 		$TextureButton.texture_pressed = load("res://Assets/Art/UI/Buttons/button_help.png.PNG")
 		$TextureButton.texture_hover = load("res://Assets/Art/UI/Buttons/button_help.png.PNG")
-	if get_tree().get_current_scene().get_name() == "Main":
-		help = tutorial_help
-	elif get_tree().get_current_scene().get_name() == "Laboratory":
-		help = laboratory_help
 func _process(delta):
 	if menu_open || mouse_inside || Global.dialog_playing || Global.cutscene_playing:
 		Global.moving_allowed = false
@@ -32,10 +28,16 @@ func _process(delta):
 
 
 func _on_texture_button_button_up():
+	
 	menu_open = true
 	if get_tree().get_current_scene().get_name() == "Main":
 		var instance = tutorial_help.instantiate()
 		add_child(instance)
+		help = tutorial_help
+	elif get_tree().get_current_scene().get_name() == "Laboratory" :
+		var instance = laboratory_help.instantiate()
+		add_child(instance)
+		help = laboratory_help
 	if !helpbuttonopen and Global.character == "Cari":
 		emit_signal("HelpOpened")
 		$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/button_help_gray.png")

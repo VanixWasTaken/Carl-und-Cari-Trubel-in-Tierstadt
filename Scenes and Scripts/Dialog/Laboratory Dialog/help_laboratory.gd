@@ -25,7 +25,7 @@ func _ready():
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_left_dialog_box()
+	add_left_dialog_box() 
 ##########################################################################################
 
 
@@ -35,12 +35,11 @@ func _ready():
 
 
 func _process(delta):
-################################  PUT DIALOG NUMBER HERE  ################################
+################################  PUT DIALOG NUMBER HERE  ################################	
 	if dialogs == 3:
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
-
 
 
 
@@ -76,6 +75,45 @@ func add_left_dialog_box():
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Geh zum Tisch in der Mitte des Raumes"
+			short_node_rect.texture = PRESET1
+			dialogs += 1
+	
+	if dialogs == 1 and Global.laboratory_help_button_state == 2:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		if Global.character == "Carl":
+			short_node_text.text = "3.Dialog"
+			short_node_rect.texture = PRESET2
+			dialogs += 1
+		elif Global.character == "Cari":
+			short_node_text.text = "3. Dialog"
+			short_node_rect.texture = PRESET1
+			dialogs += 1
+	
+	if dialogs == 1 and Global.laboratory_help_button_state == 3:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		if Global.character == "Carl":
+			short_node_text.text = "4ter Dialog"
+			short_node_rect.texture = PRESET2
+			dialogs += 1
+		elif Global.character == "Cari":
+			short_node_text.text = "4ter Dialog"
+			short_node_rect.texture = PRESET1
+			dialogs += 1
+	
+	if dialogs == 1 and Global.laboratory_help_button_state == 4:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		if Global.character == "Carl":
+			short_node_text.text = "Dialog 5"
+			short_node_rect.texture = PRESET2
+			dialogs += 1
+		elif Global.character == "Cari":
+			short_node_text.text = "Dialog 5"
 			short_node_rect.texture = PRESET1
 			dialogs += 1
 ##########################################################################################

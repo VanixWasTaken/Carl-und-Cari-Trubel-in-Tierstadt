@@ -114,7 +114,7 @@ _data = {
 "camera pan": SubResource("Animation_5d15n")
 }
 
-[node name="Main" type="Node3D" groups=["Root"]]
+[node name="Laboratory" type="Node3D" groups=["Root"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("1_04svc")
 
