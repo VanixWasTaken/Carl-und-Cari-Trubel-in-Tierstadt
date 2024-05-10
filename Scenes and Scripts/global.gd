@@ -9,3 +9,4 @@ var lab_cutscene_played = false
 var cutscene_playing = false
 
 var tutorial_help_button_state = 0
+var laboratory_help_button_state = 0

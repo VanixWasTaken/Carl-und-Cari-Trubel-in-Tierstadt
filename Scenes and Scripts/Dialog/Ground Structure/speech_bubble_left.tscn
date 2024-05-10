@@ -85,6 +85,7 @@ text = "Name"
 [node name="BlackShader" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.501961)
 z_index = -1
+layout_mode = 0
 offset_left = -40.0
 offset_top = -425.0
 offset_right = 1880.0
