@@ -213,7 +213,7 @@ func _on_skip_button_timer_timeout():
 
 
 func _on_skip_button_mouse_entered():
-	$Hover.play()
+	$"../Hover".play()
 
 func _on_skip_button_button_down():
-	$Click.play()
+	$"../Click".play()

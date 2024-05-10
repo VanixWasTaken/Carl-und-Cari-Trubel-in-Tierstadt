@@ -1,9 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://ih8hto8l3gd8"]
+[gd_scene load_steps=12 format=3 uid="uid://ih8hto8l3gd8"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial_3.gd" id="1_3tsef"]
 [ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_wk5g5"]
 [ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="3_aaq44"]
 [ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="4_hb1xl"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="5_bupen"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="6_mlu2c"]
+[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="7_k6qiw"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="8_3uvtt"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="9_2vjtb"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pybsp"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("5_bupen")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("6_mlu2c")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_va2vd"]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("7_k6qiw")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("8_3uvtt")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("9_2vjtb")
+stream_2/weight = 1.0
 
 [node name="DialogTutorial" type="CanvasLayer"]
 
@@ -43,5 +66,17 @@ autostart = true
 volume_db = -12.0
 bus = &"Dialogue"
 
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_pybsp")
+volume_db = -15.0
+bus = &"SFX"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_va2vd")
+volume_db = -18.0
+bus = &"SFX"
+
+[connection signal="button_down" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_button_down"]
+[connection signal="mouse_entered" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_mouse_entered"]
 [connection signal="pressed" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_pressed"]
 [connection signal="timeout" from="SkipButtonTimer" to="DialogBox" method="_on_skip_button_timer_timeout"]

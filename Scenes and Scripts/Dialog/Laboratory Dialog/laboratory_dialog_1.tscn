@@ -1,14 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://mcm7d6li6kqp"]
+[gd_scene load_steps=12 format=3 uid="uid://mcm7d6li6kqp"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_1.gd" id="1_2ys3y"]
 [ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_he7x1"]
 [ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="3_064ns"]
 [ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="4_0hh4d"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="5_pry3c"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="5_ribra"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="6_gk64y"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="6_ociu4"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="7_tjyny"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_uhw72"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("5_pry3c")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("6_ociu4")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_l8jca"]
 playback_mode = 1
 streams_count = 3
 stream_0/stream = ExtResource("5_ribra")
@@ -60,7 +70,7 @@ volume_db = -15.0
 bus = &"SFX"
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamRandomizer_uhw72")
+stream = SubResource("AudioStreamRandomizer_l8jca")
 volume_db = -18.0
 bus = &"SFX"
 

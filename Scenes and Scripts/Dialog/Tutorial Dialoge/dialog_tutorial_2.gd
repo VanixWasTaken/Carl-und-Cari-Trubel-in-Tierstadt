@@ -142,4 +142,8 @@ func _on_skip_button_pressed():
 func _on_skip_button_timer_timeout():
 	$SkipButton.visible = true
 
+func _on_skip_button_mouse_entered():
+	$"../Hover".play()
 
+func _on_skip_button_button_down():
+	$"../Click".play()
