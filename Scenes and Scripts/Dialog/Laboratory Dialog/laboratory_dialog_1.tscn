@@ -63,6 +63,8 @@ one_shot = true
 autostart = true
 
 [node name="VoiceOver" type="AudioStreamPlayer" parent="."]
+volume_db = -12.0
+bus = &"Dialogue"
 
 [node name="Hover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_uhw72")

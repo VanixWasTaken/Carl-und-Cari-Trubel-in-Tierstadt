@@ -60,10 +60,14 @@ func add_left_dialog_box():
 		if Global.character == "Carl":
 			short_node_text.text = "Hilf Carl dabei seine Schlüssel wieder zu finden."
 			short_node_rect.texture = PRESET2
+			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Help/vo_npc_cari_tutorialhelp01_var1.mp3")
+			$"../Voice Over".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Hilf Cari dabei ihre Schlüssel wieder zu finden."
 			short_node_rect.texture = PRESET1
+			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Help/vo_npc_carl_tutorialhelp01_var1.mp3")
+			$"../Voice Over".play()
 			dialogs += 1
 
 	if dialogs == 1 and Global.tutorial_help_button_state == 1:
@@ -73,10 +77,14 @@ func add_left_dialog_box():
 		if Global.character == "Carl":
 			short_node_text.text = "Verlasse das Haus."
 			short_node_rect.texture = PRESET2
+			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Help/vo_npc_cari_tutorialhelp02_var1.mp3")
+			$"../Voice Over".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Verlasse das Haus."
 			short_node_rect.texture = PRESET1
+			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Help/vo_npc_carl_tutorialhelp02_var1.mp3")
+			$"../Voice Over".play()
 			dialogs += 1
 ##########################################################################################
 
