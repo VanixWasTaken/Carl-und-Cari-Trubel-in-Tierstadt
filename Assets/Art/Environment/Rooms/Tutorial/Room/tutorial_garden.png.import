@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dts4uds0b18y8"
-path.s3tc="res://.godot/imported/tutorial_wall_back2.png-ca0638a4a478dc452cde9aaa080b4474.s3tc.ctex"
+path.s3tc="res://.godot/imported/tutorial_garden.png-4572398ba3494e80edea8475ae79ed21.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Tutorial/Room/tutorial_wall_back2.png"
-dest_files=["res://.godot/imported/tutorial_wall_back2.png-ca0638a4a478dc452cde9aaa080b4474.s3tc.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Tutorial/Room/tutorial_garden.png"
+dest_files=["res://.godot/imported/tutorial_garden.png-4572398ba3494e80edea8475ae79ed21.s3tc.ctex"]
 
 [params]
 

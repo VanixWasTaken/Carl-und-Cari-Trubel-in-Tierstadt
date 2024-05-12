@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Tutorial/tutorial.gd" id="1_trbh3"]
 [ext_resource type="Texture2D" uid="uid://dea08nl64dog" path="res://Assets/Art/Environment/Rooms/Tutorial/Room/tutorial_floor.png" id="4_na5hb"]
 [ext_resource type="AudioStream" uid="uid://vdwrow33dp76" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_fridge_var1.mp3" id="5_5w3ah"]
-[ext_resource type="Texture2D" uid="uid://dts4uds0b18y8" path="res://Assets/Art/Environment/Rooms/Tutorial/Room/tutorial_wall_back2.png" id="5_gg2n5"]
+[ext_resource type="Texture2D" uid="uid://dts4uds0b18y8" path="res://Assets/Art/Environment/Rooms/Tutorial/Room/tutorial_garden.png" id="5_gg2n5"]
 [ext_resource type="Texture2D" uid="uid://c5ce7k57qbqg" path="res://Assets/Art/Environment/Rooms/Tutorial/Room/tutorial_wall_back.png" id="5_vdeea"]
 [ext_resource type="AudioStream" uid="uid://mp0vsqch8x7t" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_faucet_var1.mp3" id="6_18156"]
 [ext_resource type="Texture2D" uid="uid://dsfknmkhpnhps" path="res://Assets/Art/Environment/Rooms/Tutorial/POI/poi1.png" id="7_55g8d"]
@@ -460,9 +460,6 @@ shape = SubResource("BoxShape3D_dbdf1")
 
 [node name="NPC Tutorial" parent="." instance=ExtResource("31_kwirw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4152, 0.093152, 1.88371)
-
-[node name="AnimatedSprite3D" parent="NPC Tutorial" index="0"]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 3.83803, 0)
 
 [node name="DialogeArea3D" parent="NPC Tutorial" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.21636, 0)
