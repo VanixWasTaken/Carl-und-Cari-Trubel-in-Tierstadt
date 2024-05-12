@@ -30,6 +30,10 @@ window/size/mode=3
 window/size/initial_position_type=0
 window/stretch/mode="canvas_items"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 ui_left={
@@ -82,5 +86,5 @@ rendering/stretch/scale=0.5
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
+textures/canvas_textures/default_texture_filter=2
 renderer/rendering_method.mobile="gl_compatibility"
