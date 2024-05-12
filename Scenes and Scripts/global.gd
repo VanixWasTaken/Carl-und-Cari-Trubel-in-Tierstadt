@@ -10,3 +10,5 @@ var cutscene_playing = false
 
 var tutorial_help_button_state = 0
 var laboratory_help_button_state = 0
+
+var return_laboratory_1 = false

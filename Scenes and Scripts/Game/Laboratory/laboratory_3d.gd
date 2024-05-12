@@ -15,6 +15,12 @@ func _ready():
 		$CameraPan.play("camera pan")
 		Global.cutscene_playing = true
 		Global.moving_allowed = false
+	
+	#Camera is glitching out after reentering the scene (didnt work at all before)
+	if Global.lab_cutscene_played == true:
+		cutscene = false
+	
+	
 	#var playback: AudioStreamPlaybackPolyphonic
 	#$Ambience.play()
 	#playback = $Ambience.get_stream_playback()
@@ -28,6 +34,14 @@ func _process(delta):
 	if !cutscene:
 		if $Player.position.x <= 19.5 and $Player.position.x >= -19.5:
 			$Camera3D.position.x = $Player.position.x
+	
+	if Global.return_laboratory_1 == true:
+		picked_up_scale = true
+		picked_up_reagenz_glasses = true
+		picked_up_vessel = true
+		$Objects/Chameleon.position = Vector3(-22,5.982,-2.072)
+		#sound disablen habs aber nich hinbekommen#
+	
 
 
 func _on_door_area_3d_body_entered(body):
@@ -59,3 +73,5 @@ func _on_timer_timeout():
 		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps.play()
 		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer.wait_time = 0.45
 		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer.start()
+
+

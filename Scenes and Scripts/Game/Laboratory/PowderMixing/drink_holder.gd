@@ -8,6 +8,8 @@ var pulver_in_2 = false
 var pulver_in_3 = false
 var area_name
 var needed_color = "Purple"
+var return_laboratory = false
+
 
 func _on_area_2d_area_entered(area):
 	area_name = area.get_name()
@@ -74,3 +76,13 @@ func _on_area_2d_area_exited(area):
 		area.get_parent().play("default")
 	if area_name.contains("PulverBowl"):
 		$"../PulverBowl"._reset_bowl()
+
+func _process(delta):
+	if pulver_in_1 == true and pulver_in_2 == true and pulver_in_3 == true:
+		await get_tree().create_timer(3).timeout
+		return_laboratory = true
+	
+	if return_laboratory == true:
+		Global.return_laboratory_1 = true
+		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
+		
