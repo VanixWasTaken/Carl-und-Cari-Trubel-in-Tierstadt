@@ -40,7 +40,7 @@ func _input(event):
 						$AudioStreamPlayer.play()
 						$ReagenzGlasses.visible = true
 						got_glasses = true
-				elif gathered_all_instruments:
+				elif gathered_all_instruments and Global.return_laboratory_1 == false:
 					get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.tscn")
 		elif !mouse_inside:
 			can_interact = false
@@ -62,8 +62,12 @@ func _on_area_3d_body_entered(body):
 				if get_tree().get_first_node_in_group("Root").picked_up_reagenz_glasses == true:
 					$ReagenzGlasses.visible = true
 					got_glasses = true
+<<<<<<< Updated upstream
 					$AudioStreamPlayer.play()
 			elif gathered_all_instruments:
+=======
+			elif gathered_all_instruments and Global.return_laboratory_1 == false:
+>>>>>>> Stashed changes
 				get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.tscn")
 
 
