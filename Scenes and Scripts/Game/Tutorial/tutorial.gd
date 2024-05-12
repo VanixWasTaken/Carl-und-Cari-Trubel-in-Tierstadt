@@ -1,7 +1,12 @@
 extends Node3D
+
+
 var second_dialogue = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial_2.tscn")
 var third_dialogue = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial_3.tscn")
 var got_key = false
+
+
+
 func _ready():
 	var playback: AudioStreamPlaybackPolyphonic
 	$Ambience.play()

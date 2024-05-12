@@ -295,13 +295,23 @@ autoplay = true
 bus = &"SFX"
 
 [node name="Ventilation" type="Sprite3D" parent="Objects"]
-transform = Transform3D(0.395, 0, 0, 0, 0.395, 0, 0, 0, 0.395, 18.7248, 12.855, -2.03031)
+transform = Transform3D(0.395, 0, 0, 0, 0.395, 0, 0, 0, 0.395, 18.7248, 10.3199, -2.03031)
 texture = ExtResource("21_3my04")
 
 [node name="CameraPan" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_4slb7")
 }
+
+[node name="MouseClickBlock" type="CanvasLayer" parent="CameraPan"]
+
+[node name="TextureRect" type="TextureRect" parent="CameraPan/MouseClickBlock"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
 
 [connection signal="timeout" from="NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer" to="." method="_on_timer_timeout"]
 [connection signal="animation_finished" from="CameraPan" to="." method="_on_camera_pan_animation_finished"]
