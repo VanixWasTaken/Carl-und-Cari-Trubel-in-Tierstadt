@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6rtrqletu7o0"
-path.s3tc="res://.godot/imported/tutorial_cooker_hood.png-0f13b9e7497e300915ae5b3297c198d9.s3tc.ctex"
+path="res://.godot/imported/tutorial_cooker_hood.png-0f13b9e7497e300915ae5b3297c198d9.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_cooker_hood.png"
-dest_files=["res://.godot/imported/tutorial_cooker_hood.png-0f13b9e7497e300915ae5b3297c198d9.s3tc.ctex"]
+dest_files=["res://.godot/imported/tutorial_cooker_hood.png-0f13b9e7497e300915ae5b3297c198d9.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

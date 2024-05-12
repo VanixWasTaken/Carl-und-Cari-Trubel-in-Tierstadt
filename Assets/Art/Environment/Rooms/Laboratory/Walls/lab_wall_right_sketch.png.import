@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r1n1x0ysitrm"
-path.s3tc="res://.godot/imported/lab_wall_right_sketch.png-48bd769245d5288582931cce24352570.s3tc.ctex"
+path="res://.godot/imported/lab_wall_right_sketch.png-48bd769245d5288582931cce24352570.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_right_sketch.png"
-dest_files=["res://.godot/imported/lab_wall_right_sketch.png-48bd769245d5288582931cce24352570.s3tc.ctex"]
+dest_files=["res://.godot/imported/lab_wall_right_sketch.png-48bd769245d5288582931cce24352570.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

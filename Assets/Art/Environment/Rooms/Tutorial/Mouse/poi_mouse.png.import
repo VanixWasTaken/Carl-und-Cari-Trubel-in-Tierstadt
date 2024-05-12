@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sipuj2avuffd"
-path.s3tc="res://.godot/imported/poi_mouse.png-14402f95b792d08c7a30b83486e9c3c4.s3tc.ctex"
+path="res://.godot/imported/poi_mouse.png-14402f95b792d08c7a30b83486e9c3c4.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse.png"
-dest_files=["res://.godot/imported/poi_mouse.png-14402f95b792d08c7a30b83486e9c3c4.s3tc.ctex"]
+dest_files=["res://.godot/imported/poi_mouse.png-14402f95b792d08c7a30b83486e9c3c4.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

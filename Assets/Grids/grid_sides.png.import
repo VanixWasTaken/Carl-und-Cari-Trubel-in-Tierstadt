@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vyj7rjd5tjnc"
-path.s3tc="res://.godot/imported/grid_sides.png-1dd71d3f9b641c7acad5a93a95468b6d.s3tc.ctex"
+path="res://.godot/imported/grid_sides.png-1dd71d3f9b641c7acad5a93a95468b6d.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Grids/grid_sides.png"
-dest_files=["res://.godot/imported/grid_sides.png-1dd71d3f9b641c7acad5a93a95468b6d.s3tc.ctex"]
+dest_files=["res://.godot/imported/grid_sides.png-1dd71d3f9b641c7acad5a93a95468b6d.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

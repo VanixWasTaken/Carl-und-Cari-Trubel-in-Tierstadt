@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkx57x8c7lohv"
-path.s3tc="res://.godot/imported/tutorial_wall_left.png-bd75679d194e93c838a4e6f4c7685632.s3tc.ctex"
+path="res://.godot/imported/tutorial_wall_left.png-bd75679d194e93c838a4e6f4c7685632.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Art/Environment/Rooms/Tutorial/Room/tutorial_wall_left.png"
-dest_files=["res://.godot/imported/tutorial_wall_left.png-bd75679d194e93c838a4e6f4c7685632.s3tc.ctex"]
+dest_files=["res://.godot/imported/tutorial_wall_left.png-bd75679d194e93c838a4e6f4c7685632.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

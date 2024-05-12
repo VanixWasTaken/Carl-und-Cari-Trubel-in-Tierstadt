@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3lklu7i8ptv1"
-path.s3tc="res://.godot/imported/carl_fullbody.png.PNG-35d9da9c7a0afc61d89b23a4c0534f29.s3tc.ctex"
+path="res://.godot/imported/carl_fullbody.png.PNG-35d9da9c7a0afc61d89b23a4c0534f29.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Art/Characters/Carl/Full Body/carl_fullbody.png.PNG"
-dest_files=["res://.godot/imported/carl_fullbody.png.PNG-35d9da9c7a0afc61d89b23a4c0534f29.s3tc.ctex"]
+dest_files=["res://.godot/imported/carl_fullbody.png.PNG-35d9da9c7a0afc61d89b23a4c0534f29.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

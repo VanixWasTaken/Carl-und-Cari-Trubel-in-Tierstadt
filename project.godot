@@ -34,6 +34,15 @@ window/stretch/mode="canvas_items"
 
 import/blender/enabled=false
 
+[importer_defaults]
+
+3d_texture={
+"compress/mode": 0
+}
+2d_array_texture={
+"compress/mode": 0
+}
+
 [input]
 
 ui_left={
@@ -86,5 +95,5 @@ rendering/stretch/scale=0.5
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=2
+renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

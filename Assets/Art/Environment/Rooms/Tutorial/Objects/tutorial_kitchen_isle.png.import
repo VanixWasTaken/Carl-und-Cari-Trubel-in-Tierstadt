@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu7htoxfjsx45"
-path.s3tc="res://.godot/imported/tutorial_kitchen_isle.png-badde4d8b2e651939c705b58bc0cf71a.s3tc.ctex"
+path="res://.godot/imported/tutorial_kitchen_isle.png-badde4d8b2e651939c705b58bc0cf71a.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_kitchen_isle.png"
-dest_files=["res://.godot/imported/tutorial_kitchen_isle.png-badde4d8b2e651939c705b58bc0cf71a.s3tc.ctex"]
+dest_files=["res://.godot/imported/tutorial_kitchen_isle.png-badde4d8b2e651939c705b58bc0cf71a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfe7swowjh56s"
-path.s3tc="res://.godot/imported/laboratory_cabinet_highlight.png-d2f2eb57d1d6912fece7030021f933c5.s3tc.ctex"
+path="res://.godot/imported/laboratory_cabinet_highlight.png-d2f2eb57d1d6912fece7030021f933c5.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_highlight.png"
-dest_files=["res://.godot/imported/laboratory_cabinet_highlight.png-d2f2eb57d1d6912fece7030021f933c5.s3tc.ctex"]
+dest_files=["res://.godot/imported/laboratory_cabinet_highlight.png-d2f2eb57d1d6912fece7030021f933c5.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
