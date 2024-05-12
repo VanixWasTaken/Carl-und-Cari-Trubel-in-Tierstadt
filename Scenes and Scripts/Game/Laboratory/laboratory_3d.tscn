@@ -286,7 +286,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.2091, 4.27676, -0.458233)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36238, 0.974767, -0.268445)
 
 [node name="Chameleon" type="Sprite3D" parent="Objects"]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 5.07699, -2.07224)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 5.98193, -2.07224)
 texture = ExtResource("14_5lhuu")
 
 [node name="ChameleonFoley" type="AudioStreamPlayer3D" parent="Objects/Chameleon"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dw4yj8qddg3gp"]
+[gd_scene load_steps=16 format=3 uid="uid://dw4yj8qddg3gp"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Title Screen/title_screen.gd" id="1_dr1xc"]
 [ext_resource type="Texture2D" uid="uid://dvan86jwcaiwk" path="res://Assets/Art/UI/Menus/Title Screen/Idle/titlescreen_001.png" id="2_6mpyp"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://jwo7sgonjjt0" path="res://Assets/Art/UI/Menus/Title Screen/Idle/titlescreen_008.png" id="9_6tbre"]
 [ext_resource type="Texture2D" uid="uid://dhfd8vkvnth22" path="res://Assets/Art/UI/Menus/Title Screen/Idle/titlescreen_009.png" id="10_61olo"]
 [ext_resource type="Texture2D" uid="uid://dy3e7gs2uw0ut" path="res://Assets/Art/UI/Menus/Title Screen/title_font.svg" id="11_vjaha"]
+[ext_resource type="Texture2D" uid="uid://cu6t7ep8q6gca" path="res://Assets/Art/UI/Menus/Title Screen/drücke_linksklick_button.png" id="12_kg28m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4jj7q"]
 animations = [{
@@ -47,6 +48,39 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="Animation" id="Animation_t3lln"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.473064, 0.473064), Vector2(0.5, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.666667), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jthef"]
+_data = {
+"new_animation": SubResource("Animation_t3lln")
+}
+
 [node name="Title Screen" type="Node2D"]
 script = ExtResource("1_dr1xc")
 
@@ -70,7 +104,19 @@ offset_right = 2035.0
 offset_bottom = -255.0
 
 [node name="Title" type="Sprite2D" parent="."]
-position = Vector2(931, 444)
+position = Vector2(959, 444)
 texture = ExtResource("11_vjaha")
+
+[node name="DrückeLinksklickButton" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.666667)
+position = Vector2(960, 876)
+scale = Vector2(0.473064, 0.473064)
+texture = ExtResource("12_kg28m")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DrückeLinksklickButton"]
+libraries = {
+"": SubResource("AnimationLibrary_jthef")
+}
+autoplay = "new_animation"
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
