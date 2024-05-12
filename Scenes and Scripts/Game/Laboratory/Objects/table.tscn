@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://caxx8cohbsnx2"]
+[gd_scene load_steps=8 format=3 uid="uid://caxx8cohbsnx2"]
 
 [ext_resource type="Texture2D" uid="uid://chffu42twsa06" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_desk_island.png" id="1_e03x3"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/table.gd" id="2_uoknu"]
 [ext_resource type="Texture2D" uid="uid://qacuhtuqg1hn" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.png" id="3_tc6ml"]
 [ext_resource type="Texture2D" uid="uid://cbdxyqqksrgaf" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale.png" id="4_8bu1p"]
 [ext_resource type="Texture2D" uid="uid://crlv5jjkuekya" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.png" id="5_8mehk"]
+[ext_resource type="AudioStream" uid="uid://cf4emkal6ayqc" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var2.mp3" id="6_ijcrc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4t2f6"]
 size = Vector3(22.6739, 4.57324, 11.6146)
@@ -21,16 +22,19 @@ polygon = PackedVector2Array(5.25409, 4.06775, 6.95969, 1.49533, 7.45031, -3.802
 
 [node name="ReagenzGlasses" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0817, 2.96554, 0.372631)
+visible = false
 sorting_offset = 1.0
 texture = ExtResource("3_tc6ml")
 
 [node name="Scale" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38779, 2.87473, 0.15639)
+visible = false
 sorting_offset = 1.0
 texture = ExtResource("4_8bu1p")
 
 [node name="Vessel" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33436, 3.02331, -0.853348)
+visible = false
 sorting_offset = 2.0
 texture = ExtResource("5_8mehk")
 
@@ -41,6 +45,9 @@ collision_mask = 9
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.823737, -3.37124, -0.817223)
 shape = SubResource("BoxShape3D_4t2f6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_ijcrc")
 
 [connection signal="body_entered" from="MouseArea" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="MouseArea" to="." method="_on_area_3d_body_exited"]

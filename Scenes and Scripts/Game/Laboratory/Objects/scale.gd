@@ -17,7 +17,8 @@ func _input(event):
 			can_pick_up = true
 			if player_inside:
 				get_tree().get_first_node_in_group("Root").picked_up_scale = true
-				queue_free()
+				$AnimatedSprite3D.visible = false
+				$AudioStreamPlayer.play()
 		elif !mouse_inside:
 			can_pick_up = false
 
@@ -26,9 +27,14 @@ func _on_area_3d_body_entered(body):
 		player_inside = true
 		if can_pick_up:
 			get_tree().get_first_node_in_group("Root").picked_up_scale = true
-			queue_free()
+			$AnimatedSprite3D.visible = false
+			$AudioStreamPlayer.play()
 
 
 func _on_area_3d_body_exited(body):
 	if body.get_name() == "Player":
 		player_inside = false
+
+
+func _on_audio_stream_player_finished():
+	queue_free()

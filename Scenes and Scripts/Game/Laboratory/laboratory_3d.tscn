@@ -274,7 +274,7 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 2.90953, 2.54214, 2.426
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.28781, 4.79234, -3.46081)
 
 [node name="Shelf" parent="Objects" instance=ExtResource("12_q43od")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.311, 8.6548, -3.6661)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.311, 8.6548, -4.63395)
 
 [node name="Scale" parent="Objects/Shelf" instance=ExtResource("13_nfct0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55196, -1.45856, 0.0381212)

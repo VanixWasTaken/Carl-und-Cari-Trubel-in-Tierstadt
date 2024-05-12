@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6dhgxet661ke"]
+[gd_scene load_steps=7 format=3 uid="uid://c6dhgxet661ke"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/vessel.gd" id="1_0kjhs"]
 [ext_resource type="Texture2D" uid="uid://qacuhtuqg1hn" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.png" id="2_76sog"]
 [ext_resource type="Texture2D" uid="uid://b6akkm3csy0m4" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small_highlight.png" id="3_phjs1"]
+[ext_resource type="AudioStream" uid="uid://dxs6n623s8kuw" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var3.mp3" id="4_pbb2x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6wgwi"]
 animations = [{
@@ -44,7 +45,11 @@ collision_mask = 9
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.517192, -9.86045, 1.28163)
 shape = SubResource("BoxShape3D_nleoc")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pbb2x")
+
 [connection signal="mouse_entered" from="Mouse_area" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="Mouse_area" to="." method="_on_area_3d_mouse_exited"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
