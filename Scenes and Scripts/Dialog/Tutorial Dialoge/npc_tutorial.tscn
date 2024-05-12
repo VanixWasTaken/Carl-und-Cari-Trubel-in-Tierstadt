@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://d1vovatlehj8g"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/npc_tutorial.gd" id="1_yadtb"]
-[ext_resource type="Texture2D" uid="uid://t7s3m88vvxfh" path="res://Assets/Art/Characters/Cari/Full Body/cari_animation_walk_spritesheet.png" id="2_m0q8h"]
-[ext_resource type="Texture2D" uid="uid://bsr6d5agqlws2" path="res://Assets/Art/Characters/Carl/Full Body/carl_animation_walk_spritesheet.png" id="3_qlsiw"]
+[ext_resource type="Texture2D" uid="uid://b2ei2cwej1d14" path="res://Assets/Art/Characters/Cari/Full Body/cari_animation_walk_spritesheet.png" id="2_m0q8h"]
+[ext_resource type="Texture2D" uid="uid://bxom8ndjt3opt" path="res://Assets/Art/Characters/Carl/Full Body/carl_animation_walk_spritesheet.png" id="3_qlsiw"]
 [ext_resource type="PackedScene" uid="uid://raesadnfh01o" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial.tscn" id="3_s786n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_psdav"]
@@ -53,7 +53,7 @@ radius = 4.04568
 script = ExtResource("1_yadtb")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.48504, 0)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 3.83803, 0)
 sprite_frames = SubResource("SpriteFrames_1pjmw")
 animation = &"Cari"
 autoplay = "Cari"
