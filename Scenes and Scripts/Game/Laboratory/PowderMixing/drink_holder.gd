@@ -71,7 +71,6 @@ func remove_glass():
 	if pulver_in_3:
 		$Area2D2.position.y += 10000
 		needed_color = "NULL"
-		print("SSSSSSSSSSSSSSSSS")
 		dialog_instance = end_powder_dialog.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
 
