@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cf4emkal6ayqc" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var2.mp3" id="6_ijcrc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4t2f6"]
-size = Vector3(22.6739, 4.57324, 11.6146)
+size = Vector3(16.3897, 2.8, 7)
 
 [node name="Table" type="Sprite3D"]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 5.35779, 4.01622, 2.43743)
@@ -18,7 +18,7 @@ script = ExtResource("2_uoknu")
 [node name="MouseArea" type="Area3D" parent="."]
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="MouseArea"]
-polygon = PackedVector2Array(5.25409, 4.06775, 6.95969, 1.49533, 7.45031, -3.80227, -7.65816, -3.75819, -7.87021, -1.35253, -8.08467, 0.10405, -8.23733, 1.06996, -8.35947, 1.72275, -8.32605, 2.23879, -7.88339, 3.10985, -7.08541, 3.89793)
+polygon = PackedVector2Array(5.25409, 4.06775, 8, 2, 7.45031, -3.80227, -7.65816, -3.75819, -7.87021, -1.35253, -8.08467, 0.10405, -8.23733, 1.06996, -8.35947, 1.72275, -8.32605, 2.23879, -7.88339, 3.10985, -7.08541, 3.89793)
 
 [node name="ReagenzGlasses" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.30622, 2.96554, 0.372631)
@@ -43,7 +43,7 @@ collision_layer = 9
 collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.823737, -3.37124, -0.817223)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.146336, -4.30766, 0.407073)
 shape = SubResource("BoxShape3D_4t2f6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="."]

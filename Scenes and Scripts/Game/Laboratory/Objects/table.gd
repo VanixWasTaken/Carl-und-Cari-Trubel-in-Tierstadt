@@ -56,7 +56,7 @@ func _input(event):
 				elif !Global.talked_to_chameleon:
 					var dialog_instance = filler_dialog.instantiate()
 					get_tree().get_current_scene().add_child(dialog_instance)
-					_on_area_3d_mouse_exited()
+					reset_mouse()
 		elif !mouse_inside:
 			can_interact = false
 
@@ -83,7 +83,7 @@ func _on_area_3d_body_entered(body):
 			elif !Global.talked_to_chameleon:
 				var dialog_instance = filler_dialog.instantiate()
 				get_tree().get_current_scene().add_child(dialog_instance)
-				_on_area_3d_mouse_exited()
+				reset_mouse()
 
 
 func _on_area_3d_body_exited(body):
@@ -96,3 +96,8 @@ func initiate_dialog():
 		add_child(dialog_instance)
 		gathered_all_instruments = true
 		Global.dialog_playing = true
+
+func reset_mouse():
+	$".".texture = no_shader
+	mouse_inside = false
+	can_interact = false
