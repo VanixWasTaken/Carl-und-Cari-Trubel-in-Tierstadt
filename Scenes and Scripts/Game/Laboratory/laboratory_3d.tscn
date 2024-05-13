@@ -346,17 +346,20 @@ bus = &"SFX"
 [node name="Coats" parent="Objects" instance=ExtResource("12_0j0e7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0121, 5.1747, -4.50774)
 
+[node name="CollisionShape3D" parent="Objects/Coats/MouseArea3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31278, -0.387873, -0.0123205)
+
 [node name="Table" parent="Objects" instance=ExtResource("10_1cvp0")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.151193, 2.93994, 2.26492)
 
 [node name="Cabinet" parent="Objects" instance=ExtResource("11_rky6m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.28781, 4.50758, -3.46081)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.54585, 4.50758, -3.43774)
 
 [node name="Shelf" parent="Objects" instance=ExtResource("12_q43od")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.311, 8.6548, -4.63395)
 
 [node name="Scale" parent="Objects/Shelf" instance=ExtResource("13_nfct0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55196, -1.45856, 0.0381212)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55196, -1.45856, 0.0381207)
 
 [node name="Sink" parent="Objects" instance=ExtResource("13_daqka")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 26.0742, 3.07217, 1.31191)
@@ -445,3 +448,4 @@ shape = SubResource("CylinderShape3D_x060t")
 
 [editable path="UI/HelpButton"]
 [editable path="Player"]
+[editable path="Objects/Coats"]

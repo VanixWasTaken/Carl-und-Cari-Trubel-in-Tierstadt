@@ -3,19 +3,29 @@
 [ext_resource type="Texture2D" uid="uid://dwpj8l0184p4j" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_coats.png" id="1_tkw4o"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/coats.gd" id="2_6n72e"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_3h5hb"]
-size = Vector3(6.88916, 6.86972, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_t6mlf"]
+size = Vector3(7.08502, 6.54492, 2.46719)
 
 [node name="Coats" type="Sprite3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22085, 0)
 texture = ExtResource("1_tkw4o")
 script = ExtResource("2_6n72e")
 
+[node name="MouseArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionPolygon3D" parent="MouseArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.329102, -0.440201, 0)
+polygon = PackedVector2Array(-1.93174, 2.54231, -0.513005, 0.790593, 0.388573, 3.3276, 1.28495, 3.38708, 3.28256, -0.626781, 3.18391, -2.78047, 0.59746, -3.39418, -0.499466, -3.09838, -2.49339, -3.11696, -3.53143, -2.29708, -3.76323, -0.488692)
+
 [node name="Area3D" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.329102, -0.440201, 0)
-shape = SubResource("BoxShape3D_3h5hb")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0747986, -6.57886, 0.733597)
+shape = SubResource("BoxShape3D_t6mlf")
 
-[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
-[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]
+[connection signal="mouse_entered" from="MouseArea3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="MouseArea3D" to="." method="_on_area_3d_mouse_exited"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

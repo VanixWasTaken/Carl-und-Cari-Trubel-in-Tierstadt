@@ -178,3 +178,4 @@ func _reset_bowl():
 		too_much = false
 		bowl_full = false
 		pulver_color = "null"
+		global_position = start_position
