@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjgcjmvn07n8m"
-path="res://.godot/imported/chameleon_005.png-1114a81dd40bd3f305fc3a4b6c753310.ctex"
+uid="uid://nkye4h775y3x"
+path="res://.godot/imported/chameleon_idle1.png-21f5e087e147a2c88e629053efdb8c3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_005.png"
-dest_files=["res://.godot/imported/chameleon_005.png-1114a81dd40bd3f305fc3a4b6c753310.ctex"]
+source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chameleon_idle1.png"
+dest_files=["res://.godot/imported/chameleon_idle1.png-21f5e087e147a2c88e629053efdb8c3d.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

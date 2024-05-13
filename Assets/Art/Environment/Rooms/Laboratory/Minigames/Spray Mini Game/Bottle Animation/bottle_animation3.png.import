@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djxubsy22fhwe"
-path="res://.godot/imported/chameleon_002.png-6682f9466986f55071083d0e9a922857.ctex"
+uid="uid://c834b4h8xm3ci"
+path="res://.godot/imported/bottle_animation3.png-c13767034d0c9444f77e5bc6ce535995.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_002.png"
-dest_files=["res://.godot/imported/chameleon_002.png-6682f9466986f55071083d0e9a922857.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation3.png"
+dest_files=["res://.godot/imported/bottle_animation3.png-c13767034d0c9444f77e5bc6ce535995.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
