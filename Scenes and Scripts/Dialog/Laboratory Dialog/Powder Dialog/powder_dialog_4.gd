@@ -38,7 +38,10 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 3:
 		Global.dialog_playing = false
-		queue_free()
+		Global.moving_allowed = true
+		Global.return_laboratory_1 = true
+		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
+
 ##########################################################################################
 
 
@@ -55,7 +58,6 @@ func add_left_dialog_box():
 	
 	if dialogs == 2:
 		dialogs += 1
-		Global.moving_allowed = true
 	
 ##########################################################################################
 

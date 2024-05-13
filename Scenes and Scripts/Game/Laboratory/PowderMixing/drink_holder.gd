@@ -47,6 +47,7 @@ func _on_area_2d_area_entered(area):
 			elif water_in_3 == true && pulver_in_3 == false:
 				$".".frame = 6
 				pulver_in_3 = true
+				remove_glass()
 
 func remove_glass():
 	var dialog_instance
@@ -70,6 +71,7 @@ func remove_glass():
 	if pulver_in_3:
 		$Area2D2.position.y += 10000
 		needed_color = "NULL"
+		print("SSSSSSSSSSSSSSSSS")
 		dialog_instance = end_powder_dialog.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
 
@@ -78,13 +80,3 @@ func _on_area_2d_area_exited(area):
 		area.get_parent().play("default")
 	if area_name.contains("PulverBowl"):
 		$"../PulverBowl"._reset_bowl()
-
-func _process(delta):
-	if pulver_in_1 == true and pulver_in_2 == true and pulver_in_3 == true:
-		await get_tree().create_timer(3).timeout
-		return_laboratory = true
-	
-	if return_laboratory == true:
-		Global.return_laboratory_1 = true
-		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
-		

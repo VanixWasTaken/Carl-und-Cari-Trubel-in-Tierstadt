@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0s17y7fwxn64"
-path.s3tc="res://.godot/imported/lab_shelf.png-35ead88fb5c094db8799a24a78389475.s3tc.ctex"
+path="res://.godot/imported/lab_shelf.png-35ead88fb5c094db8799a24a78389475.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_shelf.png"
-dest_files=["res://.godot/imported/lab_shelf.png-35ead88fb5c094db8799a24a78389475.s3tc.ctex"]
+dest_files=["res://.godot/imported/lab_shelf.png-35ead88fb5c094db8799a24a78389475.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
