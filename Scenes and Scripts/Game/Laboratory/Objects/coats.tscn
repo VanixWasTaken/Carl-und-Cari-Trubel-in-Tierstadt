@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dkokgtmpn6gv0"]
 
-[ext_resource type="Texture2D" uid="uid://dwpj8l0184p4j" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_coats.png" id="1_tkw4o"]
+[ext_resource type="Texture2D" uid="uid://dwpj8l0184p4j" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_coats.PNG" id="1_tkw4o"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/coats.gd" id="2_6n72e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3h5hb"]

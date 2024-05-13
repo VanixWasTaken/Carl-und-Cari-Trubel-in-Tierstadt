@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=65 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -20,10 +20,16 @@
 [ext_resource type="Texture2D" uid="uid://dsrxoltpg6iom" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_001.png" id="14_5lhuu"]
 [ext_resource type="PackedScene" uid="uid://c6dhgxet661ke" path="res://Scenes and Scripts/Game/Laboratory/Objects/vessel.tscn" id="16_qbcfp"]
 [ext_resource type="AudioStream" uid="uid://eqkepd0aictl" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_chameleonsearching_var1.mp3" id="18_1fo6j"]
+[ext_resource type="Texture2D" uid="uid://cb20pnlmajeq3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim1.PNG" id="19_yd1p1"]
+[ext_resource type="Texture2D" uid="uid://dv5wru2ytpoyj" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim2.PNG" id="20_mtkpy"]
 [ext_resource type="Texture2D" uid="uid://cagxrgkj758x3" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_ventilation.png" id="20_rmdpi"]
+[ext_resource type="Texture2D" uid="uid://6imsq4r3joms" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim3.PNG" id="21_tjuo6"]
+[ext_resource type="Texture2D" uid="uid://bud3u6g26cksi" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim4.PNG" id="22_qv05n"]
 [ext_resource type="Texture2D" uid="uid://cfk5m3juolyhu" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_trashcan.png" id="22_tfvcg"]
+[ext_resource type="Texture2D" uid="uid://kbafyou36r3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim5.PNG" id="23_tynln"]
 [ext_resource type="Texture2D" uid="uid://b3nyw5isqf7dc" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_chair.png" id="23_ye88a"]
 [ext_resource type="Texture2D" uid="uid://cc8elg23lyvvu" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cabinet_wall_right.png" id="24_1y555"]
+[ext_resource type="Texture2D" uid="uid://cdxa6qwd84ua3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim6.PNG" id="24_5la8x"]
 [ext_resource type="Texture2D" uid="uid://djxubsy22fhwe" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_002.png" id="25_0nmcg"]
 [ext_resource type="Texture2D" uid="uid://ddgurcbihtflv" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_lamp.png" id="25_kjt1n"]
 [ext_resource type="Texture2D" uid="uid://clx51sk6di2et" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_003.png" id="26_5d654"]
@@ -103,6 +109,32 @@ size = Vector3(9.56578, 1.4776, 7.59819)
 
 [sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_75e5b"]
 polyphony = 3
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dwvgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_yd1p1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mtkpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_tjuo6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_qv05n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tynln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_5la8x")
+}],
+"loop": true,
+"name": &"searching",
+"speed": 5.0
+}]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lcbi0"]
 load_path = "res://.godot/imported/lab_chair.png-8109bb1e306a4a75684728753d595008.s3tc.ctex"
@@ -338,9 +370,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3069, 3.58604, -0.494638)
 [node name="Vessel" parent="Objects/Sink" instance=ExtResource("16_qbcfp")]
 transform = Transform3D(1, 1.53232e-08, 0, 2.66876e-08, 1, 8.59272e-09, -2.98023e-08, 7.98636e-10, 1, 1.36238, 0.974767, -0.268445)
 
-[node name="Chameleon" type="Sprite3D" parent="Objects"]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 5.98193, -2.07224)
-texture = ExtResource("14_5lhuu")
+[node name="Chameleon" type="AnimatedSprite3D" parent="Objects"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -11.6343, 7.22599, -2.45729)
+sprite_frames = SubResource("SpriteFrames_dwvgy")
+animation = &"searching"
+autoplay = "searching"
 
 [node name="ChameleonFoley" type="AudioStreamPlayer3D" parent="Objects/Chameleon"]
 stream = ExtResource("18_1fo6j")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwpj8l0184p4j"
-path="res://.godot/imported/lab_coats.PNG-23290c1b24534464e7c7c47879eb7e73.ctex"
+uid="uid://bud3u6g26cksi"
+path="res://.godot/imported/chemist_search_anim4.PNG-26a4f2d94935630b6b11f29e661fadc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_coats.PNG"
-dest_files=["res://.godot/imported/lab_coats.PNG-23290c1b24534464e7c7c47879eb7e73.ctex"]
+source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim4.PNG"
+dest_files=["res://.godot/imported/chemist_search_anim4.PNG-26a4f2d94935630b6b11f29e661fadc1.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

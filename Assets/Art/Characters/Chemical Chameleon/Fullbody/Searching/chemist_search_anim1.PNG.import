@@ -2,20 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwpj8l0184p4j"
-path="res://.godot/imported/lab_coats.PNG-23290c1b24534464e7c7c47879eb7e73.ctex"
+uid="uid://cb20pnlmajeq3"
+path.s3tc="res://.godot/imported/chemist_search_anim1.PNG-4c8b444c9b708bd09165ecf093d5de46.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_coats.PNG"
-dest_files=["res://.godot/imported/lab_coats.PNG-23290c1b24534464e7c7c47879eb7e73.ctex"]
+source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim1.PNG"
+dest_files=["res://.godot/imported/chemist_search_anim1.PNG-4c8b444c9b708bd09165ecf093d5de46.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
