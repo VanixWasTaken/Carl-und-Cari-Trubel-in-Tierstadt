@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=58 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://b3nyw5isqf7dc" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_chair.png" id="23_ye88a"]
 [ext_resource type="Texture2D" uid="uid://cc8elg23lyvvu" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cabinet_wall_right.png" id="24_1y555"]
 [ext_resource type="Texture2D" uid="uid://djxubsy22fhwe" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_002.png" id="25_0nmcg"]
+[ext_resource type="Texture2D" uid="uid://ddgurcbihtflv" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_lamp.png" id="25_kjt1n"]
 [ext_resource type="Texture2D" uid="uid://clx51sk6di2et" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_003.png" id="26_5d654"]
 [ext_resource type="Texture2D" uid="uid://8e227vieqtam" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_004.png" id="27_qygja"]
 [ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_005.png" id="28_d8ugo"]
@@ -371,6 +372,10 @@ texture = SubResource("CompressedTexture2D_lt4d8")
 [node name="WallCabinet" type="Sprite3D" parent="Objects"]
 transform = Transform3D(0.152037, 0, -0.988375, 0, 1, 0, 0.988375, 0, 0.152037, 28.8158, 8.60513, -1.4744)
 texture = ExtResource("24_1y555")
+
+[node name="Sprite3D" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 10.7804, 1.09887)
+texture = ExtResource("25_kjt1n")
 
 [node name="CameraPan" type="AnimationPlayer" parent="."]
 libraries = {
