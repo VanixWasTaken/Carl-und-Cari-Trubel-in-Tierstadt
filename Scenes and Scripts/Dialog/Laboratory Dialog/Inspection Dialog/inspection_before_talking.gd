@@ -24,6 +24,7 @@ var vo_pc
 
 func _ready():
 	Global.moving_allowed = false
+	Global.dialog_playing = true
 	if Global.character == "Carl":
 		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 		vo_pc = "carl"
@@ -42,10 +43,9 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 9:
+	if dialogs == 3:
 		Global.moving_allowed = true
 		Global.dialog_playing = false
-		Global.talked_to_chameleon = true
 		queue_free()
 ##########################################################################################
 
@@ -62,33 +62,27 @@ func add_left_dialog_box():
 ##################################  WRITE DIALOG HERE  ###################################
 	
 	if dialogs == 1:
+		var rng = RandomNumberGenerator.new()
+		var random_dialog = rng.randi_range(0,4)
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Wer bist du und warum können wir dich nicht sehen?"
+		if random_dialog == 0:
+			short_node_text.text = "Ich sollte zuerst mit dem Chamäleon reden!"
+		elif random_dialog == 1:
+			short_node_text.text = "Vielleicht kann mir die Laborarbeiterin sagen, was das ist."
+		elif random_dialog == 2:
+			short_node_text.text = "Ich sollte zuerst mit dem Chamäleon reden!"
+		elif random_dialog == 3:
+			short_node_text.text = "Oh, was ist das denn?"
+		elif random_dialog == 4:
+			short_node_text.text = "Hmm, ich weiß gar nicht, was das ist."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/vo_pc_" + vo_pc + "_laboratory01_var1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
-	
-	elif dialogs == 5:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Natürlich! Was sollen wir tun?"
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
-		dialogs += 1
-	
-	elif dialogs == 8:
-		dialogs += 1
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -106,62 +100,12 @@ func add_right_dialog_box():
 	$".".add_child(node)
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
-	
+
+
 	if dialogs == 2:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich b-b-bin Christina das Chemie Chamäleon."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Christina"
 		dialogs += 1
-		same_speaker = true
-	
-	elif dialogs == 3:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "I-i-ich habe mich ausversehen u-u-unsichtbar gemacht und k-k-kann mich nicht zurückverwandeln."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Christina"
-		dialogs += 1
-	
-	elif dialogs == 4:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "K-k-könnt ihr mir helfen meine V-V-Visabel Chemikalie zu mixen? Mit der werde ich wieder sichtbar."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Christina"
-		dialogs += 1
-		same_speaker = false
-	
-	elif dialogs == 6:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ihr m-m-müsst zuerst an d-d-dem Tisch dort drei Chemikalien mixen."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Christina"
-		dialogs += 1
-		same_speaker = true
-	
-	elif dialogs == 7:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Bitte holt die Pulver aus dem Schrank, sucht die Reagenzgläser und füllt W-w-wasser in den Behälter, der auf dem Tisch steht."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Christina"
-		dialogs += 1
-		same_speaker = false
-	
-	
+		Global.moving_allowed = true
+
 ##########################################################################################
 
 
@@ -192,6 +136,7 @@ func _on_skip_button_pressed():
 
 func _on_skip_button_timer_timeout():
 	$SkipButton.visible = true
+
 
 func _on_skip_button_mouse_entered():
 	$"../Hover".play()

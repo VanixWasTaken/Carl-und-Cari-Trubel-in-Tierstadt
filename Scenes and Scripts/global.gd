@@ -12,5 +12,5 @@ var talked_to_chris
 
 var tutorial_help_button_state = 0
 var laboratory_help_button_state = 0
-
+var talked_to_chameleon = false
 var return_laboratory_1 = false

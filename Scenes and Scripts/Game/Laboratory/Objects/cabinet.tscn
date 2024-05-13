@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c7vej1yq0wues"]
+[gd_scene load_steps=8 format=3 uid="uid://c7vej1yq0wues"]
 
 [ext_resource type="Texture2D" uid="uid://ddo8q72ilau1w" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cabinet_shades_up.png" id="1_kykax"]
 [ext_resource type="Texture2D" uid="uid://bfe7swowjh56s" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_highlight.png" id="2_3f1ww"]
@@ -20,6 +20,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_iecp5"]
+size = Vector3(10.5134, 2.20386, 2.40991)
+
 [node name="Cabinet" type="AnimatedSprite3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0368061, 3.71626, -3.03876)
 sprite_frames = SubResource("SpriteFrames_gju4r")
@@ -29,14 +32,24 @@ script = ExtResource("2_ii3qh")
 [node name="Reagenz Glasses" parent="." instance=ExtResource("5_6kera")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.027, -101.295, 0.056)
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Mouse3D" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Mouse3D"]
 polygon = PackedVector2Array(4.34463, -4.66924, 4.11385, 3.7616, 3.30116, 4.21639, -0.411783, 4.20135, -3.51429, 4.27178, -4.05737, 3.30474, -4.05557, -4.47957)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.121766)
 texture = ExtResource("5_hhoqs")
 
-[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
-[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.179077, -4.39709, 0.704956)
+shape = SubResource("BoxShape3D_iecp5")
+
+[connection signal="mouse_entered" from="Mouse3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Mouse3D" to="." method="_on_area_3d_mouse_exited"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

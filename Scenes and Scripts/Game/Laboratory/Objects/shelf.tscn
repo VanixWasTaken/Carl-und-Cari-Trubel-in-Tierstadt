@@ -1,17 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://b53g660kym05b"]
+[gd_scene load_steps=4 format=3 uid="uid://b53g660kym05b"]
 
 [ext_resource type="Texture2D" uid="uid://0s17y7fwxn64" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_shelf.png" id="1_882fy"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/shelf.gd" id="2_3d15d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_siorm"]
+size = Vector3(6.87926, 2.50522, 3.29248)
 
 [node name="Shelf" type="Sprite3D"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 12.1017, 9.93146, -3.29207)
 texture = ExtResource("1_882fy")
 script = ExtResource("2_3d15d")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="MouseArea3D" type="Area3D" parent="."]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="MouseArea3D"]
 polygon = PackedVector2Array(-3.57688, 3.50114, -4.69259, 1.33262, -5.22231, -3.09822, 5.0544, -3.44073, 5.50472, 0.78681, 3.55605, 3.57305)
 
-[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
-[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.419363, -14.6356, 1.35975)
+shape = SubResource("BoxShape3D_siorm")
+
+[connection signal="mouse_entered" from="MouseArea3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="MouseArea3D" to="." method="_on_area_3d_mouse_exited"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

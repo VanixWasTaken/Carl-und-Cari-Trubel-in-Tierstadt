@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qacuhtuqg1hn"
-path="res://.godot/imported/lab_three_thing_small.PNG-28967647016935714b17ddea0b1eb45c.ctex"
+path="res://.godot/imported/lab_three_thing_small.png-29b093a8f61793737c1f400cb85a1712.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.PNG"
-dest_files=["res://.godot/imported/lab_three_thing_small.PNG-28967647016935714b17ddea0b1eb45c.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.png"
+dest_files=["res://.godot/imported/lab_three_thing_small.png-29b093a8f61793737c1f400cb85a1712.ctex"]
 
 [params]
 
