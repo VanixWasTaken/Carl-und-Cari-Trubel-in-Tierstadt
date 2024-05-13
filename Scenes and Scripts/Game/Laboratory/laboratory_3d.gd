@@ -86,7 +86,11 @@ func _on_timer_timeout():
 		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer.wait_time = 0.45
 		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer.start()
 
-
+func _on_timer_2_timeout():
+	if !Global.lab_cutscene_played:
+			$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.play()
+			$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen/Timer2.wait_time = 1
+			$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen/Timer2.start()
 
 
 func _on_dialog_area_body_entered(body):
@@ -94,3 +98,6 @@ func _on_dialog_area_body_entered(body):
 		var dialogue_instance = second_dialog.instantiate()
 		$"NPC Chameleon".add_child(dialogue_instance)
 		Global.dialog_playing = true
+
+
+
