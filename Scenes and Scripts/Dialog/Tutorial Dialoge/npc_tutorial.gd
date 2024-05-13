@@ -11,6 +11,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Global.dialog_playing:
+		$AnimatedSprite3D.pause()
+	elif !Global.dialog_playing:
+		$AnimatedSprite3D.play()
 
 
