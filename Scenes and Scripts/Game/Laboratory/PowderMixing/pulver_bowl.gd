@@ -16,6 +16,7 @@ var needed_pulver = "Purple"
 var area_name
 var follow_mouse
 var too_much_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_too_much.tscn")
+var enough_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_enough.tscn")
 var too_little_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_too_little.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -136,8 +137,8 @@ func _on_area_2d_area_exited(area):
 		elif weight >= area_parent.minimum_weight && weight <= area_parent.maximum_weight:
 			too_little = false
 			enough = true
-			$"../Dialoguebox".visible = true
-			$"../Dialoguebox/Text".text = "Sehr gut. Jetzt füge das Pulver dem Wasser hinzu."
+			dialog_instance = enough_dialog.instantiate()
+			get_tree().get_current_scene().add_child(dialog_instance)
 		elif weight > area_parent.maximum_weight:
 			enough = false
 			too_much = true
