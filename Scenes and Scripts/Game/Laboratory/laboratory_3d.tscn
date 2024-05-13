@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=51 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -20,6 +20,12 @@
 [ext_resource type="PackedScene" uid="uid://c6dhgxet661ke" path="res://Scenes and Scripts/Game/Laboratory/Objects/vessel.tscn" id="16_qbcfp"]
 [ext_resource type="AudioStream" uid="uid://eqkepd0aictl" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_chameleonsearching_var1.mp3" id="18_1fo6j"]
 [ext_resource type="Texture2D" uid="uid://1vsbt1wbeul7" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_ventilation_sketch.png" id="21_3my04"]
+[ext_resource type="Texture2D" uid="uid://djxubsy22fhwe" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_002.png" id="21_vac0g"]
+[ext_resource type="Texture2D" uid="uid://clx51sk6di2et" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_003.png" id="22_m4u71"]
+[ext_resource type="Texture2D" uid="uid://8e227vieqtam" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_004.png" id="23_0anmj"]
+[ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_005.png" id="24_324fx"]
+[ext_resource type="Texture2D" uid="uid://b76ies1ylcj0t" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_006.png" id="25_oj77i"]
+[ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_007.png" id="26_tpe5o"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
 vertices = PackedVector3Array(-29.1293, 13.0394, -5.0675, -29.1293, 13.0394, -4.8175, 29.1207, 13.0394, -4.8175, 29.1207, 13.0394, -5.0675, 0.370667, 3.30943, -5.0675, 0.370667, 3.30943, -4.8175, 12.8707, 3.30943, -4.8175, 12.8707, 3.30943, -5.0675, 20.6207, 3.77943, -5.0675, 20.6207, 3.77943, -4.8175, 29.1207, 3.77943, -4.8175, 29.1207, 3.77943, -5.0675, 29.8707, 3.77943, -5.0675, 29.8707, 3.77943, 1.4325, 30.1207, 3.77943, 1.4325, 30.1207, 3.77943, -5.0675, -28.3793, 13.0994, -4.0675, -28.3793, 13.0994, 5.1825, -28.1293, 13.0994, 5.1825, -28.1293, 13.0994, -4.0675, 0.370667, 3.30943, -4.0675, 0.370667, 3.30943, -1.3175, 12.8707, 3.30943, -1.3175, 12.8707, 3.30943, -4.0675, 20.6207, 3.77943, -4.0675, 20.6207, 3.77943, 1.4325, 29.1207, 3.77943, 1.4325, 29.1207, 3.77943, -4.0675, -28.3793, 2.24943, -3.5675, -28.3793, 2.24943, 5.1825, -28.1293, 2.24943, 5.1825, -28.1293, 2.24943, -3.5675, -2.87933, 2.24943, 5.1825, -2.87933, 2.24943, 4.9325, -3.12933, 2.24943, 4.9325, -27.3793, 2.24943, 5.6825, -3.12933, 2.24943, 1.6825, -2.87933, 2.24943, 1.6825, -2.87933, 2.24943, 1.4325, -0.129333, 2.24943, -0.5675, -0.129333, 2.24943, -0.8175, -0.379333, 2.24943, -0.8175, -2.87933, 2.24943, 1.4325, 1.87067, 2.24943, 1.4325, 1.87067, 2.24943, -0.5675, -0.129333, 2.24943, -0.5675, -2.87933, 2.24943, 1.4325, -27.3793, 2.24943, 5.6825, -3.12933, 2.24943, 4.9325, -3.12933, 2.24943, 1.6825, 5.37067, 2.24943, 5.6825, 5.37067, 2.24943, 5.1825, -2.87933, 2.24943, 5.1825, -27.3793, 2.24943, 5.6825, -2.87933, 2.24943, 1.4325, -0.379333, 2.24943, -0.8175, -0.379333, 2.24943, -3.5675, -3.12933, 2.24943, 1.6825, -2.87933, 2.24943, 1.4325, -0.379333, 2.24943, -3.5675, -27.3793, 2.24943, -3.5675, -27.3793, 2.24943, 5.6825, 13.6207, 2.24943, -0.8175, 13.3707, 2.24943, -0.8175, 13.3707, 2.24943, -0.5675, 13.6207, 2.24943, 1.4325, 19.8707, 2.24943, 1.1825, 13.3707, 2.24943, -0.5675, 11.3707, 2.24943, -0.5675, 11.3707, 2.24943, 1.4325, 13.6207, 2.24943, 1.4325, 19.8707, 2.24943, -3.5675, 13.6207, 2.24943, -3.5675, 13.6207, 2.24943, -0.8175, 19.8707, 2.24943, 1.1825, 1.87067, 2.24943, 1.4325, 11.3707, 2.24943, 1.4325, 11.3707, 2.24943, -0.5675, 1.87067, 2.24943, -0.5675, 14.1207, 2.24943, 4.9325, 13.8707, 2.24943, 4.9325, 13.8707, 2.24943, 5.1825, 20.1207, 2.24943, 2.1825, 20.1207, 2.24943, 1.9325, 19.8707, 2.24943, 1.9325, 22.1207, 2.24943, 5.6825, 22.1207, 2.24943, 2.1825, 20.1207, 2.24943, 2.1825, 22.1207, 2.24943, 5.6825, 20.1207, 2.24943, 2.1825, 19.8707, 2.24943, 1.9325, 14.1207, 2.24943, 4.9325, 13.8707, 2.24943, 5.1825, 19.8707, 2.24943, 1.1825, 13.6207, 2.24943, 1.4325, 14.1207, 2.24943, 1.6825, 19.8707, 2.24943, 1.9325, 13.8707, 2.24943, 5.1825, 5.37067, 2.24943, 5.1825, 5.37067, 2.24943, 5.6825, 22.1207, 2.24943, 5.6825, 19.8707, 2.24943, 1.9325, 14.1207, 2.24943, 1.6825, 14.1207, 2.24943, 4.9325, -2.37933, 2.92943, 2.1825, -2.37933, 2.92943, 4.4325, 13.3707, 2.92943, 4.4325, 13.3707, 2.92943, 2.1825, 22.1207, 2.24943, 5.6825, 29.1207, 2.24943, 5.6825, 29.1207, 2.24943, 2.1825, 22.1207, 2.24943, 2.1825, 29.8707, 2.24943, 2.1825, 29.8707, 2.24943, 5.6825, 30.1207, 2.24943, 5.6825, 30.1207, 2.24943, 2.1825)
@@ -113,6 +119,38 @@ tracks/0/keys = {
 _data = {
 "camera pan": SubResource("Animation_5d15n")
 }
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_87aqa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_5lhuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vac0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_m4u71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_0anmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_324fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_oj77i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_tpe5o")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p3d4p"]
+radius = 4.04568
 
 [node name="Laboratory" type="Node3D" groups=["Root"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -313,8 +351,32 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
 
+[node name="Barks" type="AudioStreamPlayer3D" parent="CameraPan/MouseClickBlock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4036, 2, 0.992486)
+
+[node name="NPC Chameleon" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4036, 0, 0.992486)
+visible = false
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="NPC Chameleon"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 2.22266, 5.5625, 0.699728)
+sprite_frames = SubResource("SpriteFrames_87aqa")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.962601
+
+[node name="DialogArea" type="Area3D" parent="NPC Chameleon"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38806, 0, 0)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC Chameleon/DialogArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.804132, 0)
+shape = SubResource("CylinderShape3D_p3d4p")
+
 [connection signal="timeout" from="NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer" to="." method="_on_timer_timeout"]
 [connection signal="animation_finished" from="CameraPan" to="." method="_on_camera_pan_animation_finished"]
+[connection signal="body_entered" from="NPC Chameleon/DialogArea" to="." method="_on_dialog_area_body_entered"]
 
 [editable path="UI/HelpButton"]
 [editable path="Player"]
