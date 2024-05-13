@@ -1,6 +1,7 @@
 extends Node3D
 
 var first_dialogue = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_1.tscn")
+var second_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_2.tscn")
 
 var mouse_on = false
 var outline_shader = preload("res://Shader/outline.tres")
@@ -9,6 +10,8 @@ var cutscene = true
 var picked_up_scale = false
 var picked_up_reagenz_glasses = false
 var picked_up_vessel = false
+
+
 
 func _ready():
 	if Global.lab_cutscene_played == false:
@@ -57,6 +60,8 @@ func _on_camera_pan_animation_finished(anim_name):
 	Global.dialog_playing = true
 	Global.moving_allowed = false
 	
+	$"NPC Chameleon".visible = true
+	
 	var dialogue_instance = first_dialogue.instantiate()
 	add_child(dialogue_instance)
 	
@@ -75,3 +80,10 @@ func _on_timer_timeout():
 		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer.start()
 
 
+
+
+func _on_dialog_area_body_entered(body):
+	if body.get_name() == "Player":
+		var dialogue_instance = second_dialog.instantiate()
+		$"NPC Chameleon".add_child(dialogue_instance)
+		Global.dialog_playing = true
