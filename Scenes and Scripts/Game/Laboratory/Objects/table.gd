@@ -16,8 +16,8 @@ var got_glasses = false
 func _ready():
 	if Global.return_laboratory_1:
 		$ReagenzGlasses.visible = true
-		$Scale.visible = false
-		$Vessel.visible = false
+		$Scale.visible = true
+		$Vessel.visible = true
 
 func _process(delta):
 	if got_glasses && got_scale && got_vessel:

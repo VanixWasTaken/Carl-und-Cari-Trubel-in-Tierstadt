@@ -22,6 +22,9 @@ func _ready():
 		$Objects/Sink/Vessel.queue_free()
 		$Player.global_position = Vector3(0.285038, 2.349433, 4.709138)
 		$CameraPan/MouseClickBlock.queue_free()
+		$Objects/Chameleon.queue_free()
+		$"NPC Chameleon".visible = true
+		
 
 	if !Global.return_laboratory_1:
 		if Global.lab_cutscene_played == false:
@@ -48,13 +51,6 @@ func _process(delta):
 	if !cutscene:
 		if $Player.position.x <= 19.5 and $Player.position.x >= -19.5:
 			$Camera3D.position.x = $Player.position.x
-	
-	if Global.return_laboratory_1 == true:
-		picked_up_scale = true
-		picked_up_reagenz_glasses = true
-		picked_up_vessel = true
-		$Objects/Chameleon.position = Vector3(-22,5.982,-2.072)
-		#sound disablen habs aber nich hinbekommen#
 	
 
 

@@ -33,9 +33,9 @@ sorting_offset = 1.0
 texture = ExtResource("4_8bu1p")
 
 [node name="Vessel" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.33152, 3.02331, 0.251959)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.33152, 3.02331, 0.474508)
 visible = false
-sorting_offset = 0.5
+sorting_offset = 1.2
 texture = ExtResource("5_t2lee")
 
 [node name="Area3D" type="Area3D" parent="."]
