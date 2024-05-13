@@ -1,9 +1,13 @@
 extends Node2D
 
+signal balancing_game
+
 var ready_to_pour = false
 
 var tube_counter = 0
 
+var finished_pouring = false
+var signal_sent = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -11,7 +15,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if ready_to_pour and Input.is_action_just_pressed("left_click"):
+	if ready_to_pour and Input.is_action_just_pressed("left_click") and !finished_pouring:
 		
 		######################## HANDLES THE POURING ANIMATIONS OF THE CLAMP ###########################
 		if tube_counter <= 3:
@@ -23,7 +27,6 @@ func _process(delta):
 				$PouringClamp/PouringClampAnim.play("pouring_orange")
 			else:
 				$PouringClamp.visible = false
-		
 		# Timer duh
 		await get_tree().create_timer(3).timeout
 		
@@ -41,17 +44,24 @@ func _process(delta):
 			3:
 				$Jug/Jug.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Jug/minigame2_glass_stage4.png")
 				$Stand/StandArea/Glasses.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtubes_stage8.PNG")
+				finished_pouring = true
 		
 		
 		$Clamp.visible = true
 		ready_to_pour = false
+	
+	if finished_pouring:
+		if !signal_sent:
+			emit_signal("balancing_game")
+			signal_sent = true
+	
 
 
 # handles the colors and general visibility, whenever the clamp is dragged onto the stand, caps at tube_counter = 4 --> no overloading variable
 func _on_clamp_pouring_time():
 	
 	
-	if tube_counter <= 3:
+	if !finished_pouring:
 		
 		
 		
@@ -77,4 +87,3 @@ func _on_clamp_pouring_time():
 			$Clamp.visible = true
 	else:
 		$Clamp.visible = true
-	

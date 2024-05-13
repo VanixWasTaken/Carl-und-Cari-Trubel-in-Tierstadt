@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://dfm6sf40klc1x"]
+[gd_scene load_steps=26 format=3 uid="uid://dfm6sf40klc1x"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/titration.gd" id="1_rdept"]
 [ext_resource type="Texture2D" uid="uid://r82vd54v48ed" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG" id="1_tyn2s"]
 [ext_resource type="Texture2D" uid="uid://vw8qofpwgyb6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_phscale.png" id="2_e2340"]
 [ext_resource type="Texture2D" uid="uid://b4toblcow5vk5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_arrow.png" id="3_gdcxm"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/ph_scale.gd" id="3_nmufx"]
 [ext_resource type="Texture2D" uid="uid://b3al8u2mvobig" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigames2_testtuberag.png" id="4_gt4bg"]
 [ext_resource type="Texture2D" uid="uid://c17na0m652jpr" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtubes_stage1.PNG" id="6_jpfr7"]
 [ext_resource type="Texture2D" uid="uid://g0kefuwfgve4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Jug/minigame2_glass_stage1.png" id="6_qaj4p"]
@@ -18,7 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://cgsc4yi27gqc0" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Orange/minigame2_testtubeholder_orange_anim2.PNG" id="16_5swtm"]
 [ext_resource type="Texture2D" uid="uid://gibiwr2efchp" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Purple/minigame2_testtubeholder_purple_anim1.PNG" id="17_frm04"]
 [ext_resource type="Texture2D" uid="uid://bh8r22b5qh00s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Purple/minigame2_testtubeholder_purple_anim2.PNG" id="18_ueop8"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/burette.gd" id="19_p5xo2"]
 [ext_resource type="Texture2D" uid="uid://cx0ajetbl86fy" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Burette/minigame2_burette.PNG" id="19_vlw0g"]
+[ext_resource type="Texture2D" uid="uid://c6j7123gk1lp5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Burette/drehknopf_placeholder.png" id="21_3cyde"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op731"]
 size = Vector2(443, 376)
@@ -103,12 +106,17 @@ texture = ExtResource("1_tyn2s")
 
 [node name="PH-Scale" type="Node2D" parent="."]
 position = Vector2(1714, 311)
+script = ExtResource("3_nmufx")
 
 [node name="Glass" type="Sprite2D" parent="PH-Scale"]
 texture = ExtResource("2_e2340")
 
 [node name="Arrow" type="Sprite2D" parent="PH-Scale"]
+position = Vector2(0, 131)
 texture = ExtResource("3_gdcxm")
+
+[node name="WinCondition" type="Timer" parent="PH-Scale"]
+wait_time = 0.5
 
 [node name="Stand" type="Node2D" parent="."]
 position = Vector2(1495, 842)
@@ -160,10 +168,17 @@ animation = &"no"
 
 [node name="Burette" type="Node2D" parent="."]
 position = Vector2(378, 487)
+script = ExtResource("19_p5xo2")
 
 [node name="Burette" type="Sprite2D" parent="Burette"]
 texture = ExtResource("19_vlw0g")
 
+[node name="Knob" type="Sprite2D" parent="Burette"]
+position = Vector2(126, -81)
+texture = ExtResource("21_3cyde")
+
+[connection signal="balancing_game" from="." to="Burette" method="_on_titration_balancing_game"]
+[connection signal="timeout" from="PH-Scale/WinCondition" to="PH-Scale" method="_on_win_condition_timeout"]
 [connection signal="pouring_time" from="Clamp" to="." method="_on_clamp_pouring_time"]
 [connection signal="area_entered" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_area_entered"]
 [connection signal="area_exited" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_area_exited"]
