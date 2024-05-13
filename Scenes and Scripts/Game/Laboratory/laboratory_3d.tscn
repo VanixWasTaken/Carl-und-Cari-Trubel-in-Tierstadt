@@ -359,7 +359,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4036, 0, 0.992486)
 visible = false
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="NPC Chameleon"]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 2.22266, 5.5625, 0.699728)
+transform = Transform3D(-0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 2.22266, 5.5625, 0.699728)
 sprite_frames = SubResource("SpriteFrames_87aqa")
 animation = &"idle"
 autoplay = "idle"
