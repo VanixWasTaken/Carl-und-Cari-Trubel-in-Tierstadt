@@ -21,6 +21,7 @@ func _ready():
 
 func _process(delta):
 	if got_glasses && got_scale && got_vessel:
+		await get_tree().create_timer(2).timeout
 		initiate_dialog()
 
 func _on_area_3d_mouse_entered():
@@ -71,7 +72,7 @@ func _on_area_3d_body_entered(body):
 				if get_tree().get_first_node_in_group("Root").picked_up_reagenz_glasses == true:
 					$ReagenzGlasses.visible = true
 					got_glasses = true
-			elif gathered_all_instruments and Global.return_laboratory_1 == false:
+			elif gathered_all_instruments and Global.return_laboratory_1 == false and !Global.dialog_playing:
 				get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.tscn")
 
 
@@ -81,7 +82,8 @@ func _on_area_3d_body_exited(body):
 		player_inside = false
 
 func initiate_dialog():
-	if !gathered_all_instruments:
+	if !gathered_all_instruments and !Global.dialog_playing:
 		var dialog_instance = all_powderitem_dialog.instantiate()
 		add_child(dialog_instance)
 		gathered_all_instruments = true
+		Global.dialog_playing = true
