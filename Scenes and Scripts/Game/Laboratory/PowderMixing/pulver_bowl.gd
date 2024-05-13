@@ -78,6 +78,8 @@ func _on_area_2d_area_entered(area):
 					purple_pulver()
 					pulver_color = "Purple"
 			bowl_full = true
+		elif needed_pulver != area.get_parent().color:
+			right_powder = false
 
 func red_pulver():
 	await get_tree().create_timer(0.2).timeout

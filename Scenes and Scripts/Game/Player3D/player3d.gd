@@ -15,6 +15,7 @@ func _process(delta):
 	if navigation_agent.is_navigation_finished():
 		return
 	move_to_target(delta)
+	print(global_position)
 
 
 func move_to_target(delta):

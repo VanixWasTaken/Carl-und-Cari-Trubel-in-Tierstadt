@@ -4,10 +4,8 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/table.gd" id="2_uoknu"]
 [ext_resource type="Texture2D" uid="uid://qacuhtuqg1hn" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.png" id="3_tc6ml"]
 [ext_resource type="Texture2D" uid="uid://cbdxyqqksrgaf" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale.png" id="4_8bu1p"]
+[ext_resource type="Texture2D" uid="uid://l4wvwpd5bsx" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.PNG" id="5_t2lee"]
 [ext_resource type="AudioStream" uid="uid://cf4emkal6ayqc" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var2.mp3" id="6_ijcrc"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6moe4"]
-load_path = "res://.godot/imported/lab_three_flasks.png-d623688b0e9e14a2afec9bf2968b33d2.ctex"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4t2f6"]
 size = Vector3(22.6739, 4.57324, 11.6146)
@@ -23,22 +21,22 @@ script = ExtResource("2_uoknu")
 polygon = PackedVector2Array(5.25409, 4.06775, 6.95969, 1.49533, 7.45031, -3.80227, -7.65816, -3.75819, -7.87021, -1.35253, -8.08467, 0.10405, -8.23733, 1.06996, -8.35947, 1.72275, -8.32605, 2.23879, -7.88339, 3.10985, -7.08541, 3.89793)
 
 [node name="ReagenzGlasses" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0817, 2.96554, 0.372631)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.30622, 2.96554, 0.372631)
 visible = false
-sorting_offset = 1.0
+sorting_offset = 0.5
 texture = ExtResource("3_tc6ml")
 
 [node name="Scale" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38779, 2.87473, 0.15639)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.584571, 2.87473, 0.15639)
 visible = false
 sorting_offset = 1.0
 texture = ExtResource("4_8bu1p")
 
 [node name="Vessel" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33436, 3.02331, -0.853348)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.33152, 3.02331, 0.251959)
 visible = false
-sorting_offset = 2.0
-texture = SubResource("CompressedTexture2D_6moe4")
+sorting_offset = 0.5
+texture = ExtResource("5_t2lee")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 9

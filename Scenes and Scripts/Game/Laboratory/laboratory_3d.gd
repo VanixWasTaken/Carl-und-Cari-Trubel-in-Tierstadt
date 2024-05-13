@@ -16,12 +16,21 @@ var picked_up_vessel = false
 
 
 func _ready():
-	if Global.lab_cutscene_played == false:
-		$CameraPan.play("camera pan")
-		Global.cutscene_playing = true
-		Global.moving_allowed = false
-	
-	#Camera is glitching out after reentering the scene (didnt work at all before)
+	if Global.return_laboratory_1:
+		cutscene = false
+		$Objects/Shelf/Scale.queue_free()
+		$Objects/Sink/Vessel.queue_free()
+		$Player.global_position = Vector3(0.285038, 2.349433, 4.709138)
+		$CameraPan/MouseClickBlock.queue_free()
+
+	if !Global.return_laboratory_1:
+		if Global.lab_cutscene_played == false:
+			Global.lab_cutscene_played = true
+			$CameraPan.play("camera pan")
+			Global.cutscene_playing = true
+			Global.moving_allowed = false
+		
+		#Camera is glitching out after reentering the scene (didnt work at all before)
 	if Global.lab_cutscene_played == true:
 		cutscene = false
 	

@@ -2,6 +2,10 @@ extends AnimatedSprite3D
 var door_open = false
 var mouse_inside = false
 
+func  _ready():
+	if Global.return_laboratory_1:
+		$"Reagenz Glasses".queue_free()
+
 func _on_area_3d_mouse_entered():
 	frame = 1
 	mouse_inside = true
