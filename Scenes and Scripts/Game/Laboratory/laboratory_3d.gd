@@ -16,6 +16,8 @@ var picked_up_vessel = false
 
 
 func _ready():
+	
+	
 	if Global.return_laboratory_1:
 		cutscene = false
 		$Objects/Shelf/Scale.queue_free()
@@ -75,22 +77,27 @@ func _on_camera_pan_animation_finished(anim_name):
 	################# ALLE OBJEKTE DER CUTSCENE ENTFERNEN + AUDIOLISTENER WECHSELN #########################
 	$Player/AudioListener3D.make_current()
 	$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps.queue_free()
+	$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.queue_free()
 	$Camera3D/AudioListener3D.queue_free()
 	$Objects/Chameleon.queue_free()
 	$CameraPan.queue_free()
 
 
 func _on_timer_timeout():
-	if !Global.lab_cutscene_played:
-		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps.play()
-		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer.wait_time = 0.45
-		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer.start()
+	$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps.play()
+	$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer.wait_time = 0.45
+	$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer.start()
 
 func _on_timer_2_timeout():
-	if !Global.lab_cutscene_played:
-			$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.play()
-			$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen/Timer2.wait_time = 1
-			$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen/Timer2.start()
+	var pp = 0
+	if pp == 0:
+		$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.play()
+		$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen/Timer2.wait_time = 2
+		$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen/Timer2.start()
+		pp += 1
+	elif pp == 1:
+		$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.stream = load("res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_doorclose_var1.mp3")
+		$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.play()
 
 
 func _on_dialog_area_body_entered(body):
