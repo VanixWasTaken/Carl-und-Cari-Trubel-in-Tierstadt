@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bicwybdqf8wy1"
-path="res://.godot/imported/tutorial_chair_back.png-fc7dcfffcf0311e187838a69ab3699a8.ctex"
+uid="uid://l4wvwpd5bsx"
+path="res://.godot/imported/lab_three_flasks.PNG-a4069782806cef44d8dcb67b9c041a25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_chair_back.png"
-dest_files=["res://.godot/imported/tutorial_chair_back.png-fc7dcfffcf0311e187838a69ab3699a8.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.PNG"
+dest_files=["res://.godot/imported/lab_three_flasks.PNG-a4069782806cef44d8dcb67b9c041a25.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
