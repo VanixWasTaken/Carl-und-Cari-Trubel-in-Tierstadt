@@ -10,6 +10,8 @@ func _ready():
 		$AnimatedSprite3D.play("cari_idle")
 
 func _process(delta):
+	if Global.dialog_playing:
+		$AnimatedSprite3D.pause()
 	if navigation_agent.is_navigation_finished():
 		return
 	move_to_target(delta)
@@ -35,9 +37,9 @@ func move_to_target(delta):
 	#        Walk Animation
 	######################
 	if Global.character == "Carl":
-		if distance_to_target.x > 0:
+		if distance_to_target.x > 0 && !Global.dialog_playing:
 			$AnimatedSprite3D.play("carl_walk_left")
-		if distance_to_target.x < 0:
+		if distance_to_target.x < 0 && !Global.dialog_playing:
 			$AnimatedSprite3D.play("carl_walk_right")
 		if navigation_agent.is_target_reachable() == true:
 			if navigation_agent.distance_to_target() <= 0.3:
@@ -48,9 +50,9 @@ func move_to_target(delta):
 			navigation_agent.target_position = navigation_agent.get_final_position()
 
 	elif Global.character == "Cari" || Global.character == "":
-		if distance_to_target.x > 0:
+		if distance_to_target.x > 0 && !Global.dialog_playing :
 			$AnimatedSprite3D.play("cari_walk_left")
-		if distance_to_target.x < 0:
+		if distance_to_target.x < 0 && !Global.dialog_playing :
 			$AnimatedSprite3D.play("cari_walk_right")
 		if navigation_agent.is_target_reachable() == true:
 			if navigation_agent.distance_to_target() <= 0.3:

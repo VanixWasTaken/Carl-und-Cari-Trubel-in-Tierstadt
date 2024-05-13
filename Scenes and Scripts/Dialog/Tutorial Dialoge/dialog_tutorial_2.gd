@@ -22,11 +22,9 @@ func _ready():
 	Global.dialog_playing= true
 	pc = Global.character
 	if Global.character == "Carl":
-		print(Global.character)
 		PRESET1 = Carl
 		PRESET2 = Cari
 	elif Global.character == "Cari":
-		print(Global.character)
 		PRESET2 = Carl
 		PRESET1 = Cari
 ###############################  PUT THE STARTING SIDE HERE  #############################
