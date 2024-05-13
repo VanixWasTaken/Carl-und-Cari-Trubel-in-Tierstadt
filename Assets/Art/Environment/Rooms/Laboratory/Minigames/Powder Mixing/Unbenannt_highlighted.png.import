@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxc42ocbharcy"
-path.s3tc="res://.godot/imported/Unbenannt_highlighted.png-673e7388b2051f12086750174c3cc0d2.s3tc.ctex"
+path="res://.godot/imported/Unbenannt_highlighted.png-673e7388b2051f12086750174c3cc0d2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Unbenannt_highlighted.png"
-dest_files=["res://.godot/imported/Unbenannt_highlighted.png-673e7388b2051f12086750174c3cc0d2.s3tc.ctex"]
+dest_files=["res://.godot/imported/Unbenannt_highlighted.png-673e7388b2051f12086750174c3cc0d2.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
