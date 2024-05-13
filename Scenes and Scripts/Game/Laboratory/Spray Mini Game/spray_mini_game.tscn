@@ -1,0 +1,94 @@
+[gd_scene load_steps=18 format=3 uid="uid://dfpwq4ngsnyed"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
+[ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
+[ext_resource type="Texture2D" uid="uid://dwgi13mmayd2l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_gun.png" id="3_ww0fy"]
+[ext_resource type="Texture2D" uid="uid://chu3r7ga3hn5s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_bottle.png" id="4_7yw8r"]
+[ext_resource type="Texture2D" uid="uid://co55uwsttxpdl" path="res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png" id="5_46hjq"]
+[ext_resource type="Texture2D" uid="uid://dsrxoltpg6iom" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_001.png" id="5_gklha"]
+[ext_resource type="Texture2D" uid="uid://djxubsy22fhwe" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_002.png" id="6_xwq8t"]
+[ext_resource type="Texture2D" uid="uid://clx51sk6di2et" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_003.png" id="7_tx7u5"]
+[ext_resource type="Texture2D" uid="uid://8e227vieqtam" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_004.png" id="8_7ncik"]
+[ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_005.png" id="9_4xlnv"]
+[ext_resource type="Texture2D" uid="uid://b76ies1ylcj0t" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_006.png" id="10_do62t"]
+[ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_007.png" id="11_djl2m"]
+[ext_resource type="Shader" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gdshader" id="13_rn5a4"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/chameleon2.gd" id="13_s6nrn"]
+[ext_resource type="Texture2D" uid="uid://drgmi02uyxf4f" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/swirl.jpg" id="14_33dwu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lsl3j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_gklha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xwq8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tx7u5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7ncik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4xlnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_do62t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_djl2m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oi1vt"]
+shader = ExtResource("13_rn5a4")
+shader_parameter/value = 1.0
+shader_parameter/noise_texture = ExtResource("14_33dwu")
+
+[node name="SprayMiniGame" type="Node2D"]
+script = ExtResource("1_wcnbr")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_1k7pv")
+
+[node name="SprayGun" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="SprayGun"]
+position = Vector2(960, 540)
+texture = ExtResource("3_ww0fy")
+
+[node name="Spraycan" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Spraycan"]
+position = Vector2(960, 540)
+texture = ExtResource("4_7yw8r")
+
+[node name="ObjectBehindChameleonTest2" type="Sprite2D" parent="."]
+position = Vector2(777, 502)
+texture = ExtResource("5_46hjq")
+
+[node name="Chameleon" type="AnimatedSprite2D" parent="."]
+position = Vector2(769, 390)
+scale = Vector2(0.518026, 0.518026)
+sprite_frames = SubResource("SpriteFrames_lsl3j")
+autoplay = "default"
+frame_progress = 0.887
+
+[node name="ObjectBehindChameleonTest" type="Sprite2D" parent="."]
+position = Vector2(1188, 518)
+texture = ExtResource("5_46hjq")
+
+[node name="Chameleon2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_oi1vt")
+position = Vector2(1175, 374)
+scale = Vector2(0.532407, 0.532407)
+texture = ExtResource("5_gklha")
+script = ExtResource("13_s6nrn")
