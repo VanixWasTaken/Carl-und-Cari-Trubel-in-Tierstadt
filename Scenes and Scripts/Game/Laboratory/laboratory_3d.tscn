@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=49 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -13,19 +13,17 @@
 [ext_resource type="AudioStream" uid="uid://dc1vs6qw5sspl" path="res://Assets/Sound/SFX/Foley/World/sfx_world_foley_footstep_var1.mp3" id="10_l86mv"]
 [ext_resource type="AudioStream" uid="uid://blr4q41rjnya0" path="res://Assets/Sound/SFX/Foley/World/sfx_world_foley_footstep_var2.mp3" id="11_fvof2"]
 [ext_resource type="PackedScene" uid="uid://c7vej1yq0wues" path="res://Scenes and Scripts/Game/Laboratory/Objects/cabinet.tscn" id="11_rky6m"]
+[ext_resource type="PackedScene" uid="uid://dkokgtmpn6gv0" path="res://Scenes and Scripts/Game/Laboratory/Objects/coats.tscn" id="12_0j0e7"]
 [ext_resource type="PackedScene" uid="uid://b53g660kym05b" path="res://Scenes and Scripts/Game/Laboratory/Objects/shelf.tscn" id="12_q43od"]
 [ext_resource type="PackedScene" uid="uid://dx0gnhwrby4rh" path="res://Scenes and Scripts/Game/Laboratory/Objects/sink.tscn" id="13_daqka"]
 [ext_resource type="PackedScene" uid="uid://cenk56k5odi8x" path="res://Scenes and Scripts/Game/Laboratory/Objects/scale.tscn" id="13_nfct0"]
 [ext_resource type="Texture2D" uid="uid://dsrxoltpg6iom" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_001.png" id="14_5lhuu"]
 [ext_resource type="PackedScene" uid="uid://c6dhgxet661ke" path="res://Scenes and Scripts/Game/Laboratory/Objects/vessel.tscn" id="16_qbcfp"]
 [ext_resource type="AudioStream" uid="uid://eqkepd0aictl" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_chameleonsearching_var1.mp3" id="18_1fo6j"]
-[ext_resource type="Texture2D" uid="uid://1vsbt1wbeul7" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_ventilation_sketch.png" id="21_3my04"]
-[ext_resource type="Texture2D" uid="uid://djxubsy22fhwe" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_002.png" id="21_vac0g"]
-[ext_resource type="Texture2D" uid="uid://clx51sk6di2et" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_003.png" id="22_m4u71"]
-[ext_resource type="Texture2D" uid="uid://8e227vieqtam" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_004.png" id="23_0anmj"]
-[ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_005.png" id="24_324fx"]
-[ext_resource type="Texture2D" uid="uid://b76ies1ylcj0t" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_006.png" id="25_oj77i"]
-[ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_007.png" id="26_tpe5o"]
+[ext_resource type="Texture2D" uid="uid://cagxrgkj758x3" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_ventilation.png" id="20_rmdpi"]
+[ext_resource type="Texture2D" uid="uid://cfk5m3juolyhu" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_trashcan.png" id="22_tfvcg"]
+[ext_resource type="Texture2D" uid="uid://b3nyw5isqf7dc" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_chair.png" id="23_ye88a"]
+[ext_resource type="Texture2D" uid="uid://cc8elg23lyvvu" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cabinet_wall_right.png" id="24_1y555"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
 vertices = PackedVector3Array(-29.1293, 13.0394, -5.0675, -29.1293, 13.0394, -4.8175, 29.1207, 13.0394, -4.8175, 29.1207, 13.0394, -5.0675, 0.370667, 3.30943, -5.0675, 0.370667, 3.30943, -4.8175, 12.8707, 3.30943, -4.8175, 12.8707, 3.30943, -5.0675, 20.6207, 3.77943, -5.0675, 20.6207, 3.77943, -4.8175, 29.1207, 3.77943, -4.8175, 29.1207, 3.77943, -5.0675, 29.8707, 3.77943, -5.0675, 29.8707, 3.77943, 1.4325, 30.1207, 3.77943, 1.4325, 30.1207, 3.77943, -5.0675, -28.3793, 13.0994, -4.0675, -28.3793, 13.0994, 5.1825, -28.1293, 13.0994, 5.1825, -28.1293, 13.0994, -4.0675, 0.370667, 3.30943, -4.0675, 0.370667, 3.30943, -1.3175, 12.8707, 3.30943, -1.3175, 12.8707, 3.30943, -4.0675, 20.6207, 3.77943, -4.0675, 20.6207, 3.77943, 1.4325, 29.1207, 3.77943, 1.4325, 29.1207, 3.77943, -4.0675, -28.3793, 2.24943, -3.5675, -28.3793, 2.24943, 5.1825, -28.1293, 2.24943, 5.1825, -28.1293, 2.24943, -3.5675, -2.87933, 2.24943, 5.1825, -2.87933, 2.24943, 4.9325, -3.12933, 2.24943, 4.9325, -27.3793, 2.24943, 5.6825, -3.12933, 2.24943, 1.6825, -2.87933, 2.24943, 1.6825, -2.87933, 2.24943, 1.4325, -0.129333, 2.24943, -0.5675, -0.129333, 2.24943, -0.8175, -0.379333, 2.24943, -0.8175, -2.87933, 2.24943, 1.4325, 1.87067, 2.24943, 1.4325, 1.87067, 2.24943, -0.5675, -0.129333, 2.24943, -0.5675, -2.87933, 2.24943, 1.4325, -27.3793, 2.24943, 5.6825, -3.12933, 2.24943, 4.9325, -3.12933, 2.24943, 1.6825, 5.37067, 2.24943, 5.6825, 5.37067, 2.24943, 5.1825, -2.87933, 2.24943, 5.1825, -27.3793, 2.24943, 5.6825, -2.87933, 2.24943, 1.4325, -0.379333, 2.24943, -0.8175, -0.379333, 2.24943, -3.5675, -3.12933, 2.24943, 1.6825, -2.87933, 2.24943, 1.4325, -0.379333, 2.24943, -3.5675, -27.3793, 2.24943, -3.5675, -27.3793, 2.24943, 5.6825, 13.6207, 2.24943, -0.8175, 13.3707, 2.24943, -0.8175, 13.3707, 2.24943, -0.5675, 13.6207, 2.24943, 1.4325, 19.8707, 2.24943, 1.1825, 13.3707, 2.24943, -0.5675, 11.3707, 2.24943, -0.5675, 11.3707, 2.24943, 1.4325, 13.6207, 2.24943, 1.4325, 19.8707, 2.24943, -3.5675, 13.6207, 2.24943, -3.5675, 13.6207, 2.24943, -0.8175, 19.8707, 2.24943, 1.1825, 1.87067, 2.24943, 1.4325, 11.3707, 2.24943, 1.4325, 11.3707, 2.24943, -0.5675, 1.87067, 2.24943, -0.5675, 14.1207, 2.24943, 4.9325, 13.8707, 2.24943, 4.9325, 13.8707, 2.24943, 5.1825, 20.1207, 2.24943, 2.1825, 20.1207, 2.24943, 1.9325, 19.8707, 2.24943, 1.9325, 22.1207, 2.24943, 5.6825, 22.1207, 2.24943, 2.1825, 20.1207, 2.24943, 2.1825, 22.1207, 2.24943, 5.6825, 20.1207, 2.24943, 2.1825, 19.8707, 2.24943, 1.9325, 14.1207, 2.24943, 4.9325, 13.8707, 2.24943, 5.1825, 19.8707, 2.24943, 1.1825, 13.6207, 2.24943, 1.4325, 14.1207, 2.24943, 1.6825, 19.8707, 2.24943, 1.9325, 13.8707, 2.24943, 5.1825, 5.37067, 2.24943, 5.1825, 5.37067, 2.24943, 5.6825, 22.1207, 2.24943, 5.6825, 19.8707, 2.24943, 1.9325, 14.1207, 2.24943, 1.6825, 14.1207, 2.24943, 4.9325, -2.37933, 2.92943, 2.1825, -2.37933, 2.92943, 4.4325, 13.3707, 2.92943, 4.4325, 13.3707, 2.92943, 2.1825, 22.1207, 2.24943, 5.6825, 29.1207, 2.24943, 5.6825, 29.1207, 2.24943, 2.1825, 22.1207, 2.24943, 2.1825, 29.8707, 2.24943, 2.1825, 29.8707, 2.24943, 5.6825, 30.1207, 2.24943, 5.6825, 30.1207, 2.24943, 2.1825)
@@ -99,6 +97,12 @@ size = Vector3(10.5759, 1.4776, 7.17426)
 [sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_75e5b"]
 polyphony = 3
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lcbi0"]
+load_path = "res://.godot/imported/lab_chair.png-8109bb1e306a4a75684728753d595008.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lt4d8"]
+load_path = "res://.godot/imported/lab_chair.png-8109bb1e306a4a75684728753d595008.s3tc.ctex"
+
 [sub_resource type="Animation" id="Animation_5d15n"]
 resource_name = "camera pan"
 length = 6.0
@@ -119,38 +123,6 @@ tracks/0/keys = {
 _data = {
 "camera pan": SubResource("Animation_5d15n")
 }
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_87aqa"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_5lhuu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_vac0g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_m4u71")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_0anmj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_324fx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_oj77i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_tpe5o")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 9.0
-}]
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_p3d4p"]
-radius = 4.04568
 
 [node name="Laboratory" type="Node3D" groups=["Root"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -305,8 +277,11 @@ bus = &"SFX"
 
 [node name="Objects" type="Node3D" parent="."]
 
+[node name="Coats" parent="Objects" instance=ExtResource("12_0j0e7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8094, 5.82901, -4.50774)
+
 [node name="Table" parent="Objects" instance=ExtResource("10_1cvp0")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 2.90953, 2.54214, 2.42615)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.151193, 2.93994, 2.26492)
 
 [node name="Cabinet" parent="Objects" instance=ExtResource("11_rky6m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.28781, 4.79234, -3.46081)
@@ -318,10 +293,10 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.311, 8.6548, -4.6339
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55196, -1.45856, 0.0381212)
 
 [node name="Sink" parent="Objects" instance=ExtResource("13_daqka")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.2091, 4.27676, -0.458233)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3069, 3.58604, -0.494638)
 
 [node name="Vessel" parent="Objects/Sink" instance=ExtResource("16_qbcfp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36238, 0.974767, -0.268445)
+transform = Transform3D(1, 1.53232e-08, 0, 2.66876e-08, 1, 8.59272e-09, -2.98023e-08, 7.98636e-10, 1, 1.36238, 0.974767, -0.268445)
 
 [node name="Chameleon" type="Sprite3D" parent="Objects"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 5.98193, -2.07224)
@@ -333,8 +308,28 @@ autoplay = true
 bus = &"SFX"
 
 [node name="Ventilation" type="Sprite3D" parent="Objects"]
-transform = Transform3D(0.395, 0, 0, 0, 0.395, 0, 0, 0, 0.395, 18.7248, 10.3199, -2.03031)
-texture = ExtResource("21_3my04")
+transform = Transform3D(0.395, 0, 0, 0, 0.395, 0, 0, 0, 0.395, 18.3983, 11.7169, -2.03031)
+texture = ExtResource("20_rmdpi")
+
+[node name="TrashCan" type="Sprite3D" parent="Objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7881, 1.42714, 1.42419)
+texture = ExtResource("22_tfvcg")
+
+[node name="Chair" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -1.26122, 2.1746, 3.89918)
+texture = ExtResource("23_ye88a")
+
+[node name="Chair2" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 2.92488, 2.07626, 3.55023)
+texture = SubResource("CompressedTexture2D_lcbi0")
+
+[node name="Chair3" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -6.38396, 2.46804, 1.63533)
+texture = SubResource("CompressedTexture2D_lt4d8")
+
+[node name="WallCabinet" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.152037, 0, -0.988375, 0, 1, 0, 0.988375, 0, 0.152037, 28.8158, 8.60513, -1.4744)
+texture = ExtResource("24_1y555")
 
 [node name="CameraPan" type="AnimationPlayer" parent="."]
 libraries = {
@@ -351,32 +346,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
 
-[node name="Barks" type="AudioStreamPlayer3D" parent="CameraPan/MouseClickBlock"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4036, 2, 0.992486)
-
-[node name="NPC Chameleon" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4036, 0, 0.992486)
-visible = false
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="NPC Chameleon"]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 2.22266, 5.5625, 0.699728)
-sprite_frames = SubResource("SpriteFrames_87aqa")
-animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.962601
-
-[node name="DialogArea" type="Area3D" parent="NPC Chameleon"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38806, 0, 0)
-collision_layer = 8
-collision_mask = 8
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC Chameleon/DialogArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.804132, 0)
-shape = SubResource("CylinderShape3D_p3d4p")
-
 [connection signal="timeout" from="NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer" to="." method="_on_timer_timeout"]
 [connection signal="animation_finished" from="CameraPan" to="." method="_on_camera_pan_animation_finished"]
-[connection signal="body_entered" from="NPC Chameleon/DialogArea" to="." method="_on_dialog_area_body_entered"]
 
 [editable path="UI/HelpButton"]
 [editable path="Player"]

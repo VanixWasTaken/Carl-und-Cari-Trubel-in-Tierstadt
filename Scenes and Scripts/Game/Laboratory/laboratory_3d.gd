@@ -1,7 +1,9 @@
 extends Node3D
 
+# actual dialogs
 var first_dialogue = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_1.tscn")
 var second_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_2.tscn")
+
 
 var mouse_on = false
 var outline_shader = preload("res://Shader/outline.tres")

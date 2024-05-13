@@ -1,16 +1,16 @@
 [gd_scene load_steps=7 format=3 uid="uid://c7vej1yq0wues"]
 
-[ext_resource type="Texture2D" uid="uid://bjutishj7qs76" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet.png" id="1_56ua0"]
+[ext_resource type="Texture2D" uid="uid://ddo8q72ilau1w" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cabinet_shades_up.png" id="1_kykax"]
 [ext_resource type="Texture2D" uid="uid://bfe7swowjh56s" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/laboratory_cabinet_highlight.png" id="2_3f1ww"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/cabinet.gd" id="2_ii3qh"]
-[ext_resource type="Texture2D" uid="uid://bpq127dkvgv42" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cabinet_shades_down_sketch.png" id="4_dypf5"]
 [ext_resource type="PackedScene" uid="uid://d3c3s1nuw5me7" path="res://Scenes and Scripts/Game/Laboratory/Objects/reagenz_glasses.tscn" id="5_6kera"]
+[ext_resource type="Texture2D" uid="uid://ciyv137inteow" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cabinet_shades_down.png" id="5_hhoqs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gju4r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_56ua0")
+"texture": ExtResource("1_kykax")
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_3f1ww")
@@ -23,6 +23,7 @@ animations = [{
 [node name="Cabinet" type="AnimatedSprite3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0368061, 3.71626, -3.03876)
 sprite_frames = SubResource("SpriteFrames_gju4r")
+frame_progress = 0.945645
 script = ExtResource("2_ii3qh")
 
 [node name="Reagenz Glasses" parent="." instance=ExtResource("5_6kera")]
@@ -35,7 +36,7 @@ polygon = PackedVector2Array(4.34463, -4.66924, 4.11385, 3.7616, 3.30116, 4.2163
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.215245)
-texture = ExtResource("4_dypf5")
+texture = ExtResource("5_hhoqs")
 
 [connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

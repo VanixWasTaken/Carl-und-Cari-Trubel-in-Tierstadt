@@ -2,6 +2,9 @@ extends Sprite3D
 
 var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_desk_island_highlight.png")
 var no_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_desk_island.png")
+
+var all_powderitem_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_all_powderitems_dialog.tscn")
+
 var mouse_inside = false
 var can_interact = false
 var player_inside = false
@@ -12,7 +15,7 @@ var got_glasses = false
 
 func _process(delta):
 	if got_glasses && got_scale && got_vessel:
-		gathered_all_instruments = true
+		initiate_dialog()
 
 func _on_area_3d_mouse_entered():
 	$".".texture = outline_shader
@@ -70,3 +73,9 @@ func _on_area_3d_body_entered(body):
 func _on_area_3d_body_exited(body):
 	if body.get_name() == "Player":
 		player_inside = false
+
+func initiate_dialog():
+	if !gathered_all_instruments:
+		var dialog_instance = all_powderitem_dialog.instantiate()
+		add_child(dialog_instance)
+		gathered_all_instruments = true

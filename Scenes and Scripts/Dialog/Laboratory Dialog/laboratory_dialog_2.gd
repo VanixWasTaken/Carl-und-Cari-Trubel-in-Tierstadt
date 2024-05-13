@@ -42,7 +42,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 8:
+	if dialogs == 9:
 		Global.moving_allowed = true
 		Global.dialog_playing = false
 		queue_free()
@@ -65,29 +65,22 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Kennst du Kasper Freh?"
+		short_node_text.text = "Wer bist du und warum können wir dich nicht sehen?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
 	
-	elif dialogs == 3:
+	elif dialogs == 5:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Wohl eher ... SmallSchlongJohnsen"
+		short_node_text.text = "Natürlich! Was sollen wir tun?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
 	
-	elif dialogs == 6:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "ja genau der."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+	elif dialogs == 8:
 		dialogs += 1
 	
 	
@@ -118,7 +111,18 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "meinst du LongSchlongJohnsen?"
+		short_node_text.text = "Ich b-b-bin Christina das Chemie Chamäleon."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+		same_speaker = true
+	
+	elif dialogs == 3:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "I-i-ich habe mich ausversehen u-u-unsichtbar gemacht und k-k-kann mich nicht zurückverwandeln."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -128,32 +132,33 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "HAHAHAHAHA LOL WAR DAS WITZIG"
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Christina"
-		dialogs += 1
-		same_speaker = true
-	
-	elif dialogs == 5:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "oh man ich kann nicht mehr"
+		short_node_text.text = "K-k-könnt ihr mir helfen meine V-V-Visabel Chemikalie zu mixen? Mit der werde ich wieder sichtbar."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
 		same_speaker = false
 	
-	elif dialogs == 7:
+	elif dialogs == 6:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Ihr m-m-müsst zuerst an d-d-dem Tisch dort drei Chemikalien mixen."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
 		dialogs += 1
-		Global.moving_allowed = true
+		same_speaker = true
 	
-	
-	
-	
-	
-	
+	elif dialogs == 7:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Bitte holt die Pulver aus dem Schrank, sucht die Reagenzgläser und füllt W-w-wasser in den Behälter, der auf dem Tisch steht."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+		same_speaker = false
 	
 	
 ##########################################################################################

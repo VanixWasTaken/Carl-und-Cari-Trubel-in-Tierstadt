@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://b53g660kym05b"]
 
-[ext_resource type="Texture2D" uid="uid://c4te70dag103e" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cupboard_sketch.png" id="1_hfafb"]
+[ext_resource type="Texture2D" uid="uid://0s17y7fwxn64" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_shelf.png" id="1_882fy"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/shelf.gd" id="2_3d15d"]
 
 [node name="Shelf" type="Sprite3D"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 12.1017, 9.93146, -3.29207)
-texture = ExtResource("1_hfafb")
+texture = ExtResource("1_882fy")
 script = ExtResource("2_3d15d")
 
 [node name="Area3D" type="Area3D" parent="."]
