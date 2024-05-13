@@ -35,7 +35,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.027, -101.295, 0.056)
 polygon = PackedVector2Array(4.34463, -4.66924, 4.11385, 3.7616, 3.30116, 4.21639, -0.411783, 4.20135, -3.51429, 4.27178, -4.05737, 3.30474, -4.05557, -4.47957)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.215245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.121766)
 texture = ExtResource("5_hhoqs")
 
 [connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
