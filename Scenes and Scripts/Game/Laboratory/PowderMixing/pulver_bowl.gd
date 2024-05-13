@@ -14,6 +14,9 @@ var enough = false
 var too_much = false
 var needed_pulver = "Purple"
 var area_name
+var follow_mouse
+var too_much_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_too_much.tscn")
+var too_little_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_too_little.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	start_position = position
@@ -23,15 +26,17 @@ func _ready():
 func _process(delta):
 	needed_pulver = $"../DrinkHolder".needed_color
 	$"../Scale/RichTextLabel".text = str(weight) + " g"
-	if mouse_on:
-		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-			mouse_position = get_global_mouse_position()
-			position = mouse_position
-			Global.mouse_full = true
-		elif Input.is_action_just_released("left_click"):
-			position = start_position
-			$Interact.play()
-			%PulverPour.stop()
+	if Input.is_action_just_pressed("left_click") && mouse_on:
+		follow_mouse = true
+	if follow_mouse:
+		mouse_position = get_global_mouse_position()
+		global_position = mouse_position
+		Global.mouse_full = true
+	if Input.is_action_just_released("left_click"):
+		follow_mouse = false
+		global_position = start_position
+		$Interact.play()
+		%PulverPour.stop()
 
 
 
@@ -120,13 +125,14 @@ func purple_pulver():
 
 func _on_area_2d_area_exited(area):
 	var area_parent = area.get_parent()
+	var dialog_instance
 	area_name = area.get_name()
 	if area_name != "PulverBowl" && area_name != "WaterCup":
 		if weight < area_parent.minimum_weight:
 			too_little = true
 			enough = false
-			$"../Dialoguebox".visible = true
-			$"../Dialoguebox/Text".text = "Das ist noch nicht genug. Gib noch ein bisschen mehr von dem Pulver hinzu."
+			dialog_instance = too_little_dialog.instantiate()
+			get_tree().get_current_scene().add_child(dialog_instance)
 		elif weight >= area_parent.minimum_weight && weight <= area_parent.maximum_weight:
 			too_little = false
 			enough = true
@@ -135,8 +141,8 @@ func _on_area_2d_area_exited(area):
 		elif weight > area_parent.maximum_weight:
 			enough = false
 			too_much = true
-			$"../Dialoguebox".visible = true
-			$"../Dialoguebox/Text".text = "Das war jetzt zu viel Pulver. Ich entleere die Schale eben für dich, dann kannst du es nochmal versuchen."
+			dialog_instance = too_much_dialog.instantiate()
+			get_tree().get_current_scene().add_child(dialog_instance)
 			weight = 0.0
 			$".".frame = 0
 

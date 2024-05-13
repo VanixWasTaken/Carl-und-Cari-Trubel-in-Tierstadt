@@ -22,6 +22,7 @@ var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/C
 
 func _ready():
 	Global.moving_allowed = false
+	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -35,6 +36,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 8:
+		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
 

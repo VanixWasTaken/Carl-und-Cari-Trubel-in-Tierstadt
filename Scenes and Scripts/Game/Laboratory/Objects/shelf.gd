@@ -1,6 +1,6 @@
 extends Sprite3D
 
-var no_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cupboard_sketch.png")
+var no_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_shelf.png")
 var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cupboard_sketch_highlight.png")
 
 
