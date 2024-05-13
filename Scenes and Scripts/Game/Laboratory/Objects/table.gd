@@ -13,6 +13,12 @@ var got_vessel = false
 var got_scale = false
 var got_glasses = false 
 
+func _ready():
+	if Global.return_laboratory_1:
+		$ReagenzGlasses.visible = true
+		$Scale.visible = false
+		$Vessel.visible = false
+
 func _process(delta):
 	if got_glasses && got_scale && got_vessel:
 		initiate_dialog()
@@ -35,11 +41,11 @@ func _input(event):
 						$AudioStreamPlayer.play()
 						$Scale.visible = true
 						got_scale = true
-					elif get_tree().get_first_node_in_group("Root").picked_up_vessel == true && !got_vessel:
+					if get_tree().get_first_node_in_group("Root").picked_up_vessel == true && !got_vessel:
 						$AudioStreamPlayer.play()
 						$Vessel.visible = true
 						got_vessel = true
-					elif get_tree().get_first_node_in_group("Root").picked_up_reagenz_glasses == true && !got_glasses:
+					if get_tree().get_first_node_in_group("Root").picked_up_reagenz_glasses == true && !got_glasses:
 						$AudioStreamPlayer.play()
 						$ReagenzGlasses.visible = true
 						got_glasses = true
