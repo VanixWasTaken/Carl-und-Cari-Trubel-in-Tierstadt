@@ -7,9 +7,14 @@ var pulver_in_1 = false
 var pulver_in_2 = false
 var pulver_in_3 = false
 var area_name
+var played_1 = false
+var played_2 = false
+var played_3 = false
 var needed_color = "Purple"
 var return_laboratory = false
-
+var red_powder_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_2.tscn")
+var yellow_powder_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_3.tscn")
+var end_powder_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_4.tscn")
 
 func _on_area_2d_area_entered(area):
 	area_name = area.get_name()
@@ -19,23 +24,16 @@ func _on_area_2d_area_entered(area):
 		if water_in_1 == false && pulver_in_1 == false:
 			$".".frame = 1
 			water_in_1 = true
-			$"../Dialoguebox".visible = true
-			$"../Dialoguebox/Text".text = "Sehr gut. Jetzt musst du 0.2 - 0.45 Gramm von dem lilanen Pulver in die Schale auf der Waage schütten."
+
 		elif water_in_2 == false && pulver_in_1 == true:
 			$".".frame = 3
 			water_in_2 = true
-			$"../Dialoguebox".visible = true
-			$"../Dialoguebox/Text".text = "Perfekt. Fülle jetzt 1.3 - 1.5 Gramm von dem roten Pulver in die Schale.."
 
 		elif water_in_3 == false && pulver_in_2 == true:
 			$".".frame = 5
 			water_in_3 = true
-			$"../Dialoguebox".visible = true
-			$"../Dialoguebox/Text".text = "Zu guter letzt musst du nur noch 1.5 - 2.0 Gramm von dem gelben Pulver in die Schale füllen."
-
 
 	if area_name.contains("PulverBowl"):
-		area.get_parent().play("new_animation")
 		area.get_parent().bowl_full = false
 		if area.get_parent().pulver_color != null && area.get_parent().pulver_color == needed_color && area.get_parent().enough == true:
 			if water_in_1 == true && pulver_in_1 == false:
@@ -51,25 +49,29 @@ func _on_area_2d_area_entered(area):
 				pulver_in_3 = true
 
 func remove_glass():
-	if pulver_in_1:
+	var dialog_instance
+	if pulver_in_1 && !played_1:
 		$Area2D.position.y += 100000
 		$Area2D2.monitoring = true
 		needed_color = "Red"
-		$"../Dialoguebox".visible = true
-		$"../Dialoguebox/Text".text = "Gute Arbeit. Füge jetzt Wasser zum nächsten Reagenzglaz hinzu."
+		played_1 = true
+		dialog_instance = red_powder_dialog.instantiate()
+		get_tree().get_current_scene().add_child(dialog_instance)
 
-	if pulver_in_2:
+	if pulver_in_2 && !played_2:
 		$Area2D2.position.y += 10000
 		$Area2D3.monitoring = true
 		needed_color = "Yellow"
-		$"../Dialoguebox".visible = true
-		$"../Dialoguebox/Text".text = "Gut so. Füge nun Wasser in das letzte Reagenzglas hinzu."
+		played_2 = true
+		dialog_instance = yellow_powder_dialog.instantiate()
+		get_tree().get_current_scene().add_child(dialog_instance)
+
 
 	if pulver_in_3:
 		$Area2D2.position.y += 10000
 		needed_color = "NULL"
-		$"../Dialoguebox".visible = true
-		$"../Dialoguebox/Text".text = "Perfekt. Jetzt haben wir alle Mixturen, die wir für die Visabel-Mischung brauchen! Lass uns zum nächsten Arbeitsschritt gehen."
+		dialog_instance = end_powder_dialog.instantiate()
+		get_tree().get_current_scene().add_child(dialog_instance)
 
 func _on_area_2d_area_exited(area):
 	if area_name.contains("WaterCup"):
