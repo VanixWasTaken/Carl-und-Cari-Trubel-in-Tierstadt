@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Character Selection/character_selection.gd" id="1_5srde"]
 [ext_resource type="Texture2D" uid="uid://dbqhqg33mmhlt" path="res://Assets/Art/UI/Menus/Character Selection/character_selection_background_sketch.png" id="2_wercc"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="3_ixneb"]
-[ext_resource type="Texture2D" uid="uid://dpxicxp01l3mx" path="res://Assets/Art/Characters/Carl/Full Body/carl_full_body.png" id="4_ds3o0"]
-[ext_resource type="Texture2D" uid="uid://b4ex5e210hbfm" path="res://Assets/Art/Characters/Carl/Full Body/carl_fullbody_highlight.PNG" id="5_l0e11"]
+[ext_resource type="Texture2D" uid="uid://cb0138qcrtbwu" path="res://Assets/Art/Characters/Carl/Full Body/carl_full_body.png" id="4_ds3o0"]
+[ext_resource type="Texture2D" uid="uid://bx5o81fw440el" path="res://Assets/Art/Characters/Carl/Full Body/carl_full_body_highlight.png" id="5_l1ilw"]
 [ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/Art/UI/Buttons/menu_button_mid.png" id="6_23f7r"]
 [ext_resource type="Texture2D" uid="uid://cxhtc2gys8yn8" path="res://Assets/Art/Characters/Cari/Full Body/cari_full_body.png" id="7_qh14g"]
 [ext_resource type="Texture2D" uid="uid://c5bahbel6t2mr" path="res://Assets/Art/Characters/Cari/Full Body/cari_full_body_highlight.png" id="8_f3s0g"]
@@ -47,22 +47,22 @@ offset_right = 4056.0
 offset_bottom = 5140.0
 scale = Vector2(0.175, 0.175)
 texture_normal = ExtResource("4_ds3o0")
-texture_hover = ExtResource("5_l0e11")
+texture_hover = ExtResource("5_l1ilw")
 
 [node name="TextureRect2" type="TextureRect" parent="Carl Button"]
 layout_mode = 0
-offset_left = 377.143
+offset_left = 228.569
 offset_top = 4931.43
-offset_right = 1289.14
+offset_right = 1140.57
 offset_bottom = 5238.43
 scale = Vector2(2.3, 2.3)
 texture = ExtResource("6_23f7r")
 
 [node name="Label" type="Label" parent="Carl Button"]
 layout_mode = 0
-offset_left = 480.0
+offset_left = 331.43
 offset_top = 4988.0
-offset_right = 2360.0
+offset_right = 2211.43
 offset_bottom = 5661.0
 theme_override_fonts/font = ExtResource("3_ixneb")
 theme_override_font_sizes/font_size = 500
@@ -81,18 +81,18 @@ texture_hover = ExtResource("8_f3s0g")
 
 [node name="TextureRect" type="TextureRect" parent="Cari Button"]
 layout_mode = 0
-offset_left = 411.429
+offset_left = 337.144
 offset_top = 4931.43
-offset_right = 1323.43
+offset_right = 1249.14
 offset_bottom = 5238.43
 scale = Vector2(2.3, 2.3)
 texture = ExtResource("6_23f7r")
 
 [node name="Label" type="Label" parent="Cari Button"]
 layout_mode = 0
-offset_left = 520.0
+offset_left = 445.715
 offset_top = 4988.0
-offset_right = 2378.0
+offset_right = 2303.71
 offset_bottom = 5661.0
 theme_override_fonts/font = ExtResource("3_ixneb")
 theme_override_font_sizes/font_size = 500
