@@ -107,8 +107,8 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Jetzt m-m-müssen wir Titration betreiben. D-D-Dazu fügen wir Wasser zu unseren Chemikaline hinzu, um s-s-sie zu entsäuern."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Carina"
 		dialogs += 1
 
 	elif dialogs == 4:
@@ -117,8 +117,8 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "D-D-Das erkläre ich dir, wenn d-d-du an der Station stehst."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Carina"
 		dialogs += 1
 
 ##########################################################################################

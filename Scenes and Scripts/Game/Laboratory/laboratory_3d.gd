@@ -5,7 +5,7 @@ var first_dialogue = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/
 var second_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_2.tscn")
 var third_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_3.tscn")
 var fourth_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_4.tscn")
-var fifth_dialog
+var fifth_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_5.tscn")
 
 var mouse_on = false
 var outline_shader = preload("res://Shader/outline.tres")
@@ -20,6 +20,7 @@ var picked_up_chemicals = false
 func _ready():
 	
 	if Global.return_laboratory_1:
+		Global.lab_cutscene_played == true
 		cutscene = false
 		$Objects/Shelf/Scale.queue_free()
 		$Objects/Sink/Vessel.queue_free()
@@ -31,13 +32,16 @@ func _ready():
 		$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.queue_free()
 		if !Global.return_laboratory_2 && !Global.return_laboratory_3:
 			$Player.global_position = Vector3(0.285038, 2.349433, 4.709138)
+			$"NPC Chameleon/AnimatedSprite3D".play("idle")
 		elif Global.return_laboratory_2 && !Global.return_laboratory_3:
 			$Player.global_position = Vector3(-27.47779, 2.349433, 2.097231)
-		elif Global.return_laboratory_2 && !Global.return_laboratory_3:
+			$"NPC Chameleon/AnimatedSprite3D".play("idle")
+		elif Global.return_laboratory_2 && Global.return_laboratory_3:
 			$Player.global_position = Vector3(-12.14836, 2.349433, -2.04137)
 			$"NPC Chameleon/AnimatedSprite3D".play("visible")
 
 	elif !Global.return_laboratory_1:
+		$"NPC Chameleon/AnimatedSprite3D".play("idle")
 		if Global.lab_cutscene_played == false:
 			Global.lab_cutscene_played = true
 			$CameraPan.play("camera pan")
@@ -131,3 +135,8 @@ func _on_dialog_area_body_entered(body):
 
 
 
+
+
+func _on_exit_body_entered(body):
+	if body.get_name() == "Player":
+		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Map/map.tscn")

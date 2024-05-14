@@ -42,7 +42,7 @@ func _on_area_3d_body_entered(body):
 	if body.get_name() == "Player":
 		player_inside = true
 		if can_interact:
-			if Global.talked_to_chameleon_2 !Global.return_laboratory_2:
+			if Global.talked_to_chameleon_2 && !Global.return_laboratory_2:
 				if !get_tree().get_first_node_in_group("Root").picked_up_chemicals:
 					var dialog_instance = not_chemicals_dialog.instantiate()
 					get_tree().get_current_scene().add_child(dialog_instance)

@@ -11,8 +11,10 @@ var same_speaker = false
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
-var PRESET1 = preload("res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG")
+var PRESET1
 var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png")
+
+var vo_pc
 
 ##########################################################################################
 
@@ -22,6 +24,12 @@ var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/C
 
 func _ready():
 	Global.moving_allowed = false
+	if Global.character == "Carl":
+		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
+		vo_pc = "carl"
+	elif Global.character == "Cari" or Global.character == "":
+		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
+		vo_pc = "cari"
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
 ##########################################################################################
@@ -86,7 +94,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Jetzt k-k-können wir mit dem ersten Schritt anfangen."
 		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_name.text = "Christina"
 		dialogs += 1
 		same_speaker = true
 
@@ -98,7 +106,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Deine Aufgabe ist es die richtige Menga der Pulver mit destilliertem Wasser zu mischen."
 		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_name.text = "Christina"
 		dialogs += 1
 		same_speaker = true
 	
@@ -109,7 +117,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Achte dabei auf die Waage, wenn d-d-du zu viel Pulver benutzt musst du von v-v-vorne anfangen."
 		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_name.text = "Christina"
 		dialogs += 1
 		same_speaker = false
 	

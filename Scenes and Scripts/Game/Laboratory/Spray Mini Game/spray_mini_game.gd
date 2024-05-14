@@ -25,5 +25,8 @@ func _on_area_2d_mouse_exited():
 
 
 func _on_button_button_down():
+	Global.lab_cutscene_played = true
+	Global.return_laboratory_1 = true
+	Global.return_laboratory_2 = true
 	Global.return_laboratory_3 = true
 	get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
