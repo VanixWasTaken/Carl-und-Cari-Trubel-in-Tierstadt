@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qacuhtuqg1hn"
-path="res://.godot/imported/lab_three_thing_small.PNG-28967647016935714b17ddea0b1eb45c.ctex"
+uid="uid://bfqpq5awd32aa"
+path="res://.godot/imported/arrow_animation2.png-191791436832701553748e886b95f38f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.PNG"
-dest_files=["res://.godot/imported/lab_three_thing_small.PNG-28967647016935714b17ddea0b1eb45c.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation2.png"
+dest_files=["res://.godot/imported/arrow_animation2.png-191791436832701553748e886b95f38f.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwpj8l0184p4j"
-path="res://.godot/imported/lab_coats.png-3862d38394e5d7839084fdfd81904fdf.ctex"
+path="res://.godot/imported/lab_coats.PNG-23290c1b24534464e7c7c47879eb7e73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_coats.png"
-dest_files=["res://.godot/imported/lab_coats.png-3862d38394e5d7839084fdfd81904fdf.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_coats.PNG"
+dest_files=["res://.godot/imported/lab_coats.PNG-23290c1b24534464e7c7c47879eb7e73.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qacuhtuqg1hn"
-path="res://.godot/imported/lab_three_thing_small.PNG-28967647016935714b17ddea0b1eb45c.ctex"
+uid="uid://bkjaisp5ro87x"
+path="res://.godot/imported/bottle_animation1.png-9444c5a50a17d0faa56c75129f28c7e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.PNG"
-dest_files=["res://.godot/imported/lab_three_thing_small.PNG-28967647016935714b17ddea0b1eb45c.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation1.png"
+dest_files=["res://.godot/imported/bottle_animation1.png-9444c5a50a17d0faa56c75129f28c7e4.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

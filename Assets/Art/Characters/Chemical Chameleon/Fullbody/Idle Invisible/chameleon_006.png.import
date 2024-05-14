@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qacuhtuqg1hn"
-path="res://.godot/imported/lab_three_thing_small.PNG-28967647016935714b17ddea0b1eb45c.ctex"
+uid="uid://b76ies1ylcj0t"
+path="res://.godot/imported/chameleon_006.png-e9bf658ec5131b8120a1c2242430a31a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.PNG"
-dest_files=["res://.godot/imported/lab_three_thing_small.PNG-28967647016935714b17ddea0b1eb45c.ctex"]
+source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_006.png"
+dest_files=["res://.godot/imported/chameleon_006.png-e9bf658ec5131b8120a1c2242430a31a.ctex"]
 
 [params]
 

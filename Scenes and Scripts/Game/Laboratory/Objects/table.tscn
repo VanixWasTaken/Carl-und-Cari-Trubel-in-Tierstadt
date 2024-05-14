@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://chffu42twsa06" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_desk_island.png" id="1_e03x3"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/table.gd" id="2_uoknu"]
-[ext_resource type="Texture2D" uid="uid://qacuhtuqg1hn" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.png" id="3_tc6ml"]
+[ext_resource type="Texture2D" uid="uid://qacuhtuqg1hn" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.PNG" id="3_tc6ml"]
 [ext_resource type="Texture2D" uid="uid://cbdxyqqksrgaf" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale.png" id="4_8bu1p"]
 [ext_resource type="Texture2D" uid="uid://l4wvwpd5bsx" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.PNG" id="5_t2lee"]
 [ext_resource type="AudioStream" uid="uid://cf4emkal6ayqc" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var2.mp3" id="6_ijcrc"]
