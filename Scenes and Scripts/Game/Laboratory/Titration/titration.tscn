@@ -1,10 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://dfm6sf40klc1x"]
+[gd_scene load_steps=33 format=3 uid="uid://dfm6sf40klc1x"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/titration.gd" id="1_rdept"]
 [ext_resource type="Texture2D" uid="uid://r82vd54v48ed" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG" id="1_tyn2s"]
 [ext_resource type="Texture2D" uid="uid://vw8qofpwgyb6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_phscale.png" id="2_e2340"]
 [ext_resource type="Texture2D" uid="uid://b4toblcow5vk5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_arrow.png" id="3_gdcxm"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/ph_scale.gd" id="3_nmufx"]
 [ext_resource type="Texture2D" uid="uid://b3al8u2mvobig" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigames2_testtuberag.png" id="4_gt4bg"]
 [ext_resource type="Texture2D" uid="uid://c17na0m652jpr" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtubes_stage1.PNG" id="6_jpfr7"]
 [ext_resource type="Texture2D" uid="uid://g0kefuwfgve4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Jug/minigame2_glass_stage1.png" id="6_qaj4p"]
@@ -19,9 +18,12 @@
 [ext_resource type="Texture2D" uid="uid://cgsc4yi27gqc0" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Orange/minigame2_testtubeholder_orange_anim2.PNG" id="16_5swtm"]
 [ext_resource type="Texture2D" uid="uid://gibiwr2efchp" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Purple/minigame2_testtubeholder_purple_anim1.PNG" id="17_frm04"]
 [ext_resource type="Texture2D" uid="uid://bh8r22b5qh00s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Purple/minigame2_testtubeholder_purple_anim2.PNG" id="18_ueop8"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/burette.gd" id="19_p5xo2"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/skillcheck.gd" id="19_4kngl"]
 [ext_resource type="Texture2D" uid="uid://cx0ajetbl86fy" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Burette/minigame2_burette.PNG" id="19_vlw0g"]
 [ext_resource type="Texture2D" uid="uid://c6j7123gk1lp5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Burette/drehknopf_placeholder.png" id="21_3cyde"]
+[ext_resource type="Texture2D" uid="uid://c3r5ryx5nl8h1" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_bar.png" id="22_8h0tj"]
+[ext_resource type="Texture2D" uid="uid://cb5brlyflthb4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_arrow.png" id="23_02ikp"]
+[ext_resource type="Texture2D" uid="uid://dpcigt205pknn" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_countdown_three.png" id="24_v55k4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op731"]
 size = Vector2(443, 376)
@@ -95,6 +97,36 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0cak"]
+size = Vector2(222, 74.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyhnk"]
+size = Vector2(41, 68)
+
+[sub_resource type="Animation" id="Animation_v4yay"]
+resource_name = "movement"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1284, 643), Vector2(943, 643), Vector2(1636, 643)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r6p8w"]
+_data = {
+"movement": SubResource("Animation_v4yay")
+}
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3hxg5"]
+
 [node name="Titration" type="Node2D"]
 script = ExtResource("1_rdept")
 
@@ -103,20 +135,6 @@ modulate = Color(0.419813, 0.419813, 0.419813, 1)
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_tyn2s")
-
-[node name="PH-Scale" type="Node2D" parent="."]
-position = Vector2(1714, 311)
-script = ExtResource("3_nmufx")
-
-[node name="Glass" type="Sprite2D" parent="PH-Scale"]
-texture = ExtResource("2_e2340")
-
-[node name="Arrow" type="Sprite2D" parent="PH-Scale"]
-position = Vector2(0, 131)
-texture = ExtResource("3_gdcxm")
-
-[node name="WinCondition" type="Timer" parent="PH-Scale"]
-wait_time = 0.5
 
 [node name="Stand" type="Node2D" parent="."]
 position = Vector2(1495, 842)
@@ -166,21 +184,83 @@ position = Vector2(617, 352)
 sprite_frames = SubResource("SpriteFrames_ui1i3")
 animation = &"no"
 
-[node name="Burette" type="Node2D" parent="."]
-position = Vector2(378, 487)
-script = ExtResource("19_p5xo2")
+[node name="Skillcheck" type="Node2D" parent="."]
+script = ExtResource("19_4kngl")
 
-[node name="Burette" type="Sprite2D" parent="Burette"]
+[node name="Burette" type="Node2D" parent="Skillcheck"]
+position = Vector2(378, 487)
+
+[node name="Burette" type="Sprite2D" parent="Skillcheck/Burette"]
 texture = ExtResource("19_vlw0g")
 
-[node name="Knob" type="Sprite2D" parent="Burette"]
+[node name="Knob" type="Sprite2D" parent="Skillcheck/Burette"]
 position = Vector2(126, -81)
 texture = ExtResource("21_3cyde")
 
-[connection signal="balancing_game" from="." to="Burette" method="_on_titration_balancing_game"]
-[connection signal="timeout" from="PH-Scale/WinCondition" to="PH-Scale" method="_on_win_condition_timeout"]
+[node name="Bar" type="Area2D" parent="Skillcheck"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Skillcheck/Bar"]
+position = Vector2(1063, 307)
+scale = Vector2(0.810178, 0.810178)
+texture = ExtResource("22_8h0tj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skillcheck/Bar"]
+position = Vector2(1061, 293.75)
+shape = SubResource("RectangleShape2D_b0cak")
+
+[node name="Arrow" type="Area2D" parent="Skillcheck"]
+visible = false
+position = Vector2(1284, 643)
+
+[node name="Sprite2D" type="Sprite2D" parent="Skillcheck/Arrow"]
+position = Vector2(-222.75, -222.75)
+scale = Vector2(0.280291, 0.280291)
+texture = ExtResource("23_02ikp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skillcheck/Arrow"]
+position = Vector2(-224.5, -344)
+shape = SubResource("RectangleShape2D_xyhnk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Skillcheck/Arrow"]
+libraries = {
+"": SubResource("AnimationLibrary_r6p8w")
+}
+
+[node name="PH-Scale" type="Node2D" parent="Skillcheck"]
+visible = false
+position = Vector2(1714, 311)
+
+[node name="Glass" type="Sprite2D" parent="Skillcheck/PH-Scale"]
+texture = ExtResource("2_e2340")
+
+[node name="Arrow" type="Sprite2D" parent="Skillcheck/PH-Scale"]
+position = Vector2(0, -80)
+texture = ExtResource("3_gdcxm")
+
+[node name="TextureRect" type="TextureRect" parent="Skillcheck"]
+visible = false
+self_modulate = Color(0, 0, 0, 0.603922)
+z_index = 2
+offset_left = -72.0
+offset_top = -53.0
+offset_right = 1989.0
+offset_bottom = 1123.0
+texture = SubResource("CanvasTexture_3hxg5")
+
+[node name="Numbers" type="Sprite2D" parent="Skillcheck/TextureRect"]
+position = Vector2(1055, 564)
+texture = ExtResource("24_v55k4")
+
+[node name="MiniGameTime" type="Timer" parent="Skillcheck"]
+wait_time = 20.0
+
+[connection signal="balancing_game" from="." to="Skillcheck" method="_on_titration_balancing_game"]
 [connection signal="pouring_time" from="Clamp" to="." method="_on_clamp_pouring_time"]
 [connection signal="area_entered" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_area_entered"]
 [connection signal="area_exited" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_area_exited"]
 [connection signal="mouse_entered" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_mouse_entered"]
 [connection signal="mouse_exited" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_mouse_exited"]
+[connection signal="area_entered" from="Skillcheck/Bar" to="Skillcheck" method="_on_bar_area_entered"]
+[connection signal="area_exited" from="Skillcheck/Bar" to="Skillcheck" method="_on_bar_area_exited"]
+[connection signal="timeout" from="Skillcheck/MiniGameTime" to="Skillcheck" method="_on_mini_game_time_timeout"]
