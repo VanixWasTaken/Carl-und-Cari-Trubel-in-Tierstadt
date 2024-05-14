@@ -3,9 +3,11 @@ extends AnimatedSprite3D
 var door_open = false
 var mouse_inside = false
 var filler_dialog = preload ("res://Scenes and Scripts/Dialog/Laboratory Dialog/Inspection Dialog/inspection_before_talking.tscn")
+var inspection_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Inspection Dialog/inspection_cabinet.tscn")
 var player_inside = false
 var dialog_instance
 var can_interact = false
+
 func  _ready():
 	if Global.return_laboratory_1:
 		$"Reagenz Glasses".queue_free()
@@ -28,7 +30,9 @@ func _input(event):
 					get_tree().get_current_scene().add_child(dialog_instance)
 					reset_mouse()
 				else:
-					pass
+					dialog_instance = inspection_dialog.instantiate()
+					get_tree().get_current_scene().add_child(dialog_instance)
+					reset_mouse()
 			if !door_open:
 				door_open = true
 				$Sprite3D.visible = false
@@ -50,7 +54,9 @@ func _on_area_3d_body_entered(body):
 				get_tree().get_current_scene().add_child(dialog_instance)
 				reset_mouse()
 			else:
-				pass
+				dialog_instance = inspection_dialog.instantiate()
+				get_tree().get_current_scene().add_child(dialog_instance)
+				reset_mouse()
 
 func _on_area_3d_body_exited(body):
 	player_inside = false

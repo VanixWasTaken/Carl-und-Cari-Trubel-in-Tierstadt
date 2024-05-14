@@ -5,6 +5,7 @@ var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Obje
 var mouse_inside = false
 var player_inside = false
 var dialog_instance
+var inspection_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Inspection Dialog/inspection_shelf.tscn")
 var filler_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Inspection Dialog/inspection_before_talking.tscn")
 var can_interact = false
 
@@ -18,7 +19,9 @@ func _input(event):
 					get_tree().get_current_scene().add_child(dialog_instance)
 					reset_mouse()
 				else:
-					pass
+					dialog_instance = inspection_dialog.instantiate()
+					get_tree().get_current_scene().add_child(dialog_instance)
+					reset_mouse()
 
 func _on_area_3d_body_entered(body):
 	if body.get_name() == "Player":
@@ -29,7 +32,9 @@ func _on_area_3d_body_entered(body):
 				get_tree().get_current_scene().add_child(dialog_instance)
 				reset_mouse()
 			else:
-				pass
+				dialog_instance = inspection_dialog.instantiate()
+				get_tree().get_current_scene().add_child(dialog_instance)
+				reset_mouse()
 
 
 

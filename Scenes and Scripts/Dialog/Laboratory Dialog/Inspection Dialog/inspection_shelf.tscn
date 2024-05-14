@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://bdphrixkfge7x"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Laboratory Dialog/Inspection Dialog/inspection_shelf.gd" id="1_kjn5c"]
+[ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_awvcd"]
+[ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="3_vyjo2"]
+[ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="4_mehkv"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="5_07jil"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="6_h8co2"]
+[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="7_2yv4s"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="8_ebh1y"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="9_p1qb4"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_uhw72"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("5_07jil")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("6_h8co2")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_l8jca"]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("7_2yv4s")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("8_ebh1y")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("9_p1qb4")
+stream_2/weight = 1.0
+
+[node name="InspectionCabinet" type="CanvasLayer"]
+
+[node name="DialogBox" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kjn5c")
+
+[node name="SkipButton" type="TextureButton" parent="DialogBox"]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 728.0
+offset_top = 912.0
+offset_right = -272.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_awvcd")
+texture_pressed = ExtResource("3_vyjo2")
+texture_hover = ExtResource("4_mehkv")
+
+[node name="SkipButtonTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="VoiceOver" type="AudioStreamPlayer" parent="."]
+volume_db = -12.0
+bus = &"Dialogue"
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_uhw72")
+volume_db = -15.0
+bus = &"SFX"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_l8jca")
+volume_db = -18.0
+bus = &"SFX"
+
+[connection signal="button_down" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_button_down"]
+[connection signal="mouse_entered" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_mouse_entered"]
+[connection signal="pressed" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_pressed"]
+[connection signal="timeout" from="SkipButtonTimer" to="DialogBox" method="_on_skip_button_timer_timeout"]
