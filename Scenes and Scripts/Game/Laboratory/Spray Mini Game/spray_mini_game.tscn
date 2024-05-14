@@ -448,10 +448,10 @@ position = Vector2(135, -1)
 shape = SubResource("RectangleShape2D_x3x71")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 452.0
-offset_top = 5.0
-offset_right = 707.0
-offset_bottom = 153.0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 285.0
+offset_bottom = 175.0
 theme_override_font_sizes/font_size = 116
 text = "Back"
 
