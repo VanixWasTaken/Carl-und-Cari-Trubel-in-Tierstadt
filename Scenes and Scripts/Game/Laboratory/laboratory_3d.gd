@@ -29,11 +29,13 @@ func _ready():
 		$Objects/Chameleon.queue_free()
 		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps.queue_free()
 		$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.queue_free()
-		if !Global.return_laboratory_2:
+		if !Global.return_laboratory_2 && !Global.return_laboratory_3:
 			$Player.global_position = Vector3(0.285038, 2.349433, 4.709138)
-		elif Global.return_laboratory_2:
+		elif Global.return_laboratory_2 && !Global.return_laboratory_3:
 			$Player.global_position = Vector3(-27.47779, 2.349433, 2.097231)
-		
+		elif Global.return_laboratory_2 && !Global.return_laboratory_3:
+			$Player.global_position = Vector3(-12.14836, 2.349433, -2.04137)
+			$"NPC Chameleon/AnimatedSprite3D".play("visible")
 
 	elif !Global.return_laboratory_1:
 		if Global.lab_cutscene_played == false:
@@ -125,6 +127,7 @@ func _on_dialog_area_body_entered(body):
 			var dialogue_instance = fifth_dialog.instantiate()
 			$"NPC Chameleon".add_child(dialogue_instance)
 			Global.dialog_playing = true
+			$Objects/Exit.global_position.y += 100
 
 
 

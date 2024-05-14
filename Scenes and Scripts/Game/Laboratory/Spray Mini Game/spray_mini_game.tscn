@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
 [ext_resource type="Texture2D" uid="uid://dwgi13mmayd2l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_gun.png" id="3_ww0fy"]
 [ext_resource type="Texture2D" uid="uid://chu3r7ga3hn5s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_bottle.png" id="4_7yw8r"]
-[ext_resource type="Texture2D" uid="uid://dsrxoltpg6iom" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_001.png" id="5_gklha"]
+[ext_resource type="Texture2D" uid="uid://sss27wgaikyp" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_001.png" id="5_gklha"]
 [ext_resource type="Texture2D" uid="uid://nkye4h775y3x" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chameleon_idle1.png" id="5_hj25p"]
-[ext_resource type="Texture2D" uid="uid://djxubsy22fhwe" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_002.png" id="6_xwq8t"]
-[ext_resource type="Texture2D" uid="uid://clx51sk6di2et" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_003.png" id="7_tx7u5"]
-[ext_resource type="Texture2D" uid="uid://8e227vieqtam" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_004.png" id="8_7ncik"]
+[ext_resource type="Texture2D" uid="uid://cvnpgafmyl3sd" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_002.png" id="6_xwq8t"]
+[ext_resource type="Texture2D" uid="uid://bhlclgejsyv2l" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_003.png" id="7_tx7u5"]
+[ext_resource type="Texture2D" uid="uid://dkm4tgsq6oqn6" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_004.png" id="8_7ncik"]
 [ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_005.png" id="9_4xlnv"]
 [ext_resource type="Texture2D" uid="uid://b76ies1ylcj0t" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_006.png" id="10_do62t"]
 [ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_007.png" id="11_djl2m"]
@@ -447,6 +447,14 @@ monitorable = false
 position = Vector2(135, -1)
 shape = SubResource("RectangleShape2D_x3x71")
 
+[node name="Button" type="Button" parent="."]
+offset_left = 452.0
+offset_top = 5.0
+offset_right = 707.0
+offset_bottom = 153.0
+theme_override_font_sizes/font_size = 116
+text = "Back"
+
 [connection signal="area_entered" from="VisibleChameleon/Area2D" to="VisibleChameleon" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="VisibleChameleon/Area2D" to="VisibleChameleon" method="_on_area_2d_area_exited"]
 [connection signal="mouse_entered" from="BottleAndGun/SprayGun/Area2D" to="." method="_on_area_2d_mouse_entered"]
@@ -460,3 +468,4 @@ shape = SubResource("RectangleShape2D_x3x71")
 [connection signal="input_event" from="SpinMinigame/SwipeArea" to="SpinMinigame/SwipeArea" method="_on_input_event"]
 [connection signal="area_entered" from="SpinMinigame/GoalArea2" to="SpinMinigame/SwipeArea" method="_on_goal_area_2_area_entered"]
 [connection signal="area_exited" from="SpinMinigame/GoalArea2" to="SpinMinigame/SwipeArea" method="_on_goal_area_2_area_exited"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

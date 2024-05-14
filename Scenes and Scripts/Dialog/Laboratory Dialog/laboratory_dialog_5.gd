@@ -24,7 +24,6 @@ var vo_pc
 
 func _ready():
 	Global.moving_allowed = false
-	Global.dialog_playing = true
 	if Global.character == "Carl":
 		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 		vo_pc = "carl"
@@ -32,7 +31,7 @@ func _ready():
 		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
 		vo_pc = "cari"
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_left_dialog_box()
+	add_right_dialog_box()
 ##########################################################################################
 
 
@@ -43,10 +42,11 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 6:
+	if dialogs == 11:
 		Global.moving_allowed = true
 		Global.dialog_playing = false
-		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.tscn")
+		Global.talked_to_chameleon_4 = true
+		queue_free()
 ##########################################################################################
 
 
@@ -61,30 +61,66 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 1:
-		var short_node = get_child(1)
+	if dialogs == 2:
+		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ist alles klar da drinnen?"
+		short_node_text.text = "HURRA, wir haben es geschafft! High-Five."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
-	
+		same_speaker = true
+
 	elif dialogs == 3:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ja. Total bereit, was ist unsere Aufgabe?"
+		short_node_text.text = "Ich kann kaum glauben, das wir es geschafft haben. Bevor wir hierhergekommen sind wusste ich nichts über Chemie."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
-	
+		same_speaker = false
 
 	elif dialogs == 5:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Woran arbeitest du denn?"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
 		dialogs += 1
-		Global.moving_allowed = true
+
+	elif dialogs == 7:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Da bin ich je jetzt doppelt gespannt!"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+		same_speaker = true
+	
+	elif dialogs == 8:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Wir müssen jetzt aber langsam los, es gibt noch andere Leute, die unsere Hilfe brauchen."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+		same_speaker = false
+	
+	
+	elif dialogs == 10:
+		dialogs += 1
+	
+	
+	
 ##########################################################################################
 
 
@@ -99,27 +135,59 @@ func add_right_dialog_box():
 	$".".add_child(node)
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
-
-
-	if dialogs == 2:
-		var short_node = get_child(2)
+	
+	if dialogs == 1:
+		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "J-J-Ja mir geht es gut. Seid ihr b-b-bereit loszulegen?"
+		short_node_text.text = "Ihr habt es t-t-tatsächlich geschafft! Ich b-b-bin wieder sichtbar!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
-
+	
 	elif dialogs == 4:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "D-D-Das erkläre ich dir, wenn d-d-du die Hände in die Handschuhe g-g-gesteckt hast."
+		short_node_text.text = "Noch einmal vielen vielen D-D-Dank. Jetzt kann ich endlich weiter a-a-an den Vorbereitungen für das Stadtfest arbeiten."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
+
+
+	elif dialogs == 6:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Das ist ein Geheimnis, aber ich v-v-verspreche euch, das wird auch aus den S-S-Socken hauen."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+
+	elif dialogs == 8:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = ""
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+		same_speaker = true
+	
+	elif dialogs == 9:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Alles k-k-klar. Wir sehen uns d-d-dann später auf dem Stadtfest!"
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+
 
 ##########################################################################################
 
@@ -151,7 +219,6 @@ func _on_skip_button_pressed():
 
 func _on_skip_button_timer_timeout():
 	$SkipButton.visible = true
-
 
 func _on_skip_button_mouse_entered():
 	$"../Hover".play()
