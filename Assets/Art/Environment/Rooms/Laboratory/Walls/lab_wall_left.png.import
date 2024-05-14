@@ -2,13 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left.png.import
-uid="uid://dq1p4ca0xj87c"
+uid="uid://bna6p1h2xyvxx"
 path.s3tc="res://.godot/imported/lab_wall_left.png-d423e9c817e5f80b232e848eaafabc64.s3tc.ctex"
-========
-uid="uid://clx51sk6di2et"
-path="res://.godot/imported/chameleon_003.png-2a9ea5be450689a77ca085b42e1c3f32.ctex"
->>>>>>>> hilfe2:Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_003.png.import
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -16,13 +11,8 @@ metadata={
 
 [deps]
 
-<<<<<<<< HEAD:Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left.png.import
 source_file="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left.png"
 dest_files=["res://.godot/imported/lab_wall_left.png-d423e9c817e5f80b232e848eaafabc64.s3tc.ctex"]
-========
-source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_003.png"
-dest_files=["res://.godot/imported/chameleon_003.png-2a9ea5be450689a77ca085b42e1c3f32.ctex"]
->>>>>>>> hilfe2:Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_003.png.import
 
 [params]
 

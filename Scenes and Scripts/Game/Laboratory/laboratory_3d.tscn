@@ -1,12 +1,12 @@
-[gd_scene load_steps=66 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=65 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_fgm78"]
-[ext_resource type="Texture2D" uid="uid://3x8fuf8n45jj" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_floor.png" id="4_d6fqs"]
-[ext_resource type="Texture2D" uid="uid://08l3h8v812bl" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_back.png" id="5_ivhfb"]
-[ext_resource type="Texture2D" uid="uid://dq1p4ca0xj87c" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left.png" id="6_jfqjd"]
-[ext_resource type="Texture2D" uid="uid://bmmd5ftgxa173" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_right.png" id="7_klll8"]
+[ext_resource type="Texture2D" uid="uid://c3ueycy54jo72" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_floor.png" id="4_d6fqs"]
+[ext_resource type="Texture2D" uid="uid://dov3yswac8qxp" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_back.png" id="5_ivhfb"]
+[ext_resource type="Texture2D" uid="uid://bna6p1h2xyvxx" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left.png" id="6_jfqjd"]
+[ext_resource type="Texture2D" uid="uid://bpkklfx0m5aov" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_right.png" id="7_klll8"]
 [ext_resource type="PackedScene" uid="uid://caxx8cohbsnx2" path="res://Scenes and Scripts/Game/Laboratory/Objects/table.tscn" id="10_1cvp0"]
 [ext_resource type="AudioStream" uid="uid://dc1vs6qw5sspl" path="res://Assets/Sound/SFX/Foley/World/sfx_world_foley_footstep_var1.mp3" id="10_l86mv"]
 [ext_resource type="AudioStream" uid="uid://kawfjp3a5u0a" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_dooropen_var1.mp3" id="10_npryc"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b53g660kym05b" path="res://Scenes and Scripts/Game/Laboratory/Objects/shelf.tscn" id="12_q43od"]
 [ext_resource type="PackedScene" uid="uid://dx0gnhwrby4rh" path="res://Scenes and Scripts/Game/Laboratory/Objects/sink.tscn" id="13_daqka"]
 [ext_resource type="PackedScene" uid="uid://cenk56k5odi8x" path="res://Scenes and Scripts/Game/Laboratory/Objects/scale.tscn" id="13_nfct0"]
-[ext_resource type="Texture2D" uid="uid://dsrxoltpg6iom" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_001.png" id="14_5lhuu"]
+[ext_resource type="Texture2D" uid="uid://sss27wgaikyp" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_001.png" id="14_5lhuu"]
 [ext_resource type="PackedScene" uid="uid://c6dhgxet661ke" path="res://Scenes and Scripts/Game/Laboratory/Objects/vessel.tscn" id="16_qbcfp"]
 [ext_resource type="AudioStream" uid="uid://eqkepd0aictl" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_chameleonsearching_var1.mp3" id="18_1fo6j"]
 [ext_resource type="Texture2D" uid="uid://cb20pnlmajeq3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim1.PNG" id="19_yd1p1"]
@@ -29,14 +29,13 @@
 [ext_resource type="Texture2D" uid="uid://b3nyw5isqf7dc" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_chair.png" id="23_ye88a"]
 [ext_resource type="Texture2D" uid="uid://cc8elg23lyvvu" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cabinet_wall_right.png" id="24_1y555"]
 [ext_resource type="Texture2D" uid="uid://cdxa6qwd84ua3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim6.PNG" id="24_5la8x"]
-[ext_resource type="Texture2D" uid="uid://djxubsy22fhwe" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_002.png" id="25_0nmcg"]
+[ext_resource type="Texture2D" uid="uid://cvnpgafmyl3sd" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_002.png" id="25_0nmcg"]
 [ext_resource type="Texture2D" uid="uid://ddgurcbihtflv" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_lamp.png" id="25_kjt1n"]
-[ext_resource type="Texture2D" uid="uid://clx51sk6di2et" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_003.png" id="26_5d654"]
-[ext_resource type="Texture2D" uid="uid://8e227vieqtam" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_004.png" id="27_qygja"]
-[ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_005.png" id="28_d8ugo"]
-[ext_resource type="Texture2D" uid="uid://b76ies1ylcj0t" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_006.png" id="29_vj1ph"]
+[ext_resource type="Texture2D" uid="uid://bhlclgejsyv2l" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_003.png" id="27_qygja"]
+[ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_005.png" id="28_d8ugo"]
+[ext_resource type="Texture2D" uid="uid://b76ies1ylcj0t" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_006.png" id="29_vj1ph"]
 [ext_resource type="PackedScene" uid="uid://cg257qtiun1jh" path="res://Scenes and Scripts/Game/Laboratory/Objects/wall_hole.tscn" id="30_3am5x"]
-[ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_007.png" id="30_xn8be"]
+[ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_007.png" id="30_xn8be"]
 [ext_resource type="PackedScene" uid="uid://edbe0ktmaocs" path="res://Scenes and Scripts/Game/Laboratory/Objects/back_wall_window.tscn" id="31_ssppo"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
@@ -172,7 +171,7 @@ animations = [{
 "texture": ExtResource("25_0nmcg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_5d654")
+"texture": ExtResource("27_qygja")
 }, {
 "duration": 1.0,
 "texture": ExtResource("27_qygja")
