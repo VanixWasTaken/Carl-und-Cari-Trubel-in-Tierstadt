@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b76ies1ylcj0t"
-path="res://.godot/imported/chameleon_006.png-b2f0474f1a379fdcdcebdf02081181db.ctex"
+uid="uid://dwlpn0vtf4lyd"
+path="res://.godot/imported/minigame3_light.png-ea8f2ce8f33845b9bf88235bea46829b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_006.png"
-dest_files=["res://.godot/imported/chameleon_006.png-b2f0474f1a379fdcdcebdf02081181db.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_light.png"
+dest_files=["res://.godot/imported/minigame3_light.png-ea8f2ce8f33845b9bf88235bea46829b.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

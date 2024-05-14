@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b53g660kym05b" path="res://Scenes and Scripts/Game/Laboratory/Objects/shelf.tscn" id="12_q43od"]
 [ext_resource type="PackedScene" uid="uid://dx0gnhwrby4rh" path="res://Scenes and Scripts/Game/Laboratory/Objects/sink.tscn" id="13_daqka"]
 [ext_resource type="PackedScene" uid="uid://cenk56k5odi8x" path="res://Scenes and Scripts/Game/Laboratory/Objects/scale.tscn" id="13_nfct0"]
-[ext_resource type="Texture2D" uid="uid://dsrxoltpg6iom" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_001.png" id="14_5lhuu"]
+[ext_resource type="Texture2D" uid="uid://dsrxoltpg6iom" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_001.png" id="14_5lhuu"]
 [ext_resource type="PackedScene" uid="uid://c6dhgxet661ke" path="res://Scenes and Scripts/Game/Laboratory/Objects/vessel.tscn" id="16_qbcfp"]
 [ext_resource type="AudioStream" uid="uid://eqkepd0aictl" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_chameleonsearching_var1.mp3" id="18_1fo6j"]
 [ext_resource type="Texture2D" uid="uid://cb20pnlmajeq3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim1.PNG" id="19_yd1p1"]
@@ -29,13 +29,13 @@
 [ext_resource type="Texture2D" uid="uid://b3nyw5isqf7dc" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_chair.png" id="23_ye88a"]
 [ext_resource type="Texture2D" uid="uid://cc8elg23lyvvu" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cabinet_wall_right.png" id="24_1y555"]
 [ext_resource type="Texture2D" uid="uid://cdxa6qwd84ua3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim6.PNG" id="24_5la8x"]
-[ext_resource type="Texture2D" uid="uid://djxubsy22fhwe" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_002.png" id="25_0nmcg"]
+[ext_resource type="Texture2D" uid="uid://djxubsy22fhwe" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_002.png" id="25_0nmcg"]
 [ext_resource type="Texture2D" uid="uid://ddgurcbihtflv" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_lamp.png" id="25_kjt1n"]
-[ext_resource type="Texture2D" uid="uid://clx51sk6di2et" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_003.png" id="26_5d654"]
-[ext_resource type="Texture2D" uid="uid://8e227vieqtam" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_004.png" id="27_qygja"]
-[ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_005.png" id="28_d8ugo"]
-[ext_resource type="Texture2D" uid="uid://b76ies1ylcj0t" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_006.png" id="29_vj1ph"]
-[ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/chameleon_007.png" id="30_xn8be"]
+[ext_resource type="Texture2D" uid="uid://clx51sk6di2et" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_003.png" id="26_5d654"]
+[ext_resource type="Texture2D" uid="uid://8e227vieqtam" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_004.png" id="27_qygja"]
+[ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_005.png" id="28_d8ugo"]
+[ext_resource type="Texture2D" uid="uid://b76ies1ylcj0t" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_006.png" id="29_vj1ph"]
+[ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_007.png" id="30_xn8be"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
 vertices = PackedVector3Array(-29.1293, 13.0394, -5.0675, -29.1293, 13.0394, -4.8175, 29.1207, 13.0394, -4.8175, 29.1207, 13.0394, -5.0675, -28.3793, 13.0994, -4.0675, -28.3793, 13.0994, 5.1825, -28.1293, 13.0994, 5.1825, -28.1293, 13.0994, -4.0675, -28.3793, 2.24943, -3.5675, -28.3793, 2.24943, 5.1825, -28.1293, 2.24943, 5.1825, -28.1293, 2.24943, -3.5675, -8.87933, 2.24943, 4.6825, -8.87933, 2.24943, 4.4325, -9.12933, 2.24943, 4.4325, -27.3793, 2.24943, 5.6825, -9.12933, 2.24943, 1.1825, -8.87933, 2.24943, 1.1825, -8.87933, 2.24943, 0.9325, -7.62933, 2.24943, 5.6825, -7.37933, 2.24943, 4.6825, -8.87933, 2.24943, 4.6825, -27.3793, 2.24943, 5.6825, -8.87933, 2.24943, 0.9325, -6.87933, 2.24943, 0.9325, -6.87933, 2.24943, -3.5675, -9.12933, 2.24943, 1.1825, -8.87933, 2.24943, 0.9325, -6.87933, 2.24943, -3.5675, -27.3793, 2.24943, -3.5675, -27.3793, 2.24943, 5.6825, -27.3793, 2.24943, 5.6825, -9.12933, 2.24943, 4.4325, -9.12933, 2.24943, 1.1825, 1.12067, 2.24943, -1.5675, 1.12067, 2.24943, -1.8175, 0.870667, 2.24943, -1.8175, 3.12067, 2.24943, 0.9325, 3.12067, 2.24943, -1.5675, 1.12067, 2.24943, -1.5675, 3.12067, 2.24943, 0.9325, 1.12067, 2.24943, -1.5675, 0.870667, 2.24943, -1.8175, -6.87933, 2.24943, -3.5675, -6.87933, 2.24943, 0.9325, 0.870667, 2.24943, -1.8175, 0.870667, 2.24943, -3.5675, -6.87933, 2.24943, -3.5675, 6.87067, 2.24943, 0.9325, 6.87067, 2.24943, 1.1825, 7.12067, 2.24943, 1.1825, 7.12067, 2.24943, 4.4325, 6.87067, 2.24943, 4.4325, 6.87067, 2.24943, 4.6825, 23.1207, 2.24943, 5.6825, 21.8707, 2.24943, 2.9325, 21.8707, 2.24943, 2.6825, 21.6207, 2.24943, 2.6825, 21.6207, 2.24943, -0.8175, 21.8707, 2.24943, -0.8175, 21.8707, 2.24943, -1.0675, 11.8707, 2.24943, -1.8175, 11.6207, 2.24943, -1.8175, 11.6207, 2.24943, -1.5675, 6.87067, 2.24943, 4.6825, 5.37067, 2.24943, 4.6825, 5.62067, 2.24943, 5.6825, 23.1207, 2.24943, 5.6825, 23.1207, 2.24943, 5.6825, 23.3707, 2.24943, 2.9325, 21.8707, 2.24943, 2.9325, 4.87067, 2.24943, -1.5675, 4.87067, 2.24943, 0.9325, 6.87067, 2.24943, 0.9325, 21.8707, 2.24943, -1.0675, 23.8707, 2.24943, -1.0675, 23.8707, 2.24943, -3.5675, 23.1207, 2.24943, 5.6825, 21.8707, 2.24943, 2.9325, 21.6207, 2.24943, 2.6825, 11.8707, 2.24943, -1.8175, 11.6207, 2.24943, -1.5675, 7.12067, 2.24943, 4.4325, 4.87067, 2.24943, -1.5675, 6.87067, 2.24943, 0.9325, 7.12067, 2.24943, 1.1825, 11.6207, 2.24943, -1.5675, 21.6207, 2.24943, -0.8175, 21.8707, 2.24943, -1.0675, 23.8707, 2.24943, -3.5675, 11.8707, 2.24943, -3.5675, 11.8707, 2.24943, -1.8175, 21.6207, 2.24943, 2.6825, 21.6207, 2.24943, -0.8175, 11.8707, 2.24943, -1.8175, 11.6207, 2.24943, -1.5675, 7.12067, 2.24943, 1.1825, 7.12067, 2.24943, 4.4325, 23.8707, 2.24943, -1.0675, 29.1207, 2.24943, -1.0675, 29.1207, 2.24943, -3.5675, 23.8707, 2.24943, -3.5675, 29.8707, 2.24943, -3.5675, 29.8707, 2.24943, -1.0675, 30.1207, 2.24943, -1.0675, 30.1207, 2.24943, -3.5675, 3.12067, 2.24943, 0.9325, 4.87067, 2.24943, 0.9325, 4.87067, 2.24943, -1.5675, 3.12067, 2.24943, -1.5675, 22.3707, 3.77943, -0.3175, 22.3707, 3.77943, 2.1825, 29.1207, 3.77943, 2.1825, 29.1207, 3.77943, -0.3175, 29.8707, 3.77943, -0.3175, 29.8707, 3.77943, 2.1825, 30.1207, 3.77943, 2.1825, 30.1207, 3.77943, -0.3175, -8.37933, 3.49943, 1.6825, -8.37933, 3.49943, 3.9325, 6.37067, 3.49943, 3.9325, 6.37067, 3.49943, 1.6825, 29.1207, 2.24943, 5.6825, 29.1207, 2.24943, 2.9325, 23.3707, 2.24943, 2.9325, 23.1207, 2.24943, 5.6825, 29.8707, 2.24943, 2.9325, 29.8707, 2.24943, 5.6825, 30.1207, 2.24943, 5.6825, 30.1207, 2.24943, 2.9325, -7.62933, 2.24943, 5.6825, 5.62067, 2.24943, 5.6825, 5.37067, 2.24943, 4.6825, -7.37933, 2.24943, 4.6825)
@@ -136,10 +136,8 @@ animations = [{
 }]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lcbi0"]
-load_path = "res://.godot/imported/lab_chair.png-8109bb1e306a4a75684728753d595008.s3tc.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lt4d8"]
-load_path = "res://.godot/imported/lab_chair.png-8109bb1e306a4a75684728753d595008.s3tc.ctex"
 
 [sub_resource type="Animation" id="Animation_5d15n"]
 resource_name = "camera pan"
