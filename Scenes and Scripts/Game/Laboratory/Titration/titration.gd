@@ -2,6 +2,8 @@ extends Node2D
 
 signal balancing_game
 
+var second_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Titration Dialog/laboratory_minigame2_dialog_2.tscn")
+
 var ready_to_pour = false
 
 var tube_counter = 0
@@ -52,6 +54,11 @@ func _process(delta):
 	
 	if finished_pouring:
 		if !signal_sent:
+			var dialog_instance = second_dialog.instantiate()
+			add_child(dialog_instance)
+			$Skillcheck/Bar.visible = true
+			$Skillcheck/Arrow.visible = true
+			$"Skillcheck/PH-Scale".visible = true
 			emit_signal("balancing_game")
 			signal_sent = true
 	

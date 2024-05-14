@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dfm6sf40klc1x"]
+[gd_scene load_steps=33 format=3 uid="uid://dfm6sf40klc1x"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/titration.gd" id="1_rdept"]
 [ext_resource type="Texture2D" uid="uid://r82vd54v48ed" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG" id="1_tyn2s"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://c6j7123gk1lp5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Burette/drehknopf_placeholder.png" id="21_3cyde"]
 [ext_resource type="Texture2D" uid="uid://c3r5ryx5nl8h1" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_bar.png" id="22_8h0tj"]
 [ext_resource type="Texture2D" uid="uid://cb5brlyflthb4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_arrow.png" id="23_02ikp"]
+[ext_resource type="Texture2D" uid="uid://dpcigt205pknn" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_countdown_three.png" id="24_v55k4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op731"]
 size = Vector2(443, 376)
@@ -124,6 +125,8 @@ _data = {
 "movement": SubResource("Animation_v4yay")
 }
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_3hxg5"]
+
 [node name="Titration" type="Node2D"]
 script = ExtResource("1_rdept")
 
@@ -132,16 +135,6 @@ modulate = Color(0.419813, 0.419813, 0.419813, 1)
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_tyn2s")
-
-[node name="PH-Scale" type="Node2D" parent="."]
-position = Vector2(1714, 311)
-
-[node name="Glass" type="Sprite2D" parent="PH-Scale"]
-texture = ExtResource("2_e2340")
-
-[node name="Arrow" type="Sprite2D" parent="PH-Scale"]
-position = Vector2(0, 131)
-texture = ExtResource("3_gdcxm")
 
 [node name="Stand" type="Node2D" parent="."]
 position = Vector2(1495, 842)
@@ -205,6 +198,7 @@ position = Vector2(126, -81)
 texture = ExtResource("21_3cyde")
 
 [node name="Bar" type="Area2D" parent="Skillcheck"]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Skillcheck/Bar"]
 position = Vector2(1063, 307)
@@ -216,7 +210,8 @@ position = Vector2(1061, 293.75)
 shape = SubResource("RectangleShape2D_b0cak")
 
 [node name="Arrow" type="Area2D" parent="Skillcheck"]
-position = Vector2(1168.03, 643)
+visible = false
+position = Vector2(1284, 643)
 
 [node name="Sprite2D" type="Sprite2D" parent="Skillcheck/Arrow"]
 position = Vector2(-222.75, -222.75)
@@ -232,6 +227,34 @@ libraries = {
 "": SubResource("AnimationLibrary_r6p8w")
 }
 
+[node name="PH-Scale" type="Node2D" parent="Skillcheck"]
+visible = false
+position = Vector2(1714, 311)
+
+[node name="Glass" type="Sprite2D" parent="Skillcheck/PH-Scale"]
+texture = ExtResource("2_e2340")
+
+[node name="Arrow" type="Sprite2D" parent="Skillcheck/PH-Scale"]
+position = Vector2(0, -80)
+texture = ExtResource("3_gdcxm")
+
+[node name="TextureRect" type="TextureRect" parent="Skillcheck"]
+visible = false
+self_modulate = Color(0, 0, 0, 0.603922)
+z_index = 2
+offset_left = -72.0
+offset_top = -53.0
+offset_right = 1989.0
+offset_bottom = 1123.0
+texture = SubResource("CanvasTexture_3hxg5")
+
+[node name="Numbers" type="Sprite2D" parent="Skillcheck/TextureRect"]
+position = Vector2(1055, 564)
+texture = ExtResource("24_v55k4")
+
+[node name="MiniGameTime" type="Timer" parent="Skillcheck"]
+wait_time = 20.0
+
 [connection signal="balancing_game" from="." to="Skillcheck" method="_on_titration_balancing_game"]
 [connection signal="pouring_time" from="Clamp" to="." method="_on_clamp_pouring_time"]
 [connection signal="area_entered" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_area_entered"]
@@ -240,3 +263,4 @@ libraries = {
 [connection signal="mouse_exited" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_mouse_exited"]
 [connection signal="area_entered" from="Skillcheck/Bar" to="Skillcheck" method="_on_bar_area_entered"]
 [connection signal="area_exited" from="Skillcheck/Bar" to="Skillcheck" method="_on_bar_area_exited"]
+[connection signal="timeout" from="Skillcheck/MiniGameTime" to="Skillcheck" method="_on_mini_game_time_timeout"]
