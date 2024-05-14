@@ -21,6 +21,10 @@ func _physics_process(delta):
 	shader_value = clamp(shader_value, 0.0, 1.0)
 	
 	material.set_shader_parameter("value", shader_value)
+	
+	if shader_value == 1:
+		### NUR ÜBERGANGSWEISE SZENENWECHSEL, hier muss später noch dialog rein
+		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 
 
 
