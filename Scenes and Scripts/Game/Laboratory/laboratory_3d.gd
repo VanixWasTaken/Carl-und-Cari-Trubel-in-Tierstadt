@@ -31,9 +31,11 @@ func _ready():
 		$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.queue_free()
 		if !Global.return_laboratory_2:
 			$Player.global_position = Vector3(0.285038, 2.349433, 4.709138)
+		elif Global.return_laboratory_2:
+			$Player.global_position = Vector3(-27.47779, 2.349433, 2.097231)
 		
 
-	if !Global.return_laboratory_1:
+	elif !Global.return_laboratory_1:
 		if Global.lab_cutscene_played == false:
 			Global.lab_cutscene_played = true
 			$CameraPan.play("camera pan")

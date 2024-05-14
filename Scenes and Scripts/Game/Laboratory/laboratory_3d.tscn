@@ -409,7 +409,7 @@ texture = ExtResource("25_kjt1n")
 transform = Transform3D(-2.99423e-08, 0, -0.79, 0, 0.82, 0, 0.685, 0, -3.4532e-08, -29.6051, 7.84301, -0.0104122)
 
 [node name="BackWallWindow" parent="Objects" instance=ExtResource("31_ssppo")]
-transform = Transform3D(1.075, 0, 0, 0, 1.075, 0, 0, 0, 1.075, -12.3032, 7.33331, 0.301333)
+transform = Transform3D(1.075, 0, 0, 0, 1.075, 0, 0, 0, 1.075, -12.3032, 7.33331, -4.71349)
 
 [node name="CameraPan" type="AnimationPlayer" parent="."]
 libraries = {
@@ -426,8 +426,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
 
-[node name="NPC Chameleon" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2807, 0, 0)
+[node name="NPC Chameleon" type="Node3D" parent="." groups=["NPC"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3209, 0, -4.16521)
 visible = false
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="NPC Chameleon"]

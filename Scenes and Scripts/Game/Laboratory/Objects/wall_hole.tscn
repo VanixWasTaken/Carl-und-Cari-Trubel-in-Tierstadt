@@ -9,7 +9,7 @@ size = Vector3(10.0627, 9.36255, 6.32742)
 size = Vector3(12.9469, 2.8, 11.0025)
 
 [node name="WallHole" type="Sprite3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28.4811, 7.78455, 0.100114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4811, 7.78455, 0.100114)
 script = ExtResource("2_6ge40")
 
 [node name="MouseArea" type="Area3D" parent="."]

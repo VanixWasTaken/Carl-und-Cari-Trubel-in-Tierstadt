@@ -36,10 +36,11 @@ func _process(delta):
 		global_position = mouse_position
 		Global.mouse_full = true
 	if Input.is_action_just_released("left_click"):
-		follow_mouse = false
-		global_position = start_position
-		$Interact.play()
-		%PulverPour.stop()
+		if follow_mouse:
+			follow_mouse = false
+			global_position = start_position
+			$Interact.play()
+			%PulverPour.stop()
 
 
 

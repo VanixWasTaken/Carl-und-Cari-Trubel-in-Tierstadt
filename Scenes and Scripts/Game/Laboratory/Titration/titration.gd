@@ -90,5 +90,7 @@ func _on_clamp_pouring_time():
 
 
 func _on_button_button_down():
+	Global.lab_cutscene_played = true
+	Global.return_laboratory_1 = true
 	Global.return_laboratory_2 = true
 	get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")

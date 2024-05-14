@@ -13,7 +13,6 @@ var player_inside = false
 var collected_chemicals = false
 
 func _on_area_3d_mouse_entered():
-	if Global.talked_to_chameleon_2:
 		$".".texture = outline_shader
 		mouse_inside = true
 

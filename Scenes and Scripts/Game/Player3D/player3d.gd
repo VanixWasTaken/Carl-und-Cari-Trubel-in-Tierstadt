@@ -10,6 +10,7 @@ func _ready():
 		$AnimatedSprite3D.play("cari_idle")
 
 func _process(delta):
+	print(global_position)
 	if Global.dialog_playing:
 		$AnimatedSprite3D.pause()
 	if navigation_agent.is_navigation_finished():
