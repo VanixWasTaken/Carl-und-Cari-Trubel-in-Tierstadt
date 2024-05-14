@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_fgm78"]
-[ext_resource type="Texture2D" uid="uid://cgvodtne4hswt" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_floor_sketch.png" id="4_64pue"]
-[ext_resource type="Texture2D" uid="uid://cvyoim5vx5tfs" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_back_sketch.png" id="5_3y6kd"]
-[ext_resource type="Texture2D" uid="uid://cy5jojis3lhjr" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left_sketch.png" id="8_jini1"]
-[ext_resource type="Texture2D" uid="uid://r1n1x0ysitrm" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_right_sketch.png" id="9_ktcms"]
+[ext_resource type="Texture2D" uid="uid://cswfetkvyxcdu" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_floor.png" id="4_kt23o"]
+[ext_resource type="Texture2D" uid="uid://dme7f42vhgtsc" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_back.png" id="5_5jt2r"]
+[ext_resource type="Texture2D" uid="uid://bwchw2hwle8u1" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left.png" id="6_r0rpn"]
+[ext_resource type="Texture2D" uid="uid://caatqki8vnhrj" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_right.png" id="7_mn6f7"]
 [ext_resource type="PackedScene" uid="uid://caxx8cohbsnx2" path="res://Scenes and Scripts/Game/Laboratory/Objects/table.tscn" id="10_1cvp0"]
 [ext_resource type="AudioStream" uid="uid://dc1vs6qw5sspl" path="res://Assets/Sound/SFX/Foley/World/sfx_world_foley_footstep_var1.mp3" id="10_l86mv"]
 [ext_resource type="AudioStream" uid="uid://kawfjp3a5u0a" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_dooropen_var1.mp3" id="10_npryc"]
@@ -58,7 +58,7 @@ size = Vector3(19.3163, 1, 0.201752)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vis0"]
-albedo_texture = ExtResource("4_64pue")
+albedo_texture = ExtResource("4_kt23o")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)
@@ -66,8 +66,8 @@ size = Vector2(59, 10)
 [sub_resource type="BoxShape3D" id="BoxShape3D_8d8lt"]
 size = Vector3(59.08, 1, 15.4632)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44joq"]
-albedo_texture = ExtResource("5_3y6kd")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ecvk8"]
+albedo_texture = ExtResource("5_5jt2r")
 
 [sub_resource type="QuadMesh" id="QuadMesh_mw0nr"]
 size = Vector2(59, 16)
@@ -75,8 +75,8 @@ size = Vector2(59, 16)
 [sub_resource type="BoxShape3D" id="BoxShape3D_sahrs"]
 size = Vector3(10.0164, 1, 15.8657)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xys5f"]
-albedo_texture = ExtResource("8_jini1")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3djs4"]
+albedo_texture = ExtResource("6_r0rpn")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t24k3"]
 size = Vector2(10, 16)
@@ -84,8 +84,8 @@ size = Vector2(10, 16)
 [sub_resource type="BoxShape3D" id="BoxShape3D_rxpew"]
 size = Vector3(11.3256, 1, 15.9534)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3h7uf"]
-albedo_texture = ExtResource("9_ktcms")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rp8t2"]
+albedo_texture = ExtResource("7_mn6f7")
 
 [sub_resource type="QuadMesh" id="QuadMesh_iqs2f"]
 size = Vector2(10, 16)
@@ -263,7 +263,7 @@ shape = SubResource("BoxShape3D_8d8lt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallBack"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0.5)
-material_override = SubResource("StandardMaterial3D_44joq")
+material_override = SubResource("StandardMaterial3D_ecvk8")
 mesh = SubResource("QuadMesh_mw0nr")
 skeleton = NodePath("../CollisionShape3D")
 
@@ -277,7 +277,7 @@ shape = SubResource("BoxShape3D_sahrs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallLeft"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.6141, 8.35748, 0.288007)
-material_override = SubResource("StandardMaterial3D_xys5f")
+material_override = SubResource("StandardMaterial3D_3djs4")
 mesh = SubResource("QuadMesh_t24k3")
 skeleton = NodePath("../CollisionShape3D")
 
@@ -291,7 +291,7 @@ shape = SubResource("BoxShape3D_rxpew")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallRight"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 4, 0.5)
-material_override = SubResource("StandardMaterial3D_3h7uf")
+material_override = SubResource("StandardMaterial3D_rp8t2")
 mesh = SubResource("QuadMesh_iqs2f")
 skeleton = NodePath("../CollisionShape3D")
 
