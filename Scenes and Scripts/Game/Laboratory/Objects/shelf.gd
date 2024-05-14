@@ -1,7 +1,7 @@
 extends Sprite3D
 
 var no_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_shelf.png")
-var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cupboard_sketch_highlight.png")
+var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cupboard_highlight.png")
 var mouse_inside = false
 var player_inside = false
 var dialog_instance

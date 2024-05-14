@@ -32,7 +32,7 @@ func _ready():
 		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
 		vo_pc = "cari"
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_left_dialog_box()
+	add_right_dialog_box()
 ##########################################################################################
 
 
@@ -63,7 +63,6 @@ func add_left_dialog_box():
 	
 	if dialogs == 3:
 		dialogs += 1
-		Global.moving_allowed = true
 	
 ##########################################################################################
 
@@ -86,23 +85,19 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "In diesem Schrank lagern wir unsere gefärlichen Substanzen."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/vo_pc_" + vo_pc + "_laboratory01_var1.mp3")
-		$"../VoiceOver".play()
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
 		dialogs += 1
 		same_speaker = true
 
-	if dialogs == 2:
-		var short_node = get_child(1)
+	elif dialogs == 2:
+		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Es ist wichtig, diesen Schrank immer abzuschließen, damit es keine Unfälle gibt."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/vo_pc_" + vo_pc + "_laboratory01_var1.mp3")
-		$"../VoiceOver".play()
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
 		dialogs += 1
 		same_speaker = false
 ##########################################################################################

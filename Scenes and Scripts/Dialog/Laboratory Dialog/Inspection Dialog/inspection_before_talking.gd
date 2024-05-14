@@ -80,8 +80,6 @@ func add_left_dialog_box():
 			short_node_text.text = "Hmm, ich weiß gar nicht, was das ist."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/vo_pc_" + vo_pc + "_laboratory01_var1.mp3")
-		$"../VoiceOver".play()
 		dialogs += 1
 	
 	

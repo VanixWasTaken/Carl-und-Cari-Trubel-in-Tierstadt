@@ -87,3 +87,8 @@ func _on_clamp_pouring_time():
 			$Clamp.visible = true
 	else:
 		$Clamp.visible = true
+
+
+func _on_button_button_down():
+	Global.return_laboratory_2 = true
+	get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")

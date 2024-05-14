@@ -3,7 +3,9 @@ extends Node3D
 # actual dialogs
 var first_dialogue = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_1.tscn")
 var second_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_2.tscn")
-
+var third_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_3.tscn")
+var fourth_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_4.tscn")
+var fifth_dialog
 
 var mouse_on = false
 var outline_shader = preload("res://Shader/outline.tres")
@@ -12,7 +14,7 @@ var cutscene = true
 var picked_up_scale = false
 var picked_up_reagenz_glasses = false
 var picked_up_vessel = false
-
+var picked_up_chemicals = false
 
 
 func _ready():
@@ -22,10 +24,11 @@ func _ready():
 		cutscene = false
 		$Objects/Shelf/Scale.queue_free()
 		$Objects/Sink/Vessel.queue_free()
-		$Player.global_position = Vector3(0.285038, 2.349433, 4.709138)
 		$CameraPan/MouseClickBlock.queue_free()
 		$Objects/Chameleon.queue_free()
 		$"NPC Chameleon".visible = true
+		if !Global.return_laboratory_2:
+			$Player.global_position = Vector3(0.285038, 2.349433, 4.709138)
 		
 
 	if !Global.return_laboratory_1:
@@ -102,9 +105,22 @@ func _on_timer_2_timeout():
 
 func _on_dialog_area_body_entered(body):
 	if body.get_name() == "Player":
-		var dialogue_instance = second_dialog.instantiate()
-		$"NPC Chameleon".add_child(dialogue_instance)
-		Global.dialog_playing = true
+		if !Global.return_laboratory_1:
+			var dialogue_instance = second_dialog.instantiate()
+			$"NPC Chameleon".add_child(dialogue_instance)
+			Global.dialog_playing = true
+		elif Global.return_laboratory_1 && !Global.return_laboratory_2:
+			var dialogue_instance = third_dialog.instantiate()
+			$"NPC Chameleon".add_child(dialogue_instance)
+			Global.dialog_playing = true
+		elif Global.return_laboratory_1 && Global.return_laboratory_2 && !Global.return_laboratory_3:
+			var dialogue_instance = fourth_dialog.instantiate()
+			$"NPC Chameleon".add_child(dialogue_instance)
+			Global.dialog_playing = true
+		elif Global.return_laboratory_1 && Global.return_laboratory_2 && Global.return_laboratory_3:
+			var dialogue_instance = fifth_dialog.instantiate()
+			$"NPC Chameleon".add_child(dialogue_instance)
+			Global.dialog_playing = true
 
 
 

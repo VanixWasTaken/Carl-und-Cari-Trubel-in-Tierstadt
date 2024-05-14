@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nleoc"]
-size = Vector3(7.69469, 20.7209, 5.11392)
+size = Vector3(7.61834, 10.0167, 9.63981)
 
 [node name="Vessel" type="Node3D"]
 script = ExtResource("1_0kjhs")
@@ -42,7 +42,7 @@ collision_layer = 9
 collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.517192, -9.86045, 1.28163)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.555366, -9.0201, 0.0429406)
 shape = SubResource("BoxShape3D_nleoc")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

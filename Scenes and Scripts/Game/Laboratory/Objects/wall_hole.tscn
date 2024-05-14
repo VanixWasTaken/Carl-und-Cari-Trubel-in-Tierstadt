@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg257qtiun1jh"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/wall_hole.gd" id="2_6ge40"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lqjq1"]
+size = Vector3(12.9469, 2.8, 10.5236)
+
+[node name="WallHole" type="Sprite3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.4811, 7.78455, 0.100114)
+script = ExtResource("2_6ge40")
+
+[node name="MouseArea" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="MouseArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.21541e-08, 0, -1.21271)
+polygon = PackedVector2Array(5.85775, 4.58656, -5.86491, 4.71243, -5.87074, -4.88721, 6.25326, -4.89101)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 9
+collision_mask = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.999999, 0, 1.87228e-12, 0, 0.999999, 0, -1.87228e-12, 0, 0.999999, 0.267102, -4.30766, 0.168346)
+shape = SubResource("BoxShape3D_lqjq1")
+
+[connection signal="mouse_entered" from="MouseArea" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="MouseArea" to="." method="_on_area_3d_mouse_exited"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

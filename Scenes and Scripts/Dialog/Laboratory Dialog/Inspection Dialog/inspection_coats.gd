@@ -14,7 +14,7 @@ var same_speaker = false
 var PRESET1
 var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png")
 
-var vo_pc
+var vo_pc 
 
 ##########################################################################################
 
@@ -32,7 +32,7 @@ func _ready():
 		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
 		vo_pc = "cari"
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_left_dialog_box()
+	add_right_dialog_box()
 ##########################################################################################
 
 
@@ -43,7 +43,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 4:
+	if dialogs == 6:
 		Global.moving_allowed = true
 		Global.dialog_playing = false
 		queue_free()
@@ -61,10 +61,19 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 3:
+	if dialogs == 2:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Der ist ja riesig"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+		
+	elif dialogs == 5:
 		dialogs += 1
 		Global.moving_allowed = true
-	
 ##########################################################################################
 
 
@@ -85,26 +94,34 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Diese Mäntel tragen wir zum Schutz vor Gefahrenstoffen. Durch die weiße Farbe können wir schnell Kontaminationen erkennen."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/vo_pc_" + vo_pc + "_laboratory01_var1.mp3")
-		$"../VoiceOver".play()
+		short_node_text.text = "Das ist eine Laborkittel, der g-g-gehört zur Schutzausrüstung."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
 		dialogs += 1
-		same_speaker = true
 
-	if dialogs == 2:
-		var short_node = get_child(1)
+
+	elif dialogs == 3:
+		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Sie bestehen oft aus Baumwolle, da diese bei heißen Temperaturen nicht schmilzt."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/vo_pc_" + vo_pc + "_laboratory01_var1.mp3")
-		$"../VoiceOver".play()
+		short_node_text.text = "Genau, denn sie m-m-müssen unseren ganzen Körper vor G-G-Gefahrenstoffen schützen."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+		same_speaker = true
+
+	elif dialogs == 4:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Sie sind weiß, um schnell farbige Chemikalien zu erkennen und bestehen aus Baumwolle, da diese nicht schmilzt."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
 		dialogs += 1
 		same_speaker = false
+
 ##########################################################################################
 
 

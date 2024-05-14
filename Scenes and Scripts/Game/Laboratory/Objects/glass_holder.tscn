@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://djlralvxj7j5b"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/glass_holder.gd" id="1_y4w7s"]
+[ext_resource type="Texture2D" uid="uid://c5y5pjca633gs" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_mix_3.png" id="2_3brv1"]
+[ext_resource type="Texture2D" uid="uid://djydjbgnkx537" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_mix_3_highlight.png" id="3_iboj6"]
+[ext_resource type="AudioStream" uid="uid://c3uxb7jsi3av7" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var5.mp3" id="4_4f7xd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6wgwi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3brv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iboj6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nleoc"]
+size = Vector3(7.28293, 9.95479, 12.1746)
+
+[node name="GlassHolder" type="Node3D"]
+script = ExtResource("1_y4w7s")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.325, 0, 0, 0, 0.325, 0, 0, 0, 0.325, -0.0280508, 0.815911, 0.043722)
+sorting_offset = 1.0
+sprite_frames = SubResource("SpriteFrames_6wgwi")
+frame_progress = 0.705277
+
+[node name="Mouse_area" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0280508, -1.18409, 0.30331)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Mouse_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0236267, 0.219005, -0.0209405)
+polygon = PackedVector2Array(-0.900536, 2.62048, 0.16614, 2.67278, 1.14645, 2.31218, 1.13408, 1.13624, -0.868283, 1.10105, -1.22382, 1.7166)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 9
+collision_mask = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.18742, -9.51867, -0.672452)
+shape = SubResource("BoxShape3D_nleoc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4f7xd")
+
+[connection signal="mouse_entered" from="Mouse_area" to="." method="_on_mouse_area_mouse_entered"]
+[connection signal="mouse_exited" from="Mouse_area" to="." method="_on_mouse_area_mouse_exited"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
