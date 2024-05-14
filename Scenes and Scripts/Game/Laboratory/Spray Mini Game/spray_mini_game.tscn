@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dfpwq4ngsnyed"]
+[gd_scene load_steps=56 format=3 uid="uid://dfpwq4ngsnyed"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
@@ -16,8 +16,12 @@
 [ext_resource type="Shader" path="res://Shader/spray_mini_game.gdshader" id="13_rn5a4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/visible_chameleon.gd" id="14_2xxsa"]
 [ext_resource type="Texture2D" uid="uid://cch5cjlssxc7x" path="res://Assets/Art/UI/HUD/Map/UI_hud.PNG" id="16_mq6r4"]
+[ext_resource type="Texture2D" uid="uid://cgh7mxi31ls7c" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation1.png" id="16_w1xuf"]
+[ext_resource type="Texture2D" uid="uid://d3th02ulccysw" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation2.png" id="17_b3jxw"]
 [ext_resource type="Texture2D" uid="uid://bkjaisp5ro87x" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation1.png" id="17_bfug0"]
+[ext_resource type="Texture2D" uid="uid://d2mo3505v5k35" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation3.png" id="18_1cfw2"]
 [ext_resource type="Texture2D" uid="uid://c6nyfnee44hxq" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation2.png" id="18_cjtse"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/gun_in_hand.gd" id="19_8elaw"]
 [ext_resource type="Texture2D" uid="uid://c834b4h8xm3ci" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation3.png" id="19_cvus6"]
 [ext_resource type="Texture2D" uid="uid://4dala3vu76yd" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation4.png" id="20_114ax"]
 [ext_resource type="Texture2D" uid="uid://dnil0orj7meec" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation5.png" id="21_5enbi"]
@@ -29,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://d2ng1ougnu6ya" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_gun_build.png" id="26_xd5u4"]
 [ext_resource type="Texture2D" uid="uid://pkbt4uivo72d" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse_pressed.png" id="28_nvspe"]
 [ext_resource type="Texture2D" uid="uid://sipuj2avuffd" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse.png" id="29_mfucy"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/swipe_area.gd" id="30_tdar7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bmvvo"]
 animations = [{
@@ -82,6 +87,28 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_aut0p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_w1xuf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_b3jxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1cfw2")
+}],
+"loop": true,
+"name": &"shooting",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_k3fj0"]
 animations = [{
 "frames": [{
@@ -103,7 +130,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("22_fsmpt")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 7.0
 }]
@@ -159,6 +186,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_wv1f8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1233, 467)]
+}
+
 [sub_resource type="Animation" id="Animation_ppw0a"]
 resource_name = "new_animation"
 length = 1.5
@@ -188,8 +230,29 @@ tracks/1/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_wv1f8"]
-length = 0.001
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hhy13"]
+_data = {
+"RESET": SubResource("Animation_wv1f8"),
+"new_animation": SubResource("Animation_ppw0a")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ppv8h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_nvspe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_mfucy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_qenw6"]
+resource_name = "new_animation"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -197,23 +260,40 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1233, 467)]
+"values": [Vector2(1217, 750), Vector2(1217, 750), Vector2(740, 750)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_hhy13"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jf3yg"]
 _data = {
-"RESET": SubResource("Animation_wv1f8"),
-"new_animation": SubResource("Animation_ppw0a")
+"new_animation": SubResource("Animation_qenw6")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ewyj"]
-size = Vector2(261.5, 256.5)
+size = Vector2(927, 457)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2i6k"]
 size = Vector2(303, 378)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdup1"]
+size = Vector2(823, 893)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3x71"]
+size = Vector2(592, 308)
 
 [node name="SprayMiniGame" type="Node2D"]
 script = ExtResource("1_wcnbr")
@@ -239,6 +319,13 @@ scale = Vector2(0.686389, 0.686389)
 sprite_frames = SubResource("SpriteFrames_hmshc")
 script = ExtResource("14_2xxsa")
 
+[node name="Area2D" type="Area2D" parent="VisibleChameleon"]
+monitoring = false
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisibleChameleon/Area2D"]
+polygon = PackedVector2Array(-138.551, -301.74, -195.37, -186.645, -231.793, 20.2349, -239.077, 164.468, -211.396, 209.632, -172.06, 410.684, -156.034, 503.926, -250.732, 554.917, -239.077, 594.253, -137.094, 616.107, -8.88696, 636.503, 109.122, 604.452, 114.949, 450.02, 276.665, 413.598, 302.89, 237.313, 208.191, 232.942, 231.501, -49.6963, 187.794, -303.197, 85.8115, -349.818, 68.3287, -488.223, 37.7338, -515.904, 52.3027, -575.637, 28.9924, -607.689, -126.896, -574.18, -154.577, -523.189, -191, -501.335, -199.741, -399.352, -185.172, -341.076)
+
 [node name="Minigame3Light" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.45098)
 position = Vector2(926, 560.5)
@@ -263,6 +350,20 @@ polygon = PackedVector2Array(42, 370, 93, 353, 110, 358, 173, 337, 185, 320, 226
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="BottleAndGun/SprayGun/Area2D"]
 polygon = PackedVector2Array(-443, 382, -442, 183, -457, 153, -482, 133, -503, 129, -503, 104, -548, 98, -596, 109, -596, 128, -632, 151, -652, 191, -654, 242, -653, 392, -631, 405, -575, 419, -523, 417, -474, 405)
 
+[node name="GunInHand" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(1218, 629)
+sprite_frames = SubResource("SpriteFrames_aut0p")
+animation = &"shooting"
+script = ExtResource("19_8elaw")
+
+[node name="ShootingArea" type="Area2D" parent="GunInHand"]
+monitoring = false
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GunInHand/ShootingArea"]
+polygon = PackedVector2Array(-197, -112, -85, -148, -105, -290, -186, -327, -270, -286, -280, -196)
+
 [node name="SpinMinigame" type="TextureRect" parent="."]
 visible = false
 offset_right = 1920.0
@@ -280,7 +381,7 @@ libraries = {
 
 [node name="Arrow" type="AnimatedSprite2D" parent="SpinMinigame"]
 visible = false
-position = Vector2(1044, 611)
+position = Vector2(1056, 683)
 sprite_frames = SubResource("SpriteFrames_l37xa")
 frame_progress = 0.215376
 
@@ -299,11 +400,23 @@ libraries = {
 }
 autoplay = "new_animation"
 
+[node name="MouseHUD2" type="AnimatedSprite2D" parent="SpinMinigame"]
+visible = false
+position = Vector2(1217, 720)
+scale = Vector2(0.245, 0.245)
+sprite_frames = SubResource("SpriteFrames_ppv8h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpinMinigame/MouseHUD2"]
+libraries = {
+"": SubResource("AnimationLibrary_jf3yg")
+}
+
 [node name="BottleArea" type="Area2D" parent="SpinMinigame"]
 position = Vector2(1014, 804)
 script = ExtResource("23_2g2jj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpinMinigame/BottleArea"]
+position = Vector2(6.5, 15.5)
 shape = SubResource("RectangleShape2D_0ewyj")
 
 [node name="GoalArea" type="Area2D" parent="SpinMinigame"]
@@ -313,8 +426,37 @@ position = Vector2(589, 101)
 position = Vector2(432.5, 179)
 shape = SubResource("RectangleShape2D_w2i6k")
 
+[node name="SwipeArea" type="Area2D" parent="SpinMinigame"]
+visible = false
+position = Vector2(1506, 510)
+monitoring = false
+monitorable = false
+script = ExtResource("30_tdar7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpinMinigame/SwipeArea"]
+position = Vector2(-72.5, 36.5)
+shape = SubResource("RectangleShape2D_bdup1")
+
+[node name="GoalArea2" type="Area2D" parent="SpinMinigame"]
+visible = false
+position = Vector2(584, 508)
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpinMinigame/GoalArea2"]
+position = Vector2(135, -1)
+shape = SubResource("RectangleShape2D_x3x71")
+
+[connection signal="area_entered" from="VisibleChameleon/Area2D" to="VisibleChameleon" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="VisibleChameleon/Area2D" to="VisibleChameleon" method="_on_area_2d_area_exited"]
 [connection signal="mouse_entered" from="BottleAndGun/SprayGun/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="BottleAndGun/SprayGun/Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="is_shooting" from="GunInHand" to="VisibleChameleon" method="_on_gun_in_hand_is_shooting"]
+[connection signal="isnt_shooting" from="GunInHand" to="VisibleChameleon" method="_on_gun_in_hand_isnt_shooting"]
+[connection signal="animation_finished" from="SpinMinigame/Bottle" to="SpinMinigame/SwipeArea" method="_on_bottle_animation_finished"]
 [connection signal="input_event" from="SpinMinigame/BottleArea" to="SpinMinigame/BottleArea" method="_on_input_event"]
 [connection signal="area_entered" from="SpinMinigame/GoalArea" to="SpinMinigame/BottleArea" method="_on_goal_area_area_entered"]
 [connection signal="area_exited" from="SpinMinigame/GoalArea" to="SpinMinigame/BottleArea" method="_on_goal_area_area_exited"]
+[connection signal="input_event" from="SpinMinigame/SwipeArea" to="SpinMinigame/SwipeArea" method="_on_input_event"]
+[connection signal="area_entered" from="SpinMinigame/GoalArea2" to="SpinMinigame/SwipeArea" method="_on_goal_area_2_area_entered"]
+[connection signal="area_exited" from="SpinMinigame/GoalArea2" to="SpinMinigame/SwipeArea" method="_on_goal_area_2_area_exited"]

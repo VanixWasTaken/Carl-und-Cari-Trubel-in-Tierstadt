@@ -1,11 +1,13 @@
 extends Area2D
 
-var selected = false
 var inside_goal = false
+var selected = false
 @onready var animation_player = $"../Bottle/AnimationPlayer"
 @onready var arrow = $"../Arrow"
 @onready var mouse_hud = $"../MouseHUD"
 @onready var goal_area = $"../GoalArea"
+@onready var swipe_area = $"../SwipeArea"
+@onready var goal_area_2 = $"../GoalArea2"
 
 
 
@@ -21,6 +23,14 @@ func _process(delta):
 		arrow.visible = true
 		arrow.play("default")
 		goal_area.queue_free()
+		
+		swipe_area.visible = true
+		swipe_area.monitorable = true
+		swipe_area.monitoring = true
+		goal_area_2.visible = true
+		goal_area_2.monitorable = true
+		goal_area_2.monitoring = true
+		
 		$".".queue_free()
 
 

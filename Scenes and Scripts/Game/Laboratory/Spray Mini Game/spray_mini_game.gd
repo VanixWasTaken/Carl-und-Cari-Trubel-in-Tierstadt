@@ -11,7 +11,6 @@ func _process(delta):
 		$SpinMinigame.visible = true
 
 
-
 func _on_area_2d_mouse_entered():
 	$BottleAndGun/SprayGun.texture = spray_gun_highlight
 	$BottleAndGun/Bottle.texture = bottle_highlight
