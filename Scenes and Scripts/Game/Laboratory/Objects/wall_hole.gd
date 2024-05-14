@@ -27,11 +27,11 @@ func _input(event):
 			can_interact = true
 			if player_inside:
 				if Global.talked_to_chameleon_2:
-					if !collected_chemicals:
+					if !get_tree().get_first_node_in_group("Root").picked_up_chemicals:
 						var dialog_instance = not_chemicals_dialog.instantiate()
 						get_tree().get_current_scene().add_child(dialog_instance)
 						reset_mouse()
-					elif collected_chemicals:
+					elif get_tree().get_first_node_in_group("Root").picked_up_chemicals:
 						var dialog_instance = chemicals_dialog.instantiate()
 						get_tree().get_current_scene().add_child(dialog_instance)
 						reset_mouse()
@@ -43,11 +43,11 @@ func _on_area_3d_body_entered(body):
 		player_inside = true
 		if can_interact:
 			if Global.talked_to_chameleon_2:
-				if !collected_chemicals:
+				if !get_tree().get_first_node_in_group("Root").picked_up_chemicals:
 					var dialog_instance = not_chemicals_dialog.instantiate()
 					get_tree().get_current_scene().add_child(dialog_instance)
 					reset_mouse()
-				elif collected_chemicals:
+				elif get_tree().get_first_node_in_group("Root").picked_up_chemicals:
 					var dialog_instance = chemicals_dialog.instantiate()
 					get_tree().get_current_scene().add_child(dialog_instance)
 					reset_mouse()

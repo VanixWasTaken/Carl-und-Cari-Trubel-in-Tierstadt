@@ -19,7 +19,6 @@ var picked_up_chemicals = false
 
 func _ready():
 	
-	
 	if Global.return_laboratory_1:
 		cutscene = false
 		$Objects/Shelf/Scale.queue_free()
@@ -27,6 +26,9 @@ func _ready():
 		$CameraPan/MouseClickBlock.queue_free()
 		$Objects/Chameleon.queue_free()
 		$"NPC Chameleon".visible = true
+		$Objects/Chameleon.queue_free()
+		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps.queue_free()
+		$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.queue_free()
 		if !Global.return_laboratory_2:
 			$Player.global_position = Vector3(0.285038, 2.349433, 4.709138)
 		

@@ -3,7 +3,7 @@ extends Sprite3D
 var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_wall_back_window_highlight.png")
 var no_shader = null
 
-var into_spray_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_wall_hole_yes_chemicals.tscn")
+var into_spray_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_into_spray_game.tscn")
 var mouse_inside = false
 var can_interact = false
 var player_inside = false

@@ -46,6 +46,7 @@ func _process(delta):
 		Global.moving_allowed = true
 		Global.dialog_playing = false
 		Global.talked_to_chameleon_3 = true
+		get_tree().get_first_node_in_group("NPC").global_position.y = -1000
 		queue_free()
 ##########################################################################################
 
