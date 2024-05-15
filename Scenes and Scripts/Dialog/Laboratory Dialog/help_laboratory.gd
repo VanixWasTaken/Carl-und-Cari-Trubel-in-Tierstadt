@@ -131,6 +131,38 @@ func add_left_dialog_box():
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
+	
+	if dialogs == 1 and Global.laboratory_help_button_state == 5:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		if Global.character == "Carl":
+			short_node_text.text = "Sprich nochmal mit Christina."
+			short_node_rect.texture = PRESET2
+			short_node_name.text = "Cari"
+			dialogs += 1
+		elif Global.character == "Cari":
+			short_node_text.text = "Sprich nochmal mit Christina."
+			short_node_rect.texture = PRESET1
+			short_node_name.text = "Carl"
+			dialogs += 1
+	
+	if dialogs == 1 and Global.laboratory_help_button_state == 6:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		if Global.character == "Carl":
+			short_node_text.text = "Geh zum Fenster mit den Handschuheinlässen."
+			short_node_rect.texture = PRESET2
+			short_node_name.text = "Cari"
+			dialogs += 1
+		elif Global.character == "Cari":
+			short_node_text.text = "Geh zum Fenster mit den Handschuheinlässen."
+			short_node_rect.texture = PRESET1
+			short_node_name.text = "Carl"
+			dialogs += 1
 ##########################################################################################
 
 
