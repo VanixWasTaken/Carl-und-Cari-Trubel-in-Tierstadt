@@ -28,7 +28,7 @@ stream_1/weight = 1.0
 stream_2/stream = ExtResource("9_dnxy3")
 stream_2/weight = 1.0
 
-[node name="DialogTutorial" type="CanvasLayer"]
+[node name="DialogSprayMiniGame1" type="CanvasLayer"]
 
 [node name="DialogBox" type="Control" parent="."]
 layout_mode = 3

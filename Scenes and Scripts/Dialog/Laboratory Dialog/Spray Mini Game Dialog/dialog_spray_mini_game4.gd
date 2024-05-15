@@ -12,6 +12,7 @@ var pc
 var PRESET1
 var PRESET2
 
+signal gun_gets_visible
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
@@ -49,8 +50,9 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 3:
+	if dialogs == 4:
 		Global.dialog_playing = false
+		gun_gets_visible.emit()
 		queue_free()
 ##########################################################################################
 
@@ -68,9 +70,7 @@ func add_left_dialog_box():
 	
 
 	
-	if dialogs == 2:
-		dialogs += 1
-		Global.moving_allowed = true
+
 	
 	
 	
@@ -100,13 +100,26 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Dann schraube j-j-jetzt die Mischung an die Spritzpistole"
+		short_node_text.text = "Ok jetzt b-b-benutz die Spritzpistole. Ach ja und denk daran sie dabei zu bewegen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		dialogs += 1
+		same_speaker = true
+		
+	elif dialogs == 2:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Du musst m-m-mich überall treffen, damit ich wieder si-si-sichtbar werde."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Christina"
+		dialogs += 1
+		same_speaker = true
 
-
-
+	elif dialogs == 3:
+		dialogs += 1
+		Global.moving_allowed = true
 	
 	
 	

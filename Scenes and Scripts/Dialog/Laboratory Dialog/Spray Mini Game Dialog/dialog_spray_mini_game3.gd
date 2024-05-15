@@ -12,6 +12,7 @@ var pc
 var PRESET1
 var PRESET2
 
+signal should_shoot
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
@@ -51,6 +52,8 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 3:
 		Global.dialog_playing = false
+		should_shoot.emit()
+		Global.should_shoot = false
 		queue_free()
 ##########################################################################################
 
@@ -100,7 +103,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Dann schraube j-j-jetzt die Mischung an die Spritzpistole"
+		short_node_text.text = "Oh ich hab dir wohl vergessen zu erklären wie die Spritzpistole funktioniert. WEnn du zu Lange am Stück schießt verklemmt sie sich. schüttel sie wieder frei"
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		dialogs += 1

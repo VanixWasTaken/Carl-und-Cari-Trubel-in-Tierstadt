@@ -51,6 +51,11 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 4:
 		Global.dialog_playing = false
+		Global.lab_cutscene_played = true
+		Global.return_laboratory_1 = true
+		Global.return_laboratory_2 = true
+		Global.return_laboratory_3 = true
+		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 		queue_free()
 ##########################################################################################
 

@@ -12,10 +12,11 @@ var spin_round = 0
 @onready var gun_in_hand = $"../../GunInHand"
 @onready var shooting_area = $"../../GunInHand/ShootingArea"
 @onready var area_2d = $"../../VisibleChameleon/Area2D"
+@onready var animation_player = $"../Bottle/AnimationPlayer"
 
 
-
-
+signal should_shoot
+signal start_dialog4
 
 
 func _process(delta):
@@ -28,16 +29,24 @@ func _process(delta):
 		position = Vector2(1506, 510)
 	if inside_goal and Input.is_action_just_released("left_click"):
 		bottle.play("default")
+		if spin_round == 1:
+			animation_player.play("swipe_in1")
+		if spin_round == 2:
+			animation_player.play("swipe_in2")
+		if spin_round == 3:
+			animation_player.play("swipe_in3")
+		
+		
 	if spin_round == 3:
-		spin_minigame.queue_free()
-		bottle_and_gun.queue_free()
 		gun_in_hand.visible = true
 		shooting_area.monitorable = true
 		shooting_area.monitoring = true
 		area_2d.monitorable = true
 		area_2d.monitoring = true
-
-
+		should_shoot.emit()
+		start_dialog4.emit()
+		spin_minigame.queue_free()
+		bottle_and_gun.queue_free()
 
 
 func follow_mouse():

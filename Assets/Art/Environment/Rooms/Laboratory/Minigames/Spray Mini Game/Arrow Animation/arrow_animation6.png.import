@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p3yx125btxr4"
-path="res://.godot/imported/arrow_animation2.png-191791436832701553748e886b95f38f.ctex"
+uid="uid://c1h8h8gqpku2k"
+path="res://.godot/imported/arrow_animation6.png-7a00d7237ca10d3ce72a5a94c402975d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation2.png"
-dest_files=["res://.godot/imported/arrow_animation2.png-191791436832701553748e886b95f38f.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation6.png"
+dest_files=["res://.godot/imported/arrow_animation6.png-7a00d7237ca10d3ce72a5a94c402975d.ctex"]
 
 [params]
 
