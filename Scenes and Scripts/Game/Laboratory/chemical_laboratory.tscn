@@ -1,7 +1,8 @@
-[gd_scene load_steps=72 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=73 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
 [ext_resource type="Texture2D" uid="uid://djwgsl8qdi8h6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_empty.png" id="2_ujlwc"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_ywiy6"]
 [ext_resource type="Texture2D" uid="uid://b1yh636oam2rh" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_water_1.png" id="3_36t6l"]
 [ext_resource type="Texture2D" uid="uid://d4iyf3lnxq1wn" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_mix_1.png" id="4_nlbyv"]
 [ext_resource type="Texture2D" uid="uid://cfulhdsnb3fah" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_water_2.png" id="5_djt46"]
@@ -302,6 +303,16 @@ offset_top = -345.0
 offset_right = 2572.0
 offset_bottom = 1343.0
 texture = SubResource("CanvasTexture_i7371")
+
+[node name="HelpButton" parent="." instance=ExtResource("2_ywiy6")]
+unique_name_in_owner = true
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -0.00012207
+offset_right = -0.00012207
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="DrinkHolder" type="AnimatedSprite2D" parent="."]
 position = Vector2(1153, 454)
