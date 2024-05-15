@@ -1,4 +1,4 @@
-extends AnimatedSprite2D
+extends Area2D
 
 var start_position
 var mouse_on = false
@@ -9,7 +9,7 @@ var follow_mouse = false
 @export var maximum_weight: float
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	start_position = position
+	start_position = global_position
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,10 +30,11 @@ func _process(delta):
 		mouse_on = false
 
 
-func _on_area_2d_mouse_entered():
+func _on_mouse_entered():
 	if Global.mouse_full == false:
 		mouse_on = true
 
-func _on_area_2d_mouse_exited():
+
+func _on_mouse_exited():
 	mouse_on = false
 	Global.mouse_full = false

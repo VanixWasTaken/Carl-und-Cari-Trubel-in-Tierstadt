@@ -88,16 +88,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbfg1"]
-size = Vector2(198, 350)
+size = Vector2(198, 392.377)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_828ff"]
-size = Vector2(184, 366)
+size = Vector2(130.364, 381.248)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6nk3i"]
-size = Vector2(182, 377)
+size = Vector2(161.122, 402.933)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqi52"]
-size = Vector2(261.084, 332.813)
+size = Vector2(449.277, 368.11)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owpuh"]
 animations = [{
@@ -139,99 +139,6 @@ stream_3/stream = ExtResource("19_7nm1j")
 stream_3/weight = 1.0
 stream_4/stream = ExtResource("20_gnvqf")
 stream_4/weight = 1.0
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6dnwd"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_n7av0")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("17_pu5lw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_6ch4u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_x7pw1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_6ch4u")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc7aw"]
-size = Vector2(350, 293)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_mtd7m"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_n0lm2")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("19_g3xv4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_4um6f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_kitia")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_4um6f")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcvw4"]
-size = Vector2(355, 284)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_c2ujo"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("15_s57kk")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("20_sc6hd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_7vbvh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_0xw15")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_7vbvh")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5hvy"]
-size = Vector2(369, 306)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ogow"]
 animations = [{
@@ -292,6 +199,99 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rewly"]
 size = Vector2(399.288, 98.8885)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc7aw"]
+size = Vector2(350, 293)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6dnwd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_n7av0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_pu5lw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6ch4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_x7pw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6ch4u")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5hvy"]
+size = Vector2(369, 306)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c2ujo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_s57kk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_sc6hd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7vbvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0xw15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7vbvh")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcvw4"]
+size = Vector2(355, 284)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mtd7m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_n0lm2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_g3xv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4um6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_kitia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4um6f")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
 [node name="ChemicalLaboratory" type="Node2D"]
 script = ExtResource("1_b2cfh")
 
@@ -304,7 +304,7 @@ offset_bottom = 1343.0
 texture = SubResource("CanvasTexture_i7371")
 
 [node name="DrinkHolder" type="AnimatedSprite2D" parent="."]
-position = Vector2(975, 271)
+position = Vector2(1153, 454)
 scale = Vector2(0.769601, 0.806024)
 sprite_frames = SubResource("SpriteFrames_mrjln")
 script = ExtResource("9_hvdtc")
@@ -315,7 +315,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkHolder/Area2D"]
-position = Vector2(-167, -35)
+position = Vector2(-167, -13.8118)
 shape = SubResource("RectangleShape2D_fbfg1")
 
 [node name="Area2D2" type="Area2D" parent="DrinkHolder"]
@@ -325,7 +325,7 @@ collision_mask = 3
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkHolder/Area2D2"]
-position = Vector2(37, -32)
+position = Vector2(10.1818, -24.3761)
 shape = SubResource("RectangleShape2D_828ff")
 
 [node name="Area2D3" type="Area2D" parent="DrinkHolder"]
@@ -335,11 +335,11 @@ collision_mask = 3
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkHolder/Area2D3"]
-position = Vector2(227, -39.5)
+position = Vector2(184.511, -26.5339)
 shape = SubResource("RectangleShape2D_6nk3i")
 
 [node name="Scale" type="Sprite2D" parent="."]
-position = Vector2(1022, 884)
+position = Vector2(628.545, 906.038)
 scale = Vector2(0.754545, 0.741627)
 texture = ExtResource("10_tq6or")
 
@@ -364,11 +364,11 @@ metadata/_edit_use_anchors_ = true
 [node name="Area2D" type="Area2D" parent="Scale"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scale/Area2D"]
-position = Vector2(-20.5421, -115.406)
+position = Vector2(1.26526, -166.576)
 shape = SubResource("RectangleShape2D_iqi52")
 
 [node name="WaterCup" type="AnimatedSprite2D" parent="."]
-position = Vector2(172, 255)
+position = Vector2(277, 331)
 scale = Vector2(0.667183, 0.735443)
 sprite_frames = SubResource("SpriteFrames_owpuh")
 offset = Vector2(2.205, -2.975)
@@ -388,73 +388,8 @@ stream = SubResource("AudioStreamRandomizer_6cgod")
 volume_db = -25.0
 bus = &"SFX"
 
-[node name="RedPulver" type="AnimatedSprite2D" parent="."]
-position = Vector2(1703, 907)
-scale = Vector2(0.746537, 0.819444)
-sprite_frames = SubResource("SpriteFrames_6dnwd")
-script = ExtResource("13_yairb")
-color = "Red"
-minimum_weight = 1.3
-maximum_weight = 1.5
-metadata/_edit_group_ = true
-
-[node name="RedPulver" type="Area2D" parent="RedPulver"]
-position = Vector2(-13, -1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RedPulver/RedPulver"]
-position = Vector2(16, -2.5)
-shape = SubResource("RectangleShape2D_xc7aw")
-
-[node name="Interact" type="AudioStreamPlayer" parent="RedPulver"]
-stream = SubResource("AudioStreamRandomizer_6cgod")
-volume_db = -25.0
-bus = &"SFX"
-
-[node name="YellowPulver" type="AnimatedSprite2D" parent="."]
-position = Vector2(1702, 616)
-scale = Vector2(0.705128, 0.775261)
-sprite_frames = SubResource("SpriteFrames_mtd7m")
-frame_progress = 0.0171763
-script = ExtResource("13_yairb")
-color = "Yellow"
-minimum_weight = 1.5
-maximum_weight = 2.0
-metadata/_edit_group_ = true
-
-[node name="YellowPulver" type="Area2D" parent="YellowPulver"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YellowPulver/YellowPulver"]
-position = Vector2(3.5, 5)
-shape = SubResource("RectangleShape2D_tcvw4")
-
-[node name="Interact" type="AudioStreamPlayer" parent="YellowPulver"]
-stream = SubResource("AudioStreamRandomizer_6cgod")
-volume_db = -25.0
-bus = &"SFX"
-
-[node name="PurplePulver" type="AnimatedSprite2D" parent="."]
-position = Vector2(1702, 383.125)
-scale = Vector2(0.69663, 0.74827)
-sprite_frames = SubResource("SpriteFrames_c2ujo")
-script = ExtResource("13_yairb")
-color = "Purple"
-minimum_weight = 0.2
-maximum_weight = 0.45
-metadata/_edit_group_ = true
-
-[node name="PurplePulver" type="Area2D" parent="PurplePulver"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PurplePulver/PurplePulver"]
-position = Vector2(3.5, -6)
-shape = SubResource("RectangleShape2D_a5hvy")
-
-[node name="Interact" type="AudioStreamPlayer" parent="PurplePulver"]
-stream = SubResource("AudioStreamRandomizer_6cgod")
-volume_db = -25.0
-bus = &"SFX"
-
-[node name="PulverBowl" type="AnimatedSprite2D" parent="."]
-position = Vector2(1020, 827)
+[node name="PulverBowl" type="AnimatedSprite2D" parent="." groups=["PulverBowl"]]
+position = Vector2(626.545, 849.038)
 scale = Vector2(0.90411, 1.26405)
 sprite_frames = SubResource("SpriteFrames_4ogow")
 offset = Vector2(6.645, -72.3)
@@ -484,6 +419,72 @@ volume_db = -20.0
 
 [node name="DialogPowder1" parent="." instance=ExtResource("54_l6ekg")]
 
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(567, 676)
+
+[node name="RedPulver" type="Area2D" parent="."]
+position = Vector2(1693.3, 906.181)
+scale = Vector2(0.746537, 0.819444)
+script = ExtResource("13_yairb")
+color = "Red"
+minimum_weight = 1.3
+maximum_weight = 1.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedPulver"]
+position = Vector2(16, -2.5)
+shape = SubResource("RectangleShape2D_xc7aw")
+
+[node name="RedPulverSprite" type="AnimatedSprite2D" parent="RedPulver"]
+sprite_frames = SubResource("SpriteFrames_6dnwd")
+metadata/_edit_group_ = true
+
+[node name="Interact" type="AudioStreamPlayer" parent="RedPulver/RedPulverSprite"]
+stream = SubResource("AudioStreamRandomizer_6cgod")
+volume_db = -25.0
+bus = &"SFX"
+
+[node name="PurplePulver" type="Area2D" parent="."]
+position = Vector2(1702, 383.125)
+scale = Vector2(0.69663, 0.74827)
+script = ExtResource("13_yairb")
+color = "Purple"
+minimum_weight = 0.2
+maximum_weight = 0.45
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PurplePulver"]
+position = Vector2(3.5, -6)
+shape = SubResource("RectangleShape2D_a5hvy")
+
+[node name="PurplePulverSprite" type="AnimatedSprite2D" parent="PurplePulver"]
+sprite_frames = SubResource("SpriteFrames_c2ujo")
+metadata/_edit_group_ = true
+
+[node name="Interact" type="AudioStreamPlayer" parent="PurplePulver/PurplePulverSprite"]
+stream = SubResource("AudioStreamRandomizer_6cgod")
+volume_db = -25.0
+bus = &"SFX"
+
+[node name="YellowPulver" type="Area2D" parent="."]
+position = Vector2(1701, 624)
+scale = Vector2(0.705128, 0.775261)
+script = ExtResource("13_yairb")
+color = "Yellow"
+minimum_weight = 1.5
+maximum_weight = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YellowPulver"]
+position = Vector2(3.5, 5)
+shape = SubResource("RectangleShape2D_tcvw4")
+
+[node name="YellowPulverSprite" type="AnimatedSprite2D" parent="YellowPulver"]
+sprite_frames = SubResource("SpriteFrames_mtd7m")
+metadata/_edit_group_ = true
+
+[node name="Interact" type="AudioStreamPlayer" parent="YellowPulver/YellowPulverSprite"]
+stream = SubResource("AudioStreamRandomizer_6cgod")
+volume_db = -25.0
+bus = &"SFX"
+
 [connection signal="area_entered" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="DrinkHolder/Area2D2" to="DrinkHolder" method="_on_area_2d_area_entered"]
@@ -494,11 +495,11 @@ volume_db = -20.0
 [connection signal="area_exited" from="Scale/Area2D" to="PulverBowl" method="_on_area_2d_area_exited"]
 [connection signal="mouse_entered" from="WaterCup/WaterCup" to="WaterCup" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="WaterCup/WaterCup" to="WaterCup" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="RedPulver/RedPulver" to="RedPulver" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="RedPulver/RedPulver" to="RedPulver" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="YellowPulver/YellowPulver" to="YellowPulver" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="YellowPulver/YellowPulver" to="YellowPulver" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="PurplePulver/PurplePulver" to="PurplePulver" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="PurplePulver/PurplePulver" to="PurplePulver" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="PulverBowl/PulverBowl" to="PulverBowl" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="PulverBowl/PulverBowl" to="PulverBowl" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="RedPulver" to="RedPulver" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RedPulver" to="RedPulver" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PurplePulver" to="PurplePulver" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PurplePulver" to="PurplePulver" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="YellowPulver" to="YellowPulver" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="YellowPulver" to="YellowPulver" method="_on_mouse_exited"]
