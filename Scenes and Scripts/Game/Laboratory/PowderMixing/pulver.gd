@@ -9,7 +9,7 @@ var follow_mouse = false
 @export var maximum_weight: float
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	start_position = position
+	start_position = global_position
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,11 +18,12 @@ func _process(delta):
 		follow_mouse = true
 	if follow_mouse:
 		mouse_position = get_global_mouse_position()
-		global_position = mouse_position
+		get_parent().global_position = mouse_position
 		Global.mouse_full = true
 	if Input.is_action_just_released("left_click"):
 		follow_mouse = false
-		global_position = start_position
+		get_parent().global_position = start_position
+		position = Vector2.ZERO
 		if follow_mouse:
 			$Interact.play()
 	if Global.dialog_playing:

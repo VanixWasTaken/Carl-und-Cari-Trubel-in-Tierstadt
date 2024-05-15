@@ -36,8 +36,9 @@ func _on_audio_stream_player_finished():
 
 
 func _on_mouse_area_mouse_entered():
-	$AnimatedSprite3D.frame = 1
-	mouse_inside = true
+	if Global.talked_to_chameleon_2:
+		$AnimatedSprite3D.frame = 1
+		mouse_inside = true
 
 
 func _on_mouse_area_mouse_exited():

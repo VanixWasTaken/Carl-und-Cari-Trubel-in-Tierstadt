@@ -76,7 +76,4 @@ func _input(event):
 		ray_query.from = from
 		ray_query.to = to
 		result = space.intersect_ray(ray_query) #schießt den rayab und sag mir womit der intersected
-		print("REESULT: " + str(result))
 		navigation_agent.target_position = result.position
-		print("ENDGOAL: " + str(navigation_agent.target_position))
-		print("FINAL_POS: " + str(navigation_agent.get_final_position()))
