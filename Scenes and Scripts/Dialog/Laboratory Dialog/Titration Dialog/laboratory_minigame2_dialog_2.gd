@@ -14,6 +14,7 @@ var same_speaker = false
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png")
 
+var vo_pc
 ##########################################################################################
 
 
@@ -21,10 +22,17 @@ var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/C
 
 
 func _ready():
+	if Global.character == "Carl":
+		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
+		vo_pc = "carl"
+	elif Global.character == "Cari" or Global.character == "":
+		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
+		vo_pc = "cari"
+	
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_left_dialog_box()
+	add_right_dialog_box()
 ##########################################################################################
 
 
@@ -36,6 +44,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 8:
+		Global.moving_allowed = true
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
@@ -52,14 +61,14 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 1:
-		var short_node = get_child(1)
+	if dialogs == 2:
+		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ok jetzt gehts los!"
+		short_node_text.text = "Okay, wie mache ich das?"
 		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
+		short_node_name.text = Global.character
 		dialogs += 1
 	
 	elif dialogs == 3:
@@ -69,7 +78,7 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Sorg dafür dass der PH-Wert für 20 sekunden in dem bereich bleibt!"
 		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
+		short_node_name.text = Global.character
 		dialogs += 1
 	
 	elif dialogs == 6:
@@ -77,9 +86,9 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "ja, genau das sollst du machen du genie."
+		short_node_text.text = "Okay, dann legen wir mal los!"
 		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
+		short_node_name.text = Global.character
 		dialogs += 1
 	
 	
@@ -105,41 +114,51 @@ func add_right_dialog_box():
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 2:
+	if dialogs == 1:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Okay, jetzt wirds spannend, wir müssen dafür sorgen dass der pH-Wert im Bereich von 5-7 bleibt."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+	
+	elif dialogs == 3:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Uhm was genau soll ich machen??"
+		short_node_text.text = "Hier rechts ist die Scala des pH-Werts, diese sollte im Bereich zwischen 5 und 7 bleiben."
 		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_name.text = "Christina"
 		dialogs += 1
+		same_speaker = true
 	
 	elif dialogs == 4:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "ok, äääh wie mach ich das?"
+		short_node_text.text = "Über die Leiste in der Mitte kannst du kontrollieren ob du Flüssigkeit zugibst oder nicht."
 		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_name.text = "Christina"
 		dialogs += 1
-		same_speaker = true
 	
 	elif dialogs == 5:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "soll ich leertaste drücken wenns passt um mehr juice dazuzugeben damit das neutral bleibt?"
+		short_node_text.text = "[Drücke Leertaste wenn der Pfeil im grünen Bereich ist, um den pH-Wert zu kontrollieren]"
 		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_name.text = "Christina"
 		dialogs += 1
 		same_speaker = false
+		
 	
 	elif dialogs == 7:
 		dialogs += 1
-		Global.moving_allowed = true
 	
 	
 	
