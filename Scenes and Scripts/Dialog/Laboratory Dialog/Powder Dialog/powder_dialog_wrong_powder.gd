@@ -13,7 +13,7 @@ var same_speaker = false
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG")
 var PRESET2 = preload("res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG")
-var PRESET3 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png")
+var PRESET3 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot1.png")
 
 ##########################################################################################
 
