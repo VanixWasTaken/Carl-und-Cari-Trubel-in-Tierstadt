@@ -12,7 +12,7 @@ var same_speaker = false
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG")
-var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png")
+var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot1.png")
 
 ##########################################################################################
 
@@ -184,3 +184,5 @@ func _on_skip_button_mouse_entered():
 
 func _on_skip_button_button_down():
 	$"../Click".play()
+
+

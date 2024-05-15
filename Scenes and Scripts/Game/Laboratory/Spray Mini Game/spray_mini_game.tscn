@@ -1,36 +1,34 @@
-[gd_scene load_steps=56 format=3 uid="uid://dfpwq4ngsnyed"]
+[gd_scene load_steps=57 format=3 uid="uid://dfpwq4ngsnyed"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
+[ext_resource type="Texture2D" uid="uid://lmaouvkc3f5" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle1.png" id="3_ivchp"]
 [ext_resource type="Texture2D" uid="uid://dwgi13mmayd2l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_gun.png" id="3_ww0fy"]
 [ext_resource type="Texture2D" uid="uid://chu3r7ga3hn5s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_bottle.png" id="4_7yw8r"]
-[ext_resource type="Texture2D" uid="uid://sss27wgaikyp" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_001.png" id="5_gklha"]
-[ext_resource type="Texture2D" uid="uid://nkye4h775y3x" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chameleon_idle1.png" id="5_hj25p"]
-[ext_resource type="Texture2D" uid="uid://cvnpgafmyl3sd" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_002.png" id="6_xwq8t"]
-[ext_resource type="Texture2D" uid="uid://bhlclgejsyv2l" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_003.png" id="7_tx7u5"]
-[ext_resource type="Texture2D" uid="uid://dkm4tgsq6oqn6" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_004.png" id="8_7ncik"]
-[ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_005.png" id="9_4xlnv"]
-[ext_resource type="Texture2D" uid="uid://b76ies1ylcj0t" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_006.png" id="10_do62t"]
-[ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_007.png" id="11_djl2m"]
+[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png" id="5_wj47e"]
 [ext_resource type="Texture2D" uid="uid://dwlpn0vtf4lyd" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_light.png" id="13_rj72p"]
 [ext_resource type="Shader" path="res://Shader/spray_mini_game.gdshader" id="13_rn5a4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/visible_chameleon.gd" id="14_2xxsa"]
-[ext_resource type="Texture2D" uid="uid://cch5cjlssxc7x" path="res://Assets/Art/UI/HUD/Map/UI_hud.PNG" id="16_mq6r4"]
+[ext_resource type="Texture2D" uid="uid://bwd8hrn7g8id6" path="res://Assets/Art/UI/Menus/background.png" id="14_x16e5"]
 [ext_resource type="Texture2D" uid="uid://cgh7mxi31ls7c" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation1.png" id="16_w1xuf"]
 [ext_resource type="Texture2D" uid="uid://d3th02ulccysw" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation2.png" id="17_b3jxw"]
-[ext_resource type="Texture2D" uid="uid://bkjaisp5ro87x" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation1.png" id="17_bfug0"]
+[ext_resource type="Texture2D" uid="uid://drmdrs0g584x8" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation1.png" id="17_bfug0"]
 [ext_resource type="Texture2D" uid="uid://d2mo3505v5k35" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation3.png" id="18_1cfw2"]
-[ext_resource type="Texture2D" uid="uid://c6nyfnee44hxq" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation2.png" id="18_cjtse"]
+[ext_resource type="Texture2D" uid="uid://bbv5lyt1g86ke" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation2.png" id="18_cjtse"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/gun_in_hand.gd" id="19_8elaw"]
-[ext_resource type="Texture2D" uid="uid://c834b4h8xm3ci" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation3.png" id="19_cvus6"]
-[ext_resource type="Texture2D" uid="uid://4dala3vu76yd" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation4.png" id="20_114ax"]
-[ext_resource type="Texture2D" uid="uid://dnil0orj7meec" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation5.png" id="21_5enbi"]
-[ext_resource type="Texture2D" uid="uid://ddolxmrcspuf2" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation6.png" id="22_fsmpt"]
+[ext_resource type="Texture2D" uid="uid://dmvp78ceh110l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation3.png" id="19_cvus6"]
+[ext_resource type="Texture2D" uid="uid://bfbwhs0k815bb" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation4.png" id="20_114ax"]
+[ext_resource type="Texture2D" uid="uid://k8vo3omv63bx" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation5.png" id="21_5enbi"]
+[ext_resource type="Texture2D" uid="uid://cfxioe6hxbws8" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation6.png" id="22_fsmpt"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/bottle_area.gd" id="23_2g2jj"]
-[ext_resource type="Texture2D" uid="uid://cdhkfxx1e4e86" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation1.png" id="23_nosby"]
-[ext_resource type="Texture2D" uid="uid://bfqpq5awd32aa" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation2.png" id="24_hjswu"]
-[ext_resource type="Texture2D" uid="uid://bqhrchnfsm0sy" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation3.png" id="25_qgmek"]
+[ext_resource type="Texture2D" uid="uid://byihxhjs8koc3" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation1.png" id="23_nosby"]
+[ext_resource type="Texture2D" uid="uid://p3yx125btxr4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation2.png" id="24_hjswu"]
+[ext_resource type="Texture2D" uid="uid://cu67i8juq6nda" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation4.png" id="24_idsrv"]
+[ext_resource type="Texture2D" uid="uid://dpc6v6kh2rvft" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation5.png" id="25_mata6"]
+[ext_resource type="Texture2D" uid="uid://cutdnrfadc10l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation3.png" id="25_qgmek"]
+[ext_resource type="Texture2D" uid="uid://c1h8h8gqpku2k" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation6.png" id="26_so44m"]
 [ext_resource type="Texture2D" uid="uid://d2ng1ougnu6ya" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_gun_build.png" id="26_xd5u4"]
+[ext_resource type="Texture2D" uid="uid://b4gbp5hdcds4n" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation7.png" id="27_jgxru"]
 [ext_resource type="Texture2D" uid="uid://pkbt4uivo72d" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse_pressed.png" id="28_nvspe"]
 [ext_resource type="Texture2D" uid="uid://sipuj2avuffd" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse.png" id="29_mfucy"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/swipe_area.gd" id="30_tdar7"]
@@ -39,25 +37,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_gklha")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_xwq8t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_tx7u5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_7ncik")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_4xlnv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_do62t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_djl2m")
+"texture": ExtResource("3_ivchp")
 }],
 "loop": true,
 "name": &"default",
@@ -76,11 +56,11 @@ shader = ExtResource("13_rn5a4")
 shader_parameter/value = 0.0
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_jh0mn")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_hmshc"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_42x4d"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_hj25p")
+"texture": ExtResource("5_wj47e")
 }],
 "loop": true,
 "name": &"default",
@@ -147,12 +127,60 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(891, 614), Vector2(900, 390)]
+"values": [Vector2(1009, 826), Vector2(1009, 422)]
+}
+
+[sub_resource type="Animation" id="Animation_4bwrm"]
+resource_name = "swipe_in2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1009, 419), Vector2(1009, 416)]
+}
+
+[sub_resource type="Animation" id="Animation_pykog"]
+resource_name = "swipe_in3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1009, 416), Vector2(1009, 413)]
+}
+
+[sub_resource type="Animation" id="Animation_3fuji"]
+resource_name = "swipe_in1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1009, 422), Vector2(1009, 419)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y2ms6"]
 _data = {
-"new_animation": SubResource("Animation_4menf")
+"new_animation": SubResource("Animation_4menf"),
+"swipe_in1": SubResource("Animation_3fuji"),
+"swipe_in2": SubResource("Animation_4bwrm"),
+"swipe_in3": SubResource("Animation_pykog")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l37xa"]
@@ -166,10 +194,22 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("25_qgmek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_idsrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_mata6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_so44m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_jgxru")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_aaort"]
@@ -305,18 +345,18 @@ offset_bottom = 40.0
 texture = ExtResource("2_1k7pv")
 
 [node name="InvisibleChameleon" type="AnimatedSprite2D" parent="."]
-position = Vector2(924.1, 389.111)
-scale = Vector2(0.532407, 0.532407)
+position = Vector2(954, 414)
+scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_bmvvo")
 autoplay = "default"
-frame = 6
 frame_progress = 0.27311
 
 [node name="VisibleChameleon" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_truug")
-position = Vector2(943.1, 418.111)
-scale = Vector2(0.686389, 0.686389)
-sprite_frames = SubResource("SpriteFrames_hmshc")
+position = Vector2(954, 414)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_42x4d")
+frame_progress = 0.808596
 script = ExtResource("14_2xxsa")
 
 [node name="Area2D" type="Area2D" parent="VisibleChameleon"]
@@ -324,7 +364,7 @@ monitoring = false
 monitorable = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisibleChameleon/Area2D"]
-polygon = PackedVector2Array(-138.551, -301.74, -195.37, -186.645, -231.793, 20.2349, -239.077, 164.468, -211.396, 209.632, -172.06, 410.684, -156.034, 503.926, -250.732, 554.917, -239.077, 594.253, -137.094, 616.107, -8.88696, 636.503, 109.122, 604.452, 114.949, 450.02, 276.665, 413.598, 302.89, 237.313, 208.191, 232.942, 231.501, -49.6963, 187.794, -303.197, 85.8115, -349.818, 68.3287, -488.223, 37.7338, -515.904, 52.3027, -575.637, 28.9924, -607.689, -126.896, -574.18, -154.577, -523.189, -191, -501.335, -199.741, -399.352, -185.172, -341.076)
+polygon = PackedVector2Array(-94.2855, -555.714, -125.714, -525.714, -140, -510, -174.286, -500, -187.143, -468.571, -182.857, -397.143, -157.143, -330, -222.857, -231.429, -247.143, -132.857, -260, -22.8571, -264.286, 24.2857, -292.857, 84.2857, -274.286, 134.286, -230, 154.286, -237.143, 341.429, -191.428, 365.714, -175.714, 507.143, -254.286, 541.429, -230, 584.286, -168.571, 582.857, -118.571, 610, -81.4285, 604.286, -11.4285, 630, 21.4287, 610, 77.1429, 625.714, 127.143, 605.714, 108.572, 531.429, 128.572, 435.714, 227.143, 451.429, 310, 380, 344.286, 278.571, 325.714, 164.286, 228.572, 134.286, 198.572, 60, 204.286, -72.8571, 212.857, -147.143, 184.286, -227.143, 122.857, -302.857, 68.5715, -360, 78.5715, -405.714, 61.4287, -465.714, 35.7144, -498.571, 52.8573, -587.143, -42.8571, -588.571)
 
 [node name="Minigame3Light" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.45098)
@@ -335,14 +375,15 @@ texture = ExtResource("13_rj72p")
 [node name="BottleAndGun" type="Node2D" parent="."]
 
 [node name="Bottle" type="Sprite2D" parent="BottleAndGun"]
-position = Vector2(960, 540)
+position = Vector2(418, 799)
 texture = ExtResource("4_7yw8r")
 
 [node name="SprayGun" type="Sprite2D" parent="BottleAndGun"]
-position = Vector2(960, 540)
+position = Vector2(1388, 901)
 texture = ExtResource("3_ww0fy")
 
 [node name="Area2D" type="Area2D" parent="BottleAndGun/SprayGun"]
+position = Vector2(-427, -361)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BottleAndGun/SprayGun/Area2D"]
 polygon = PackedVector2Array(42, 370, 93, 353, 110, 358, 173, 337, 185, 320, 226, 311, 231, 292, 255, 303, 284, 296, 288, 279, 323, 286, 389, 264, 425, 264, 481, 303, 520, 312, 661, 366, 667, 383, 676, 388, 747, 364, 803, 360, 849, 383, 862, 428, 858, 438, 839, 424, 816, 408, 748, 429, 668, 432, 646, 424, 597, 443, 437, 379, 381, 382, 342, 365, 335, 351, 314, 360, 319, 386, 302, 404, 284, 409, 232, 385, 195, 386, 188, 379, 127, 403, 119, 422, 87, 435, 76, 440, 43, 433, 33, 410, 30, 396)
@@ -368,10 +409,11 @@ polygon = PackedVector2Array(-197, -112, -85, -148, -105, -290, -186, -327, -270
 visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("16_mq6r4")
+texture = ExtResource("14_x16e5")
 
 [node name="Bottle" type="AnimatedSprite2D" parent="SpinMinigame"]
-position = Vector2(891, 614)
+position = Vector2(1009, 826)
+scale = Vector2(0.494825, 0.494825)
 sprite_frames = SubResource("SpriteFrames_k3fj0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SpinMinigame/Bottle"]
@@ -381,12 +423,15 @@ libraries = {
 
 [node name="Arrow" type="AnimatedSprite2D" parent="SpinMinigame"]
 visible = false
-position = Vector2(1056, 683)
+position = Vector2(1022, 926)
+rotation = -2.09439
 sprite_frames = SubResource("SpriteFrames_l37xa")
-frame_progress = 0.215376
+frame = 5
+frame_progress = 0.607365
 
 [node name="SprayGun" type="Sprite2D" parent="SpinMinigame"]
-position = Vector2(898, 431)
+position = Vector2(1056, 335)
+scale = Vector2(0.445767, 0.445767)
 texture = ExtResource("26_xd5u4")
 
 [node name="MouseHUD" type="AnimatedSprite2D" parent="SpinMinigame"]
@@ -447,14 +492,9 @@ monitorable = false
 position = Vector2(135, -1)
 shape = SubResource("RectangleShape2D_x3x71")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 10.0
-offset_top = 9.0
-offset_right = 285.0
-offset_bottom = 175.0
-theme_override_font_sizes/font_size = 116
-text = "Back"
+[node name="GunJam" type="Timer" parent="."]
 
+[connection signal="gun_is_jamming" from="VisibleChameleon" to="GunInHand" method="_on_visible_chameleon_gun_is_jamming"]
 [connection signal="area_entered" from="VisibleChameleon/Area2D" to="VisibleChameleon" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="VisibleChameleon/Area2D" to="VisibleChameleon" method="_on_area_2d_area_exited"]
 [connection signal="mouse_entered" from="BottleAndGun/SprayGun/Area2D" to="." method="_on_area_2d_mouse_entered"]
@@ -466,6 +506,8 @@ text = "Back"
 [connection signal="area_entered" from="SpinMinigame/GoalArea" to="SpinMinigame/BottleArea" method="_on_goal_area_area_entered"]
 [connection signal="area_exited" from="SpinMinigame/GoalArea" to="SpinMinigame/BottleArea" method="_on_goal_area_area_exited"]
 [connection signal="input_event" from="SpinMinigame/SwipeArea" to="SpinMinigame/SwipeArea" method="_on_input_event"]
+[connection signal="should_shoot" from="SpinMinigame/SwipeArea" to="GunInHand" method="_on_swipe_area_should_shoot"]
+[connection signal="start_dialog4" from="SpinMinigame/SwipeArea" to="." method="_on_swipe_area_start_dialog_4"]
 [connection signal="area_entered" from="SpinMinigame/GoalArea2" to="SpinMinigame/SwipeArea" method="_on_goal_area_2_area_entered"]
 [connection signal="area_exited" from="SpinMinigame/GoalArea2" to="SpinMinigame/SwipeArea" method="_on_goal_area_2_area_exited"]
-[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="timeout" from="GunJam" to="VisibleChameleon" method="_on_gun_jam_timeout"]

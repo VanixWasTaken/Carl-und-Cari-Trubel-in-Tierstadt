@@ -18,7 +18,7 @@ func _process(delta):
 		position = Vector2(1014, 804)
 	if inside_goal and Input.is_action_just_released("left_click"):
 		animation_player.play("new_animation")
-		mouse_hud.queue_free()
+		mouse_hud.visible = false
 		await get_tree().create_timer(2).timeout
 		arrow.visible = true
 		arrow.play("default")
