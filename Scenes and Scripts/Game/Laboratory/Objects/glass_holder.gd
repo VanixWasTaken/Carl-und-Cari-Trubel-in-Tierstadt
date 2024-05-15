@@ -21,6 +21,7 @@ func _on_area_3d_body_entered(body):
 		if body.get_name() == "Player":
 			player_inside = true
 			if can_pick_up:
+				Global.laboratory_help_button_state += 1
 				get_tree().get_first_node_in_group("Root").picked_up_chemicals = true
 				$AnimatedSprite3D.visible = false
 				$AudioStreamPlayer.play()

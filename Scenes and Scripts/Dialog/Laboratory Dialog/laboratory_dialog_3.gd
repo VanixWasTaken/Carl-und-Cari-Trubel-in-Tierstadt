@@ -135,6 +135,7 @@ func add_right_dialog_box():
 		short_node_text.text = "Diese müsst ihr dann zu der Laborabzugshaube gebracht werden. Diese ist in der linken Wand eingebuchtet."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		Global.laboratory_help_button_state += 1
 		dialogs += 1
 		same_speaker = false
 	
