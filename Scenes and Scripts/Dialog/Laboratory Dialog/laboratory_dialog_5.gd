@@ -66,7 +66,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "HURRA, wir haben es geschafft! High-Five."
+		short_node_text.text = "HURRA, wir haben es geschafft! High-Five. Yabagoobie!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
@@ -77,7 +77,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich kann kaum glauben, das wir es geschafft haben. Bevor wir hierhergekommen sind wusste ich nichts über Chemie."
+		short_node_text.text = "Ich kann kaum glauben, das wir es geschafft haben. Bevor wir hierhergekommen sind wusste ich fast nichts über Chemie."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
@@ -98,7 +98,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Da bin ich je jetzt doppelt gespannt!"
+		short_node_text.text = "Da bin ich jetzt doppelt gespannt!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
