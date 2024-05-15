@@ -66,7 +66,7 @@ func _process(delta):
 	if !cutscene:
 		if $Player.position.x <= 19.5 and $Player.position.x >= -19.5:
 			$Camera3D.position.x = $Player.position.x
-	
+
 
 
 func _on_door_area_3d_body_entered(body):

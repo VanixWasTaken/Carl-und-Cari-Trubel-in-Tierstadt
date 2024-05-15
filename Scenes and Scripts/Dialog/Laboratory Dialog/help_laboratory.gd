@@ -56,65 +56,80 @@ func add_left_dialog_box():
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
 			short_node_text.text = "Geh zum Chamäleon und rede mit ihr."
 			short_node_rect.texture = PRESET2
+			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Geh zum Chamäleon und rede mit ihr."
 			short_node_rect.texture = PRESET1
+			short_node_name.text = "Carl"
 			dialogs += 1
 
 	if dialogs == 1 and Global.laboratory_help_button_state == 1:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Geh zum Tisch in der Mitte des Raumes"
+			short_node_text.text = "Sammel die Waage und die Reagenzgläser ein und befülle den Behälter mit Wasser. Bringe die Sachen danach zum Tisch."
 			short_node_rect.texture = PRESET2
+			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Geh zum Tisch in der Mitte des Raumes"
+			short_node_text.text = "Sammel die Waage und die Reagenzgläser ein und befülle den Behälter mit Wasser. Bringe die Sachen danach zum Tisch."
 			short_node_rect.texture = PRESET1
+			short_node_name.text = "Carl"
 			dialogs += 1
 	
 	if dialogs == 1 and Global.laboratory_help_button_state == 2:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "3.Dialog"
+			short_node_text.text = "Rede mit dem Chemie Chamäleon."
 			short_node_rect.texture = PRESET2
+			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "3. Dialog"
+			short_node_text.text = "Rede mit dem Chemie Chamäleon."
 			short_node_rect.texture = PRESET1
+			short_node_name.text = "Carl"
 			dialogs += 1
 	
 	if dialogs == 1 and Global.laboratory_help_button_state == 3:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
 			short_node_text.text = "4ter Dialog"
 			short_node_rect.texture = PRESET2
+			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "4ter Dialog"
 			short_node_rect.texture = PRESET1
+			short_node_name.text = "Carl"
 			dialogs += 1
 	
 	if dialogs == 1 and Global.laboratory_help_button_state == 4:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
 			short_node_text.text = "Dialog 5"
 			short_node_rect.texture = PRESET2
+			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Dialog 5"
 			short_node_rect.texture = PRESET1
+			short_node_name.text = "Carl"
 			dialogs += 1
 ##########################################################################################
 
