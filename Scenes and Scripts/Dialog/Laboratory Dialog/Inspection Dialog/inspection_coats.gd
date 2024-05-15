@@ -66,7 +66,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Der ist ja riesig"
+		short_node_text.text = "Die sind ja riesig."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
@@ -94,7 +94,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das ist eine Laborkittel, der g-g-gehört zur Schutzausrüstung."
+		short_node_text.text = "Das sind Laborkittel, die g-g-gehören zur Schutzausrüstung."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -116,7 +116,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Sie sind weiß, um schnell farbige Chemikalien zu erkennen und bestehen aus Baumwolle, da diese nicht schmilzt."
+		short_node_text.text = "Sie sind weiß, um schnell farbige Chemikalien zu erkennen und bestehen aus Baumwolle, da diese bei hohen Temperaturen nicht schmilzt."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1

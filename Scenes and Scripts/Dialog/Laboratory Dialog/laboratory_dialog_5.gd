@@ -66,7 +66,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "HURRA, wir haben es geschafft! High-Five."
+		short_node_text.text = "YABAGOOBIE, wir haben es geschafft! High-Five."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
@@ -77,7 +77,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich kann kaum glauben, das wir es geschafft haben. Bevor wir hierhergekommen sind wusste ich nichts über Chemie."
+		short_node_text.text = "Ich kann kaum glauben, das wir es geschafft haben. Bevor wir hierhergekommen sind wusste ich fast nichts über Chemie."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
@@ -98,7 +98,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Da bin ich je jetzt doppelt gespannt!"
+		short_node_text.text = "Da bin ich jetzt doppelt gespannt!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
@@ -141,7 +141,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ihr habt es t-t-tatsächlich geschafft! Ich b-b-bin wieder sichtbar!"
+		short_node_text.text = "Ihr habt es tatsächlich geschafft! Ich bin wieder sichtbar!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -151,7 +151,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Noch einmal vielen vielen D-D-Dank. Jetzt kann ich endlich weiter a-a-an den Vorbereitungen für das Stadtfest arbeiten."
+		short_node_text.text = "Noch einmal vielen vielen Dank. Jetzt kann ich endlich weiter an den Vorbereitungen für das Stadtfest arbeiten."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -162,7 +162,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das ist ein Geheimnis, aber ich v-v-verspreche euch, das wird auch aus den S-S-Socken hauen."
+		short_node_text.text = "Das ist ein Geheimnis, aber ich verspreche euch, das wird auch aus den Socken hauen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -183,7 +183,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Alles k-k-klar. Wir sehen uns d-d-dann später auf dem Stadtfest!"
+		short_node_text.text = "Alles klar. Wir sehen uns dann später auf dem Stadtfest!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
