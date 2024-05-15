@@ -19,6 +19,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	print(delta)
+	
 	if Global.dialog_playing == false and start_skillcheck == true:
 		if countdown == 0:
 			play_countdown()
@@ -36,7 +38,7 @@ func _process(delta):
 			pressed_already = true
 		else:
 			
-			$"PH-Scale/Arrow".position.y += 0.25
+			$"PH-Scale/Arrow".position.y += 40 * delta
 			
 			if $"PH-Scale/Arrow".position.y < -80:
 				$"PH-Scale/Arrow".position.y = -80
