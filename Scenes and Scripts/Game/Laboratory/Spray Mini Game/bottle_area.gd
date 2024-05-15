@@ -2,6 +2,7 @@ extends Area2D
 
 var inside_goal = false
 var selected = false
+var should_play_anim = true
 @onready var animation_player = $"../Bottle/AnimationPlayer"
 @onready var arrow = $"../Arrow"
 @onready var mouse_hud = $"../MouseHUD"
@@ -17,7 +18,10 @@ func _process(delta):
 	if !selected and !inside_goal:
 		position = Vector2(1014, 804)
 	if inside_goal and Input.is_action_just_released("left_click"):
-		animation_player.play("new_animation")
+		if should_play_anim:
+			print("testestets")
+			animation_player.play("new_animation")
+			should_play_anim = false
 		mouse_hud.visible = false
 		await get_tree().create_timer(2).timeout
 		arrow.visible = true

@@ -50,7 +50,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 3:
+	if dialogs == 4:
 		Global.dialog_playing = false
 		should_shoot.emit()
 		Global.should_shoot = false
@@ -71,7 +71,7 @@ func add_left_dialog_box():
 	
 
 	
-	if dialogs == 2:
+	if dialogs == 3:
 		dialogs += 1
 		Global.moving_allowed = true
 	
@@ -103,13 +103,23 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Oh ich hab dir wohl vergessen zu erklären wie die Spritzpistole funktioniert. WEnn du zu Lange am Stück schießt verklemmt sie sich. schüttel sie wieder frei"
+		short_node_text.text = "Oh ich hab dir wohl vergessen zu erklären wie die Spritzpistole funktioniert. WEnn du zu Lange am Stück schießt verklemmt sie sich."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		dialogs += 1
+		same_speaker = true
+	
 
-
-
+	elif dialogs == 2:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Sch-Sch-SChüttel sie einfach einmal richtig, dann sollte w-w-wieder alles funktionieren."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Christina"
+		dialogs += 1
+		same_speaker = false
 	
 	
 	
