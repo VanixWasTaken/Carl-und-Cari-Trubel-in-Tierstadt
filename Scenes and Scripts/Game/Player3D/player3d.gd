@@ -10,7 +10,6 @@ func _ready():
 		$AnimatedSprite3D.play("cari_idle")
 
 func _process(delta):
-	print(global_position)
 	if Global.dialog_playing:
 		$AnimatedSprite3D.pause()
 	if navigation_agent.is_navigation_finished():
@@ -42,13 +41,13 @@ func move_to_target(delta):
 			$AnimatedSprite3D.play("carl_walk_left")
 		if distance_to_target.x < 0 && !Global.dialog_playing:
 			$AnimatedSprite3D.play("carl_walk_right")
-		if navigation_agent.is_target_reachable() == true:
-			if navigation_agent.distance_to_target() <= 0.3:
-				speed = 0
-				$AnimatedSprite3D.play("carl_idle")
-				navigation_agent.target_position = global_position
-		elif navigation_agent.is_target_reachable() == false:
-			navigation_agent.target_position = navigation_agent.get_final_position()
+		#if navigation_agent.is_target_reachable() == true:
+		if navigation_agent.distance_to_target() <= 0.3:
+			speed = 0
+			$AnimatedSprite3D.play("carl_idle")
+			navigation_agent.target_position = global_position
+		#elif navigation_agent.is_target_reachable() == false:
+			#navigation_agent.target_position = navigation_agent.get_final_position()
 
 	elif Global.character == "Cari" || Global.character == "":
 		if distance_to_target.x > 0 && !Global.dialog_playing :
@@ -77,4 +76,7 @@ func _input(event):
 		ray_query.from = from
 		ray_query.to = to
 		result = space.intersect_ray(ray_query) #schießt den rayab und sag mir womit der intersected
+		print("REESULT: " + str(result))
 		navigation_agent.target_position = result.position
+		print("ENDGOAL: " + str(navigation_agent.target_position))
+		print("FINAL_POS: " + str(navigation_agent.get_final_position()))
