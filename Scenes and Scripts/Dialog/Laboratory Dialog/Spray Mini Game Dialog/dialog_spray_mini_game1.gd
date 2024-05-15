@@ -11,10 +11,8 @@ var same_speaker = false
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
-var PRESET1
-var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot1.png")
-
-var vo_pc
+var PRESET1 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot2.png")
+#var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png")
 
 ##########################################################################################
 
@@ -24,12 +22,7 @@ var vo_pc
 
 func _ready():
 	Global.moving_allowed = false
-	if Global.character == "Carl":
-		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
-		vo_pc = "carl"
-	elif Global.character == "Cari" or Global.character == "":
-		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-		vo_pc = "cari"
+	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
 ##########################################################################################
@@ -42,11 +35,9 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 6:
+	if dialogs == 4:
 		Global.dialog_playing = false
-		Global.moving_allowed = true
 		queue_free()
-		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.tscn")
 ##########################################################################################
 
 
@@ -62,15 +53,16 @@ func add_left_dialog_box():
 ##################################  WRITE DIALOG HERE  ###################################
 	
 	
-	if dialogs == 4:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Dann fangen wir mal an!"
-		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
-		dialogs += 1
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 ##########################################################################################
 
@@ -86,15 +78,15 @@ func add_right_dialog_box():
 	$".".add_child(node)
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
-
+	
 	if dialogs == 1:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Jetzt k-k-können wir mit dem ersten Schritt anfangen."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Christina"
+		short_node_text.text = "Das war richtig"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Cari"
 		dialogs += 1
 		same_speaker = true
 
@@ -104,25 +96,18 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Deine Aufgabe ist es die richtige Menga der Pulver mit destilliertem Wasser zu mischen."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Christina"
+		short_node_text.text = "Das war richtig 2"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
 		dialogs += 1
-		same_speaker = true
 	
 	elif dialogs == 3:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Achte dabei auf die Waage, wenn d-d-du zu viel Pulver benutzt musst du von v-v-vorne anfangen."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Christina"
 		dialogs += 1
-		same_speaker = false
+		Global.moving_allowed = true
 	
-	elif dialogs == 5:
-		dialogs += 1
+	
+	
+	
 	
 	
 	

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4aux20w5dahw"
-path="res://.godot/imported/chemist_color_idle1.png-a1ffc9b543d532c992328726a56a585c.ctex"
+uid="uid://crpm3xvnv3c2h"
+path="res://.godot/imported/chemist_headshot2.png-6bef7b469ea08d23857b6b3ffa590fc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png"
-dest_files=["res://.godot/imported/chemist_color_idle1.png-a1ffc9b543d532c992328726a56a585c.ctex"]
+source_file="res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot2.png"
+dest_files=["res://.godot/imported/chemist_headshot2.png-6bef7b469ea08d23857b6b3ffa590fc1.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

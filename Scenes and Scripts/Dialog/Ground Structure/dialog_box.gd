@@ -184,3 +184,5 @@ func _on_skip_button_mouse_entered():
 
 func _on_skip_button_button_down():
 	$"../Click".play()
+
+

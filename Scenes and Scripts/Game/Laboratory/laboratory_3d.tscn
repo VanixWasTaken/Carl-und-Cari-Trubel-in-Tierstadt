@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=71 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -19,25 +19,29 @@
 [ext_resource type="Texture2D" uid="uid://sss27wgaikyp" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_001.png" id="14_5lhuu"]
 [ext_resource type="PackedScene" uid="uid://c6dhgxet661ke" path="res://Scenes and Scripts/Game/Laboratory/Objects/vessel.tscn" id="16_qbcfp"]
 [ext_resource type="AudioStream" uid="uid://eqkepd0aictl" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_chameleonsearching_var1.mp3" id="18_1fo6j"]
-[ext_resource type="Texture2D" uid="uid://cb20pnlmajeq3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim1.PNG" id="19_yd1p1"]
-[ext_resource type="Texture2D" uid="uid://dv5wru2ytpoyj" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim2.PNG" id="20_mtkpy"]
+[ext_resource type="Texture2D" uid="uid://dmxim1vrs58w3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching1.png" id="18_lswnb"]
+[ext_resource type="Texture2D" uid="uid://ckx04882su37u" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching2.png" id="19_6x7ed"]
 [ext_resource type="Texture2D" uid="uid://cagxrgkj758x3" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_ventilation.png" id="20_rmdpi"]
-[ext_resource type="Texture2D" uid="uid://6imsq4r3joms" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim3.PNG" id="21_tjuo6"]
-[ext_resource type="Texture2D" uid="uid://bud3u6g26cksi" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim4.PNG" id="22_qv05n"]
+[ext_resource type="Texture2D" uid="uid://2vi8ay1fxb62" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching3.png" id="20_tu86q"]
+[ext_resource type="Texture2D" uid="uid://6pr7lrwj0gym" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching4.png" id="21_v3o6d"]
+[ext_resource type="Texture2D" uid="uid://dm8kc38a1e2tx" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching5.png" id="22_rnk7n"]
 [ext_resource type="Texture2D" uid="uid://cfk5m3juolyhu" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_trashcan.png" id="22_tfvcg"]
-[ext_resource type="Texture2D" uid="uid://kbafyou36r3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim5.PNG" id="23_tynln"]
+[ext_resource type="Texture2D" uid="uid://bmnv6ohrtfrh5" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching6.png" id="23_cgtet"]
 [ext_resource type="Texture2D" uid="uid://b3nyw5isqf7dc" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_chair.png" id="23_ye88a"]
 [ext_resource type="Texture2D" uid="uid://cc8elg23lyvvu" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_cabinet_wall_right.png" id="24_1y555"]
-[ext_resource type="Texture2D" uid="uid://cdxa6qwd84ua3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_search_anim6.PNG" id="24_5la8x"]
+[ext_resource type="Texture2D" uid="uid://dfoudd258855e" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching7.png" id="24_y3qnp"]
 [ext_resource type="Texture2D" uid="uid://cvnpgafmyl3sd" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_002.png" id="25_0nmcg"]
 [ext_resource type="Texture2D" uid="uid://ddgurcbihtflv" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_lamp.png" id="25_kjt1n"]
+[ext_resource type="Texture2D" uid="uid://behjvujjmhnku" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching8.png" id="25_les76"]
+[ext_resource type="Texture2D" uid="uid://br5q21clqqlbh" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching9.png" id="26_mqlfr"]
+[ext_resource type="Texture2D" uid="uid://f52t83r4ah0s" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching10.png" id="27_fei3w"]
 [ext_resource type="Texture2D" uid="uid://bhlclgejsyv2l" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_003.png" id="27_qygja"]
 [ext_resource type="Texture2D" uid="uid://cjgcjmvn07n8m" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_005.png" id="28_d8ugo"]
 [ext_resource type="Texture2D" uid="uid://b76ies1ylcj0t" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_006.png" id="29_vj1ph"]
 [ext_resource type="PackedScene" uid="uid://cg257qtiun1jh" path="res://Scenes and Scripts/Game/Laboratory/Objects/wall_hole.tscn" id="30_3am5x"]
 [ext_resource type="Texture2D" uid="uid://bi5d8ulhes045" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_007.png" id="30_xn8be"]
 [ext_resource type="PackedScene" uid="uid://edbe0ktmaocs" path="res://Scenes and Scripts/Game/Laboratory/Objects/back_wall_window.tscn" id="31_ssppo"]
-[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.PNG" id="38_jtubk"]
+[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png" id="38_jtubk"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
 vertices = PackedVector3Array(-29.1293, 13.0394, -5.0675, -29.1293, 13.0394, -4.8175, 29.1207, 13.0394, -4.8175, 29.1207, 13.0394, -5.0675, -28.3793, 13.0994, -4.0675, -28.3793, 13.0994, 5.1825, -28.1293, 13.0994, 5.1825, -28.1293, 13.0994, -4.0675, -28.3793, 2.24943, -3.5675, -28.3793, 2.24943, 5.1825, -28.1293, 2.24943, 5.1825, -28.1293, 2.24943, -3.5675, -8.87933, 2.24943, 4.6825, -8.87933, 2.24943, 4.4325, -9.12933, 2.24943, 4.4325, -27.3793, 2.24943, 5.6825, -9.12933, 2.24943, 1.1825, -8.87933, 2.24943, 1.1825, -8.87933, 2.24943, 0.9325, -7.62933, 2.24943, 5.6825, -7.37933, 2.24943, 4.6825, -8.87933, 2.24943, 4.6825, -27.3793, 2.24943, 5.6825, -8.87933, 2.24943, 0.9325, -6.87933, 2.24943, 0.9325, -6.87933, 2.24943, -3.5675, -9.12933, 2.24943, 1.1825, -8.87933, 2.24943, 0.9325, -6.87933, 2.24943, -3.5675, -27.3793, 2.24943, -3.5675, -27.3793, 2.24943, 5.6825, -27.3793, 2.24943, 5.6825, -9.12933, 2.24943, 4.4325, -9.12933, 2.24943, 1.1825, 1.12067, 2.24943, -1.5675, 1.12067, 2.24943, -1.8175, 0.870667, 2.24943, -1.8175, 3.12067, 2.24943, 0.9325, 3.12067, 2.24943, -1.5675, 1.12067, 2.24943, -1.5675, 3.12067, 2.24943, 0.9325, 1.12067, 2.24943, -1.5675, 0.870667, 2.24943, -1.8175, -6.87933, 2.24943, -3.5675, -6.87933, 2.24943, 0.9325, 0.870667, 2.24943, -1.8175, 0.870667, 2.24943, -3.5675, -6.87933, 2.24943, -3.5675, 6.87067, 2.24943, 0.9325, 6.87067, 2.24943, 1.1825, 7.12067, 2.24943, 1.1825, 7.12067, 2.24943, 4.4325, 6.87067, 2.24943, 4.4325, 6.87067, 2.24943, 4.6825, 23.1207, 2.24943, 5.6825, 21.8707, 2.24943, 2.9325, 21.8707, 2.24943, 2.6825, 21.6207, 2.24943, 2.6825, 21.6207, 2.24943, -0.8175, 21.8707, 2.24943, -0.8175, 21.8707, 2.24943, -1.0675, 11.8707, 2.24943, -1.8175, 11.6207, 2.24943, -1.8175, 11.6207, 2.24943, -1.5675, 6.87067, 2.24943, 4.6825, 5.37067, 2.24943, 4.6825, 5.62067, 2.24943, 5.6825, 23.1207, 2.24943, 5.6825, 23.1207, 2.24943, 5.6825, 23.3707, 2.24943, 2.9325, 21.8707, 2.24943, 2.9325, 4.87067, 2.24943, -1.5675, 4.87067, 2.24943, 0.9325, 6.87067, 2.24943, 0.9325, 21.8707, 2.24943, -1.0675, 23.8707, 2.24943, -1.0675, 23.8707, 2.24943, -3.5675, 23.1207, 2.24943, 5.6825, 21.8707, 2.24943, 2.9325, 21.6207, 2.24943, 2.6825, 11.8707, 2.24943, -1.8175, 11.6207, 2.24943, -1.5675, 7.12067, 2.24943, 4.4325, 4.87067, 2.24943, -1.5675, 6.87067, 2.24943, 0.9325, 7.12067, 2.24943, 1.1825, 11.6207, 2.24943, -1.5675, 21.6207, 2.24943, -0.8175, 21.8707, 2.24943, -1.0675, 23.8707, 2.24943, -3.5675, 11.8707, 2.24943, -3.5675, 11.8707, 2.24943, -1.8175, 21.6207, 2.24943, 2.6825, 21.6207, 2.24943, -0.8175, 11.8707, 2.24943, -1.8175, 11.6207, 2.24943, -1.5675, 7.12067, 2.24943, 1.1825, 7.12067, 2.24943, 4.4325, 23.8707, 2.24943, -1.0675, 29.1207, 2.24943, -1.0675, 29.1207, 2.24943, -3.5675, 23.8707, 2.24943, -3.5675, 29.8707, 2.24943, -3.5675, 29.8707, 2.24943, -1.0675, 30.1207, 2.24943, -1.0675, 30.1207, 2.24943, -3.5675, 3.12067, 2.24943, 0.9325, 4.87067, 2.24943, 0.9325, 4.87067, 2.24943, -1.5675, 3.12067, 2.24943, -1.5675, 22.3707, 3.77943, -0.3175, 22.3707, 3.77943, 2.1825, 29.1207, 3.77943, 2.1825, 29.1207, 3.77943, -0.3175, 29.8707, 3.77943, -0.3175, 29.8707, 3.77943, 2.1825, 30.1207, 3.77943, 2.1825, 30.1207, 3.77943, -0.3175, -8.37933, 3.49943, 1.6825, -8.37933, 3.49943, 3.9325, 6.37067, 3.49943, 3.9325, 6.37067, 3.49943, 1.6825, 29.1207, 2.24943, 5.6825, 29.1207, 2.24943, 2.9325, 23.3707, 2.24943, 2.9325, 23.1207, 2.24943, 5.6825, 29.8707, 2.24943, 2.9325, 29.8707, 2.24943, 5.6825, 30.1207, 2.24943, 5.6825, 30.1207, 2.24943, 2.9325, -7.62933, 2.24943, 5.6825, 5.62067, 2.24943, 5.6825, 5.37067, 2.24943, 4.6825, -7.37933, 2.24943, 4.6825)
@@ -115,22 +119,34 @@ polyphony = 3
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("19_yd1p1")
+"texture": ExtResource("18_lswnb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_mtkpy")
+"texture": ExtResource("19_6x7ed")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_tjuo6")
+"texture": ExtResource("20_tu86q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_qv05n")
+"texture": ExtResource("21_v3o6d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_tynln")
+"texture": ExtResource("22_rnk7n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_5la8x")
+"texture": ExtResource("23_cgtet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_y3qnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_les76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mqlfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_fei3w")
 }],
 "loop": true,
 "name": &"searching",

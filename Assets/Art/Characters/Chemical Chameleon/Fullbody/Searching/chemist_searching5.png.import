@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpm70w5m3uweb"
-path="res://.godot/imported/Chameleon Headshot.png-d8281acc7a7a9462a93bf846d1601d3a.ctex"
+uid="uid://dm8kc38a1e2tx"
+path="res://.godot/imported/chemist_searching5.png-1f98d9e7c3dc469e36ebed86513b636c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png"
-dest_files=["res://.godot/imported/Chameleon Headshot.png-d8281acc7a7a9462a93bf846d1601d3a.ctex"]
+source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching5.png"
+dest_files=["res://.godot/imported/chemist_searching5.png-1f98d9e7c3dc469e36ebed86513b636c.ctex"]
 
 [params]
 

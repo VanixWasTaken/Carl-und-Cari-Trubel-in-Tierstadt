@@ -2,10 +2,13 @@ extends AnimatedSprite2D
 
 
 var shader_value = material.get_shader_parameter("value")
-var speed = 0.001
+var speed = 0.2  # 0.003
 var hitting_chameleon = false
 var shooting = false
 var mouse_moving = false
+var should_play_dialog = true
+var dialog1 = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Spray Mini Game Dialog/dialog_spray_mini_game1.tscn")
+
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -18,14 +21,15 @@ func _physics_process(delta):
 	if hitting_chameleon and shooting and mouse_moving:
 		shader_value += speed
 	
+		
 	shader_value = clamp(shader_value, 0.0, 1.0)
 	
 	material.set_shader_parameter("value", shader_value)
 	
-	if shader_value == 1:
-		### NUR ÜBERGANGSWEISE SZENENWECHSEL, hier muss später noch dialog rein
-		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
-
+	if shader_value == 1 and should_play_dialog:
+		
+		add_child(dialog1.instantiate())
+		should_play_dialog = false
 
 
 
