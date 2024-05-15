@@ -90,12 +90,12 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Rede mit dem Chemie Chamäleon."
+			short_node_text.text = "Rede mit Christina dem Chamäleon."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Rede mit dem Chemie Chamäleon."
+			short_node_text.text = "Rede mit Christina dem Chamäleon."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
@@ -106,12 +106,12 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "4ter Dialog"
+			short_node_text.text = "Hole die Mischungen vom Tisch"
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "4ter Dialog"
+			short_node_text.text = "Hole die Mischungen vom Tisch."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
@@ -122,12 +122,12 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Dialog 5"
+			short_node_text.text = "Trage die Mischungen zur Laborabzugshaube."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Dialog 5"
+			short_node_text.text = "Trage die Mischungen zur Laborabzugshaube."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
