@@ -5,6 +5,11 @@ var spray_gun_highlight = preload("res://Assets/Art/Environment/Rooms/Laboratory
 var bottle = preload("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_bottle.png")
 var bottle_highlight = preload("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_bottle_highlight.png")
 var mouse_inside = false
+var dialog2 = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Spray Mini Game Dialog/dialog_spray_mini_game2.tscn")
+
+func _ready():
+	add_child(dialog2.instantiate())
+
 
 func _process(delta):
 	if mouse_inside and Input.is_action_just_pressed("left_click"):
