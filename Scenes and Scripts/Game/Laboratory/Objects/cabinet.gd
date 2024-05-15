@@ -30,9 +30,10 @@ func _input(event):
 					get_tree().get_current_scene().add_child(dialog_instance)
 					reset_mouse()
 				else:
-					dialog_instance = inspection_dialog.instantiate()
-					get_tree().get_current_scene().add_child(dialog_instance)
-					reset_mouse()
+					if !door_open:
+						dialog_instance = inspection_dialog.instantiate()
+						get_tree().get_current_scene().add_child(dialog_instance)
+						reset_mouse()
 			if !door_open:
 				door_open = true
 				$Sprite3D.visible = false

@@ -4,8 +4,9 @@ var can_pick_up = false
 var player_inside = false
 
 func _on_area_3d_mouse_entered():
-	$AnimatedSprite3D.frame = 1
-	mouse_inside = true
+	if Global.talked_to_chameleon:
+		$AnimatedSprite3D.frame = 1
+		mouse_inside = true
 
 func _on_area_3d_mouse_exited():
 	$AnimatedSprite3D.frame = 0
