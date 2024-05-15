@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=68 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -108,6 +108,9 @@ size = Vector3(10.59, 3.24145, 3.58378)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_awej4"]
 size = Vector3(8.83024, 1.4776, 3.16523)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1hhus"]
+size = Vector3(10.054, 6.58554, 0.001)
 
 [sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_75e5b"]
 polyphony = 3
@@ -347,6 +350,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0246, 3.49951, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Objects/Sink"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.277733, -0.477936, 0.926014)
 shape = SubResource("BoxShape3D_awej4")
+
+[node name="Table2" type="StaticBody3D" parent="NavigationRegion3D/Objects"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Objects/Table2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.108455, 2.79277, 2.57098)
+shape = SubResource("BoxShape3D_1hhus")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPolyphonic_75e5b")
