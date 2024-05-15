@@ -11,9 +11,10 @@ var same_speaker = false
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
-var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
+var PRESET1
 var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/Chameleon Headshot.png")
 
+var vo_pc
 ##########################################################################################
 
 
@@ -21,10 +22,17 @@ var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/C
 
 
 func _ready():
+	if Global.character == "Carl":
+		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
+		vo_pc = "carl"
+	elif Global.character == "Cari" or Global.character == "":
+		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
+		vo_pc = "cari"
+	
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_left_dialog_box()
+	add_right_dialog_box()
 ##########################################################################################
 
 
@@ -53,37 +61,29 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 1:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ohje, das hat leider nicht funktioniert."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
-		dialogs += 1
-	
-	elif dialogs == 3:
+	if dialogs == 2:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Die Mischung hatte leider nicht den passenden PH-Wert..."
+		short_node_text.text = "Hm, ich muss irgendwas falsch gemacht haben, oder?"
 		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
+		short_node_name.text = Global.character
 		dialogs += 1
 	
-	elif dialogs == 6:
+	
+	elif dialogs == 5:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ein Wert zwischen 5 und 7, denn dann wäre die Mischung hautneutral und verletzt deshalb meine Haut nicht!"
+		short_node_text.text = "Okay, dann versuchen wir das ganze doch einfach nochmal!"
 		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
+		short_node_name.text = Global.character
 		dialogs += 1
 	
-	
+	elif dialogs == 7:
+		dialogs += 1
 	
 	
 	
@@ -106,40 +106,51 @@ func add_right_dialog_box():
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 2:
+	if dialogs == 1:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Ohje, d-d-das hat leider nicht ganz funktioniert..."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+	
+	elif dialogs == 3:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Nanu, was hab ich falsch gemacht?"
+		short_node_text.text = "Ja, d-d-der pH-Wert ist nicht der gleiche den ich d-d-dir gesagt habe..."
 		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_name.text = "Christina"
 		dialogs += 1
+		same_speaker = true
 	
 	elif dialogs == 4:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Hm, okay aber ich hab mir wirklich Mühe gegeben..."
+		short_node_text.text = "Er m-m-müsste zwischen 5 und 7 liegen, also zwischen d-d-diesen beiden Linien hier..."
+		# hier highlighten wo die area ist in der der pfeil sein muss bei der ph-scala :)
 		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_name.text = "Christina"
 		dialogs += 1
-		same_speaker = true
+		same_speaker = false
 	
-	elif dialogs == 5:
+	elif dialogs == 6:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Was wäre denn der richtige PH-Wert?"
+		short_node_text.text = "Okay, wir h-h-haben ja n-n-noch mehr von den Chemikalien."
+		# hier highlighten wo die area ist in der der pfeil sein muss bei der ph-scala :)
 		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_name.text = "Christina"
 		dialogs += 1
-		same_speaker = false
 	
-	elif dialogs == 7:
-		dialogs += 1
+	
 	
 	
 	

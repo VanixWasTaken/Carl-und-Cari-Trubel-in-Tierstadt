@@ -71,15 +71,6 @@ func add_left_dialog_box():
 		short_node_name.text = Global.character
 		dialogs += 1
 	
-	elif dialogs == 3:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Sorg dafür dass der PH-Wert für 20 sekunden in dem bereich bleibt!"
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
-		dialogs += 1
 	
 	elif dialogs == 6:
 		var short_node = get_child(2)
