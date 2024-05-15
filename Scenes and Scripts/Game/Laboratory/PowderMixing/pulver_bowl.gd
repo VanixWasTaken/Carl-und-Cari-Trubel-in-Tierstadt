@@ -14,9 +14,11 @@ var enough = false
 var too_much = false
 var needed_pulver = "Purple"
 var area_name
+var area_node
 var right_powder = false
 var powder_on = false
 var powder_sprite
+var got_place = false
 var follow_mouse
 var too_much_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_too_much.tscn")
 var enough_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_enough.tscn")
@@ -44,8 +46,13 @@ func _process(delta):
 			$Interact.play()
 			%PulverPour.stop()
 	if powder_on:
+		powder_place()
+func powder_place():
+	if !got_place:
+		got_place = true
+		area_node.remove_child(powder_sprite)
+		get_tree().get_current_scene().add_child(powder_sprite)
 		powder_sprite.global_position = $"../Marker2D".global_position
-
 
 
 func _on_area_2d_mouse_entered():
@@ -61,7 +68,8 @@ func _on_area_2d_mouse_exited():
 func _on_area_2d_area_entered(area):
 	area_name = area.get_name()
 	if area_name != "PulverBowl":
-		if needed_pulver ==  area.get_children()[1].color:
+		if needed_pulver ==  area.color:
+			area_node = area
 			right_powder = true
 			%PulverPour.play()
 			powder_sprite = area.get_children()[1]
@@ -85,7 +93,7 @@ func _on_area_2d_area_entered(area):
 					purple_pulver()
 					pulver_color = "Purple"
 			bowl_full = true
-		elif needed_pulver != powder_sprite.color:
+		elif needed_pulver != area.color:
 			right_powder = false
 
 func red_pulver():
@@ -141,17 +149,17 @@ func _on_area_2d_area_exited(area):
 	area_name = area.get_name()
 	if area_name != "PulverBowl" && area_name != "WaterCup":
 		if right_powder:
-			if weight < powder_sprite.minimum_weight:
+			if weight < area_node.minimum_weight:
 				too_little = true
 				enough = false
 				dialog_instance = too_little_dialog.instantiate()
 				get_tree().get_current_scene().add_child(dialog_instance)
-			elif weight >= powder_sprite.minimum_weight && weight <= powder_sprite.maximum_weight:
+			elif weight >= area_node.minimum_weight && weight <= area_node.maximum_weight:
 				too_little = false
 				enough = true
 				dialog_instance = enough_dialog.instantiate()
 				get_tree().get_current_scene().add_child(dialog_instance)
-			elif weight > powder_sprite.maximum_weight:
+			elif weight > area_node.maximum_weight:
 				enough = false
 				too_much = true
 				dialog_instance = too_much_dialog.instantiate()
@@ -168,6 +176,10 @@ func _on_area_2d_area_exited(area):
 	purple_on = false
 	if area_name != "PulverBowl":
 		powder_sprite.play("default")
+		powder_sprite.position = Vector2.ZERO
+		get_tree().get_current_scene().remove_child(powder_sprite)
+		area.add_child(powder_sprite)
+		got_place = false
 	bowl_full = false
 	if too_much:
 		await get_tree().create_timer(0.25).timeout
@@ -186,3 +198,6 @@ func _reset_bowl():
 		bowl_full = false
 		pulver_color = "null"
 		global_position = start_position
+
+
+
