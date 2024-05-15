@@ -2,6 +2,7 @@ extends Node2D
 
 signal balancing_game
 
+var first_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Titration Dialog/laboratory_minigame2_dialog_1.tscn")
 var second_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Titration Dialog/laboratory_minigame2_dialog_2.tscn")
 
 var ready_to_pour = false
@@ -12,7 +13,8 @@ var finished_pouring = false
 var signal_sent = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var dialog_instance = first_dialog.instantiate()
+	add_child(dialog_instance)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -56,6 +58,7 @@ func _process(delta):
 		if !signal_sent:
 			var dialog_instance = second_dialog.instantiate()
 			add_child(dialog_instance)
+			$Clamp.disable_clamp()
 			$Skillcheck/Bar.visible = true
 			$Skillcheck/Arrow.visible = true
 			$"Skillcheck/PH-Scale".visible = true

@@ -6,6 +6,11 @@ var arrow_in_bar = false
 var pressed_already = false
 var countdown = 0
 
+var win_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Titration Dialog/laboratory_minigame2_dialog_win.tscn")
+var lose_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Titration Dialog/laboratory_minigame2_dialog_lose.tscn")
+var try_again_dialog
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -25,13 +30,13 @@ func _process(delta):
 		$Arrow/AnimationPlayer.play("movement")
 		
 		if Input.is_action_just_pressed("space") and arrow_in_bar and !pressed_already:
-			$"PH-Scale/Arrow".position.y -= 75
+			$"PH-Scale/Arrow".position.y -= 50
 			if $"PH-Scale/Arrow".position.y > 340:
 				$"PH-Scale/Arrow".position.y = 340
 			pressed_already = true
 		else:
 			
-			$"PH-Scale/Arrow".position.y += 0.5
+			$"PH-Scale/Arrow".position.y += 0.25
 			
 			if $"PH-Scale/Arrow".position.y < -80:
 				$"PH-Scale/Arrow".position.y = -80
@@ -62,7 +67,7 @@ func play_countdown():
 	await get_tree().create_timer(1).timeout
 	$TextureRect/Numbers.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_countdown_go.png")
 	await get_tree().create_timer(1).timeout
-	$TextureRect.queue_free()
+	$TextureRect.visible = false
 	start_game = true
 	$MiniGameTime.start()
 
@@ -71,6 +76,16 @@ func _on_mini_game_time_timeout():
 	start_game = false
 	$Arrow/AnimationPlayer.stop()
 	if $"PH-Scale/Arrow".position.y >= 83 and $"PH-Scale/Arrow".position.y <= 183:
-		print("Du hast gewonnen")
+		var dialog_instance = win_dialog.instantiate()
+		add_child(dialog_instance)
 	else:
-		print("Hier kommt dialog mit versuchs nochmal und alles wird auf null gesetzt")
+		var dialog_instance = lose_dialog.instantiate()
+		add_child(dialog_instance)
+		reset_entire_minigame()
+
+func reset_entire_minigame():
+	$"PH-Scale/Arrow".position.y = -80
+	start_skillcheck = true
+	arrow_in_bar = false
+	pressed_already = false
+	countdown = 0

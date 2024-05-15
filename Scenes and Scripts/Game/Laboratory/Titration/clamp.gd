@@ -9,10 +9,11 @@ var holding = false
 var mouse_inside = false
 var in_stand = false
 var tube_counter = 0
+var interactible = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	interactible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,17 +36,19 @@ func _process(delta):
 
 
 func _on_clamp_area_mouse_entered():
-	mouse_inside = true
-	$ClampArea/Clamp.material = outline_shader
+	if interactible:
+		mouse_inside = true
+		$ClampArea/Clamp.material = outline_shader
 
 
 func _on_clamp_area_mouse_exited():
-	mouse_inside = false
-	$ClampArea/Clamp.material = no_shader
+	if interactible:
+		mouse_inside = false
+		$ClampArea/Clamp.material = no_shader
 
 
 func _on_clamp_area_area_entered(area):
-	if area.get_name() == "StandArea":
+	if area.get_name() == "StandArea" and interactible:
 		var children = area.get_children()
 		for child in children:
 			if child.name == "Stand" || child.name == "Glasses":
@@ -54,9 +57,12 @@ func _on_clamp_area_area_entered(area):
 
 
 func _on_clamp_area_area_exited(area):
-	if area.get_name() == "StandArea":
+	if area.get_name() == "StandArea" and interactible:
 		var children = area.get_children()
 		for child in children:
 			if child.name == "Stand" || child.name == "Glasses":
 				child.material = no_shader
 		in_stand = false
+
+func disable_clamp():
+	interactible = false

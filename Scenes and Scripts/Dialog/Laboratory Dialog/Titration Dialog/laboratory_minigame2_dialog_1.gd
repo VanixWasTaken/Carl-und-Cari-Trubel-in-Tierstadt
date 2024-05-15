@@ -36,6 +36,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 8:
+		Global.moving_allowed = true
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
@@ -57,7 +58,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ok jetzt gehts los!"
+		short_node_text.text = "Okay, du musst hier jetzt erstmal die Flüssigkeiten mischen!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		dialogs += 1
@@ -67,7 +68,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Sorg dafür dass der PH-Wert für 20 sekunden in dem bereich bleibt!"
+		short_node_text.text = "Nimm die Reagenzgläser hier mit der Zange und gib sie dann in dieses große Gefäß!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		dialogs += 1
@@ -77,7 +78,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "ja, genau das sollst du machen du genie."
+		short_node_text.text = "Ja, genauso machst du das!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		dialogs += 1
@@ -110,7 +111,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Uhm was genau soll ich machen??"
+		short_node_text.text = "Okay, wie genau mach ich das?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		dialogs += 1
@@ -120,7 +121,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "ok, äääh wie mach ich das?"
+		short_node_text.text = "Okay, das heißt ich zieh die Zange hier drauf und lass los, oder?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		dialogs += 1
@@ -131,7 +132,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "soll ich leertaste drücken wenns passt um mehr juice dazuzugeben damit das neutral bleibt?"
+		short_node_text.text = "Und dann drück ich einfach nochmal auf die linke Maustaste um sie zu leeren?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		dialogs += 1
@@ -139,7 +140,6 @@ func add_right_dialog_box():
 	
 	elif dialogs == 7:
 		dialogs += 1
-		Global.moving_allowed = true
 	
 	
 	

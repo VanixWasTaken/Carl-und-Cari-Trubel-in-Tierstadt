@@ -228,14 +228,13 @@ libraries = {
 }
 
 [node name="PH-Scale" type="Node2D" parent="Skillcheck"]
-visible = false
 position = Vector2(1714, 311)
 
 [node name="Glass" type="Sprite2D" parent="Skillcheck/PH-Scale"]
 texture = ExtResource("2_e2340")
 
 [node name="Arrow" type="Sprite2D" parent="Skillcheck/PH-Scale"]
-position = Vector2(0, -80)
+position = Vector2(0, -91)
 texture = ExtResource("3_gdcxm")
 
 [node name="TextureRect" type="TextureRect" parent="Skillcheck"]
@@ -254,6 +253,7 @@ texture = ExtResource("24_v55k4")
 
 [node name="MiniGameTime" type="Timer" parent="Skillcheck"]
 wait_time = 20.0
+one_shot = true
 
 [node name="Button" type="Button" parent="."]
 offset_left = 776.0
