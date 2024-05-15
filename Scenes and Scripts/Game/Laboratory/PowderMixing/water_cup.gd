@@ -1,12 +1,15 @@
-extends AnimatedSprite2D
+extends Area2D
 
 var start_position
 var mouse_on = false
 var mouse_position
 var follow_mouse = false
+var got_position = false
+var water_sprite
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	start_position = position
+	water_sprite = $WaterCup
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,15 +24,14 @@ func _process(delta):
 		if follow_mouse:
 			follow_mouse = false
 			global_position = start_position
-			$Interact.play()
+			water_sprite.get_children()[0].play()
 			%PouringWater.stop()
 
-
-func _on_area_2d_mouse_entered():
+func _on_mouse_entered():
 	if Global.mouse_full == false:
 		mouse_on = true
-		
 
-func _on_area_2d_mouse_exited():
+
+func _on_mouse_exited():
 	mouse_on = false
 	Global.mouse_full = false
