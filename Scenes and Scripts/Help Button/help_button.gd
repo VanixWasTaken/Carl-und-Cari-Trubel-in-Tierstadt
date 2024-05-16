@@ -8,7 +8,7 @@ var mouse_inside = false
 @onready var no_shader = preload("res://Shader/no_shader.tres")
 var tutorial_help = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/hilfe_tutorial.tscn")
 var laboratory_help = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/help_laboratory.tscn")
-var mixing_help = preload("res://Scenes and Scripts/Game/Laboratory/PowderMixing/mini1_help.tscn")
+var mini_help = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/mini_help.tscn")
 var help
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -40,9 +40,17 @@ func _on_texture_button_button_up():
 		add_child(instance)
 		help = laboratory_help
 	elif get_tree().get_current_scene().get_name() == "ChemicalLaboratory" :
-		var instance = mixing_help.instantiate()
+		var instance = mini_help.instantiate()
 		add_child(instance)
-		help = mixing_help
+		help = mini_help
+	elif get_tree().get_current_scene().get_name() == "Titration" :
+		var instance = mini_help.instantiate()
+		add_child(instance)
+		help = mini_help
+	elif get_tree().get_current_scene().get_name() == "SprayMiniGame" :
+		var instance = mini_help.instantiate()
+		add_child(instance)
+		help = mini_help
 	if !helpbuttonopen and Global.character == "Cari":
 		emit_signal("HelpOpened")
 		$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/button_help_gray.png")

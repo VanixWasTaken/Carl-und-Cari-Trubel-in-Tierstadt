@@ -99,11 +99,13 @@ func add_right_dialog_box():
 ##################################  WRITE DIALOG HERE  ###################################
 	
 	if dialogs == 1:
+		Global.mini_help_button_state += 1
+		Global.laboratory_help_button_state += 1
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Oh ich hab dir wohl vergessen zu erklären wie die Spritzpistole funktioniert. WEnn du zu Lange am Stück schießt verklemmt sie sich."
+		short_node_text.text = "Oh ich hab dir wohl vergessen zu erklären wie die Spritzpistole funktioniert. Wenn du zu Lange am Stück schießt verklemmt sie sich."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -115,7 +117,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Sch-Sch-SChüttel sie einfach einmal richtig, dann sollte w-w-wieder alles funktionieren."
+		short_node_text.text = "Sch-Sch-Schüttel sie einfach einmal richtig, dann sollte w-w-wieder alles funktionieren."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		dialogs += 1

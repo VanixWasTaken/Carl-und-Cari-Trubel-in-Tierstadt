@@ -25,7 +25,7 @@ func _ready():
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_left_dialog_box() 
+	add_left_dialog_box()
 ##########################################################################################
 
 
@@ -35,11 +35,12 @@ func _ready():
 
 
 func _process(delta):
-################################  PUT DIALOG NUMBER HERE  ################################	
+################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 3:
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
+
 
 
 
@@ -52,146 +53,130 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 1 and Global.laboratory_help_button_state == 0:
+	if dialogs == 1 and Global.mini_help_button_state == 0:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Geh zum Chamäleon und rede mit ihr."
+			short_node_text.text = "Fülle Wasser und dann 0,2 - 0,45 Gramm des blauen Pulvers in das linke Reagenzglas."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Geh zum Chamäleon und rede mit ihr."
-			short_node_rect.texture = PRESET1
-			short_node_name.text = "Carl"
-			dialogs += 1
-
-	if dialogs == 1 and Global.laboratory_help_button_state == 1:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Carl":
-			short_node_text.text = "Sammel die Waage und die Reagenzgläser ein und befülle den Behälter mit Wasser. Bringe die Sachen danach zum Tisch."
-			short_node_rect.texture = PRESET2
-			short_node_name.text = "Cari"
-			dialogs += 1
-		elif Global.character == "Cari":
-			short_node_text.text = "Sammel die Waage und die Reagenzgläser ein und befülle den Behälter mit Wasser. Bringe die Sachen danach zum Tisch."
+			short_node_text.text = "Fülle Wasser und dann 0,2 - 0,45 Gramm des blauen Pulvers in das linke Reagenzglas."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
 	
-	if dialogs == 1 and Global.laboratory_help_button_state == 2:
+	if dialogs == 1 and Global.mini_help_button_state == 1:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Rede mit Christina dem Chamäleon."
+			short_node_text.text = "Schütte Wasser und 1,3 - 1,5 Gramm des roten Pulvers in das mittlere Reagenzglas."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Rede mit Christina dem Chamäleon."
+			short_node_text.text = "Schütte Wasser und 1,3 - 1,5 Gramm des roten Pulvers in das mittlere Reagenzglas."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
 	
-	if dialogs == 1 and Global.laboratory_help_button_state == 3:
+	if dialogs == 1 and Global.mini_help_button_state == 2:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Hole die Mischungen vom Tisch"
+			short_node_text.text = "Jetzt noch Wasser und 1,5 - 2,0 Gramm gelbes Pulver in das letzte Glas."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Hole die Mischungen vom Tisch."
+			short_node_text.text = "Jetzt noch Wasser und 1,5 - 2,0 Gramm gelbes Pulver in das letzte Glas."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
 	
-	if dialogs == 1 and Global.laboratory_help_button_state == 4:
+	if dialogs == 1 and Global.mini_help_button_state == 3:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Trage die Mischungen zur Laborabzugshaube."
+			short_node_text.text = "Fülle die Reagenzgläser mit Hilfe der Zange in den Behälter auf der linken Seite."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Trage die Mischungen zur Laborabzugshaube."
+			short_node_text.text = "Fülle die Reagenzgläser mit Hilfe der Zange in den Behälter auf der linken Seite."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
 	
-	if dialogs == 1 and Global.laboratory_help_button_state == 5:
+	if dialogs == 1 and Global.mini_help_button_state == 4:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Sprich nochmal mit Christina."
+			short_node_text.text = "Halte den pH-Wert zwischen 5 und 7 auf der Skala rechts oben. (Benutze dafür die Leertaste)"
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Sprich nochmal mit Christina."
+			short_node_text.text = "Halte den pH-Wert zwischen 5 und 7 auf der Skala rechts oben. (Benutze dafür die Leertaste)"
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
 	
-	if dialogs == 1 and Global.laboratory_help_button_state == 6:
+	if dialogs == 1 and Global.mini_help_button_state == 5:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Geh zum Fenster mit den Handschuheinlässen."
+			short_node_text.text = "Schraube die MIschung an die Spritzpistole."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Geh zum Fenster mit den Handschuheinlässen."
+			short_node_text.text = "Schraube die MIschung an die Spritzpistole."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
 	
-	if dialogs == 1 and Global.laboratory_help_button_state == 7:
+	if dialogs == 1 and Global.mini_help_button_state == 6:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Sprich ein letztes mal mit Christina."
+			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Sprich ein letztes mal mit Christina."
+			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
 	
-	if dialogs == 1 and Global.laboratory_help_button_state == 8:
+	if dialogs == 1 and Global.mini_help_button_state == 7:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Verlasse das Labor durch die Tür auf der rechten Seite."
+			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab. Falls die Spritzpistole verklemmt, schüttel die Maus kurz."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Verlasse das Labor durch die Tür auf der rechten Seite."
+			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab. Falls die Spritzpistole verklemmt, schüttel die Maus kurz."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1

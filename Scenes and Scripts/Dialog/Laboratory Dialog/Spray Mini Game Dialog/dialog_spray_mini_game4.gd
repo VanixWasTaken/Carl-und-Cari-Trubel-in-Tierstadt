@@ -96,6 +96,7 @@ func add_right_dialog_box():
 ##################################  WRITE DIALOG HERE  ###################################
 	
 	if dialogs == 1:
+		Global.mini_help_button_state += 1
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)

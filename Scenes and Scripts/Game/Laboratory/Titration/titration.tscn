@@ -1,9 +1,10 @@
-[gd_scene load_steps=33 format=3 uid="uid://dfm6sf40klc1x"]
+[gd_scene load_steps=34 format=3 uid="uid://dfm6sf40klc1x"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/titration.gd" id="1_rdept"]
 [ext_resource type="Texture2D" uid="uid://r82vd54v48ed" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG" id="1_tyn2s"]
 [ext_resource type="Texture2D" uid="uid://vw8qofpwgyb6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_phscale.png" id="2_e2340"]
 [ext_resource type="Texture2D" uid="uid://b4toblcow5vk5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_arrow.png" id="3_gdcxm"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="3_m8ddv"]
 [ext_resource type="Texture2D" uid="uid://b3al8u2mvobig" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigames2_testtuberag.png" id="4_gt4bg"]
 [ext_resource type="Texture2D" uid="uid://c17na0m652jpr" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtubes_stage1.PNG" id="6_jpfr7"]
 [ext_resource type="Texture2D" uid="uid://g0kefuwfgve4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Jug/minigame2_glass_stage1.png" id="6_qaj4p"]
@@ -135,6 +136,16 @@ modulate = Color(0.419813, 0.419813, 0.419813, 1)
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_tyn2s")
+
+[node name="HelpButton" parent="." instance=ExtResource("3_m8ddv")]
+unique_name_in_owner = true
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -0.00012207
+offset_right = -0.00012207
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Stand" type="Node2D" parent="."]
 position = Vector2(1495, 842)

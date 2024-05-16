@@ -1,11 +1,12 @@
-[gd_scene load_steps=57 format=3 uid="uid://dfpwq4ngsnyed"]
+[gd_scene load_steps=58 format=3 uid="uid://dfpwq4ngsnyed"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="3_7gx0q"]
 [ext_resource type="Texture2D" uid="uid://lmaouvkc3f5" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle1.png" id="3_ivchp"]
 [ext_resource type="Texture2D" uid="uid://dwgi13mmayd2l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_gun.png" id="3_ww0fy"]
 [ext_resource type="Texture2D" uid="uid://chu3r7ga3hn5s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_bottle.png" id="4_7yw8r"]
-[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png" id="5_wj47e"]
+[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.PNG" id="5_wj47e"]
 [ext_resource type="Texture2D" uid="uid://dwlpn0vtf4lyd" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_light.png" id="13_rj72p"]
 [ext_resource type="Shader" path="res://Shader/spray_mini_game.gdshader" id="13_rn5a4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/visible_chameleon.gd" id="14_2xxsa"]
@@ -343,6 +344,16 @@ z_index = -1
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_1k7pv")
+
+[node name="HelpButton" parent="." instance=ExtResource("3_7gx0q")]
+unique_name_in_owner = true
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -0.00012207
+offset_right = -0.00012207
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="InvisibleChameleon" type="AnimatedSprite2D" parent="."]
 position = Vector2(954, 414)
