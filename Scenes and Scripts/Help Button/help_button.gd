@@ -8,7 +8,7 @@ var mouse_inside = false
 @onready var no_shader = preload("res://Shader/no_shader.tres")
 var tutorial_help = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/hilfe_tutorial.tscn")
 var laboratory_help = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/help_laboratory.tscn")
-var mixing_help = preload("res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.tscn")
+var mixing_help = preload("res://Scenes and Scripts/Game/Laboratory/PowderMixing/mini1_help.tscn")
 var help
 # Called when the node enters the scene tree for the first time.
 func _ready():
