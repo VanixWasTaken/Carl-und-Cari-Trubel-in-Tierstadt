@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c6dhgxet661ke"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/vessel.gd" id="1_0kjhs"]
-[ext_resource type="Texture2D" uid="uid://qacuhtuqg1hn" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.png" id="2_76sog"]
+[ext_resource type="Texture2D" uid="uid://chpmab32oht3h" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.png" id="2_76sog"]
 [ext_resource type="Texture2D" uid="uid://b6akkm3csy0m4" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small_highlight.png" id="3_phjs1"]
 [ext_resource type="AudioStream" uid="uid://dxs6n623s8kuw" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var3.mp3" id="4_pbb2x"]
 
@@ -47,6 +47,8 @@ shape = SubResource("BoxShape3D_nleoc")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_pbb2x")
+volume_db = -12.0
+bus = &"SFX"
 
 [connection signal="mouse_entered" from="Mouse_area" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="Mouse_area" to="." method="_on_area_3d_mouse_exited"]

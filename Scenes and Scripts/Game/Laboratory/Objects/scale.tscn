@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/scale.gd" id="1_sq6c2"]
 [ext_resource type="Texture2D" uid="uid://cbdxyqqksrgaf" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale.png" id="2_2aogq"]
 [ext_resource type="Texture2D" uid="uid://db7vi4lxj1otc" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale_highlight.png" id="3_8t2rj"]
-[ext_resource type="AudioStream" uid="uid://c3uxb7jsi3av7" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var5.mp3" id="4_puhuv"]
+[ext_resource type="AudioStream" uid="uid://dxs6n623s8kuw" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var3.mp3" id="4_kqnd0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6wgwi"]
 animations = [{
@@ -46,7 +46,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0606024, -9.66409, 0.143159
 shape = SubResource("BoxShape3D_nleoc")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_puhuv")
+stream = ExtResource("4_kqnd0")
+volume_db = -12.0
+pitch_scale = 1.22
+bus = &"SFX"
 
 [connection signal="mouse_entered" from="Mouse_area" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="Mouse_area" to="." method="_on_area_3d_mouse_exited"]

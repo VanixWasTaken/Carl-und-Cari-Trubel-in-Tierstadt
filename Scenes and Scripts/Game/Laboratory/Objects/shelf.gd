@@ -12,6 +12,7 @@ var can_interact = false
 func _input(event):
 	if Input.is_action_just_pressed("left_click"):
 		if mouse_inside:
+			$"../../Click".play()
 			can_interact = true
 			if player_inside:
 				if !Global.talked_to_chameleon:
@@ -41,6 +42,7 @@ func _on_area_3d_body_entered(body):
 
 func _on_area_3d_mouse_entered():
 	$".".texture = outline_shader
+	$"../../Hover"
 	mouse_inside = true
 
 func _on_area_3d_mouse_exited():
