@@ -175,11 +175,12 @@ func _on_area_2d_area_exited(area):
 	yellow_on = false
 	purple_on = false
 	if area_name != "PulverBowl":
-		powder_sprite.play("default")
-		powder_sprite.position = Vector2.ZERO
-		get_tree().get_current_scene().remove_child(powder_sprite)
-		area.add_child(powder_sprite)
-		got_place = false
+		if powder_sprite != null:
+			powder_sprite.play("default")
+			powder_sprite.position = Vector2.ZERO
+			get_tree().get_current_scene().remove_child(powder_sprite)
+			area.add_child(powder_sprite)
+			got_place = false
 	bowl_full = false
 	if too_much:
 		await get_tree().create_timer(0.25).timeout

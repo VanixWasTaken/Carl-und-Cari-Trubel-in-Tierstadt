@@ -33,17 +33,19 @@ func _on_area_2d_area_entered(area):
 		new_water = true
 		water_child.play("new_animation")
 		%PouringWater.play()
-		if water_in_1 == false && pulver_in_1 == false:
+		if water_in_1 == false || water_in_1 && pulver_in_1 == false:
 			water_child.global_position = $"../Marker2D2".global_position
 			$".".frame = 1
 			water_in_1 = true
 
-		elif water_in_2 == false && pulver_in_1 == true:
+		elif water_in_2 == false || water_in_2  && pulver_in_1 == true && pulver_in_2 == false:
+			print("PEN")
 			$".".frame = 3
 			water_in_2 = true
 			water_child.global_position = $"../Marker2D3".global_position
 
-		elif water_in_3 == false && pulver_in_2 == true:
+		elif water_in_3 == false|| water_in_3  && pulver_in_2 == true:
+			print("IS")
 			water_child.global_position = $"../Marker2D4".global_position
 			$".".frame = 5
 			water_in_3 = true
@@ -78,6 +80,7 @@ func remove_glass():
 		played_1 = true
 		dialog_instance = red_powder_dialog.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
+		water_in_current = false
 
 	if pulver_in_2 && !played_2:
 		$Area2D2.position.y += 10000
@@ -94,12 +97,14 @@ func remove_glass():
 		dialog_instance = end_powder_dialog.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
 
-	get_tree().get_current_scene().remove_child(water_child)
-	water_cup.add_child(water_child)
+
 
 func _on_area_2d_area_exited(area):
 	var dialog_instance
 	if area_name.contains("WaterCup"):
 		water_child.play("default")
+		get_tree().get_current_scene().remove_child(water_child)
+		water_cup.add_child(water_child)
+		water_child.position = Vector2.ZERO
 	if area_name.contains("PulverBowl"):
 		$"../PulverBowl"._reset_bowl()
