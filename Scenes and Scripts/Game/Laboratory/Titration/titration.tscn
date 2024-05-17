@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://dfm6sf40klc1x"]
+[gd_scene load_steps=53 format=3 uid="uid://dfm6sf40klc1x"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/titration.gd" id="1_rdept"]
 [ext_resource type="Texture2D" uid="uid://r82vd54v48ed" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG" id="1_tyn2s"]
@@ -39,6 +39,7 @@
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="26_hj2at"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="27_a23cj"]
 [ext_resource type="AudioStream" uid="uid://ctitmuggatwdy" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_bubbling_var1.mp3" id="30_mvddd"]
+[ext_resource type="AudioStream" uid="uid://cuvm7mdv5ihpn" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_wrongarea_var1.mp3" id="32_hy0i5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op731"]
 size = Vector2(443, 376)
@@ -278,6 +279,7 @@ volume_db = -12.0
 bus = &"SFX"
 
 [node name="Failure" type="AudioStreamPlayer" parent="Skillcheck/Burette"]
+stream = ExtResource("32_hy0i5")
 
 [node name="Bar" type="Area2D" parent="Skillcheck"]
 visible = false

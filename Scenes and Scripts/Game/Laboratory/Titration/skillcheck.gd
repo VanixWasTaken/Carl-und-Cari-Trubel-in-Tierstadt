@@ -36,9 +36,9 @@ func _process(delta):
 				$"PH-Scale/Arrow".position.y = 340
 			pressed_already = true
 		
-		elif Input.is_action_just_pressed("space") and !arrow_in_bar:
+		elif Input.is_action_just_pressed("space") and !arrow_in_bar and !pressed_already:
 			$Burette/Failure.play()
-		
+			pressed_already = true
 		else:
 			
 			$"PH-Scale/Arrow".position.y += 40 * delta
@@ -49,6 +49,7 @@ func _process(delta):
 
 func _on_bar_area_entered(area):
 	if area.get_name() == "Arrow":
+		pressed_already = false
 		arrow_in_bar = true
 
 

@@ -37,7 +37,6 @@ func _process(delta):
 	$"../Scale/RichTextLabel".text = str(weight) + " g"
 	if Input.is_action_just_pressed("left_click") && mouse_on:
 		follow_mouse = true
-		dragging()
 	if follow_mouse:
 		mouse_position = get_global_mouse_position()
 		global_position = mouse_position
@@ -60,6 +59,7 @@ func powder_place():
 
 func _on_area_2d_mouse_entered():
 	if Global.mouse_full == false:
+		$"../Hover".play()
 		mouse_on = true
 		Global.mouse_full = true
 
@@ -69,7 +69,6 @@ func _on_area_2d_mouse_exited():
 
 
 func _on_area_2d_area_entered(area):
-	$"../Hover".play()
 	area_name = area.get_name()
 	if area_name != "PulverBowl":
 		if needed_pulver ==  area.color:
@@ -212,9 +211,8 @@ func _reset_bowl():
 		global_position = start_position
 
 
-func dragging():
-	while follow_mouse == true:
-		if powder_drag != null:
+func _input(event):
+	if event is InputEventMouseMotion:
+		var velocity = event.get_velocity()
+		if velocity > Vector2(100, 100) and !powder_drag.playing and follow_mouse:
 			powder_drag.play()
-			
-			await get_tree().create_timer(randf_range(0.5, 1.5)).timeout
