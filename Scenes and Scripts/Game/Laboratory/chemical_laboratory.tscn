@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=84 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
 [ext_resource type="Texture2D" uid="uid://djwgsl8qdi8h6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_empty.png" id="2_ujlwc"]
@@ -51,13 +51,18 @@
 [ext_resource type="Texture2D" uid="uid://c4q2pwnwtjv5n" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_yellow_1.png" id="27_tycnb"]
 [ext_resource type="Texture2D" uid="uid://cvhjre4ahx4n8" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_yellow_2.png" id="28_lhjea"]
 [ext_resource type="Texture2D" uid="uid://dguutvf3y6a2a" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_yellow_3.png" id="29_0hk8d"]
+[ext_resource type="AudioStream" uid="uid://d00kig6samg51" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_powderdragging_var1.mp3" id="30_8emb8"]
 [ext_resource type="Texture2D" uid="uid://7gx1pjwrf130" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_yellow_4.png" id="30_qu5ct"]
+[ext_resource type="AudioStream" uid="uid://j4uc8lo3bon6" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_powderdragging_var2.mp3" id="31_sdv7k"]
 [ext_resource type="Texture2D" uid="uid://c1mtjn0dvt5lk" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_yellow_5.png" id="31_xnyqc"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/PowderMixing/pulver_bowl.gd" id="32_ebx3t"]
+[ext_resource type="AudioStream" uid="uid://xnko3yoyx30j" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_powderdragging_var3.mp3" id="32_hn6oh"]
 [ext_resource type="PackedScene" uid="uid://hvla4dyxh56b" path="res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_1.tscn" id="54_l6ekg"]
 [ext_resource type="AudioStream" uid="uid://4jn1hqfjg8gj" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var1.mp3" id="56_1kyrl"]
 [ext_resource type="AudioStream" uid="uid://gx0o4f5bq21g" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var2.mp3" id="57_o03af"]
 [ext_resource type="AudioStream" uid="uid://bv85fsmky476u" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var3.mp3" id="58_3ma0y"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="62_es0fk"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="63_qk6pd"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_i7371"]
 specular_color = Color(0.745098, 0.854902, 0.807843, 1)
@@ -161,6 +166,15 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rewly"]
 size = Vector2(399.288, 98.8885)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qgpbb"]
+streams_count = 3
+stream_0/stream = ExtResource("30_8emb8")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("31_sdv7k")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("32_hn6oh")
+stream_2/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6cgod"]
 streams_count = 5
@@ -297,7 +311,6 @@ animations = [{
 }]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_goukw"]
-playback_mode = 1
 streams_count = 3
 stream_0/stream = ExtResource("56_1kyrl")
 stream_0/weight = 1.0
@@ -305,6 +318,14 @@ stream_1/stream = ExtResource("57_o03af")
 stream_1/weight = 1.0
 stream_2/stream = ExtResource("58_3ma0y")
 stream_2/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1g1u0"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("62_es0fk")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("63_qk6pd")
+stream_1/weight = 1.0
 
 [node name="ChemicalLaboratory" type="Node2D"]
 script = ExtResource("1_b2cfh")
@@ -404,6 +425,10 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PulverBowl/PulverBowl"]
 position = Vector2(9.40161, 10.6799)
 shape = SubResource("RectangleShape2D_rewly")
+
+[node name="Dragging" type="AudioStreamPlayer" parent="PulverBowl/PulverBowl"]
+stream = SubResource("AudioStreamRandomizer_qgpbb")
+volume_db = -6.0
 
 [node name="Interact" type="AudioStreamPlayer" parent="PulverBowl"]
 stream = SubResource("AudioStreamRandomizer_6cgod")
@@ -526,6 +551,12 @@ position = Vector2(1126, 238)
 scale = Vector2(0.769601, 0.806024)
 
 [node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_1g1u0")
+volume_db = -15.0
+
+[node name="Dragging" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_qgpbb")
+volume_db = -6.0
 
 [connection signal="area_entered" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_exited"]

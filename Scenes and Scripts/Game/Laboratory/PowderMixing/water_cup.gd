@@ -47,4 +47,4 @@ func sloshing():
 		if water_slosh != null:
 			water_slosh.play()
 			
-			await get_tree().create_timer(randf_range(1, 3)).timeout
+			await get_tree().create_timer(randf_range(0.5, 1.5)).timeout

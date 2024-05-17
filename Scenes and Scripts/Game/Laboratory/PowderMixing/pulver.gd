@@ -4,11 +4,13 @@ var start_position
 var mouse_on = false
 var mouse_position
 var follow_mouse = false
+var powder_drag
 @export var color: String
 @export var minimum_weight: float
 @export var maximum_weight: float
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	powder_drag = $"../Dragging"
 	start_position = global_position
 
 
@@ -16,6 +18,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("left_click") && mouse_on:
 		follow_mouse = true
+		dragging()
 	if follow_mouse:
 		mouse_position = get_global_mouse_position()
 		global_position = mouse_position
@@ -38,3 +41,10 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	mouse_on = false
 	Global.mouse_full = false
+
+func dragging():
+	while follow_mouse == true:
+		if powder_drag != null:
+			powder_drag.play()
+			
+			await get_tree().create_timer(randf_range(0.5, 1.5)).timeout
