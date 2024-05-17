@@ -91,13 +91,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbfg1"]
-size = Vector2(198, 392.377)
+size = Vector2(198, 232)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_828ff"]
-size = Vector2(130.364, 381.248)
+size = Vector2(130.364, 218)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6nk3i"]
-size = Vector2(161.122, 402.933)
+size = Vector2(161.122, 229)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqi52"]
 size = Vector2(352.5, 425.51)
@@ -330,7 +330,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkHolder/Area2D"]
-position = Vector2(-167, -13.8118)
+position = Vector2(-167, -109)
 shape = SubResource("RectangleShape2D_fbfg1")
 
 [node name="Area2D2" type="Area2D" parent="DrinkHolder"]
@@ -340,7 +340,7 @@ collision_mask = 3
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkHolder/Area2D2"]
-position = Vector2(10.1818, -24.3761)
+position = Vector2(10.1818, -106)
 shape = SubResource("RectangleShape2D_828ff")
 
 [node name="Area2D3" type="Area2D" parent="DrinkHolder"]
@@ -350,7 +350,7 @@ collision_mask = 3
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DrinkHolder/Area2D3"]
-position = Vector2(184.511, -26.5339)
+position = Vector2(184.511, -113.5)
 shape = SubResource("RectangleShape2D_6nk3i")
 
 [node name="Scale" type="Sprite2D" parent="."]
