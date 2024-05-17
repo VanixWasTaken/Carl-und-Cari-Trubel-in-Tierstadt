@@ -10,7 +10,7 @@ size = Vector3(13.9837, 12.0987, 6.32742)
 size = Vector3(12.9469, 2.8, 17.0088)
 
 [node name="WallHole" type="Sprite3D"]
-transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -28.4811, 7.78455, 0.100114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4811, 7.78455, 0.100114)
 texture = ExtResource("1_n22hq")
 script = ExtResource("2_6ge40")
 

@@ -460,7 +460,7 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 10.7804, 1.09887)
 texture = ExtResource("25_kjt1n")
 
 [node name="WallHole" parent="Objects" instance=ExtResource("30_3am5x")]
-transform = Transform3D(-3.19093e-08, 0, -0.79, 0, 0.845, 0, 0.73, 0, -3.4532e-08, -29.6051, 7.84301, -0.0104122)
+transform = Transform3D(-3.19093e-08, 0, -0.79, 0, 0.845, 0, 0.73, 0, -3.4532e-08, -29.6118, 7.84301, -0.0104122)
 
 [node name="BackWallWindow" parent="Objects" instance=ExtResource("31_ssppo")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0.56158, 7.87659, -4.71349)

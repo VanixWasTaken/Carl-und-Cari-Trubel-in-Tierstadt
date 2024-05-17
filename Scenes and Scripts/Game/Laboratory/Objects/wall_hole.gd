@@ -1,6 +1,6 @@
 extends Sprite3D
 
-var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left_window_highlight.png")
+var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left_window.highlight.png")
 var no_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left_window.png")
 
 var all_powderitem_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_all_powderitems_dialog.tscn")
