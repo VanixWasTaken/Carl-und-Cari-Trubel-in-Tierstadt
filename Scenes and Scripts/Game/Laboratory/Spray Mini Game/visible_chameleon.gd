@@ -2,7 +2,7 @@ extends AnimatedSprite2D
 
 
 var shader_value = material.get_shader_parameter("value")
-var speed = 0.003
+@export var speed = 0.003
 var hitting_chameleon = false
 var shooting = false
 var mouse_moving = false
