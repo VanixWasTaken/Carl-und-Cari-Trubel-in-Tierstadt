@@ -1,95 +1,89 @@
-[gd_scene load_steps=84 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=80 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
-[ext_resource type="Texture2D" uid="uid://djwgsl8qdi8h6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_empty.png" id="2_ujlwc"]
+[ext_resource type="Texture2D" uid="uid://dwuywvtsnqew" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/lab_minigame1_desk.png" id="2_ckcvh"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_ywiy6"]
-[ext_resource type="Texture2D" uid="uid://b1yh636oam2rh" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_water_1.png" id="3_36t6l"]
-[ext_resource type="Texture2D" uid="uid://d4iyf3lnxq1wn" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_mix_1.png" id="4_nlbyv"]
-[ext_resource type="Texture2D" uid="uid://cfulhdsnb3fah" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_water_2.png" id="5_djt46"]
-[ext_resource type="Texture2D" uid="uid://cbmbnaxkt46eo" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_mix_2.png" id="6_uxdrq"]
-[ext_resource type="Texture2D" uid="uid://bq1xm3raio57n" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_water_3.png" id="7_65v5q"]
-[ext_resource type="Texture2D" uid="uid://c5y5pjca633gs" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_mix_3.png" id="8_g4a82"]
+[ext_resource type="Texture2D" uid="uid://dtstdecsjp6mg" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_empty_empty_empty.png" id="3_ut26n"]
+[ext_resource type="Texture2D" uid="uid://1cojrp8o617n" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_water_empty_empty.png" id="4_wvrof"]
+[ext_resource type="Texture2D" uid="uid://rqrml8vm2bn5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_empty_empty.png" id="5_mrfpa"]
+[ext_resource type="Texture2D" uid="uid://db3fuvspqb1w3" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_water_empty.png" id="6_rg4yq"]
+[ext_resource type="Texture2D" uid="uid://cpnhalp2rm4nf" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_red_empty.png" id="7_3d18c"]
+[ext_resource type="Texture2D" uid="uid://c8b4688csb3u0" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_red_water.png" id="8_7d3u6"]
+[ext_resource type="Texture2D" uid="uid://dypp6l6my81qe" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_red_yellow.png" id="9_hp3p4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/PowderMixing/drink_holder.gd" id="9_hvdtc"]
-[ext_resource type="Texture2D" uid="uid://bnovic5wao87g" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/water_pitcher.png" id="10_0ugwe"]
 [ext_resource type="AudioStream" uid="uid://cqqv5sjph5jnh" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakerpour_var1.mp3" id="10_gmevd"]
-[ext_resource type="Texture2D" uid="uid://7fftkqwq8pwl" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/scale.png" id="10_tq6or"]
 [ext_resource type="AudioStream" uid="uid://dd2mln4san8k3" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_powderpour_var1.mp3" id="11_5gyvt"]
 [ext_resource type="FontFile" uid="uid://cndjys5rae2ut" path="res://Assets/Font/digital-7.ttf" id="11_g8n2i"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/PowderMixing/water_cup.gd" id="11_jiefe"]
-[ext_resource type="Texture2D" uid="uid://cp62gxaenms2k" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/water_pitcher_tilted_1.png" id="12_0tl5x"]
-[ext_resource type="Texture2D" uid="uid://dfyjg6o1xhf1c" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_2.png" id="12_n7av0"]
-[ext_resource type="Texture2D" uid="uid://cnpaqhf7wglea" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/water_pitcher_tilted_2.png" id="13_60s2y"]
+[ext_resource type="Texture2D" uid="uid://561lcwo15nv5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Scale/lab_minigame1_scale.png" id="11_sojqr"]
+[ext_resource type="Texture2D" uid="uid://bjnekleuamtju" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/lab_minigame1_petridish.png" id="13_b3jfi"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/PowderMixing/pulver.gd" id="13_yairb"]
-[ext_resource type="Texture2D" uid="uid://bktfrqapes445" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_3.png" id="14_n0lm2"]
-[ext_resource type="Texture2D" uid="uid://ca1ttddbc5iu0" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/water_pitcher_tilted_3.png" id="14_qvnxd"]
-[ext_resource type="Texture2D" uid="uid://bji7bvp2gh3q4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_1.png" id="15_s57kk"]
-[ext_resource type="Texture2D" uid="uid://n7l3pox5by56" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_empty.png" id="16_ac3qq"]
+[ext_resource type="Texture2D" uid="uid://b6qwp3cuaxwoo" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Purple/lab_minigame1_petridish_purple_0001.png" id="14_jljdo"]
+[ext_resource type="Texture2D" uid="uid://br67c6j8g14kj" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Purple/lab_minigame1_petridish_purple_0002.png" id="15_p4web"]
+[ext_resource type="Texture2D" uid="uid://e3bxh8s5x73r" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Purple/lab_minigame1_petridish_purple_0003.png" id="16_7qox8"]
 [ext_resource type="AudioStream" uid="uid://dlbqmb225i466" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var1.mp3" id="16_bgv0a"]
 [ext_resource type="AudioStream" uid="uid://cf4emkal6ayqc" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var2.mp3" id="17_5wu6i"]
-[ext_resource type="Texture2D" uid="uid://chrv505r1beht" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_2_tilted_2.png" id="17_pu5lw"]
-[ext_resource type="Texture2D" uid="uid://chesqpjaa5e11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_purple_1.png" id="17_ykirh"]
-[ext_resource type="Texture2D" uid="uid://bre0kdhcyes0o" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_2_tilted_1.png" id="18_6ch4u"]
+[ext_resource type="Texture2D" uid="uid://bfd17b04otjil" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Purple/lab_minigame1_petridish_purple_0004.png" id="17_uffv0"]
 [ext_resource type="AudioStream" uid="uid://dxs6n623s8kuw" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var3.mp3" id="18_15po0"]
-[ext_resource type="Texture2D" uid="uid://c1g8h77fdxeq1" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_purple_2.png" id="18_ydxxs"]
+[ext_resource type="Texture2D" uid="uid://0dwyleggrafg" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Red/lab_minigame1_petridish_red_0001.png" id="18_nqqnw"]
 [ext_resource type="AudioStream" uid="uid://d3fqukof07fmk" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var4.mp3" id="19_7nm1j"]
-[ext_resource type="Texture2D" uid="uid://cppvj6olibc7c" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_3_tilted_3.png" id="19_g3xv4"]
-[ext_resource type="Texture2D" uid="uid://8602atlhoqm6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_purple_3.png" id="19_hdagi"]
-[ext_resource type="Texture2D" uid="uid://covs8nkmo65rj" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_2_tilted_3.png" id="19_x7pw1"]
-[ext_resource type="Texture2D" uid="uid://q4s78ehuwgps" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_3_tilted_2.png" id="20_4um6f"]
+[ext_resource type="Texture2D" uid="uid://brreca1duvr3e" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Red/lab_minigame1_petridish_red_0002.png" id="19_a7hqk"]
 [ext_resource type="AudioStream" uid="uid://c3uxb7jsi3av7" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var5.mp3" id="20_gnvqf"]
-[ext_resource type="Texture2D" uid="uid://bur6vn7toyo4b" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_purple_4.png" id="20_l8u2w"]
-[ext_resource type="Texture2D" uid="uid://ca666uxbmvp4w" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_1_tilted_3.png" id="20_sc6hd"]
-[ext_resource type="Texture2D" uid="uid://byo7i7iafl1ji" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_red_1.png" id="21_3vbhw"]
-[ext_resource type="Texture2D" uid="uid://5hgu0177hlko" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_1_tilted_1.png" id="21_7vbvh"]
-[ext_resource type="Texture2D" uid="uid://dbf8ka5of85fg" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_3_tilted_1.png" id="21_kitia"]
-[ext_resource type="Texture2D" uid="uid://dy7m3h423mt6d" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_red_2.png" id="22_0mkdw"]
-[ext_resource type="Texture2D" uid="uid://il66iudrhbh4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_1_tilted_2.png" id="22_0xw15"]
-[ext_resource type="Texture2D" uid="uid://d01562voj2hp1" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_red_3.png" id="23_p5sn3"]
-[ext_resource type="Texture2D" uid="uid://batyjaith7krl" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_red_4.png" id="24_wkruo"]
-[ext_resource type="Texture2D" uid="uid://cfcy8h47gj22i" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_red_5.png" id="25_0482o"]
-[ext_resource type="Texture2D" uid="uid://crbst52s2nri5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_red_6.png" id="26_qjftv"]
-[ext_resource type="Texture2D" uid="uid://c4q2pwnwtjv5n" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_yellow_1.png" id="27_tycnb"]
-[ext_resource type="Texture2D" uid="uid://cvhjre4ahx4n8" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_yellow_2.png" id="28_lhjea"]
-[ext_resource type="Texture2D" uid="uid://dguutvf3y6a2a" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_yellow_3.png" id="29_0hk8d"]
+[ext_resource type="Texture2D" uid="uid://1mdqlimmc0lb" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Red/lab_minigame1_petridish_red_0003.png" id="20_uoq3e"]
+[ext_resource type="Texture2D" uid="uid://pu3u82ws3bu5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Red/lab_minigame1_petridish_red_0004.png" id="21_dhbpd"]
+[ext_resource type="Texture2D" uid="uid://c777etimgxvnb" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Red/lab_minigame1_petridish_red_0005.png" id="22_mhsab"]
+[ext_resource type="Texture2D" uid="uid://be007he5gpwj6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Red/lab_minigame1_petridish_red_0006.png" id="23_betxr"]
+[ext_resource type="Texture2D" uid="uid://b1b6cr3ceac3a" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Yellow/lab_minigame1_petridish_yellow_0001.png" id="24_l43eo"]
+[ext_resource type="Texture2D" uid="uid://d4l7bv7cl3v2r" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Yellow/lab_minigame1_petridish_yellow_0002.png" id="25_d2wx3"]
+[ext_resource type="Texture2D" uid="uid://dclo4nievo63h" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Yellow/lab_minigame1_petridish_yellow_0003.png" id="26_hkh0t"]
+[ext_resource type="Texture2D" uid="uid://c04syumm7pnxk" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Yellow/lab_minigame1_petridish_yellow_0004.png" id="27_j2718"]
+[ext_resource type="Texture2D" uid="uid://c6kdvrfkemcr1" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Petri Dish/Yellow/lab_minigame1_petridish_yellow_0005.png" id="28_wdefk"]
 [ext_resource type="AudioStream" uid="uid://d00kig6samg51" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_powderdragging_var1.mp3" id="30_8emb8"]
-[ext_resource type="Texture2D" uid="uid://7gx1pjwrf130" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_yellow_4.png" id="30_qu5ct"]
 [ext_resource type="AudioStream" uid="uid://j4uc8lo3bon6" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_powderdragging_var2.mp3" id="31_sdv7k"]
-[ext_resource type="Texture2D" uid="uid://c1mtjn0dvt5lk" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_yellow_5.png" id="31_xnyqc"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/PowderMixing/pulver_bowl.gd" id="32_ebx3t"]
 [ext_resource type="AudioStream" uid="uid://xnko3yoyx30j" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_powderdragging_var3.mp3" id="32_hn6oh"]
+[ext_resource type="Texture2D" uid="uid://cbvr28biul4iy" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Red/lab_minigame1_pulver_container_red.png" id="42_my3he"]
+[ext_resource type="Texture2D" uid="uid://dpftw0uc4m0is" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Red/lab_minigame1_pulver_container_red_0001.png" id="43_3i3hj"]
+[ext_resource type="Texture2D" uid="uid://c5qk877hjstro" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Red/lab_minigame1_pulver_container_red_0002.png" id="44_30lny"]
+[ext_resource type="Texture2D" uid="uid://mf7nxmwd6sip" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Purple/lab_minigame1_pulver_container_purple.png" id="45_41m5w"]
+[ext_resource type="Texture2D" uid="uid://b1l2ruyunqgyg" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Purple/lab_minigame1_pulver_container_purple_0001.png" id="46_c6yb3"]
+[ext_resource type="Texture2D" uid="uid://b41vowh6ahxqs" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Purple/lab_minigame1_pulver_container_purple_0002.png" id="47_egf8n"]
+[ext_resource type="Texture2D" uid="uid://cui8nsmhcqwwk" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Yellow/lab_minigame1_pulver_container_yellow.png" id="48_et2qq"]
+[ext_resource type="Texture2D" uid="uid://cc5buktgwtwbo" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Yellow/lab_minigame1_pulver_container_yellow_0001.png" id="49_0487d"]
+[ext_resource type="Texture2D" uid="uid://ds0bpueqrmtq6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Yellow/lab_minigame1_pulver_container_yellow_0002.png" id="50_qrjok"]
+[ext_resource type="Texture2D" uid="uid://brm4imayxoqiu" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Water/lab_minigame1_water_container.png" id="52_mao2c"]
+[ext_resource type="Texture2D" uid="uid://ivk83onlyqfx" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Water/lab_minigame1_water_container_0001.png" id="53_5a7c7"]
 [ext_resource type="PackedScene" uid="uid://hvla4dyxh56b" path="res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_1.tscn" id="54_l6ekg"]
+[ext_resource type="Texture2D" uid="uid://p2ilk57dnw46" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Water/lab_minigame1_water_container_0002.png" id="54_oodol"]
 [ext_resource type="AudioStream" uid="uid://4jn1hqfjg8gj" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var1.mp3" id="56_1kyrl"]
 [ext_resource type="AudioStream" uid="uid://gx0o4f5bq21g" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var2.mp3" id="57_o03af"]
 [ext_resource type="AudioStream" uid="uid://bv85fsmky476u" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var3.mp3" id="58_3ma0y"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="62_es0fk"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="63_qk6pd"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_i7371"]
-specular_color = Color(0.745098, 0.854902, 0.807843, 1)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_mrjln"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ujlwc")
+"texture": ExtResource("3_ut26n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_36t6l")
+"texture": ExtResource("4_wvrof")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_nlbyv")
+"texture": ExtResource("5_mrfpa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_djt46")
+"texture": ExtResource("6_rg4yq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_uxdrq")
+"texture": ExtResource("7_3d18c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_65v5q")
+"texture": ExtResource("8_7d3u6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_g4a82")
+"texture": ExtResource("9_hp3p4")
 }],
 "loop": true,
 "name": &"default",
@@ -106,58 +100,58 @@ size = Vector2(130.364, 381.248)
 size = Vector2(161.122, 402.933)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqi52"]
-size = Vector2(449.277, 368.11)
+size = Vector2(352.5, 425.51)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ogow"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("16_ac3qq")
+"texture": ExtResource("13_b3jfi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_ykirh")
+"texture": ExtResource("14_jljdo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_ydxxs")
+"texture": ExtResource("15_p4web")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_hdagi")
+"texture": ExtResource("16_7qox8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_l8u2w")
+"texture": ExtResource("17_uffv0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_3vbhw")
+"texture": ExtResource("18_nqqnw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_0mkdw")
+"texture": ExtResource("19_a7hqk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_qjftv")
+"texture": ExtResource("20_uoq3e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_p5sn3")
+"texture": ExtResource("21_dhbpd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_0482o")
+"texture": ExtResource("22_mhsab")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_wkruo")
+"texture": ExtResource("23_betxr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_tycnb")
+"texture": ExtResource("24_l43eo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_lhjea")
+"texture": ExtResource("25_d2wx3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_0hk8d")
+"texture": ExtResource("26_hkh0t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_qu5ct")
+"texture": ExtResource("27_j2718")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_xnyqc")
+"texture": ExtResource("28_wdefk")
 }],
 "loop": true,
 "name": &"default",
@@ -165,7 +159,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rewly"]
-size = Vector2(399.288, 98.8885)
+size = Vector2(328.75, 180)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qgpbb"]
 streams_count = 3
@@ -190,13 +184,13 @@ stream_4/stream = ExtResource("20_gnvqf")
 stream_4/weight = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xc7aw"]
-size = Vector2(350, 293)
+size = Vector2(249, 306)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6dnwd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_n7av0")
+"texture": ExtResource("42_my3he")
 }],
 "loop": true,
 "name": &"default",
@@ -204,16 +198,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("17_pu5lw")
+"texture": ExtResource("43_3i3hj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_6ch4u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_x7pw1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_6ch4u")
+"texture": ExtResource("44_30lny")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -221,13 +209,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5hvy"]
-size = Vector2(369, 306)
+size = Vector2(256, 323)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c2ujo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("15_s57kk")
+"texture": ExtResource("45_41m5w")
 }],
 "loop": true,
 "name": &"default",
@@ -235,16 +223,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("20_sc6hd")
+"texture": ExtResource("46_c6yb3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_7vbvh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_0xw15")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_7vbvh")
+"texture": ExtResource("47_egf8n")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -252,13 +234,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcvw4"]
-size = Vector2(355, 284)
+size = Vector2(251, 305)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mtd7m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_n0lm2")
+"texture": ExtResource("48_et2qq")
 }],
 "loop": true,
 "name": &"default",
@@ -266,16 +248,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("19_g3xv4")
+"texture": ExtResource("49_0487d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_4um6f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_kitia")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_4um6f")
+"texture": ExtResource("50_qrjok")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -283,13 +259,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqc8m"]
-size = Vector2(367, 443)
+size = Vector2(276, 362)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owpuh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_0ugwe")
+"texture": ExtResource("52_mao2c")
 }],
 "loop": true,
 "name": &"default",
@@ -297,13 +273,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_0tl5x")
+"texture": ExtResource("53_5a7c7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_60s2y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_qvnxd")
+"texture": ExtResource("54_oodol")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -332,11 +305,9 @@ script = ExtResource("1_b2cfh")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 modulate = Color(0.745098, 0.854902, 0.807843, 1)
-offset_left = -211.0
-offset_top = -190.0
-offset_right = 1945.0
-offset_bottom = 1129.0
-texture = SubResource("CanvasTexture_i7371")
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_ckcvh")
 
 [node name="HelpButton" parent="." instance=ExtResource("2_ywiy6")]
 unique_name_in_owner = true
@@ -349,8 +320,7 @@ grow_horizontal = 1
 grow_vertical = 1
 
 [node name="DrinkHolder" type="AnimatedSprite2D" parent="."]
-position = Vector2(1153, 454)
-scale = Vector2(0.769601, 0.806024)
+position = Vector2(1114, 803)
 sprite_frames = SubResource("SpriteFrames_mrjln")
 script = ExtResource("9_hvdtc")
 metadata/_edit_group_ = true
@@ -384,9 +354,9 @@ position = Vector2(184.511, -26.5339)
 shape = SubResource("RectangleShape2D_6nk3i")
 
 [node name="Scale" type="Sprite2D" parent="."]
-position = Vector2(628.545, 906.038)
-scale = Vector2(0.754545, 0.741627)
-texture = ExtResource("10_tq6or")
+position = Vector2(445, 834)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("11_sojqr")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Scale"]
 anchors_preset = -1
@@ -394,10 +364,10 @@ anchor_left = -0.00972772
 anchor_top = -0.0496557
 anchor_right = 0.000642655
 anchor_bottom = -0.0496557
-offset_left = -31.4338
-offset_top = 146.097
-offset_right = 209.566
-offset_bottom = 197.097
+offset_left = -91.9416
+offset_top = 200.236
+offset_right = 149.058
+offset_bottom = 251.236
 theme_override_colors/default_color = Color(0, 1, 0, 1)
 theme_override_fonts/normal_font = ExtResource("11_g8n2i")
 theme_override_font_sizes/normal_font_size = 61
@@ -409,12 +379,13 @@ metadata/_edit_use_anchors_ = true
 [node name="Area2D" type="Area2D" parent="Scale"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scale/Area2D"]
-position = Vector2(1.26526, -166.576)
+position = Vector2(6.24994, -137.245)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_iqi52")
 
 [node name="PulverBowl" type="AnimatedSprite2D" parent="." groups=["PulverBowl"]]
-position = Vector2(626.545, 849.038)
-scale = Vector2(0.90411, 1.26405)
+position = Vector2(456, 725)
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_4ogow")
 offset = Vector2(6.645, -72.3)
 script = ExtResource("32_ebx3t")
@@ -423,7 +394,8 @@ metadata/_edit_group_ = true
 [node name="PulverBowl" type="Area2D" parent="PulverBowl"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PulverBowl/PulverBowl"]
-position = Vector2(9.40161, 10.6799)
+position = Vector2(1.875, 71.2498)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_rewly")
 
 [node name="Dragging" type="AudioStreamPlayer" parent="PulverBowl/PulverBowl"]
@@ -448,22 +420,24 @@ volume_db = -20.0
 [node name="DialogPowder1" parent="." instance=ExtResource("54_l6ekg")]
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(567, 676)
+position = Vector2(514, 473)
 
 [node name="RedPulver" type="Area2D" parent="."]
-position = Vector2(1693.3, 906.181)
-scale = Vector2(0.746537, 0.819444)
+position = Vector2(1618, 975)
 script = ExtResource("13_yairb")
 color = "Red"
 minimum_weight = 1.3
 maximum_weight = 1.6
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedPulver"]
-position = Vector2(16, -2.5)
+position = Vector2(144.5, -103)
 shape = SubResource("RectangleShape2D_xc7aw")
 
 [node name="RedPulverSprite" type="AnimatedSprite2D" parent="RedPulver"]
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_6dnwd")
+flip_h = true
 metadata/_edit_group_ = true
 
 [node name="Interact" type="AudioStreamPlayer" parent="RedPulver/RedPulverSprite"]
@@ -472,19 +446,21 @@ volume_db = -25.0
 bus = &"SFX"
 
 [node name="PurplePulver" type="Area2D" parent="."]
-position = Vector2(1702, 383.125)
-scale = Vector2(0.69663, 0.74827)
+position = Vector2(1613, 296)
 script = ExtResource("13_yairb")
 color = "Purple"
 minimum_weight = 0.2
 maximum_weight = 0.45
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PurplePulver"]
-position = Vector2(3.5, -6)
+position = Vector2(156, -103.5)
 shape = SubResource("RectangleShape2D_a5hvy")
 
 [node name="PurplePulverSprite" type="AnimatedSprite2D" parent="PurplePulver"]
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_c2ujo")
+flip_h = true
 metadata/_edit_group_ = true
 
 [node name="Interact" type="AudioStreamPlayer" parent="PurplePulver/PurplePulverSprite"]
@@ -493,19 +469,21 @@ volume_db = -25.0
 bus = &"SFX"
 
 [node name="YellowPulver" type="Area2D" parent="."]
-position = Vector2(1701, 624)
-scale = Vector2(0.705128, 0.775261)
+position = Vector2(1621, 640)
 script = ExtResource("13_yairb")
 color = "Yellow"
 minimum_weight = 1.5
 maximum_weight = 2.0
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YellowPulver"]
-position = Vector2(3.5, 5)
+position = Vector2(147.5, -107.5)
 shape = SubResource("RectangleShape2D_tcvw4")
 
 [node name="YellowPulverSprite" type="AnimatedSprite2D" parent="YellowPulver"]
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_mtd7m")
+flip_h = true
 metadata/_edit_group_ = true
 
 [node name="Interact" type="AudioStreamPlayer" parent="YellowPulver/YellowPulverSprite"]
@@ -514,18 +492,19 @@ volume_db = -25.0
 bus = &"SFX"
 
 [node name="WaterCup" type="Area2D" parent="."]
-position = Vector2(277, 331)
-scale = Vector2(0.667183, 0.735443)
+position = Vector2(267, 284)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("11_jiefe")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaterCup"]
-position = Vector2(-4.5, -0.5)
+position = Vector2(-110, -90)
 shape = SubResource("RectangleShape2D_rqc8m")
 
 [node name="WaterCup" type="AnimatedSprite2D" parent="WaterCup"]
-position = Vector2(-4.49658, 8.15836)
+position = Vector2(1, -7)
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_owpuh")
 offset = Vector2(2.205, -2.975)
 metadata/_edit_group_ = true
@@ -539,15 +518,15 @@ bus = &"SFX"
 stream = SubResource("AudioStreamRandomizer_goukw")
 
 [node name="Marker2D2" type="Marker2D" parent="."]
-position = Vector2(858, 257)
+position = Vector2(684, 328)
 scale = Vector2(0.769601, 0.806024)
 
 [node name="Marker2D3" type="Marker2D" parent="."]
-position = Vector2(1007, 283)
+position = Vector2(831, 339)
 scale = Vector2(0.769601, 0.806024)
 
 [node name="Marker2D4" type="Marker2D" parent="."]
-position = Vector2(1126, 238)
+position = Vector2(976, 339)
 scale = Vector2(0.769601, 0.806024)
 
 [node name="Hover" type="AudioStreamPlayer" parent="."]
