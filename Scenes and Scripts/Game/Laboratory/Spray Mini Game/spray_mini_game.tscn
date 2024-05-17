@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://dfpwq4ngsnyed"]
+[gd_scene load_steps=71 format=3 uid="uid://dfpwq4ngsnyed"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://b6lgjjg6wm6rb" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_spraying_var1.mp3" id="17_rgjd6"]
 [ext_resource type="Texture2D" uid="uid://dm6h7pwdde3p" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation3.png" id="18_1cfw2"]
 [ext_resource type="Texture2D" uid="uid://bbv5lyt1g86ke" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation2.png" id="18_cjtse"]
+[ext_resource type="AudioStream" uid="uid://dtj3qeuo4253p" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_shaking_var1.mp3" id="18_ulme6"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/gun_in_hand.gd" id="19_8elaw"]
 [ext_resource type="Texture2D" uid="uid://dmvp78ceh110l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation3.png" id="19_cvus6"]
 [ext_resource type="Texture2D" uid="uid://bfbwhs0k815bb" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation4.png" id="20_114ax"]
@@ -459,6 +460,11 @@ texture = ExtResource("16_8gx7a")
 stream = ExtResource("17_rgjd6")
 
 [node name="ShakeSound" type="AudioStreamPlayer" parent="GunInHand"]
+stream = ExtResource("18_ulme6")
+
+[node name="Jamming" type="AudioStreamPlayer" parent="GunInHand"]
+
+[node name="Trigger" type="AudioStreamPlayer" parent="GunInHand"]
 
 [node name="SpinMinigame" type="TextureRect" parent="."]
 visible = false
