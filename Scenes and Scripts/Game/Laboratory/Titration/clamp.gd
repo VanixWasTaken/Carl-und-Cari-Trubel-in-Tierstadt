@@ -37,6 +37,7 @@ func _process(delta):
 
 func _on_clamp_area_mouse_entered():
 	if interactible:
+		$"../Hover".play()
 		mouse_inside = true
 		$ClampArea/Clamp.material = outline_shader
 
@@ -49,6 +50,7 @@ func _on_clamp_area_mouse_exited():
 
 func _on_clamp_area_area_entered(area):
 	if area.get_name() == "StandArea" and interactible:
+		$"../Hover".play()
 		var children = area.get_children()
 		for child in children:
 			if child.name == "Stand" || child.name == "Glasses":

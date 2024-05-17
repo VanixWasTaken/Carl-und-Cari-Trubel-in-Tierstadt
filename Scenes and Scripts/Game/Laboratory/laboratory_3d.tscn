@@ -490,6 +490,7 @@ mouse_filter = 0
 
 [node name="NPC Chameleon" type="Node3D" parent="." groups=["NPC"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3209, 0, -4.16521)
+visible = false
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="NPC Chameleon"]
 transform = Transform3D(-0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 4.20402, 1.18985)

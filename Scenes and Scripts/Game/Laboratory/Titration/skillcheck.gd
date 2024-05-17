@@ -19,8 +19,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	print(delta)
-	
 	if Global.dialog_playing == false and start_skillcheck == true:
 		if countdown == 0:
 			play_countdown()

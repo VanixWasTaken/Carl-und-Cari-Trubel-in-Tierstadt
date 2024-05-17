@@ -23,6 +23,7 @@ func _process(delta):
 		
 		######################## HANDLES THE POURING ANIMATIONS OF THE CLAMP ###########################
 		if tube_counter <= 3:
+			$PouringClamp/Pouring.play()
 			if tube_counter == 1:
 				$PouringClamp/PouringClampAnim.play("pouring_green")
 			elif tube_counter == 2:
