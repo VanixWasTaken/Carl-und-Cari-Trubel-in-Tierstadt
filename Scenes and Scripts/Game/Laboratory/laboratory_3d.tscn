@@ -302,7 +302,7 @@ mesh = SubResource("QuadMesh_mw0nr")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="WallLeft" type="StaticBody3D" parent="NavigationRegion3D/Walls" groups=["Side Wall"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.895, -0.356, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.895, -0.195814, 0)
 collision_layer = 32769
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/WallLeft"]
@@ -316,7 +316,7 @@ mesh = SubResource("QuadMesh_t24k3")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="WallRight" type="StaticBody3D" parent="NavigationRegion3D/Walls" groups=["Side Wall"]]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29, 4, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29, 4.20217, 0)
 collision_layer = 32768
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Walls/WallRight"]
@@ -385,7 +385,7 @@ shape = SubResource("BoxShape3D_pjgjo")
 [node name="Objects" type="Node3D" parent="."]
 
 [node name="Coats" parent="Objects" instance=ExtResource("12_0j0e7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0121, 5.1747, -4.50774)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.87, 5.1747, -4.50774)
 
 [node name="Table" parent="Objects" instance=ExtResource("10_1cvp0")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.151193, 2.93994, 2.26492)

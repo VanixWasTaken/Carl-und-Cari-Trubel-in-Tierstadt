@@ -25,7 +25,6 @@ func _input(event):
 	if Input.is_action_just_pressed("left_click"):
 		if mouse_inside:
 			$"../../Click".play()
-			$Shutter.play()
 			can_interact = true
 			if player_inside:
 				if !Global.talked_to_chameleon:
@@ -37,12 +36,14 @@ func _input(event):
 						dialog_instance = inspection_dialog.instantiate()
 						get_tree().get_current_scene().add_child(dialog_instance)
 						reset_mouse()
-			if !door_open:
+			if !door_open && Global.talked_to_chameleon_2:
 				door_open = true
+				$Shutter.play()
 				$Sprite3D.visible = false
 				if $"Reagenz Glasses" != null:
 					$"Reagenz Glasses".position.y += 100
 			elif door_open:
+				$Shutter.play()
 				door_open = false
 				$Sprite3D.visible = true
 				if $"Reagenz Glasses" != null:
