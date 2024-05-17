@@ -43,6 +43,7 @@ func _process(delta):
 		global_position = mouse_position
 		Global.mouse_full = true
 	if Input.is_action_just_released("left_click"):
+		print($"../DrinkHolder".new_water)
 		if follow_mouse:
 			follow_mouse = false
 			global_position = start_position
@@ -102,7 +103,6 @@ func _on_area_2d_area_entered(area):
 
 func red_pulver():
 	if $"../DrinkHolder".powder_just_in == true:
-		$"../DrinkHolder".water_in_current = false
 		$"../DrinkHolder".powder_just_in = false
 	await get_tree().create_timer(0.2).timeout
 	if red_on == true:
