@@ -1,9 +1,7 @@
-[gd_scene load_steps=53 format=3 uid="uid://dfm6sf40klc1x"]
+[gd_scene load_steps=56 format=3 uid="uid://dfm6sf40klc1x"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/titration.gd" id="1_rdept"]
 [ext_resource type="Texture2D" uid="uid://r82vd54v48ed" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG" id="1_tyn2s"]
-[ext_resource type="Texture2D" uid="uid://vw8qofpwgyb6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_phscale.png" id="2_e2340"]
-[ext_resource type="Texture2D" uid="uid://b4toblcow5vk5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_arrow.png" id="3_gdcxm"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="3_m8ddv"]
 [ext_resource type="Texture2D" uid="uid://b3al8u2mvobig" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigames2_testtuberag.png" id="4_gt4bg"]
 [ext_resource type="Texture2D" uid="uid://c17na0m652jpr" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtubes_stage1.PNG" id="6_jpfr7"]
@@ -29,17 +27,21 @@
 [ext_resource type="Texture2D" uid="uid://bh8r22b5qh00s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Purple/minigame2_testtubeholder_purple_anim2.PNG" id="18_ueop8"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/skillcheck.gd" id="19_4kngl"]
 [ext_resource type="Texture2D" uid="uid://cx0ajetbl86fy" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Burette/minigame2_burette.PNG" id="19_vlw0g"]
-[ext_resource type="Texture2D" uid="uid://c6j7123gk1lp5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Burette/drehknopf_placeholder.png" id="21_3cyde"]
-[ext_resource type="Texture2D" uid="uid://c3r5ryx5nl8h1" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_bar.png" id="22_8h0tj"]
 [ext_resource type="AudioStream" uid="uid://55ynjc1gj7qv" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_waterdrip_var1.mp3" id="22_meowl"]
-[ext_resource type="Texture2D" uid="uid://cb5brlyflthb4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_arrow.png" id="23_02ikp"]
 [ext_resource type="AudioStream" uid="uid://b3mq0brl2b2on" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_waterdrip_var2.mp3" id="23_n877r"]
 [ext_resource type="AudioStream" uid="uid://cv1ke855ogkwj" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_waterdrip_var3.mp3" id="24_e0hfk"]
-[ext_resource type="Texture2D" uid="uid://dpcigt205pknn" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_countdown_three.png" id="24_v55k4"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="26_hj2at"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="27_a23cj"]
 [ext_resource type="AudioStream" uid="uid://ctitmuggatwdy" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_bubbling_var1.mp3" id="30_mvddd"]
 [ext_resource type="AudioStream" uid="uid://cuvm7mdv5ihpn" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_wrongarea_var1.mp3" id="32_hy0i5"]
+[ext_resource type="Texture2D" uid="uid://8xdnh1mengaw" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_scale.png" id="33_lp8io"]
+[ext_resource type="Texture2D" uid="uid://5p7kair3bh5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_scale_clamp.png" id="34_yqagh"]
+[ext_resource type="Texture2D" uid="uid://cmsb7vgdfcedm" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/lab_minigame1_ph_scale.png" id="35_1rmuu"]
+[ext_resource type="Texture2D" uid="uid://qjtphsvl6bpt" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/lab_minigame1_ph_scale_pointer.png" id="36_pgrkc"]
+[ext_resource type="Texture2D" uid="uid://b61bufur66l1g" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_numbers_3.png" id="37_hansw"]
+[ext_resource type="Texture2D" uid="uid://c4np58ohnv605" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Water Drops/lab_minigame2_water_drops_0001.png" id="40_12kxd"]
+[ext_resource type="Texture2D" uid="uid://crnay8jkgon8r" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Water Drops/lab_minigame2_water_drops_0002.png" id="41_ayen3"]
+[ext_resource type="Texture2D" uid="uid://b5q7pby6fhui1" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Water Drops/lab_minigame2_water_drops_0003.png" id="42_7j5n3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op731"]
 size = Vector2(443, 376)
@@ -145,10 +147,10 @@ stream_2/stream = ExtResource("24_e0hfk")
 stream_2/weight = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b0cak"]
-size = Vector2(222, 74.5)
+size = Vector2(250, 121.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyhnk"]
-size = Vector2(41, 68)
+size = Vector2(21.1281, 68)
 
 [sub_resource type="Animation" id="Animation_v4yay"]
 resource_name = "movement"
@@ -164,7 +166,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5, 1.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1284, 643), Vector2(943, 643), Vector2(1636, 643)]
+"values": [Vector2(1071, 311), Vector2(689, 311), Vector2(1430, 311)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r6p8w"]
@@ -181,6 +183,23 @@ stream_0/stream = ExtResource("26_hj2at")
 stream_0/weight = 1.0
 stream_1/stream = ExtResource("27_a23cj")
 stream_1/weight = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mwo6c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_12kxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ayen3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_7j5n3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 9.0
+}]
 
 [node name="Titration" type="Node2D"]
 script = ExtResource("1_rdept")
@@ -269,10 +288,6 @@ position = Vector2(378, 487)
 [node name="Burette" type="Sprite2D" parent="Skillcheck/Burette"]
 texture = ExtResource("19_vlw0g")
 
-[node name="Knob" type="Sprite2D" parent="Skillcheck/Burette"]
-position = Vector2(126, -81)
-texture = ExtResource("21_3cyde")
-
 [node name="Drip" type="AudioStreamPlayer" parent="Skillcheck/Burette"]
 stream = SubResource("AudioStreamRandomizer_0loq3")
 volume_db = -12.0
@@ -287,23 +302,23 @@ visible = false
 [node name="Sprite2D" type="Sprite2D" parent="Skillcheck/Bar"]
 position = Vector2(1063, 307)
 scale = Vector2(0.810178, 0.810178)
-texture = ExtResource("22_8h0tj")
+texture = ExtResource("33_lp8io")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Skillcheck/Bar"]
-position = Vector2(1061, 293.75)
+position = Vector2(1075, 317.25)
 shape = SubResource("RectangleShape2D_b0cak")
 
 [node name="Arrow" type="Area2D" parent="Skillcheck"]
 visible = false
-position = Vector2(1284, 643)
+position = Vector2(1071, 311)
+scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Skillcheck/Arrow"]
-position = Vector2(-222.75, -222.75)
+position = Vector2(2.62805, -1)
 scale = Vector2(0.280291, 0.280291)
-texture = ExtResource("23_02ikp")
+texture = ExtResource("34_yqagh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Skillcheck/Arrow"]
-position = Vector2(-224.5, -344)
 shape = SubResource("RectangleShape2D_xyhnk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Skillcheck/Arrow"]
@@ -316,11 +331,14 @@ visible = false
 position = Vector2(1714, 311)
 
 [node name="Glass" type="Sprite2D" parent="Skillcheck/PH-Scale"]
-texture = ExtResource("2_e2340")
+position = Vector2(74, 25)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("35_1rmuu")
 
 [node name="Arrow" type="Sprite2D" parent="Skillcheck/PH-Scale"]
-position = Vector2(0, 137)
-texture = ExtResource("3_gdcxm")
+position = Vector2(-195, 32)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("36_pgrkc")
 
 [node name="TextureRect" type="TextureRect" parent="Skillcheck"]
 visible = false
@@ -334,7 +352,7 @@ texture = SubResource("CanvasTexture_3hxg5")
 
 [node name="Numbers" type="Sprite2D" parent="Skillcheck/TextureRect"]
 position = Vector2(1055, 564)
-texture = ExtResource("24_v55k4")
+texture = ExtResource("37_hansw")
 
 [node name="MiniGameTime" type="Timer" parent="Skillcheck"]
 wait_time = 20.0
@@ -344,17 +362,16 @@ one_shot = true
 stream = ExtResource("30_mvddd")
 volume_db = -18.0
 
-[node name="Button" type="Button" parent="."]
-offset_left = 776.0
-offset_top = 27.0
-offset_right = 1165.0
-offset_bottom = 206.0
-theme_override_font_sizes/font_size = 156
-text = "BACK"
-
 [node name="Hover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_qis1a")
 volume_db = -15.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+z_index = 5
+position = Vector2(504, 653)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_mwo6c")
 
 [connection signal="balancing_game" from="." to="Skillcheck" method="_on_titration_balancing_game"]
 [connection signal="pouring_time" from="Clamp" to="." method="_on_clamp_pouring_time"]
@@ -365,4 +382,4 @@ volume_db = -15.0
 [connection signal="area_entered" from="Skillcheck/Bar" to="Skillcheck" method="_on_bar_area_entered"]
 [connection signal="area_exited" from="Skillcheck/Bar" to="Skillcheck" method="_on_bar_area_exited"]
 [connection signal="timeout" from="Skillcheck/MiniGameTime" to="Skillcheck" method="_on_mini_game_time_timeout"]
-[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="Skillcheck" method="_on_animated_sprite_2d_animation_finished"]

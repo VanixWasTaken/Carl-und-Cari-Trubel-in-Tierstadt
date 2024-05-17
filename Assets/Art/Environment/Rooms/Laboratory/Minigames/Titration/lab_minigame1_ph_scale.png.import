@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb5brlyflthb4"
-path="res://.godot/imported/minigame2_skillcheck_arrow.png-57e446d7533f589d2a6637419c81ed9e.ctex"
+uid="uid://cmsb7vgdfcedm"
+path="res://.godot/imported/lab_minigame1_ph_scale.png-d6eab609c94f83f0c92d0c2ca0fb17c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_arrow.png"
-dest_files=["res://.godot/imported/minigame2_skillcheck_arrow.png-57e446d7533f589d2a6637419c81ed9e.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/lab_minigame1_ph_scale.png"
+dest_files=["res://.godot/imported/lab_minigame1_ph_scale.png-d6eab609c94f83f0c92d0c2ca0fb17c0.ctex"]
 
 [params]
 

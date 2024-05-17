@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chp328g3qr6nm"
-path="res://.godot/imported/minigame2_skillcheck_countdown_one.png-80fbb25e5521ffd3736220a28446cf83.ctex"
+uid="uid://b61bufur66l1g"
+path="res://.godot/imported/lab_minigame2_numbers_3.png-0b2256e99ee3857f23e5480b62ad9cbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_countdown_one.png"
-dest_files=["res://.godot/imported/minigame2_skillcheck_countdown_one.png-80fbb25e5521ffd3736220a28446cf83.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_numbers_3.png"
+dest_files=["res://.godot/imported/lab_minigame2_numbers_3.png-0b2256e99ee3857f23e5480b62ad9cbd.ctex"]
 
 [params]
 

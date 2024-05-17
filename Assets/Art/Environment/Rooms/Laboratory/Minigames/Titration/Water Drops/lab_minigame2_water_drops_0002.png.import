@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgmcan8n8f1im"
-path="res://.godot/imported/minigame2_skillcheck_countdown_two.png-b0ca6b54fb97916d83fc344513b48c1f.ctex"
+uid="uid://crnay8jkgon8r"
+path="res://.godot/imported/lab_minigame2_water_drops_0002.png-558e0040d8cb9be8bc3984c87721be58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_countdown_two.png"
-dest_files=["res://.godot/imported/minigame2_skillcheck_countdown_two.png-b0ca6b54fb97916d83fc344513b48c1f.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Water Drops/lab_minigame2_water_drops_0002.png"
+dest_files=["res://.godot/imported/lab_minigame2_water_drops_0002.png-558e0040d8cb9be8bc3984c87721be58.ctex"]
 
 [params]
 

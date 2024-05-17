@@ -31,9 +31,11 @@ func _process(delta):
 		
 		if Input.is_action_just_pressed("space") and arrow_in_bar and !pressed_already:
 			$Burette/Drip.play()
-			$"PH-Scale/Arrow".position.y -= 50
-			if $"PH-Scale/Arrow".position.y > 340:
-				$"PH-Scale/Arrow".position.y = 340
+			$"PH-Scale/Arrow".position.y -= 40
+			$"../AnimatedSprite2D".visible = true
+			$"../AnimatedSprite2D".play()
+			if $"PH-Scale/Arrow".position.y > 326: #Niedrigster Wert / Unterster Strich
+				$"PH-Scale/Arrow".position.y = 326
 			pressed_already = true
 		
 		elif Input.is_action_just_pressed("space") and !arrow_in_bar and !pressed_already:
@@ -43,8 +45,8 @@ func _process(delta):
 			
 			$"PH-Scale/Arrow".position.y += 40 * delta
 			
-			if $"PH-Scale/Arrow".position.y < -80:
-				$"PH-Scale/Arrow".position.y = -80
+			if $"PH-Scale/Arrow".position.y < -263: #Oberster Strich
+				$"PH-Scale/Arrow".position.y = -263
 
 
 func _on_bar_area_entered(area):
@@ -65,13 +67,11 @@ func _on_titration_balancing_game():
 func play_countdown():
 	countdown = 1
 	$TextureRect.visible = true
-	$TextureRect/Numbers.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_countdown_three.png")
+	$TextureRect/Numbers.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_numbers_3.png")
 	await get_tree().create_timer(1).timeout
-	$TextureRect/Numbers.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_countdown_two.png")
+	$TextureRect/Numbers.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_numbers_2.png")
 	await get_tree().create_timer(1).timeout
-	$TextureRect/Numbers.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_countdown_one.png")
-	await get_tree().create_timer(1).timeout
-	$TextureRect/Numbers.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_countdown_go.png")
+	$TextureRect/Numbers.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_numbers_1.png")
 	await get_tree().create_timer(1).timeout
 	$TextureRect.visible = false
 	start_game = true
@@ -83,7 +83,7 @@ func _on_mini_game_time_timeout():
 	start_game = false
 	$Arrow/AnimationPlayer.stop()
 	$Bubbling.stop()
-	if $"PH-Scale/Arrow".position.y >= 83 and $"PH-Scale/Arrow".position.y <= 183:
+	if $"PH-Scale/Arrow".position.y >= 30 and $"PH-Scale/Arrow".position.y <= 121: #Gewinn Werte
 		var dialog_instance = win_dialog.instantiate()
 		add_child(dialog_instance)
 	else:
@@ -92,8 +92,12 @@ func _on_mini_game_time_timeout():
 		reset_entire_minigame()
 
 func reset_entire_minigame():
-	$"PH-Scale/Arrow".position.y = 137
+	$"PH-Scale/Arrow".position.y = 31 #Start Position, sollte so ungefähr bei genau der Mitte sein
 	start_skillcheck = true
 	arrow_in_bar = false
 	pressed_already = false
 	countdown = 0
+
+
+func _on_animated_sprite_2d_animation_finished():
+	$"../AnimatedSprite2D".visible = false

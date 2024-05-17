@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4toblcow5vk5"
-path="res://.godot/imported/minigame2_arrow.png-be5fa853721c738d604461c3bcbac425.ctex"
+uid="uid://c4np58ohnv605"
+path="res://.godot/imported/lab_minigame2_water_drops_0001.png-dead3f799a8d1758a5fccf8e96ea3a0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_arrow.png"
-dest_files=["res://.godot/imported/minigame2_arrow.png-be5fa853721c738d604461c3bcbac425.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Water Drops/lab_minigame2_water_drops_0001.png"
+dest_files=["res://.godot/imported/lab_minigame2_water_drops_0001.png-dead3f799a8d1758a5fccf8e96ea3a0a.ctex"]
 
 [params]
 
