@@ -112,7 +112,7 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "WOW es hat funktioniert. Ich bin wieder sichtbar!"
-		short_node_rect.texture = PRESET1
+		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		dialogs += 1
 
