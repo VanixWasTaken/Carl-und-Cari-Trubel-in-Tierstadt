@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=81 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dx0gnhwrby4rh" path="res://Scenes and Scripts/Game/Laboratory/Objects/sink.tscn" id="13_daqka"]
 [ext_resource type="PackedScene" uid="uid://cenk56k5odi8x" path="res://Scenes and Scripts/Game/Laboratory/Objects/scale.tscn" id="13_nfct0"]
 [ext_resource type="Texture2D" uid="uid://sss27wgaikyp" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chameleon_001.png" id="14_5lhuu"]
+[ext_resource type="AudioStream" uid="uid://cqa83j1wveufn" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_shutter_var1.mp3" id="14_wsmq2"]
 [ext_resource type="PackedScene" uid="uid://c6dhgxet661ke" path="res://Scenes and Scripts/Game/Laboratory/Objects/vessel.tscn" id="16_qbcfp"]
 [ext_resource type="AudioStream" uid="uid://eqkepd0aictl" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_chameleonsearching_var1.mp3" id="18_1fo6j"]
 [ext_resource type="Texture2D" uid="uid://dmxim1vrs58w3" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Searching/chemist_searching1.png" id="18_qvn3v"]
@@ -405,6 +406,12 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.151193, 2.93994, 2.2
 
 [node name="Cabinet" parent="Objects" instance=ExtResource("11_rky6m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.54585, 4.50758, -3.43774)
+
+[node name="Shutter" type="AudioStreamPlayer3D" parent="Objects/Cabinet"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.79592, 0)
+stream = ExtResource("14_wsmq2")
+volume_db = -15.0
+bus = &"SFX"
 
 [node name="Shelf" parent="Objects" instance=ExtResource("12_q43od")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.311, 8.6548, -4.63395)

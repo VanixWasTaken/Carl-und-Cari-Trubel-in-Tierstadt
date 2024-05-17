@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3c3s1nuw5me7"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/reagenz_glasses.gd" id="1_if34i"]
-[ext_resource type="Texture2D" uid="uid://l4wvwpd5bsx" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.PNG" id="2_17isb"]
+[ext_resource type="Texture2D" uid="uid://c0gbk4t47sqy" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.PNG" id="2_17isb"]
 [ext_resource type="Texture2D" uid="uid://b78wxgon00y5q" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks_highlight.png" id="3_fihun"]
-[ext_resource type="AudioStream" uid="uid://cf4emkal6ayqc" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var2.mp3" id="4_wa8w3"]
+[ext_resource type="AudioStream" uid="uid://dxs6n623s8kuw" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var3.mp3" id="4_3bjms"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6wgwi"]
 animations = [{
@@ -45,7 +45,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30302, -8.6269, 1.249)
 shape = SubResource("BoxShape3D_nleoc")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_wa8w3")
+stream = ExtResource("4_3bjms")
+volume_db = -12.0
+pitch_scale = 0.89
+bus = &"SFX"
 
 [connection signal="mouse_entered" from="Mouse_area" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="Mouse_area" to="." method="_on_area_3d_mouse_exited"]

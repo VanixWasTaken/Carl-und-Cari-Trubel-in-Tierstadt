@@ -47,6 +47,7 @@ func _ready():
 			$CameraPan.play("camera pan")
 			Global.cutscene_playing = true
 			Global.moving_allowed = false
+			MusicController._play_music("titration_trap", "laboratory")
 		
 		#Camera is glitching out after reentering the scene (didnt work at all before)
 	if Global.lab_cutscene_played == true:
@@ -60,7 +61,6 @@ func _ready():
 	#playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_creaks_var1.mp3"))
 	#playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind_var1.mp3"))
 	
-	MusicController._play_music("titration_trap", "laboratory")
 
 func _process(delta):
 	if !cutscene:

@@ -14,6 +14,7 @@ func  _ready():
 
 func _on_area_3d_mouse_entered():
 	frame = 1
+	$"../../Hover".play()
 	mouse_inside = true
 
 func _on_area_3d_mouse_exited():
@@ -23,6 +24,8 @@ func _on_area_3d_mouse_exited():
 func _input(event):
 	if Input.is_action_just_pressed("left_click"):
 		if mouse_inside:
+			$"../../Click".play()
+			$Shutter.play()
 			can_interact = true
 			if player_inside:
 				if !Global.talked_to_chameleon:
