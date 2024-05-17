@@ -27,6 +27,13 @@ func _process(delta):
 			$SpraySound.play()
 		$".".play("shooting")
 		is_shooting.emit()
+
+	elif Input.is_action_just_pressed("left_click") and !should_shoot_intern:
+		if !$Jamming.playing and self.visible:
+			$Trigger.play()
+			$Jamming.play()
+			$HoseNoise.play()
+
 	else:
 		$SpraySound.stop()
 		$".".play("default")
@@ -43,8 +50,6 @@ func _on_swipe_area_should_shoot():
 
 
 func _on_visible_chameleon_gun_is_jamming():
-	$Trigger.play()
 	$Jamming.play()
 	should_shoot_intern = false
 	Global.should_shoot = false
-

@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://dfpwq4ngsnyed"]
+[gd_scene load_steps=74 format=3 uid="uid://dfpwq4ngsnyed"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
@@ -22,7 +22,10 @@
 [ext_resource type="AudioStream" uid="uid://dtj3qeuo4253p" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_shaking_var1.mp3" id="18_ulme6"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/gun_in_hand.gd" id="19_8elaw"]
 [ext_resource type="Texture2D" uid="uid://dmvp78ceh110l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation3.png" id="19_cvus6"]
+[ext_resource type="AudioStream" uid="uid://bm7t2fc5yiunf" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_triggerclick_var1.mp3" id="19_rmeio"]
+[ext_resource type="AudioStream" uid="uid://bytljaekhfsg3" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_jamming_var1.mp3" id="19_v6irx"]
 [ext_resource type="Texture2D" uid="uid://bfbwhs0k815bb" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation4.png" id="20_114ax"]
+[ext_resource type="AudioStream" uid="uid://dk0mqinit5gom" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_hosenoise_var1.mp3" id="21_5el5d"]
 [ext_resource type="Texture2D" uid="uid://k8vo3omv63bx" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation5.png" id="21_5enbi"]
 [ext_resource type="Texture2D" uid="uid://cfxioe6hxbws8" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation6.png" id="22_fsmpt"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/bottle_area.gd" id="23_2g2jj"]
@@ -463,8 +466,13 @@ stream = ExtResource("17_rgjd6")
 stream = ExtResource("18_ulme6")
 
 [node name="Jamming" type="AudioStreamPlayer" parent="GunInHand"]
+stream = ExtResource("19_v6irx")
 
 [node name="Trigger" type="AudioStreamPlayer" parent="GunInHand"]
+stream = ExtResource("19_rmeio")
+
+[node name="HoseNoise" type="AudioStreamPlayer" parent="GunInHand"]
+stream = ExtResource("21_5el5d")
 
 [node name="SpinMinigame" type="TextureRect" parent="."]
 visible = false
