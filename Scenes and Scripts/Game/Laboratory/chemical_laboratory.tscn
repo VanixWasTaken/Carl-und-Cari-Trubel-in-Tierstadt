@@ -100,47 +100,6 @@ size = Vector2(161.122, 402.933)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqi52"]
 size = Vector2(449.277, 368.11)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_owpuh"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_0ugwe")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_0tl5x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_60s2y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_qvnxd")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqc8m"]
-size = Vector2(367, 443)
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6cgod"]
-streams_count = 5
-stream_0/stream = ExtResource("16_bgv0a")
-stream_0/weight = 1.0
-stream_1/stream = ExtResource("17_5wu6i")
-stream_1/weight = 1.0
-stream_2/stream = ExtResource("18_15po0")
-stream_2/weight = 1.0
-stream_3/stream = ExtResource("19_7nm1j")
-stream_3/weight = 1.0
-stream_4/stream = ExtResource("20_gnvqf")
-stream_4/weight = 1.0
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ogow"]
 animations = [{
 "frames": [{
@@ -199,6 +158,19 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rewly"]
 size = Vector2(399.288, 98.8885)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6cgod"]
+streams_count = 5
+stream_0/stream = ExtResource("16_bgv0a")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("17_5wu6i")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("18_15po0")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("19_7nm1j")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("20_gnvqf")
+stream_4/weight = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xc7aw"]
 size = Vector2(350, 293)
@@ -293,15 +265,43 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqc8m"]
+size = Vector2(367, 443)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_owpuh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_0ugwe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_0tl5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_60s2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qvnxd")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
 [node name="ChemicalLaboratory" type="Node2D"]
 script = ExtResource("1_b2cfh")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 modulate = Color(0.745098, 0.854902, 0.807843, 1)
-offset_left = -369.0
-offset_top = -345.0
-offset_right = 2572.0
-offset_bottom = 1343.0
+offset_left = -211.0
+offset_top = -190.0
+offset_right = 1945.0
+offset_bottom = 1129.0
 texture = SubResource("CanvasTexture_i7371")
 
 [node name="HelpButton" parent="." instance=ExtResource("2_ywiy6")]
@@ -377,27 +377,6 @@ metadata/_edit_use_anchors_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scale/Area2D"]
 position = Vector2(1.26526, -166.576)
 shape = SubResource("RectangleShape2D_iqi52")
-
-[node name="WaterCup" type="AnimatedSprite2D" parent="."]
-position = Vector2(277, 331)
-scale = Vector2(0.667183, 0.735443)
-sprite_frames = SubResource("SpriteFrames_owpuh")
-offset = Vector2(2.205, -2.975)
-script = ExtResource("11_jiefe")
-metadata/_edit_group_ = true
-
-[node name="WaterCup" type="Area2D" parent="WaterCup"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterCup/WaterCup"]
-position = Vector2(-4.5, -0.5)
-shape = SubResource("RectangleShape2D_rqc8m")
-
-[node name="Interact" type="AudioStreamPlayer" parent="WaterCup"]
-stream = SubResource("AudioStreamRandomizer_6cgod")
-volume_db = -25.0
-bus = &"SFX"
 
 [node name="PulverBowl" type="AnimatedSprite2D" parent="." groups=["PulverBowl"]]
 position = Vector2(626.545, 849.038)
@@ -496,6 +475,40 @@ stream = SubResource("AudioStreamRandomizer_6cgod")
 volume_db = -25.0
 bus = &"SFX"
 
+[node name="WaterCup" type="Area2D" parent="."]
+position = Vector2(277, 331)
+scale = Vector2(0.667183, 0.735443)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("11_jiefe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterCup"]
+position = Vector2(-4.5, -0.5)
+shape = SubResource("RectangleShape2D_rqc8m")
+
+[node name="WaterCup" type="AnimatedSprite2D" parent="WaterCup"]
+position = Vector2(-4.49658, 8.15836)
+sprite_frames = SubResource("SpriteFrames_owpuh")
+offset = Vector2(2.205, -2.975)
+metadata/_edit_group_ = true
+
+[node name="Interact" type="AudioStreamPlayer" parent="WaterCup/WaterCup"]
+stream = SubResource("AudioStreamRandomizer_6cgod")
+volume_db = -25.0
+bus = &"SFX"
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(858, 257)
+scale = Vector2(0.769601, 0.806024)
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(1007, 283)
+scale = Vector2(0.769601, 0.806024)
+
+[node name="Marker2D4" type="Marker2D" parent="."]
+position = Vector2(1126, 238)
+scale = Vector2(0.769601, 0.806024)
+
 [connection signal="area_entered" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="DrinkHolder/Area2D2" to="DrinkHolder" method="_on_area_2d_area_entered"]
@@ -504,8 +517,6 @@ bus = &"SFX"
 [connection signal="area_exited" from="DrinkHolder/Area2D3" to="DrinkHolder" method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="Scale/Area2D" to="PulverBowl" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Scale/Area2D" to="PulverBowl" method="_on_area_2d_area_exited"]
-[connection signal="mouse_entered" from="WaterCup/WaterCup" to="WaterCup" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="WaterCup/WaterCup" to="WaterCup" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="PulverBowl/PulverBowl" to="PulverBowl" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="PulverBowl/PulverBowl" to="PulverBowl" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="RedPulver" to="RedPulver" method="_on_mouse_entered"]
@@ -514,3 +525,5 @@ bus = &"SFX"
 [connection signal="mouse_exited" from="PurplePulver" to="PurplePulver" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="YellowPulver" to="YellowPulver" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="YellowPulver" to="YellowPulver" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="WaterCup" to="WaterCup" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="WaterCup" to="WaterCup" method="_on_mouse_exited"]
