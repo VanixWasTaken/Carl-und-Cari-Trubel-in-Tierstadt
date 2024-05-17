@@ -24,10 +24,11 @@ Global="*res://Scenes and Scripts/global.gd"
 
 [display]
 
-window/size/viewport_width=970
-window/size/viewport_height=540
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
 window/size/initial_position_type=0
-window/stretch/scale=0.5
+window/stretch/mode="canvas_items"
 
 [filesystem]
 
