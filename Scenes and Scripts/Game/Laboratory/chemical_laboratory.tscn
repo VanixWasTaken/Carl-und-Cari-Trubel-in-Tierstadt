@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=77 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
 [ext_resource type="Texture2D" uid="uid://djwgsl8qdi8h6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_empty.png" id="2_ujlwc"]
@@ -55,6 +55,9 @@
 [ext_resource type="Texture2D" uid="uid://c1mtjn0dvt5lk" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/pulver_vessel_yellow_5.png" id="31_xnyqc"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/PowderMixing/pulver_bowl.gd" id="32_ebx3t"]
 [ext_resource type="PackedScene" uid="uid://hvla4dyxh56b" path="res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_1.tscn" id="54_l6ekg"]
+[ext_resource type="AudioStream" uid="uid://4jn1hqfjg8gj" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var1.mp3" id="56_1kyrl"]
+[ext_resource type="AudioStream" uid="uid://gx0o4f5bq21g" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var2.mp3" id="57_o03af"]
+[ext_resource type="AudioStream" uid="uid://bv85fsmky476u" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var3.mp3" id="58_3ma0y"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_i7371"]
 specular_color = Color(0.745098, 0.854902, 0.807843, 1)
@@ -293,6 +296,16 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_goukw"]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("56_1kyrl")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("57_o03af")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("58_3ma0y")
+stream_2/weight = 1.0
+
 [node name="ChemicalLaboratory" type="Node2D"]
 script = ExtResource("1_b2cfh")
 
@@ -497,6 +510,9 @@ stream = SubResource("AudioStreamRandomizer_6cgod")
 volume_db = -25.0
 bus = &"SFX"
 
+[node name="Sloshing" type="AudioStreamPlayer" parent="WaterCup/WaterCup"]
+stream = SubResource("AudioStreamRandomizer_goukw")
+
 [node name="Marker2D2" type="Marker2D" parent="."]
 position = Vector2(858, 257)
 scale = Vector2(0.769601, 0.806024)
@@ -508,6 +524,8 @@ scale = Vector2(0.769601, 0.806024)
 [node name="Marker2D4" type="Marker2D" parent="."]
 position = Vector2(1126, 238)
 scale = Vector2(0.769601, 0.806024)
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
 
 [connection signal="area_entered" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_exited"]
