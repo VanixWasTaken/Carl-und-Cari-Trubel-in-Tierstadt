@@ -8,6 +8,7 @@ var mouse_inside = false
 var dialog2 = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Spray Mini Game Dialog/dialog_spray_mini_game2.tscn")
 var dialog4 = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Spray Mini Game Dialog/dialog_spray_mini_game4.tscn")
 @onready var gun_in_hand = $GunInHand
+@onready var progress_bar = $ProgressBar
 
 
 func _ready():
@@ -25,6 +26,7 @@ func _process(delta):
 			for baby in babies:
 				if baby.name == "DialogBox":
 					baby.gun_gets_visible.connect(gun_gets_visible)
+					progress_bar.visible = true
 
 
 func _on_area_2d_mouse_entered():
