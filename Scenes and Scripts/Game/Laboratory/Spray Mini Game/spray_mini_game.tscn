@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://dfpwq4ngsnyed"]
+[gd_scene load_steps=78 format=3 uid="uid://dfpwq4ngsnyed"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://lmaouvkc3f5" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle1.png" id="3_ivchp"]
 [ext_resource type="Texture2D" uid="uid://dwgi13mmayd2l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_gun.png" id="3_ww0fy"]
 [ext_resource type="Texture2D" uid="uid://chu3r7ga3hn5s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_bottle.png" id="4_7yw8r"]
-[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.PNG" id="5_wj47e"]
+[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png" id="5_wj47e"]
 [ext_resource type="Texture2D" uid="uid://b527t0x1gymds" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_front.png" id="11_djqfr"]
 [ext_resource type="Texture2D" uid="uid://dwlpn0vtf4lyd" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_light.png" id="13_rj72p"]
 [ext_resource type="Shader" path="res://Shader/spray_mini_game.gdshader" id="13_rn5a4"]
@@ -47,6 +47,9 @@
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="36_0avx1"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="37_dyl1p"]
 [ext_resource type="AudioStream" uid="uid://c766qlirsa615" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_screwingpaint_var4.mp3" id="43_g3024"]
+[ext_resource type="Texture2D" uid="uid://c1m2ow40x8hdq" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Progress Bar/lab_minigame3_progress_bar_bar.png" id="48_jtt73"]
+[ext_resource type="Texture2D" uid="uid://bsoujnqt4r7pi" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Progress Bar/lab_minigame3_progress_bar_square.png" id="49_wbby8"]
+[ext_resource type="Texture2D" uid="uid://dy8ajdr15pfdq" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Progress Bar/lab_minigame3_progress_bar_bubbles.png" id="50_oyde6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bmvvo"]
 animations = [{
@@ -371,6 +374,9 @@ stream_0/weight = 1.0
 stream_1/stream = ExtResource("37_dyl1p")
 stream_1/weight = 1.0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hkmon"]
+load_path = "res://.godot/imported/lab_minigame3_progress_bar_square.png-0b5b6cdbb6163a0124a999432093bc00.ctex"
+
 [node name="SprayMiniGame" type="Node2D"]
 script = ExtResource("1_wcnbr")
 
@@ -575,6 +581,29 @@ volume_db = -15.0
 
 [node name="PickUp" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("43_g3024")
+
+[node name="ProgressBar" type="Node2D" parent="."]
+visible = false
+
+[node name="HUD" type="Sprite2D" parent="ProgressBar"]
+position = Vector2(960, 928)
+scale = Vector2(0.71393, 0.71393)
+texture = ExtResource("48_jtt73")
+
+[node name="ProgressBarStill" type="Sprite2D" parent="ProgressBar"]
+position = Vector2(566, 989)
+scale = Vector2(0.676471, 0.676471)
+texture = ExtResource("49_wbby8")
+
+[node name="ProgressBarMoving" type="Sprite2D" parent="ProgressBar"]
+position = Vector2(566, 989)
+scale = Vector2(0.676471, 0.676471)
+texture = SubResource("CompressedTexture2D_hkmon")
+
+[node name="Bubbles" type="Sprite2D" parent="ProgressBar"]
+position = Vector2(959, 927)
+scale = Vector2(0.725124, 0.725124)
+texture = ExtResource("50_oyde6")
 
 [connection signal="gun_is_jamming" from="VisibleChameleon" to="GunInHand" method="_on_visible_chameleon_gun_is_jamming"]
 [connection signal="area_entered" from="VisibleChameleon/Area2D" to="VisibleChameleon" method="_on_area_2d_area_entered"]
