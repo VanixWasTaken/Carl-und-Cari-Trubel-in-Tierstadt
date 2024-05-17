@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dfm6sf40klc1x"]
+[gd_scene load_steps=43 format=3 uid="uid://dfm6sf40klc1x"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/titration.gd" id="1_rdept"]
 [ext_resource type="Texture2D" uid="uid://r82vd54v48ed" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG" id="1_tyn2s"]
@@ -18,13 +18,20 @@
 [ext_resource type="Texture2D" uid="uid://uf7rld20e5b5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Orange/minigame2_testtubeholder_orange_anim1.PNG" id="15_ovnp4"]
 [ext_resource type="Texture2D" uid="uid://cgsc4yi27gqc0" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Orange/minigame2_testtubeholder_orange_anim2.PNG" id="16_5swtm"]
 [ext_resource type="Texture2D" uid="uid://gibiwr2efchp" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Purple/minigame2_testtubeholder_purple_anim1.PNG" id="17_frm04"]
+[ext_resource type="AudioStream" uid="uid://cqqv5sjph5jnh" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakerpour_var1.mp3" id="18_l2l7m"]
 [ext_resource type="Texture2D" uid="uid://bh8r22b5qh00s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Purple/minigame2_testtubeholder_purple_anim2.PNG" id="18_ueop8"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/skillcheck.gd" id="19_4kngl"]
 [ext_resource type="Texture2D" uid="uid://cx0ajetbl86fy" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Burette/minigame2_burette.PNG" id="19_vlw0g"]
 [ext_resource type="Texture2D" uid="uid://c6j7123gk1lp5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Burette/drehknopf_placeholder.png" id="21_3cyde"]
 [ext_resource type="Texture2D" uid="uid://c3r5ryx5nl8h1" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_bar.png" id="22_8h0tj"]
+[ext_resource type="AudioStream" uid="uid://55ynjc1gj7qv" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_waterdrip_var1.mp3" id="22_meowl"]
 [ext_resource type="Texture2D" uid="uid://cb5brlyflthb4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_arrow.png" id="23_02ikp"]
+[ext_resource type="AudioStream" uid="uid://b3mq0brl2b2on" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_waterdrip_var2.mp3" id="23_n877r"]
+[ext_resource type="AudioStream" uid="uid://cv1ke855ogkwj" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_waterdrip_var3.mp3" id="24_e0hfk"]
 [ext_resource type="Texture2D" uid="uid://dpcigt205pknn" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/minigame2_skillcheck_countdown_three.png" id="24_v55k4"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="26_hj2at"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="27_a23cj"]
+[ext_resource type="AudioStream" uid="uid://ctitmuggatwdy" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_bubbling_var1.mp3" id="30_mvddd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op731"]
 size = Vector2(443, 376)
@@ -98,6 +105,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0loq3"]
+streams_count = 3
+stream_0/stream = ExtResource("22_meowl")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("23_n877r")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("24_e0hfk")
+stream_2/weight = 1.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b0cak"]
 size = Vector2(222, 74.5)
 
@@ -127,6 +143,14 @@ _data = {
 }
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3hxg5"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qis1a"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("26_hj2at")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("27_a23cj")
+stream_1/weight = 1.0
 
 [node name="Titration" type="Node2D"]
 script = ExtResource("1_rdept")
@@ -195,6 +219,10 @@ position = Vector2(617, 352)
 sprite_frames = SubResource("SpriteFrames_ui1i3")
 animation = &"no"
 
+[node name="Pouring" type="AudioStreamPlayer" parent="PouringClamp"]
+stream = ExtResource("18_l2l7m")
+volume_db = -15.0
+
 [node name="Skillcheck" type="Node2D" parent="."]
 script = ExtResource("19_4kngl")
 
@@ -207,6 +235,13 @@ texture = ExtResource("19_vlw0g")
 [node name="Knob" type="Sprite2D" parent="Skillcheck/Burette"]
 position = Vector2(126, -81)
 texture = ExtResource("21_3cyde")
+
+[node name="Drip" type="AudioStreamPlayer" parent="Skillcheck/Burette"]
+stream = SubResource("AudioStreamRandomizer_0loq3")
+volume_db = -12.0
+bus = &"SFX"
+
+[node name="Failure" type="AudioStreamPlayer" parent="Skillcheck/Burette"]
 
 [node name="Bar" type="Area2D" parent="Skillcheck"]
 visible = false
@@ -239,13 +274,14 @@ libraries = {
 }
 
 [node name="PH-Scale" type="Node2D" parent="Skillcheck"]
+visible = false
 position = Vector2(1714, 311)
 
 [node name="Glass" type="Sprite2D" parent="Skillcheck/PH-Scale"]
 texture = ExtResource("2_e2340")
 
 [node name="Arrow" type="Sprite2D" parent="Skillcheck/PH-Scale"]
-position = Vector2(0, -91)
+position = Vector2(0, 137)
 texture = ExtResource("3_gdcxm")
 
 [node name="TextureRect" type="TextureRect" parent="Skillcheck"]
@@ -266,6 +302,10 @@ texture = ExtResource("24_v55k4")
 wait_time = 20.0
 one_shot = true
 
+[node name="Bubbling" type="AudioStreamPlayer" parent="Skillcheck"]
+stream = ExtResource("30_mvddd")
+volume_db = -12.0
+
 [node name="Button" type="Button" parent="."]
 offset_left = 776.0
 offset_top = 27.0
@@ -273,6 +313,10 @@ offset_right = 1165.0
 offset_bottom = 206.0
 theme_override_font_sizes/font_size = 156
 text = "BACK"
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_qis1a")
+volume_db = -15.0
 
 [connection signal="balancing_game" from="." to="Skillcheck" method="_on_titration_balancing_game"]
 [connection signal="pouring_time" from="Clamp" to="." method="_on_clamp_pouring_time"]

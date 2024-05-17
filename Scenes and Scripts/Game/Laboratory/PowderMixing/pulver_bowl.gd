@@ -20,12 +20,14 @@ var powder_on = false
 var powder_sprite
 var got_place = false
 var follow_mouse
+var powder_drag
 var too_much_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_too_much.tscn")
 var enough_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_enough.tscn")
 var wrong_pulver_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_wrong_pulver.tscn")
 var too_little_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_too_little.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	powder_drag = $PulverBowl/Dragging
 	start_position = position
 
 
@@ -35,6 +37,7 @@ func _process(delta):
 	$"../Scale/RichTextLabel".text = str(weight) + " g"
 	if Input.is_action_just_pressed("left_click") && mouse_on:
 		follow_mouse = true
+		dragging()
 	if follow_mouse:
 		mouse_position = get_global_mouse_position()
 		global_position = mouse_position
@@ -66,6 +69,7 @@ func _on_area_2d_mouse_exited():
 
 
 func _on_area_2d_area_entered(area):
+	$"../Hover".play()
 	area_name = area.get_name()
 	if area_name != "PulverBowl":
 		if needed_pulver ==  area.color:
@@ -208,4 +212,9 @@ func _reset_bowl():
 		global_position = start_position
 
 
-
+func dragging():
+	while follow_mouse == true:
+		if powder_drag != null:
+			powder_drag.play()
+			
+			await get_tree().create_timer(randf_range(0.5, 1.5)).timeout
