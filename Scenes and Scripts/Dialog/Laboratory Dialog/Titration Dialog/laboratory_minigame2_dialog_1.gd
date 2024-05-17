@@ -188,7 +188,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Stoffe mit einem pH-Wert unter 7 sind sauer, während Stoffe mit einem pH-Wert über 7 basisch sind. Wasser hat einen pH-Wert von genau 7, was bedeutet, dass es neutral ist."
+		short_node_text.text = "Stoffe mit einem pH-Wert unter 7 sind sauer, während Stoffe mit einem pH-Wert über 7 basisch sind."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -209,7 +209,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Seife ist ein Beispiel für einen basischen Stoff, deswegen fühlt sie sich so rutschig an und schmeckt bitter. Aber bitte probier zuhause nicht Seife zu essen!"
+		short_node_text.text = "Seife ist ein Beispiel für einen basischen Stoff, deswegen fühlt sie sich so rutschig an und schmeckt bitter. Aber bitte iss keine Seife!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1

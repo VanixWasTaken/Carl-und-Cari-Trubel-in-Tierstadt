@@ -55,6 +55,6 @@ func reset_mouse():
 		frame = 0
 
 func _process(delta):
-	if Global.talked_to_chameleon_3 && !changed_scenery:
+	if Global.talked_to_chameleon_3 && !changed_scenery && !Global.return_laboratory_3:
 		frame = 1
 		changed_scenery = true
