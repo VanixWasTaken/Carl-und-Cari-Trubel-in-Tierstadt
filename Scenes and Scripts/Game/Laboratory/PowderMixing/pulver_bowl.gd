@@ -97,6 +97,9 @@ func _on_area_2d_area_entered(area):
 			right_powder = false
 
 func red_pulver():
+	if $"../DrinkHolder".powder_just_in == true:
+		$"../DrinkHolder".water_in_current = false
+		$"../DrinkHolder".powder_just_in = false
 	await get_tree().create_timer(0.2).timeout
 	if red_on == true:
 		weight += 0.1
@@ -115,6 +118,10 @@ func red_pulver():
 		red_pulver()
 
 func yellow_pulver():
+	if $"../DrinkHolder".powder_just_in == true:
+		$"../DrinkHolder".powder_just_in = false
+		if !$"../DrinkHolder".new_water:
+			$"../DrinkHolder".water_in_current = false
 	await get_tree().create_timer(0.2).timeout
 	if yellow_on == true:
 		weight += 0.2
