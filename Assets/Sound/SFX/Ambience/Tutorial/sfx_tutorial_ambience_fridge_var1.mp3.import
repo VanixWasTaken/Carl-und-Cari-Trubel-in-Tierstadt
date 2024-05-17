@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/sfx_tutorial_ambience_fridge_var1.mp3-bdae1ae
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

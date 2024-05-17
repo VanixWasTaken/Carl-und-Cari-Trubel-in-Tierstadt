@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/sfx_tutorial_ambience_wind_var1.mp3-8562b6a6f
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
