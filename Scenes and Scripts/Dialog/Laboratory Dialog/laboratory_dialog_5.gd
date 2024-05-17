@@ -168,16 +168,6 @@ func add_right_dialog_box():
 		short_node_name.text = "Christina"
 		dialogs += 1
 
-	elif dialogs == 8:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = ""
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Christina"
-		dialogs += 1
-		same_speaker = true
 	
 	elif dialogs == 9:
 		var short_node = get_child(2)

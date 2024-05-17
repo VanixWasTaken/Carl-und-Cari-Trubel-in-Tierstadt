@@ -133,7 +133,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "K-k-könnt ihr mir helfen meine V-V-Visabel Chemikalie zu mixen? Mit der werde ich wieder sichtbar."
+		short_node_text.text = "K-K-Könnt ihr mir helfen meine V-V-Visabel Chemikalie zu mixen? Mit der werde ich wieder sichtbar."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -156,7 +156,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Bitte holt die Pulver aus dem Schrank, sucht die Reagenzgläser und füllt W-w-wasser in den Behälter, der auf dem Tisch steht."
+		short_node_text.text = "Bitte holt die Erlenmeyerkolben aus dem Schrank, sucht die Reagenzgläser und eine Waage. Bringt das alles dann zu dem großen Tisch in der Mitte."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1

@@ -110,7 +110,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "D-D-Das habt ihr sehr gut g-g-gemacht. Vielen Dank"
+		short_node_text.text = "D-D-Das habt ihr sehr gut g-g-gemacht. Vielen Dank."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1

@@ -104,7 +104,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Deine Aufgabe ist es die Pulver mit destilliertem Wasser zu mischen."
+		short_node_text.text = "Eure Aufgabe ist es die Pulver mit destilliertem Wasser zu mischen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -115,7 +115,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Achte dabei auf die Waage, wenn d-d-du zu viel Pulver benutzt musst du von v-v-vorne anfangen."
+		short_node_text.text = "Achtet dabei auf die Waage, wenn ih-ih-ihr zu viel Pulver benutzt müsst ihr von v-v-vorne anfangen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1

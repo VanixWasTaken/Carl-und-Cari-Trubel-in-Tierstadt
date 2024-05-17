@@ -73,7 +73,7 @@ func add_left_dialog_box():
 		elif random_dialog == 1:
 			short_node_text.text = "Vielleicht kann mir die Laborarbeiterin sagen, was das ist."
 		elif random_dialog == 2:
-			short_node_text.text = "Ich sollte zuerst mit dem Chamäleon reden!"
+			short_node_text.text = "Ich frage mich wofür man das braucht."
 		elif random_dialog == 3:
 			short_node_text.text = "Oh, was ist das denn?"
 		elif random_dialog == 4:

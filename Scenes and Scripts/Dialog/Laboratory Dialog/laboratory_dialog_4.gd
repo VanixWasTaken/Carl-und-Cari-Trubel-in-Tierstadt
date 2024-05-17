@@ -146,7 +146,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Wenn meine B-B-Berechnungen richtig waren, sollte ich dann wieder s-s-sichtbar werden."
+		short_node_text.text = "Wenn meine B-B-Berechnungen richtig sind, sollte ich dann wieder s-s-sichtbar werden."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -168,7 +168,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Der ist eigentlich n-n-nur für die unsichersten aller Chemikalien gedacht, a-a-a-ber heute ist er wohl meine Dusche."
+		short_node_text.text = "Der ist eigentlich n-n-nur für die unsichersten aller Chemikalien gedacht, a-a-aber heute ist er wohl meine Dusche."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1

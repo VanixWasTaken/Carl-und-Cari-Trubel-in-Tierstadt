@@ -58,12 +58,12 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Geh zum Chamäleon und rede mit ihr."
+			short_node_text.text = "Geh zum Laborarbeiterin und rede mit ihr."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Geh zum Chamäleon und rede mit ihr."
+			short_node_text.text = "Geh zum Laborarbeiterin und rede mit ihr."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
@@ -74,12 +74,12 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Sammel die Waage und die Reagenzgläser ein und befülle den Behälter mit Wasser. Bringe die Sachen danach zum Tisch."
+			short_node_text.text = "Sammel die Waage, die Reagenzgläser und die Erlenmeyerkolben ein. Bringe die Sachen danach zum Tisch."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Sammel die Waage und die Reagenzgläser ein und befülle den Behälter mit Wasser. Bringe die Sachen danach zum Tisch."
+			short_node_text.text = "Sammel die Waage, die Reagenzgläser und die Erlenmeyerkolben ein. Bringe die Sachen danach zum Tisch."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
@@ -90,12 +90,12 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Rede mit Christina dem Chamäleon."
+			short_node_text.text = "Rede mit Christina dem Chemie-Chamäleon."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Rede mit Christina dem Chamäleon."
+			short_node_text.text = "Rede mit Christina dem Chemie-Chamäleon."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
@@ -106,7 +106,7 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Hole die Mischungen vom Tisch"
+			short_node_text.text = "Hole die Mischungen vom Tisch."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
@@ -122,12 +122,12 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Trage die Mischungen zur Laborabzugshaube."
+			short_node_text.text = "Trage die Mischungen zur Laborabzugshaube. Die ist links in die Wand eingelassen."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Trage die Mischungen zur Laborabzugshaube."
+			short_node_text.text = "Trage die Mischungen zur Laborabzugshaube. Die ist links in die Wand eingelassen."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
@@ -154,12 +154,12 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Geh zum Fenster mit den Handschuheinlässen."
+			short_node_text.text = "Geh zum Fenster mit den Handschuheinlässen. Das Fenster befindet sich an der Hinterwand."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Geh zum Fenster mit den Handschuheinlässen."
+			short_node_text.text = "Geh zum Fenster mit den Handschuheinlässen. Das Fenster befindet sich an der Hinterwand."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1

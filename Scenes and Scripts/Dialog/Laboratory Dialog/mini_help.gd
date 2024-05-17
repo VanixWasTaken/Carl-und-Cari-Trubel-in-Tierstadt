@@ -139,12 +139,12 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Schraube die MIschung an die Spritzpistole."
+			short_node_text.text = "Schraube die Mischung an die Spritzpistole."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Schraube die MIschung an die Spritzpistole."
+			short_node_text.text = "Schraube die Mischung an die Spritzpistole."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1
@@ -171,12 +171,12 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab. Falls die Spritzpistole verklemmt, schüttel die Maus kurz."
+			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab. Falls die Spritzpistole verklemmt, schüttel die Maus."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab. Falls die Spritzpistole verklemmt, schüttel die Maus kurz."
+			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab. Falls die Spritzpistole verklemmt, schüttel die Maus."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			dialogs += 1

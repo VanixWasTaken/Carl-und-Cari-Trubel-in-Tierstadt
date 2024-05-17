@@ -77,7 +77,29 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Okay, dann fülle ich jetzt erstmal das große Gefäß mit den Flüssigkeiten..."
+		short_node_text.text = "Was ist denn der pH-Wert?"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+	
+	elif dialogs == 8:
+		Global.mini_help_button_state += 1
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Was bedeutet sauer und basisch?"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+
+	elif dialogs == 12:
+		Global.mini_help_button_state += 1
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Alles klar! Ich füll jetzt erstmal die Reagenzgläser in das große Gefäß."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
@@ -113,7 +135,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "O-o-okay, jetzt müsst ihr erst die Flüssigkeiten in den g-g-großen Behälter geben und daraufhin eine T-t-titration durchführen."
+		short_node_text.text = "An dieser Station m-m-machen wir Titration. Dafür müsst ihr zuerst einmal den I-I-Inhalt der Reagenzgläser in das große G-G-Gefäß kippen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -123,7 +145,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Bei einer T-t-titration bestimmt man normalerweise den p-p-pH-Wert von einer Flüssigkeit."
+		short_node_text.text = "Mit T-T-Titration bestimmt man normalerweise den p-p-pH-Wert von einer Flüssigkeit."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -145,10 +167,54 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ja, dann l-l-leg mal los!"
+		short_node_text.text = "Der pH-Wert ist eine Skala von 1 bis 14, die uns sagt, wie sauer oder basisch eine Flüssigkeit ist."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
+		same_speaker = true
+	
+	elif dialogs == 7:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Sie funktioniert s-s-so ähnlich wie ein T-T-Termometer, dass uns sagt, ob es warm oder k-k-kalt ist."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+		same_speaker = false
+
+	elif dialogs == 9:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Stoffe mit einem pH-Wert unter 7 sind sauer, während Stoffe mit einem pH-Wert über 7 basisch sind. Wasser hat einen pH-Wert von genau 7, was bedeutet, dass es neutral ist."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+		same_speaker = true
+
+	elif dialogs == 10:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Eine Zitrone hat einen sehr niedrigen pH-Wert, deswegen schmeckt sie so sauer."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+
+	elif dialogs == 11:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Seife ist ein Beispiel für einen basischen Stoff, deswegen fühlt sie sich so rutschig an und schmeckt bitter. Aber bitte probier zuhause nicht Seife zu essen!"
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Christina"
+		dialogs += 1
+		same_speaker = false
 	
 	
 	

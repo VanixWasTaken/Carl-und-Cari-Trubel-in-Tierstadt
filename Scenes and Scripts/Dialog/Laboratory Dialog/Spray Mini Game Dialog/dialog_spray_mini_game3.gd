@@ -105,7 +105,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Oh ich hab dir wohl vergessen zu erklären wie die Spritzpistole funktioniert. Wenn du zu Lange am Stück schießt verklemmt sie sich."
+		short_node_text.text = "Ich hab v-v-vergessen zu erklären wie die Spritzpistole f-f-funktioniert. Wenn du zu Lange am Stück schießt v-v-verklemmt sie sich."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		dialogs += 1
