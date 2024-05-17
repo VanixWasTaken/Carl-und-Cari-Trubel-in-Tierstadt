@@ -13,7 +13,6 @@ var finished_pouring = false
 var signal_sent = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Clamp.disable_clamp()
 	var dialog_instance = first_dialog.instantiate()
 	add_child(dialog_instance)
 

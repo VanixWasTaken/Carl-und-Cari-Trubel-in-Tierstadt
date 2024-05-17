@@ -18,18 +18,27 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if mouse_inside and Input.is_action_pressed("left_click"):
-		$ClampArea/Clamp.material = no_shader
-		var new_position = get_global_mouse_position()
-		global_position = new_position
-	elif Input.is_action_just_released("left_click"):
-		if mouse_inside and !in_stand:
+	if !Global.dialog_playing:
+		
+		if mouse_inside and Input.is_action_pressed("left_click"):
+			
+			$ClampArea/Clamp.material = no_shader
+			
+			var new_position = get_global_mouse_position()
+			global_position = new_position
+		
+		elif Input.is_action_just_released("left_click"):
+			
+			if mouse_inside and !in_stand:
+				$SetDown.play()
+			
+			if in_stand:
+				$PickUp.play()
+				tube_counter += 1
+				emit_signal("pouring_time")
+				in_stand = false
+			
 			global_position = Vector2(938, 965)
-			$SetDown.play()
-		if in_stand:
-			tube_counter += 1
-			emit_signal("pouring_time")
-			in_stand = false
 	
 	if tube_counter >> 3:
 		visible = true
@@ -70,3 +79,4 @@ func _on_clamp_area_area_exited(area):
 
 func disable_clamp():
 	interactible = false
+
