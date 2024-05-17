@@ -1,21 +1,24 @@
-extends Sprite3D
-
-var outline_shader = preload("res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_wall_back_window_highlight.png")
-var no_shader = null
+extends AnimatedSprite3D
 
 var into_spray_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_into_spray_game.tscn")
 var mouse_inside = false
 var can_interact = false
 var player_inside = false
+var changed_scenery = false
 
 func _on_area_3d_mouse_entered():
 	if Global.talked_to_chameleon_3 && !Global.return_laboratory_3:
-		$".".texture = outline_shader
+		frame = 2
 		mouse_inside = true
+	else:
+		frame = 0
 
 func _on_area_3d_mouse_exited():
-	$".".texture = no_shader
-	mouse_inside = false 
+	if Global.talked_to_chameleon_3 && !Global.return_laboratory_3:
+		frame = 1
+		mouse_inside = false 
+	else:
+		frame = 0
 
 func _input(event):
 	if Input.is_action_just_pressed("left_click"):
@@ -44,8 +47,14 @@ func _on_area_3d_body_exited(body):
 		player_inside = false
 
 func reset_mouse():
-	$".".texture = no_shader
 	mouse_inside = false
 	can_interact = false
+	if Global.talked_to_chameleon_3 && !Global.return_laboratory_3:
+		frame = 1
+	else:
+		frame = 0
 
-
+func _process(delta):
+	if Global.talked_to_chameleon_3 && !changed_scenery:
+		frame = 1
+		changed_scenery = true

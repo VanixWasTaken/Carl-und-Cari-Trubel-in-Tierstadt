@@ -21,6 +21,7 @@ var powder_sprite
 var got_place = false
 var follow_mouse
 var powder_drag
+var glass_position
 var too_much_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_too_much.tscn")
 var enough_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_enough.tscn")
 var wrong_pulver_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_wrong_pulver.tscn")
@@ -187,9 +188,9 @@ func _on_area_2d_area_exited(area):
 	if area_name != "PulverBowl":
 		if powder_sprite != null:
 			powder_sprite.play("default")
-			powder_sprite.position = Vector2.ZERO
 			get_tree().get_current_scene().remove_child(powder_sprite)
 			area.add_child(powder_sprite)
+			powder_sprite.position = area.glass_position
 			got_place = false
 	bowl_full = false
 	if too_much:

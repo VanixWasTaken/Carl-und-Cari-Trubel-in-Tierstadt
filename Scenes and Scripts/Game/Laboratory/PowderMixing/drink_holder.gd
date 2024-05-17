@@ -106,7 +106,7 @@ func _on_area_2d_area_exited(area):
 		water_child.play("default")
 		get_tree().get_current_scene().remove_child(water_child)
 		water_cup.add_child(water_child)
-		water_child.position = Vector2.ZERO
+		water_child.position = area.glass_position
 	if area_name.contains("PulverBowl"):
 		if water_in_current:
 			$"../PulverBowl"._reset_bowl()

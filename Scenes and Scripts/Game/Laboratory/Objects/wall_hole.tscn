@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg257qtiun1jh"]
+[gd_scene load_steps=5 format=3 uid="uid://cg257qtiun1jh"]
 
+[ext_resource type="Texture2D" uid="uid://co2ionuqflg1g" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left_window.png" id="1_n22hq"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/wall_hole.gd" id="2_6ge40"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8lp4w"]
@@ -9,7 +10,8 @@ size = Vector3(13.9837, 12.0987, 6.32742)
 size = Vector3(12.9469, 2.8, 17.0088)
 
 [node name="WallHole" type="Sprite3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4811, 7.78455, 0.100114)
+transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -28.4811, 7.78455, 0.100114)
+texture = ExtResource("1_n22hq")
 script = ExtResource("2_6ge40")
 
 [node name="MouseArea" type="Area3D" parent="."]

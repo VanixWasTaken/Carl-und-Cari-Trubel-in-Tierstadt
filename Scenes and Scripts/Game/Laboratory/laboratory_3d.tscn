@@ -76,7 +76,7 @@ size = Vector2(59, 10)
 [sub_resource type="BoxShape3D" id="BoxShape3D_8d8lt"]
 size = Vector3(59.08, 1, 15.4632)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h34xo"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dtjpk"]
 albedo_texture = ExtResource("5_ivhfb")
 
 [sub_resource type="QuadMesh" id="QuadMesh_mw0nr"]
@@ -85,7 +85,7 @@ size = Vector2(59, 16)
 [sub_resource type="BoxShape3D" id="BoxShape3D_sahrs"]
 size = Vector3(10.0164, 1, 15.8657)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6nswh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jpnfm"]
 albedo_texture = ExtResource("6_jfqjd")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t24k3"]
@@ -94,7 +94,7 @@ size = Vector2(10, 16)
 [sub_resource type="BoxShape3D" id="BoxShape3D_rxpew"]
 size = Vector3(11.3256, 1, 15.9534)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0wev"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dgmj"]
 albedo_texture = ExtResource("7_klll8")
 
 [sub_resource type="QuadMesh" id="QuadMesh_iqs2f"]
@@ -295,7 +295,7 @@ shape = SubResource("BoxShape3D_8d8lt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallBack"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0.5)
-material_override = SubResource("StandardMaterial3D_h34xo")
+material_override = SubResource("StandardMaterial3D_dtjpk")
 mesh = SubResource("QuadMesh_mw0nr")
 skeleton = NodePath("../CollisionShape3D")
 
@@ -309,7 +309,7 @@ shape = SubResource("BoxShape3D_sahrs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallLeft"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.6141, 8.35748, 0.288007)
-material_override = SubResource("StandardMaterial3D_6nswh")
+material_override = SubResource("StandardMaterial3D_jpnfm")
 mesh = SubResource("QuadMesh_t24k3")
 skeleton = NodePath("../CollisionShape3D")
 
@@ -323,7 +323,7 @@ shape = SubResource("BoxShape3D_rxpew")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/WallRight"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 4, 0.5)
-material_override = SubResource("StandardMaterial3D_w0wev")
+material_override = SubResource("StandardMaterial3D_5dgmj")
 mesh = SubResource("QuadMesh_iqs2f")
 skeleton = NodePath("../CollisionShape3D")
 
@@ -410,6 +410,7 @@ bus = &"SFX"
 
 [node name="Chameleon" type="AnimatedSprite3D" parent="Objects"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -11.6343, 7.22599, -2.45729)
+sorting_offset = 5.0
 sprite_frames = SubResource("SpriteFrames_dwvgy")
 animation = &"searching"
 autoplay = "searching"
@@ -459,10 +460,10 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 10.7804, 1.09887)
 texture = ExtResource("25_kjt1n")
 
 [node name="WallHole" parent="Objects" instance=ExtResource("30_3am5x")]
-transform = Transform3D(-2.99423e-08, 0, -0.79, 0, 0.82, 0, 0.685, 0, -3.4532e-08, -29.6051, 7.84301, -0.0104122)
+transform = Transform3D(-3.19093e-08, 0, -0.79, 0, 0.845, 0, 0.73, 0, -3.4532e-08, -29.6051, 7.84301, -0.0104122)
 
 [node name="BackWallWindow" parent="Objects" instance=ExtResource("31_ssppo")]
-transform = Transform3D(1.075, 0, 0, 0, 1.075, 0, 0, 0, 1.075, -12.3032, 7.33331, -4.71349)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0.56158, 7.87659, -4.71349)
 
 [node name="Exit" type="Area3D" parent="Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 0)
@@ -490,6 +491,7 @@ mouse_filter = 0
 
 [node name="NPC Chameleon" type="Node3D" parent="." groups=["NPC"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3209, 0, -4.16521)
+visible = false
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="NPC Chameleon"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 6.18899, 1.18985)
@@ -522,5 +524,4 @@ bus = &"SFX"
 
 [editable path="UI/HelpButton"]
 [editable path="Player"]
-[editable path="Objects/WallHole"]
 [editable path="Objects/BackWallWindow"]

@@ -7,6 +7,7 @@ var follow_mouse = false
 var got_position = false
 var water_sprite
 var water_slosh
+var glass_position
 
 
 # Called when the node enters the scene tree for the first time.
@@ -14,6 +15,7 @@ func _ready():
 	start_position = position
 	water_sprite = $WaterCup
 	water_slosh = $WaterCup/Sloshing
+	glass_position = get_children()[1].position
 	
 
 

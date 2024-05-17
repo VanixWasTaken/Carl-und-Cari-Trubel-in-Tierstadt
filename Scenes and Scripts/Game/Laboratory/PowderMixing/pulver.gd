@@ -5,6 +5,7 @@ var mouse_on = false
 var mouse_position
 var follow_mouse = false
 var powder_drag
+var glass_position
 @export var color: String
 @export var minimum_weight: float
 @export var maximum_weight: float
@@ -12,6 +13,7 @@ var powder_drag
 func _ready():
 	powder_drag = $"../Dragging"
 	start_position = global_position
+	glass_position = get_children()[1].position
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
