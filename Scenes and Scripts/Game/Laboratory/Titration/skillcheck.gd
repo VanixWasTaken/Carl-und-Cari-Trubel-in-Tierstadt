@@ -91,7 +91,7 @@ func _on_mini_game_time_timeout():
 		reset_entire_minigame()
 
 func reset_entire_minigame():
-	$"PH-Scale/Arrow".position.y = -80
+	$"PH-Scale/Arrow".position.y = 137
 	start_skillcheck = true
 	arrow_in_bar = false
 	pressed_already = false

@@ -23,7 +23,9 @@ func _process(delta):
 		var new_position = get_global_mouse_position()
 		global_position = new_position
 	elif Input.is_action_just_released("left_click"):
-		global_position = Vector2(938, 965)
+		if mouse_inside and !in_stand:
+			global_position = Vector2(938, 965)
+			$SetDown.play()
 		if in_stand:
 			tube_counter += 1
 			emit_signal("pouring_time")
