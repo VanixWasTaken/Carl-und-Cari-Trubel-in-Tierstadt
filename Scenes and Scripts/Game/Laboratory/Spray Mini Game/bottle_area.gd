@@ -58,3 +58,8 @@ func _on_goal_area_area_entered(area):
 	inside_goal = true
 func _on_goal_area_area_exited(area):
 	inside_goal = false
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "new_animation":
+		$"../Bottle/Loaded".play()

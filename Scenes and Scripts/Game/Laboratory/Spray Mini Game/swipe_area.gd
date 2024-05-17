@@ -6,6 +6,7 @@ var spin_round = 0
 @onready var swipe_area = $"."
 @onready var goal_area_2 = $"../GoalArea2"
 @onready var bottle = $"../Bottle"
+@onready var screw_sound = $"../Bottle/Screwing"
 @onready var spin_minigame = $".."
 @onready var mouse_hud_2 = $"../MouseHUD2"
 @onready var bottle_and_gun = $"../../BottleAndGun"
@@ -29,12 +30,16 @@ func _process(delta):
 		position = Vector2(1506, 510)
 	if inside_goal and Input.is_action_just_released("left_click"):
 		bottle.play("default")
+		screw_sound.play()
 		if spin_round == 1:
 			animation_player.play("swipe_in1")
+			screw_sound.play()
 		if spin_round == 2:
 			animation_player.play("swipe_in2")
+			screw_plus_docking_sound()
 		if spin_round == 3:
 			animation_player.play("swipe_in3")
+			
 		
 		
 	if spin_round == 3:
@@ -73,3 +78,9 @@ func _on_goal_area_2_area_exited(area):
 func _on_bottle_animation_finished():
 	spin_round += 1
 	position = Vector2(1506, 510)
+
+func screw_plus_docking_sound():
+	screw_sound.play()
+	await get_tree().create_timer(0.5).timeout
+	screw_sound.stream = load("res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_screwingpaint_var4.mp3")
+	screw_sound.play()

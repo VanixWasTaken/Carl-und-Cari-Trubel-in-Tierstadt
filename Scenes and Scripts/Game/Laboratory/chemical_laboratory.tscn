@@ -380,7 +380,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scale/Area2D"]
 position = Vector2(6.24994, -137.245)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_iqi52")
 
 [node name="PulverBowl" type="AnimatedSprite2D" parent="." groups=["PulverBowl"]]
@@ -395,7 +394,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PulverBowl/PulverBowl"]
 position = Vector2(1.875, 71.2498)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_rewly")
 
 [node name="Dragging" type="AudioStreamPlayer" parent="PulverBowl/PulverBowl"]

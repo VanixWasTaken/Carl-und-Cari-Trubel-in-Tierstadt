@@ -20,9 +20,11 @@ func _process(delta):
 	position = get_global_mouse_position()
 	
 	if Input.is_action_pressed("left_click") and should_shoot_intern:
+		$SpraySound.play()
 		$".".play("shooting")
 		is_shooting.emit()
 	else:
+		$SpraySound.stop()
 		$".".play("default")
 		isnt_shooting.emit()
 	

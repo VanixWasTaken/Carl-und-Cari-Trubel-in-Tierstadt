@@ -16,6 +16,7 @@ func _ready():
 
 func _process(delta):
 	if mouse_inside and Input.is_action_just_pressed("left_click"):
+		$PickUp.play()
 		$SpinMinigame.visible = true
 	var children = get_children()
 	for child in children:
@@ -30,6 +31,7 @@ func _on_area_2d_mouse_entered():
 	$BottleAndGun/SprayGun.texture = spray_gun_highlight
 	$BottleAndGun/Bottle.texture = bottle_highlight
 	mouse_inside = true
+	$Hover.play()
 func _on_area_2d_mouse_exited():
 	$BottleAndGun/SprayGun.texture = spray_gun
 	$BottleAndGun/Bottle.texture = bottle

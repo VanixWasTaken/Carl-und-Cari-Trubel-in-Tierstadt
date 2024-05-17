@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://dfpwq4ngsnyed"]
+[gd_scene load_steps=70 format=3 uid="uid://dfpwq4ngsnyed"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c17wfu7surfhb" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation1.png" id="16_w1xuf"]
 [ext_resource type="Texture2D" uid="uid://02bifhgetjo8" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation2.png" id="17_b3jxw"]
 [ext_resource type="Texture2D" uid="uid://drmdrs0g584x8" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation1.png" id="17_bfug0"]
+[ext_resource type="AudioStream" uid="uid://b6lgjjg6wm6rb" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_spraying_var1.mp3" id="17_rgjd6"]
 [ext_resource type="Texture2D" uid="uid://dm6h7pwdde3p" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation3.png" id="18_1cfw2"]
 [ext_resource type="Texture2D" uid="uid://bbv5lyt1g86ke" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation2.png" id="18_cjtse"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/gun_in_hand.gd" id="19_8elaw"]
@@ -25,18 +26,23 @@
 [ext_resource type="Texture2D" uid="uid://cfxioe6hxbws8" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation6.png" id="22_fsmpt"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/bottle_area.gd" id="23_2g2jj"]
 [ext_resource type="Texture2D" uid="uid://byihxhjs8koc3" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation1.png" id="23_nosby"]
+[ext_resource type="AudioStream" uid="uid://dq4k48igv5bes" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_loadingpaint_var1.mp3" id="24_2wxnx"]
 [ext_resource type="Texture2D" uid="uid://p3yx125btxr4" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation2.png" id="24_hjswu"]
 [ext_resource type="Texture2D" uid="uid://cu67i8juq6nda" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation4.png" id="24_idsrv"]
+[ext_resource type="AudioStream" uid="uid://ckx3nqjyk6eui" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_screwingpaint_var1.mp3" id="25_gbr0o"]
 [ext_resource type="Texture2D" uid="uid://dpc6v6kh2rvft" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation5.png" id="25_mata6"]
 [ext_resource type="Texture2D" uid="uid://cutdnrfadc10l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation3.png" id="25_qgmek"]
+[ext_resource type="AudioStream" uid="uid://402v0hcdmret" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_screwingpaint_var2.mp3" id="26_0pf5e"]
 [ext_resource type="Texture2D" uid="uid://c1h8h8gqpku2k" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation6.png" id="26_so44m"]
 [ext_resource type="Texture2D" uid="uid://d2ng1ougnu6ya" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_gun_build.png" id="26_xd5u4"]
 [ext_resource type="Texture2D" uid="uid://b4gbp5hdcds4n" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation7.png" id="27_jgxru"]
+[ext_resource type="AudioStream" uid="uid://cy3hgngpj05ir" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_screwingpaint_var3.mp3" id="27_nnmjm"]
 [ext_resource type="Texture2D" uid="uid://pkbt4uivo72d" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse_pressed.png" id="28_nvspe"]
 [ext_resource type="Texture2D" uid="uid://sipuj2avuffd" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse.png" id="29_mfucy"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/swipe_area.gd" id="30_tdar7"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="36_0avx1"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="37_dyl1p"]
+[ext_resource type="AudioStream" uid="uid://c766qlirsa615" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_screwingpaint_var4.mp3" id="43_g3024"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bmvvo"]
 animations = [{
@@ -190,6 +196,16 @@ _data = {
 "swipe_in2": SubResource("Animation_4bwrm"),
 "swipe_in3": SubResource("Animation_pykog")
 }
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_52mms"]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("25_gbr0o")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("26_0pf5e")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("27_nnmjm")
+stream_2/weight = 1.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l37xa"]
 animations = [{
@@ -439,6 +455,11 @@ polygon = PackedVector2Array(-209, -72, -321, -145, -337, -218, -298, -267, -149
 position = Vector2(40, 733)
 texture = ExtResource("16_8gx7a")
 
+[node name="SpraySound" type="AudioStreamPlayer" parent="GunInHand"]
+stream = ExtResource("17_rgjd6")
+
+[node name="ShakeSound" type="AudioStreamPlayer" parent="GunInHand"]
+
 [node name="SpinMinigame" type="TextureRect" parent="."]
 visible = false
 offset_right = 1920.0
@@ -454,6 +475,12 @@ sprite_frames = SubResource("SpriteFrames_k3fj0")
 libraries = {
 "": SubResource("AnimationLibrary_y2ms6")
 }
+
+[node name="Loaded" type="AudioStreamPlayer" parent="SpinMinigame/Bottle"]
+stream = ExtResource("24_2wxnx")
+
+[node name="Screwing" type="AudioStreamPlayer" parent="SpinMinigame/Bottle"]
+stream = SubResource("AudioStreamRandomizer_52mms")
 
 [node name="Arrow" type="AnimatedSprite2D" parent="SpinMinigame"]
 visible = false
@@ -481,7 +508,7 @@ autoplay = "new_animation"
 
 [node name="MouseHUD2" type="AnimatedSprite2D" parent="SpinMinigame"]
 visible = false
-position = Vector2(1217, 720)
+position = Vector2(1217, 750)
 scale = Vector2(0.245, 0.245)
 sprite_frames = SubResource("SpriteFrames_ppv8h")
 
@@ -532,6 +559,9 @@ shape = SubResource("RectangleShape2D_x3x71")
 stream = SubResource("AudioStreamRandomizer_dqp83")
 volume_db = -15.0
 
+[node name="PickUp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("43_g3024")
+
 [connection signal="gun_is_jamming" from="VisibleChameleon" to="GunInHand" method="_on_visible_chameleon_gun_is_jamming"]
 [connection signal="area_entered" from="VisibleChameleon/Area2D" to="VisibleChameleon" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="VisibleChameleon/Area2D" to="VisibleChameleon" method="_on_area_2d_area_exited"]
@@ -540,6 +570,7 @@ volume_db = -15.0
 [connection signal="is_shooting" from="GunInHand" to="VisibleChameleon" method="_on_gun_in_hand_is_shooting"]
 [connection signal="isnt_shooting" from="GunInHand" to="VisibleChameleon" method="_on_gun_in_hand_isnt_shooting"]
 [connection signal="animation_finished" from="SpinMinigame/Bottle" to="SpinMinigame/SwipeArea" method="_on_bottle_animation_finished"]
+[connection signal="animation_finished" from="SpinMinigame/Bottle/AnimationPlayer" to="SpinMinigame/BottleArea" method="_on_animation_player_animation_finished"]
 [connection signal="input_event" from="SpinMinigame/BottleArea" to="SpinMinigame/BottleArea" method="_on_input_event"]
 [connection signal="area_entered" from="SpinMinigame/GoalArea" to="SpinMinigame/BottleArea" method="_on_goal_area_area_entered"]
 [connection signal="area_exited" from="SpinMinigame/GoalArea" to="SpinMinigame/BottleArea" method="_on_goal_area_area_exited"]
