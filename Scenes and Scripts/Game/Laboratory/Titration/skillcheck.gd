@@ -30,10 +30,15 @@ func _process(delta):
 		$Arrow/AnimationPlayer.play("movement")
 		
 		if Input.is_action_just_pressed("space") and arrow_in_bar and !pressed_already:
+			$Burette/Drip.play()
 			$"PH-Scale/Arrow".position.y -= 50
 			if $"PH-Scale/Arrow".position.y > 340:
 				$"PH-Scale/Arrow".position.y = 340
 			pressed_already = true
+		
+		elif Input.is_action_just_pressed("space") and !arrow_in_bar:
+			$Burette/Failure.play()
+		
 		else:
 			
 			$"PH-Scale/Arrow".position.y += 40 * delta
@@ -69,12 +74,14 @@ func play_countdown():
 	await get_tree().create_timer(1).timeout
 	$TextureRect.visible = false
 	start_game = true
+	$Bubbling.play()
 	$MiniGameTime.start()
 
 
 func _on_mini_game_time_timeout():
 	start_game = false
 	$Arrow/AnimationPlayer.stop()
+	$Bubbling.stop()
 	if $"PH-Scale/Arrow".position.y >= 83 and $"PH-Scale/Arrow".position.y <= 183:
 		var dialog_instance = win_dialog.instantiate()
 		add_child(dialog_instance)
