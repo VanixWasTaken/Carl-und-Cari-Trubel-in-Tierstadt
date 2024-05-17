@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c17wfu7surfhb"
-path="res://.godot/imported/gun_animation1.png-a754138cab2c288568d9d373582b6ea4.ctex"
+uid="uid://dqgljickj2oym"
+path="res://.godot/imported/hosepipe.png-0e1d909d51107ae5ac9038ff0d25dd35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation1.png"
-dest_files=["res://.godot/imported/gun_animation1.png-a754138cab2c288568d9d373582b6ea4.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/hosepipe.png"
+dest_files=["res://.godot/imported/hosepipe.png-0e1d909d51107ae5ac9038ff0d25dd35.ctex"]
 
 [params]
 
