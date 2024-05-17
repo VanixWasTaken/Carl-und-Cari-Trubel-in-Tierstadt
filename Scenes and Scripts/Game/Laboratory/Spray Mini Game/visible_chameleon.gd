@@ -2,7 +2,6 @@ extends AnimatedSprite2D
 
 
 var shader_value = material.get_shader_parameter("value")
-var old_shader_value
 @export var speed = 0.003
 var hitting_chameleon = false
 var shooting = false
@@ -10,15 +9,10 @@ var mouse_moving = false
 var should_play_dialog = true
 var should_play_dialog3 = true
 var shooting_time = 0
-var progress_bar_should_progress = true
 var dialog1 = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Spray Mini Game Dialog/dialog_spray_mini_game1.tscn")
 var dialog3 = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Spray Mini Game Dialog/dialog_spray_mini_game3.tscn")
 @onready var gun_jam_timer = $"../GunJam"
 @onready var gun_in_hand = $"../GunInHand"
-@onready var progress_bar_moving = $"../ProgressBar/ProgressBarMoving"
-@onready var bubbles = $"../ProgressBar/Bubbles"
-
-
 
 signal gun_is_jamming
 
@@ -50,17 +44,11 @@ func _process(delta):
 func _physics_process(delta):
 	if hitting_chameleon and shooting and mouse_moving:
 		shader_value += speed
-		if progress_bar_should_progress:
-			progress_bar_moving.scale.x += 0.0105
-			progress_bar_moving.position.x += 0.8
-			bubbles.position.x += 1.58
-			if progress_bar_moving.position.x >= 960:
-				progress_bar_should_progress = false
+		
+		
 	shader_value = clamp(shader_value, 0.0, 1.0)
 	
 	material.set_shader_parameter("value", shader_value)
-	
-	
 	
 	if shader_value == 1 and should_play_dialog:
 		
@@ -102,5 +90,5 @@ func should_shoot():
 	should_play_dialog3 = false
 
 
-
-
+	
+	

@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=71 format=3 uid="uid://dfpwq4ngsnyed"]
-=======
-[gd_scene load_steps=64 format=3 uid="uid://dfpwq4ngsnyed"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
@@ -45,15 +41,9 @@
 [ext_resource type="Texture2D" uid="uid://pkbt4uivo72d" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse_pressed.png" id="28_nvspe"]
 [ext_resource type="Texture2D" uid="uid://sipuj2avuffd" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse.png" id="29_mfucy"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/swipe_area.gd" id="30_tdar7"]
-<<<<<<< Updated upstream
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="36_0avx1"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="37_dyl1p"]
 [ext_resource type="AudioStream" uid="uid://c766qlirsa615" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_screwingpaint_var4.mp3" id="43_g3024"]
-=======
-[ext_resource type="Texture2D" uid="uid://nwtboqroprvh" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Progress Bar/lab_minigame3_progress_bar_bar.png" id="36_07bxw"]
-[ext_resource type="Texture2D" uid="uid://cy1ou2m7fvgfx" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Progress Bar/lab_minigame3_progress_bar_square.png" id="37_fg7o6"]
-[ext_resource type="Texture2D" uid="uid://vjruem47r432" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Progress Bar/lab_minigame3_progress_bar_bubbles.png" id="38_fwdul"]
->>>>>>> Stashed changes
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bmvvo"]
 animations = [{
@@ -370,7 +360,6 @@ size = Vector2(823, 893)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3x71"]
 size = Vector2(592, 308)
 
-<<<<<<< Updated upstream
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dqp83"]
 playback_mode = 1
 streams_count = 2
@@ -378,10 +367,6 @@ stream_0/stream = ExtResource("36_0avx1")
 stream_0/weight = 1.0
 stream_1/stream = ExtResource("37_dyl1p")
 stream_1/weight = 1.0
-=======
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_otmh2"]
-load_path = "res://.godot/imported/lab_minigame3_progress_bar_square.png-0b5b6cdbb6163a0124a999432093bc00.ctex"
->>>>>>> Stashed changes
 
 [node name="SprayMiniGame" type="Node2D"]
 script = ExtResource("1_wcnbr")
@@ -576,37 +561,12 @@ shape = SubResource("RectangleShape2D_x3x71")
 
 [node name="GunJam" type="Timer" parent="."]
 
-<<<<<<< Updated upstream
 [node name="Hover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_dqp83")
 volume_db = -15.0
 
 [node name="PickUp" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("43_g3024")
-=======
-[node name="ProgressBar" type="Node2D" parent="."]
-visible = false
-
-[node name="HUD" type="Sprite2D" parent="ProgressBar"]
-position = Vector2(965, 939)
-scale = Vector2(0.716418, 0.716418)
-texture = ExtResource("36_07bxw")
-
-[node name="ProgressBarStill" type="Sprite2D" parent="ProgressBar"]
-position = Vector2(571.028, 1000.12)
-scale = Vector2(0.689339, 0.689339)
-texture = ExtResource("37_fg7o6")
-
-[node name="ProgressBarMoving" type="Sprite2D" parent="ProgressBar"]
-position = Vector2(571.028, 1000.12)
-scale = Vector2(0.689339, 0.689339)
-texture = SubResource("CompressedTexture2D_otmh2")
-
-[node name="Bubbles" type="Sprite2D" parent="ProgressBar"]
-position = Vector2(937, 943)
-scale = Vector2(0.659204, 0.659204)
-texture = ExtResource("38_fwdul")
->>>>>>> Stashed changes
 
 [connection signal="gun_is_jamming" from="VisibleChameleon" to="GunInHand" method="_on_visible_chameleon_gun_is_jamming"]
 [connection signal="area_entered" from="VisibleChameleon/Area2D" to="VisibleChameleon" method="_on_area_2d_area_entered"]
