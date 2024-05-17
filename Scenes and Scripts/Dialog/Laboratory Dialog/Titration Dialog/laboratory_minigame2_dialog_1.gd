@@ -43,7 +43,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 8:
+	if dialogs == 14:
 		Global.moving_allowed = true
 		Global.dialog_playing = false
 		queue_free()
@@ -104,8 +104,7 @@ func add_left_dialog_box():
 		short_node_name.text = Global.character
 		dialogs += 1
 	
-	elif dialogs == 7:
-		dialogs += 1
+
 	
 	
 	
@@ -217,7 +216,8 @@ func add_right_dialog_box():
 		same_speaker = false
 	
 	
-	
+	elif dialogs == 13:
+		dialogs += 1
 	
 	
 	

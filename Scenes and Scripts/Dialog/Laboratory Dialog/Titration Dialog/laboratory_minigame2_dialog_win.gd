@@ -43,7 +43,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 8:
+	if dialogs == 9:
 		Global.moving_allowed = true
 		Global.dialog_playing = false
 		Global.lab_cutscene_played = true
@@ -70,33 +70,35 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das hab ich ja super hinbekommen! Hehe."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
-		dialogs += 1
-	
-	elif dialogs == 3:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Damit die Mischung richtig funktioniert muss sie eine gewisse Anzahl Moleküle haben, das ist aber alles sehr kompliziert..."
+		short_node_text.text = "Das hab ich ja super hinbekommen!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
 	
 	elif dialogs == 5:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Damit die Mischung richtig funktioniert muss sie eine gewisse Anzahl Moleküle haben, das ist aber alles sehr kompliziert."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+		same_speaker = true
+	
+	elif dialogs == 6:
 		Global.laboratory_help_button_state += 1
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Wow, ist ja verrückt. Dann lass uns dich mal wieder sichtbar machen!"
+		short_node_text.text = "Dann lass uns dich mal wieder sichtbar machen!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
+		same_speaker = false
 	
-	elif dialogs == 7:
+	elif dialogs == 8:
 		dialogs += 1
 	
 	
@@ -152,7 +154,7 @@ func add_right_dialog_box():
 		dialogs += 1
 		same_speaker = false
 	
-	elif dialogs == 6:
+	elif dialogs == 7:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)

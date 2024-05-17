@@ -110,7 +110,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Okay, jetzt wirds spannend, wir müssen dafür sorgen dass der pH-Wert im Bereich von 5-7 bleibt."
+		short_node_text.text = "Okay, jetzt w-w-wirds spannend, wir müssen dafür sorgen dass der pH-Wert im Bereich z-z-zwischen 5 bis 7 bleibt."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -120,7 +120,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Hier rechts ist die Scala des pH-Werts, diese sollte im Bereich zwischen 5 und 7 bleiben."
+		short_node_text.text = "Hier r-r-rechts ist die Scala des pH-Werts, diese sollte im Bereich zwischen 5 und 7 bleiben."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -131,7 +131,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Über die Leiste in der Mitte kannst du kontrollieren ob du Flüssigkeit zugibst oder nicht."
+		short_node_text.text = "Über die Leiste in der M-M-Mitte kannst du kontrollieren ob du Flüssigkeit zugibst oder n-n-nicht."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -142,7 +142,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "[Drücke Leertaste wenn der Pfeil im grünen Bereich ist, um den pH-Wert zu kontrollieren]"
+		short_node_text.text = "[Drücke Leertaste wenn der Pfeil im grünen Bereich ist, um den pH-Wert zu kontrollieren.]"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1

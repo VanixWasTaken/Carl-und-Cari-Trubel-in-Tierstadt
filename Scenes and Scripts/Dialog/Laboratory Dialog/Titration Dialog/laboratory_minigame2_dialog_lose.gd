@@ -66,7 +66,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Hm, ich muss irgendwas falsch gemacht haben, oder?"
+		short_node_text.text = "Hm, ich muss irgendwas falsch gemacht haben."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		dialogs += 1
@@ -121,7 +121,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ja, d-d-der pH-Wert ist nicht der gleiche den ich d-d-dir gesagt habe..."
+		short_node_text.text = "Ja, d-d-der pH-Wert ist nicht der gleiche den ich d-d-dir gesagt habe."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		dialogs += 1
@@ -132,7 +132,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Er m-m-müsste zwischen 5 und 7 liegen, also zwischen d-d-diesen beiden Linien hier..."
+		short_node_text.text = "Er m-m-müsste zwischen 5 und 7 liegen, also zwischen d-d-diesen beiden Linien hier."
 		# hier highlighten wo die area ist in der der pfeil sein muss bei der ph-scala :)
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
