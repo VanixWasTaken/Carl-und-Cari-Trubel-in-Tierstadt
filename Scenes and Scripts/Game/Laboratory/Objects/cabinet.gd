@@ -36,7 +36,7 @@ func _input(event):
 						dialog_instance = inspection_dialog.instantiate()
 						get_tree().get_current_scene().add_child(dialog_instance)
 						reset_mouse()
-			if !door_open && Global.talked_to_chameleon_2:
+			if !door_open && Global.talked_to_chameleon:
 				door_open = true
 				$Shutter.play()
 				$Sprite3D.visible = false
