@@ -15,7 +15,7 @@ var PRESET1
 var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot1.png")
 
 var vo_pc
-
+var path
 ##########################################################################################
 
 
@@ -26,10 +26,16 @@ func _ready():
 	Global.moving_allowed = false
 	if Global.character == "Carl":
 		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
-		vo_pc = "carl"
+		
+		##### This is used to make the code for the dialog and voiceline combination easier
+		##### This way you only have to only type the name of the line inside the 
+		##### load function --> load(path + "linename_01_var2")
+		path = "res://Assets/Sound/VO/Laboratory/Carl/vo_pc_carl_"
 	elif Global.character == "Cari" or Global.character == "":
 		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-		vo_pc = "cari"
+		
+		##### Same as in previous comment
+		path = "res://Assets/Sound/VO/Laboratory/Cari/vo_pc_cari_"
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -68,7 +74,7 @@ func add_left_dialog_box():
 		short_node_text.text = "Hallo? Ist hier irgendjemand? Uns wurde gesagt, dass wir hier aushelfen sollen."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/vo_pc_" + vo_pc + "_laboratory01_var1.mp3")
+		$"../VoiceOver".stream = load(path + "laboratory01_var1.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
@@ -81,7 +87,7 @@ func add_left_dialog_box():
 		short_node_text.text = "Vielleicht sollten wir später wiederkommen."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/vo_pc_" + vo_pc + "_laboratory02_var1.mp3")
+		$"../VoiceOver".stream = load(path + "laboratory02_var1.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
@@ -94,7 +100,7 @@ func add_left_dialog_box():
 		short_node_text.text = "Wer hat das gesagt? Zeig dich!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/vo_pc_" + vo_pc + "_laboratory03_var1.mp3")
+		$"../VoiceOver".stream = load(path + "laboratory03_var1.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
 	
@@ -127,7 +133,7 @@ func add_right_dialog_box():
 		short_node_text.text = "H-H-Hallo, ich b-b-bin hier."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "???"
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/vo_npc_chameleon_laboratory01_var1.mp3")
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory01_var1.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
 	
@@ -139,7 +145,7 @@ func add_right_dialog_box():
 		short_node_text.text = "Ich s-s-stehe hier hinten, auf der a-a-anderen Seite des Raums! Komm doch k-k-kurz zu mir."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "???"
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/vo_npc_chameleon_laboratory02_var1.mp3")
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory02_var1.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
 	
