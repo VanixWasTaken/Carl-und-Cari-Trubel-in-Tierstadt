@@ -10,6 +10,7 @@ var win_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Titr
 var lose_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Titration Dialog/laboratory_minigame2_dialog_lose.tscn")
 var try_again_dialog
 
+var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,7 +19,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+
 	if Global.dialog_playing == false and start_skillcheck == true:
 		if countdown == 0:
 			play_countdown()
@@ -31,19 +32,25 @@ func _process(delta):
 		
 		if Input.is_action_just_pressed("space") and arrow_in_bar and !pressed_already:
 			$Burette/Drip.play()
-			$"PH-Scale/Arrow".position.y -= 40
+			$"PH-Scale/Arrow".position.y -= 90
 			$"../AnimatedSprite2D".visible = true
 			$"../AnimatedSprite2D".play()
 			if $"PH-Scale/Arrow".position.y > 326: #Niedrigster Wert / Unterster Strich
 				$"PH-Scale/Arrow".position.y = 326
 			pressed_already = true
+			var rng_cam = rng.randi_range(1, 2)
+			if rng_cam == 1:
+				$Camera2D/AnimationPlayer.play("zoom1_animation") 
+			if rng_cam == 2:
+				$Camera2D/AnimationPlayer.play("zoom2_animation") 
+
 		
 		elif Input.is_action_just_pressed("space") and !arrow_in_bar and !pressed_already:
 			$Burette/Failure.play()
 			pressed_already = true
 		else:
-			
-			$"PH-Scale/Arrow".position.y += 40 * delta
+			if $"PH-Scale/Arrow".position.y <= 320:
+				$"PH-Scale/Arrow".position.y += 110 * delta
 			
 			if $"PH-Scale/Arrow".position.y < -263: #Oberster Strich
 				$"PH-Scale/Arrow".position.y = -263
