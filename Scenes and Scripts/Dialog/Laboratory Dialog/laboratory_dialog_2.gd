@@ -115,6 +115,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ich b-b-bin Christina das Chemie Chamäleon."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_2_2.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -126,6 +128,8 @@ func add_right_dialog_box():
 		short_node_text.text = "I-i-ich habe mich ausversehen u-u-unsichtbar gemacht und k-k-kann mich nicht zurückverwandeln."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_2_3.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 	
 	elif dialogs == 4:
@@ -136,6 +140,8 @@ func add_right_dialog_box():
 		short_node_text.text = "K-K-Könnt ihr mir helfen meine V-V-Visabel Chemikalie zu mixen? Mit der werde ich wieder sichtbar."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_2_4.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -147,6 +153,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ihr m-m-müsst zuerst an d-d-dem Tisch dort drei Chemikalien mixen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_2_6.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -159,6 +167,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Bitte holt die Erlenmeyerkolben aus dem Schrank, sucht die Reagenzgläser und eine Waage. Bringt das alles dann zu dem großen Tisch in der Mitte."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_2_7.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 		same_speaker = false
 	

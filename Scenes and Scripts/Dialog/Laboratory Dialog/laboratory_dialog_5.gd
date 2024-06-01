@@ -145,6 +145,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ihr habt es tatsächlich geschafft! Ich bin wieder sichtbar!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_5_1.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 	
 	elif dialogs == 4:
@@ -155,6 +157,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Noch einmal vielen vielen Dank. Jetzt kann ich endlich weiter an den Vorbereitungen für das Stadtfest arbeiten."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_5_4.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 
 
@@ -166,6 +170,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Das ist ein Geheimnis, aber ich verspreche euch, das wird auch aus den Socken hauen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_5_6.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 
 	
@@ -177,6 +183,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Alles klar. Wir sehen uns dann später auf dem Stadtfest!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_5_9.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 
 

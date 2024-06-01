@@ -14,7 +14,7 @@ var same_speaker = false
 var PRESET1
 var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot1.png")
 
-var vo_pc
+var path
 
 ##########################################################################################
 
@@ -26,10 +26,16 @@ func _ready():
 	Global.moving_allowed = false
 	if Global.character == "Carl":
 		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
-		vo_pc = "carl"
+		
+		##### This is used to make the code for the dialog and voiceline combination easier
+		##### This way you only have to only type the name of the line inside the 
+		##### load function --> load(path + "linename_01_var2")
+		path = "res://Assets/Sound/VO/Laboratory/Carl/vo_pc_carl_"
 	elif Global.character == "Cari" or Global.character == "":
 		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-		vo_pc = "cari"
+		
+		##### Same as in previous comment
+		path = "res://Assets/Sound/VO/Laboratory/Cari/vo_pc_cari_"
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
 ##########################################################################################
@@ -95,6 +101,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Jetzt k-k-können wir mit dem ersten Schritt anfangen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_all_items_1.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 		same_speaker = true
 
@@ -107,6 +115,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Eure Aufgabe ist es die Pulver mit destilliertem Wasser zu mischen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_all_items_2.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -118,6 +128,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Achtet dabei auf die Waage, wenn ih-ih-ihr zu viel Pulver benutzt müsst ihr von v-v-vorne anfangen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_all_items_3.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 		same_speaker = false
 	

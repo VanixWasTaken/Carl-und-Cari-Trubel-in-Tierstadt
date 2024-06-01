@@ -127,6 +127,8 @@ func add_right_dialog_box():
 		short_node_text.text = "V-V-Vielen Dank. Das war schon w-w-wieder sehr gute Arbeit."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_4_1.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 	
 	elif dialogs == 4:
@@ -137,6 +139,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Als nächstes k-k-kommt schon der letzte Schritt. Ihr m-m-müsst mich nur noch mit der Mischung abspritzen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_4_4.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 		same_speaker = true
 
@@ -149,6 +153,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Wenn meine B-B-Berechnungen richtig sind, sollte ich dann wieder s-s-sichtbar werden."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_4_5.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 		same_speaker = false
 
@@ -160,6 +166,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ich g-g-gehe schonmal in den R-R-Raum mit der großen Scheibe."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_4_7.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -171,6 +179,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Der ist eigentlich n-n-nur für die unsichersten aller Chemikalien gedacht, a-a-aber heute ist er wohl meine Dusche."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_4_8.mp3")
+		$VoiceOver.play()
 		dialogs += 1
 
 	elif dialogs == 9:
