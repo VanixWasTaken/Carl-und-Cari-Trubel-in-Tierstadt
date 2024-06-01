@@ -14,7 +14,7 @@ var same_speaker = false
 var PRESET1
 var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot1.png")
 
-var vo_pc
+var path
 
 ##########################################################################################
 
@@ -27,10 +27,17 @@ func _ready():
 	Global.dialog_playing = true
 	if Global.character == "Carl":
 		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
-		vo_pc = "carl"
+		
+		##### This is used to make the code for the dialog and voiceline combination easier
+		##### This way you only have to only type the name of the line inside the 
+		##### load function --> load(path + "linename_01_var2")
+		path = "res://Assets/Sound/VO/Laboratory/Carl/PC/vo_pc_carl_laboratory_"
 	elif Global.character == "Cari" or Global.character == "":
 		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-		vo_pc = "cari"
+		
+		##### Same as in previous comment
+		path = "res://Assets/Sound/VO/Laboratory/Cari/PC/vo_pc_cari_laboratory_"
+	
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -70,16 +77,22 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if random_dialog == 0:
 			short_node_text.text = "Ich sollte zuerst mit dem Chamäleon reden!"
+			$"../VoiceOver".stream = load(path + "inspection_1.mp3")
 		elif random_dialog == 1:
 			short_node_text.text = "Vielleicht kann mir die Laborarbeiterin sagen, was das ist."
+			$"../VoiceOver".stream = load(path + "inspection_2.mp3")
 		elif random_dialog == 2:
 			short_node_text.text = "Ich frage mich wofür man das braucht."
+			$"../VoiceOver".stream = load(path + "inspection_3.mp3")
 		elif random_dialog == 3:
 			short_node_text.text = "Oh, was ist das denn?"
+			$"../VoiceOver".stream = load(path + "inspection_4.mp3")
 		elif random_dialog == 4:
 			short_node_text.text = "Hmm, ich weiß gar nicht, was das ist."
+			$"../VoiceOver".stream = load(path + "inspection_5.mp3")
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	
