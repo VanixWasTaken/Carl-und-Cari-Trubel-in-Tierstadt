@@ -14,6 +14,7 @@ var same_speaker = false
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
 
+var path
 ##########################################################################################
 
 
@@ -24,6 +25,19 @@ var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.
 func _ready():
 	Global.moving_allowed = false
 	Global.dialog_playing = true
+	if Global.character == "Carl":
+		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
+		
+		##### This is used to make the code for the dialog and voiceline combination easier
+		##### This way you only have to only type the name of the line inside the 
+		##### load function --> load(path + "linename_01_var2")
+		path = "res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_"
+	elif Global.character == "Cari" or Global.character == "":
+		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
+		
+		##### Same as in previous comment
+		path = "res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_"
+	
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box() 
 ##########################################################################################
@@ -58,7 +72,7 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Geh zum Laborarbeiterin und rede mit ihr."
+			short_node_text.text = "Geh zur Laborarbeiterin und rede mit ihr."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			dialogs += 1

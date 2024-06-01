@@ -14,7 +14,7 @@ var same_speaker = false
 var PRESET1
 var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot1.png")
 
-var vo_pc
+var path
 
 ##########################################################################################
 
@@ -24,12 +24,20 @@ var vo_pc
 
 func _ready():
 	Global.moving_allowed = false
+	Global.dialog_playing = true
 	if Global.character == "Carl":
 		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
-		vo_pc = "carl"
+		
+		##### This is used to make the code for the dialog and voiceline combination easier
+		##### This way you only have to only type the name of the line inside the 
+		##### load function --> load(path + "linename_01_var2")
+		path = "res://Assets/Sound/VO/Laboratory/Carl/PC/vo_pc_carl_"
 	elif Global.character == "Cari" or Global.character == "":
 		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-		vo_pc = "cari"
+		
+		##### Same as in previous comment
+		path = "res://Assets/Sound/VO/Laboratory/Cari/PC/vo_pc_cari_"
+	
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
 ##########################################################################################
@@ -69,6 +77,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Wir haben es geschafft! High-Five."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
+		$"../VoiceOver".stream = load(path + "dialog_5_2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -80,6 +90,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Ich kann kaum glauben, das wir es geschafft haben. Bevor wir hierhergekommen sind wusste ich fast nichts über Chemie."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
+		$"../VoiceOver".stream = load(path + "dialog_5_3.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 
@@ -91,6 +103,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Woran arbeitest du denn?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
+		$"../VoiceOver".stream = load(path + "dialog_5_5.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 	elif dialogs == 7:
@@ -101,6 +115,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Da bin ich jetzt doppelt gespannt!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
+		$"../VoiceOver".stream = load(path + "dialog_5_7.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -113,6 +129,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Wir müssen jetzt aber langsam los, es gibt noch andere Leute, die unsere Hilfe brauchen."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
+		$"../VoiceOver".stream = load(path + "dialog_5_8.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	

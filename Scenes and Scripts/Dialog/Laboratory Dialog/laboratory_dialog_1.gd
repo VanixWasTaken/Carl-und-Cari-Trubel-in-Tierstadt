@@ -24,6 +24,7 @@ var path
 
 func _ready():
 	Global.moving_allowed = false
+	Global.dialog_playing = true
 	if Global.character == "Carl":
 		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 		

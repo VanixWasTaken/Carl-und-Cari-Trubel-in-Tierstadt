@@ -36,6 +36,7 @@ func _ready():
 		
 		##### Same as in previous comment
 		path = "res://Assets/Sound/VO/Laboratory/Cari/PC/vo_pc_cari_laboratory_"
+	
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
 ##########################################################################################
@@ -74,6 +75,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Hm, ich muss irgendwas falsch gemacht haben."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
+		$"../VoiceOver".stream = load(path + "titration_fail_02.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	
@@ -85,6 +88,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Okay, dann versuchen wir das ganze doch einfach nochmal!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
+		$"../VoiceOver".stream = load(path + "titration_fail_05.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 7:

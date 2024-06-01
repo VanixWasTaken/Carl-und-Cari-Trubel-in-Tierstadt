@@ -14,7 +14,7 @@ var same_speaker = false
 var PRESET1
 var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot1.png")
 
-var vo_pc
+var path
 
 ##########################################################################################
 
@@ -24,12 +24,20 @@ var vo_pc
 
 func _ready():
 	Global.moving_allowed = false
+	Global.dialog_playing = true
 	if Global.character == "Carl":
 		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
-		vo_pc = "carl"
+		
+		##### This is used to make the code for the dialog and voiceline combination easier
+		##### This way you only have to only type the name of the line inside the 
+		##### load function --> load(path + "linename_01_var2")
+		path = "res://Assets/Sound/VO/Laboratory/Carl/PC/vo_pc_carl_laboratory_"
 	elif Global.character == "Cari" or Global.character == "":
 		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-		vo_pc = "cari"
+		
+		##### Same as in previous comment
+		path = "res://Assets/Sound/VO/Laboratory/Cari/PC/vo_pc_cari_laboratory_"
+	
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -69,6 +77,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Wer bist du und warum können wir dich nicht sehen?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
+		$"../VoiceOver".stream = load(path + "dialog_2_1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 5:
@@ -79,6 +89,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Natürlich! Was sollen wir tun?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
+		$"../VoiceOver".stream = load(path + "dialog_2_5.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 8:
