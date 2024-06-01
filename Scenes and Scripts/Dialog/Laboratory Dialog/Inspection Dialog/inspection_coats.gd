@@ -97,6 +97,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Das sind Laborkittel, die g-g-gehören zur Schutzausrüstung."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_coats_1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 
@@ -108,6 +110,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Genau, denn sie m-m-müssen unseren ganzen Körper vor G-G-Gefahrenstoffen schützen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_coats_3.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -119,6 +123,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Sie sind weiß, um schnell farbige Chemikalien zu erkennen und bestehen aus Baumwolle, da diese bei hohen Temperaturen nicht schmilzt."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_coats_4.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 

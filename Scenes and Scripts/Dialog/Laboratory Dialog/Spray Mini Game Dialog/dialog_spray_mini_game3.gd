@@ -108,6 +108,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ich hab v-v-vergessen zu erklären wie die Spritzpistole f-f-funktioniert. Wenn du zu Lange am Stück schießt v-v-verklemmt sie sich."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_spray_03.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -120,6 +122,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Sch-Sch-Schüttel sie einfach einmal richtig, dann sollte w-w-wieder alles funktionieren."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_spray_04.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	

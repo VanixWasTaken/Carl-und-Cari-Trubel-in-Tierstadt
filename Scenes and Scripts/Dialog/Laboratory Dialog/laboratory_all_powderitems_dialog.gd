@@ -101,8 +101,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Jetzt k-k-können wir mit dem ersten Schritt anfangen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
-		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_all_items_1.mp3")
-		$VoiceOver.play()
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_all_items_1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -115,8 +115,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Eure Aufgabe ist es die Pulver mit destilliertem Wasser zu mischen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
-		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_all_items_2.mp3")
-		$VoiceOver.play()
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_all_items_2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -128,8 +128,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Achtet dabei auf die Waage, wenn ih-ih-ihr zu viel Pulver benutzt müsst ihr von v-v-vorne anfangen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
-		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_all_items_3.mp3")
-		$VoiceOver.play()
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_all_items_3.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	

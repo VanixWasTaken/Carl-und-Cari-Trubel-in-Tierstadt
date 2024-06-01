@@ -114,6 +114,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ohje, d-d-das hat leider nicht ganz funktioniert..."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_fail_01.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 3:
@@ -124,6 +126,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ja, d-d-der pH-Wert ist nicht der gleiche den ich d-d-dir gesagt habe."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_fail_03.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -136,6 +140,8 @@ func add_right_dialog_box():
 		# hier highlighten wo die area ist in der der pfeil sein muss bei der ph-scala :)
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_fail_04.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -148,6 +154,8 @@ func add_right_dialog_box():
 		# hier highlighten wo die area ist in der der pfeil sein muss bei der ph-scala :)
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_fail_06.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	

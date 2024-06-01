@@ -81,6 +81,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Jetzt zum zweiten G-G-Glas. Hier m-m-müssen Wasser und 1,3 - 1,5 Gramm des roten P-P-Pulvers reingeschüttet werden."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_powder_03.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 	

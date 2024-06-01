@@ -81,6 +81,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Als letztes n-n-noch 1,5 - 2,0 Gramm gelbes Pulver in d-d-das dritte Reagenzglas."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_powder_04.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 	

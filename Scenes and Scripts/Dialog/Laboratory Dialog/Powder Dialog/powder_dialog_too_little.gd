@@ -80,6 +80,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Oh, das war nicht genug, füll noch etwas nach!"
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_powder_not_enough_powder.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 	

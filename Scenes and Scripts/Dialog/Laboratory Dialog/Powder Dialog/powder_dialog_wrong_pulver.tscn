@@ -62,7 +62,7 @@ wait_time = 1.5
 one_shot = true
 autostart = true
 
-[node name="Voice Over" type="AudioStreamPlayer" parent="."]
+[node name="VoiceOver" type="AudioStreamPlayer" parent="."]
 
 [node name="Hover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_xqye0")

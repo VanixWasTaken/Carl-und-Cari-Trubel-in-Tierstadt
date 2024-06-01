@@ -109,8 +109,8 @@ func add_right_dialog_box():
 		short_node_text.text = "J-J-Ja mir geht es gut. Seid ihr b-b-bereit loszulegen?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
-		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_before_spray_2.mp3")
-		$VoiceOver.play()
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_before_spray_2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 	elif dialogs == 4:
@@ -121,8 +121,8 @@ func add_right_dialog_box():
 		short_node_text.text = "D-D-Das erkläre ich dir, wenn d-d-du die Hände in die Handschuhe g-g-gesteckt hast."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
-		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_before_spray_4.mp3")
-		$VoiceOver.play()
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_before_spray_4.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 ##########################################################################################

@@ -72,7 +72,7 @@ stream = SubResource("AudioStreamRandomizer_frb6h")
 volume_db = -18.0
 bus = &"SFX"
 
-[node name="Voice Over" type="AudioStreamPlayer" parent="."]
+[node name="VoiceOver" type="AudioStreamPlayer" parent="."]
 volume_db = -12.0
 bus = &"Dialogue"
 

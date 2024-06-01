@@ -137,6 +137,8 @@ func add_right_dialog_box():
 		short_node_text.text = "An dieser Station m-m-machen wir Titration. Dafür müsst ihr zuerst einmal den I-I-Inhalt der Reagenzgläser in das große G-G-Gefäß kippen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_01.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 3:
@@ -147,6 +149,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Mit T-T-Titration bestimmt man normalerweise den p-p-pH-Wert von einer Flüssigkeit."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_03.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -158,6 +162,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Wir müssen allerdings hier dafür s-s-sorgen, dass der p-p-pH-Wert im passenden Bereich liegt, d-d-damit ich mir nicht wehtue."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_04.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -169,6 +175,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Der pH-Wert ist eine Skala von 1 bis 14, die uns sagt, wie sauer oder basisch eine Flüssigkeit ist."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_06.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -180,6 +188,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Sie funktioniert s-s-so ähnlich wie ein T-T-Termometer, dass uns sagt, ob es warm oder k-k-kalt ist."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_07.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 
@@ -191,6 +201,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Stoffe mit einem pH-Wert unter 7 sind sauer, während Stoffe mit einem pH-Wert über 7 basisch sind."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_09.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -202,6 +214,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Eine Zitrone hat einen sehr niedrigen pH-Wert, deswegen schmeckt sie so sauer."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_10.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 	elif dialogs == 11:
@@ -212,6 +226,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Seife ist ein Beispiel für einen basischen Stoff, deswegen fühlt sie sich so rutschig an und schmeckt bitter. Aber bitte iss keine Seife!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_11.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	

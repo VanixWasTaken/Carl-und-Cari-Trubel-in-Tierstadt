@@ -88,6 +88,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Auf diesem Regal lagern wir Geräte, die nicht gefährlich oder zerbrechlich sind."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_shelf_1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -99,6 +101,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Zum Beispiel Schutzbrillen, die wichtig sind, damit wir keine gefährlichen Chemikalien in die Augen bekommen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_shelf_2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 ##########################################################################################

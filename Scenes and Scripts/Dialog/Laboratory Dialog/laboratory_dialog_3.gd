@@ -113,8 +113,8 @@ func add_right_dialog_box():
 		short_node_text.text = "D-D-Das habt ihr sehr gut g-g-gemacht. Vielen Dank."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
-		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_3_1.mp3")
-		$VoiceOver.play()
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_3_1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 3:
@@ -125,8 +125,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ihr müsst die gerade hergestellten Mischungen nehmen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
-		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_3_3.mp3")
-		$VoiceOver.play()
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_3_3.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -139,8 +139,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Diese müsst ihr dann zu der Laborabzugshaube gebracht werden. Diese ist in der linken Wand eingebuchtet."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
-		$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_3_4.mp3")
-		$VoiceOver.play()
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_3_4.mp3")
+		$"../VoiceOver".play()
 		Global.laboratory_help_button_state += 1
 		dialogs += 1
 		same_speaker = false

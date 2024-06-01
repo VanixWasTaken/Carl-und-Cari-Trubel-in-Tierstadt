@@ -87,6 +87,8 @@ func add_right_dialog_box():
 		short_node_text.text = "In diesem Schrank lagern wir unsere gefärlichen Substanzen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_cabinet_1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -98,6 +100,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Es ist wichtig diesen Schrank immer abzuschließen, damit keine Unfälle passieren."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_cabinet_2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 ##########################################################################################

@@ -104,6 +104,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ok jetzt b-b-benutz die Spritzpistole. B-B-Bewegt sie über meinen ganzen Körper, ich will am Ende k-k-keinen unsichtbaren Finger haben."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_spray_01.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 		
@@ -115,6 +117,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Du musst m-m-mich überall treffen, damit ich wieder si-si-sichtbar werde."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_spray_02.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 

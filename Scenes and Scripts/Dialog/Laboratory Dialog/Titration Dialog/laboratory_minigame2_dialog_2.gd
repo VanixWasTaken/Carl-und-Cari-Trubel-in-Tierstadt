@@ -113,6 +113,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Okay, jetzt w-w-wirds spannend, wir müssen dafür sorgen dass der pH-Wert im Bereich z-z-zwischen 5 bis 7 bleibt."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_02_01.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 3:
@@ -123,6 +125,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Hier r-r-rechts ist die Skala des pH-Werts, diese sollte im Bereich zwischen 5 und 7 bleiben."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_02_03.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -134,6 +138,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Über die Leiste in der M-M-Mitte kannst du kontrollieren ob du Flüssigkeit zugibst oder n-n-nicht."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_02_04.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 5:
@@ -145,6 +151,9 @@ func add_right_dialog_box():
 		short_node_text.text = "[Drücke Leertaste wenn der Pfeil im grünen Bereich ist, um den pH-Wert zu kontrollieren.]"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		###### wird nicht vertont, deswegen erstmal keine voiceline ######
+		#$VoiceOver.stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_02_05.mp3")
+		#$VoiceOver.play()
 		dialogs += 1
 		same_speaker = false
 		

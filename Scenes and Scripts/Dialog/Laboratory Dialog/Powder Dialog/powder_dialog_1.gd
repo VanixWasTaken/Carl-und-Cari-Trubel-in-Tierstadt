@@ -80,6 +80,8 @@ func add_right_dialog_box():
 		short_node_text.text = "D-D-Du musst in jedes Reagenzglas eine bestimmte Menge an Pulver und d-d-destilliertes Wasser vermischen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_powder_01.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -91,6 +93,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Im linken Glas müssen 0,2 - 0,45 Gramm des blauen P-P-Pulvers gefüllt werden. Das Pulver kannst du mit d-d-der Waage abwiegen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_powder_02.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	

@@ -130,6 +130,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Perfekt! D-d-der pH-Wert ist zwischen 5 und 7. D-d-das heißt wir können sie benutzen!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_win_01.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 3:
@@ -140,6 +142,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ja, j-j-jetzt ist der pH-Wert nämlich gleich wie der von meiner Haut."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_win_03.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -151,6 +155,8 @@ func add_right_dialog_box():
 		short_node_text.text = "W-w-wäre er zu hoch oder zu niedrig könnte die M-m-mischung meine Haut kaputt machen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_win_04.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -162,6 +168,8 @@ func add_right_dialog_box():
 		short_node_text.text = "A-a-ab gehts in die Sprühkammer!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_win_07.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	
