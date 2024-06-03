@@ -354,8 +354,8 @@ shape = SubResource("CylinderShape3D_064v7")
 
 [node name="FadeAnimation" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = -1
-anchor_left = 0.543229
-anchor_top = 0.552778
+anchor_left = 0.492668
+anchor_top = 0.496296
 anchor_right = 0.492668
 anchor_bottom = 0.496296
 offset_left = -1045.0
@@ -364,7 +364,7 @@ offset_right = 974.078
 offset_bottom = 547.0
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(995.655, 586.765)
+pivot_offset = Vector2(1043.66, 620.915)
 texture = ExtResource("4_iujjk")
 expand_mode = 1
 stretch_mode = 5
