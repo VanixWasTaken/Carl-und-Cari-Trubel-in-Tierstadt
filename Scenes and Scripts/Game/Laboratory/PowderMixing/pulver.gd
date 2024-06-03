@@ -49,7 +49,7 @@ func _on_mouse_exited():
 func _input(event):
 	if event is InputEventMouseMotion:
 		var velocity = event.get_velocity()
-		if velocity > Vector2(100, 100) and follow_mouse:
+		if velocity > Vector2(100, 100) and !powder_drag.playing and follow_mouse:
 			powder_drag.play()
-		elif velocity < Vector2(-100, -100)  and follow_mouse:
+		elif velocity < Vector2(-100, -100) and !powder_drag.playing and follow_mouse:
 			powder_drag.play()

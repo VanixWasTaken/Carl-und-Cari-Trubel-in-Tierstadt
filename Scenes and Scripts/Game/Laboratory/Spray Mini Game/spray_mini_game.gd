@@ -30,10 +30,11 @@ func _process(delta):
 
 
 func _on_area_2d_mouse_entered():
-	$BottleAndGun/SprayGun.texture = spray_gun_highlight
-	$BottleAndGun/Bottle.texture = bottle_highlight
-	mouse_inside = true
-	$Hover.play()
+	if !$SpinMinigame.visible:
+		$BottleAndGun/SprayGun.texture = spray_gun_highlight
+		$BottleAndGun/Bottle.texture = bottle_highlight
+		mouse_inside = true
+		$Hover.play()
 func _on_area_2d_mouse_exited():
 	$BottleAndGun/SprayGun.texture = spray_gun
 	$BottleAndGun/Bottle.texture = bottle
