@@ -209,8 +209,6 @@ script = ExtResource("1_trbh3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.857, 4.782)
 
 [node name="FadeAnimation" parent="Player/CanvasLayer" index="0"]
-anchor_left = 0.492668
-anchor_top = 0.496296
 offset_left = -1009.54
 offset_top = -574.5
 offset_right = 1009.54

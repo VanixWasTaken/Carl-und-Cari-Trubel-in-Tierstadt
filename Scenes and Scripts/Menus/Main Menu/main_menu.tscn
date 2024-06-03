@@ -1,21 +1,27 @@
-[gd_scene load_steps=37 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=43 format=3 uid="uid://ducsr1iwag28u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Main Menu/main_menu.gd" id="1_3f1tb"]
 [ext_resource type="Texture2D" uid="uid://r6osxlvpwdud" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main.png" id="2_sbqtk"]
 [ext_resource type="Texture2D" uid="uid://clcn17unia2fj" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_001.png" id="3_1kg1d"]
+[ext_resource type="Texture2D" uid="uid://dr67x6uyd3ac4" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main_bg.png" id="3_ekpvj"]
 [ext_resource type="Texture2D" uid="uid://b8fkioc55ls28" path="res://Assets/Art/Particles/leaf.png" id="3_lftx2"]
 [ext_resource type="Texture2D" uid="uid://crrhnurucid3q" path="res://Assets/Art/Particles/Clouds/bg_cloud_main1.png" id="3_vtxkd"]
+[ext_resource type="Texture2D" uid="uid://cp1dwwi0ixv3x" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main_mg.png" id="4_0p1yr"]
 [ext_resource type="Texture2D" uid="uid://dhfas2b66qw1f" path="res://Assets/Art/Particles/Clouds/bg_cloud_main2.png" id="4_g4qs8"]
 [ext_resource type="Texture2D" uid="uid://bm7gcry1ns620" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_002.png" id="4_h203a"]
 [ext_resource type="Texture2D" uid="uid://dvobwkpxpn8wu" path="res://Assets/Art/Particles/Clouds/bg_cloud_main3.png" id="5_qgi8g"]
+[ext_resource type="Texture2D" uid="uid://b82hx3oy50qcr" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main_overlay.png" id="5_s6pbb"]
 [ext_resource type="Texture2D" uid="uid://csiuqoad3bqyt" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_003.png" id="5_wlv6i"]
 [ext_resource type="Texture2D" uid="uid://20m8sq4yw4hr" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_004.png" id="6_35oed"]
 [ext_resource type="Texture2D" uid="uid://ld2jwrr2boi7" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_005.png" id="7_p3d45"]
 [ext_resource type="PackedScene" uid="uid://c167vkgb61a1m" path="res://Scenes and Scripts/Menus/Credits/credits.tscn" id="8_e5ggp"]
 [ext_resource type="Texture2D" uid="uid://bw4uijw5l3vn1" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_006.png" id="8_iclu6"]
 [ext_resource type="Texture2D" uid="uid://6y6y5emfkd32" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_007.png" id="9_2ahhp"]
+[ext_resource type="Texture2D" uid="uid://nduwxa5rqkf3" path="res://Assets/Art/Particles/Clouds/bg_cloud_main7.png" id="9_e8ag6"]
 [ext_resource type="Texture2D" uid="uid://dr2bfsjonrajn" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_008.png" id="10_drrmn"]
+[ext_resource type="Texture2D" uid="uid://ca6irvwnkrijm" path="res://Assets/Art/Particles/Clouds/bg_cloud_main8.png" id="10_eiqv6"]
 [ext_resource type="Texture2D" uid="uid://dbb2ejkecaweq" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_009.png" id="11_5twst"]
+[ext_resource type="Texture2D" uid="uid://mtvduxk8q1am" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main_fg.png.PNG" id="12_j3bun"]
 [ext_resource type="Texture2D" uid="uid://blllg5vmvvl41" path="res://Assets/Art/UI/Buttons/Start Button/start_button.png" id="14_5avqw"]
 [ext_resource type="PackedScene" uid="uid://ex8idjxdm1hh" path="res://Scenes and Scripts/Menus/Options/options.tscn" id="15_nlixp"]
 [ext_resource type="Texture2D" uid="uid://178887epa2g4" path="res://Assets/Art/UI/Buttons/Start Button/start_button_dark.png" id="15_w52nx"]
@@ -114,29 +120,73 @@ offset_right = 1920.0
 offset_bottom = 1082.0
 texture = ExtResource("2_sbqtk")
 
+[node name="TierstadtBackground2" type="TextureRect" parent="."]
+offset_top = 2.0
+offset_right = 1920.0
+offset_bottom = 1082.0
+texture = ExtResource("3_ekpvj")
+
+[node name="TierstadtBackground4" type="TextureRect" parent="."]
+offset_top = 2.0
+offset_right = 1920.0
+offset_bottom = 1082.0
+texture = ExtResource("5_s6pbb")
+
 [node name="Clouds2" type="CPUParticles2D" parent="."]
-position = Vector2(-579, 547)
+position = Vector2(-1546, 547)
 amount = 1
-lifetime = 20.0
+lifetime = 60.0
 texture = ExtResource("3_vtxkd")
-gravity = Vector2(20, 0)
-initial_velocity_max = 20.0
+gravity = Vector2(10, 0)
+initial_velocity_max = 10.0
 
 [node name="Clouds3" type="CPUParticles2D" parent="."]
 position = Vector2(-639, 451)
 amount = 1
-lifetime = 20.0
+lifetime = 40.0
 texture = ExtResource("4_g4qs8")
-gravity = Vector2(20, 0)
+gravity = Vector2(10, 0)
 initial_velocity_max = 20.0
 
 [node name="Clouds4" type="CPUParticles2D" parent="."]
-position = Vector2(-841, 262)
+position = Vector2(-1120, 262)
 amount = 1
-lifetime = 20.0
+lifetime = 50.0
 texture = ExtResource("5_qgi8g")
-gravity = Vector2(20, 0)
+gravity = Vector2(10, 0)
 initial_velocity_max = 20.0
+
+[node name="Clouds5" type="CPUParticles2D" parent="."]
+position = Vector2(717, 437)
+emitting = false
+amount = 1
+lifetime = 50.0
+one_shot = true
+texture = ExtResource("9_e8ag6")
+gravity = Vector2(10, 0)
+initial_velocity_max = 20.0
+
+[node name="Clouds6" type="CPUParticles2D" parent="."]
+position = Vector2(349, 653)
+emitting = false
+amount = 1
+lifetime = 50.0
+one_shot = true
+texture = ExtResource("10_eiqv6")
+gravity = Vector2(10, 0)
+initial_velocity_max = 20.0
+
+[node name="TierstadtBackground3" type="TextureRect" parent="."]
+offset_top = 2.0
+offset_right = 1920.0
+offset_bottom = 1082.0
+texture = ExtResource("4_0p1yr")
+
+[node name="TierstadtBackground5" type="TextureRect" parent="."]
+offset_top = 2.0
+offset_right = 1920.0
+offset_bottom = 1082.0
+texture = ExtResource("12_j3bun")
 
 [node name="Leaves" type="CPUParticles2D" parent="."]
 position = Vector2(729, -73)
@@ -152,25 +202,6 @@ orbit_velocity_min = -0.1
 orbit_velocity_max = 0.1
 scale_amount_min = 0.0
 scale_amount_max = 4.0
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-modulate = Color(0.113725, 0.619608, 0.764706, 0.9)
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
-libraries = {
-"": SubResource("AnimationLibrary_wffvr")
-}
-autoplay = "new_animation"
-
-[node name="Clouds" type="AnimatedSprite2D" parent="."]
-position = Vector2(960, 540)
-sprite_frames = SubResource("SpriteFrames_17etq")
-autoplay = "default"
-frame = 8
-frame_progress = 0.586524
 
 [node name="Start" type="TextureButton" parent="."]
 offset_left = 33.0
@@ -209,6 +240,23 @@ position = Vector2(1, 9)
 [node name="OptionsMenu" parent="." instance=ExtResource("15_nlixp")]
 visible = false
 
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(0.113725, 0.619608, 0.764706, 0.9)
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_wffvr")
+}
+autoplay = "new_animation"
+
+[node name="Clouds" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_17etq")
+autoplay = "default"
+
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_3xisq")
 volume_db = -18.0
@@ -217,7 +265,6 @@ volume_db = -18.0
 stream = SubResource("AudioStreamRandomizer_itqj1")
 volume_db = -15.0
 
-[connection signal="animation_finished" from="Clouds" to="." method="_on_clouds_animation_finished"]
 [connection signal="button_down" from="Start" to="." method="_on_button_click"]
 [connection signal="button_up" from="Start" to="." method="_on_start_button_up"]
 [connection signal="mouse_entered" from="Start" to="." method="_on_button_hovered"]
@@ -231,3 +278,4 @@ volume_db = -15.0
 [connection signal="hover" from="CreditsMenu" to="." method="_on_button_hovered"]
 [connection signal="click" from="OptionsMenu" to="." method="_on_button_click"]
 [connection signal="hover" from="OptionsMenu" to="." method="_on_button_hovered"]
+[connection signal="animation_finished" from="Clouds" to="." method="_on_clouds_animation_finished"]
