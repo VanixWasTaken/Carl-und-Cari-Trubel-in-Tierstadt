@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://dfm6sf40klc1x"]
+[gd_scene load_steps=60 format=3 uid="uid://dfm6sf40klc1x"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/titration.gd" id="1_rdept"]
 [ext_resource type="Texture2D" uid="uid://r82vd54v48ed" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG" id="1_tyn2s"]
@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://c4np58ohnv605" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Water Drops/lab_minigame2_water_drops_0001.png" id="40_12kxd"]
 [ext_resource type="Texture2D" uid="uid://crnay8jkgon8r" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Water Drops/lab_minigame2_water_drops_0002.png" id="41_ayen3"]
 [ext_resource type="Texture2D" uid="uid://b5q7pby6fhui1" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Water Drops/lab_minigame2_water_drops_0003.png" id="42_7j5n3"]
+[ext_resource type="AudioStream" uid="uid://b8ig70axv634b" path="res://Assets/Sound/SFX/Ambience/Laboratory/sfx_laboratory_ambience_ventilation_var1.mp3" id="43_pgvcx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op731"]
 size = Vector2(443, 376)
@@ -444,6 +445,10 @@ z_index = 5
 position = Vector2(504, 653)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_mwo6c")
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("43_pgvcx")
+volume_db = -12.0
 
 [connection signal="balancing_game" from="." to="Skillcheck" method="_on_titration_balancing_game"]
 [connection signal="pouring_time" from="Clamp" to="." method="_on_clamp_pouring_time"]
