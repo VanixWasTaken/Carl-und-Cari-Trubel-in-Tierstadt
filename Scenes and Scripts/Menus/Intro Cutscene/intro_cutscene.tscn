@@ -329,7 +329,7 @@ frame_progress = 1.0
 
 [node name="Narrator" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_1paak")
-volume_db = 6.0
+volume_db = 3.0
 autoplay = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
