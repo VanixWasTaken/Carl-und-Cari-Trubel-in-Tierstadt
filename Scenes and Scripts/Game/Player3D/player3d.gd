@@ -4,6 +4,7 @@ var speed = 15
 var result
 
 func _ready():
+	$CanvasLayer/FadeAnimation.visible = true
 	if Global.character == "Carl":
 		$AnimatedSprite3D.play("carl_idle")
 	elif Global.character == "Cari" || Global.character == "":

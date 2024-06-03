@@ -9,6 +9,7 @@ var building
 var in_area = false
 
 func _ready():
+	$CanvasLayer/FadeAnimation.visible = true
 	if Global.character =="Carl":
 		$AnimatedSprite2D.play("carl_animation")
 	elif Global.character == "Cari":
