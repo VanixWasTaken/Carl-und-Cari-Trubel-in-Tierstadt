@@ -25,6 +25,7 @@ var glass_position
 var too_much_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_too_much.tscn")
 var enough_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_enough.tscn")
 var wrong_pulver_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_wrong_pulver.tscn")
+var finished_bowl = false
 var too_little_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_too_little.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -36,14 +37,13 @@ func _ready():
 func _process(delta):
 	needed_pulver = $"../DrinkHolder".needed_color
 	$"../Scale/RichTextLabel".text = str(weight) + " g"
-	if Input.is_action_just_pressed("left_click") && mouse_on:
+	if Input.is_action_just_pressed("left_click") && mouse_on && !finished_bowl:
 		follow_mouse = true
 	if follow_mouse:
 		mouse_position = get_global_mouse_position()
 		global_position = mouse_position
 		Global.mouse_full = true
 	if Input.is_action_just_released("left_click"):
-		print($"../DrinkHolder".new_water)
 		if follow_mouse:
 			follow_mouse = false
 			global_position = start_position
