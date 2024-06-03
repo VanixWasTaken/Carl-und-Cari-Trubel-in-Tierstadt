@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7d1nwvtnotji"]
+[gd_scene load_steps=5 format=3 uid="uid://c7d1nwvtnotji"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Help Button/help_button.gd" id="1_autkf"]
-[ext_resource type="Texture2D" uid="uid://btmhuvj7taj46" path="res://Assets/Art/UI/Buttons/button_help.png.PNG" id="2_lcldv"]
-[ext_resource type="Texture2D" uid="uid://co60hvsfkjcfd" path="res://Assets/Art/UI/Buttons/button_help_gray.png" id="3_dmdbb"]
+[ext_resource type="Texture2D" uid="uid://5ot8ufljltyb" path="res://Assets/Art/UI/Buttons/HelpButton/button_help_carl.png" id="2_u7nfm"]
+[ext_resource type="Texture2D" uid="uid://cu68o31vs7gqv" path="res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_click.png" id="3_hagkw"]
+[ext_resource type="Texture2D" uid="uid://bek2ep4gya3nk" path="res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_hover_outline.png" id="4_fxl5y"]
 
 [node name="HelpButton" type="Control"]
 layout_mode = 3
@@ -16,14 +17,14 @@ script = ExtResource("1_autkf")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 12.0001
-offset_top = 970.0
-offset_right = 816.0
-offset_bottom = 1470.0
+offset_left = 12.0
+offset_top = 940.0
+offset_right = 1049.0
+offset_bottom = 1607.0
 scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("2_lcldv")
-texture_pressed = ExtResource("3_dmdbb")
-texture_hover = ExtResource("2_lcldv")
+texture_normal = ExtResource("2_u7nfm")
+texture_pressed = ExtResource("3_hagkw")
+texture_hover = ExtResource("4_fxl5y")
 
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]

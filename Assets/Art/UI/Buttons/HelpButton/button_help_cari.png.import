@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dt6g8a65kbljw"
-path="res://.godot/imported/button_help_cari.png-f4235eda32e03407d2cca5f995cbc843.ctex"
+path="res://.godot/imported/button_help_cari.png-7fed3986cb1a3d38c705606589251ff0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/UI/Buttons/button_help_cari.png"
-dest_files=["res://.godot/imported/button_help_cari.png-f4235eda32e03407d2cca5f995cbc843.ctex"]
+source_file="res://Assets/Art/UI/Buttons/HelpButton/button_help_cari.png"
+dest_files=["res://.godot/imported/button_help_cari.png-7fed3986cb1a3d38c705606589251ff0.ctex"]
 
 [params]
 

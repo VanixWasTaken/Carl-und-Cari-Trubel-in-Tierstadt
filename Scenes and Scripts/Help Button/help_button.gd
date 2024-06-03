@@ -13,13 +13,13 @@ var help
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if Global.character == "Carl":
-		$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/button_help_cari.png")
-		$TextureButton.texture_pressed = load("res://Assets/Art/UI/Buttons/button_help_cari.png")
-		$TextureButton.texture_hover = load("res://Assets/Art/UI/Buttons/button_help_cari.png")
+		$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_cari.png")
+		$TextureButton.texture_pressed = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_cari_click.png")
+		$TextureButton.texture_hover = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_cari_hover_outline.png")
 	elif Global.character == "Cari":
-		$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/button_help.png.PNG")
-		$TextureButton.texture_pressed = load("res://Assets/Art/UI/Buttons/button_help.png.PNG")
-		$TextureButton.texture_hover = load("res://Assets/Art/UI/Buttons/button_help.png.PNG")
+		$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl.png")
+		$TextureButton.texture_pressed = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_click.png")
+		$TextureButton.texture_hover = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_hover_outline.png")
 func _process(delta):
 	if menu_open || mouse_inside || Global.dialog_playing || Global.cutscene_playing:
 		Global.moving_allowed = false
@@ -53,7 +53,7 @@ func _on_texture_button_button_up():
 		help = mini_help
 	if !helpbuttonopen and Global.character == "Cari":
 		emit_signal("HelpOpened")
-		$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/button_help_gray.png")
+		$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_click.png")
 		$TextureButton.disabled = true
 		if get_tree().get_current_scene().get_name() == "Map":
 			await get_tree().create_timer(0.1).timeout
@@ -61,13 +61,13 @@ func _on_texture_button_button_up():
 			await get_tree().create_timer(7).timeout
 			emit_signal("HelpClosed")
 			$TextureButton.disabled = false
-			$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/button_help.png.PNG")
+			$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl.png")
 		else: 
 			await get_tree().create_timer(0.1).timeout
 			emit_signal("HelpClosed")
 			menu_open = false
 			$TextureButton.disabled = false
-			$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/button_help.png.PNG")
+			$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl.png")
 	
 	
 	
@@ -81,13 +81,13 @@ func _on_texture_button_button_up():
 			await get_tree().create_timer(7).timeout
 			emit_signal("HelpClosed")
 			$TextureButton.disabled = false
-			$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/button_help_cari.png")
+			$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_cari_click.png")
 		else:
 			await get_tree().create_timer(0.1).timeout
 			emit_signal("HelpClosed")
 			menu_open = false
 			$TextureButton.disabled = false
-			$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/button_help_cari.png")
+			$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_cari.png")
 
 
 func _on_texture_button_mouse_entered():
