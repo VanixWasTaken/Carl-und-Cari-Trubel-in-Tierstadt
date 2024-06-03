@@ -36,7 +36,6 @@ func _process(delta):
 	elif Input.is_action_just_pressed("left_click") and !should_shoot_intern:
 		if !$Jamming.playing and self.visible:
 			$Trigger.play()
-			$Jamming.play()
 			$HoseNoise.play()
 
 	else:
@@ -55,6 +54,7 @@ func _on_swipe_area_should_shoot():
 
 
 func _on_visible_chameleon_gun_is_jamming():
-	$Jamming.play()
+	$Trigger.play()
+	$"../Progress".stop()
 	should_shoot_intern = false
 	Global.should_shoot = false
