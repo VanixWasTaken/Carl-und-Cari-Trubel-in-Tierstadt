@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://dfpwq4ngsnyed"]
+[gd_scene load_steps=80 format=3 uid="uid://dfpwq4ngsnyed"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
@@ -51,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://bsoujnqt4r7pi" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Progress Bar/lab_minigame3_progress_bar_square.png" id="49_wbby8"]
 [ext_resource type="Texture2D" uid="uid://dy8ajdr15pfdq" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Progress Bar/lab_minigame3_progress_bar_bubbles.png" id="50_oyde6"]
 [ext_resource type="AudioStream" uid="uid://b8ig70axv634b" path="res://Assets/Sound/SFX/Ambience/Laboratory/sfx_laboratory_ambience_ventilation_var1.mp3" id="51_cbeo8"]
+[ext_resource type="AudioStream" uid="uid://dln3qrns2ondt" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_progress_riser_var1.mp3" id="52_5fw5k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bmvvo"]
 animations = [{
@@ -617,6 +618,11 @@ texture = ExtResource("50_oyde6")
 stream = ExtResource("51_cbeo8")
 volume_db = -12.0
 autoplay = true
+bus = &"SFX"
+
+[node name="Progress" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("52_5fw5k")
+volume_db = -3.0
 bus = &"SFX"
 
 [connection signal="gun_is_jamming" from="VisibleChameleon" to="GunInHand" method="_on_visible_chameleon_gun_is_jamming"]

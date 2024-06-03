@@ -53,6 +53,8 @@ func _physics_process(delta):
 			progress_bar_moving.scale.x += 0.0105
 			progress_bar_moving.position.x += 0.8
 			bubbles.position.x += 1.58
+			$"../Progress".play()
+			$"../Progress".pitch_scale += 0.0025
 			if progress_bar_moving.position.x >= 960:
 				progress_bar_should_progress = false
 		
@@ -66,7 +68,10 @@ func _physics_process(delta):
 		add_child(dialog1.instantiate())
 		should_play_dialog = false
 		gun_in_hand.visible = false
-		
+		$"../Progress".stop()
+	
+	if Input.is_action_just_released("left_click"):
+		$"../Progress".stop()
 
 
 
