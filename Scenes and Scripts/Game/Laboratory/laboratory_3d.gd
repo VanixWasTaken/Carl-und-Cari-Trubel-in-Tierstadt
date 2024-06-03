@@ -15,7 +15,7 @@ var picked_up_scale = false
 var picked_up_reagenz_glasses = false
 var picked_up_vessel = false
 var picked_up_chemicals = false
-
+var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
 
 func _ready():
 	player = get_tree().get_first_node_in_group("Player")
@@ -135,9 +135,9 @@ func _on_dialog_area_body_entered(body):
 
 
 func change_scene():
-	get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Map/map.tscn")
+	get_tree().change_scene_to_packed(map_scene)
 
 
 func _on_exit_body_entered(body):
 	if body.get_name() == "Player":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Map/map.tscn")
+		player.play_fade_out()

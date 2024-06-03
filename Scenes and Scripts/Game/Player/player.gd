@@ -48,7 +48,6 @@ func _physics_process(delta):
 			$Footsteps.stop()
 
 func _get_clicked_object(objects_name, scenes_name):
-	print(objects_name)
 	object_name = objects_name
 	scene_name = scenes_name
 	if in_area && area_name == object_name:
