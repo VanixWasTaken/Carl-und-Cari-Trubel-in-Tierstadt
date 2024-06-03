@@ -15,7 +15,7 @@ var picked_up_scale = false
 var picked_up_reagenz_glasses = false
 var picked_up_vessel = false
 var picked_up_chemicals = false
-var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
+@onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
 
 func _ready():
 	player = get_tree().get_first_node_in_group("Player")
