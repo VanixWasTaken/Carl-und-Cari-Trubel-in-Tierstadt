@@ -58,7 +58,7 @@ texture = ExtResource("1_pn286")
 [node name="Laboratory Building" parent="." instance=ExtResource("2_ab8es")]
 
 [node name="Player" parent="." instance=ExtResource("14_0uuvf")]
-position = Vector2(512, 558)
+position = Vector2(298, 472)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
@@ -96,6 +96,8 @@ metadata/_edit_group_ = true
 [node name="Area2D" type="Area2D" parent="HUD/JobNotes"]
 position = Vector2(132, 126)
 scale = Vector2(0.331094, 0.331094)
+collision_layer = 128
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/Area2D"]
 position = Vector2(21.1421, 28.8408)
@@ -119,6 +121,8 @@ position = Vector2(1632, 296)
 texture = ExtResource("11_8vqrx")
 
 [node name="Area2D" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/ExitButton"]
+collision_layer = 128
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/JobNoteMenu/ExitButton/Area2D"]
 position = Vector2(1626, 299)
@@ -134,6 +138,8 @@ scale = Vector2(1.37, 1.37)
 texture = ExtResource("11_8qsr6")
 
 [node name="Area2D" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1"]
+collision_layer = 128
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D"]
 position = Vector2(404.5, 377)

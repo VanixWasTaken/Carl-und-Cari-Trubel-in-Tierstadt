@@ -51,8 +51,11 @@ func _physics_process(delta):
 func _get_clicked_object(objects_name, scenes_name):
 	object_name = objects_name
 	scene_name = scenes_name
-	if in_area && area_name == object_name:
-		enter_building_prompt()
+	if area_name != null:
+		print(area_name)
+		print(str(object_name) + " REEEEESDADS")
+		if in_area && area_name .contains(object_name):
+			enter_building_prompt()
 
 func _on_area_2d_area_entered(area):
 	in_area = true
