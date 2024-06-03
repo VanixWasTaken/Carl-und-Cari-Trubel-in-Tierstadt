@@ -1,12 +1,13 @@
 extends Node2D
+@onready var tutorial_scene = preload("res://Scenes and Scripts/Game/Tutorial/tutorial.tscn")
 
 func _on_carl_button_button_up():
 	Global.character = "Carl"
-	get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Tutorial/tutorial.tscn")
+	get_tree().change_scene_to_packed(tutorial_scene)
 
 func _on_cari_button_button_up():
 	Global.character = "Cari"
-	get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Tutorial/tutorial.tscn")
+	get_tree().change_scene_to_packed(tutorial_scene)
 
 func _on_carl_button_button_down():
 	$UI.play()

@@ -7,10 +7,12 @@ var building_name = "null"
 @onready var outline_shader = preload("res://Shader/outline.tres")
 @onready var no_shader = preload("res://Shader/no_shader.tres")
 var animation_frame = 0
+var next_scene
 
 func _ready():
 	building_name = get_tree().get_first_node_in_group("BuildingArea").get_name()
 	MusicController._play_music("happyday", "hub", -20)
+	next_scene = load(scene_name)
 
 func _process(delta):
 	animation_frame = $AnimatedSprite2D.frame + 1
@@ -52,3 +54,6 @@ func _on_control_help_opened():
 
 func _on_control_help_closed():
 	$AnimatedSprite2D.material = no_shader
+
+func change_scene():
+	get_tree().change_scene_to_packed(next_scene)

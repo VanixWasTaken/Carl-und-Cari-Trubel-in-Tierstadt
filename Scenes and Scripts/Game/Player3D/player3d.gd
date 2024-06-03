@@ -8,6 +8,7 @@ func _ready():
 		$AnimatedSprite3D.play("carl_idle")
 	elif Global.character == "Cari" || Global.character == "":
 		$AnimatedSprite3D.play("cari_idle")
+	$CanvasLayer/AnimationPlayer.play("fade_in")
 
 func _process(delta):
 	if Global.dialog_playing:
@@ -77,3 +78,10 @@ func _input(event):
 		ray_query.to = to
 		result = space.intersect_ray(ray_query) #schießt den rayab und sag mir womit der intersected
 		navigation_agent.target_position = result.position
+
+func play_fade_out():
+	$CanvasLayer/AnimationPlayer.play("fade_out")
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "fade_out":
+		get_tree().get_current_scene().change_scene()

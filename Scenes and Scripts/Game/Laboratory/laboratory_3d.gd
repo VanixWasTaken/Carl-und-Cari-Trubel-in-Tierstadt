@@ -6,7 +6,7 @@ var second_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/l
 var third_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_3.tscn")
 var fourth_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_4.tscn")
 var fifth_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/laboratory_dialog_5.tscn")
-
+var player
 var mouse_on = false
 var outline_shader = preload("res://Shader/outline.tres")
 var no_shader = preload("res://Shader/no_shader.tres")
@@ -18,7 +18,7 @@ var picked_up_chemicals = false
 
 
 func _ready():
-	
+	player = get_tree().get_first_node_in_group("Player")
 	if Global.return_laboratory_1:
 		Global.lab_cutscene_played == true
 		cutscene = false
@@ -71,7 +71,7 @@ func _process(delta):
 
 func _on_door_area_3d_body_entered(body):
 	if body.get_name() == "Player":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Map/map.tscn")
+		player.play_fade_out()
 
 
 
@@ -134,7 +134,8 @@ func _on_dialog_area_body_entered(body):
 			$Objects/Exit.global_position.y += 100
 
 
-
+func change_scene():
+	get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Map/map.tscn")
 
 
 func _on_exit_body_entered(body):

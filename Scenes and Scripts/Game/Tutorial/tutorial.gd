@@ -4,7 +4,7 @@ extends Node3D
 var second_dialogue = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial_2.tscn")
 var third_dialogue = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial_3.tscn")
 var got_key = false
-
+@onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
 
 
 func _ready():
@@ -42,7 +42,7 @@ func _process(delta):
 
 func _on_door_area_3d_body_entered(body):
 	if body.get_name() == "Player":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Map/map.tscn")
+		get_tree().change_scene_to_packed(map_scene)
 
 
 func _on_poi_sound_finished():
