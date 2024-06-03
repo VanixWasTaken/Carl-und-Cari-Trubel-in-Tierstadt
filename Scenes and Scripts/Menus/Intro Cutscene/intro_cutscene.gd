@@ -41,3 +41,7 @@ func _on_animation_player_dialog2_animation_finished(anim_name):
 	$WeiterButton.show()
 
 
+
+
+func _on_clouds_animation_finished():
+	$Clouds.hide()
