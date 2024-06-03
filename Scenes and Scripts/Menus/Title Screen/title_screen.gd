@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var next_scene = preload("res://Scenes and Scripts/Menus/Main Menu/main_menu.tscn")
 
 func _ready():
 	MusicController._play_music("welcome", "title")
@@ -10,6 +11,6 @@ func _ready():
 
 
 func _on_button_button_up():
-	get_tree().change_scene_to_file("res://Scenes and Scripts/Menus/Main Menu/main_menu.tscn")
+	get_tree().change_scene_to_packed(next_scene)
 
 
