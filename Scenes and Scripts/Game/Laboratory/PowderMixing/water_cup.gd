@@ -50,3 +50,5 @@ func _input(event):
 		var velocity = event.get_velocity()
 		if velocity > Vector2(100, 100) and !water_slosh.playing and follow_mouse:
 			water_slosh.play()
+		elif velocity < Vector2(-100, -100) and !water_slosh.playing and follow_mouse:
+			water_slosh.play()

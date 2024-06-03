@@ -51,3 +51,5 @@ func _input(event):
 		var velocity = event.get_velocity()
 		if velocity > Vector2(100, 100) and !powder_drag.playing and follow_mouse:
 			powder_drag.play()
+		elif velocity < Vector2(-100, -100) and !powder_drag.playing and follow_mouse:
+			powder_drag.play()

@@ -8,14 +8,19 @@ var should_shoot_intern = false
 
 
 func _input(event):
-	if event is InputEventMouseMotion:
-		var velocity = event.get_velocity()
-		if velocity > Vector2(5000, 5000):
-			if !$ShakeSound.playing:
-				$ShakeSound.play()
-			should_shoot_intern = true
-			Global.should_shoot = true
-		
+	if visible and !should_shoot_intern:
+		if event is InputEventMouseMotion:
+			var velocity = event.get_velocity()
+			if velocity > Vector2(5000, 5000):
+				if !$ShakeSound.playing:
+					$ShakeSound.play()
+				should_shoot_intern = true
+				Global.should_shoot = true
+			elif velocity < Vector2(-5000, -5000):
+				if !$ShakeSound.playing:
+					$ShakeSound.play()
+				should_shoot_intern = true
+				Global.should_shoot = true
 
 func _process(delta):
 	should_shoot_intern = Global.should_shoot
