@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://skc43dl2o124"]
+[gd_scene load_steps=38 format=3 uid="uid://skc43dl2o124"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.gd" id="1_jfymc"]
 [ext_resource type="Texture2D" uid="uid://dcwdarpqj4kyp" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame1.png.PNG" id="1_wajoa"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://6y6y5emfkd32" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_007.png" id="20_3jg05"]
 [ext_resource type="Texture2D" uid="uid://dr2bfsjonrajn" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_008.png" id="21_nbc2i"]
 [ext_resource type="Texture2D" uid="uid://dbb2ejkecaweq" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_009.png" id="22_4rgkp"]
+[ext_resource type="AudioStream" uid="uid://nppwsyhdx7ae" path="res://Assets/Sound/VO/Intro/vo_npc_narrator_tierstadt_01.mp3" id="23_1paak"]
 
 [sub_resource type="Animation" id="Animation_jv6g1"]
 resource_name = "Glide"
@@ -326,9 +327,14 @@ autoplay = "default"
 frame = 8
 frame_progress = 1.0
 
+[node name="Narrator" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_1paak")
+autoplay = true
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="animation_finished" from="Dialog1/AnimationPlayer" to="." method="_on_animation_player_dialog1_animation_finished"]
 [connection signal="animation_finished" from="Dialog2/AnimationPlayer" to="." method="_on_animation_player_dialog2_animation_finished"]
 [connection signal="pressed" from="WeiterButton" to="." method="_on_weiter_button_pressed"]
 [connection signal="animation_finished" from="Clouds" to="." method="_on_clouds_animation_finished"]
+[connection signal="finished" from="Narrator" to="." method="_on_narrator_finished"]
