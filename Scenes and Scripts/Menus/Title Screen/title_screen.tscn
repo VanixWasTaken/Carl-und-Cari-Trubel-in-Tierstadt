@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dwjsgg1ola36e" path="res://Assets/Art/UI/Menus/Title Screen/Idle/titlescreen_007.png" id="8_t4nob"]
 [ext_resource type="Texture2D" uid="uid://jwo7sgonjjt0" path="res://Assets/Art/UI/Menus/Title Screen/Idle/titlescreen_008.png" id="9_6tbre"]
 [ext_resource type="Texture2D" uid="uid://dhfd8vkvnth22" path="res://Assets/Art/UI/Menus/Title Screen/Idle/titlescreen_009.png" id="10_61olo"]
-[ext_resource type="Texture2D" uid="uid://dy3e7gs2uw0ut" path="res://Assets/Art/UI/Menus/Title Screen/title_font.svg" id="11_vjaha"]
+[ext_resource type="Texture2D" uid="uid://dwtqldcudipt" path="res://Assets/Art/UI/Menus/Title Screen/title_cuctit.png.PNG" id="11_552q0"]
 [ext_resource type="Texture2D" uid="uid://cu6t7ep8q6gca" path="res://Assets/Art/UI/Menus/Title Screen/drücke_linksklick_button.png" id="12_kg28m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4jj7q"]
@@ -104,8 +104,8 @@ offset_right = 2035.0
 offset_bottom = -255.0
 
 [node name="Title" type="Sprite2D" parent="."]
-position = Vector2(959, 444)
-texture = ExtResource("11_vjaha")
+position = Vector2(958, 490)
+texture = ExtResource("11_552q0")
 
 [node name="DrückeLinksklickButton" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.666667)

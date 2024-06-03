@@ -149,7 +149,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "K-K-Könnt ihr mir helfen meine V-V-Visabel Chemikalie zu mixen? Mit der werde ich wieder sichtbar."
+		short_node_text.text = "K-K-Könnt ihr mir helfen meine V-V-Visabel Chemikalie zu mischen? Mit der werde ich wieder sichtbar."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_2_4.mp3")
@@ -162,7 +162,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ihr m-m-müsst zuerst an d-d-dem Tisch dort drei Chemikalien mixen."
+		short_node_text.text = "Ihr m-m-müsst zuerst an d-d-dem Tisch dort drei Chemikalien anmischen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_2_6.mp3")

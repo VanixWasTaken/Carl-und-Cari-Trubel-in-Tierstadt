@@ -71,8 +71,7 @@ func enter_building_prompt():
 	Global.dialog_playing = true
 	Global.moving_allowed = false
 	$CanvasLayer/EnterPrompt.visible = true
-	$CanvasLayer/EnterPrompt/Label.text = "Willst du das 
-	" + str(area_name) + "
+	$CanvasLayer/EnterPrompt/Label.text =  str(area_name) + "
 	 betreten?"
 
 
