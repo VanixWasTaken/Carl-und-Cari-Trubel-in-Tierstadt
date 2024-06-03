@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://ckctg6v1ekkvh" path="res://Assets/Art/Environment/Map/Big Map/map.PNG" id="1_pn286"]
 [ext_resource type="PackedScene" uid="uid://dctfgv4bxknm4" path="res://Scenes and Scripts/Game/Map/Buildings/laboratory_building.tscn" id="2_ab8es"]
+[ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="9_lq8sc"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/job_notes.gd" id="9_vqn8c"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/exit_button.gd" id="10_0oi3s"]
-[ext_resource type="Texture2D" uid="uid://cch5cjlssxc7x" path="res://Assets/Art/UI/HUD/Map/UI_hud.PNG" id="10_dyp1j"]
 [ext_resource type="Texture2D" uid="uid://ct5jp2pxvyrqc" path="res://Assets/Art/UI/Buttons/UI_inventory_icon.PNG" id="11_8qsr6"]
 [ext_resource type="Texture2D" uid="uid://dkm78622qqie7" path="res://Assets/Art/UI/Buttons/exit_button.png" id="11_8vqrx"]
 [ext_resource type="Texture2D" uid="uid://cm4hcr8fw4k5a" path="res://Assets/Art/UI/HUD/Map/job_note1.PNG" id="13_2x76a"]
@@ -98,15 +98,14 @@ position = Vector2(21.1421, 28.8408)
 shape = SubResource("RectangleShape2D_ab4lo")
 
 [node name="JobNoteMenu" type="Node2D" parent="HUD/JobNotes"]
-visible = false
 position = Vector2(-36, -15)
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu"]
 position = Vector2(1068, 610)
-texture = ExtResource("10_dyp1j")
+texture = ExtResource("9_lq8sc")
 
 [node name="ExitButton" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
-position = Vector2(266, -99)
+position = Vector2(79, 38)
 script = ExtResource("10_0oi3s")
 metadata/_edit_group_ = true
 
@@ -121,7 +120,7 @@ position = Vector2(1626, 299)
 shape = SubResource("CircleShape2D_h683o")
 
 [node name="InJobMenuJobNote1" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
-position = Vector2(-113, -118)
+position = Vector2(109, -4)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1"]
