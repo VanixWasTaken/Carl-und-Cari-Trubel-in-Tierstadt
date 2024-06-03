@@ -72,7 +72,10 @@ func enter_building_prompt():
 	Global.dialog_playing = true
 	Global.moving_allowed = false
 	$CanvasLayer/EnterPrompt.visible = true
-	$CanvasLayer/EnterPrompt/Label.text =  str(area_name) + "
+	$CanvasLayer/Label.show()
+	$CanvasLayer/YesButton.show()
+	$CanvasLayer/NoButton.show()
+	$CanvasLayer/Label.text =  str(area_name) + "
 	 betreten?"
 
 
@@ -82,6 +85,9 @@ func _on_yes_button_button_up():
 
 func _on_no_button_button_up():
 	$CanvasLayer/EnterPrompt.visible = false
+	$CanvasLayer/Label.hide()
+	$CanvasLayer/YesButton.hide()
+	$CanvasLayer/NoButton.hide()
 	Global.moving_allowed = true
 	Global.dialog_playing = false
 

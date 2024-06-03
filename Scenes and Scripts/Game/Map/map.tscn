@@ -58,10 +58,14 @@ texture = ExtResource("1_pn286")
 [node name="Laboratory Building" parent="." instance=ExtResource("2_ab8es")]
 
 [node name="Player" parent="." instance=ExtResource("14_0uuvf")]
-position = Vector2(287, 535)
+position = Vector2(512, 558)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
 position_smoothing_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
@@ -98,6 +102,7 @@ position = Vector2(21.1421, 28.8408)
 shape = SubResource("RectangleShape2D_ab4lo")
 
 [node name="JobNoteMenu" type="Node2D" parent="HUD/JobNotes"]
+visible = false
 position = Vector2(-36, -15)
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu"]
