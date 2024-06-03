@@ -5,16 +5,15 @@ var start_game = false
 var arrow_in_bar = false
 var pressed_already = false
 var countdown = 0
-
+var needed_time = 13
+var current_time = 0.0
 var win_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Titration Dialog/laboratory_minigame2_dialog_win.tscn")
 var lose_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Titration Dialog/laboratory_minigame2_dialog_lose.tscn")
 var try_again_dialog
 
 var rng = RandomNumberGenerator.new()
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+# Called when the node enters the scene tre
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -55,6 +54,9 @@ func _process(delta):
 			if $"PH-Scale/Arrow".position.y < -263: #Oberster Strich
 				$"PH-Scale/Arrow".position.y = -263
 
+		if $"PH-Scale/Arrow".position.y >= 30 and $"PH-Scale/Arrow".position.y <= 121: #Gewinn Werte
+			current_time += delta
+
 
 func _on_bar_area_entered(area):
 	if area.get_name() == "Arrow":
@@ -90,7 +92,7 @@ func _on_mini_game_time_timeout():
 	start_game = false
 	$Arrow/AnimationPlayer.stop()
 	$Bubbling.stop()
-	if $"PH-Scale/Arrow".position.y >= 30 and $"PH-Scale/Arrow".position.y <= 121: #Gewinn Werte
+	if current_time >= needed_time || $"PH-Scale/Arrow".position.y >= 30 and $"PH-Scale/Arrow".position.y <= 121: #Gewinn Werte
 		var dialog_instance = win_dialog.instantiate()
 		add_child(dialog_instance)
 	else:
