@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=68 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Tutorial/tutorial.gd" id="1_trbh3"]
@@ -24,6 +24,7 @@
 [ext_resource type="AudioStream" uid="uid://buqs1583t6vuw" path="res://Assets/Sound/SFX/Foley/Tutorial/sfx_tutorial_foley_keyjingle_var3.mp3" id="21_tdi0n"]
 [ext_resource type="Texture2D" uid="uid://pkbt4uivo72d" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse_pressed.png" id="24_llxkm"]
 [ext_resource type="Texture2D" uid="uid://sipuj2avuffd" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse.png" id="25_8y1ie"]
+[ext_resource type="PackedScene" uid="uid://buakyojlgjurd" path="res://Scenes and Scripts/Game/Tutorial/garden_highlight.tscn" id="26_auvv0"]
 [ext_resource type="Texture2D" uid="uid://cfott5tyl1hi2" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_staircase.png" id="29_alfcp"]
 [ext_resource type="Texture2D" uid="uid://deunvv2f3xauc" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_chair_side.png" id="29_htb3b"]
 [ext_resource type="Texture2D" uid="uid://dubyjj4wg45h" path="res://Assets/Art/Environment/Rooms/Tutorial/Objects/tutorial_frontdoor.png" id="30_4sjk3"]
@@ -400,6 +401,9 @@ stream = SubResource("AudioStreamPolyphonic_75e5b")
 bus = &"SFX"
 
 [node name="Objects" type="Node3D" parent="."]
+
+[node name="GardenHighlight" parent="Objects" instance=ExtResource("26_auvv0")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 22.2052, 6.27379, -4.682)
 
 [node name="Stairs" type="Sprite3D" parent="Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14025, 10.4057, -3.29723)
