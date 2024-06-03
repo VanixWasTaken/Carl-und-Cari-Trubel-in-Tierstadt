@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c73qxikwmbklc"
-path="res://.godot/imported/button_help_cari_grey.png-024300e2c3be86a2a5e091e25b3a7de6.ctex"
+uid="uid://5ot8ufljltyb"
+path="res://.godot/imported/button_help_carl.png-4388fadf0e0b1cd1d94e1e2d7809941a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/UI/Buttons/button_help_cari_grey.png"
-dest_files=["res://.godot/imported/button_help_cari_grey.png-024300e2c3be86a2a5e091e25b3a7de6.ctex"]
+source_file="res://Assets/Art/UI/Buttons/HelpButton/button_help_carl.png"
+dest_files=["res://.godot/imported/button_help_carl.png-4388fadf0e0b1cd1d94e1e2d7809941a.ctex"]
 
 [params]
 

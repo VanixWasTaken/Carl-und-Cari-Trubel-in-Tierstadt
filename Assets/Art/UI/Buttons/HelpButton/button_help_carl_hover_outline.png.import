@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://co60hvsfkjcfd"
-path="res://.godot/imported/button_help_gray.png-a4da01542fc42452df962ba7a96b64b2.ctex"
+uid="uid://bek2ep4gya3nk"
+path="res://.godot/imported/button_help_carl_hover_outline.png-5ab298b75406d43a2a2444dadbd14860.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/UI/Buttons/button_help_gray.png"
-dest_files=["res://.godot/imported/button_help_gray.png-a4da01542fc42452df962ba7a96b64b2.ctex"]
+source_file="res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_hover_outline.png"
+dest_files=["res://.godot/imported/button_help_carl_hover_outline.png-5ab298b75406d43a2a2444dadbd14860.ctex"]
 
 [params]
 
