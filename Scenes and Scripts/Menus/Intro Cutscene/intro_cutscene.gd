@@ -4,7 +4,7 @@ var character_selection = preload("res://Scenes and Scripts/Menus/Character Sele
 
 var button_pressed = 0
 
-
+var narrator_count = 0
 
 func _on_animated_sprite_2d_animation_finished():
 	$AnimatedSprite2D.queue_free()
@@ -45,3 +45,15 @@ func _on_animation_player_dialog2_animation_finished(anim_name):
 
 func _on_clouds_animation_finished():
 	$Clouds.hide()
+
+
+func _on_narrator_finished():
+	if narrator_count == 0:
+		$Narrator.stream = load("res://Assets/Sound/VO/Intro/vo_npc_narrator_tierstadt_02.mp3")
+		$Narrator.play()
+		narrator_count += 1
+	elif narrator_count == 1:
+		await get_tree().create_timer(0.5).timeout
+		$Narrator.stream = load("res://Assets/Sound/VO/Intro/vo_npc_narrator_tierstadt_03.mp3")
+		$Narrator.play()
+		narrator_count += 1
