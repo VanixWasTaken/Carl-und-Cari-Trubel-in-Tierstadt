@@ -33,6 +33,7 @@ func _process(delta):
 			global_position = start_position
 			water_sprite.get_children()[0].play()
 			%PouringWater.stop()
+			$"../StopPouring".play()
 
 func _on_mouse_entered():
 	if Global.mouse_full == false:

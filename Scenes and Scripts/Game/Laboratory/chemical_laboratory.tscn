@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=88 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
 [ext_resource type="Texture2D" uid="uid://dwuywvtsnqew" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/lab_minigame1_desk.png" id="2_ckcvh"]
@@ -42,6 +42,8 @@
 [ext_resource type="AudioStream" uid="uid://j4uc8lo3bon6" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_powderdragging_var2.mp3" id="31_sdv7k"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/PowderMixing/pulver_bowl.gd" id="32_ebx3t"]
 [ext_resource type="AudioStream" uid="uid://xnko3yoyx30j" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_powderdragging_var3.mp3" id="32_hn6oh"]
+[ext_resource type="AudioStream" uid="uid://2x31ikjd6u6a" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakerpour_var2.mp3" id="39_wixwt"]
+[ext_resource type="AudioStream" uid="uid://bgi8re8ixi1v" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakerpour_var3.mp3" id="40_g1vo0"]
 [ext_resource type="Texture2D" uid="uid://cbvr28biul4iy" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Red/lab_minigame1_pulver_container_red.png" id="42_my3he"]
 [ext_resource type="Texture2D" uid="uid://dpftw0uc4m0is" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Red/lab_minigame1_pulver_container_red_0001.png" id="43_3i3hj"]
 [ext_resource type="Texture2D" uid="uid://c5qk877hjstro" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Red/lab_minigame1_pulver_container_red_0002.png" id="44_30lny"]
@@ -58,8 +60,12 @@
 [ext_resource type="AudioStream" uid="uid://4jn1hqfjg8gj" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var1.mp3" id="56_1kyrl"]
 [ext_resource type="AudioStream" uid="uid://gx0o4f5bq21g" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var2.mp3" id="57_o03af"]
 [ext_resource type="AudioStream" uid="uid://bv85fsmky476u" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var3.mp3" id="58_3ma0y"]
-[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="62_es0fk"]
-[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="63_qk6pd"]
+[ext_resource type="AudioStream" uid="uid://cx7pb5lv7ea31" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakerpourstop_var1.mp3" id="61_gtl2m"]
+[ext_resource type="AudioStream" uid="uid://c4i4y6ehjbt4y" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/sfx_laboratory_ui_glasshover_var1.mp3" id="61_m03yb"]
+[ext_resource type="AudioStream" uid="uid://bycuhm5qdpjur" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/sfx_laboratory_ui_glasshover_var2.mp3" id="62_h52h5"]
+[ext_resource type="AudioStream" uid="uid://c237mu43xrp54" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/sfx_laboratory_ui_glasshover_var3.mp3" id="63_p8edu"]
+[ext_resource type="AudioStream" uid="uid://bivu5e2qf51pp" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/sfx_laboratory_ui_glasshover_var4.mp3" id="64_osdsw"]
+[ext_resource type="AudioStream" uid="uid://cwle0vaf2wej4" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/sfx_laboratory_ui_glasshover_var5.mp3" id="65_1w6r4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mrjln"]
 animations = [{
@@ -183,6 +189,15 @@ stream_3/weight = 1.0
 stream_4/stream = ExtResource("20_gnvqf")
 stream_4/weight = 1.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_fvflv"]
+streams_count = 3
+stream_0/stream = ExtResource("39_wixwt")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("40_g1vo0")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("10_gmevd")
+stream_2/weight = 1.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xc7aw"]
 size = Vector2(246, 316)
 
@@ -293,12 +308,17 @@ stream_2/stream = ExtResource("58_3ma0y")
 stream_2/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1g1u0"]
-playback_mode = 1
-streams_count = 2
-stream_0/stream = ExtResource("62_es0fk")
+streams_count = 5
+stream_0/stream = ExtResource("61_m03yb")
 stream_0/weight = 1.0
-stream_1/stream = ExtResource("63_qk6pd")
+stream_1/stream = ExtResource("62_h52h5")
 stream_1/weight = 1.0
+stream_2/stream = ExtResource("63_p8edu")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("64_osdsw")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("65_1w6r4")
+stream_4/weight = 1.0
 
 [sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_t54dx"]
 polyphony = 2
@@ -410,8 +430,7 @@ bus = &"SFX"
 
 [node name="PouringWater" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("10_gmevd")
-volume_db = -20.0
+stream = SubResource("AudioStreamRandomizer_fvflv")
 
 [node name="PulverPour" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
@@ -543,6 +562,9 @@ volume_db = -6.0
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPolyphonic_t54dx")
+
+[node name="StopPouring" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("61_gtl2m")
 
 [connection signal="area_entered" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_exited"]

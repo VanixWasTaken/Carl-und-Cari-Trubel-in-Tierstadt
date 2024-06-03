@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var sound = $UI
-
+@onready var next_scene = preload("res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -10,7 +10,7 @@ func _process(delta):
 
 # Input for usability
 func _on_start_button_up():
-	get_tree().change_scene_to_file("res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.tscn")
+	get_tree().change_scene_to_packed(next_scene)
 
 func _on_options_button_up():
 	$OptionsMenu.visible = true
