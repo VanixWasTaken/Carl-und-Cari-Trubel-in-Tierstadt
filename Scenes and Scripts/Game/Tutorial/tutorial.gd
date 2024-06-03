@@ -4,10 +4,11 @@ extends Node3D
 var second_dialogue = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial_2.tscn")
 var third_dialogue = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial_3.tscn")
 var got_key = false
-
-
+@onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
+var player
 
 func _ready():
+	player = get_tree().get_first_node_in_group("Player")
 	var playback: AudioStreamPlaybackPolyphonic
 	$Ambience.play()
 	$POI/Mouse.play("default")
@@ -42,8 +43,7 @@ func _process(delta):
 
 func _on_door_area_3d_body_entered(body):
 	if body.get_name() == "Player":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Map/map.tscn")
-
+		player.play_fade_out()
 
 func _on_poi_sound_finished():
 	await get_tree().create_timer(randf_range(5, 10)).timeout
@@ -99,5 +99,6 @@ func _on_timer_timeout():
 	$Barks/Timer.wait_time = randf_range(10, 20)
 	$Barks/Timer.start()
 
-
+func change_scene():
+	get_tree().change_scene_to_packed(map_scene)
 
