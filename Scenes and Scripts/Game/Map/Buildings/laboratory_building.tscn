@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dctfgv4bxknm4"]
+[gd_scene load_steps=10 format=3 uid="uid://dctfgv4bxknm4"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map_house_test.gd" id="1_eq7ey"]
 [ext_resource type="Texture2D" uid="uid://bhf7mcvws0om1" path="res://Assets/Art/Environment/Map/Houses/Laboratory/chemielabor_frame_1.png" id="2_maows"]
@@ -39,6 +39,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_351ux"]
+size = Vector2(284, 217)
+
 [node name="Laboratory Building" type="Node2D"]
 position = Vector2(263, 127)
 script = ExtResource("1_eq7ey")
@@ -56,7 +59,13 @@ position = Vector2(1080, 813)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chemie Labor"]
 position = Vector2(-852, -671)
 scale = Vector2(0.6625, 0.6625)
-polygon = PackedVector2Array(-581.132, -341.132, -451.321, -460.377, 158.491, -436.226, 155.472, 76.9811, -489.057, 96.6038)
+polygon = PackedVector2Array(-15.0943, -30.1887, -9.05658, -371.321, 102.642, -363.774, 111.698, 36.2264, -470.943, 42.2641, -472.453, -36.2264)
 
-[connection signal="mouse_entered" from="Chemie Labor" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Chemie Labor" to="." method="_on_area_2d_mouse_exited"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(52, 7.5)
+shape = SubResource("RectangleShape2D_351ux")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

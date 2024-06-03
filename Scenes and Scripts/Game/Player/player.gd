@@ -74,7 +74,7 @@ func enter_building_prompt():
 
 
 func _on_yes_button_button_up():
-	get_tree().change_scene_to_file(scene_name)
+	$CanvasLayer/AnimationPlayer.play("fade_out")
 
 
 func _on_no_button_button_up():
@@ -85,3 +85,7 @@ func _on_no_button_button_up():
 
 func _on_area_2d_area_exited(area):
 	in_area = false
+
+
+func _on_animation_player_animation_finished(anim_name):
+	get_tree().change_scene_to_file(scene_name)
