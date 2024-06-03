@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=81 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
 [ext_resource type="Texture2D" uid="uid://dwuywvtsnqew" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/lab_minigame1_desk.png" id="2_ckcvh"]
@@ -300,6 +300,9 @@ stream_0/weight = 1.0
 stream_1/stream = ExtResource("63_qk6pd")
 stream_1/weight = 1.0
 
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_t54dx"]
+polyphony = 2
+
 [node name="ChemicalLaboratory" type="Node2D"]
 script = ExtResource("1_b2cfh")
 
@@ -364,13 +367,13 @@ anchor_left = -0.00972772
 anchor_top = -0.0496557
 anchor_right = 0.000642655
 anchor_bottom = -0.0496557
-offset_left = -91.9416
-offset_top = 200.236
-offset_right = 149.058
-offset_bottom = 251.236
+offset_left = -68.9445
+offset_top = 204.09
+offset_right = 172.055
+offset_bottom = 255.09
 theme_override_colors/default_color = Color(0, 1, 0, 1)
 theme_override_fonts/normal_font = ExtResource("11_g8n2i")
-theme_override_font_sizes/normal_font_size = 61
+theme_override_font_sizes/normal_font_size = 48
 text = "Gewicht Hier
 "
 scroll_active = false
@@ -537,6 +540,9 @@ volume_db = -15.0
 [node name="Dragging" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_qgpbb")
 volume_db = -6.0
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPolyphonic_t54dx")
 
 [connection signal="area_entered" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="DrinkHolder/Area2D" to="DrinkHolder" method="_on_area_2d_area_exited"]

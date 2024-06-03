@@ -69,8 +69,9 @@ func _on_area_2d_area_entered(area):
 					pulver_in_3 = true
 					remove_glass()
 		else:
-			dialog_instance = not_enough_water_dialog.instantiate()
-			get_tree().get_current_scene().add_child(dialog_instance)
+			if !Global.dialog_playing:
+				dialog_instance = not_enough_water_dialog.instantiate()
+				get_tree().get_current_scene().add_child(dialog_instance)
 
 
 func remove_glass():
@@ -97,6 +98,7 @@ func remove_glass():
 		needed_color = "NULL"
 		dialog_instance = end_powder_dialog.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
+		$"../PulverBowl".finished_bowl = true
 
 
 

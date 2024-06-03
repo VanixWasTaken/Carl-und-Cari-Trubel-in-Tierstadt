@@ -439,7 +439,7 @@ texture = ExtResource("20_rmdpi")
 transform = Transform3D(2.53165, 0, 0, 0, 2.53165, 0, 0, 0, 2.53165, 26.8007, -2.9278, 0)
 stream = ExtResource("31_cxgd7")
 autoplay = true
-max_distance = 70.0
+max_distance = 20.0
 bus = &"SFX"
 
 [node name="TrashCan" type="Sprite3D" parent="Objects"]
@@ -524,6 +524,20 @@ bus = &"SFX"
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_2rt3b")
 volume_db = -18.0
+bus = &"SFX"
+
+[node name="VentAmbience2" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9645, 6.75853, -4.38978)
+stream = ExtResource("31_cxgd7")
+autoplay = true
+max_distance = 20.0
+bus = &"SFX"
+
+[node name="VentAmbience3" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4543, 7.7588, 0.178772)
+stream = ExtResource("31_cxgd7")
+autoplay = true
+max_distance = 20.0
 bus = &"SFX"
 
 [connection signal="timeout" from="NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer" to="." method="_on_timer_timeout"]
