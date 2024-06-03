@@ -1,16 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0kmxo1xwctr3"]
+[gd_scene load_steps=14 format=3 uid="uid://d0kmxo1xwctr3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Character Selection/character_selection.gd" id="1_5srde"]
-[ext_resource type="Texture2D" uid="uid://dbqhqg33mmhlt" path="res://Assets/Art/UI/Menus/Character Selection/character_selection_background_sketch.png" id="2_wercc"]
+[ext_resource type="Texture2D" uid="uid://dse3wruy3xdu4" path="res://Assets/Art/UI/Menus/Character Selection/character_selection_background.png" id="2_y8g0q"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="3_ixneb"]
-[ext_resource type="Texture2D" uid="uid://cb0138qcrtbwu" path="res://Assets/Art/Characters/Carl/Full Body/carl_full_body.png" id="4_ds3o0"]
-[ext_resource type="Texture2D" uid="uid://bx5o81fw440el" path="res://Assets/Art/Characters/Carl/Full Body/carl_full_body_highlight.png" id="5_l1ilw"]
-[ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/Art/UI/Buttons/menu_button_mid.png" id="6_23f7r"]
-[ext_resource type="Texture2D" uid="uid://cxhtc2gys8yn8" path="res://Assets/Art/Characters/Cari/Full Body/cari_full_body.png" id="7_qh14g"]
-[ext_resource type="Texture2D" uid="uid://c5bahbel6t2mr" path="res://Assets/Art/Characters/Cari/Full Body/cari_full_body_highlight.png" id="8_f3s0g"]
+[ext_resource type="Texture2D" uid="uid://qo6lddnymkei" path="res://Assets/Art/UI/Dialogue/dialog_box_name.png" id="3_xp1ql"]
+[ext_resource type="Texture2D" uid="uid://dctjtl5x7uibn" path="res://Assets/Art/Characters/Cari/Full Body/cari.png" id="5_68byl"]
+[ext_resource type="Texture2D" uid="uid://2eb67dwcvcb7" path="res://Assets/Art/Characters/Cari/Full Body/cari_highlight.png" id="6_ea15h"]
+[ext_resource type="Texture2D" uid="uid://qsq6gkqrq80r" path="res://Assets/Art/Characters/Carl/Full Body/carl.png" id="7_a7vx7"]
+[ext_resource type="Texture2D" uid="uid://bq2gjvd80s875" path="res://Assets/Art/Characters/Carl/Full Body/carl_higlight.png" id="8_s136i"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="9_5o4jd"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="10_jit2i"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="11_kbe6w"]
+[ext_resource type="Texture2D" uid="uid://cy40uuqqkl6ac" path="res://Assets/Art/UI/Menus/Character Selection/character_selection_background_bed_cut.png" id="12_vttij"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bloo3"]
 playback_mode = 1
@@ -28,77 +29,42 @@ script = ExtResource("1_5srde")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_wercc")
+texture = ExtResource("2_y8g0q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(968, 121.2)
+scale = Vector2(3.7, 3.63)
+texture = ExtResource("3_xp1ql")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -2.0
-offset_top = 4.0
-offset_right = 1918.0
-offset_bottom = 140.0
+visible = false
+offset_top = 53.2
+offset_right = 1920.0
+offset_bottom = 189.2
+theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
+theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
+theme_override_constants/outline_size = 30
 theme_override_fonts/font = ExtResource("3_ixneb")
 theme_override_font_sizes/font_size = 100
 text = "Charakterauswahl"
 horizontal_alignment = 1
 
-[node name="Carl Button" type="TextureButton" parent="."]
-offset_left = 1228.0
-offset_top = 88.0
-offset_right = 4056.0
-offset_bottom = 5140.0
-scale = Vector2(0.175, 0.175)
-texture_normal = ExtResource("4_ds3o0")
-texture_hover = ExtResource("5_l1ilw")
-
-[node name="TextureRect2" type="TextureRect" parent="Carl Button"]
-layout_mode = 0
-offset_left = 228.569
-offset_top = 4931.43
-offset_right = 1140.57
-offset_bottom = 5238.43
-scale = Vector2(2.3, 2.3)
-texture = ExtResource("6_23f7r")
-
-[node name="Label" type="Label" parent="Carl Button"]
-layout_mode = 0
-offset_left = 331.43
-offset_top = 4988.0
-offset_right = 2211.43
-offset_bottom = 5661.0
-theme_override_fonts/font = ExtResource("3_ixneb")
-theme_override_font_sizes/font_size = 500
-text = "CARL"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Cari Button" type="TextureButton" parent="."]
-offset_left = 219.0
-offset_top = 88.0
-offset_right = 3047.0
-offset_bottom = 5140.0
-scale = Vector2(0.175, 0.175)
-texture_normal = ExtResource("7_qh14g")
-texture_hover = ExtResource("8_f3s0g")
+offset_left = 600.0
+offset_top = 128.0
+offset_right = 915.0
+offset_bottom = 766.0
+texture_normal = ExtResource("5_68byl")
+texture_hover = ExtResource("6_ea15h")
 
-[node name="TextureRect" type="TextureRect" parent="Cari Button"]
-layout_mode = 0
-offset_left = 337.144
-offset_top = 4931.43
-offset_right = 1249.14
-offset_bottom = 5238.43
-scale = Vector2(2.3, 2.3)
-texture = ExtResource("6_23f7r")
-
-[node name="Label" type="Label" parent="Cari Button"]
-layout_mode = 0
-offset_left = 445.715
-offset_top = 4988.0
-offset_right = 2303.71
-offset_bottom = 5661.0
-theme_override_fonts/font = ExtResource("3_ixneb")
-theme_override_font_sizes/font_size = 500
-text = "CARI"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Carl Button" type="TextureButton" parent="."]
+offset_left = 1328.0
+offset_top = 128.0
+offset_right = 1662.0
+offset_bottom = 773.0
+texture_normal = ExtResource("7_a7vx7")
+texture_hover = ExtResource("8_s136i")
 
 [node name="UI" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_bloo3")
@@ -108,9 +74,13 @@ volume_db = -18.0
 stream = SubResource("AudioStreamRandomizer_bloo3")
 volume_db = -18.0
 
-[connection signal="button_down" from="Carl Button" to="." method="_on_carl_button_button_down"]
-[connection signal="button_up" from="Carl Button" to="." method="_on_carl_button_button_up"]
-[connection signal="mouse_entered" from="Carl Button" to="." method="_on_carl_button_mouse_entered"]
+[node name="CharacterSelectionBackgroundBedCut" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("12_vttij")
+
 [connection signal="button_down" from="Cari Button" to="." method="_on_cari_button_button_down"]
 [connection signal="button_up" from="Cari Button" to="." method="_on_cari_button_button_up"]
 [connection signal="mouse_entered" from="Cari Button" to="." method="_on_cari_button_mouse_entered"]
+[connection signal="button_down" from="Carl Button" to="." method="_on_carl_button_button_down"]
+[connection signal="button_up" from="Carl Button" to="." method="_on_carl_button_button_up"]
+[connection signal="mouse_entered" from="Carl Button" to="." method="_on_carl_button_mouse_entered"]

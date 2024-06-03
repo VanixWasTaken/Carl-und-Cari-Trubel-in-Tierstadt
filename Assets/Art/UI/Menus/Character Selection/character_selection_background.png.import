@@ -2,22 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qo6lddnymkei"
-path="res://.godot/imported/dialog_box_name.png-389adfba3283ec92d65a3b6fd0b456fc.ctex"
+uid="uid://dse3wruy3xdu4"
+path="res://.godot/imported/character_selection_background.png-3482c6c6c3448ac25f13afce0697e159.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/UI/Dialogue/dialog_box_name.png"
-dest_files=["res://.godot/imported/dialog_box_name.png-389adfba3283ec92d65a3b6fd0b456fc.ctex"]
+source_file="res://Assets/Art/UI/Menus/Character Selection/character_selection_background.png"
+dest_files=["res://.godot/imported/character_selection_background.png-3482c6c6c3448ac25f13afce0697e159.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
-compress/lossy_quality=1.0
+compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

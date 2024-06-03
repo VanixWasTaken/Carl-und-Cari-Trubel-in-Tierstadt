@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbqhqg33mmhlt"
-path="res://.godot/imported/character_selection_background_sketch.png-547e64a264673f828adb5e3f4c8c0371.ctex"
+uid="uid://qsq6gkqrq80r"
+path="res://.godot/imported/carl.png-ac920ffa078acd3a523b299ab45cec9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/UI/Menus/Character Selection/character_selection_background_sketch.png"
-dest_files=["res://.godot/imported/character_selection_background_sketch.png-547e64a264673f828adb5e3f4c8c0371.ctex"]
+source_file="res://Assets/Art/Characters/Carl/Full Body/carl.png"
+dest_files=["res://.godot/imported/carl.png-ac920ffa078acd3a523b299ab45cec9f.ctex"]
 
 [params]
 
