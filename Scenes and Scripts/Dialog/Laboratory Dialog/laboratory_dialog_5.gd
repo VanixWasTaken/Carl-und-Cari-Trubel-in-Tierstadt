@@ -87,7 +87,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich kann kaum glauben, das wir es geschafft haben. Bevor wir hierhergekommen sind wusste ich fast nichts über Chemie."
+		short_node_text.text = "Ich kann kaum glauben, dass wir es geschafft haben. Bevor wir hierhergekommen sind wusste ich fast nichts über Chemie."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		$"../VoiceOver".stream = load(path + "dialog_5_3.mp3")
@@ -172,7 +172,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Noch einmal vielen vielen Dank. Jetzt kann ich endlich weiter an den Vorbereitungen für das Stadtfest arbeiten."
+		short_node_text.text = "Noch einmal vielen, vielen Dank. Jetzt kann ich endlich weiter an den Vorbereitungen für das Stadtfest arbeiten."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_5_4.mp3")
@@ -185,7 +185,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das ist ein Geheimnis, aber ich verspreche euch, das wird auch aus den Socken hauen."
+		short_node_text.text = "Das ist ein Geheimnis, aber ich verspreche euch, das wird euch aus den Socken hauen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_5_6.mp3")
