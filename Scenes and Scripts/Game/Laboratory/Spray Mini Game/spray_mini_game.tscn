@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://dfpwq4ngsnyed"]
+[gd_scene load_steps=79 format=3 uid="uid://dfpwq4ngsnyed"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
@@ -50,6 +50,7 @@
 [ext_resource type="Texture2D" uid="uid://c1m2ow40x8hdq" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Progress Bar/lab_minigame3_progress_bar_bar.png" id="48_jtt73"]
 [ext_resource type="Texture2D" uid="uid://bsoujnqt4r7pi" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Progress Bar/lab_minigame3_progress_bar_square.png" id="49_wbby8"]
 [ext_resource type="Texture2D" uid="uid://dy8ajdr15pfdq" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Progress Bar/lab_minigame3_progress_bar_bubbles.png" id="50_oyde6"]
+[ext_resource type="AudioStream" uid="uid://b8ig70axv634b" path="res://Assets/Sound/SFX/Ambience/Laboratory/sfx_laboratory_ambience_ventilation_var1.mp3" id="51_cbeo8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bmvvo"]
 animations = [{
@@ -467,18 +468,23 @@ texture = ExtResource("16_8gx7a")
 
 [node name="SpraySound" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("17_rgjd6")
+volume_db = -3.0
 
 [node name="ShakeSound" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("18_ulme6")
+volume_db = 6.0
 
 [node name="Jamming" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("19_v6irx")
+volume_db = 3.0
 
 [node name="Trigger" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("19_rmeio")
+volume_db = 3.0
 
 [node name="HoseNoise" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("21_5el5d")
+volume_db = -12.0
 
 [node name="SpinMinigame" type="TextureRect" parent="."]
 visible = false
@@ -498,9 +504,11 @@ libraries = {
 
 [node name="Loaded" type="AudioStreamPlayer" parent="SpinMinigame/Bottle"]
 stream = ExtResource("24_2wxnx")
+volume_db = 12.0
 
 [node name="Screwing" type="AudioStreamPlayer" parent="SpinMinigame/Bottle"]
 stream = SubResource("AudioStreamRandomizer_52mms")
+volume_db = 6.0
 
 [node name="Arrow" type="AnimatedSprite2D" parent="SpinMinigame"]
 visible = false
@@ -604,6 +612,12 @@ texture = SubResource("CompressedTexture2D_hkmon")
 position = Vector2(959, 927)
 scale = Vector2(0.725124, 0.725124)
 texture = ExtResource("50_oyde6")
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("51_cbeo8")
+volume_db = -12.0
+autoplay = true
+bus = &"SFX"
 
 [connection signal="gun_is_jamming" from="VisibleChameleon" to="GunInHand" method="_on_visible_chameleon_gun_is_jamming"]
 [connection signal="area_entered" from="VisibleChameleon/Area2D" to="VisibleChameleon" method="_on_area_2d_area_entered"]
