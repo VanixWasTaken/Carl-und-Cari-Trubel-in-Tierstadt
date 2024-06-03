@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://buakyojlgjurd"]
+
+[ext_resource type="Texture2D" uid="uid://d0xe5nycimp6i" path="res://Assets/Art/Environment/Rooms/Tutorial/Room/tutorial_garden_highlight.png" id="1_f6rl1"]
+[ext_resource type="Texture2D" uid="uid://b1f7s62o7qdko" path="res://Assets/Art/Environment/Rooms/Tutorial/Room/tutorial_garden.png" id="1_ke6lr"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Tutorial/garden_highlight.gd" id="3_4ba1f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o3e11"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ke6lr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_f6rl1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GardenHighlight" type="AnimatedSprite3D"]
+sprite_frames = SubResource("SpriteFrames_o3e11")
+script = ExtResource("3_4ba1f")
+
+[node name="Mouse3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.92629)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Mouse3D"]
+polygon = PackedVector2Array(4.41856, -6.40318, 4.11385, 3.7616, 2.58848, 5.22713, -0.266381, 5.73468, -2.583, 5.09243, -4.05737, 3.30474, -3.90296, -6.48656)
+
+[connection signal="mouse_entered" from="Mouse3D" to="." method="_on_mouse_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Mouse3D" to="." method="_on_mouse_3d_mouse_exited"]
