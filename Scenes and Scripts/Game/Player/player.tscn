@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://daswfhvjsa7jh"]
+[gd_scene load_steps=15 format=3 uid="uid://daswfhvjsa7jh"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Player/player.gd" id="1_pxkst"]
 [ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Art/Characters/Cari/Headshot/icon_cari1.PNG" id="1_uekr7"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://ctcnsi4vmixqr" path="res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG" id="4_q3ciq"]
 [ext_resource type="Texture2D" uid="uid://bwahyatf0uvai" path="res://Assets/Art/Characters/Carl/Headshot/icon_carl2.PNG" id="5_5msf1"]
 [ext_resource type="AudioStream" uid="uid://blr4q41rjnya0" path="res://Assets/Sound/SFX/Foley/World/sfx_world_foley_footstep_var2.mp3" id="7_kcvgl"]
+[ext_resource type="Texture2D" uid="uid://dm275h5fsqja2" path="res://Assets/Art/UI/Buttons/menu_button_mid.png" id="8_4ihoa"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="9_xfhi7"]
+[ext_resource type="Texture2D" uid="uid://b78qo42a06loa" path="res://Assets/Art/UI/Buttons/menu_button_dark.png" id="10_kga1h"]
+[ext_resource type="Texture2D" uid="uid://cs0vi7dtksnoo" path="res://Assets/Art/UI/Buttons/menu_button_light.png" id="11_32exa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hb2ux"]
 animations = [{
@@ -64,5 +68,82 @@ stream = SubResource("AudioStreamRandomizer_wl7cs")
 volume_db = -12.0
 bus = &"SFX"
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="EnterPrompt" type="TextureRect" parent="CanvasLayer"]
+visible = false
+offset_left = 640.8
+offset_top = 683.0
+offset_right = 1552.8
+offset_bottom = 990.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_4ihoa")
+
+[node name="Label" type="Label" parent="CanvasLayer/EnterPrompt"]
+offset_left = 47.0
+offset_top = 49.0
+offset_right = 863.0
+offset_bottom = 269.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_xfhi7")
+theme_override_font_sizes/font_size = 51
+text = "Willst du das 
+Chemie Labor
+betreten?"
+horizontal_alignment = 1
+
+[node name="YesButton" type="TextureButton" parent="CanvasLayer/EnterPrompt"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 305.0
+offset_right = 653.0
+offset_bottom = 526.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("8_4ihoa")
+texture_pressed = ExtResource("10_kga1h")
+texture_hover = ExtResource("11_32exa")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/EnterPrompt/YesButton"]
+layout_mode = 0
+offset_left = 36.7347
+offset_top = -3.06127
+offset_right = 611.735
+offset_bottom = 240.939
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_xfhi7")
+theme_override_font_sizes/font_size = 170
+text = "Ja"
+horizontal_alignment = 1
+
+[node name="NoButton" type="TextureButton" parent="CanvasLayer/EnterPrompt"]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 305.0
+offset_right = 1099.0
+offset_bottom = 523.72
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("8_4ihoa")
+texture_pressed = ExtResource("10_kga1h")
+texture_hover = ExtResource("11_32exa")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/EnterPrompt/NoButton"]
+layout_mode = 0
+offset_left = 36.3266
+offset_top = -3.06118
+offset_right = 610.327
+offset_bottom = 240.939
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_xfhi7")
+theme_override_font_sizes/font_size = 170
+text = "Nein"
+horizontal_alignment = 1
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="finished" from="Footsteps" to="." method="_on_footsteps_finished"]
+[connection signal="button_up" from="CanvasLayer/EnterPrompt/YesButton" to="." method="_on_yes_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/EnterPrompt/NoButton" to="." method="_on_no_button_button_up"]

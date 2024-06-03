@@ -4,6 +4,8 @@ var acceleration = 50
 @onready var nav: NavigationAgent2D = $NavigationAgent2D
 var object_name 
 var scene_name
+var area_name
+var in_area = false
 
 func _ready():
 	if Global.character =="Carl":
@@ -42,13 +44,18 @@ func _physics_process(delta):
 			$Footsteps.stop()
 
 func _get_clicked_object(objects_name, scenes_name):
+	print(objects_name)
 	object_name = objects_name
 	scene_name = scenes_name
+	if in_area && area_name == object_name:
+		enter_building_prompt()
 
 func _on_area_2d_area_entered(area):
-	var area_name = area.get_parent().get_name()
+	
+	in_area = true
+	area_name = area.get_name()
 	if area_name == object_name:
-		get_tree().change_scene_to_file(scene_name)
+		enter_building_prompt()
 
 
 
@@ -57,4 +64,24 @@ func _on_footsteps_finished():
 		$Footsteps.play()
 
 
+func enter_building_prompt():
+	Global.dialog_playing = true
+	Global.moving_allowed = false
+	$CanvasLayer/EnterPrompt.visible = true
+	$CanvasLayer/EnterPrompt/Label.text = "Willst du das 
+	" + str(area_name) + "
+	 betreten?"
 
+
+func _on_yes_button_button_up():
+	get_tree().change_scene_to_file(scene_name)
+
+
+func _on_no_button_button_up():
+	$CanvasLayer/EnterPrompt.visible = false
+	Global.moving_allowed = true
+	Global.dialog_playing = false
+
+
+func _on_area_2d_area_exited(area):
+	in_area = false

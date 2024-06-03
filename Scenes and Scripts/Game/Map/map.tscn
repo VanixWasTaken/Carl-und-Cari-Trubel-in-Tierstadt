@@ -1,10 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=22 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Texture2D" uid="uid://ckctg6v1ekkvh" path="res://Assets/Art/Environment/Map/Big Map/map.PNG" id="1_pn286"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map_house_test.gd" id="2_e7gsj"]
-[ext_resource type="Texture2D" uid="uid://bhf7mcvws0om1" path="res://Assets/Art/Environment/Map/Houses/Laboratory/chemielabor_frame_1.png" id="3_cfeel"]
-[ext_resource type="Texture2D" uid="uid://ptf0564yiv2g" path="res://Assets/Art/Environment/Map/Houses/Laboratory/chemielabor_frame_2.png" id="4_5w03e"]
-[ext_resource type="Texture2D" uid="uid://b0brfbx8do4nc" path="res://Assets/Art/Environment/Map/Houses/Laboratory/chemielabor_frame_3.png" id="5_go8o6"]
+[ext_resource type="PackedScene" uid="uid://dctfgv4bxknm4" path="res://Scenes and Scripts/Game/Map/Buildings/laboratory_building.tscn" id="2_ab8es"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/job_notes.gd" id="9_vqn8c"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/exit_button.gd" id="10_0oi3s"]
 [ext_resource type="Texture2D" uid="uid://cch5cjlssxc7x" path="res://Assets/Art/UI/HUD/Map/UI_hud.PNG" id="10_dyp1j"]
@@ -18,23 +15,6 @@
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="16_18o2f"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="17_v78te"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="18_bp1yi"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_unxvv"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_cfeel")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_5w03e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_go8o6")
-}],
-"loop": true,
-"name": &"house_animation_test",
-"speed": 5.0
-}]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8wyy8"]
 vertices = PackedVector2Array(469, 933, 11, 937, 164, 933, 464, 930, 1187, 502, 1193, 547, 1189, 538, 1177, 510, 1188, 577, 531, 548, 536, 804, 532, 799, 531, 550, 1896, 544, 1893, 556, 1199, 558, 1180, 603, 1158, 607, 1132, 638, 1119, 619, 1111, 637, 1430, 1040, 1745, 1043, 1747, 1053, 875, 1049, 878, 1036, 1133, 456, 1136, 473, 1638, 276, 1906, 276, 1905, 283, 1641, 277, 1632, 369, 1638, 372, 1141, 372, 1131, 368, 1121, 471, 1068, 489, 1059, 523, 1041, 520, 1050, 580, 1064, 570, 989, -5, 997, -6, 992, 300, 984, 298, 568, 298, 304, 316, 286, 304, 1084, 604, 1115, 807, 1124, 814, 880, 807, 287, 545, 298, 541, 574, 5, 578, 5, 575, 296, 181, 644, 3, 645, 3, 643, 286, 644, 1432, 883, 1909, 881, 1909, 882, 1440, 894, 1436, 1034, 474, 812, 474, 1062, 469, 1062, 461, 812, 873, 812, 176, 932, 187, 646, 294, 647)
@@ -75,23 +55,7 @@ offset_right = 840.0
 offset_bottom = 268.0
 texture = ExtResource("1_pn286")
 
-[node name="Laboratory Building" type="Node2D" parent="."]
-position = Vector2(263, 127)
-script = ExtResource("2_e7gsj")
-scene_name = "res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn"
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Laboratory Building"]
-position = Vector2(15, 15)
-sprite_frames = SubResource("SpriteFrames_unxvv")
-animation = &"house_animation_test"
-
-[node name="Area2D" type="Area2D" parent="Laboratory Building"]
-position = Vector2(1080, 813)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Laboratory Building/Area2D"]
-position = Vector2(-852, -671)
-scale = Vector2(0.6625, 0.6625)
-polygon = PackedVector2Array(-581.132, -341.132, -451.321, -460.377, -10.566, -440.755, 21.1321, 22.6415, -492.075, 46.7924)
+[node name="Laboratory Building" parent="." instance=ExtResource("2_ab8es")]
 
 [node name="Player" parent="." instance=ExtResource("14_0uuvf")]
 position = Vector2(287, 535)
@@ -204,10 +168,6 @@ anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[connection signal="mouse_entered" from="Laboratory Building/Area2D" to="Laboratory Building" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Laboratory Building/Area2D" to="Laboratory Building" method="_on_area_2d_mouse_exited"]
-[connection signal="deactivate_house" from="HUD/JobNotes" to="Laboratory Building" method="_on_job_notes_deactivate_house"]
-[connection signal="reactivate_house" from="HUD/JobNotes" to="Laboratory Building" method="_on_job_notes_reactivate_house"]
 [connection signal="mouse_entered" from="HUD/JobNotes/Area2D" to="HUD/JobNotes" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="HUD/JobNotes/Area2D" to="HUD/JobNotes" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="HUD/JobNotes/JobNoteMenu/ExitButton/Area2D" to="HUD/JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_entered"]
@@ -216,5 +176,3 @@ grow_vertical = 1
 [connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D" to="HUD/JobNotes" method="_on_area_2d_InJobMenuJobNote1_mouse_exited"]
 [connection signal="mouse_entered" from="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="HUD/JobNotes" method="_on_paper_quit_mouse_entered"]
 [connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="HUD/JobNotes" method="_on_paper_quit_mouse_exited"]
-[connection signal="HelpClosed" from="HUD/HelpButton" to="Laboratory Building" method="_on_control_help_closed"]
-[connection signal="HelpOpened" from="HUD/HelpButton" to="Laboratory Building" method="_on_control_help_opened"]
