@@ -7,10 +7,10 @@ var building_name = "null"
 @onready var outline_shader = preload("res://Shader/outline.tres")
 @onready var no_shader = preload("res://Shader/no_shader.tres")
 var animation_frame = 0
-var next_scene
+var next_scene 
 
 func _ready():
-	my_name = get_name()
+	building_name = get_tree().get_first_node_in_group("BuildingArea").get_name()
 	MusicController._play_music("adventure", "map", -20)
 	next_scene = load(scene_name)
 
