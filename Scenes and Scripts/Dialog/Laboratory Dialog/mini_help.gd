@@ -59,14 +59,18 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Fülle Wasser und dann 0,2 - 0,45 Gramm des blauen Pulvers in das linke Reagenzglas."
+			short_node_text.text = "Fülle Wasser und dann 0,2 - 0,45 Gramm des lilanen Pulvers in das linke Reagenzglas."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_powder_help_1.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Fülle Wasser und dann 0,2 - 0,45 Gramm des blauen Pulvers in das linke Reagenzglas."
+			short_node_text.text = "Fülle Wasser und dann 0,2 - 0,45 Gramm des lilanen Pulvers in das linke Reagenzglas."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_powder_help_1.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.mini_help_button_state == 1:
@@ -78,11 +82,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Schütte Wasser und 1,3 - 1,5 Gramm des roten Pulvers in das mittlere Reagenzglas."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_powder_help_2.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Schütte Wasser und 1,3 - 1,5 Gramm des roten Pulvers in das mittlere Reagenzglas."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_powder_help_2.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.mini_help_button_state == 2:
@@ -94,11 +102,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Jetzt noch Wasser und 1,5 - 2,0 Gramm gelbes Pulver in das letzte Glas."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_powder_help_3.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Jetzt noch Wasser und 1,5 - 2,0 Gramm gelbes Pulver in das letzte Glas."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_powder_help_3.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.mini_help_button_state == 3:
@@ -107,14 +119,18 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Fülle die Reagenzgläser mit Hilfe der Zange in den Behälter auf der linken Seite."
+			short_node_text.text = "Schütte die Reagenzgläser mit Hilfe der Zange in den Behälter auf der linken Seite."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_titration_help_01.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Fülle die Reagenzgläser mit Hilfe der Zange in den Behälter auf der linken Seite."
+			short_node_text.text = "Schütte die Reagenzgläser mit Hilfe der Zange in den Behälter auf der linken Seite."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_titration_help_01.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.mini_help_button_state == 4:
@@ -126,11 +142,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Halte den pH-Wert zwischen 5 und 7 auf der Skala rechts oben. (Benutze dafür die Leertaste)"
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_titration_help_02.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Halte den pH-Wert zwischen 5 und 7 auf der Skala rechts oben. (Benutze dafür die Leertaste)"
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_titration_help_02.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.mini_help_button_state == 5:
@@ -142,11 +162,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Schraube die Mischung an die Spritzpistole."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_spray_help_1.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Schraube die Mischung an die Spritzpistole."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_spray_help_1.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.mini_help_button_state == 6:
@@ -155,14 +179,18 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab."
+			short_node_text.text = "Sprüh Christina mit der Spritzpistole ab."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_spray_help_2.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab."
+			short_node_text.text = "Sprüh Christina mit der Spritzpistole ab."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_spray_help_2.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.mini_help_button_state == 7:
@@ -174,11 +202,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab. Falls die Spritzpistole verklemmt, schüttel die Maus."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_spray_help_3.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab. Falls die Spritzpistole verklemmt, schüttel die Maus."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_spray_help_3.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 ##########################################################################################
 

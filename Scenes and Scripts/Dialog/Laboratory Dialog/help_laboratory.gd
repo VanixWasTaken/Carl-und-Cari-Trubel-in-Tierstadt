@@ -75,11 +75,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Geh zur Laborarbeiterin und rede mit ihr."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_1.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Geh zum Laborarbeiterin und rede mit ihr."
+			short_node_text.text = "Geh zur Laborarbeiterin und rede mit ihr."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_1.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 
 	if dialogs == 1 and Global.laboratory_help_button_state == 1:
@@ -91,11 +95,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Sammel die Waage, die Reagenzgläser und die Erlenmeyerkolben ein. Bringe die Sachen danach zum Tisch."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_2.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Sammel die Waage, die Reagenzgläser und die Erlenmeyerkolben ein. Bringe die Sachen danach zum Tisch."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_2.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.laboratory_help_button_state == 2:
@@ -107,11 +115,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Rede mit Christina dem Chemie-Chamäleon."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_3.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Rede mit Christina dem Chemie-Chamäleon."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_3.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.laboratory_help_button_state == 3:
@@ -123,11 +135,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Hole die Mischungen vom Tisch."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_4.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Hole die Mischungen vom Tisch."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_4.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.laboratory_help_button_state == 4:
@@ -139,11 +155,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Trage die Mischungen zur Laborabzugshaube. Die ist links in die Wand eingelassen."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_5.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Trage die Mischungen zur Laborabzugshaube. Die ist links in die Wand eingelassen."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_5.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.laboratory_help_button_state == 5:
@@ -155,11 +175,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Sprich nochmal mit Christina."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_6.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Sprich nochmal mit Christina."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_6.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.laboratory_help_button_state == 6:
@@ -171,11 +195,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Geh zum Fenster mit den Handschuheinlässen. Das Fenster befindet sich an der Hinterwand."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_7.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Geh zum Fenster mit den Handschuheinlässen. Das Fenster befindet sich an der Hinterwand."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_7.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.laboratory_help_button_state == 7:
@@ -187,11 +215,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Sprich ein letztes mal mit Christina."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_8.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Sprich ein letztes mal mit Christina."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_8.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 	
 	if dialogs == 1 and Global.laboratory_help_button_state == 8:
@@ -203,11 +235,15 @@ func add_left_dialog_box():
 			short_node_text.text = "Verlasse das Labor durch die Tür auf der rechten Seite."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_9.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Cari":
 			short_node_text.text = "Verlasse das Labor durch die Tür auf der rechten Seite."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_9.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 ##########################################################################################
 
