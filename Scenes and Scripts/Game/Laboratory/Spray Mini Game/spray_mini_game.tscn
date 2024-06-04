@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://lmaouvkc3f5" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle1.png" id="3_ivchp"]
 [ext_resource type="Texture2D" uid="uid://dwgi13mmayd2l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_gun.png" id="3_ww0fy"]
 [ext_resource type="Texture2D" uid="uid://chu3r7ga3hn5s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_bottle.png" id="4_7yw8r"]
-[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.PNG" id="5_wj47e"]
+[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png" id="5_wj47e"]
 [ext_resource type="Texture2D" uid="uid://b527t0x1gymds" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_front.png" id="11_djqfr"]
 [ext_resource type="Texture2D" uid="uid://dwlpn0vtf4lyd" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_light.png" id="13_rj72p"]
 [ext_resource type="Shader" path="res://Shader/spray_mini_game.gdshader" id="13_rn5a4"]
