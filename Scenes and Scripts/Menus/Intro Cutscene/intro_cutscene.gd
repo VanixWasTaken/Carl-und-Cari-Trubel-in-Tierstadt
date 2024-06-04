@@ -48,12 +48,13 @@ func _on_clouds_animation_finished():
 
 
 func _on_narrator_finished():
-	if narrator_count == 0:
-		$Narrator.stream = load("res://Assets/Sound/VO/Intro/vo_npc_narrator_tierstadt_02.mp3")
-		$Narrator.play()
-		narrator_count += 1
-	elif narrator_count == 1:
-		await get_tree().create_timer(0.5).timeout
-		$Narrator.stream = load("res://Assets/Sound/VO/Intro/vo_npc_narrator_tierstadt_03.mp3")
-		$Narrator.play()
-		narrator_count += 1
+	#if narrator_count == 0:
+		#$Narrator.stream = load("res://Assets/Sound/VO/Intro/vo_npc_narrator_tierstadt_02.mp3")
+		#$Narrator.play()
+		#narrator_count += 1
+	#elif narrator_count == 1:
+		#await get_tree().create_timer(0.5).timeout
+		#$Narrator.stream = load("res://Assets/Sound/VO/Intro/vo_npc_narrator_tierstadt_03.mp3")
+		#$Narrator.play()
+		#narrator_count += 1
+	pass
