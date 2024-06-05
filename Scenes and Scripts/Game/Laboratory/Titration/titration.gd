@@ -37,6 +37,7 @@ func _process(delta):
 		
 		# makes invisibile ooooo
 		$PouringClamp.visible = false
+		$PouringClamp/Pouring.stop()
 		
 		############################## HANDLES THE JUG AND STAND SPRITES ################################
 		match tube_counter:
@@ -53,6 +54,7 @@ func _process(delta):
 		
 		
 		$Clamp.visible = true
+		$Clamp/SetDown.play()
 		ready_to_pour = false
 	
 	if finished_pouring:
