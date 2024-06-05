@@ -3,7 +3,7 @@ extends Control
 
 @onready var l_bubble_node = preload("res://Scenes and Scripts/Dialog/Ground Structure/speech_bubble_left.tscn")
 @onready var r_bubble_node = preload("res://Scenes and Scripts/Dialog/Ground Structure/speech_bubble_right.tscn")
-
+@onready var laboratory_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 var dialogs = 1
 var dialog_side = ["left", "right"]
 var finished = false
@@ -55,7 +55,7 @@ func _process(delta):
 		Global.lab_cutscene_played = true
 		Global.return_laboratory_1 = true
 		Global.return_laboratory_2 = true
-		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
+		get_tree().change_scene_to_packed(laboratory_scene)
 		queue_free()
 ##########################################################################################
 
