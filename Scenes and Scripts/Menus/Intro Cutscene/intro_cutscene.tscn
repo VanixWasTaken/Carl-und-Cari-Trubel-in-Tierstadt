@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://skc43dl2o124"]
+[gd_scene load_steps=39 format=3 uid="uid://skc43dl2o124"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.gd" id="1_jfymc"]
 [ext_resource type="Texture2D" uid="uid://dcwdarpqj4kyp" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame1.png.PNG" id="1_wajoa"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dr2bfsjonrajn" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_008.png" id="21_nbc2i"]
 [ext_resource type="Texture2D" uid="uid://dbb2ejkecaweq" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_009.png" id="22_4rgkp"]
 [ext_resource type="AudioStream" uid="uid://nppwsyhdx7ae" path="res://Assets/Sound/VO/Intro/vo_npc_narrator_tierstadt_01.mp3" id="23_1paak"]
+[ext_resource type="AudioStream" uid="uid://cmwvmt4sqlnyf" path="res://Assets/Sound/SFX/Foley/World/sfx_foley_world_cloudswhoosh.mp3" id="23_gghc3"]
 
 [sub_resource type="Animation" id="Animation_jv6g1"]
 resource_name = "Glide"
@@ -326,6 +327,10 @@ sprite_frames = SubResource("SpriteFrames_l7t8e")
 autoplay = "default"
 frame = 8
 frame_progress = 1.0
+
+[node name="Whoosh" type="AudioStreamPlayer" parent="Clouds"]
+stream = ExtResource("23_gghc3")
+autoplay = true
 
 [node name="Narrator" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_1paak")
