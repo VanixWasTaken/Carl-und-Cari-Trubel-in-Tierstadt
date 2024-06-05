@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jyt0ywh4xn07"
-path="res://.godot/imported/gun_animation1.png-a754138cab2c288568d9d373582b6ea4.ctex"
+uid="uid://b50e5njwlnj0u"
+path="res://.godot/imported/gun_animation4.png-6b680b849fde6b265e075a78f4a812de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation1.png"
-dest_files=["res://.godot/imported/gun_animation1.png-a754138cab2c288568d9d373582b6ea4.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation4.png"
+dest_files=["res://.godot/imported/gun_animation4.png-6b680b849fde6b265e075a78f4a812de.ctex"]
 
 [params]
 
