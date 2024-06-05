@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0gbk4t47sqy"
-path="res://.godot/imported/lab_three_flasks.PNG-a4069782806cef44d8dcb67b9c041a25.ctex"
+uid="uid://drhav4j47ea2w"
+path="res://.godot/imported/profile_blank_button_clicked.png-705c3ce8f399d77c69a6fa6c2f49ddc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.PNG"
-dest_files=["res://.godot/imported/lab_three_flasks.PNG-a4069782806cef44d8dcb67b9c041a25.ctex"]
+source_file="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button_clicked.png"
+dest_files=["res://.godot/imported/profile_blank_button_clicked.png-705c3ce8f399d77c69a6fa6c2f49ddc7.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

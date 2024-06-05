@@ -13,11 +13,11 @@ var open_note1 = 0
 func _process(delta):
 	if mouse_inside:
 		Global.moving_allowed = false
-
 		  # handles input when the note-menu is visible
 	if $JobNoteMenu.visible:
 		Global.moving_allowed = false
 		if Input.is_action_just_pressed("left_click"):
+			Global.moving_allowed = false
 			if mouse_inside:
 				emit_signal("reactivate_house")
 				$JobNoteMenu.visible = false
@@ -62,6 +62,7 @@ func close_menu():
 	$JobNoteMenu/JobNote1.visible = false
 	%Click.play()
 	Global.moving_allowed = true
+	%HelpButton.menu_open = false
 
 # for shaders
 func _on_area_2d_mouse_entered():
@@ -98,5 +99,4 @@ func _paper_hover():
 	stream.add_stream(2, load("res://Assets/Sound/SFX/UI/Specific/Map/sfx_hub_ui_paper_var3.mp3"))
 	%Hover.stream = stream
 	%Hover.play()
-	
 	
