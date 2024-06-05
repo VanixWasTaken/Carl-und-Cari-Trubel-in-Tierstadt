@@ -77,10 +77,11 @@ func add_left_dialog_box():
 		short_node_text.text = "Was ist der nächste Schritt?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load(path + "dialog_3_2.mp3")
+		print(path + "laboratory_dialog_3_2.mp3")
+		$"../VoiceOver".stream = load(path + "laboratory_dialog_3_2.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
-	
+
 	elif dialogs == 5:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
@@ -89,7 +90,7 @@ func add_left_dialog_box():
 		short_node_text.text = "Alles klar! An die Arbeit."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load(path + "dialog_3_5.mp3")
+		$"../VoiceOver".stream = load(path + "laboratory_dialog_3_5.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
 
