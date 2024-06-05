@@ -11,8 +11,12 @@ func _ready():
 	MusicController._play_music("adventure", "map", -20)
 	narrator_delay()
 
+
 func _on_animated_sprite_2d_animation_finished():
+	$TelephonePickUp.play()
 	$AnimatedSprite2D.queue_free()
+	$VoiceOver.stream = load("res://Assets/Sound/VO/Intro/vo_npc_mayor_intro_help_01.mp3")
+	$VoiceOver.play()
 	$Dialog1.show()
 	$Dialog1/AnimationPlayer.play("new_animation")
 
@@ -30,6 +34,8 @@ func _on_weiter_button_pressed():
 		$WeiterButton.hide()
 		$Dialog1.hide()
 		$Dialog2.show()
+		$VoiceOver.stream = load("res://Assets/Sound/VO/Intro/vo_npc_both_intro_help_02.mp3")
+		$VoiceOver.play()
 		$Dialog2/AnimationPlayer.play("new_animation")
 		$WeiterButton.position = Vector2(110, 703)
 	if button_pressed == 2:
@@ -53,19 +59,15 @@ func _on_clouds_animation_finished():
 
 
 func _on_narrator_finished():
-	#if narrator_count == 0:
-		#$Narrator.stream = load("res://Assets/Sound/VO/Intro/vo_npc_narrator_tierstadt_02.mp3")
-		#$Narrator.play()
-		#narrator_count += 1
-	#elif narrator_count == 1:
-		#await get_tree().create_timer(0.5).timeout
-		#$Narrator.stream = load("res://Assets/Sound/VO/Intro/vo_npc_narrator_tierstadt_03.mp3")
-		#$Narrator.play()
-		#narrator_count += 1
-	pass
+	$TelephoneRing.play()
 
 func narrator_delay():
 	if narrator_count == 0:
 		await get_tree().create_timer(1).timeout
 		$Narrator.play()
 		narrator_count += 1
+
+
+func _on_animated_sprite_2d_frame_changed():
+	if $AnimatedSprite2D.frame == 5:
+		$TelephoneGrab.play()
