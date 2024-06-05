@@ -21,3 +21,53 @@ var talked_to_chameleon_4 = false #wird aufn true gesetzt, wenn mann nach dem 3.
 var return_laboratory_1 = false #wird auf true gesetzt, wenn man aus dem ersten minispiel zurück kommt
 var return_laboratory_2 = false #wird auf true gesetzt, wenn man aus dem 2 minigame kommt
 var return_laboratory_3 = false #wird auf true gesetzt, wenn man aus dem 3 minigame kommt
+@onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
+@onready var laboratory_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
+@onready var start_scene = preload("res://Scenes and Scripts/Menus/StartUp/start_up.tscn")
+
+func _input(event):
+	if Input.is_action_just_pressed("7"):
+		load_map()
+	elif Input.is_action_just_pressed("8"):
+		load_laboratory_1()
+	elif Input.is_action_just_pressed("9"):
+		load_laboratory_2()
+	elif Input.is_action_just_pressed("0"):
+		reset_game()
+
+func load_map():
+	character = "Cari"
+	dialog_playing = false
+	cutscene_playing = false
+	moving_allowed = true
+	get_tree().change_scene_to_packed(map_scene)
+
+func load_laboratory_1():
+	character = "Cari"
+	talked_to_chameleon = true
+	return_laboratory_1 = true
+	lab_cutscene_played = true
+	talked_to_chameleon_2 = true
+	dialog_playing = false
+	cutscene_playing = false
+	get_tree().change_scene_to_packed(laboratory_scene)
+
+func load_laboratory_2():
+	character = "Cari"
+	talked_to_chameleon = true
+	return_laboratory_1 = true
+	lab_cutscene_played = true
+	return_laboratory_2 = true
+	dialog_playing = false
+	cutscene_playing = false
+	moving_allowed = true
+	get_tree().change_scene_to_packed(laboratory_scene)
+
+func reset_game():
+	character = "Cari"
+	talked_to_chameleon = false
+	return_laboratory_1 = false
+	lab_cutscene_played = false
+	return_laboratory_2 = false
+	talked_to_chameleon_3 = false
+	get_tree().change_scene_to_packed(start_scene)
