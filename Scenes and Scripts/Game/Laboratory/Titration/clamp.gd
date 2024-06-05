@@ -23,6 +23,8 @@ func _process(delta):
 		if mouse_inside and Input.is_action_pressed("left_click"):
 			
 			$ClampArea/Clamp.material = no_shader
+			if Input.is_action_just_pressed("left_click"):
+				$"../HoverWood".play()
 			
 			var new_position = get_global_mouse_position()
 			global_position = new_position
@@ -48,7 +50,7 @@ func _process(delta):
 
 func _on_clamp_area_mouse_entered():
 	if interactible:
-		$"../Hover".play()
+		$"../HoverWood".play()
 		mouse_inside = true
 		$ClampArea/Clamp.material = outline_shader
 
@@ -61,7 +63,7 @@ func _on_clamp_area_mouse_exited():
 
 func _on_clamp_area_area_entered(area):
 	if area.get_name() == "StandArea" and interactible:
-		$"../Hover".play()
+		$"../HoverGlass".play()
 		var children = area.get_children()
 		for child in children:
 			if child.name == "Stand" || child.name == "Glasses":
