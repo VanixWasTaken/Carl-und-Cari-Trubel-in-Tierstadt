@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/job_notes.gd" id="9_vqn8c"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/exit_button.gd" id="10_0oi3s"]
 [ext_resource type="Texture2D" uid="uid://ct5jp2pxvyrqc" path="res://Assets/Art/UI/Buttons/UI_inventory_icon.PNG" id="11_8qsr6"]
-[ext_resource type="Texture2D" uid="uid://dkm78622qqie7" path="res://Assets/Art/UI/Buttons/exit_button.png" id="11_8vqrx"]
+[ext_resource type="Texture2D" uid="uid://7vqjfkop4ysv" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button.png" id="11_um2ur"]
 [ext_resource type="Texture2D" uid="uid://cm4hcr8fw4k5a" path="res://Assets/Art/UI/HUD/Map/job_note1.PNG" id="13_2x76a"]
 [ext_resource type="PackedScene" uid="uid://daswfhvjsa7jh" path="res://Scenes and Scripts/Game/Player/player.tscn" id="14_0uuvf"]
 [ext_resource type="Shader" path="res://Shader/blur.gdshader" id="14_jp8ps"]
@@ -35,7 +35,7 @@ stream_2/weight = 1.0
 size = Vector2(338.273, 401.403)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h683o"]
-radius = 56.0803
+radius = 83.2166
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8raen"]
 size = Vector2(101, 120)
@@ -104,7 +104,6 @@ position = Vector2(21.1421, 28.8408)
 shape = SubResource("RectangleShape2D_ab4lo")
 
 [node name="JobNoteMenu" type="Node2D" parent="HUD/JobNotes"]
-visible = false
 position = Vector2(-36, -15)
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu"]
@@ -118,14 +117,14 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/ExitButton"]
 position = Vector2(1632, 296)
-texture = ExtResource("11_8vqrx")
+texture = ExtResource("11_um2ur")
 
 [node name="Area2D" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/ExitButton"]
 collision_layer = 128
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/JobNoteMenu/ExitButton/Area2D"]
-position = Vector2(1626, 299)
+position = Vector2(1635, 295)
 shape = SubResource("CircleShape2D_h683o")
 
 [node name="InJobMenuJobNote1" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
@@ -162,7 +161,6 @@ texture = ExtResource("13_2x76a")
 [node name="QuitButton" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D"]
 position = Vector2(238.122, -407.507)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_8vqrx")
 
 [node name="PaperQuit" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D"]
 
