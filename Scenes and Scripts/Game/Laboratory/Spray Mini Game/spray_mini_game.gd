@@ -7,12 +7,15 @@ var bottle_highlight = preload("res://Assets/Art/Environment/Rooms/Laboratory/Mi
 var mouse_inside = false
 var dialog2 = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Spray Mini Game Dialog/dialog_spray_mini_game2.tscn")
 var dialog4 = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Spray Mini Game Dialog/dialog_spray_mini_game4.tscn")
+@onready var next_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 @onready var gun_in_hand = $GunInHand
 @onready var progress_bar = $ProgressBar
 
 
 func _ready():
 	add_child(dialog2.instantiate())
+	$CanvasLayer/FadeAnimation.show()
+	$CanvasLayer/AnimationPlayer.play("fade_in")
 
 
 func _process(delta):
@@ -55,3 +58,8 @@ func _on_swipe_area_start_dialog_4():
 
 func gun_gets_visible():
 	gun_in_hand.visible = true
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "fade_out":
+		get_tree().change_scene_to_packed(next_scene)
