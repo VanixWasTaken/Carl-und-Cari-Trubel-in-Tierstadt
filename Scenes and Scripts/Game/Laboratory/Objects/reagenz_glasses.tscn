@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3c3s1nuw5me7"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/reagenz_glasses.gd" id="1_if34i"]
-[ext_resource type="Texture2D" uid="uid://c0gbk4t47sqy" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.PNG" id="2_17isb"]
+[ext_resource type="Texture2D" uid="uid://c0gbk4t47sqy" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.png" id="2_17isb"]
 [ext_resource type="Texture2D" uid="uid://b78wxgon00y5q" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks_highlight.png" id="3_fihun"]
 [ext_resource type="AudioStream" uid="uid://dxs6n623s8kuw" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var3.mp3" id="4_3bjms"]
 
