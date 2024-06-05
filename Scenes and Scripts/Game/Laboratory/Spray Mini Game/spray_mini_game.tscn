@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://dfpwq4ngsnyed"]
+[gd_scene load_steps=81 format=3 uid="uid://dfpwq4ngsnyed"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
@@ -8,15 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://chu3r7ga3hn5s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_bottle.png" id="4_7yw8r"]
 [ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png" id="5_wj47e"]
 [ext_resource type="Texture2D" uid="uid://b527t0x1gymds" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_front.png" id="11_djqfr"]
+[ext_resource type="Texture2D" uid="uid://jyt0ywh4xn07" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation1.png" id="12_awfc1"]
 [ext_resource type="Texture2D" uid="uid://dwlpn0vtf4lyd" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_light.png" id="13_rj72p"]
 [ext_resource type="Shader" path="res://Shader/spray_mini_game.gdshader" id="13_rn5a4"]
+[ext_resource type="Texture2D" uid="uid://b517sk4nopryu" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation2.png" id="13_xv478"]
+[ext_resource type="Texture2D" uid="uid://wm6rtqnddjcy" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation3.png" id="14_1qxm2"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/visible_chameleon.gd" id="14_2xxsa"]
+[ext_resource type="Texture2D" uid="uid://b50e5njwlnj0u" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation4.png" id="15_ahhw8"]
 [ext_resource type="Texture2D" uid="uid://dqgljickj2oym" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/hosepipe.png" id="16_8gx7a"]
-[ext_resource type="Texture2D" uid="uid://c17wfu7surfhb" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation1.png" id="16_w1xuf"]
-[ext_resource type="Texture2D" uid="uid://02bifhgetjo8" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation2.png" id="17_b3jxw"]
 [ext_resource type="Texture2D" uid="uid://drmdrs0g584x8" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation1.png" id="17_bfug0"]
 [ext_resource type="AudioStream" uid="uid://b6lgjjg6wm6rb" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_spraying_var1.mp3" id="17_rgjd6"]
-[ext_resource type="Texture2D" uid="uid://dm6h7pwdde3p" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation3.png" id="18_1cfw2"]
 [ext_resource type="Texture2D" uid="uid://bbv5lyt1g86ke" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation2.png" id="18_cjtse"]
 [ext_resource type="AudioStream" uid="uid://dtj3qeuo4253p" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_shaking_var1.mp3" id="18_ulme6"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/gun_in_hand.gd" id="19_8elaw"]
@@ -99,13 +100,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("16_w1xuf")
+"texture": ExtResource("12_awfc1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_b3jxw")
+"texture": ExtResource("13_xv478")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_1cfw2")
+"texture": ExtResource("14_1qxm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ahhw8")
 }],
 "loop": true,
 "name": &"shooting",
@@ -451,7 +455,6 @@ visible = false
 position = Vector2(1099, 389)
 sprite_frames = SubResource("SpriteFrames_aut0p")
 animation = &"shooting"
-frame_progress = 0.829378
 offset = Vector2(-280, -130)
 script = ExtResource("19_8elaw")
 
@@ -461,7 +464,8 @@ monitoring = false
 monitorable = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GunInHand/ShootingArea"]
-polygon = PackedVector2Array(-209, -72, -321, -145, -337, -218, -298, -267, -149, -264)
+position = Vector2(261, 98)
+polygon = PackedVector2Array(-222, -143, -387, -148, -382, -278, -271, -343, -163, -229)
 
 [node name="Hose" type="Sprite2D" parent="GunInHand"]
 position = Vector2(40, 733)
