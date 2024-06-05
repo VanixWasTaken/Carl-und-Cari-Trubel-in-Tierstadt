@@ -40,8 +40,7 @@ func _process(delta):
 		Global.dialog_playing = false
 		Global.moving_allowed = true
 		Global.return_laboratory_1 = true
-		get_tree().get_first_node_in_group("Animator").play("fade_out")
-		queue_free()
+		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 
 ##########################################################################################
 

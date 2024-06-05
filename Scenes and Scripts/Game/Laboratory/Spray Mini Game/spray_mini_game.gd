@@ -9,14 +9,10 @@ var dialog2 = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Spray M
 var dialog4 = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Spray Mini Game Dialog/dialog_spray_mini_game4.tscn")
 @onready var gun_in_hand = $GunInHand
 @onready var progress_bar = $ProgressBar
-var next_scene
+
 
 func _ready():
 	add_child(dialog2.instantiate())
-	$CanvasLayer/FadeAnimation.show()
-	$CanvasLayer/AnimationPlayer.play("fade_in")
-	await get_tree().create_timer(1).timeout
-	load("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 
 
 func _process(delta):
@@ -59,8 +55,3 @@ func _on_swipe_area_start_dialog_4():
 
 func gun_gets_visible():
 	gun_in_hand.visible = true
-
-
-func _on_animation_player_animation_finished(anim_name):
-	if anim_name == "fade_out":
-		get_tree().change_scene_to_packed(next_scene)

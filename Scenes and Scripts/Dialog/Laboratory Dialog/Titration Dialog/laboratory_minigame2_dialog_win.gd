@@ -55,7 +55,7 @@ func _process(delta):
 		Global.lab_cutscene_played = true
 		Global.return_laboratory_1 = true
 		Global.return_laboratory_2 = true
-		get_tree().get_first_node_in_group("Animator").play("fade_out")
+		get_tree().change_scene_to_packed(laboratory_scene)
 		queue_free()
 ##########################################################################################
 

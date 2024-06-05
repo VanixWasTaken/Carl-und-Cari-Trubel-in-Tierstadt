@@ -53,8 +53,7 @@ func _process(delta):
 	if dialogs == 6:
 		Global.moving_allowed = true
 		Global.dialog_playing = false
-		get_tree().get_first_node_in_group("Animator").play("fade_out")
-		queue_free()
+		get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/Titration/titration.tscn")
 ##########################################################################################
 
 
