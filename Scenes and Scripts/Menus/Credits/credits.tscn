@@ -19,7 +19,5 @@ text = "Credits
 "
 
 [node name="TextureButton" parent="." index="1"]
-offset_left = 272.0
 offset_top = 179.0
-offset_right = 1184.0
 offset_bottom = 486.0

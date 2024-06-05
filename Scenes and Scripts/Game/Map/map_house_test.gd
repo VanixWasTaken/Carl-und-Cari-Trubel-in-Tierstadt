@@ -13,6 +13,9 @@ func _ready():
 	building_name = get_tree().get_first_node_in_group("BuildingArea").get_name()
 	MusicController._play_music("adventure", "map", -20)
 	next_scene = load(scene_name)
+	
+	if Global.return_laboratory_3 == true:
+		$"../Player".position = Vector2(298,320)
 
 func _process(delta):
 	animation_frame = $AnimatedSprite2D.frame + 1
