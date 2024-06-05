@@ -69,5 +69,7 @@ func narrator_delay():
 
 
 func _on_animated_sprite_2d_frame_changed():
-	if $AnimatedSprite2D.frame == 5:
+	if $AnimatedSprite2D.frame == 1:
+		$NailingPoster.play()
+	elif $AnimatedSprite2D.frame == 5:
 		$TelephoneGrab.play()

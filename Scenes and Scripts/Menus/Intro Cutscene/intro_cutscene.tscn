@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://skc43dl2o124"]
+[gd_scene load_steps=43 format=3 uid="uid://skc43dl2o124"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.gd" id="1_jfymc"]
 [ext_resource type="Texture2D" uid="uid://dcwdarpqj4kyp" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame1.png.PNG" id="1_wajoa"]
@@ -27,6 +27,7 @@
 [ext_resource type="AudioStream" uid="uid://drsrb4863wcnc" path="res://Assets/Sound/SFX/Foley/World/sfx_foley_world_telephone_ring_cutscene.mp3" id="25_4lacg"]
 [ext_resource type="AudioStream" uid="uid://cj0su1k43k8wb" path="res://Assets/Sound/SFX/Foley/World/sfx_foley_world_telephone_smack_cutscene.mp3" id="26_fqkf5"]
 [ext_resource type="AudioStream" uid="uid://wa66fjuq7hhv" path="res://Assets/Sound/SFX/Foley/World/sfx_foley_world_telephone_pickup_cutscene.mp3" id="26_gtkih"]
+[ext_resource type="AudioStream" uid="uid://v1j3pusr7vyi" path="res://Assets/Sound/SFX/Foley/World/sfx_foley_world_nailing_poster_cutscene.mp3" id="28_i63ya"]
 
 [sub_resource type="Animation" id="Animation_jv6g1"]
 resource_name = "Glide"
@@ -350,6 +351,9 @@ stream = ExtResource("26_fqkf5")
 
 [node name="TelephonePickUp" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_gtkih")
+
+[node name="NailingPoster" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_i63ya")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
