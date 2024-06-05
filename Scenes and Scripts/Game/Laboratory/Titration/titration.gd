@@ -4,7 +4,7 @@ signal balancing_game
 
 var first_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Titration Dialog/laboratory_minigame2_dialog_1.tscn")
 var second_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Titration Dialog/laboratory_minigame2_dialog_2.tscn")
-
+@onready var next_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 var ready_to_pour = false
 
 var tube_counter = 0
@@ -15,6 +15,8 @@ var signal_sent = false
 func _ready():
 	var dialog_instance = first_dialog.instantiate()
 	add_child(dialog_instance)
+	$CanvasLayer/FadeAnimation.show()
+	$CanvasLayer/AnimationPlayer.play("fade_in")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -102,8 +104,6 @@ func _on_clamp_pouring_time():
 		$Clamp.visible = true
 
 
-func _on_button_button_down():
-	Global.lab_cutscene_played = true
-	Global.return_laboratory_1 = true
-	Global.return_laboratory_2 = true
-	get_tree().change_scene_to_file("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "fade_out":
+		get_tree().change_scene_to_packed(next_scene)
