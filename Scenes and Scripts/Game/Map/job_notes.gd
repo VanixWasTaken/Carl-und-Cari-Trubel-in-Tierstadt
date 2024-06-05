@@ -2,8 +2,8 @@ extends Node2D
 
 signal deactivate_house
 signal reactivate_house
-
 var mouse_inside = false
+var note_open = false
 var mouse_inside_job_note1 = false
 var mouse_inside_big_note = false
 var outline_shader = preload("res://Shader/outline.tres")
@@ -11,8 +11,8 @@ var no_shader = preload("res://Shader/no_shader.tres")
 var open_note1 = 0
 
 func _process(delta):
-	if mouse_inside:
-		Global.moving_allowed = false
+	#if mouse_inside:
+		#Global.moving_allowed = false
 		  # handles input when the note-menu is visible
 	if $JobNoteMenu.visible:
 		Global.moving_allowed = false
@@ -23,6 +23,7 @@ func _process(delta):
 				$JobNoteMenu.visible = false
 				$JobNoteMenu/JobNote1.visible = false
 				%Click.play()
+				note_open = false
 
 		 # lets players close the note-menu by pressing rmb
 		elif Input.is_action_just_pressed("right_click"):
@@ -35,6 +36,7 @@ func _process(delta):
 				emit_signal("deactivate_house")
 				$JobNoteMenu.visible = true
 				%Click.play()
+				note_open = true
 
 		   # Handles input to open and close the steckbrief via clicking its icon
 	if mouse_inside_job_note1 and Input.is_action_just_pressed("left_click"):
@@ -61,6 +63,7 @@ func close_menu():
 	$JobNoteMenu.visible = false
 	$JobNoteMenu/JobNote1.visible = false
 	%Click.play()
+	note_open = false
 	Global.moving_allowed = true
 	%HelpButton.menu_open = false
 

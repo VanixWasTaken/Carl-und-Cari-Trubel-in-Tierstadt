@@ -8,6 +8,7 @@ func _process(delta):
 
 			# Handles Input to close the menu via the quit button
 	if mouse_inside and Input.is_action_just_pressed("left_click"):
+		$"../..".note_open = false
 		%Click.play()
 		var note_menu = get_parent()
 		var house_thing = note_menu.get_parent()

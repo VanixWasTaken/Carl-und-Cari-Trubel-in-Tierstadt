@@ -21,7 +21,7 @@ func _ready():
 		$TextureButton.texture_pressed = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_click.png")
 		$TextureButton.texture_hover = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_hover_outline.png")
 func _process(delta):
-	if menu_open || mouse_inside || Global.dialog_playing || Global.cutscene_playing:
+	if $"../JobNotes".note_open || $"../JobNotes".mouse_inside || menu_open || mouse_inside || Global.dialog_playing || Global.cutscene_playing:
 		Global.moving_allowed = false
 	elif !mouse_inside && !Global.dialog_playing && !Global.cutscene_playing:
 		Global.moving_allowed = true

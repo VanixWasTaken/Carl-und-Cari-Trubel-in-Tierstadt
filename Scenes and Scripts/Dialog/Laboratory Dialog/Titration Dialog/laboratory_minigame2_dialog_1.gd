@@ -196,7 +196,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Sie funktioniert s-s-so ähnlich wie ein T-T-Termometer, dass uns sagt, ob es warm oder k-k-kalt ist."
+		short_node_text.text = "Sie funktioniert s-s-so ähnlich wie ein T-T-Thermometer, dass uns sagt, ob es warm oder k-k-kalt ist."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_07.mp3")
