@@ -8,6 +8,7 @@ var narrator_count = 0
 
 func _ready():
 	MusicController._play_music("adventure", "map", -20)
+	narrator_delay()
 
 func _on_animated_sprite_2d_animation_finished():
 	$AnimatedSprite2D.queue_free()

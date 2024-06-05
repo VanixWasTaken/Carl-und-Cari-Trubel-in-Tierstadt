@@ -61,11 +61,11 @@
 [ext_resource type="AudioStream" uid="uid://gx0o4f5bq21g" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var2.mp3" id="57_o03af"]
 [ext_resource type="AudioStream" uid="uid://bv85fsmky476u" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var3.mp3" id="58_3ma0y"]
 [ext_resource type="AudioStream" uid="uid://cx7pb5lv7ea31" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakerpourstop_var1.mp3" id="61_gtl2m"]
-[ext_resource type="AudioStream" uid="uid://c4i4y6ehjbt4y" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/sfx_laboratory_ui_glasshover_var1.mp3" id="61_m03yb"]
-[ext_resource type="AudioStream" uid="uid://bycuhm5qdpjur" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/sfx_laboratory_ui_glasshover_var2.mp3" id="62_h52h5"]
-[ext_resource type="AudioStream" uid="uid://c237mu43xrp54" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/sfx_laboratory_ui_glasshover_var3.mp3" id="63_p8edu"]
-[ext_resource type="AudioStream" uid="uid://bivu5e2qf51pp" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/sfx_laboratory_ui_glasshover_var4.mp3" id="64_osdsw"]
-[ext_resource type="AudioStream" uid="uid://cwle0vaf2wej4" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/sfx_laboratory_ui_glasshover_var5.mp3" id="65_1w6r4"]
+[ext_resource type="AudioStream" uid="uid://c4i4y6ehjbt4y" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/Glass Hover/sfx_laboratory_ui_glasshover_var1.mp3" id="61_m03yb"]
+[ext_resource type="AudioStream" uid="uid://bycuhm5qdpjur" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/Glass Hover/sfx_laboratory_ui_glasshover_var2.mp3" id="62_h52h5"]
+[ext_resource type="AudioStream" uid="uid://c237mu43xrp54" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/Glass Hover/sfx_laboratory_ui_glasshover_var3.mp3" id="63_p8edu"]
+[ext_resource type="AudioStream" uid="uid://bivu5e2qf51pp" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/Glass Hover/sfx_laboratory_ui_glasshover_var4.mp3" id="64_osdsw"]
+[ext_resource type="AudioStream" uid="uid://cwle0vaf2wej4" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/Glass Hover/sfx_laboratory_ui_glasshover_var5.mp3" id="65_1w6r4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mrjln"]
 animations = [{
