@@ -382,16 +382,6 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_tyn2s")
 
-[node name="HelpButton" parent="." instance=ExtResource("3_m8ddv")]
-unique_name_in_owner = true
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -0.00012207
-offset_right = -0.00012207
-grow_horizontal = 1
-grow_vertical = 1
-
 [node name="Stand" type="Node2D" parent="."]
 position = Vector2(1495, 842)
 
@@ -472,6 +462,7 @@ bus = &"SFX"
 stream = ExtResource("32_hy0i5")
 
 [node name="Bar" type="Area2D" parent="Skillcheck"]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Skillcheck/Bar"]
 position = Vector2(1063, 307)
@@ -483,6 +474,7 @@ position = Vector2(1075, 317.25)
 shape = SubResource("RectangleShape2D_b0cak")
 
 [node name="Arrow" type="Area2D" parent="Skillcheck"]
+visible = false
 position = Vector2(918.2, 311)
 scale = Vector2(2, 2)
 
@@ -500,6 +492,7 @@ libraries = {
 }
 
 [node name="PH-Scale" type="Node2D" parent="Skillcheck"]
+visible = false
 position = Vector2(1714, 311)
 
 [node name="Glass" type="Sprite2D" parent="Skillcheck/PH-Scale"]
@@ -575,6 +568,16 @@ stream = ExtResource("43_pgvcx")
 volume_db = -12.0
 autoplay = true
 bus = &"SFX"
+
+[node name="HelpButton" parent="." instance=ExtResource("3_m8ddv")]
+unique_name_in_owner = true
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -0.00012207
+offset_right = -0.00012207
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
