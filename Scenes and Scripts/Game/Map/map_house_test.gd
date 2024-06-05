@@ -12,6 +12,7 @@ var next_scene
 func _ready():
 	building_name = get_tree().get_first_node_in_group("BuildingArea").get_name()
 	MusicController._play_music("adventure", "map", -20)
+	await get_tree().create_timer(0.25).timeout
 	next_scene = load(scene_name)
 
 func _process(delta):
