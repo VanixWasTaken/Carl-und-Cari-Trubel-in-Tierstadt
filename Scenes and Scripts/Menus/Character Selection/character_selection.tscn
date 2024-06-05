@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d0kmxo1xwctr3"]
+[gd_scene load_steps=17 format=3 uid="uid://d0kmxo1xwctr3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Character Selection/character_selection.gd" id="1_5srde"]
 [ext_resource type="Texture2D" uid="uid://dse3wruy3xdu4" path="res://Assets/Art/UI/Menus/Character Selection/character_selection_background.png" id="2_y8g0q"]
@@ -12,6 +12,52 @@
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="10_jit2i"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="11_kbe6w"]
 [ext_resource type="Texture2D" uid="uid://cy40uuqqkl6ac" path="res://Assets/Art/UI/Menus/Character Selection/character_selection_background_bed_cut.png" id="12_vttij"]
+[ext_resource type="Texture2D" uid="uid://dallf42isrhu0" path="res://Assets/Art/UI/Menus/small_hud.png" id="13_ybn0b"]
+
+[sub_resource type="Animation" id="Animation_mifuf"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 1.05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CariButton:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.02, 1.02)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../CarlButton:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.02, 1.02)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8p3ug"]
+_data = {
+"new_animation": SubResource("Animation_mifuf")
+}
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bloo3"]
 playback_mode = 1
@@ -25,6 +71,13 @@ stream_2/weight = 1.0
 
 [node name="Character Choice" type="Node2D"]
 script = ExtResource("1_5srde")
+
+[node name="Scale" type="AnimationPlayer" parent="."]
+root_node = NodePath("../WähleDeinenCharakter2")
+libraries = {
+"": SubResource("AnimationLibrary_8p3ug")
+}
+autoplay = "new_animation"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
@@ -50,19 +103,27 @@ theme_override_font_sizes/font_size = 100
 text = "Charakterauswahl"
 horizontal_alignment = 1
 
-[node name="Cari Button" type="TextureButton" parent="."]
-offset_left = 600.0
-offset_top = 128.0
-offset_right = 915.0
-offset_bottom = 766.0
+[node name="CariButton" type="Node2D" parent="."]
+position = Vector2(744, 416)
+
+[node name="Cari Button" type="TextureButton" parent="CariButton"]
+offset_left = -148.35
+offset_top = -288.893
+offset_right = 166.65
+offset_bottom = 349.107
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource("5_68byl")
 texture_hover = ExtResource("6_ea15h")
 
-[node name="Carl Button" type="TextureButton" parent="."]
-offset_left = 1328.0
-offset_top = 128.0
-offset_right = 1662.0
-offset_bottom = 773.0
+[node name="CarlButton" type="Node2D" parent="."]
+position = Vector2(1512, 456)
+
+[node name="Carl Button" type="TextureButton" parent="CarlButton"]
+offset_left = -160.0
+offset_top = -312.0
+offset_right = 174.0
+offset_bottom = 333.0
 texture_normal = ExtResource("7_a7vx7")
 texture_hover = ExtResource("8_s136i")
 
@@ -78,9 +139,33 @@ volume_db = -18.0
 position = Vector2(960, 540)
 texture = ExtResource("12_vttij")
 
-[connection signal="button_down" from="Cari Button" to="." method="_on_cari_button_button_down"]
-[connection signal="button_up" from="Cari Button" to="." method="_on_cari_button_button_up"]
-[connection signal="mouse_entered" from="Cari Button" to="." method="_on_cari_button_mouse_entered"]
-[connection signal="button_down" from="Carl Button" to="." method="_on_carl_button_button_down"]
-[connection signal="button_up" from="Carl Button" to="." method="_on_carl_button_button_up"]
-[connection signal="mouse_entered" from="Carl Button" to="." method="_on_carl_button_mouse_entered"]
+[node name="WähleDeinenCharakter2" type="Node2D" parent="."]
+position = Vector2(960, 976)
+
+[node name="Sprite2D" type="Sprite2D" parent="WähleDeinenCharakter2"]
+position = Vector2(8, -8)
+scale = Vector2(1.02444, 1.00741)
+texture = ExtResource("13_ybn0b")
+region_enabled = true
+region_rect = Rect2(506, 902, 900, 134)
+
+[node name="Label" type="Label" parent="WähleDeinenCharakter2"]
+modulate = Color(1, 1, 1, 0.931128)
+self_modulate = Color(1, 1, 1, 0.997871)
+offset_left = -419.214
+offset_top = -55.3163
+offset_right = 428.786
+offset_bottom = 53.6837
+theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
+theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("3_ixneb")
+theme_override_font_sizes/font_size = 80
+text = "Wähle deinen Charakter"
+
+[connection signal="button_down" from="CariButton/Cari Button" to="." method="_on_cari_button_button_down"]
+[connection signal="button_up" from="CariButton/Cari Button" to="." method="_on_cari_button_button_up"]
+[connection signal="mouse_entered" from="CariButton/Cari Button" to="." method="_on_cari_button_mouse_entered"]
+[connection signal="button_down" from="CarlButton/Carl Button" to="." method="_on_carl_button_button_down"]
+[connection signal="button_up" from="CarlButton/Carl Button" to="." method="_on_carl_button_button_up"]
+[connection signal="mouse_entered" from="CarlButton/Carl Button" to="." method="_on_carl_button_mouse_entered"]
