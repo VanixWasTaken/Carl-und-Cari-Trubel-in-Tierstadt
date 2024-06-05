@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+[gd_scene load_steps=65 format=3 uid="uid://dfm6sf40klc1x"]
+=======
 [gd_scene load_steps=63 format=3 uid="uid://dfm6sf40klc1x"]
+>>>>>>> 386269b45a18b1e0bed330836d95ef44a8af7e9b
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/titration.gd" id="1_rdept"]
 [ext_resource type="Texture2D" uid="uid://r82vd54v48ed" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG" id="1_tyn2s"]
@@ -45,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://b5q7pby6fhui1" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Water Drops/lab_minigame2_water_drops_0003.png" id="42_7j5n3"]
 [ext_resource type="AudioStream" uid="uid://cwle0vaf2wej4" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/Glass Hover/sfx_laboratory_ui_glasshover_var5.mp3" id="42_vljpi"]
 [ext_resource type="AudioStream" uid="uid://b8ig70axv634b" path="res://Assets/Sound/SFX/Ambience/Laboratory/sfx_laboratory_ambience_ventilation_var1.mp3" id="43_pgvcx"]
+[ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="44_2cu2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op731"]
 size = Vector2(443, 376)
@@ -268,6 +273,46 @@ animations = [{
 "name": &"default",
 "speed": 9.0
 }]
+
+[sub_resource type="Animation" id="Animation_ltsux"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeAnimation:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(70, 70)]
+}
+
+[sub_resource type="Animation" id="Animation_ltvyy"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeAnimation:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(70, 70), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0uxyh"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i0a4y"]
+_data = {
+"fade_in": SubResource("Animation_ltsux"),
+"fade_out": SubResource("Animation_ltvyy"),
+"new_animation": SubResource("Animation_0uxyh")
+}
 
 [node name="Titration" type="Node2D"]
 script = ExtResource("1_rdept")
@@ -500,6 +545,33 @@ stream = ExtResource("43_pgvcx")
 volume_db = -12.0
 autoplay = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FadeAnimation" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1008.36
+offset_top = -574.5
+offset_right = 1008.36
+offset_bottom = 574.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1008.36, 574.505)
+mouse_filter = 2
+texture = ExtResource("44_2cu2h")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" groups=["Animator"]]
+libraries = {
+"": SubResource("AnimationLibrary_i0a4y")
+}
+
 [connection signal="balancing_game" from="." to="Skillcheck" method="_on_titration_balancing_game"]
 [connection signal="pouring_time" from="Clamp" to="." method="_on_clamp_pouring_time"]
 [connection signal="area_entered" from="Clamp/ClampArea" to="Clamp" method="_on_clamp_area_area_entered"]
@@ -510,3 +582,4 @@ autoplay = true
 [connection signal="area_exited" from="Skillcheck/Bar" to="Skillcheck" method="_on_bar_area_exited"]
 [connection signal="timeout" from="Skillcheck/MiniGameTime" to="Skillcheck" method="_on_mini_game_time_timeout"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="Skillcheck" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

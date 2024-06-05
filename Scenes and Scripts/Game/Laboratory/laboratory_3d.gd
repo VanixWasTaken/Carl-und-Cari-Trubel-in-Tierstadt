@@ -16,6 +16,9 @@ var picked_up_reagenz_glasses = false
 var picked_up_vessel = false
 var picked_up_chemicals = false
 @onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
+@onready var powder_scene = preload("res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.tscn")
+@onready var titration_scene = preload("res://Scenes and Scripts/Game/Laboratory/Titration/titration.tscn")
+@onready var spray_scene = preload("res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.tscn")
 
 func _ready():
 	player = get_tree().get_first_node_in_group("Player")
@@ -135,7 +138,15 @@ func _on_dialog_area_body_entered(body):
 
 
 func change_scene():
-	get_tree().change_scene_to_packed(map_scene)
+	if !Global.return_laboratory_1 && !Global.return_laboratory_2 && !Global.return_laboratory_3:
+		get_tree().change_scene_to_packed(powder_scene)
+	elif Global.return_laboratory_1 && !Global.return_laboratory_2 && !Global.return_laboratory_3:
+		get_tree().change_scene_to_packed(titration_scene)
+	elif Global.return_laboratory_1 && Global.return_laboratory_2 && !Global.return_laboratory_3:
+		get_tree().change_scene_to_packed(spray_scene)
+	elif Global.return_laboratory_1 && Global.return_laboratory_2 && Global.return_laboratory_3:
+		get_tree().change_scene_to_packed(map_scene)
+	
 
 
 func _on_exit_body_entered(body):
