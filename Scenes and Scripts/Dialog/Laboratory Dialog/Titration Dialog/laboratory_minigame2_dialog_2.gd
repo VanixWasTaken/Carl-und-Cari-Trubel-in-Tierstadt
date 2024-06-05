@@ -74,8 +74,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Okay, wie mache ich das?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
-		#$"../VoiceOver".stream = load(path + "titration_02_02.mp3")
-		#$"../VoiceOver".play()
+		$"../VoiceOver".stream = load(path + "titration_02_02.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	
