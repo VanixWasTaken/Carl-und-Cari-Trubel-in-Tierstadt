@@ -31,6 +31,7 @@ func _process(delta):
 		
 		if Input.is_action_just_pressed("space") and arrow_in_bar and !pressed_already:
 			$Burette/Drip.play()
+			$Burette/Success.play()
 			$"PH-Scale/Arrow".position.y -= 90
 			$"../AnimatedSprite2D".visible = true
 			$"../AnimatedSprite2D".play()
