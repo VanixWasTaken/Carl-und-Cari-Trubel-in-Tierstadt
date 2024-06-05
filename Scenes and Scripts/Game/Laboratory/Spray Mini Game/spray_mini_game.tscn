@@ -27,7 +27,7 @@
 [ext_resource type="AudioStream" uid="uid://dk0mqinit5gom" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_hosenoise_var1.mp3" id="21_5el5d"]
 [ext_resource type="Texture2D" uid="uid://k8vo3omv63bx" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation5.png" id="21_5enbi"]
 [ext_resource type="Texture2D" uid="uid://cfxioe6hxbws8" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Bottle Animation/bottle_animation6.png" id="22_fsmpt"]
-[ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="22_n4vlj"]
+[ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="22_kqck5"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/bottle_area.gd" id="23_2g2jj"]
 [ext_resource type="Texture2D" uid="uid://byihxhjs8koc3" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Arrow Animation/arrow_animation1.png" id="23_nosby"]
 [ext_resource type="AudioStream" uid="uid://dq4k48igv5bes" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_loadingpaint_var1.mp3" id="24_2wxnx"]
@@ -490,7 +490,7 @@ volume_db = -12.0
 [node name="SpinMinigame" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("22_n4vlj")
+texture = ExtResource("22_kqck5")
 
 [node name="Bottle" type="AnimatedSprite2D" parent="SpinMinigame"]
 position = Vector2(1009, 826)
