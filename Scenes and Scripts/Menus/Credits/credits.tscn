@@ -1,9 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://c167vkgb61a1m"]
+[gd_scene load_steps=3 format=3 uid="uid://c167vkgb61a1m"]
 
 [ext_resource type="PackedScene" uid="uid://ex8idjxdm1hh" path="res://Scenes and Scripts/Menus/Options/options.tscn" id="1_cfe8j"]
+[ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="2_v04qv"]
 
 [node name="Credits" instance=ExtResource("1_cfe8j")]
 
+[node name="Settings" parent="." index="0"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1921.0
+offset_bottom = 1081.0
+texture = ExtResource("2_v04qv")
+
 [node name="Label" parent="Settings" index="0"]
+offset_left = -870.0
+offset_top = 157.0
+offset_right = -97.0
+offset_bottom = 460.0
 text = "Credits
 "
+
+[node name="TextureButton" parent="." index="1"]
+offset_left = 272.0
+offset_top = 179.0
+offset_right = 1184.0
+offset_bottom = 486.0

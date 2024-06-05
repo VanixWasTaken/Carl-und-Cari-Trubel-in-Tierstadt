@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ex8idjxdm1hh"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Options/options.gd" id="1_3861l"]
-[ext_resource type="Texture2D" uid="uid://g5oqa1su2b6c" path="res://Assets/Art/UI/Menus/Main Menu/key_art.PNG" id="2_seljq"]
+[ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="2_8s4hn"]
 [ext_resource type="Texture2D" uid="uid://bagfqcw5jgjg3" path="res://Assets/Art/UI/Buttons/Zurück Button/zurück_button.png" id="4_0gl4k"]
 [ext_resource type="Texture2D" uid="uid://cfx4mjux32qlv" path="res://Assets/Art/UI/Buttons/Zurück Button/zurück_button_dark.png" id="5_dujpj"]
 [ext_resource type="Texture2D" uid="uid://g40m4yqqgyxy" path="res://Assets/Art/UI/Buttons/Zurück Button/zurück_button_light.png" id="6_laosp"]
@@ -11,19 +11,21 @@
 script = ExtResource("1_3861l")
 
 [node name="Settings" type="TextureRect" parent="."]
-offset_left = 100.0
-offset_top = 100.0
-offset_right = 1820.0
-offset_bottom = 980.0
-texture = ExtResource("2_seljq")
+offset_left = -5.0
+offset_top = 3.0
+offset_right = 1915.0
+offset_bottom = 1083.0
+texture = ExtResource("2_8s4hn")
 
 [node name="Label" type="Label" parent="Settings"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -773.0
-offset_bottom = 303.0
+offset_left = -960.0
+offset_top = 142.0
+offset_right = -187.0
+offset_bottom = 445.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(1, 0.635294, 0.329412, 1)
 theme_override_colors/font_outline_color = Color(0.870588, 0.0980392, 0.341176, 1)
@@ -33,10 +35,10 @@ theme_override_font_sizes/font_size = 186
 text = "Settings"
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 156.0
-offset_top = 128.0
-offset_right = 1068.0
-offset_bottom = 435.0
+offset_left = 272.0
+offset_top = 190.0
+offset_right = 1184.0
+offset_bottom = 497.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("4_0gl4k")
 texture_pressed = ExtResource("5_dujpj")
