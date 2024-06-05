@@ -76,12 +76,16 @@ func _on_titration_balancing_game():
 func play_countdown():
 	countdown = 1
 	$TextureRect.visible = true
+	$"321".play()
 	$TextureRect/Numbers.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_numbers_3.png")
 	await get_tree().create_timer(1).timeout
+	$"321".play()
 	$TextureRect/Numbers.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_numbers_2.png")
 	await get_tree().create_timer(1).timeout
+	$"321".play()
 	$TextureRect/Numbers.texture = load("res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_numbers_1.png")
 	await get_tree().create_timer(1).timeout
+	$Meins.play()
 	$TextureRect.visible = false
 	start_game = true
 	$Bubbling.play()

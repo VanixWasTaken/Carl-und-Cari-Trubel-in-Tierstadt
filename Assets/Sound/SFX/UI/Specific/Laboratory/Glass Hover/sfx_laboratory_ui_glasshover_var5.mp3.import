@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwle0vaf2wej4"
+path="res://.godot/imported/sfx_laboratory_ui_glasshover_var5.mp3-dac13cefb579e2b8c74c9f0b2e19bfbb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/UI/Specific/Laboratory/Glass Hover/sfx_laboratory_ui_glasshover_var5.mp3"
+dest_files=["res://.godot/imported/sfx_laboratory_ui_glasshover_var5.mp3-dac13cefb579e2b8c74c9f0b2e19bfbb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
