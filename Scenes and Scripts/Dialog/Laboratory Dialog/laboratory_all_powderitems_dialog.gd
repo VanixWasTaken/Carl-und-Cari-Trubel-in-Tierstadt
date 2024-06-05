@@ -52,7 +52,6 @@ func _process(delta):
 	if dialogs == 6:
 		Global.dialog_playing = false
 		Global.moving_allowed = true
-		queue_free()
 		get_tree().get_first_node_in_group("Animator").play("fade_out")
 		queue_free()
 ##########################################################################################
