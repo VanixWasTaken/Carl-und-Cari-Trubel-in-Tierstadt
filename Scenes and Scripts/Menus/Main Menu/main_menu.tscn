@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=55 format=3 uid="uid://ducsr1iwag28u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Main Menu/main_menu.gd" id="1_3f1tb"]
 [ext_resource type="Texture2D" uid="uid://r6osxlvpwdud" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main.png" id="2_sbqtk"]
@@ -7,9 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b8fkioc55ls28" path="res://Assets/Art/Particles/leaf.png" id="3_lftx2"]
 [ext_resource type="Texture2D" uid="uid://crrhnurucid3q" path="res://Assets/Art/Particles/Clouds/bg_cloud_main1.png" id="3_vtxkd"]
 [ext_resource type="Texture2D" uid="uid://cp1dwwi0ixv3x" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main_mg.png" id="4_0p1yr"]
-[ext_resource type="Texture2D" uid="uid://dhfas2b66qw1f" path="res://Assets/Art/Particles/Clouds/bg_cloud_main2.png" id="4_g4qs8"]
 [ext_resource type="Texture2D" uid="uid://bm7gcry1ns620" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_002.png" id="4_h203a"]
-[ext_resource type="Texture2D" uid="uid://dvobwkpxpn8wu" path="res://Assets/Art/Particles/Clouds/bg_cloud_main3.png" id="5_qgi8g"]
 [ext_resource type="Texture2D" uid="uid://b82hx3oy50qcr" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main_overlay.png" id="5_s6pbb"]
 [ext_resource type="Texture2D" uid="uid://csiuqoad3bqyt" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_003.png" id="5_wlv6i"]
 [ext_resource type="Texture2D" uid="uid://20m8sq4yw4hr" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_004.png" id="6_35oed"]
@@ -17,9 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c167vkgb61a1m" path="res://Scenes and Scripts/Menus/Credits/credits.tscn" id="8_e5ggp"]
 [ext_resource type="Texture2D" uid="uid://bw4uijw5l3vn1" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_006.png" id="8_iclu6"]
 [ext_resource type="Texture2D" uid="uid://6y6y5emfkd32" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_007.png" id="9_2ahhp"]
-[ext_resource type="Texture2D" uid="uid://nduwxa5rqkf3" path="res://Assets/Art/Particles/Clouds/bg_cloud_main7.png" id="9_e8ag6"]
 [ext_resource type="Texture2D" uid="uid://dr2bfsjonrajn" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_008.png" id="10_drrmn"]
-[ext_resource type="Texture2D" uid="uid://ca6irvwnkrijm" path="res://Assets/Art/Particles/Clouds/bg_cloud_main8.png" id="10_eiqv6"]
 [ext_resource type="Texture2D" uid="uid://dbb2ejkecaweq" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_009.png" id="11_5twst"]
 [ext_resource type="Texture2D" uid="uid://mtvduxk8q1am" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main_fg.png.PNG" id="12_j3bun"]
 [ext_resource type="Texture2D" uid="uid://blllg5vmvvl41" path="res://Assets/Art/UI/Buttons/Start Button/start_button.png" id="14_5avqw"]
@@ -37,6 +33,161 @@
 [ext_resource type="Texture2D" uid="uid://bmugy1s3pg22p" path="res://Assets/Art/UI/Buttons/Mitwirkende Button/mitwirkende_button_dark.png" id="21_m1fq5"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="21_w12sd"]
 [ext_resource type="Texture2D" uid="uid://crvb4tyvfd5qq" path="res://Assets/Art/UI/Buttons/Mitwirkende Button/mitwirkende_button_light.png" id="22_72qen"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_olwb2"]
+load_path = "res://.godot/imported/bg_cloud_main2.png-1b43a7b66b21b0e6e12be24371fe2d6a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hluao"]
+load_path = "res://.godot/imported/bg_cloud_main7.png-90b1949c5ea1ebcf3a0ecc6f8fc4756f.ctex"
+
+[sub_resource type="Animation" id="Animation_k5jc6"]
+resource_name = "new_animation"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1540, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4rduy"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u2jqx"]
+_data = {
+"RESET": SubResource("Animation_4rduy"),
+"new_animation": SubResource("Animation_k5jc6")
+}
+
+[sub_resource type="Animation" id="Animation_vpobu"]
+resource_name = "new_animation"
+length = 32.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 31.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-150, -144), Vector2(2167, -144)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0lwaf"]
+_data = {
+"new_animation": SubResource("Animation_vpobu")
+}
+
+[sub_resource type="Animation" id="Animation_umt7j"]
+resource_name = "new_animation"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1444, -12), Vector2(1800, -12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pk32j"]
+_data = {
+"new_animation": SubResource("Animation_umt7j")
+}
+
+[sub_resource type="Animation" id="Animation_ffopa"]
+resource_name = "new_animation"
+length = 40.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1372, 0), Vector2(1524, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e82kw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1372, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t21ug"]
+_data = {
+"RESET": SubResource("Animation_e82kw"),
+"new_animation": SubResource("Animation_ffopa")
+}
+
+[sub_resource type="Animation" id="Animation_6pwf0"]
+resource_name = "new_animation"
+length = 40.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-369, -144), Vector2(2167, -144)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ndfes"]
+_data = {
+"new_animation": SubResource("Animation_6pwf0")
+}
+
+[sub_resource type="Animation" id="Animation_8hnw8"]
+resource_name = "new_animation"
+length = 40.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-516, -12), Vector2(1444, -12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_damm0"]
+_data = {
+"new_animation": SubResource("Animation_8hnw8")
+}
 
 [sub_resource type="Animation" id="Animation_gk0aj"]
 resource_name = "new_animation"
@@ -132,49 +283,53 @@ offset_right = 1920.0
 offset_bottom = 1082.0
 texture = ExtResource("5_s6pbb")
 
-[node name="Clouds2" type="CPUParticles2D" parent="."]
-position = Vector2(-1546, 547)
-amount = 1
-lifetime = 60.0
+[node name="BackgroundClouds" type="Node2D" parent="."]
+position = Vector2(653, 485)
+
+[node name="Cloud" type="Sprite2D" parent="BackgroundClouds"]
+position = Vector2(-1372, 0)
 texture = ExtResource("3_vtxkd")
-gravity = Vector2(10, 0)
-initial_velocity_max = 10.0
 
-[node name="Clouds3" type="CPUParticles2D" parent="."]
-position = Vector2(-639, 451)
-amount = 1
-lifetime = 40.0
-texture = ExtResource("4_g4qs8")
-gravity = Vector2(10, 0)
-initial_velocity_max = 20.0
+[node name="Cloud2" type="Sprite2D" parent="BackgroundClouds"]
+position = Vector2(-150, -144)
+texture = SubResource("CompressedTexture2D_olwb2")
 
-[node name="Clouds4" type="CPUParticles2D" parent="."]
-position = Vector2(-1120, 262)
-amount = 1
-lifetime = 50.0
-texture = ExtResource("5_qgi8g")
-gravity = Vector2(10, 0)
-initial_velocity_max = 20.0
+[node name="Cloud3" type="Sprite2D" parent="BackgroundClouds"]
+position = Vector2(1444, -12)
+texture = SubResource("CompressedTexture2D_hluao")
 
-[node name="Clouds5" type="CPUParticles2D" parent="."]
-position = Vector2(717, 437)
-emitting = false
-amount = 1
-lifetime = 50.0
-one_shot = true
-texture = ExtResource("9_e8ag6")
-gravity = Vector2(10, 0)
-initial_velocity_max = 20.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BackgroundClouds"]
+libraries = {
+"": SubResource("AnimationLibrary_u2jqx")
+}
+autoplay = "new_animation"
 
-[node name="Clouds6" type="CPUParticles2D" parent="."]
-position = Vector2(349, 653)
-emitting = false
-amount = 1
-lifetime = 50.0
-one_shot = true
-texture = ExtResource("10_eiqv6")
-gravity = Vector2(10, 0)
-initial_velocity_max = 20.0
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="BackgroundClouds"]
+libraries = {
+"": SubResource("AnimationLibrary_0lwaf")
+}
+autoplay = "new_animation"
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="BackgroundClouds"]
+libraries = {
+"": SubResource("AnimationLibrary_pk32j")
+}
+autoplay = "new_animation"
+
+[node name="AnimationPlayer4" type="AnimationPlayer" parent="BackgroundClouds"]
+libraries = {
+"": SubResource("AnimationLibrary_t21ug")
+}
+
+[node name="AnimationPlayer5" type="AnimationPlayer" parent="BackgroundClouds"]
+libraries = {
+"": SubResource("AnimationLibrary_ndfes")
+}
+
+[node name="AnimationPlayer6" type="AnimationPlayer" parent="BackgroundClouds"]
+libraries = {
+"": SubResource("AnimationLibrary_damm0")
+}
 
 [node name="TierstadtBackground3" type="TextureRect" parent="."]
 offset_top = 2.0
@@ -253,6 +408,7 @@ libraries = {
 autoplay = "new_animation"
 
 [node name="Clouds" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_17etq")
 autoplay = "default"
@@ -265,6 +421,9 @@ volume_db = -18.0
 stream = SubResource("AudioStreamRandomizer_itqj1")
 volume_db = -15.0
 
+[connection signal="animation_finished" from="BackgroundClouds/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="BackgroundClouds/AnimationPlayer2" to="." method="_on_animation_player_2_animation_finished"]
+[connection signal="animation_finished" from="BackgroundClouds/AnimationPlayer3" to="." method="_on_animation_player_3_animation_finished"]
 [connection signal="button_down" from="Start" to="." method="_on_button_click"]
 [connection signal="button_up" from="Start" to="." method="_on_start_button_up"]
 [connection signal="mouse_entered" from="Start" to="." method="_on_button_hovered"]

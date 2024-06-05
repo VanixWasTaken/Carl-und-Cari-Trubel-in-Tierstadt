@@ -4,6 +4,7 @@ extends Node2D
 @onready var next_scene = preload("res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.tscn")
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -31,3 +32,13 @@ func _on_button_click():
 
 func _on_clouds_animation_finished():
 	$Clouds.visible = false
+
+
+func _on_animation_player_animation_finished(anim_name):
+	$BackgroundClouds/AnimationPlayer4.play("new_animation")
+
+func _on_animation_player_2_animation_finished(anim_name):
+	$BackgroundClouds/AnimationPlayer5.play("new_animation")
+
+func _on_animation_player_3_animation_finished(anim_name):
+	$BackgroundClouds/AnimationPlayer6.play("new_animation")
