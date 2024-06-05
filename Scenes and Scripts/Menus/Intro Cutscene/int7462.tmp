@@ -1,0 +1,339 @@
+[gd_scene load_steps=38 format=3 uid="uid://skc43dl2o124"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.gd" id="1_jfymc"]
+[ext_resource type="Texture2D" uid="uid://dcwdarpqj4kyp" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame1.png.PNG" id="1_wajoa"]
+[ext_resource type="Texture2D" uid="uid://j0ki0uktabxe" path="res://Assets/Art/Cutscenes/Intro Cutsene/characters_talking.png" id="2_g7dl1"]
+[ext_resource type="Texture2D" uid="uid://difq00t427k63" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame2.png.PNG" id="2_yxpgr"]
+[ext_resource type="Texture2D" uid="uid://lb4g6drr5o27" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame3.png.PNG" id="3_yp0o1"]
+[ext_resource type="Texture2D" uid="uid://dylkrlenvgssl" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame4.png.PNG" id="4_tq0bh"]
+[ext_resource type="Texture2D" uid="uid://qnbeqle7ae0q" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame5.png.PNG" id="5_jng2a"]
+[ext_resource type="Texture2D" uid="uid://08234pe6u2oq" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame6.png" id="7_7sgsu"]
+[ext_resource type="Texture2D" uid="uid://dlbwvgnvb5cc4" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame7.png" id="8_yoqt0"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="10_0wlxo"]
+[ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="11_spyt2"]
+[ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="12_vgwtq"]
+[ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="13_4rwus"]
+[ext_resource type="Texture2D" uid="uid://clcn17unia2fj" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_001.png" id="14_eiorq"]
+[ext_resource type="Texture2D" uid="uid://bm7gcry1ns620" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_002.png" id="15_vtdxu"]
+[ext_resource type="Texture2D" uid="uid://csiuqoad3bqyt" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_003.png" id="16_72hn5"]
+[ext_resource type="Texture2D" uid="uid://20m8sq4yw4hr" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_004.png" id="17_hlp4k"]
+[ext_resource type="Texture2D" uid="uid://ld2jwrr2boi7" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_005.png" id="18_d5vnw"]
+[ext_resource type="Texture2D" uid="uid://bw4uijw5l3vn1" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_006.png" id="19_uhnsk"]
+[ext_resource type="Texture2D" uid="uid://6y6y5emfkd32" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_007.png" id="20_3jg05"]
+[ext_resource type="Texture2D" uid="uid://dr2bfsjonrajn" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_008.png" id="21_nbc2i"]
+[ext_resource type="Texture2D" uid="uid://dbb2ejkecaweq" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_009.png" id="22_4rgkp"]
+[ext_resource type="AudioStream" uid="uid://nppwsyhdx7ae" path="res://Assets/Sound/VO/Intro/vo_npc_narrator_tierstadt_01.mp3" id="23_1paak"]
+
+[sub_resource type="Animation" id="Animation_jv6g1"]
+resource_name = "Glide"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 5.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1920, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_thudc"]
+_data = {
+"Glide": SubResource("Animation_jv6g1")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2624k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yxpgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yp0o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tq0bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jng2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7sgsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yoqt0")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.5
+}]
+
+[sub_resource type="Animation" id="Animation_qp7td"]
+resource_name = "new_animation"
+length = 7.9
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.1, 7.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.1, 7.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(960, 540), Vector2(960, 540), Vector2(960, 595)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_io0qs"]
+_data = {
+"new_animation": SubResource("Animation_qp7td")
+}
+
+[sub_resource type="Animation" id="Animation_1m87b"]
+resource_name = "new_animation"
+length = 18.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(8.01),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(960, 540)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(8.01, 14, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ycfe"]
+_data = {
+"new_animation": SubResource("Animation_1m87b")
+}
+
+[sub_resource type="Animation" id="Animation_blovg"]
+resource_name = "new_animation"
+length = 18.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(14.5, 14.55, 14.6, 14.65, 14.7, 14.75, 15, 15.05, 15.1, 15.15, 15.2, 15.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, -0.0349066, 0.0349066, -0.0349066, 0.0349066, 0.0, 0.0, -0.0349066, 0.0349066, -0.0349066, 0.0349066, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uhmsx"]
+_data = {
+"new_animation": SubResource("Animation_blovg")
+}
+
+[sub_resource type="Animation" id="Animation_gki0b"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cgvff"]
+_data = {
+"new_animation": SubResource("Animation_gki0b")
+}
+
+[sub_resource type="Animation" id="Animation_014u0"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j1hdd"]
+_data = {
+"new_animation": SubResource("Animation_014u0")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l7t8e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_eiorq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vtdxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_72hn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hlp4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_d5vnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_uhnsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3jg05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_nbc2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4rgkp")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Intro Cutscene" type="Node2D"]
+script = ExtResource("1_jfymc")
+
+[node name="Characters Talking" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_g7dl1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_thudc")
+}
+autoplay = "Glide"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_2624k")
+
+[node name="First Zoom" type="AnimationPlayer" parent="AnimatedSprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_io0qs")
+}
+autoplay = "new_animation"
+
+[node name="SecondZoom" type="AnimationPlayer" parent="AnimatedSprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_1ycfe")
+}
+autoplay = "new_animation"
+
+[node name="Ringing" type="AnimationPlayer" parent="AnimatedSprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_uhmsx")
+}
+autoplay = "new_animation"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 3840.0
+offset_bottom = 1080.0
+texture = ExtResource("1_wajoa")
+
+[node name="Dialog1" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 89.0
+offset_top = 628.0
+offset_right = 735.0
+offset_bottom = 1095.0
+theme_override_fonts/normal_font = ExtResource("10_0wlxo")
+theme_override_font_sizes/normal_font_size = 100
+text = "Carl und Cari, ihr müsst uns helfen"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialog1"]
+libraries = {
+"": SubResource("AnimationLibrary_cgvff")
+}
+
+[node name="Dialog2" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 1171.0
+offset_top = 118.0
+offset_right = 1740.0
+offset_bottom = 504.0
+theme_override_fonts/normal_font = ExtResource("10_0wlxo")
+theme_override_font_sizes/normal_font_size = 100
+text = "Wir sind auf dem Weg"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialog2"]
+libraries = {
+"": SubResource("AnimationLibrary_j1hdd")
+}
+
+[node name="WeiterButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 1206.0
+offset_top = 146.0
+offset_right = 2118.0
+offset_bottom = 453.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("11_spyt2")
+texture_pressed = ExtResource("12_vgwtq")
+texture_hover = ExtResource("13_4rwus")
+
+[node name="Clouds" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_l7t8e")
+autoplay = "default"
+frame = 8
+frame_progress = 1.0
+
+[node name="Narrator" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_1paak")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="Dialog1/AnimationPlayer" to="." method="_on_animation_player_dialog1_animation_finished"]
+[connection signal="animation_finished" from="Dialog2/AnimationPlayer" to="." method="_on_animation_player_dialog2_animation_finished"]
+[connection signal="pressed" from="WeiterButton" to="." method="_on_weiter_button_pressed"]
+[connection signal="animation_finished" from="Clouds" to="." method="_on_clouds_animation_finished"]
+[connection signal="finished" from="Narrator" to="." method="_on_narrator_finished"]

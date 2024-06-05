@@ -6,6 +6,7 @@ var button_pressed = 0
 
 var narrator_count = 0
 
+
 func _ready():
 	MusicController._play_music("adventure", "map", -20)
 	narrator_delay()
@@ -62,3 +63,9 @@ func _on_narrator_finished():
 		#$Narrator.play()
 		#narrator_count += 1
 	pass
+
+func narrator_delay():
+	if narrator_count == 0:
+		await get_tree().create_timer(1).timeout
+		$Narrator.play()
+		narrator_count += 1
