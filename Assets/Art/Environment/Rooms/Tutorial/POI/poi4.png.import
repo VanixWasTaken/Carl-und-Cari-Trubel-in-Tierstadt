@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bryn1fupgt0gt"
 path.s3tc="res://.godot/imported/poi4.png-aaa0929e138f49bdb9c3cf6f2f01a9e9.s3tc.ctex"
+path.etc2="res://.godot/imported/poi4.png-aaa0929e138f49bdb9c3cf6f2f01a9e9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Art/Environment/Rooms/Tutorial/POI/poi4.png"
-dest_files=["res://.godot/imported/poi4.png-aaa0929e138f49bdb9c3cf6f2f01a9e9.s3tc.ctex"]
+dest_files=["res://.godot/imported/poi4.png-aaa0929e138f49bdb9c3cf6f2f01a9e9.s3tc.ctex", "res://.godot/imported/poi4.png-aaa0929e138f49bdb9c3cf6f2f01a9e9.etc2.ctex"]
 
 [params]
 
