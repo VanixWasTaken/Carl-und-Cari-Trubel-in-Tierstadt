@@ -1,6 +1,7 @@
 extends Node
 
 var mouse_full = false
+var mouse_in_button = false
 var moving_allowed = true
 var character = ""
 var open_tutorial_door = false
@@ -76,7 +77,6 @@ func reset_game():
 	get_tree().change_scene_to_packed(start_scene)
 
 func downloadFile(img: Image, filename: String) -> void:
-	print("PEEEENIS")
 	var buffer = img.save_png_to_buffer()
 	var base64Data: String = Marshalls.raw_to_base64(buffer)
 	var url: String = "data:image/png;base64," + base64Data

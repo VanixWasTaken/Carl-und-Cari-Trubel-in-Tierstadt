@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=35 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Texture2D" uid="uid://ckctg6v1ekkvh" path="res://Assets/Art/Environment/Map/Big Map/map.PNG" id="1_pn286"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
@@ -7,23 +7,31 @@
 [ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="9_lq8sc"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/job_notes.gd" id="9_vqn8c"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/exit_button.gd" id="10_0oi3s"]
+[ext_resource type="Texture2D" uid="uid://drhav4j47ea2w" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button_clicked.png" id="10_s3yr3"]
+[ext_resource type="Texture2D" uid="uid://y4rakxp2wwr" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button_hovered.png" id="11_6v58m"]
 [ext_resource type="Texture2D" uid="uid://7vqjfkop4ysv" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button.png" id="11_um2ur"]
 [ext_resource type="Texture2D" uid="uid://c6mohqehk03g4" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist.png" id="12_ub25h"]
 [ext_resource type="Texture2D" uid="uid://cm4hcr8fw4k5a" path="res://Assets/Art/UI/HUD/Map/job_note1.PNG" id="13_2x76a"]
 [ext_resource type="PackedScene" uid="uid://daswfhvjsa7jh" path="res://Scenes and Scripts/Game/Player/player.tscn" id="14_0uuvf"]
 [ext_resource type="Shader" path="res://Shader/blur.gdshader" id="14_jp8ps"]
+[ext_resource type="Texture2D" uid="uid://78kv262tl42u" path="res://Assets/Art/UI/Buttons/download_button.png" id="14_w3i32"]
+[ext_resource type="Texture2D" uid="uid://caa2a68btik58" path="res://Assets/Art/UI/Buttons/download_pdf_button.png" id="15_asjkx"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="15_bdydr"]
 [ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/Art/Random Screens/white_screen.png" id="15_jo7ff"]
+[ext_resource type="Texture2D" uid="uid://dpjjv7rg73iow" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button_clicked.png" id="15_pp1ui"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="16_18o2f"]
+[ext_resource type="Texture2D" uid="uid://bdbjnb85fqnnx" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button_hover.png" id="16_ttcuk"]
+[ext_resource type="Texture2D" uid="uid://cbksoath7x8g7" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist_clicked.png" id="16_x1218"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="17_hkm8s"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="17_v78te"]
+[ext_resource type="Texture2D" uid="uid://bw1t31kgrjkq0" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist_hovered.png" id="17_wo11y"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="18_bp1yi"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/moving_to_laboratory_video.ogv" id="18_dkhfr"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8wyy8"]
-vertices = PackedVector2Array(469, 933, 11, 937, 164, 933, 285, 644, 289, 582, 294, 647, 1187, 502, 1193, 547, 1189, 538, 1177, 510, 187, 646, 181, 644, 1188, 577, 1896, 544, 1893, 556, 1199, 558, 1180, 603, 1158, 607, 1131, 638, 1119, 619, 1111, 637, 1745, 1043, 1747, 1053, 1190, 1028, 1436, 1034, 1133, 456, 1136, 473, 1638, 276, 1906, 276, 1905, 283, 1641, 277, 1632, 369, 1638, 372, 1141, 372, 1131, 368, 1121, 471, 1068, 489, 1059, 523, 1041, 520, 1050, 580, 1064, 570, 989, -5, 997, -6, 992, 300, 984, 298, 568, 298, 304, 316, 286, 304, 1084, 604, 1115, 807, 1158, 811, 1138, 815, 574, 5, 578, 5, 575, 296, 3, 645, 3, 643, 176, 932, 464, 930, 1432, 883, 1909, 881, 1909, 882, 1440, 894, 1420, 1027, 1204, 1021, 1192, 878, 1204, 882, 474, 812, 536, 804, 474, 1062, 469, 1062, 461, 812, 532, 799, 531, 548, 531, 550, 292, 545, 298, 541, 294, 526, 294, 525)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(3, 5, 10, 11), PackedInt32Array(12, 8, 7), PackedInt32Array(7, 13, 14, 15), PackedInt32Array(12, 7, 15), PackedInt32Array(12, 15, 16), PackedInt32Array(17, 12, 16, 18), PackedInt32Array(19, 17, 18, 20), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(25, 6, 9, 26), PackedInt32Array(27, 28, 29, 30), PackedInt32Array(31, 27, 30, 32), PackedInt32Array(31, 32, 33, 34), PackedInt32Array(35, 34, 33, 25), PackedInt32Array(35, 25, 26), PackedInt32Array(36, 35, 26, 37, 38), PackedInt32Array(39, 38, 37, 40), PackedInt32Array(41, 42, 43, 44), PackedInt32Array(45, 44, 43, 46, 47), PackedInt32Array(39, 40, 48), PackedInt32Array(20, 39, 48), PackedInt32Array(20, 48, 19), PackedInt32Array(49, 20, 18, 50, 51), PackedInt32Array(52, 53, 54, 45), PackedInt32Array(11, 55, 56), PackedInt32Array(11, 56, 3), PackedInt32Array(2, 11, 10, 57), PackedInt32Array(0, 2, 57, 58), PackedInt32Array(59, 60, 61, 62), PackedInt32Array(63, 59, 62, 24), PackedInt32Array(63, 24, 23, 64), PackedInt32Array(64, 23, 65, 66), PackedInt32Array(50, 66, 65, 51), PackedInt32Array(49, 51, 67, 68), PackedInt32Array(67, 69, 70, 0), PackedInt32Array(67, 0, 58, 71), PackedInt32Array(67, 71, 72, 68), PackedInt32Array(73, 68, 72, 74), PackedInt32Array(73, 74, 75, 76), PackedInt32Array(76, 75, 77), PackedInt32Array(46, 76, 77, 78), PackedInt32Array(46, 78, 47), PackedInt32Array(44, 45, 54)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(980, -15, 974, 288, 585, 286, 588, -5, 564, -5, 558, 288, 276, 295, 284, 525, 276, 634, -7, 633, -6, 656, 170, 654, 155, 923, 0, 928, 2, 948, 459, 943, 460, 1071, 485, 1074, 484, 822, 1133, 825, 1182, 882, 1180, 1038, 1760, 1064, 1754, 1034, 1446, 1024, 1450, 904, 1919, 892, 1920, 871, 1423, 874, 1411, 1017, 1214, 1011, 1215, 881, 1168, 807, 1142, 643, 1188, 610, 1206, 568, 1902, 566, 1910, 534, 1202, 537, 1197, 498, 1143, 452, 1150, 382, 1648, 382, 1651, 287, 1914, 294, 1918, 267, 1629, 266, 1623, 359, 1122, 358, 1112, 464, 1063, 480, 1031, 518, 1041, 585, 1101, 641, 1105, 797, 546, 794, 541, 539, 308, 531, 314, 326, 1002, 310, 1008, -17), PackedVector2Array(298, 555, 521, 560, 522, 791, 451, 804, 454, 920, 186, 922, 197, 656, 305, 658), PackedVector2Array(1070, 528, 1135, 486, 1169, 516, 1179, 540, 1178, 573, 1153, 598, 1120, 608, 1091, 596, 1074, 567)])
+vertices = PackedVector2Array(469, 933, 11, 937, 164, 933, 464, 930, 1187, 502, 1193, 547, 1189, 538, 1177, 510, 1188, 577, 531, 548, 536, 804, 532, 799, 531, 550, 1896, 544, 1893, 556, 1199, 558, 1180, 603, 1158, 607, 1131, 638, 1119, 619, 1111, 637, 1745, 1043, 1747, 1053, 1190, 1028, 1436, 1034, 1133, 456, 1136, 473, 1638, 276, 1906, 276, 1905, 283, 1641, 277, 1632, 369, 1638, 372, 1141, 372, 1131, 368, 1121, 471, 1068, 489, 1059, 523, 1041, 520, 1050, 580, 1064, 570, 989, -5, 997, -6, 992, 300, 984, 298, 568, 298, 304, 316, 286, 304, 1084, 604, 1115, 807, 1158, 811, 1138, 815, 298, 546, 298, 541, 574, 5, 578, 5, 575, 296, 181, 644, 3, 645, 3, 643, 285, 644, 1432, 883, 1909, 881, 1909, 882, 1440, 894, 1420, 1027, 1204, 1021, 1192, 878, 1204, 882, 474, 812, 461, 812, 474, 1062, 469, 1062, 176, 932, 187, 646, 295, 647, 294, 526, 294, 525)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 6, 5), PackedInt32Array(9, 10, 11, 12), PackedInt32Array(5, 13, 14, 15), PackedInt32Array(8, 5, 15), PackedInt32Array(8, 15, 16), PackedInt32Array(17, 8, 16, 18), PackedInt32Array(19, 17, 18, 20), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(25, 4, 7, 26), PackedInt32Array(27, 28, 29, 30), PackedInt32Array(31, 27, 30, 32), PackedInt32Array(31, 32, 33, 34), PackedInt32Array(35, 34, 33, 25), PackedInt32Array(35, 25, 26), PackedInt32Array(36, 35, 26, 37, 38), PackedInt32Array(39, 38, 37, 40), PackedInt32Array(41, 42, 43, 44), PackedInt32Array(45, 44, 43, 46, 47), PackedInt32Array(39, 40, 48), PackedInt32Array(20, 39, 48), PackedInt32Array(20, 48, 19), PackedInt32Array(49, 20, 18, 50, 51), PackedInt32Array(9, 12, 52, 53), PackedInt32Array(54, 55, 56, 45), PackedInt32Array(57, 58, 59), PackedInt32Array(57, 59, 60), PackedInt32Array(61, 62, 63, 64), PackedInt32Array(65, 61, 64, 24), PackedInt32Array(65, 24, 23, 66), PackedInt32Array(66, 23, 67, 68), PackedInt32Array(50, 68, 67, 51), PackedInt32Array(49, 51, 69, 10), PackedInt32Array(11, 10, 69, 70), PackedInt32Array(3, 70, 69, 0), PackedInt32Array(69, 71, 72, 0), PackedInt32Array(73, 3, 2), PackedInt32Array(73, 2, 57, 74), PackedInt32Array(74, 57, 60, 75), PackedInt32Array(52, 75, 60, 76, 53), PackedInt32Array(46, 53, 76, 77), PackedInt32Array(46, 77, 47), PackedInt32Array(44, 45, 56)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(980, -15, 974, 288, 585, 286, 588, -5, 564, -5, 558, 288, 276, 295, 284, 525, 276, 634, -7, 633, -6, 656, 170, 654, 155, 923, 0, 928, 2, 948, 459, 943, 460, 1071, 485, 1074, 484, 822, 1133, 825, 1182, 882, 1180, 1038, 1760, 1064, 1754, 1034, 1446, 1024, 1450, 904, 1919, 892, 1920, 871, 1423, 874, 1411, 1017, 1214, 1011, 1215, 881, 1168, 807, 1142, 643, 1188, 610, 1206, 568, 1902, 566, 1910, 534, 1202, 537, 1197, 498, 1143, 452, 1150, 382, 1648, 382, 1651, 287, 1914, 294, 1918, 267, 1629, 266, 1623, 359, 1122, 358, 1112, 464, 1063, 480, 1031, 518, 1041, 585, 1101, 641, 1105, 797, 546, 794, 541, 539, 308, 531, 314, 326, 1002, 310, 1008, -17), PackedVector2Array(308, 556, 521, 560, 522, 791, 451, 804, 454, 920, 186, 922, 197, 656, 305, 658), PackedVector2Array(1070, 528, 1135, 486, 1169, 516, 1179, 540, 1178, 573, 1153, 598, 1120, 608, 1091, 596, 1074, 567)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_46f6v"]
@@ -41,11 +49,14 @@ size = Vector2(338.273, 401.403)
 [sub_resource type="CircleShape2D" id="CircleShape2D_h683o"]
 radius = 83.2166
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8raen"]
-size = Vector2(241, 310)
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_myy3n"]
 shader = ExtResource("14_jp8ps")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_npdgg"]
+shader = ExtResource("14_jp8ps")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqe4t"]
+size = Vector2(215, 212)
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_quchc")
@@ -92,21 +103,27 @@ volume_db = -18.0
 position = Vector2(-73, -50)
 script = ExtResource("9_vqn8c")
 
-[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes"]
-position = Vector2(142, 137)
-scale = Vector2(0.84302, 0.782875)
-texture = ExtResource("8_fe5cr")
-metadata/_edit_group_ = true
-
 [node name="Area2D" type="Area2D" parent="HUD/JobNotes"]
+visible = false
 position = Vector2(132, 126)
 scale = Vector2(0.331094, 0.331094)
-collision_layer = 128
-collision_mask = 128
+collision_layer = 129
+collision_mask = 129
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/Area2D"]
 position = Vector2(21.1421, 28.8408)
 shape = SubResource("RectangleShape2D_ab4lo")
+
+[node name="OpenNotes" type="TextureButton" parent="HUD/JobNotes"]
+offset_left = 54.0
+offset_top = 49.0
+offset_right = 218.0
+offset_bottom = 214.0
+texture_normal = ExtResource("8_fe5cr")
+texture_pressed = ExtResource("10_s3yr3")
+texture_hover = ExtResource("11_6v58m")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="JobNoteMenu" type="Node2D" parent="HUD/JobNotes"]
 visible = false
@@ -119,11 +136,15 @@ texture = ExtResource("9_lq8sc")
 [node name="ExitButton" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
 position = Vector2(79, 38)
 script = ExtResource("10_0oi3s")
-metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/ExitButton"]
-position = Vector2(1632, 296)
-texture = ExtResource("11_um2ur")
+[node name="TextureButton" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ExitButton"]
+offset_left = 1511.0
+offset_top = 189.0
+offset_right = 1742.0
+offset_bottom = 405.0
+texture_normal = ExtResource("11_um2ur")
+texture_pressed = ExtResource("15_pp1ui")
+texture_hover = ExtResource("16_ttcuk")
 
 [node name="Area2D" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/ExitButton"]
 collision_layer = 128
@@ -133,45 +154,108 @@ collision_mask = 128
 position = Vector2(1635, 295)
 shape = SubResource("CircleShape2D_h683o")
 
-[node name="InJobMenuJobNote1" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
+[node name="ChemistNoteSmall" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
 position = Vector2(109, -4)
 
-[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1"]
-position = Vector2(415, 428)
-scale = Vector2(1.37, 1.37)
-texture = ExtResource("12_ub25h")
+[node name="ChemistDownload" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall"]
+offset_left = 322.0
+offset_top = 594.0
+offset_right = 498.0
+offset_bottom = 658.0
+texture_normal = ExtResource("14_w3i32")
+texture_hover = ExtResource("15_asjkx")
 
-[node name="Area2D" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1"]
-collision_layer = 128
-collision_mask = 128
+[node name="ChemistSymbol" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall"]
+offset_left = 307.0
+offset_top = 256.0
+offset_right = 509.0
+offset_bottom = 511.0
+texture_normal = ExtResource("12_ub25h")
+texture_pressed = ExtResource("16_x1218")
+texture_hover = ExtResource("17_wo11y")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D"]
-position = Vector2(413.5, 427)
-shape = SubResource("RectangleShape2D_8raen")
-
-[node name="JobNote1" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
+[node name="ChemistNoteBig" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
 visible = false
 
-[node name="WhiteScreen" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1"]
+[node name="WhiteScreen" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig"]
 material = SubResource("ShaderMaterial_myy3n")
 position = Vector2(925, 561.5)
 scale = Vector2(7.6125, 7.29445)
 texture = ExtResource("15_jo7ff")
 
-[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1"]
+[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig"]
 position = Vector2(1054, 606)
 scale = Vector2(1.01, 1.01)
 texture = ExtResource("13_2x76a")
 
-[node name="QuitButton" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D"]
-position = Vector2(238.122, -407.507)
-scale = Vector2(0.5, 0.5)
+[node name="PaperQuit" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D"]
 
-[node name="PaperQuit" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D"]
-
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D/PaperQuit"]
 position = Vector2(235.667, -406.28)
 polygon = PackedVector2Array(-47.8698, 29.4583, -51.5521, -57.6892, -81.0104, -103.104, -33.1406, -87.1476, 15.9565, -49.0972, 50.3246, -7.36458, 81.0104, 47.8698, 94.5121, 105.559, 96.967, 157.111, 67.5087, 100.649, 22.0938, 56.4618)
+
+[node name="QuitChemistBig" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D"]
+offset_left = 173.267
+offset_top = -466.337
+offset_right = 289.267
+offset_bottom = -356.337
+texture_normal = ExtResource("11_um2ur")
+texture_pressed = ExtResource("15_pp1ui")
+texture_hover = ExtResource("16_ttcuk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="DownloadExplanation" type="TextureRect" parent="HUD/JobNotes"]
+visible = false
+z_index = 2
+offset_left = 430.0
+offset_top = 271.0
+offset_right = 1611.0
+offset_bottom = 929.0
+texture = ExtResource("9_lq8sc")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="HUD/JobNotes/DownloadExplanation"]
+z_index = -1
+material = SubResource("ShaderMaterial_npdgg")
+layout_mode = 0
+offset_left = -547.0
+offset_top = -280.0
+offset_right = 1724.0
+offset_bottom = 984.0
+texture = ExtResource("15_jo7ff")
+
+[node name="Label" type="Label" parent="HUD/JobNotes/DownloadExplanation"]
+z_index = 2
+layout_mode = 0
+offset_left = 156.0
+offset_top = 104.0
+offset_right = 1048.0
+offset_bottom = 575.0
+theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
+theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("17_hkm8s")
+theme_override_font_sizes/font_size = 50
+text = "Es hat sich ein neuer Tab geöffnet. In diesem findest du nochmal alle wichtigen Informationen zu diesem Beruf. Lad die Datei runter, druck sie aus und zeig sie deinen Eltern und Lehrkräften!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton" type="TextureButton" parent="HUD/JobNotes/DownloadExplanation"]
+layout_mode = 0
+offset_left = 1127.0
+offset_top = -56.0
+offset_right = 1358.0
+offset_bottom = 160.0
+texture_normal = ExtResource("11_um2ur")
+texture_pressed = ExtResource("15_pp1ui")
+texture_hover = ExtResource("16_ttcuk")
+
+[node name="Area2D2" type="Area2D" parent="HUD/JobNotes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/Area2D2"]
+position = Vector2(97.5, 96)
+shape = SubResource("RectangleShape2D_yqe4t")
 
 [node name="HelpButton" parent="HUD" instance=ExtResource("18_bp1yi")]
 unique_name_in_owner = true
@@ -222,6 +306,8 @@ offset_top = 150.0
 offset_right = 1713.0
 offset_bottom = 366.0
 texture_normal = ExtResource("11_um2ur")
+texture_pressed = ExtResource("15_pp1ui")
+texture_hover = ExtResource("16_ttcuk")
 
 [node name="Headline" type="Label" parent="HUD/Help Movement"]
 layout_mode = 0
@@ -238,10 +324,16 @@ text = "DER NÄCHSTE SCHRITT"
 
 [connection signal="mouse_entered" from="HUD/JobNotes/Area2D" to="HUD/JobNotes" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="HUD/JobNotes/Area2D" to="HUD/JobNotes" method="_on_area_2d_mouse_exited"]
+[connection signal="button_up" from="HUD/JobNotes/OpenNotes" to="HUD/JobNotes" method="_on_open_notes_button_up"]
+[connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/ExitButton/TextureButton" to="HUD/JobNotes/JobNoteMenu/ExitButton" method="_on_texture_button_button_up"]
 [connection signal="mouse_entered" from="HUD/JobNotes/JobNoteMenu/ExitButton/Area2D" to="HUD/JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/ExitButton/Area2D" to="HUD/JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D" to="HUD/JobNotes" method="_on_area_2d_InJobMenuJobNote1_mouse_entered"]
-[connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/InJobMenuJobNote1/Area2D" to="HUD/JobNotes" method="_on_area_2d_InJobMenuJobNote1_mouse_exited"]
-[connection signal="mouse_entered" from="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="HUD/JobNotes" method="_on_paper_quit_mouse_entered"]
-[connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/JobNote1/Sprite2D/PaperQuit" to="HUD/JobNotes" method="_on_paper_quit_mouse_exited"]
+[connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall/ChemistDownload" to="HUD/JobNotes" method="_on_chemist_download_button_up"]
+[connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall/ChemistSymbol" to="HUD/JobNotes" method="_on_chemist_symbol_button_up"]
+[connection signal="mouse_entered" from="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D/PaperQuit" to="HUD/JobNotes" method="_on_paper_quit_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D/PaperQuit" to="HUD/JobNotes" method="_on_paper_quit_mouse_exited"]
+[connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D/QuitChemistBig" to="HUD/JobNotes" method="_on_quit_chemist_big_button_up"]
+[connection signal="button_up" from="HUD/JobNotes/DownloadExplanation/TextureButton" to="HUD/JobNotes" method="_on_texture_button_button_up"]
+[connection signal="area_entered" from="HUD/JobNotes/Area2D2" to="." method="_on_area_2d_2_area_entered"]
+[connection signal="area_exited" from="HUD/JobNotes/Area2D2" to="." method="_on_area_2d_2_area_exited"]
 [connection signal="button_up" from="HUD/Help Movement/TextureButton" to="." method="_on_texture_button_button_up"]

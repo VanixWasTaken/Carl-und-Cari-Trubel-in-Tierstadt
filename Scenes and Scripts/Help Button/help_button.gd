@@ -21,9 +21,9 @@ func _ready():
 		$TextureButton.texture_pressed = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_click.png")
 		$TextureButton.texture_hover = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_hover_outline.png")
 func _process(delta):
-	if Global.menu_open || menu_open || mouse_inside || Global.dialog_playing || Global.cutscene_playing:
+	if Global.mouse_in_button || Global.menu_open || menu_open || mouse_inside || Global.dialog_playing || Global.cutscene_playing:
 		Global.moving_allowed = false
-	elif !mouse_inside && !Global.dialog_playing && !Global.cutscene_playing:
+	elif !mouse_inside && !Global.dialog_playing && !Global.cutscene_playing && !Global.mouse_in_button && !Global.menu_open:
 		Global.moving_allowed = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
