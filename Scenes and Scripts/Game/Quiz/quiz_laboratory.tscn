@@ -1,3 +1,57 @@
-[gd_scene format=3 uid="uid://b7l01kbm7a7hp"]
+[gd_scene load_steps=6 format=3 uid="uid://b7l01kbm7a7hp"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/quiz_laboratory.gd" id="1_07xri"]
+[ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="2_ah3io"]
+[ext_resource type="Texture2D" uid="uid://rdcn34fncj87" path="res://Assets/Art/Environment/Quiz/quiz_dialog_placeholder.png" id="3_76i8y"]
+[ext_resource type="Texture2D" uid="uid://c511opnk2rd1j" path="res://Assets/Art/Environment/Quiz/quiz_question1_box_placeholder.png" id="4_lqvjv"]
+[ext_resource type="Texture2D" uid="uid://bp6ib6pbfpx07" path="res://Assets/Art/Environment/Quiz/quiz_continue_button_placeholder.png" id="5_c5yfd"]
 
 [node name="QuizLaboratory" type="Node2D"]
+script = ExtResource("1_07xri")
+
+[node name="HUD" type="Sprite2D" parent="."]
+position = Vector2(961, 541)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_ah3io")
+
+[node name="Dialogbox" type="Sprite2D" parent="."]
+position = Vector2(965, 541)
+texture = ExtResource("3_76i8y")
+
+[node name="questionbutton1" type="Sprite2D" parent="."]
+position = Vector2(81, 400)
+texture = ExtResource("4_lqvjv")
+
+[node name="Button1" type="TextureButton" parent="questionbutton1"]
+offset_left = -86.0
+offset_top = -92.0
+offset_right = 94.0
+offset_bottom = 90.0
+
+[node name="questionbutton2" type="Sprite2D" parent="."]
+position = Vector2(81, 600)
+texture = ExtResource("4_lqvjv")
+
+[node name="Button2" type="TextureButton" parent="questionbutton2"]
+offset_left = -86.0
+offset_top = -92.0
+offset_right = 94.0
+offset_bottom = 90.0
+
+[node name="questionbutton3" type="Sprite2D" parent="."]
+position = Vector2(81, 800)
+texture = ExtResource("4_lqvjv")
+
+[node name="Button3" type="TextureButton" parent="questionbutton3"]
+offset_left = -86.0
+offset_top = -92.0
+offset_right = 94.0
+offset_bottom = 90.0
+
+[node name="continuebutton" type="Sprite2D" parent="."]
+position = Vector2(1653, 968)
+texture = ExtResource("5_c5yfd")
+
+[node name="WeiterButton" type="TextureButton" parent="continuebutton"]
+offset_right = 40.0
+offset_bottom = 40.0
