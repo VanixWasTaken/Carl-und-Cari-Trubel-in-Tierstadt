@@ -127,6 +127,7 @@ libraries = {
 autoplay = "fade_in"
 
 [node name="Alpha Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 1044.0
 offset_right = 1920.0
