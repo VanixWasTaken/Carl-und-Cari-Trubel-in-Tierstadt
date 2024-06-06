@@ -163,6 +163,16 @@ theme_override_fonts/font = ExtResource("3_ixneb")
 theme_override_font_sizes/font_size = 80
 text = "Wähle deinen Charakter"
 
+[node name="Alpha Label" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 1044.0
+offset_right = 1920.0
+offset_bottom = 1067.0
+theme_override_colors/font_color = Color(0.728822, 0.728822, 0.728822, 1)
+theme_override_fonts/font = ExtResource("3_ixneb")
+text = "Das ist eine Pre-Alpha Version und repräsentiert nicht das fertige Produkt."
+horizontal_alignment = 1
+
 [connection signal="button_down" from="CariButton/Cari Button" to="." method="_on_cari_button_button_down"]
 [connection signal="button_up" from="CariButton/Cari Button" to="." method="_on_cari_button_button_up"]
 [connection signal="mouse_entered" from="CariButton/Cari Button" to="." method="_on_cari_button_mouse_entered"]
