@@ -12,6 +12,6 @@ func _process(delta):
 
 
 func _on_weiter_button_button_down():
-	$"Frage 2".visible=true
-	$"Frage 1".visible=false
+	$"Frage 2".visible = true
+	$"Frage 1".visible = false
 #funktioniert noch nicht

@@ -93,8 +93,10 @@ position = Vector2(692, 427)
 texture = ExtResource("5_c5yfd")
 
 [node name="WeiterButton" type="TextureButton" parent="Frage 1/continuebutton"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -233.0
+offset_top = -72.0
+offset_right = 230.0
+offset_bottom = 86.0
 
 [node name="Frage 2" type="Sprite2D" parent="."]
 visible = false
@@ -150,8 +152,10 @@ position = Vector2(692, 427)
 texture = ExtResource("5_c5yfd")
 
 [node name="WeiterButton" type="TextureButton" parent="Frage 3/continuebutton"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -227.0
+offset_top = -72.0
+offset_right = 227.0
+offset_bottom = 76.0
 
 [node name="Frage 4" type="Sprite2D" parent="."]
 visible = false
@@ -179,8 +183,10 @@ position = Vector2(692, 427)
 texture = ExtResource("5_c5yfd")
 
 [node name="WeiterButton" type="TextureButton" parent="Frage 4/continuebutton"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -224.0
+offset_top = -63.0
+offset_right = 223.0
+offset_bottom = 89.0
 
 [node name="Frage 5" type="Sprite2D" parent="."]
 visible = false
@@ -206,7 +212,9 @@ position = Vector2(692, 427)
 texture = ExtResource("5_c5yfd")
 
 [node name="WeiterButton" type="TextureButton" parent="Frage 5/continuebutton"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -224.0
+offset_top = -75.0
+offset_right = 232.0
+offset_bottom = 88.0
 
 [connection signal="button_down" from="Frage 1/continuebutton/WeiterButton" to="." method="_on_weiter_button_button_down"]
