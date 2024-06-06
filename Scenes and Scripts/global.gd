@@ -24,6 +24,7 @@ var return_laboratory_3 = false #wird auf true gesetzt, wenn man aus dem 3 minig
 @onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
 @onready var laboratory_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 @onready var start_scene = preload("res://Scenes and Scripts/Menus/StartUp/start_up.tscn")
+var test_image = preload("res://Assets/Art/Characters/Cari/Dialog Icon/TESTIMAGE.png")
 
 func _input(event):
 	if Input.is_action_just_pressed("7"):
@@ -34,6 +35,8 @@ func _input(event):
 		load_laboratory_2()
 	elif Input.is_action_just_pressed("0"):
 		reset_game()
+	elif Input.is_action_just_pressed("2"):
+		downloadFile(test_image, "YIPPIE")
 
 func load_map():
 	character = "Cari"
@@ -71,3 +74,10 @@ func reset_game():
 	return_laboratory_2 = false
 	talked_to_chameleon_3 = false
 	get_tree().change_scene_to_packed(start_scene)
+
+func downloadFile(img: Image, filename: String) -> void:
+	print("PEEEENIS")
+	var buffer = img.save_png_to_buffer()
+	var base64Data: String = Marshalls.raw_to_base64(buffer)
+	var url: String = "data:image/png;base64," + base64Data
+	OS.shell_open(url)  # Opens the image in a new tab for download
