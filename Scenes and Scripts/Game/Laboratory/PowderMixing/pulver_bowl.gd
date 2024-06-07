@@ -37,7 +37,7 @@ func _ready():
 func _process(delta):
 	needed_pulver = $"../DrinkHolder".needed_color
 	$"../Scale/RichTextLabel".text = str(weight) + " g"
-	if Input.is_action_just_pressed("left_click") && mouse_on && !finished_bowl:
+	if Input.is_action_just_pressed("left_click") && mouse_on && !finished_bowl && !Global.dialog_playing:
 		follow_mouse = true
 	if follow_mouse:
 		mouse_position = get_global_mouse_position()
