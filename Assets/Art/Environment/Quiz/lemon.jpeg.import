@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dngdm17gpdwm2"
-path="res://.godot/imported/quiz_template_done_button.png-18b7f5dd8ed8525e14b8c388d753bfeb.ctex"
+uid="uid://cq7xyay40exhs"
+path="res://.godot/imported/lemon.jpeg-c042816517744a43615502b9fec75e3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Quiz/quiz_template_done_button.png"
-dest_files=["res://.godot/imported/quiz_template_done_button.png-18b7f5dd8ed8525e14b8c388d753bfeb.ctex"]
+source_file="res://Assets/Art/Environment/Quiz/lemon.jpeg"
+dest_files=["res://.godot/imported/lemon.jpeg-c042816517744a43615502b9fec75e3e.ctex"]
 
 [params]
 

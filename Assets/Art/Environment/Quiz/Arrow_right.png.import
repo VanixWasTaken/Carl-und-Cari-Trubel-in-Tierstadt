@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgmsv1i8qelh7"
-path="res://.godot/imported/quiz_question3_icons_placeholder.png-b4c88ec19623035e5b7cf5481d5b01d3.ctex"
+uid="uid://dwsj3bbhrbbxo"
+path="res://.godot/imported/Arrow_right.png-dbc23eede8916f4c31184bf2bbcb59a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Quiz/Placeholder/quiz_question3_icons_placeholder.png"
-dest_files=["res://.godot/imported/quiz_question3_icons_placeholder.png-b4c88ec19623035e5b7cf5481d5b01d3.ctex"]
+source_file="res://Assets/Art/Environment/Quiz/Arrow_right.png"
+dest_files=["res://.godot/imported/Arrow_right.png-dbc23eede8916f4c31184bf2bbcb59a7.ctex"]
 
 [params]
 

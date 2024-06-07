@@ -1,20 +1,271 @@
-[gd_scene load_steps=13 format=3 uid="uid://b7l01kbm7a7hp"]
+[gd_scene load_steps=23 format=3 uid="uid://b7l01kbm7a7hp"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/quiz_laboratory.gd" id="1_07xri"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_p4cgx"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/question1.gd" id="3_cbqbb"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/question2.gd" id="3_icdvy"]
 [ext_resource type="Texture2D" uid="uid://dxeb7rmw772vh" path="res://Assets/Art/Environment/Quiz/quiz_template_dialog.png" id="4_5xbhi"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="4_pc78o"]
 [ext_resource type="Texture2D" uid="uid://b6hpuvseildsl" path="res://Assets/Art/Environment/Quiz/quiz_question1_checkbox.png" id="5_jhaf2"]
 [ext_resource type="Texture2D" uid="uid://b6fgfqiiucpjt" path="res://Assets/Art/Environment/Quiz/quiz_question1_checkbox_checked.png" id="6_dut2k"]
-[ext_resource type="Texture2D" uid="uid://dngdm17gpdwm2" path="res://Assets/Art/Environment/Quiz/quiz_template_done_button.png" id="8_lnsnl"]
-[ext_resource type="Texture2D" uid="uid://ci86b3hbf6jvq" path="res://Assets/Art/Environment/Quiz/quiz_template_done_button_click.png" id="9_thmk8"]
-[ext_resource type="Texture2D" uid="uid://dpepph6quf58y" path="res://Assets/Art/Environment/Quiz/quiz_template_done_button_hover.png" id="10_qjkeg"]
+[ext_resource type="Texture2D" uid="uid://bl3q3vnoh3x2f" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button.png" id="8_r5au6"]
+[ext_resource type="Texture2D" uid="uid://otmy5c0k20xl" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_dark.png" id="9_8g1nh"]
+[ext_resource type="Texture2D" uid="uid://nk8ndgcpb32e" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_light.png" id="10_e1c6e"]
 [ext_resource type="Texture2D" uid="uid://crpm3xvnv3c2h" path="res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot2.png" id="11_spf1p"]
+[ext_resource type="Texture2D" uid="uid://cq7xyay40exhs" path="res://Assets/Art/Environment/Quiz/lemon.jpeg" id="11_wgdy6"]
 [ext_resource type="Texture2D" uid="uid://2uo2w7soxbgc" path="res://Assets/Art/Environment/Quiz/quiz_question1_titration icon.png" id="12_52mbr"]
+[ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="12_jkam6"]
+[ext_resource type="Texture2D" uid="uid://mbsqejlr2wu8" path="res://Assets/Art/UI/Dialogue/speech_bubble_right.png" id="13_h2msw"]
+[ext_resource type="Texture2D" uid="uid://dkwmderuoudiu" path="res://Assets/Art/Environment/Quiz/soap.jpg" id="13_ob43a"]
+[ext_resource type="Texture2D" uid="uid://cmsb7vgdfcedm" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/lab_minigame1_ph_scale.png" id="14_leodp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4on2j"]
+size = Vector2(795.321, 3.14166)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8fhtw"]
+radius = 105.005
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tayap"]
+size = Vector2(176.244, 25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_opm7t"]
+radius = 451.465
 
 [node name="QuizLaboratory" type="Node2D"]
 script = ExtResource("1_07xri")
+
+[node name="Question2" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_p4cgx")
+script = ExtResource("3_icdvy")
+
+[node name="Dialogbox" type="Sprite2D" parent="Question2"]
+position = Vector2(960, 263)
+scale = Vector2(0.865239, 0.865239)
+texture = ExtResource("4_5xbhi")
+
+[node name="Label" type="Label" parent="Question2/Dialogbox"]
+anchors_preset = -1
+anchor_left = -7.77739e-05
+anchor_top = -0.000799222
+anchor_right = 0.0116279
+anchor_bottom = 0.210788
+offset_left = -773.86
+offset_top = -131.683
+offset_right = 205.14
+offset_bottom = -50.6827
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_pc78o")
+theme_override_font_sizes/font_size = 60
+text = "Lege die Zitrone und die Seife zu den 
+richtigen pH-Werten"
+metadata/_edit_use_anchors_ = true
+
+[node name="WeiterButton" type="TextureButton" parent="Question2"]
+offset_left = 1317.0
+offset_top = 831.0
+offset_right = 2229.0
+offset_bottom = 1138.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("8_r5au6")
+texture_pressed = ExtResource("9_8g1nh")
+texture_hover = ExtResource("10_e1c6e")
+
+[node name="Headshot" type="Sprite2D" parent="Question2"]
+position = Vector2(1576, 279)
+scale = Vector2(1.11125, 1.11125)
+texture = ExtResource("11_spf1p")
+
+[node name="PhScaleIcon" type="Sprite2D" parent="Question2"]
+position = Vector2(1213, 630)
+scale = Vector2(0.538147, 0.538147)
+texture = ExtResource("14_leodp")
+
+[node name="PhScale14" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale14" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -367.642)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale13" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 55)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale13" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale12" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale12" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale11" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 178.39)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale11" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale10" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 239.711)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale10" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale9" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 297.316)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale9" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale7" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 362.354)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale7" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale6" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 425.534)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale6" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale5" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 496.147)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale5" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale4" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 559.326)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale4" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale3" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 615.073)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale3" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale2" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 672.678)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale2" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale1" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 735.858)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale1" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="PhScale0" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 793.463)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale0" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_4on2j")
+
+[node name="Lemon" type="Node2D" parent="Question2"]
+position = Vector2(317, 457)
+
+[node name="Sprite2D" type="Sprite2D" parent="Question2/Lemon"]
+texture = ExtResource("11_wgdy6")
+region_enabled = true
+region_rect = Rect2(39.1277, 16.3303, 200.388, 148.457)
+
+[node name="Arrow" type="Sprite2D" parent="Question2/Lemon/Sprite2D"]
+position = Vector2(151, -2)
+scale = Vector2(0.481221, 1)
+texture = ExtResource("12_jkam6")
+
+[node name="PickUpArea" type="Area2D" parent="Question2/Lemon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/Lemon/PickUpArea"]
+shape = SubResource("CircleShape2D_8fhtw")
+
+[node name="Area2D" type="Area2D" parent="Question2/Lemon"]
+position = Vector2(151, -2)
+scale = Vector2(0.481221, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/Lemon/Area2D"]
+position = Vector2(83.122, 1)
+shape = SubResource("RectangleShape2D_tayap")
+
+[node name="Soap" type="Sprite2D" parent="Question2"]
+position = Vector2(322, 787)
+scale = Vector2(0.197148, 0.197148)
+texture = ExtResource("13_ob43a")
+region_enabled = true
+region_rect = Rect2(199.949, 133.641, 937.333, 627.487)
+
+[node name="Arrow" type="Sprite2D" parent="Question2/Soap"]
+position = Vector2(710.125, 30.4339)
+scale = Vector2(2.28603, 3.78629)
+texture = ExtResource("12_jkam6")
+
+[node name="Area2D" type="Area2D" parent="Question2/Soap/Arrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/Soap/Arrow/Area2D"]
+position = Vector2(78.122, 0)
+shape = SubResource("RectangleShape2D_tayap")
+
+[node name="PickUpArea" type="Area2D" parent="Question2/Soap"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/Soap/PickUpArea"]
+shape = SubResource("CircleShape2D_opm7t")
+
+[node name="Solutions" type="Node2D" parent="Question2"]
+
+[node name="WrongSolution" type="Node2D" parent="Question2/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question2/Solutions/WrongSolution"]
+position = Vector2(1162, 524)
+texture = ExtResource("13_h2msw")
+flip_v = true
+
+[node name="Label" type="Label" parent="Question2/Solutions/WrongSolution"]
+offset_left = 923.0
+offset_top = 502.0
+offset_right = 1383.0
+offset_bottom = 554.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_pc78o")
+theme_override_font_sizes/font_size = 38
+text = "Das war leider nicht richtig"
+
+[node name="RightSolution" type="Node2D" parent="Question2/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question2/Solutions/RightSolution"]
+position = Vector2(1162, 524)
+texture = ExtResource("13_h2msw")
+flip_v = true
+
+[node name="Label" type="Label" parent="Question2/Solutions/RightSolution"]
+offset_left = 923.0
+offset_top = 502.0
+offset_right = 1383.0
+offset_bottom = 554.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_pc78o")
+theme_override_font_sizes/font_size = 38
+text = "Das war richtig"
 
 [node name="Question1" type="TextureRect" parent="."]
 visible = false
@@ -112,13 +363,15 @@ text = "Um die Lösung zu verdünnen"
 metadata/_edit_use_anchors_ = true
 
 [node name="WeiterButton" type="TextureButton" parent="Question1"]
-offset_left = 1365.0
-offset_top = 748.0
-offset_right = 1828.0
-offset_bottom = 986.0
-texture_normal = ExtResource("8_lnsnl")
-texture_pressed = ExtResource("9_thmk8")
-texture_hover = ExtResource("10_qjkeg")
+layout_mode = 0
+offset_left = 1317.0
+offset_top = 831.0
+offset_right = 2229.0
+offset_bottom = 1138.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("8_r5au6")
+texture_pressed = ExtResource("9_8g1nh")
+texture_hover = ExtResource("10_e1c6e")
 
 [node name="Headshot" type="Sprite2D" parent="Question1"]
 position = Vector2(1576, 279)
@@ -130,6 +383,67 @@ position = Vector2(1344, 559)
 scale = Vector2(0.898649, 0.898649)
 texture = ExtResource("12_52mbr")
 
+[node name="Solutions" type="Node2D" parent="Question1"]
+
+[node name="WrongSolution" type="Node2D" parent="Question1/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question1/Solutions/WrongSolution"]
+position = Vector2(1162, 524)
+texture = ExtResource("13_h2msw")
+flip_v = true
+
+[node name="Label" type="Label" parent="Question1/Solutions/WrongSolution"]
+offset_left = 923.0
+offset_top = 502.0
+offset_right = 1383.0
+offset_bottom = 554.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_pc78o")
+theme_override_font_sizes/font_size = 38
+text = "Das war leider nicht richtig"
+
+[node name="NoSolution" type="Node2D" parent="Question1/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question1/Solutions/NoSolution"]
+position = Vector2(1162, 524)
+texture = ExtResource("13_h2msw")
+flip_v = true
+
+[node name="Label" type="Label" parent="Question1/Solutions/NoSolution"]
+offset_left = 902.0
+offset_top = 498.0
+offset_right = 1421.0
+offset_bottom = 550.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_pc78o")
+theme_override_font_sizes/font_size = 38
+text = "Bitte wähle eine Antwort aus"
+
+[node name="RightSolution" type="Node2D" parent="Question1/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question1/Solutions/RightSolution"]
+position = Vector2(1162, 524)
+texture = ExtResource("13_h2msw")
+flip_v = true
+
+[node name="Label" type="Label" parent="Question1/Solutions/RightSolution"]
+offset_left = 923.0
+offset_top = 502.0
+offset_right = 1383.0
+offset_bottom = 554.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_pc78o")
+theme_override_font_sizes/font_size = 38
+text = "Das war richtig"
+
+[connection signal="pressed" from="Question2/WeiterButton" to="Question1" method="_on_weiter_button_pressed"]
+[connection signal="mouse_entered" from="Question2/Lemon/PickUpArea" to="Question2" method="_on_pick_up_area_mouse_entered"]
+[connection signal="mouse_exited" from="Question2/Lemon/PickUpArea" to="Question2" method="_on_pick_up_area_mouse_exited"]
+[connection signal="area_entered" from="Question2/Lemon/Area2D" to="Question2" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Question2/Lemon/Area2D" to="Question2" method="_on_area_2d_area_exited"]
 [connection signal="pressed" from="Question1/Answer1/Answer1Button" to="Question1" method="_on_answer_1_button_pressed"]
 [connection signal="pressed" from="Question1/Answer2/Answer2Button" to="Question1" method="_on_answer_2_button_pressed"]
 [connection signal="pressed" from="Question1/Answer3/Answer3Button" to="Question1" method="_on_answer_3_button_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmh3tpot6oots"
-path="res://.godot/imported/quiz_question4_textbox_placeholder.png-d213ae1a0aa18521bf4c88bd5f7e1f02.ctex"
+uid="uid://dkwmderuoudiu"
+path="res://.godot/imported/soap.jpg-a5efdc21733734e8e8b7bb895e7a9989.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Quiz/Placeholder/quiz_question4_textbox_placeholder.png"
-dest_files=["res://.godot/imported/quiz_question4_textbox_placeholder.png-d213ae1a0aa18521bf4c88bd5f7e1f02.ctex"]
+source_file="res://Assets/Art/Environment/Quiz/soap.jpg"
+dest_files=["res://.godot/imported/soap.jpg-a5efdc21733734e8e8b7bb895e7a9989.ctex"]
 
 [params]
 
