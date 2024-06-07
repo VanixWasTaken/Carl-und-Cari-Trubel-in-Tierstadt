@@ -1,13 +1,15 @@
 extends Node3D
 
-
+var first_dialog = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial.tscn")
 var second_dialogue = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial_2.tscn")
 var third_dialogue = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial_3.tscn")
 var got_key = false
 @onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
 var player
 
+
 func _ready():
+	Global.cutscene_playing = true
 	player = get_tree().get_first_node_in_group("Player")
 	var playback: AudioStreamPlaybackPolyphonic
 	$Ambience.play()
@@ -102,3 +104,9 @@ func _on_timer_timeout():
 func change_scene():
 	get_tree().change_scene_to_packed(map_scene)
 
+
+
+func _on_animation_player_animation_finished(anim_name):
+	Global.cutscene_playing = false
+	var dialogue_instance = first_dialog.instantiate()
+	$"NPC Tutorial".add_child(dialogue_instance)

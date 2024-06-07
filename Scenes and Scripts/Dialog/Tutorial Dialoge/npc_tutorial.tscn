@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://d1vovatlehj8g"]
+[gd_scene load_steps=10 format=3 uid="uid://d1vovatlehj8g"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/npc_tutorial.gd" id="1_yadtb"]
 [ext_resource type="Texture2D" uid="uid://b2ei2cwej1d14" path="res://Assets/Art/Characters/Cari/Full Body/cari_animation_walk_spritesheet.png" id="2_m0q8h"]
 [ext_resource type="Texture2D" uid="uid://bxom8ndjt3opt" path="res://Assets/Art/Characters/Carl/Full Body/carl_animation_walk_spritesheet.png" id="3_qlsiw"]
-[ext_resource type="PackedScene" uid="uid://raesadnfh01o" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial.tscn" id="3_s786n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_psdav"]
 atlas = ExtResource("2_m0q8h")
@@ -57,8 +56,6 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 3.83803, 0)
 sprite_frames = SubResource("SpriteFrames_1pjmw")
 animation = &"Cari"
 autoplay = "Cari"
-
-[node name="DialogTutorial" parent="." instance=ExtResource("3_s786n")]
 
 [node name="DialogeArea3D" type="Area3D" parent="."]
 collision_layer = 9
