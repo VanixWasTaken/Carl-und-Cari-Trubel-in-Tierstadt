@@ -73,7 +73,6 @@ volume_db = -18.0
 bus = &"SFX"
 
 [node name="VoiceOver" type="AudioStreamPlayer" parent="."]
-volume_db = -12.0
 bus = &"Dialogue"
 
 [connection signal="button_down" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_button_down"]
