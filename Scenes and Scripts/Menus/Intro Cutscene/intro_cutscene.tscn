@@ -288,7 +288,7 @@ offset_right = 735.0
 offset_bottom = 1095.0
 theme_override_fonts/normal_font = ExtResource("10_0wlxo")
 theme_override_font_sizes/normal_font_size = 100
-text = "Carl und Cari, ihr müsst uns helfen"
+text = "Wir brauchen eure Hilfe!"
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -305,7 +305,7 @@ offset_right = 1740.0
 offset_bottom = 504.0
 theme_override_fonts/normal_font = ExtResource("10_0wlxo")
 theme_override_font_sizes/normal_font_size = 100
-text = "Wir sind auf dem Weg"
+text = "Wir sind auf dem Weg!"
 visible_characters = 0
 visible_ratio = 0.0
 
