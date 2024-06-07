@@ -78,6 +78,7 @@ func add_left_dialog_box():
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		$"../VoiceOver".stream = load(path + "all_items_4.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 ##########################################################################################
