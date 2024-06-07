@@ -100,3 +100,15 @@ func _on_open_notes_button_up():
 
 func _on_quit_chemist_big_button_up():
 	$JobNoteMenu/ChemistNoteBig.visible = false
+
+
+func _on_open_notes_mouse_entered():
+	_paper_hover()
+	Global.moving_allowed = false
+	Global.mouse_in_button = true
+
+
+
+func _on_open_notes_mouse_exited():
+	Global.moving_allowed = true
+	Global.mouse_in_button = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=33 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Texture2D" uid="uid://ckctg6v1ekkvh" path="res://Assets/Art/Environment/Map/Big Map/map.PNG" id="1_pn286"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
@@ -43,9 +43,6 @@ stream_1/weight = 1.0
 stream_2/stream = ExtResource("17_v78te")
 stream_2/weight = 1.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab4lo"]
-size = Vector2(338.273, 401.403)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_h683o"]
 radius = 83.2166
 
@@ -54,9 +51,6 @@ shader = ExtResource("14_jp8ps")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_npdgg"]
 shader = ExtResource("14_jp8ps")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqe4t"]
-size = Vector2(215, 212)
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_quchc")
@@ -102,17 +96,6 @@ volume_db = -18.0
 [node name="JobNotes" type="Node2D" parent="HUD"]
 position = Vector2(-73, -50)
 script = ExtResource("9_vqn8c")
-
-[node name="Area2D" type="Area2D" parent="HUD/JobNotes"]
-visible = false
-position = Vector2(132, 126)
-scale = Vector2(0.331094, 0.331094)
-collision_layer = 129
-collision_mask = 129
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/Area2D"]
-position = Vector2(21.1421, 28.8408)
-shape = SubResource("RectangleShape2D_ab4lo")
 
 [node name="OpenNotes" type="TextureButton" parent="HUD/JobNotes"]
 offset_left = 54.0
@@ -251,12 +234,6 @@ texture_normal = ExtResource("11_um2ur")
 texture_pressed = ExtResource("15_pp1ui")
 texture_hover = ExtResource("16_ttcuk")
 
-[node name="Area2D2" type="Area2D" parent="HUD/JobNotes"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JobNotes/Area2D2"]
-position = Vector2(97.5, 96)
-shape = SubResource("RectangleShape2D_yqe4t")
-
 [node name="HelpButton" parent="HUD" instance=ExtResource("18_bp1yi")]
 unique_name_in_owner = true
 anchors_preset = 0
@@ -322,9 +299,9 @@ theme_override_fonts/font = ExtResource("17_hkm8s")
 theme_override_font_sizes/font_size = 111
 text = "DER NÄCHSTE SCHRITT"
 
-[connection signal="mouse_entered" from="HUD/JobNotes/Area2D" to="HUD/JobNotes" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="HUD/JobNotes/Area2D" to="HUD/JobNotes" method="_on_area_2d_mouse_exited"]
 [connection signal="button_up" from="HUD/JobNotes/OpenNotes" to="HUD/JobNotes" method="_on_open_notes_button_up"]
+[connection signal="mouse_entered" from="HUD/JobNotes/OpenNotes" to="HUD/JobNotes" method="_on_open_notes_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/JobNotes/OpenNotes" to="HUD/JobNotes" method="_on_open_notes_mouse_exited"]
 [connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/ExitButton/TextureButton" to="HUD/JobNotes/JobNoteMenu/ExitButton" method="_on_texture_button_button_up"]
 [connection signal="mouse_entered" from="HUD/JobNotes/JobNoteMenu/ExitButton/Area2D" to="HUD/JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/ExitButton/Area2D" to="HUD/JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_exited"]
@@ -334,6 +311,4 @@ text = "DER NÄCHSTE SCHRITT"
 [connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D/PaperQuit" to="HUD/JobNotes" method="_on_paper_quit_mouse_exited"]
 [connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D/QuitChemistBig" to="HUD/JobNotes" method="_on_quit_chemist_big_button_up"]
 [connection signal="button_up" from="HUD/JobNotes/DownloadExplanation/TextureButton" to="HUD/JobNotes" method="_on_texture_button_button_up"]
-[connection signal="area_entered" from="HUD/JobNotes/Area2D2" to="." method="_on_area_2d_2_area_entered"]
-[connection signal="area_exited" from="HUD/JobNotes/Area2D2" to="." method="_on_area_2d_2_area_exited"]
 [connection signal="button_up" from="HUD/Help Movement/TextureButton" to="." method="_on_texture_button_button_up"]
