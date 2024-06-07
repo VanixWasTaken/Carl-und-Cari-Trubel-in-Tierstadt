@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgeemlp7lkou8"
-path="res://.godot/imported/quiz_question2_soap_placeholder.png-401d86adce6144e99d16cb13bbc5fd9f.ctex"
+uid="uid://dngdm17gpdwm2"
+path="res://.godot/imported/quiz_template_done_button.png-18b7f5dd8ed8525e14b8c388d753bfeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Quiz/quiz_question2_soap_placeholder.png"
-dest_files=["res://.godot/imported/quiz_question2_soap_placeholder.png-401d86adce6144e99d16cb13bbc5fd9f.ctex"]
+source_file="res://Assets/Art/Environment/Quiz/quiz_template_done_button.png"
+dest_files=["res://.godot/imported/quiz_template_done_button.png-18b7f5dd8ed8525e14b8c388d753bfeb.ctex"]
 
 [params]
 

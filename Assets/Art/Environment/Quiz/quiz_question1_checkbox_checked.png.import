@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chknd2madtcxc"
-path="res://.godot/imported/quiz_question3_box_placeholder.png-a316d6ebfe5f44595c3fa4fc2b05330b.ctex"
+uid="uid://b6fgfqiiucpjt"
+path="res://.godot/imported/quiz_question1_checkbox_checked.png-25431a9499e96a1ce3c7bc398366d91f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Quiz/quiz_question3_box_placeholder.png"
-dest_files=["res://.godot/imported/quiz_question3_box_placeholder.png-a316d6ebfe5f44595c3fa4fc2b05330b.ctex"]
+source_file="res://Assets/Art/Environment/Quiz/quiz_question1_checkbox_checked.png"
+dest_files=["res://.godot/imported/quiz_question1_checkbox_checked.png-25431a9499e96a1ce3c7bc398366d91f.ctex"]
 
 [params]
 
