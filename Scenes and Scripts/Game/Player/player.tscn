@@ -198,7 +198,7 @@ offset_right = 1920.0
 offset_bottom = 1067.0
 theme_override_colors/font_color = Color(0.728822, 0.728822, 0.728822, 1)
 theme_override_fonts/font = ExtResource("9_xfhi7")
-text = "Das ist eine Pre-Alpha Version und repräsentiert nicht das fertige Produkt."
+text = "Dies ist eine Pre-Alpha Version und repräsentiert nicht das fertige Produkt."
 horizontal_alignment = 1
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
