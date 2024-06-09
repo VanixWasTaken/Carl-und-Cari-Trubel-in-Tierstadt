@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4aux20w5dahw"
-path="res://.godot/imported/chemist_color_idle1.png-a1ffc9b543d532c992328726a56a585c.ctex"
+uid="uid://bl3q3vnoh3x2f"
+path="res://.godot/imported/fertig_button.png-766bb9fd7b583eebbbb68b9c480665a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png"
-dest_files=["res://.godot/imported/chemist_color_idle1.png-a1ffc9b543d532c992328726a56a585c.ctex"]
+source_file="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button.png"
+dest_files=["res://.godot/imported/fertig_button.png-766bb9fd7b583eebbbb68b9c480665a6.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

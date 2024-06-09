@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4aux20w5dahw"
-path="res://.godot/imported/chemist_color_idle1.png-a1ffc9b543d532c992328726a56a585c.ctex"
+uid="uid://dhax6i23j7k5p"
+path="res://.godot/imported/quiz_question3_garden_scissors.png-09796ca058e873ef8e50aff683d17529.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png"
-dest_files=["res://.godot/imported/chemist_color_idle1.png-a1ffc9b543d532c992328726a56a585c.ctex"]
+source_file="res://Assets/Art/Environment/Quiz/quiz_question3_garden_scissors.png"
+dest_files=["res://.godot/imported/quiz_question3_garden_scissors.png-09796ca058e873ef8e50aff683d17529.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
