@@ -18,6 +18,10 @@ func _ready():
 	$CanvasLayer/AnimationPlayer.play("fade_in")
 	Global.moving_allowed = false
 	Global.cutscene_playing = true
+	if Global.inside_laboratory:
+		$CanvasLayer.hide()
+		Global.moving_allowed = true
+		Global.cutscene_playing = false
 
 func _physics_process(delta):
 	var direction = Vector2()
@@ -100,6 +104,7 @@ func _on_area_2d_area_exited(area):
 
 
 func _on_animation_player_animation_finished(anim_name):
+	$CanvasLayer.layer = 1
 	if anim_name == "fade_out":
 		building.change_scene()
 	if anim_name == "fade_in":

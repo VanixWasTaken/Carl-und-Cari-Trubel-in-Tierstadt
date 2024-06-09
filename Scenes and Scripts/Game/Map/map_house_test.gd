@@ -60,4 +60,6 @@ func _on_control_help_closed():
 	$AnimatedSprite2D.material = no_shader
 
 func change_scene():
+	Global.inside_laboratory = true
 	get_tree().change_scene_to_packed(next_scene)
+

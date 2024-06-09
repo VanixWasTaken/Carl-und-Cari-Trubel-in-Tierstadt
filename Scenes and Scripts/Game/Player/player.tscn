@@ -114,6 +114,7 @@ volume_db = -12.0
 bus = &"SFX"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
 
 [node name="FadeAnimation" type="TextureRect" parent="CanvasLayer"]
 visible = false

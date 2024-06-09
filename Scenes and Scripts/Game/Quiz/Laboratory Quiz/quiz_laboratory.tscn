@@ -91,7 +91,7 @@ size = Vector2(516.2, 0.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_047nh"]
 size = Vector2(364.873, 214.164)
 
-[node name="QuizLaboratory" type="Node2D"]
+[node name="QuizLaboratory" type="CanvasLayer"]
 script = ExtResource("1_07xri")
 
 [node name="Question5" type="TextureRect" parent="."]
@@ -253,7 +253,6 @@ toll gemacht"
 horizontal_alignment = 1
 
 [node name="Question4" type="TextureRect" parent="."]
-visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -379,7 +378,6 @@ etwas mehr"
 horizontal_alignment = 1
 
 [node name="Question3" type="TextureRect" parent="."]
-visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -584,7 +582,6 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question2" type="TextureRect" parent="."]
-visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -847,7 +844,6 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question1" type="TextureRect" parent="."]
-visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -858,21 +854,16 @@ position = Vector2(960, 263)
 scale = Vector2(0.865239, 0.865239)
 texture = ExtResource("4_5xbhi")
 
-[node name="Label" type="Label" parent="Question1/Dialogbox"]
-anchors_preset = -1
-anchor_left = -5.90619e-05
-anchor_top = -0.211543
-anchor_right = -5.90619e-05
-anchor_bottom = -0.211543
-offset_left = -798.517
-offset_top = -97.1005
-offset_right = 437.483
-offset_bottom = 67.8995
+[node name="Label" type="Label" parent="Question1"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 181.0
+offset_right = 913.0
+offset_bottom = 236.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_pc78o")
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 50
 text = "Wofür wird die Titration gebraucht?"
-metadata/_edit_use_anchors_ = true
 
 [node name="Answer1" type="Node2D" parent="Question1"]
 position = Vector2(203, 400)

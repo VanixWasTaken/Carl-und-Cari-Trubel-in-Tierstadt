@@ -63,4 +63,7 @@ func _on_weiter_button_pressed():
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout
 		emit_signal("release_input")
+		Global.moving_allowed = true
+		Global.menu_open = false
+		Global.cutscene_playing = false
 		queue_free()

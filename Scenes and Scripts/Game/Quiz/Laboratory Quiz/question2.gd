@@ -223,7 +223,7 @@ func _on_weiter_button_pressed():
 		$Solutions/RightSolution.hide()
 		emit_signal("release_input")
 		$".".queue_free()
-	if $Lemon.global_position == Vector2(317, 457) or $Soap.global_position == Vector2(322, 787):
+	elif $Lemon.global_position == Vector2(317, 457) or $Soap.global_position == Vector2(322, 787):
 		$Solutions/NoSolution.show()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout

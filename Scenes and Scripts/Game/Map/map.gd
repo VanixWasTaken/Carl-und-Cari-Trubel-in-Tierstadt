@@ -1,11 +1,26 @@
 extends Node2D
 
 
+@onready var laboratory_quiz = preload("res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.tscn")
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.menu_open = true
+	if Global.inside_laboratory == true:
+		$"HUD/Help Movement".hide()
+		$Player.position = Vector2(319, 313)
+		add_child(laboratory_quiz.instantiate())
+		Global.moving_allowed = false
+		Global.inside_laboratory = false
+	
+func _process(delta):
+	print(Global.moving_allowed)
 
-
+func _input(event):
+	if event.is_action_pressed("right_click"):
+		Global.inside_laboratory = true
 
 func _on_texture_button_button_up():
 	Global.menu_open = false
