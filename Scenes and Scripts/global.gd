@@ -25,6 +25,13 @@ var return_laboratory_3 = false #wird auf true gesetzt, wenn man aus dem 3 minig
 @onready var laboratory_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 @onready var start_scene = preload("res://Scenes and Scripts/Menus/StartUp/start_up.tscn")
 
+
+###### This variable are used for storing the job stars
+var chemist_job_stars : int
+
+
+
+
 func _input(event):
 	if Input.is_action_just_pressed("7"):
 		load_map()
@@ -71,3 +78,8 @@ func reset_game():
 	return_laboratory_2 = false
 	talked_to_chameleon_3 = false
 	get_tree().change_scene_to_packed(start_scene)
+
+
+
+
+

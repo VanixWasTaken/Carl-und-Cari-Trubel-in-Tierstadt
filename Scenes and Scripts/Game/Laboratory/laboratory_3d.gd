@@ -20,6 +20,7 @@ var picked_up_chemicals = false
 @onready var titration_scene = preload("res://Scenes and Scripts/Game/Laboratory/Titration/titration.tscn")
 @onready var spray_scene = preload("res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.tscn")
 
+
 func _ready():
 	player = get_tree().get_first_node_in_group("Player")
 	if Global.return_laboratory_1:
