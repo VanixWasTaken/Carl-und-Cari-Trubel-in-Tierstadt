@@ -68,7 +68,7 @@ func move_to_target(delta):
 
 func _input(event):
 # https://www.youtube.com/watch?v=KT06pv06Q1U Das ganze movement, versteh das alles nicht so 100 aber scheint erstmal zu klappen
-	if event.is_action_just_pressed("left_click") and Global.moving_allowed: # --> mvoing allowed ist dafür da, dass der spieler nicht beim hilfebutton laufen kann
+	if Input.is_action_just_pressed("left_click") and Global.moving_allowed: # --> mvoing allowed ist dafür da, dass der spieler nicht beim hilfebutton laufen kann
 		speed = 15
 		var camera = get_tree().get_nodes_in_group("Camera")[0] #Holt die Kamera, da die Raycatsts von diueser aus entstehen die zur bewegung benötigt werden
 		var mouse_position = get_viewport().get_mouse_position() #als 2d value
