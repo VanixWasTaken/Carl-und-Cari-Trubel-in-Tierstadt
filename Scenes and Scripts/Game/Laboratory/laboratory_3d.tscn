@@ -108,7 +108,7 @@ stream_1/stream = ExtResource("11_fvof2")
 stream_1/weight = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ag2da"]
-size = Vector3(15.4451, 1.79478, 2.93623)
+size = Vector3(14.8433, 1.79478, 3.96599)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3o016"]
 size = Vector3(10.59, 3.24145, 3.58378)
@@ -352,7 +352,7 @@ autostart = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.80232, 1.71102, 2.487)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Objects/Table"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.79279, 0.87899, 0.376009)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.89603, 0.87899, -0.138872)
 shape = SubResource("BoxShape3D_ag2da")
 
 [node name="Cabinet" type="StaticBody3D" parent="NavigationRegion3D/Objects"]

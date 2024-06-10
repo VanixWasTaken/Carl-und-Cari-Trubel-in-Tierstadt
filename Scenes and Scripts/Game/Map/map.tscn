@@ -98,10 +98,10 @@ position = Vector2(-73, -50)
 script = ExtResource("9_vqn8c")
 
 [node name="OpenNotes" type="TextureButton" parent="HUD/JobNotes"]
-offset_left = 54.0
-offset_top = 49.0
-offset_right = 218.0
-offset_bottom = 214.0
+offset_left = 95.0
+offset_top = 69.0
+offset_right = 259.0
+offset_bottom = 234.0
 texture_normal = ExtResource("8_fe5cr")
 texture_pressed = ExtResource("10_s3yr3")
 texture_hover = ExtResource("11_6v58m")
