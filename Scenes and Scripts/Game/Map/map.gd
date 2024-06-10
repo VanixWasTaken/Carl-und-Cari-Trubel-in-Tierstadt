@@ -14,15 +14,16 @@ func _ready():
 		add_child(laboratory_quiz.instantiate())
 		Global.moving_allowed = false
 		Global.inside_laboratory = false
+		$HUD/HelpProfiles.show()
 
 
-func _input(event):
-	if event.is_action_pressed("right_click"):
-		Global.inside_laboratory = true
 
 func _on_texture_button_button_up():
 	Global.menu_open = false
-	$"HUD/Help Movement".queue_free()
+	if $"HUD/Help Movement".visible == true:
+		$"HUD/Help Movement".queue_free()
+	if $HUD/HelpProfiles.visible == true:
+		$HUD/HelpProfiles.queue_free()
 
 func _paper_hover():
 	var stream = AudioStreamRandomizer.new()

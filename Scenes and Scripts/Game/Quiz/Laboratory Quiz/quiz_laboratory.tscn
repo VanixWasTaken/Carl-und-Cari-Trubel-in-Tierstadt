@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://b7l01kbm7a7hp"]
+[gd_scene load_steps=60 format=3 uid="uid://b7l01kbm7a7hp"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_07xri"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_p4cgx"]
@@ -34,7 +34,6 @@
 [ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/Art/Random Screens/white_screen.png" id="15_qwl7x"]
 [ext_resource type="Texture2D" uid="uid://cgcu0pvpoiwo6" path="res://Assets/Art/Environment/Quiz/quiz_template_speech_bubble.png" id="19_cvd6n"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="34_n7ywp"]
-[ext_resource type="AudioStream" uid="uid://bxtc80jb2lxtd" path="res://Assets/Sound/SFX/Foley/Map/Quiz/sfx_foley_map_quiz_stars.mp3" id="34_q2vsv"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="35_xfe2v"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="36_2nkv8"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="37_e57yk"]
@@ -1064,7 +1063,6 @@ volume_db = -9.0
 bus = &"SFX"
 
 [node name="Stars" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("34_q2vsv")
 volume_db = -6.0
 bus = &"SFX"
 
