@@ -14,9 +14,7 @@ func _ready():
 		add_child(laboratory_quiz.instantiate())
 		Global.moving_allowed = false
 		Global.inside_laboratory = false
-	
-func _process(delta):
-	print(Global.moving_allowed)
+
 
 func _input(event):
 	if event.is_action_pressed("right_click"):
