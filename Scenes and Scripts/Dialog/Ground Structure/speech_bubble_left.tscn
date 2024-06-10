@@ -47,6 +47,7 @@ text = "Dies ist ein Test Text
 Weil Hier steht zeug drinnen welches sinnvoll sein sollte"
 scroll_active = false
 visible_characters = 0
+visible_characters_behavior = 1
 visible_ratio = 0.0
 
 [node name="TextureRect" type="TextureRect" parent="."]

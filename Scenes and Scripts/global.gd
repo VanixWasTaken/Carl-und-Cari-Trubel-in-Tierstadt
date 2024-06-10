@@ -27,6 +27,9 @@ var return_laboratory_3 = false #wird auf true gesetzt, wenn man aus dem 3 minig
 @onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
 @onready var laboratory_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 @onready var start_scene = preload("res://Scenes and Scripts/Menus/StartUp/start_up.tscn")                                                                                         
+var custom_mouse_cursor = preload("res://Assets/Art/UI/player_mouse.png")
+var custom_mouse_cursor_clicked = preload("res://Assets/Art/UI/player_mouse_clicked.png")
+
 
 ###### This variable are used for storing which job is currently played 
 var inside_laboratory : bool = false
@@ -39,6 +42,10 @@ var chemist_job_stars : int
 
 
 func _input(event):
+	if event.is_action_pressed("left_click"):
+		Input.set_custom_mouse_cursor(custom_mouse_cursor_clicked)
+	if event.is_action_released("left_click"):
+		Input.set_custom_mouse_cursor(custom_mouse_cursor)
 	if Input.is_action_just_pressed("7"):
 		load_map()
 	elif Input.is_action_just_pressed("8"):
