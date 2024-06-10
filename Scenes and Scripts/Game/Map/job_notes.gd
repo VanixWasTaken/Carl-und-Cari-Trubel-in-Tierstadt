@@ -10,6 +10,11 @@ var outline_shader = preload("res://Shader/outline.tres")
 var no_shader = preload("res://Shader/no_shader.tres")
 var open_note1 = 0
 var chemist_note = preload("res://Assets/Art/UI/HUD/Map/job_note_image.png")
+var one_star  = preload("res://Assets/Art/UI/HUD/Map/Stars/profile_stars1.png")
+var two_star  = preload("res://Assets/Art/UI/HUD/Map/Stars/profile_stars2.png")
+var three_star  = preload("res://Assets/Art/UI/HUD/Map/Stars/profile_stars3.png")
+var four_star  = preload("res://Assets/Art/UI/HUD/Map/Stars/profile_stars4.png")
+var five_star  = preload("res://Assets/Art/UI/HUD/Map/Stars/profile_stars5.png")
 
 func _ready():
 	if Global.return_laboratory_3:
@@ -92,8 +97,16 @@ func _on_open_notes_button_up():
 		%Click.play()
 		note_open = true
 		Global.menu_open = true
-
-
+		if Global.chemist_job_stars == 1:
+			$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = one_star
+		elif Global.chemist_job_stars == 2:
+			$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = two_star
+		elif Global.chemist_job_stars == 3:
+			$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = three_star
+		elif Global.chemist_job_stars == 4:
+			$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = four_star
+		elif Global.chemist_job_stars == 5:
+			$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = five_star
 
 func _on_quit_chemist_big_button_up():
 	$JobNoteMenu/ChemistNoteBig.visible = false

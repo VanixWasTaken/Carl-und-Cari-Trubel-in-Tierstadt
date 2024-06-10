@@ -138,13 +138,14 @@ position = Vector2(1635, 295)
 shape = SubResource("CircleShape2D_h683o")
 
 [node name="ChemistNoteSmall" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
+visible = false
 position = Vector2(109, -4)
 
 [node name="ChemistDownload" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall"]
 offset_left = 256.0
-offset_top = 492.0
+offset_top = 544.0
 offset_right = 598.0
-offset_bottom = 618.0
+offset_bottom = 670.0
 texture_normal = ExtResource("17_nfhtf")
 texture_pressed = ExtResource("18_h4pp6")
 texture_hover = ExtResource("19_b40yi")
@@ -159,6 +160,10 @@ offset_bottom = 511.0
 texture_normal = ExtResource("12_ub25h")
 texture_pressed = ExtResource("16_x1218")
 texture_hover = ExtResource("17_wo11y")
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall"]
+position = Vector2(415, 517)
+scale = Vector2(0.1, 0.1)
 
 [node name="ChemistNoteBig" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
 visible = false
