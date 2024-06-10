@@ -82,7 +82,7 @@ func _on_clamp_pouring_time():
 		
 		tube_counter += 1
 		$Clamp.visible = false
-		
+		#test
 		if tube_counter == 1:
 			$PouringClamp.visible = true
 			$PouringClamp/PouringClampAnim.play("idle_green")
