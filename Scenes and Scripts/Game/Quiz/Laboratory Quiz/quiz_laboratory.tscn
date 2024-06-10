@@ -132,7 +132,6 @@ scale = Vector2(1.11125, 1.11125)
 texture = ExtResource("11_spf1p")
 
 [node name="Star" type="TextureButton" parent="Question5"]
-layout_mode = 0
 offset_left = 236.0
 offset_top = 466.0
 offset_right = 625.0
@@ -144,7 +143,7 @@ texture_hover = ExtResource("12_noijd")
 
 [node name="SelectedStar" type="Sprite2D" parent="Question5/Star"]
 visible = false
-position = Vector2(194.286, 191.429)
+position = Vector2(203.286, 145.857)
 texture = ExtResource("13_id2wm")
 
 [node name="Star2" type="TextureButton" parent="Question5"]
@@ -160,7 +159,7 @@ texture_hover = ExtResource("12_noijd")
 
 [node name="SelectedStar" type="Sprite2D" parent="Question5/Star2"]
 visible = false
-position = Vector2(194.286, 191.429)
+position = Vector2(203.286, 145.857)
 texture = ExtResource("13_id2wm")
 
 [node name="Star3" type="TextureButton" parent="Question5"]
@@ -176,7 +175,7 @@ texture_hover = ExtResource("12_noijd")
 
 [node name="SelectedStar" type="Sprite2D" parent="Question5/Star3"]
 visible = false
-position = Vector2(194.286, 191.429)
+position = Vector2(203.286, 145.857)
 texture = ExtResource("13_id2wm")
 
 [node name="Star4" type="TextureButton" parent="Question5"]
@@ -192,7 +191,7 @@ texture_hover = ExtResource("12_noijd")
 
 [node name="SelectedStar" type="Sprite2D" parent="Question5/Star4"]
 visible = false
-position = Vector2(194.286, 191.429)
+position = Vector2(203.286, 145.857)
 texture = ExtResource("13_id2wm")
 
 [node name="Star5" type="TextureButton" parent="Question5"]
@@ -208,7 +207,7 @@ texture_hover = ExtResource("12_noijd")
 
 [node name="SelectedStar" type="Sprite2D" parent="Question5/Star5"]
 visible = false
-position = Vector2(194.286, 191.429)
+position = Vector2(203.286, 145.857)
 texture = ExtResource("13_id2wm")
 
 [node name="Solutions" type="Node2D" parent="Question5"]
@@ -253,6 +252,7 @@ toll gemacht"
 horizontal_alignment = 1
 
 [node name="Question4" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -378,6 +378,7 @@ etwas mehr"
 horizontal_alignment = 1
 
 [node name="Question3" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -582,6 +583,7 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question2" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -844,6 +846,7 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question1" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
