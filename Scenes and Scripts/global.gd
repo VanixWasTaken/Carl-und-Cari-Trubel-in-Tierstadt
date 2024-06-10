@@ -38,7 +38,8 @@ var inside_laboratory : bool = false
 ###### This variable are used for storing the job stars
 var chemist_job_stars : int
 
-
+func _ready():
+	Input.set_custom_mouse_cursor(custom_mouse_cursor)
 
 
 func _input(event):

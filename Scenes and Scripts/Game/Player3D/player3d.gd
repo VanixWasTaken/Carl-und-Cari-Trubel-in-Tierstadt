@@ -81,7 +81,6 @@ func _input(event):
 		ray_query.to = to
 		result = space.intersect_ray(ray_query) #schießt den rayab und sag mir womit der intersected
 		navigation_agent.target_position = result.position
-		print(result.position)
 
 func play_fade_out():
 	$CanvasLayer/AnimationPlayer.play("fade_out")
