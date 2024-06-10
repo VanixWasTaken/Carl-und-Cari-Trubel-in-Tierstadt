@@ -71,8 +71,13 @@ func _on_chemist_download_button_up():
 
 func downloadFile(img: Image, filename: String) -> void:
 	var buffer = img.save_png_to_buffer()
+	var desktop_path = OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP) + "/" + filename
+	var file = FileAccess.open(desktop_path, FileAccess.WRITE)
+	if file:
+		file.store_buffer(buffer)
+		file.close()
 	# Verwenden Sie die neue Funktion, um den Puffer herunterzuladen.
-	JavaScriptBridge.download_buffer(buffer, filename)
+	#JavaScriptBridge.download_buffer(buffer, filename) || Das hier ist für Online, aber wenn wirs nicht online nutzen, dann einfach mal auskommentiert lassen, kann ja nicht schaden
 
 
 func _on_texture_button_button_up():
