@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=33 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Texture2D" uid="uid://ckctg6v1ekkvh" path="res://Assets/Art/Environment/Map/Big Map/map.PNG" id="1_pn286"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://y4rakxp2wwr" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button_hovered.png" id="11_6v58m"]
 [ext_resource type="Texture2D" uid="uid://7vqjfkop4ysv" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button.png" id="11_um2ur"]
 [ext_resource type="Texture2D" uid="uid://c6mohqehk03g4" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist.png" id="12_ub25h"]
-[ext_resource type="Texture2D" uid="uid://cm4hcr8fw4k5a" path="res://Assets/Art/UI/HUD/Map/job_note1.png" id="13_2x76a"]
 [ext_resource type="PackedScene" uid="uid://daswfhvjsa7jh" path="res://Scenes and Scripts/Game/Player/player.tscn" id="14_0uuvf"]
 [ext_resource type="Shader" path="res://Shader/blur.gdshader" id="14_jp8ps"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="15_bdydr"]
@@ -173,7 +172,6 @@ texture = ExtResource("15_jo7ff")
 [node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig"]
 position = Vector2(1054, 606)
 scale = Vector2(1.01, 1.01)
-texture = ExtResource("13_2x76a")
 
 [node name="PaperQuit" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D"]
 
@@ -253,10 +251,10 @@ texture = ExtResource("9_lq8sc")
 
 [node name="Label" type="Label" parent="HUD/Help Movement"]
 layout_mode = 0
-offset_left = 1063.0
-offset_top = 272.0
-offset_right = 1707.0
-offset_bottom = 1054.0
+offset_left = 1033.0
+offset_top = 270.0
+offset_right = 1677.0
+offset_bottom = 1052.0
 theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
 theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
 theme_override_constants/outline_size = 15
@@ -271,31 +269,31 @@ autowrap_mode = 3
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="HUD/Help Movement"]
 layout_mode = 0
-offset_left = 266.0
-offset_top = 450.0
-offset_right = 1546.0
-offset_bottom = 1170.0
-scale = Vector2(0.6, 0.6)
+offset_left = 292.0
+offset_top = 426.0
+offset_right = 1572.0
+offset_bottom = 1146.0
+scale = Vector2(0.55, 0.55)
 stream = ExtResource("18_dkhfr")
 autoplay = true
 loop = true
 
 [node name="TextureButton" type="TextureButton" parent="HUD/Help Movement"]
 layout_mode = 0
-offset_left = 1482.0
-offset_top = 150.0
-offset_right = 1713.0
-offset_bottom = 366.0
+offset_left = 1459.0
+offset_top = 163.0
+offset_right = 1690.0
+offset_bottom = 379.0
 texture_normal = ExtResource("11_um2ur")
 texture_pressed = ExtResource("15_pp1ui")
 texture_hover = ExtResource("16_ttcuk")
 
 [node name="Headline" type="Label" parent="HUD/Help Movement"]
 layout_mode = 0
-offset_left = 264.0
-offset_top = 181.0
-offset_right = 1367.0
-offset_bottom = 331.0
+offset_left = 311.0
+offset_top = 189.0
+offset_right = 1414.0
+offset_bottom = 339.0
 theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
 theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
 theme_override_constants/outline_size = 30
