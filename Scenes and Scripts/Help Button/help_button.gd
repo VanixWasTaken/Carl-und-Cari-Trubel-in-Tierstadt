@@ -9,6 +9,7 @@ var mouse_inside = false
 var tutorial_help = preload("res://Scenes and Scripts/Dialog/Tutorial Dialoge/hilfe_tutorial.tscn")
 var laboratory_help = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/help_laboratory.tscn")
 var mini_help = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/mini_help.tscn")
+var map_help = preload("res://Scenes and Scripts/Dialog/Map Dialoge/help_map.tscn")
 var help
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -51,6 +52,10 @@ func _on_texture_button_button_up():
 		var instance = mini_help.instantiate()
 		add_child(instance)
 		help = mini_help
+	elif get_tree().get_current_scene().get_name() == "Map":
+		var instance = map_help.instantiate()
+		add_child(instance)
+		help = map_help
 	if !helpbuttonopen and Global.character == "Cari":
 		emit_signal("HelpOpened")
 		$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_click.png")
