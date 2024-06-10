@@ -54,15 +54,19 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Cari":
+		if Global.character == "Cari" or Global.character == "":
 			short_node_text.text = "Besuche einen der Berufe, indem du ein Gebäude betrittst."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Help/vo_npc_carl_map_house_help_1.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 		elif Global.character == "Carl":
 			short_node_text.text = "Besuche einen der Berufe, indem du ein Gebäude betrittst."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Help/vo_npc_cari_map_house_help_1.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 ##########################################################################################
 
