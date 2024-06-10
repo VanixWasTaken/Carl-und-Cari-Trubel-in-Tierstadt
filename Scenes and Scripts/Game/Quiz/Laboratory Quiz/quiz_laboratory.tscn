@@ -132,6 +132,7 @@ scale = Vector2(1.11125, 1.11125)
 texture = ExtResource("11_spf1p")
 
 [node name="Star" type="TextureButton" parent="Question5"]
+layout_mode = 0
 offset_left = 236.0
 offset_top = 466.0
 offset_right = 625.0
@@ -252,7 +253,6 @@ toll gemacht"
 horizontal_alignment = 1
 
 [node name="Question4" type="TextureRect" parent="."]
-visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -378,7 +378,6 @@ etwas mehr"
 horizontal_alignment = 1
 
 [node name="Question3" type="TextureRect" parent="."]
-visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -583,7 +582,6 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question2" type="TextureRect" parent="."]
-visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -846,7 +844,6 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question1" type="TextureRect" parent="."]
-visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")

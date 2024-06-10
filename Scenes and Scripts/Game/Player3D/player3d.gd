@@ -20,8 +20,8 @@ func _process(delta):
 
 
 func move_to_target(delta):
-	navigation_agent.target_desired_distance = 0.2
-
+	navigation_agent.target_desired_distance = 0.5
+	
 	var target_position = navigation_agent.get_next_path_position()
 	if result != null:
 		if result.collider.is_in_group("Ground"):
@@ -43,13 +43,14 @@ func move_to_target(delta):
 			$AnimatedSprite3D.play("carl_walk_left")
 		if distance_to_target.x < 0 && !Global.dialog_playing:
 			$AnimatedSprite3D.play("carl_walk_right")
-		#if navigation_agent.is_target_reachable() == true:
-		if navigation_agent.distance_to_target() <= 0.5:
-			speed = 0
-			$AnimatedSprite3D.play("carl_idle")
-			navigation_agent.target_position = global_position
-		#elif navigation_agent.is_target_reachable() == false:
-			#navigation_agent.target_position = navigation_agent.get_final_position()
+		if navigation_agent.is_target_reachable() == true:
+			if navigation_agent.distance_to_target() <= 0.5:
+				speed = 0
+				$AnimatedSprite3D.play("carl_idle")
+				navigation_agent.target_position = global_position
+		elif navigation_agent.is_target_reachable() == false:
+			navigation_agent.target_position = navigation_agent.get_final_position()
+			move_to_target(delta)
 
 	elif Global.character == "Cari" || Global.character == "":
 		if distance_to_target.x > 0 && !Global.dialog_playing :
@@ -57,12 +58,13 @@ func move_to_target(delta):
 		if distance_to_target.x < 0 && !Global.dialog_playing :
 			$AnimatedSprite3D.play("cari_walk_right")
 		if navigation_agent.is_target_reachable() == true:
-			if navigation_agent.distance_to_target() <= 0.3:
+			if navigation_agent.distance_to_target() <= 0.5:
 				speed = 0
 				$AnimatedSprite3D.play("cari_idle")
 				navigation_agent.target_position = global_position
 		elif navigation_agent.is_target_reachable() == false:
 			navigation_agent.target_position = navigation_agent.get_final_position()
+			move_to_target(delta)
 
 func _input(event):
 # https://www.youtube.com/watch?v=KT06pv06Q1U Das ganze movement, versteh das alles nicht so 100 aber scheint erstmal zu klappen
