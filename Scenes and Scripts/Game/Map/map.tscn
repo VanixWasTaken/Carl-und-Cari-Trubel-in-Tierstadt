@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://y4rakxp2wwr" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button_hovered.png" id="11_6v58m"]
 [ext_resource type="Texture2D" uid="uid://7vqjfkop4ysv" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button.png" id="11_um2ur"]
 [ext_resource type="Texture2D" uid="uid://c6mohqehk03g4" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist.png" id="12_ub25h"]
-[ext_resource type="Texture2D" uid="uid://cm4hcr8fw4k5a" path="res://Assets/Art/UI/HUD/Map/job_note1.PNG" id="13_2x76a"]
+[ext_resource type="Texture2D" uid="uid://cm4hcr8fw4k5a" path="res://Assets/Art/UI/HUD/Map/job_note1.png" id="13_2x76a"]
 [ext_resource type="PackedScene" uid="uid://daswfhvjsa7jh" path="res://Scenes and Scripts/Game/Player/player.tscn" id="14_0uuvf"]
 [ext_resource type="Shader" path="res://Shader/blur.gdshader" id="14_jp8ps"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="15_bdydr"]
