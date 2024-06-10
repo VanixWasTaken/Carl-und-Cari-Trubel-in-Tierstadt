@@ -9,7 +9,7 @@ var mouse_inside_big_note = false
 var outline_shader = preload("res://Shader/outline.tres")
 var no_shader = preload("res://Shader/no_shader.tres")
 var open_note1 = 0
-var chemist_note = preload("res://Assets/Art/Characters/Cari/Dialog Icon/TESTIMAGE.png")
+var chemist_note = preload("res://Assets/Art/UI/HUD/Map/job_note_image.png")
 
 func _ready():
 	if Global.return_laboratory_3:
