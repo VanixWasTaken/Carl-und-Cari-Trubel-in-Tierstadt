@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://raesadnfh01o"]
+[gd_scene load_steps=13 format=3 uid="uid://raesadnfh01o"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/dialog_tutorial.gd" id="1_0ewjj"]
 [ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_03wpg"]
@@ -9,6 +9,9 @@
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="7_g2eoj"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="8_vethb"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="9_h5nq8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_db4xi"]
+size = Vector2(352, 263)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_i855d"]
 playback_mode = 1
@@ -30,13 +33,19 @@ stream_2/weight = 1.0
 
 [node name="DialogTutorial" type="CanvasLayer"]
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(298, 697.5)
+shape = SubResource("RectangleShape2D_db4xi")
+
 [node name="DialogBox" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_0ewjj")
 
 [node name="SkipButton" type="TextureButton" parent="DialogBox"]
@@ -76,6 +85,8 @@ stream = SubResource("AudioStreamRandomizer_xd5t4")
 volume_db = -18.0
 bus = &"SFX"
 
+[connection signal="mouse_entered" from="Area2D" to="DialogBox" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="DialogBox" method="_on_area_2d_mouse_exited"]
 [connection signal="button_down" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_button_down"]
 [connection signal="mouse_entered" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_mouse_entered"]
 [connection signal="pressed" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_pressed"]
