@@ -30,7 +30,7 @@ window/size/mode=3
 window/size/initial_position_type=0
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://Assets/Art/UI/player_mouse.png"
-mouse_cursor/custom_image_hotspot=Vector2(38, 27)
+mouse_cursor/custom_image_hotspot=Vector2(30, 22)
 
 [filesystem]
 
