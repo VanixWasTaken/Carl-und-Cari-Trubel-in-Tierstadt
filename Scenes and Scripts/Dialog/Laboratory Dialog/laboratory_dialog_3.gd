@@ -38,6 +38,8 @@ func _ready():
 		##### Same as in previous comment
 		path = "res://Assets/Sound/VO/Laboratory/Cari/PC/vo_pc_cari_"
 	
+	if Global.talked_to_chameleon_2 == false:
+		Global.laboratory_help_button_state += 1
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
 ##########################################################################################
@@ -154,7 +156,6 @@ func add_right_dialog_box():
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_3_4.mp3")
 		$"../VoiceOver".play()
-		Global.laboratory_help_button_state += 1
 		dialogs += 1
 		same_speaker = false
 	

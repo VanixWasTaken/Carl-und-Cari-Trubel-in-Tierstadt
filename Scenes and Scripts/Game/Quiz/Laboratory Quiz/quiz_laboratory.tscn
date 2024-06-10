@@ -737,7 +737,7 @@ region_rect = Rect2(39.1277, 16.3303, 200.388, 148.457)
 
 [node name="Arrow" type="Sprite2D" parent="Question2/Lemon/Sprite2D"]
 position = Vector2(151, -2)
-scale = Vector2(0.481221, 1)
+scale = Vector2(0.504, 0.504)
 texture = ExtResource("12_jkam6")
 
 [node name="PickUpArea" type="Area2D" parent="Question2/Lemon"]
@@ -766,7 +766,6 @@ region_rect = Rect2(199.949, 133.641, 937.333, 627.487)
 
 [node name="Arrow" type="Sprite2D" parent="Question2/Soap/Sprite2D"]
 position = Vector2(293.484, 11.898)
-scale = Vector2(0.944702, 1.80328)
 texture = ExtResource("12_jkam6")
 
 [node name="PickUpArea" type="Area2D" parent="Question2/Soap"]
