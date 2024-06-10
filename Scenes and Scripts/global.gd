@@ -27,7 +27,6 @@ var return_laboratory_3 = false #wird auf true gesetzt, wenn man aus dem 3 minig
 @onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
 @onready var laboratory_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 @onready var start_scene = preload("res://Scenes and Scripts/Menus/StartUp/start_up.tscn")
-var test_image = preload("res://Assets/Art/Characters/Cari/Dialog Icon/TESTIMAGE.png")
 
 
 ###### This variable are used for storing which job is currently played 
@@ -47,8 +46,6 @@ func _input(event):
 		load_laboratory_2()
 	elif Input.is_action_just_pressed("0"):
 		reset_game()
-	elif Input.is_action_just_pressed("2"):
-		downloadFile(test_image, "YIPPIE")
 
 func load_map():
 	character = "Cari"
