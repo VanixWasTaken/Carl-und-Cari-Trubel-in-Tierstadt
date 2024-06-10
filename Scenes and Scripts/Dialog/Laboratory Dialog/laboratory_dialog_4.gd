@@ -38,6 +38,8 @@ func _ready():
 		##### Same as in previous comment
 		path = "res://Assets/Sound/VO/Laboratory/Cari/PC/vo_pc_cari_laboratory_"
 	
+	if Global.talked_to_chameleon_3 == false:
+		Global.laboratory_help_button_state += 1
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
 ##########################################################################################
@@ -97,7 +99,6 @@ func add_left_dialog_box():
 		same_speaker = false
 
 	elif dialogs == 6:
-		Global.laboratory_help_button_state += 1
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
