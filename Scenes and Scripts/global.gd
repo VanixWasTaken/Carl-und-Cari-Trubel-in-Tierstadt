@@ -26,8 +26,7 @@ var return_laboratory_2 = false #wird auf true gesetzt, wenn man aus dem 2 minig
 var return_laboratory_3 = false #wird auf true gesetzt, wenn man aus dem 3 minigame kommt
 @onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
 @onready var laboratory_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
-@onready var start_scene = preload("res://Scenes and Scripts/Menus/StartUp/start_up.tscn")
-
+@onready var start_scene = preload("res://Scenes and Scripts/Menus/StartUp/start_up.tscn")                                                                                         
 
 ###### This variable are used for storing which job is currently played 
 var inside_laboratory : bool = false
@@ -35,6 +34,8 @@ var inside_laboratory : bool = false
 
 ###### This variable are used for storing the job stars
 var chemist_job_stars : int
+
+
 
 
 func _input(event):
