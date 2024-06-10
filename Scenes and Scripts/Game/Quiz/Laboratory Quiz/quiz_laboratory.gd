@@ -12,3 +12,7 @@ func _on_question_release_input():
 
 
 
+
+
+func _play_hover_sounds_buttons():
+	$Hover.play()

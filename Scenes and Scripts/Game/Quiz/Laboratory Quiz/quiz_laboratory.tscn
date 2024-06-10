@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://b7l01kbm7a7hp"]
+[gd_scene load_steps=61 format=3 uid="uid://b7l01kbm7a7hp"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_07xri"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_p4cgx"]
@@ -33,6 +33,12 @@
 [ext_resource type="Texture2D" uid="uid://cmsb7vgdfcedm" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/lab_minigame1_ph_scale.png" id="14_leodp"]
 [ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/Art/Random Screens/white_screen.png" id="15_qwl7x"]
 [ext_resource type="Texture2D" uid="uid://cgcu0pvpoiwo6" path="res://Assets/Art/Environment/Quiz/quiz_template_speech_bubble.png" id="19_cvd6n"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="34_n7ywp"]
+[ext_resource type="AudioStream" uid="uid://bxtc80jb2lxtd" path="res://Assets/Sound/SFX/Foley/Map/Quiz/sfx_foley_map_quiz_stars.mp3" id="34_q2vsv"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="35_xfe2v"]
+[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="36_2nkv8"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="37_e57yk"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="38_p52ct"]
 
 [sub_resource type="Theme" id="Theme_b780n"]
 default_font = ExtResource("4_pc78o")
@@ -90,6 +96,22 @@ size = Vector2(516.2, 0.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_047nh"]
 size = Vector2(364.873, 214.164)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cvb3i"]
+streams_count = 2
+stream_0/stream = ExtResource("34_n7ywp")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("35_xfe2v")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_m4dmh"]
+streams_count = 3
+stream_0/stream = ExtResource("36_2nkv8")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("37_e57yk")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("38_p52ct")
+stream_2/weight = 1.0
 
 [node name="QuizLaboratory" type="CanvasLayer"]
 script = ExtResource("1_07xri")
@@ -1029,8 +1051,27 @@ grow_vertical = 2
 mouse_filter = 0
 texture = ExtResource("15_qwl7x")
 
+[node name="VoiceOver" type="AudioStreamPlayer" parent="."]
+bus = &"Dialogue"
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_cvb3i")
+volume_db = -12.0
+bus = &"SFX"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_m4dmh")
+volume_db = -9.0
+bus = &"SFX"
+
+[node name="Stars" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("34_q2vsv")
+volume_db = -6.0
+bus = &"SFX"
+
 [connection signal="block_input" from="Question5" to="." method="_on_question_block_input"]
 [connection signal="release_input" from="Question5" to="." method="_on_question_release_input"]
+[connection signal="mouse_entered" from="Question5/WeiterButton" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question5/WeiterButton" to="Question5" method="_on_weiter_button_pressed"]
 [connection signal="pressed" from="Question5/Star" to="Question5" method="_on_star_pressed"]
 [connection signal="pressed" from="Question5/Star2" to="Question5" method="_on_star_2_pressed"]
@@ -1039,18 +1080,27 @@ texture = ExtResource("15_qwl7x")
 [connection signal="pressed" from="Question5/Star5" to="Question5" method="_on_star_5_pressed"]
 [connection signal="block_input" from="Question4" to="." method="_on_question_block_input"]
 [connection signal="release_input" from="Question4" to="." method="_on_question_release_input"]
+[connection signal="mouse_entered" from="Question4/WeiterButton" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question4/WeiterButton" to="Question4" method="_on_weiter_button_pressed"]
 [connection signal="block_input" from="Question3" to="." method="_on_question_block_input"]
 [connection signal="release_input" from="Question3" to="." method="_on_question_release_input"]
+[connection signal="mouse_entered" from="Question3/Answer2/Answer2Button" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question3/Answer2/Answer2Button" to="Question3" method="_on_answer_2_button_pressed"]
+[connection signal="mouse_entered" from="Question3/Answer3/Answer3Button" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question3/Answer3/Answer3Button" to="Question3" method="_on_answer_3_button_pressed"]
+[connection signal="mouse_entered" from="Question3/Answer4/Answer4Button" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question3/Answer4/Answer4Button" to="Question3" method="_on_answer_4_button_pressed"]
+[connection signal="mouse_entered" from="Question3/Answer5/Answer5Button" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question3/Answer5/Answer5Button" to="Question3" method="_on_answer_5_button_pressed"]
+[connection signal="mouse_entered" from="Question3/Answer6/Answer6Button" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question3/Answer6/Answer6Button" to="Question3" method="_on_answer_6_button_pressed"]
+[connection signal="mouse_entered" from="Question3/Answer7/Answer7Button" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question3/Answer7/Answer7Button" to="Question3" method="_on_answer_7_button_pressed"]
+[connection signal="mouse_entered" from="Question3/WeiterButton" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question3/WeiterButton" to="Question3" method="_on_weiter_button_pressed"]
 [connection signal="block_input" from="Question2" to="." method="_on_question_block_input"]
 [connection signal="release_input" from="Question2" to="." method="_on_question_release_input"]
+[connection signal="mouse_entered" from="Question2/WeiterButton" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question2/WeiterButton" to="Question2" method="_on_weiter_button_pressed"]
 [connection signal="mouse_entered" from="Question2/Lemon/PickUpArea" to="Question2" method="_on_pick_up_area_mouse_entered"]
 [connection signal="mouse_exited" from="Question2/Lemon/PickUpArea" to="Question2" method="_on_pick_up_area_mouse_exited"]
@@ -1062,7 +1112,11 @@ texture = ExtResource("15_qwl7x")
 [connection signal="area_exited" from="Question2/Soap/Area2D" to="Question2" method="_on_soap_area_2d_area_exited"]
 [connection signal="block_input" from="Question1" to="." method="_on_question_block_input"]
 [connection signal="release_input" from="Question1" to="." method="_on_question_release_input"]
+[connection signal="mouse_entered" from="Question1/Answer1/Answer1Button" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question1/Answer1/Answer1Button" to="Question1" method="_on_answer_1_button_pressed"]
+[connection signal="mouse_entered" from="Question1/Answer2/Answer2Button" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question1/Answer2/Answer2Button" to="Question1" method="_on_answer_2_button_pressed"]
+[connection signal="mouse_entered" from="Question1/Answer3/Answer3Button" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question1/Answer3/Answer3Button" to="Question1" method="_on_answer_3_button_pressed"]
+[connection signal="mouse_entered" from="Question1/WeiterButton" to="." method="_play_hover_sounds_buttons"]
 [connection signal="pressed" from="Question1/WeiterButton" to="Question1" method="_on_weiter_button_pressed"]
