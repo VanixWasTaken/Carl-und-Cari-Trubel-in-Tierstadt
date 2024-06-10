@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cch5cjlssxc7x"
-path="res://.godot/imported/UI_hud.png-2014dba503abfd0e0856b8fce405271e.ctex"
+uid="uid://bakeorbinxsrv"
+path="res://.godot/imported/download_button.png-57c9558748f2aa2b953d6c2dd1ddc59a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/UI/HUD/Map/UI_hud.png"
-dest_files=["res://.godot/imported/UI_hud.png-2014dba503abfd0e0856b8fce405271e.ctex"]
+source_file="res://Assets/Art/UI/Buttons/Download Buttons/download_button.png"
+dest_files=["res://.godot/imported/download_button.png-57c9558748f2aa2b953d6c2dd1ddc59a.ctex"]
 
 [params]
 

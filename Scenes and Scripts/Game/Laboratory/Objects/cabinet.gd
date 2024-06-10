@@ -42,13 +42,6 @@ func _input(event):
 				$Sprite3D.visible = false
 				if $"Reagenz Glasses" != null:
 					$"Reagenz Glasses".position.y += 100
-			elif door_open:
-				$Shutter.play()
-				door_open = false
-				$Sprite3D.visible = true
-				if $"Reagenz Glasses" != null:
-					$"Reagenz Glasses".position.y -= 100
-
 
 func _on_area_3d_body_entered(body):
 	if body.get_name() == "Player":

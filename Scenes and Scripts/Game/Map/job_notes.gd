@@ -9,7 +9,7 @@ var mouse_inside_big_note = false
 var outline_shader = preload("res://Shader/outline.tres")
 var no_shader = preload("res://Shader/no_shader.tres")
 var open_note1 = 0
-var chemist_note = preload("res://Assets/Art/Characters/Cari/Dialog Icon/TESTIMAGE.png")
+var chemist_note = preload("res://Assets/Art/UI/HUD/Map/job_note_image.png")
 
 func _ready():
 	if Global.return_laboratory_3:
@@ -44,10 +44,8 @@ func _on_area_2d_mouse_entered():
 	_paper_hover()
 	Global.moving_allowed = false
 	Global.mouse_in_button = true
-	print("cockpenicock")
 func _on_area_2d_mouse_exited():
 	Global.mouse_in_button = false
-	print("AAAAAAAAAAcockAAAAAA")
 
 		  # checks for input on the paper-quitbutton and handles its shaders and sounds
 func _on_paper_quit_mouse_entered():
@@ -64,13 +62,12 @@ func _paper_hover():
 
 func _on_chemist_download_button_up():
 	$DownloadExplanation.visible = true
-	downloadFile(chemist_note, "Chemielabor-Informationen")
+	downloadFile(chemist_note, "Chemielabor-Informationen.png")
 
 func downloadFile(img: Image, filename: String) -> void:
 	var buffer = img.save_png_to_buffer()
-	var base64Data: String = Marshalls.raw_to_base64(buffer)
-	var url: String = "data:image/png;base64," + base64Data
-	OS.shell_open(url)  # Opens the image in a new tab for download
+	# Verwenden Sie die neue Funktion, um den Puffer herunterzuladen.
+	JavaScriptBridge.download_buffer(buffer, filename)
 
 
 func _on_texture_button_button_up():

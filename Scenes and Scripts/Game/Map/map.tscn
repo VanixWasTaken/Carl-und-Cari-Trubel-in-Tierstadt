@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=34 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Texture2D" uid="uid://ckctg6v1ekkvh" path="res://Assets/Art/Environment/Map/Big Map/map.PNG" id="1_pn286"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
@@ -14,8 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://cm4hcr8fw4k5a" path="res://Assets/Art/UI/HUD/Map/job_note1.PNG" id="13_2x76a"]
 [ext_resource type="PackedScene" uid="uid://daswfhvjsa7jh" path="res://Scenes and Scripts/Game/Player/player.tscn" id="14_0uuvf"]
 [ext_resource type="Shader" path="res://Shader/blur.gdshader" id="14_jp8ps"]
-[ext_resource type="Texture2D" uid="uid://78kv262tl42u" path="res://Assets/Art/UI/Buttons/download_button.png" id="14_w3i32"]
-[ext_resource type="Texture2D" uid="uid://caa2a68btik58" path="res://Assets/Art/UI/Buttons/download_pdf_button.png" id="15_asjkx"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="15_bdydr"]
 [ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/Art/Random Screens/white_screen.png" id="15_jo7ff"]
 [ext_resource type="Texture2D" uid="uid://dpjjv7rg73iow" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button_clicked.png" id="15_pp1ui"]
@@ -23,10 +21,13 @@
 [ext_resource type="Texture2D" uid="uid://bdbjnb85fqnnx" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button_hover.png" id="16_ttcuk"]
 [ext_resource type="Texture2D" uid="uid://cbksoath7x8g7" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist_clicked.png" id="16_x1218"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="17_hkm8s"]
+[ext_resource type="Texture2D" uid="uid://bakeorbinxsrv" path="res://Assets/Art/UI/Buttons/Download Buttons/download_button.png" id="17_nfhtf"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="17_v78te"]
 [ext_resource type="Texture2D" uid="uid://bw1t31kgrjkq0" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist_hovered.png" id="17_wo11y"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="18_bp1yi"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/moving_to_laboratory_video.ogv" id="18_dkhfr"]
+[ext_resource type="Texture2D" uid="uid://b6xy6cf73iyv0" path="res://Assets/Art/UI/Buttons/Download Buttons/download_button_dark.png" id="18_h4pp6"]
+[ext_resource type="Texture2D" uid="uid://bay5hyslmqkb3" path="res://Assets/Art/UI/Buttons/Download Buttons/download_button_light.png" id="19_b40yi"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8wyy8"]
 vertices = PackedVector2Array(469, 933, 11, 937, 164, 933, 464, 930, 1187, 502, 1193, 547, 1189, 538, 1177, 510, 1188, 577, 531, 548, 536, 804, 532, 799, 531, 550, 1896, 544, 1893, 556, 1199, 558, 1180, 603, 1158, 607, 1131, 638, 1119, 619, 1111, 637, 1745, 1043, 1747, 1053, 1190, 1028, 1436, 1034, 1133, 456, 1136, 473, 1638, 276, 1906, 276, 1905, 283, 1641, 277, 1632, 369, 1638, 372, 1141, 372, 1131, 368, 1121, 471, 1068, 489, 1059, 523, 1041, 520, 1050, 580, 1064, 570, 989, -5, 997, -6, 992, 300, 984, 298, 568, 298, 304, 316, 286, 304, 1084, 604, 1115, 807, 1158, 811, 1138, 815, 298, 546, 298, 541, 574, 5, 578, 5, 575, 296, 181, 644, 3, 645, 3, 643, 285, 644, 1432, 883, 1909, 881, 1909, 882, 1440, 894, 1420, 1027, 1204, 1021, 1192, 878, 1204, 882, 474, 812, 461, 812, 474, 1062, 469, 1062, 176, 932, 187, 646, 295, 647, 294, 526, 294, 525)
@@ -141,12 +142,15 @@ shape = SubResource("CircleShape2D_h683o")
 position = Vector2(109, -4)
 
 [node name="ChemistDownload" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall"]
-offset_left = 322.0
-offset_top = 594.0
-offset_right = 498.0
-offset_bottom = 658.0
-texture_normal = ExtResource("14_w3i32")
-texture_hover = ExtResource("15_asjkx")
+offset_left = 256.0
+offset_top = 492.0
+offset_right = 598.0
+offset_bottom = 618.0
+texture_normal = ExtResource("17_nfhtf")
+texture_pressed = ExtResource("18_h4pp6")
+texture_hover = ExtResource("19_b40yi")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="ChemistSymbol" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall"]
 offset_left = 307.0
@@ -212,15 +216,15 @@ texture = ExtResource("15_jo7ff")
 z_index = 2
 layout_mode = 0
 offset_left = 156.0
-offset_top = 104.0
+offset_top = 185.295
 offset_right = 1048.0
-offset_bottom = 575.0
+offset_bottom = 466.295
 theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
 theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("17_hkm8s")
 theme_override_font_sizes/font_size = 50
-text = "Es hat sich ein neuer Tab geöffnet. In diesem findest du nochmal alle wichtigen Informationen zu diesem Beruf. Lad die Datei runter, druck sie aus und zeig sie deinen Eltern und Lehrkräften!"
+text = "Gerade wurde eine Datei mit den Informationen zu diesem Job heruntergeladen. Druck sie aus und zeig sie deinen Eltern und Lehrkräften!"
 horizontal_alignment = 1
 autowrap_mode = 3
 
