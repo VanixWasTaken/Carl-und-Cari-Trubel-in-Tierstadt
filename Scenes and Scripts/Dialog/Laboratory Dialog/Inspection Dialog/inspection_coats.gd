@@ -13,6 +13,7 @@ var same_speaker = false
 
 var PRESET1
 var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot1.png")
+var PRESET3 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot2.png")
 
 var path
 
@@ -104,7 +105,10 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Das sind Laborkittel, die g-g-gehören zur Schutzausrüstung."
-		short_node_rect.texture = PRESET2
+		if !Global.return_laboratory_3:
+			short_node_rect.texture = PRESET2
+		else:
+			short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_coats_1.mp3")
 		$"../VoiceOver".play()
@@ -117,7 +121,10 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Genau, denn sie m-m-müssen unseren ganzen Körper vor G-G-Gefahrenstoffen schützen."
-		short_node_rect.texture = PRESET2
+		if !Global.return_laboratory_3:
+			short_node_rect.texture = PRESET2
+		else:
+			short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_coats_3.mp3")
 		$"../VoiceOver".play()
@@ -130,7 +137,10 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Sie sind weiß, um schnell farbige Chemikalien zu erkennen und bestehen aus Baumwolle, da diese bei hohen Temperaturen nicht schmilzt."
-		short_node_rect.texture = PRESET2
+		if !Global.return_laboratory_3:
+			short_node_rect.texture = PRESET2
+		else:
+			short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_coats_4.mp3")
 		$"../VoiceOver".play()

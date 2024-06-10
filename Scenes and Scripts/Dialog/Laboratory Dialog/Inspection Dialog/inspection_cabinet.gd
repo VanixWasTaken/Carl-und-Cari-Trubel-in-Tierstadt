@@ -13,7 +13,7 @@ var same_speaker = false
 
 var PRESET1
 var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot1.png")
-
+var PRESET3 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot2.png")
 var vo_pc
 
 ##########################################################################################
@@ -85,7 +85,10 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "In diesem Schrank lagern wir unsere gefährlichen Substanzen."
-		short_node_rect.texture = PRESET2
+		if !Global.return_laboratory_3:
+			short_node_rect.texture = PRESET2
+		else:
+			short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_cabinet_1.mp3")
 		$"../VoiceOver".play()
@@ -98,7 +101,10 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Es ist wichtig diesen Schrank immer abzuschließen, damit keine Unfälle passieren."
-		short_node_rect.texture = PRESET2
+		if !Global.return_laboratory_3:
+			short_node_rect.texture = PRESET2
+		else:
+			short_node_rect.texture = PRESET3
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_inspection_cabinet_2.mp3")
 		$"../VoiceOver".play()
