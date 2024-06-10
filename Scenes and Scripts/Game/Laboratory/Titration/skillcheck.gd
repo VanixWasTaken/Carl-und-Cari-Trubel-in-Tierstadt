@@ -50,12 +50,12 @@ func _process(delta):
 			pressed_already = true
 		else:
 			if $"PH-Scale/Arrow".position.y <= 320:
-				$"PH-Scale/Arrow".position.y += 110 * delta
+				$"PH-Scale/Arrow".position.y += 90 * delta
 			
 			if $"PH-Scale/Arrow".position.y < -263: #Oberster Strich
 				$"PH-Scale/Arrow".position.y = -263
 
-		if $"PH-Scale/Arrow".position.y >= 30 and $"PH-Scale/Arrow".position.y <= 121: #Gewinn Werte
+		if $"PH-Scale/Arrow".position.y >= 0 and $"PH-Scale/Arrow".position.y <= 151: #Gewinn Werte
 			current_time += delta
 
 
