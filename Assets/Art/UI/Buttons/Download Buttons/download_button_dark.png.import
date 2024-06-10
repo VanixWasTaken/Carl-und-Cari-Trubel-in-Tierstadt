@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caa2a68btik58"
-path="res://.godot/imported/download_pdf_button.png-a41178d8712e7d18a179495f06e5cb96.ctex"
+uid="uid://b6xy6cf73iyv0"
+path="res://.godot/imported/download_button_dark.png-068d7c0afd8d86cfed4564b0111d8bde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/UI/Buttons/download_pdf_button.png"
-dest_files=["res://.godot/imported/download_pdf_button.png-a41178d8712e7d18a179495f06e5cb96.ctex"]
+source_file="res://Assets/Art/UI/Buttons/Download Buttons/download_button_dark.png"
+dest_files=["res://.godot/imported/download_button_dark.png-068d7c0afd8d86cfed4564b0111d8bde.ctex"]
 
 [params]
 
