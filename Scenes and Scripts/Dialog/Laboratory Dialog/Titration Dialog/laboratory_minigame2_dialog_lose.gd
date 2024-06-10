@@ -154,6 +154,8 @@ func add_right_dialog_box():
 		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
+		$"../Sprite2D".visible = true
+		$"../Sprite2D2".visible = true
 	
 	elif dialogs == 6:
 		var short_node = get_child(2)

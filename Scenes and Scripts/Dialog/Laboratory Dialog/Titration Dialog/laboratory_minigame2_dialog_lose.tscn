@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bs02v0qkweeqt"]
+[gd_scene load_steps=13 format=3 uid="uid://bs02v0qkweeqt"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Laboratory Dialog/Titration Dialog/laboratory_minigame2_dialog_lose.gd" id="1_jhllo"]
 [ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_mrd1r"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="7_ceh0p"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="8_7827s"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="9_uxarp"]
+[ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="10_vqn5g"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xqye0"]
 playback_mode = 1
@@ -72,6 +73,18 @@ volume_db = -15.0
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_ve2lj")
 volume_db = -18.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1530, 344)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_vqn5g")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1530, 433)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_vqn5g")
 
 [connection signal="button_down" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_button_down"]
 [connection signal="mouse_entered" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_mouse_entered"]
