@@ -1,14 +1,14 @@
 [gd_scene load_steps=43 format=3 uid="uid://skc43dl2o124"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.gd" id="1_jfymc"]
-[ext_resource type="Texture2D" uid="uid://dcwdarpqj4kyp" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame1.png.PNG" id="1_wajoa"]
-[ext_resource type="Texture2D" uid="uid://j0ki0uktabxe" path="res://Assets/Art/Cutscenes/Intro Cutsene/characters_talking.png" id="2_g7dl1"]
-[ext_resource type="Texture2D" uid="uid://difq00t427k63" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame2.png.PNG" id="2_yxpgr"]
-[ext_resource type="Texture2D" uid="uid://lb4g6drr5o27" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame3.png.PNG" id="3_yp0o1"]
-[ext_resource type="Texture2D" uid="uid://dylkrlenvgssl" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame4.png.PNG" id="4_tq0bh"]
-[ext_resource type="Texture2D" uid="uid://qnbeqle7ae0q" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame5.png.PNG" id="5_jng2a"]
+[ext_resource type="Texture2D" uid="uid://caklkhjnajqs1" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame8.png" id="2_3md0j"]
+[ext_resource type="Texture2D" uid="uid://coxl4s5v8anxm" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame2.png" id="3_6djqm"]
+[ext_resource type="Texture2D" uid="uid://wkeuvrmaxiph" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame3.png" id="4_7xpag"]
+[ext_resource type="Texture2D" uid="uid://bjx7d88xms7gc" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame4.png" id="5_lsrvn"]
+[ext_resource type="Texture2D" uid="uid://dgr20mbpujm3c" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame5.png" id="6_5vpen"]
 [ext_resource type="Texture2D" uid="uid://08234pe6u2oq" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame6.png" id="7_7sgsu"]
 [ext_resource type="Texture2D" uid="uid://dlbwvgnvb5cc4" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame7.png" id="8_yoqt0"]
+[ext_resource type="Texture2D" uid="uid://bkskp4fnjscvk" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame1.png" id="9_676rx"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="10_0wlxo"]
 [ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="11_spyt2"]
 [ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="12_vgwtq"]
@@ -54,16 +54,16 @@ _data = {
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_yxpgr")
+"texture": ExtResource("3_6djqm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_yp0o1")
+"texture": ExtResource("4_7xpag")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_tq0bh")
+"texture": ExtResource("5_lsrvn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_jng2a")
+"texture": ExtResource("6_5vpen")
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_7sgsu")
@@ -245,7 +245,7 @@ script = ExtResource("1_jfymc")
 [node name="Characters Talking" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_g7dl1")
+texture = ExtResource("2_3md0j")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -278,7 +278,7 @@ autoplay = "new_animation"
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 3840.0
 offset_bottom = 1080.0
-texture = ExtResource("1_wajoa")
+texture = ExtResource("9_676rx")
 
 [node name="Dialog1" type="RichTextLabel" parent="."]
 visible = false
