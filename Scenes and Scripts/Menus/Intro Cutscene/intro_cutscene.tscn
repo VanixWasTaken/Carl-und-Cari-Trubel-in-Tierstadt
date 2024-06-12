@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://skc43dl2o124"]
+[gd_scene load_steps=51 format=3 uid="uid://skc43dl2o124"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.gd" id="1_jfymc"]
 [ext_resource type="Texture2D" uid="uid://caklkhjnajqs1" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame8.png" id="2_3md0j"]
@@ -28,6 +28,12 @@
 [ext_resource type="AudioStream" uid="uid://cj0su1k43k8wb" path="res://Assets/Sound/SFX/Foley/World/sfx_foley_world_telephone_smack_cutscene.mp3" id="26_fqkf5"]
 [ext_resource type="AudioStream" uid="uid://wa66fjuq7hhv" path="res://Assets/Sound/SFX/Foley/World/sfx_foley_world_telephone_pickup_cutscene.mp3" id="26_gtkih"]
 [ext_resource type="AudioStream" uid="uid://v1j3pusr7vyi" path="res://Assets/Sound/SFX/Foley/World/sfx_foley_world_nailing_poster_cutscene.mp3" id="28_i63ya"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="29_bq3xu"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="30_645e1"]
+[ext_resource type="AudioStream" uid="uid://crddvii1q3egk" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var2.mp3" id="31_f5y7t"]
+[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="32_u1fo4"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="33_yu2kf"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="34_24hav"]
 
 [sub_resource type="Animation" id="Animation_jv6g1"]
 resource_name = "Glide"
@@ -239,6 +245,25 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_idwcq"]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("29_bq3xu")
+stream_0/weight = 2.0
+stream_1/stream = ExtResource("30_645e1")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("31_f5y7t")
+stream_2/weight = 0.5
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7fbfk"]
+streams_count = 3
+stream_0/stream = ExtResource("32_u1fo4")
+stream_0/weight = 2.0
+stream_1/stream = ExtResource("33_yu2kf")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("34_24hav")
+stream_2/weight = 0.5
+
 [node name="Intro Cutscene" type="Node2D"]
 script = ExtResource("1_jfymc")
 
@@ -335,25 +360,31 @@ frame_progress = 1.0
 [node name="Whoosh" type="AudioStreamPlayer" parent="Clouds"]
 stream = ExtResource("23_gghc3")
 autoplay = true
-bus = &"SFX"
+bus = &"SFX_Foley"
 
 [node name="Narrator" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_1paak")
 bus = &"Dialogue"
 
 [node name="VoiceOver" type="AudioStreamPlayer" parent="."]
+bus = &"Dialogue"
 
 [node name="TelephoneRing" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_4lacg")
+bus = &"SFX_Foley"
 
 [node name="TelephoneGrab" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_fqkf5")
+bus = &"SFX_Foley"
 
 [node name="TelephonePickUp" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_gtkih")
+volume_db = -3.0
+bus = &"SFX_Foley"
 
 [node name="NailingPoster" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("28_i63ya")
+bus = &"SFX_Foley"
 
 [node name="Alpha Label" type="Label" parent="."]
 offset_left = 5.0
@@ -365,11 +396,22 @@ theme_override_fonts/font = ExtResource("10_0wlxo")
 text = "Das ist eine Pre-Alpha Version und repräsentiert nicht das fertige Produkt."
 horizontal_alignment = 1
 
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_idwcq")
+bus = &"SFX_UI"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_7fbfk")
+volume_db = -3.0
+bus = &"SFX_UI"
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="animation_finished" from="Dialog1/AnimationPlayer" to="." method="_on_animation_player_dialog1_animation_finished"]
 [connection signal="animation_finished" from="Dialog2/AnimationPlayer" to="." method="_on_animation_player_dialog2_animation_finished"]
+[connection signal="mouse_entered" from="WeiterButton" to="." method="_on_weiter_button_mouse_entered"]
 [connection signal="pressed" from="WeiterButton" to="." method="_on_weiter_button_pressed"]
 [connection signal="animation_finished" from="Clouds" to="." method="_on_clouds_animation_finished"]
 [connection signal="finished" from="Narrator" to="." method="_on_narrator_finished"]
+[connection signal="finished" from="TelephoneGrab" to="." method="_on_telephone_grab_finished"]
