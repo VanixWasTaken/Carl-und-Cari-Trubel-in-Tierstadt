@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://dfpwq4ngsnyed"]
+[gd_scene load_steps=85 format=3 uid="uid://dfpwq4ngsnyed"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.gd" id="1_wcnbr"]
 [ext_resource type="Texture2D" uid="uid://btb4ud2xoay11" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_window.png" id="2_1k7pv"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://lmaouvkc3f5" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle1.png" id="3_ivchp"]
 [ext_resource type="Texture2D" uid="uid://dwgi13mmayd2l" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_gun.png" id="3_ww0fy"]
 [ext_resource type="Texture2D" uid="uid://chu3r7ga3hn5s" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_bottle.png" id="4_7yw8r"]
-[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png" id="5_wj47e"]
 [ext_resource type="Texture2D" uid="uid://b527t0x1gymds" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_front.png" id="11_djqfr"]
 [ext_resource type="Texture2D" uid="uid://jyt0ywh4xn07" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/Gun Animation/gun_animation1.png" id="12_awfc1"]
 [ext_resource type="Texture2D" uid="uid://dwlpn0vtf4lyd" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Spray Mini Game/minigame3_light.png" id="13_rj72p"]
@@ -82,7 +81,7 @@ shader_parameter/noise_texture = SubResource("NoiseTexture2D_jh0mn")
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_wj47e")
+"texture": null
 }],
 "loop": true,
 "name": &"default",
@@ -514,23 +513,28 @@ texture = ExtResource("16_8gx7a")
 
 [node name="SpraySound" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("17_rgjd6")
-volume_db = -3.0
+volume_db = -6.0
+bus = &"SFX_Foley"
 
 [node name="ShakeSound" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("18_ulme6")
-volume_db = 6.0
+volume_db = 9.0
+bus = &"SFX_Foley"
 
 [node name="Jamming" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("19_v6irx")
 volume_db = 3.0
+bus = &"SFX_Foley"
 
 [node name="Trigger" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("19_rmeio")
-volume_db = 3.0
+volume_db = 6.0
+bus = &"SFX_Foley"
 
 [node name="HoseNoise" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("21_5el5d")
-volume_db = -12.0
+volume_db = -9.0
+bus = &"SFX_Foley"
 
 [node name="SpinMinigame" type="TextureRect" parent="."]
 visible = false
@@ -550,11 +554,13 @@ libraries = {
 
 [node name="Loaded" type="AudioStreamPlayer" parent="SpinMinigame/Bottle"]
 stream = ExtResource("24_2wxnx")
-volume_db = 12.0
+volume_db = 15.0
+bus = &"SFX_Foley"
 
 [node name="Screwing" type="AudioStreamPlayer" parent="SpinMinigame/Bottle"]
 stream = SubResource("AudioStreamRandomizer_52mms")
-volume_db = 6.0
+volume_db = 12.0
+bus = &"SFX_Foley"
 
 [node name="Arrow" type="AnimatedSprite2D" parent="SpinMinigame"]
 visible = false
@@ -631,10 +637,12 @@ shape = SubResource("RectangleShape2D_x3x71")
 
 [node name="Hover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_dqp83")
-volume_db = -15.0
+bus = &"SFX_UI"
 
 [node name="PickUp" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("43_g3024")
+volume_db = 6.0
+bus = &"SFX_Foley"
 
 [node name="ProgressBar" type="Node2D" parent="."]
 visible = false
@@ -663,12 +671,11 @@ texture = ExtResource("50_oyde6")
 stream = ExtResource("51_cbeo8")
 volume_db = -12.0
 autoplay = true
-bus = &"SFX"
+bus = &"SFX_Foley"
 
 [node name="Progress" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("52_5fw5k")
-volume_db = -3.0
-bus = &"SFX"
+bus = &"SFX_UI"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
