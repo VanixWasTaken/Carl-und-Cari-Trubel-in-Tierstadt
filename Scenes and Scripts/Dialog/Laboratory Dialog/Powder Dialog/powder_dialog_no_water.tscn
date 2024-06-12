@@ -63,14 +63,16 @@ one_shot = true
 autostart = true
 
 [node name="VoiceOver" type="AudioStreamPlayer" parent="."]
+bus = &"Dialog_Conv"
 
 [node name="Hover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_xqye0")
-volume_db = -15.0
+bus = &"SFX_UI"
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_ve2lj")
-volume_db = -18.0
+volume_db = -3.0
+bus = &"SFX_UI"
 
 [connection signal="button_down" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_button_down"]
 [connection signal="mouse_entered" from="DialogBox/SkipButton" to="DialogBox" method="_on_skip_button_mouse_entered"]

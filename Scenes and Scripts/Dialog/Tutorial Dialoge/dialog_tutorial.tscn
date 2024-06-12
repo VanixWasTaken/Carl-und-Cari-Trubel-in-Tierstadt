@@ -73,17 +73,16 @@ one_shot = true
 autostart = true
 
 [node name="Voice Over" type="AudioStreamPlayer" parent="."]
-bus = &"Dialogue"
+bus = &"Dialog_Conv"
 
 [node name="Hover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_i855d")
-volume_db = -15.0
-bus = &"SFX"
+bus = &"SFX_UI"
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_xd5t4")
-volume_db = -18.0
-bus = &"SFX"
+volume_db = -3.0
+bus = &"SFX_UI"
 
 [connection signal="mouse_entered" from="Area2D" to="DialogBox" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="DialogBox" method="_on_area_2d_mouse_exited"]
