@@ -3,8 +3,8 @@ extends Node2D
 var next_scene = preload("res://Scenes and Scripts/Menus/Character Selection/character_selection.tscn")
 
 var button_pressed = 0
-
 var narrator_count = 0
+
 
 
 func _ready():
@@ -28,6 +28,7 @@ func _on_animation_player_animation_finished(anim_name):
 
 
 func _on_weiter_button_pressed():
+	$Click.play()
 	button_pressed += 1
 	if button_pressed == 1:
 		$WeiterButton.hide()
@@ -75,7 +76,7 @@ func _on_animated_sprite_2d_frame_changed():
 
 
 func _on_telephone_grab_finished():
-	await get_tree().create_timer(0.9).timeout
+	await get_tree().create_timer(0.75).timeout
 	$TelephonePickUp.play()
 
 
@@ -83,5 +84,5 @@ func _on_weiter_button_mouse_entered():
 	$Hover.play()
 
 
-func _on_weiter_button_button_down():
-	$Click.play()
+func _on_delete_rain_timeout():
+	$Rain.queue_free()
