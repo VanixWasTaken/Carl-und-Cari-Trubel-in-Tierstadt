@@ -32,3 +32,15 @@ func _paper_hover():
 	stream.add_stream(2, load("res://Assets/Sound/SFX/UI/Specific/Map/sfx_hub_ui_paper_var3.mp3"))
 	%Hover.stream = stream
 	%Hover.play()
+
+func _on_clouds_animation_finished():
+	$Clouds.visible = false
+
+func _on_animation_player_animation_finished(anim_name):
+	$CloudControl/AnimationPlayer4.play("new_animation")
+
+func _on_animation_player_2_animation_finished(anim_name):
+	$CloudControl/AnimationPlayer5.play("new_animation")
+
+func _on_animation_player_3_animation_finished(anim_name):
+	$CloudControl/AnimationPlayer6.play("new_animation")
