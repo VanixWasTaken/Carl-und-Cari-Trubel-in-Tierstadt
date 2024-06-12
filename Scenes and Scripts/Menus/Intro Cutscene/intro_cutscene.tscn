@@ -379,10 +379,8 @@ bus = &"SFX_Foley"
 
 [node name="Narrator" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_1paak")
-bus = &"Dialogue"
 
 [node name="VoiceOver" type="AudioStreamPlayer" parent="."]
-bus = &"Dialogue"
 
 [node name="TelephoneRing" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_4lacg")
