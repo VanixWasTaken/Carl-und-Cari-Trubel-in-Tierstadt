@@ -42,6 +42,7 @@ func _ready():
 	Input.set_custom_mouse_cursor(custom_mouse_cursor)
 
 
+
 func _input(event):
 	if event.is_action_pressed("left_click"):
 		Input.set_custom_mouse_cursor(custom_mouse_cursor_clicked)
