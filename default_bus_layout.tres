@@ -2,7 +2,7 @@
 
 [resource]
 bus/0/volume_db = -5.93075
-bus/1/name = &"Dialogue"
+bus/1/name = &"Dialog"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
@@ -32,3 +32,15 @@ bus/5/mute = false
 bus/5/bypass_fx = false
 bus/5/volume_db = -3.11736
 bus/5/send = &"SFX"
+bus/6/name = &"Dialog_Barks"
+bus/6/solo = false
+bus/6/mute = false
+bus/6/bypass_fx = false
+bus/6/volume_db = -6.24739
+bus/6/send = &"Dialog"
+bus/7/name = &"Dialog_Conv"
+bus/7/solo = false
+bus/7/mute = false
+bus/7/bypass_fx = false
+bus/7/volume_db = 0.0
+bus/7/send = &"Dialog"

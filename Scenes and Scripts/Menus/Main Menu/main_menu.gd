@@ -4,6 +4,8 @@ extends Node2D
 @onready var next_scene = preload("res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.tscn")
 
 
+func _ready():
+	$CloudsWhoosch.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

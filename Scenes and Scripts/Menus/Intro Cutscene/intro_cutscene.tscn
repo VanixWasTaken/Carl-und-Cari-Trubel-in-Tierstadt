@@ -410,6 +410,7 @@ bus = &"SFX_UI"
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="animation_finished" from="Dialog1/AnimationPlayer" to="." method="_on_animation_player_dialog1_animation_finished"]
 [connection signal="animation_finished" from="Dialog2/AnimationPlayer" to="." method="_on_animation_player_dialog2_animation_finished"]
+[connection signal="button_down" from="WeiterButton" to="." method="_on_weiter_button_button_down"]
 [connection signal="mouse_entered" from="WeiterButton" to="." method="_on_weiter_button_mouse_entered"]
 [connection signal="pressed" from="WeiterButton" to="." method="_on_weiter_button_pressed"]
 [connection signal="animation_finished" from="Clouds" to="." method="_on_clouds_animation_finished"]
