@@ -54,7 +54,7 @@ func _on_swipe_area_should_shoot():
 
 
 func _on_visible_chameleon_gun_is_jamming():
-	$Trigger.play()
+	$Jamming.play()
 	$"../Progress".stop()
 	should_shoot_intern = false
 	Global.should_shoot = false

@@ -423,10 +423,12 @@ shape = SubResource("CapsuleShape2D_en00i")
 
 [node name="SetDown" type="AudioStreamPlayer" parent="Clamp"]
 stream = SubResource("AudioStreamRandomizer_y7s5h")
-volume_db = -6.0
+bus = &"SFX_Foley"
 
 [node name="PickUp" type="AudioStreamPlayer" parent="Clamp"]
 stream = SubResource("AudioStreamRandomizer_2lj7a")
+volume_db = 3.0
+bus = &"SFX_Foley"
 
 [node name="PouringClamp" type="Node2D" parent="."]
 visible = false
@@ -439,7 +441,7 @@ animation = &"no"
 
 [node name="Pouring" type="AudioStreamPlayer" parent="PouringClamp"]
 stream = SubResource("AudioStreamRandomizer_44r6e")
-volume_db = -9.0
+bus = &"SFX_Foley"
 
 [node name="Skillcheck" type="Node2D" parent="."]
 script = ExtResource("19_4kngl")
@@ -452,14 +454,17 @@ texture = ExtResource("19_vlw0g")
 
 [node name="Success" type="AudioStreamPlayer" parent="Skillcheck/Burette"]
 volume_db = -18.0
+bus = &"SFX_UI"
 
 [node name="Drip" type="AudioStreamPlayer" parent="Skillcheck/Burette"]
 stream = SubResource("AudioStreamRandomizer_0loq3")
-volume_db = 6.0
-bus = &"SFX"
+volume_db = 9.0
+bus = &"SFX_Foley"
 
 [node name="Failure" type="AudioStreamPlayer" parent="Skillcheck/Burette"]
 stream = ExtResource("32_hy0i5")
+volume_db = 6.0
+bus = &"SFX_UI"
 
 [node name="Bar" type="Area2D" parent="Skillcheck"]
 visible = false
@@ -525,7 +530,8 @@ one_shot = true
 
 [node name="Bubbling" type="AudioStreamPlayer" parent="Skillcheck"]
 stream = ExtResource("30_mvddd")
-volume_db = -18.0
+volume_db = -15.0
+bus = &"SFX_Foley"
 
 [node name="Camera2D" type="Camera2D" parent="Skillcheck"]
 position = Vector2(960, 540)
@@ -539,22 +545,20 @@ libraries = {
 
 [node name="321" type="AudioStreamPlayer" parent="Skillcheck"]
 stream = ExtResource("35_ba7c8")
-volume_db = -9.0
-bus = &"SFX"
+bus = &"SFX_UI"
 
 [node name="Meins" type="AudioStreamPlayer" parent="Skillcheck"]
 stream = ExtResource("36_ig04d")
-volume_db = -9.0
-bus = &"SFX"
+bus = &"SFX_UI"
 
 [node name="HoverGlass" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_qis1a")
 volume_db = -9.0
-bus = &"SFX"
+bus = &"SFX_Foley"
 
 [node name="HoverWood" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_m6pa1")
-bus = &"SFX"
+bus = &"SFX_Foley"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -567,7 +571,7 @@ sprite_frames = SubResource("SpriteFrames_mwo6c")
 stream = ExtResource("43_pgvcx")
 volume_db = -12.0
 autoplay = true
-bus = &"SFX"
+bus = &"SFX_Foley"
 
 [node name="HelpButton" parent="." instance=ExtResource("3_m8ddv")]
 unique_name_in_owner = true
