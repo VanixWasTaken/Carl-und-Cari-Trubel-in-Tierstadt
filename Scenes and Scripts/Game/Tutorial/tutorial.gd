@@ -19,14 +19,14 @@ func _ready():
 	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_creaks_var1.mp3"))
 	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind_var1.mp3"))
 	
-	MusicController._play_music("learning_by_doing", "tutorial")
+	MusicController._play_music("learning_by_doing", "tutorial", -18)
 	
 	#                   BARKS
 	var barkies = AudioStreamRandomizer.new()
 	$Barks.stream = barkies
 	for i in 3:
 		var f = i + 1
-		if Global.character == "Cari":
+		if Global.character == "Cari" || Global.character == "":
 			barkies.add_stream(i, load("res://Assets/Sound/VO/Tutorial/Barks/Carl/NPC/vo_npc_bark_carl_tutorial01_var" + str(f) + ".mp3"))
 		
 		elif Global.character == "Carl":
@@ -86,7 +86,7 @@ func _on_timer_timeout():
 		
 		for i in 3:
 			var f = i + 1
-			if Global.character == "Cari":
+			if Global.character == "Cari" || Global.character == "":
 				playback.add_stream(i, load("res://Assets/Sound/VO/Tutorial/Barks/Carl/NPC/vo_npc_bark_carl_tutorial02_var" + str(f) + ".mp3"))
 			
 			elif Global.character == "Carl":
@@ -110,3 +110,5 @@ func _on_animation_player_animation_finished(anim_name):
 	Global.cutscene_playing = false
 	var dialogue_instance = first_dialog.instantiate()
 	$"NPC Tutorial".add_child(dialogue_instance)
+	$Barks/Timer.wait_time = randf_range(5, 15)
+	$Barks/Timer.start()
