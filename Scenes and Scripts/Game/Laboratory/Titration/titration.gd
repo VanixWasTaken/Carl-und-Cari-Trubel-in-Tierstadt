@@ -17,6 +17,8 @@ func _ready():
 	add_child(dialog_instance)
 	$CanvasLayer/FadeAnimation.show()
 	$CanvasLayer/AnimationPlayer.play("fade_in")
+	
+	Global.laboratory_help_button_state == 5
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
