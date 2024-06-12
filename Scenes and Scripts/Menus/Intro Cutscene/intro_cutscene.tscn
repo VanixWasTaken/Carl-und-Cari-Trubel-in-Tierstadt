@@ -1,14 +1,15 @@
-[gd_scene load_steps=51 format=3 uid="uid://skc43dl2o124"]
+[gd_scene load_steps=52 format=3 uid="uid://skc43dl2o124"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.gd" id="1_jfymc"]
-[ext_resource type="Texture2D" uid="uid://caklkhjnajqs1" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame8.png" id="2_3md0j"]
-[ext_resource type="Texture2D" uid="uid://coxl4s5v8anxm" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame2.png" id="3_6djqm"]
-[ext_resource type="Texture2D" uid="uid://wkeuvrmaxiph" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame3.png" id="4_7xpag"]
-[ext_resource type="Texture2D" uid="uid://bjx7d88xms7gc" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame4.png" id="5_lsrvn"]
-[ext_resource type="Texture2D" uid="uid://dgr20mbpujm3c" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame5.png" id="6_5vpen"]
+[ext_resource type="Texture2D" uid="uid://caklkhjnajqs1" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame8.png" id="2_ldyjv"]
+[ext_resource type="Texture2D" uid="uid://coxl4s5v8anxm" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame2.png" id="2_wis1t"]
+[ext_resource type="Texture2D" uid="uid://wkeuvrmaxiph" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame3.png" id="3_1pnd0"]
+[ext_resource type="Texture2D" uid="uid://bjx7d88xms7gc" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame4.png" id="4_1xt6f"]
+[ext_resource type="Texture2D" uid="uid://dgr20mbpujm3c" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame5.png" id="5_rqfdd"]
 [ext_resource type="Texture2D" uid="uid://08234pe6u2oq" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame6.png" id="7_7sgsu"]
+[ext_resource type="Texture2D" uid="uid://bkskp4fnjscvk" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame1.png" id="8_wqe10"]
 [ext_resource type="Texture2D" uid="uid://dlbwvgnvb5cc4" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame7.png" id="8_yoqt0"]
-[ext_resource type="Texture2D" uid="uid://bkskp4fnjscvk" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame1.png" id="9_676rx"]
+[ext_resource type="Texture2D" uid="uid://hdp7qlnx66on" path="res://Assets/Art/Particles/rain.png" id="9_h5asj"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="10_0wlxo"]
 [ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="11_spyt2"]
 [ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="12_vgwtq"]
@@ -60,16 +61,16 @@ _data = {
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_6djqm")
+"texture": ExtResource("2_wis1t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_7xpag")
+"texture": ExtResource("3_1pnd0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_lsrvn")
+"texture": ExtResource("4_1xt6f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_5vpen")
+"texture": ExtResource("5_rqfdd")
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_7sgsu")
@@ -270,7 +271,7 @@ script = ExtResource("1_jfymc")
 [node name="Characters Talking" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_3md0j")
+texture = ExtResource("2_ldyjv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -303,7 +304,21 @@ autoplay = "new_animation"
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 3840.0
 offset_bottom = 1080.0
-texture = ExtResource("9_676rx")
+texture = ExtResource("8_wqe10")
+
+[node name="Rain" type="CPUParticles2D" parent="."]
+position = Vector2(1196, -47)
+amount = 120
+lifetime = 0.8
+texture = ExtResource("9_h5asj")
+emission_shape = 3
+emission_rect_extents = Vector2(1100, 1)
+gravity = Vector2(-1600, 4000)
+
+[node name="DeleteRain" type="Timer" parent="."]
+wait_time = 14.0
+one_shot = true
+autostart = true
 
 [node name="Dialog1" type="RichTextLabel" parent="."]
 visible = false
@@ -408,6 +423,7 @@ bus = &"SFX_UI"
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="timeout" from="DeleteRain" to="." method="_on_delete_rain_timeout"]
 [connection signal="animation_finished" from="Dialog1/AnimationPlayer" to="." method="_on_animation_player_dialog1_animation_finished"]
 [connection signal="animation_finished" from="Dialog2/AnimationPlayer" to="." method="_on_animation_player_dialog2_animation_finished"]
 [connection signal="mouse_entered" from="WeiterButton" to="." method="_on_weiter_button_mouse_entered"]

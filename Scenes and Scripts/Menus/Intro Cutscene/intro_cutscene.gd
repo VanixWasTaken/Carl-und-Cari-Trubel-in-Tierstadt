@@ -3,8 +3,8 @@ extends Node2D
 var next_scene = preload("res://Scenes and Scripts/Menus/Character Selection/character_selection.tscn")
 
 var button_pressed = 0
-
 var narrator_count = 0
+
 
 
 func _ready():
@@ -82,3 +82,7 @@ func _on_telephone_grab_finished():
 
 func _on_weiter_button_mouse_entered():
 	$Hover.play()
+
+
+func _on_delete_rain_timeout():
+	$Rain.queue_free()

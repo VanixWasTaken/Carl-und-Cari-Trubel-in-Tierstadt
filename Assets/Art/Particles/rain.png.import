@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0gbk4t47sqy"
-path="res://.godot/imported/lab_three_flasks.png-d623688b0e9e14a2afec9bf2968b33d2.ctex"
+uid="uid://hdp7qlnx66on"
+path="res://.godot/imported/rain.png-94a06854c7ae809bd9002e4a1bf8137e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.png"
-dest_files=["res://.godot/imported/lab_three_flasks.png-d623688b0e9e14a2afec9bf2968b33d2.ctex"]
+source_file="res://Assets/Art/Particles/rain.png"
+dest_files=["res://.godot/imported/rain.png-94a06854c7ae809bd9002e4a1bf8137e.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
