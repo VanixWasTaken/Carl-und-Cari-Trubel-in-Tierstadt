@@ -11,6 +11,7 @@ func _ready():
 
 
 func _on_button_button_up():
+	MusicController._fade_to_volume(-18, 1.5)
 	get_tree().change_scene_to_packed(next_scene)
 
 

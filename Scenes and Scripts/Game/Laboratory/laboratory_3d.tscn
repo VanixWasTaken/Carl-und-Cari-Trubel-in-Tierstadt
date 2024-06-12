@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=75 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -38,7 +38,6 @@
 [ext_resource type="AudioStream" uid="uid://b8ig70axv634b" path="res://Assets/Sound/SFX/Ambience/Laboratory/sfx_laboratory_ambience_ventilation_var1.mp3" id="31_cxgd7"]
 [ext_resource type="PackedScene" uid="uid://edbe0ktmaocs" path="res://Scenes and Scripts/Game/Laboratory/Objects/back_wall_window.tscn" id="31_ssppo"]
 [ext_resource type="Texture2D" uid="uid://go2bolrvsm5n" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chemist_idle1.png" id="39_3oexe"]
-[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png" id="39_g2kmv"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="45_xk025"]
 [ext_resource type="AudioStream" uid="uid://crddvii1q3egk" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var2.mp3" id="46_d6ydu"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="47_iidai"]
@@ -200,7 +199,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("39_g2kmv")
+"texture": null
 }],
 "loop": true,
 "name": &"visible",
@@ -332,7 +331,11 @@ skeleton = NodePath("../CollisionShape3D")
 [node name="CutsceneFootsteps" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Walls/WallRight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98168, 0, 0)
 stream = SubResource("AudioStreamRandomizer_y7eme")
-bus = &"SFX"
+unit_size = 50.0
+max_distance = 65.0
+panning_strength = 0.5
+bus = &"SFX_Foley"
+attenuation_filter_cutoff_hz = 20500.0
 
 [node name="Timer" type="Timer" parent="NavigationRegion3D/Walls/WallRight/CutsceneFootsteps"]
 wait_time = 4.0
@@ -340,6 +343,11 @@ autostart = true
 
 [node name="CutsceneDoorOpen" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Walls/WallRight"]
 stream = ExtResource("10_npryc")
+unit_size = 50.0
+max_distance = 65.0
+panning_strength = 0.5
+bus = &"SFX_Foley"
+attenuation_filter_cutoff_hz = 20500.0
 
 [node name="Timer2" type="Timer" parent="NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen"]
 wait_time = 3.5
@@ -397,7 +405,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.54585, 4.50758, -3.43774)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.79592, 0)
 stream = ExtResource("14_wsmq2")
 volume_db = -15.0
-bus = &"SFX"
+unit_size = 50.0
+max_distance = 65.0
+panning_strength = 0.5
+bus = &"SFX_Foley"
+attenuation_filter_cutoff_hz = 20500.0
 
 [node name="Shelf" parent="Objects" instance=ExtResource("12_q43od")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.311, 8.6548, -4.63395)
@@ -414,8 +426,12 @@ transform = Transform3D(1, 1.53232e-08, 0, 2.66876e-08, 1, 8.59272e-09, -2.98023
 [node name="FaucetAmbience" type="AudioStreamPlayer3D" parent="Objects/Sink"]
 stream = ExtResource("18_y1ock")
 volume_db = 12.0
+unit_size = 50.0
 autoplay = true
-bus = &"SFX"
+max_distance = 65.0
+panning_strength = 0.5
+bus = &"SFX_Foley"
+attenuation_filter_cutoff_hz = 20500.0
 
 [node name="Chameleon" type="AnimatedSprite3D" parent="Objects"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -11.6343, 7.22599, -2.45729)
@@ -427,9 +443,13 @@ frame = 5
 frame_progress = 0.656502
 
 [node name="ChameleonFoley" type="AudioStreamPlayer3D" parent="Objects/Chameleon"]
+unit_size = 50.0
 max_db = 0.0
 autoplay = true
-bus = &"SFX"
+max_distance = 65.0
+panning_strength = 0.5
+bus = &"SFX_Foley"
+attenuation_filter_cutoff_hz = 20500.0
 
 [node name="Ventilation" type="Sprite3D" parent="Objects"]
 transform = Transform3D(0.395, 0, 0, 0, 0.395, 0, 0, 0, 0.395, 18.3983, 11.7169, -2.03031)
@@ -438,9 +458,12 @@ texture = ExtResource("20_rmdpi")
 [node name="VentAmbience" type="AudioStreamPlayer3D" parent="Objects/Ventilation"]
 transform = Transform3D(2.53165, 0, 0, 0, 2.53165, 0, 0, 0, 2.53165, 26.8007, -2.9278, 0)
 stream = ExtResource("31_cxgd7")
+unit_size = 50.0
 autoplay = true
-max_distance = 20.0
-bus = &"SFX"
+max_distance = 65.0
+panning_strength = 0.5
+bus = &"SFX_Foley"
+attenuation_filter_cutoff_hz = 20500.0
 
 [node name="TrashCan" type="Sprite3D" parent="Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7881, 1.42714, 1.53996)
@@ -518,27 +541,32 @@ shape = SubResource("BoxShape3D_aipm7")
 
 [node name="Hover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_o7v1k")
-volume_db = -15.0
-bus = &"SFX"
+bus = &"SFX_UI"
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_2rt3b")
-volume_db = -18.0
-bus = &"SFX"
+volume_db = -3.0
+bus = &"SFX_UI"
 
 [node name="VentAmbience2" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9645, 6.75853, -4.38978)
 stream = ExtResource("31_cxgd7")
+unit_size = 50.0
 autoplay = true
-max_distance = 20.0
-bus = &"SFX"
+max_distance = 65.0
+panning_strength = 0.5
+bus = &"SFX_Foley"
+attenuation_filter_cutoff_hz = 20500.0
 
 [node name="VentAmbience3" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4543, 7.7588, 0.178772)
 stream = ExtResource("31_cxgd7")
+unit_size = 50.0
 autoplay = true
-max_distance = 20.0
-bus = &"SFX"
+max_distance = 65.0
+panning_strength = 0.5
+bus = &"SFX_Foley"
+attenuation_filter_cutoff_hz = 20500.0
 
 [connection signal="timeout" from="NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen/Timer2" to="." method="_on_timer_2_timeout"]
