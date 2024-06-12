@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=76 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -38,6 +38,7 @@
 [ext_resource type="AudioStream" uid="uid://b8ig70axv634b" path="res://Assets/Sound/SFX/Ambience/Laboratory/sfx_laboratory_ambience_ventilation_var1.mp3" id="31_cxgd7"]
 [ext_resource type="PackedScene" uid="uid://edbe0ktmaocs" path="res://Scenes and Scripts/Game/Laboratory/Objects/back_wall_window.tscn" id="31_ssppo"]
 [ext_resource type="Texture2D" uid="uid://go2bolrvsm5n" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chemist_idle1.png" id="39_3oexe"]
+[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png" id="39_twgnr"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="45_xk025"]
 [ext_resource type="AudioStream" uid="uid://crddvii1q3egk" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var2.mp3" id="46_d6ydu"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="47_iidai"]
@@ -199,7 +200,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("39_twgnr")
 }],
 "loop": true,
 "name": &"visible",
@@ -459,11 +460,11 @@ texture = ExtResource("20_rmdpi")
 transform = Transform3D(2.53165, 0, 0, 0, 2.53165, 0, 0, 0, 2.53165, 26.8007, -2.9278, 0)
 stream = ExtResource("31_cxgd7")
 unit_size = 50.0
-max_db = -6.0
 autoplay = true
 max_distance = 65.0
 panning_strength = 0.5
 bus = &"SFX_Foley"
+attenuation_filter_cutoff_hz = 20500.0
 
 [node name="TrashCan" type="Sprite3D" parent="Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7881, 1.42714, 1.53996)
@@ -528,7 +529,7 @@ visible = false
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="NPC Chameleon"]
 transform = Transform3D(-0.831219, 0, -7.26675e-08, 0, 0.831219, 0, 7.26675e-08, 0, -0.831219, -1.16473, 5.15479, 1.18985)
 sprite_frames = SubResource("SpriteFrames_iras5")
-animation = &"idle"
+animation = &"visible"
 
 [node name="DialogArea" type="Area3D" parent="NPC Chameleon"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000160217, -0.0550776, 0.000656128)
@@ -552,21 +553,21 @@ bus = &"SFX_UI"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9645, 6.75853, -4.38978)
 stream = ExtResource("31_cxgd7")
 unit_size = 50.0
-max_db = -6.0
 autoplay = true
 max_distance = 65.0
 panning_strength = 0.5
 bus = &"SFX_Foley"
+attenuation_filter_cutoff_hz = 20500.0
 
 [node name="VentAmbience3" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4543, 7.7588, 0.178772)
 stream = ExtResource("31_cxgd7")
 unit_size = 50.0
-max_db = -6.0
 autoplay = true
 max_distance = 65.0
 panning_strength = 0.5
 bus = &"SFX_Foley"
+attenuation_filter_cutoff_hz = 20500.0
 
 [connection signal="timeout" from="NavigationRegion3D/Walls/WallRight/CutsceneFootsteps/Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen/Timer2" to="." method="_on_timer_2_timeout"]
