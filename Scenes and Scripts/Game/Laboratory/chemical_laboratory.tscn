@@ -463,20 +463,23 @@ shape = SubResource("RectangleShape2D_rewly")
 [node name="Dragging" type="AudioStreamPlayer" parent="PulverBowl/PulverBowl"]
 stream = SubResource("AudioStreamRandomizer_qgpbb")
 volume_db = -6.0
+bus = &"SFX_Foley"
 
 [node name="Interact" type="AudioStreamPlayer" parent="PulverBowl"]
 stream = SubResource("AudioStreamRandomizer_6cgod")
-volume_db = -25.0
-bus = &"SFX"
+bus = &"SFX_Foley"
 
 [node name="PouringWater" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_fvflv")
+volume_db = -3.0
+bus = &"SFX_Foley"
 
 [node name="PulverPour" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("11_5gyvt")
-volume_db = -20.0
+volume_db = -15.0
+bus = &"SFX_Foley"
 
 [node name="DialogPowder1" parent="." instance=ExtResource("54_l6ekg")]
 
@@ -505,7 +508,7 @@ metadata/_edit_group_ = true
 [node name="Interact" type="AudioStreamPlayer" parent="RedPulver/RedPulverSprite"]
 stream = SubResource("AudioStreamRandomizer_6cgod")
 volume_db = -25.0
-bus = &"SFX"
+bus = &"SFX_Foley"
 
 [node name="PurplePulver" type="Area2D" parent="."]
 position = Vector2(1747, 234)
@@ -529,7 +532,7 @@ metadata/_edit_group_ = true
 [node name="Interact" type="AudioStreamPlayer" parent="PurplePulver/PurplePulverSprite"]
 stream = SubResource("AudioStreamRandomizer_6cgod")
 volume_db = -25.0
-bus = &"SFX"
+bus = &"SFX_Foley"
 
 [node name="YellowPulver" type="Area2D" parent="."]
 position = Vector2(1733, 570)
@@ -553,7 +556,7 @@ metadata/_edit_group_ = true
 [node name="Interact" type="AudioStreamPlayer" parent="YellowPulver/YellowPulverSprite"]
 stream = SubResource("AudioStreamRandomizer_6cgod")
 volume_db = -25.0
-bus = &"SFX"
+bus = &"SFX_Foley"
 
 [node name="WaterCup" type="Area2D" parent="."]
 position = Vector2(151, 220)
@@ -576,10 +579,12 @@ metadata/_edit_group_ = true
 [node name="Interact" type="AudioStreamPlayer" parent="WaterCup/WaterCup"]
 stream = SubResource("AudioStreamRandomizer_6cgod")
 volume_db = -25.0
-bus = &"SFX"
+bus = &"SFX_Foley"
 
 [node name="Sloshing" type="AudioStreamPlayer" parent="WaterCup/WaterCup"]
 stream = SubResource("AudioStreamRandomizer_goukw")
+volume_db = 6.0
+bus = &"SFX_Foley"
 
 [node name="Marker2D2" type="Marker2D" parent="."]
 position = Vector2(684, 328)
@@ -595,17 +600,21 @@ scale = Vector2(0.769601, 0.806024)
 
 [node name="Hover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_1g1u0")
-volume_db = -15.0
+bus = &"SFX_UI"
 
 [node name="Dragging" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_qgpbb")
-volume_db = -6.0
+bus = &"SFX_Foley"
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPolyphonic_t54dx")
+autoplay = true
+stream_paused = true
+bus = &"SFX_Foley"
 
 [node name="StopPouring" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("61_gtl2m")
+bus = &"SFX_Foley"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
