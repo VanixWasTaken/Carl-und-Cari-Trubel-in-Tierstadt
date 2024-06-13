@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://daswfhvjsa7jh"]
+[gd_scene load_steps=26 format=3 uid="uid://daswfhvjsa7jh"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Player/player.gd" id="1_pxkst"]
 [ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Art/Characters/Cari/Headshot/icon_cari1.PNG" id="1_uekr7"]

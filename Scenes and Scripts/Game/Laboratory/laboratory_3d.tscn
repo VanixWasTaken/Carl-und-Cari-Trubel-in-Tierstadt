@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=76 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]

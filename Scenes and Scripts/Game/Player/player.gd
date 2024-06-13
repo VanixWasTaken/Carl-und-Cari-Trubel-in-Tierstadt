@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var speed = 500
+var speed = 400
 var acceleration = 50
 @onready var nav: NavigationAgent2D = $NavigationAgent2D
 var object_name 
@@ -35,7 +35,7 @@ func _physics_process(delta):
 					$AnimatedSprite2D.play("cari_animation")
 			$Footsteps.play()
 			if position.distance_to(nav.target_position) > 10:
-				speed = 300
+				speed = 400
 
 
 
@@ -55,8 +55,8 @@ func _physics_process(delta):
 			$Footsteps.stop()
 	
 	
-	if speed > 0:
-		$RunParticles.emitting = true
+	#if speed > 0:
+		#$RunParticles.emitting = true
 
 
 
@@ -67,8 +67,6 @@ func _get_clicked_object(objects_name, scenes_name):
 	object_name = objects_name
 	scene_name = scenes_name
 	if area_name != null:
-		print(area_name)
-		print(str(object_name) + " REEEEESDADS")
 		if in_area && area_name .contains(object_name):
 			enter_building_prompt()
 
