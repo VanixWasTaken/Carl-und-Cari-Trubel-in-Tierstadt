@@ -56,8 +56,6 @@ func _get_clicked_object(objects_name, scenes_name):
 	object_name = objects_name
 	scene_name = scenes_name
 	if area_name != null:
-		print(area_name)
-		print(str(object_name) + " REEEEESDADS")
 		if in_area && area_name .contains(object_name):
 			enter_building_prompt()
 
