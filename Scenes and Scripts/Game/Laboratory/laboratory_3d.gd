@@ -25,14 +25,15 @@ var picked_up_chemicals = false
 
 
 func _ready():
-
-	Global.talked_to_chameleon = true
-	Global.talked_to_chameleon_2 = true
-	Global.talked_to_chameleon_3 = true
-	Global.talked_to_chameleon_4 = true
-	Global.return_laboratory_3 = true
-	Global.return_laboratory_1 = true
-	Global.return_laboratory_2 = true
+	Global.inside_laboratory = true
+	#Global.talked_to_chameleon = true
+	#Global.talked_to_chameleon_2 = true
+	#Global.talked_to_chameleon_3 = true
+	#Global.talked_to_chameleon_4 = true
+	#Global.talked_to_chameleon_5 = true
+	#Global.return_laboratory_3 = true
+	#Global.return_laboratory_1 = true
+	#Global.return_laboratory_2 = true
 	player = get_tree().get_first_node_in_group("Player")
 	if Global.return_laboratory_1:
 		Global.lab_cutscene_played == true
@@ -166,4 +167,5 @@ func change_scene():
 
 func _on_exit_body_entered(body):
 	if body.get_name() == "Player":
+		Global.completed_jobs.append("Laboratory Building")
 		player.play_fade_out()

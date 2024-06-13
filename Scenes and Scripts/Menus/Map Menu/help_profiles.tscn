@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://buqls66gw8m7y"]
+
+[ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="1_immbx"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Menus/Map Menu/help_profiles.gd" id="2_jn6gl"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="2_vc7mt"]
+[ext_resource type="VideoStream" path="res://Assets/Videos/profile_explanation.ogv" id="3_makcr"]
+[ext_resource type="Texture2D" uid="uid://7vqjfkop4ysv" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button.png" id="4_ltiuw"]
+[ext_resource type="Texture2D" uid="uid://dpjjv7rg73iow" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button_clicked.png" id="5_6c7i7"]
+[ext_resource type="Texture2D" uid="uid://bdbjnb85fqnnx" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button_hover.png" id="6_iewgx"]
+
+[node name="HelpProfiles" type="TextureRect"]
+offset_right = 65.0
+offset_bottom = 63.0
+texture = ExtResource("1_immbx")
+script = ExtResource("2_jn6gl")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 394.0
+offset_right = 1649.0
+offset_bottom = 879.0
+theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
+theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
+theme_override_constants/outline_size = 15
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("2_vc7mt")
+theme_override_font_sizes/font_size = 25
+text = "Du hast dein erstes Profil erlangt. Klick oben links auf die Notiz um es aufzurufen.
+Du kannst auf der Karte zu jeder Zeit deine Profilen betrachten. Sie sind zusammenfassungen über die Berufe die gespielt hast. Außerdem kannst du dort noch einmal deine abgegebenen Bewertungen betrachten.
+
+Bitte denke daran bevor du gehst, klicke noch einmal auf \"download\" bei deinen Lieblingsjobs, damit du diese deinen Lehrern/Eltern vorzeigen kannst."
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 404.0
+offset_right = 2212.0
+offset_bottom = 1492.0
+scale = Vector2(0.35, 0.35)
+stream = ExtResource("3_makcr")
+volume_db = -80.0
+autoplay = true
+loop = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1459.0
+offset_top = 163.0
+offset_right = 1690.0
+offset_bottom = 379.0
+texture_normal = ExtResource("4_ltiuw")
+texture_pressed = ExtResource("5_6c7i7")
+texture_hover = ExtResource("6_iewgx")
+
+[node name="Headline" type="Label" parent="."]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 189.0
+offset_right = 1414.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
+theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_vc7mt")
+theme_override_font_sizes/font_size = 111
+text = "Was ist ein Profil?"
+
+[connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]

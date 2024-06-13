@@ -1050,7 +1050,6 @@ mouse_filter = 0
 texture = ExtResource("15_qwl7x")
 
 [node name="VoiceOver" type="AudioStreamPlayer" parent="."]
-bus = &"Dialogue"
 
 [node name="Hover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_cvb3i")
