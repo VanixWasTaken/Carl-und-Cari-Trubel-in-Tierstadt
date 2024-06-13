@@ -310,6 +310,7 @@ texture = ExtResource("8_wqe10")
 position = Vector2(1196, -47)
 amount = 120
 lifetime = 0.8
+preprocess = 2.0
 texture = ExtResource("9_h5asj")
 emission_shape = 3
 emission_rect_extents = Vector2(1100, 1)
