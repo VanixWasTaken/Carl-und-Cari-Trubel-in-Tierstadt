@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://daswfhvjsa7jh"]
+[gd_scene load_steps=25 format=3 uid="uid://daswfhvjsa7jh"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Player/player.gd" id="1_pxkst"]
 [ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Art/Characters/Cari/Headshot/icon_cari1.PNG" id="1_uekr7"]
@@ -92,6 +92,9 @@ _data = {
 "fade_out": SubResource("Animation_ltvyy"),
 "new_animation": SubResource("Animation_0uxyh")
 }
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ih842"]
+radius = 43.8292
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_pxkst")
@@ -200,6 +203,9 @@ theme_override_colors/font_color = Color(0.728822, 0.728822, 0.728822, 1)
 theme_override_fonts/font = ExtResource("9_xfhi7")
 text = "Dies ist eine Pre-Alpha Version und repräsentiert nicht das fertige Produkt."
 horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ih842")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
