@@ -5,6 +5,9 @@ var player_inside = false
 var clicked_on = false
 var dialog_scene = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Band Story Dialog/band_member_dialog_1.tscn")
 
+func _ready():
+	if Global.completed_jobs.size() >= 1:
+		show()
 
 func _input(event):
 	if event.is_action_released("left_click") && mouse_inside && player_inside:
@@ -36,6 +39,7 @@ func start_dialog():
 		var dialog_instance
 		dialog_instance = dialog_scene.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
+		$"../BarbaraNPC".show()
 
 func _on_area_2d_body_exited(body):
 	player_inside = false

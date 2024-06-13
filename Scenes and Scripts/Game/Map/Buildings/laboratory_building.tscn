@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_351ux"]
-size = Vector2(345, 262)
+size = Vector2(281, 231)
 
 [node name="Laboratory Building" type="Node2D"]
 position = Vector2(263, 127)
@@ -59,14 +59,14 @@ position = Vector2(1080, 813)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chemie Labor"]
 position = Vector2(-852, -671)
 scale = Vector2(0.6625, 0.6625)
-polygon = PackedVector2Array(-15.0943, -30.1887, -9.05658, -371.321, 102.642, -363.774, 111.698, 36.2264, -470.943, 42.2641, -472.453, -36.2264)
+polygon = PackedVector2Array(-81.5094, -43.7736, -76.9811, -381.887, -21.1321, -368.302, -24.1509, 19.6226, -478.491, 19.6226, -472.453, -36.2264)
 
 [node name="Chemie Labor Maus" type="Area2D" parent="."]
 collision_layer = 128
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chemie Labor Maus"]
-position = Vector2(52.5, 10)
+position = Vector2(32.5, -5.5)
 shape = SubResource("RectangleShape2D_351ux")
 
 [connection signal="mouse_entered" from="Chemie Labor Maus" to="." method="_on_area_2d_mouse_entered"]

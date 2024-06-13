@@ -6,6 +6,8 @@ var clicked_on = false
 var dialog_scene = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Band Story Dialog/band_member_dialog_3.tscn")
 
 
+
+
 func _input(event):
 	if event.is_action_released("left_click") && mouse_inside && player_inside:
 		start_dialog()
