@@ -3,10 +3,14 @@ extends Node2D
 
 func _on_carl_button_button_up():
 	Global.character = "Carl"
+	MusicController._fade_to_volume(-80, 1)
+	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_packed(tutorial_scene)
 
 func _on_cari_button_button_up():
 	Global.character = "Cari"
+	MusicController._fade_to_volume(-80, 1)
+	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_packed(tutorial_scene)
 
 func _on_carl_button_button_down():

@@ -41,8 +41,12 @@ func move_to_target(delta):
 	if Global.character == "Carl":
 		if distance_to_target.x > 0 && !Global.dialog_playing:
 			$AnimatedSprite3D.play("carl_walk_left")
+			if !$Footsteps.playing:
+				$Footsteps.play()
 		if distance_to_target.x < 0 && !Global.dialog_playing:
 			$AnimatedSprite3D.play("carl_walk_right")
+			if !$Footsteps.playing:
+				$Footsteps.play()
 		if navigation_agent.is_target_reachable() == true:
 			if navigation_agent.distance_to_target() <= 0.5:
 				speed = 0
@@ -55,8 +59,12 @@ func move_to_target(delta):
 	elif Global.character == "Cari" || Global.character == "":
 		if distance_to_target.x > 0 && !Global.dialog_playing :
 			$AnimatedSprite3D.play("cari_walk_left")
+			if !$Footsteps.playing:
+				$Footsteps.play()
 		if distance_to_target.x < 0 && !Global.dialog_playing :
 			$AnimatedSprite3D.play("cari_walk_right")
+			if !$Footsteps.playing:
+				$Footsteps.play()
 		if navigation_agent.is_target_reachable() == true:
 			if navigation_agent.distance_to_target() <= 0.5:
 				speed = 0
