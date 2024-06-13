@@ -81,7 +81,7 @@ func _on_dialog_area_3d_body_exited(body):
 #                                 BARKS
 func _on_timer_timeout():
 	
-	if got_key:
+	if got_key and !Global.open_tutorial_door:
 		var playback = AudioStreamRandomizer.new()
 		$Barks.stream = playback
 		

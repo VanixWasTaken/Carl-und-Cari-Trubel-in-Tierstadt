@@ -82,6 +82,7 @@ func _process(delta):
 func _on_door_area_3d_body_entered(body):
 	if body.get_name() == "Player":
 		player.play_fade_out()
+		MusicController._fade_to_volume(-60, 1)
 
 
 

@@ -12,7 +12,7 @@ func _process(delta):
 # Used to make the Player start a piece of music, by giving its name, the area and the volume that is needed
 func _play_music(piece_name: String, area: String, volume: float = 0, transition_time: float = 1.125):
 	MusicController.stream = load("res://Assets/Sound/BGM/" + area + "/mus_" + area +"_" + piece_name + ".mp3")
-	MusicController.volume_db = -80
+	MusicController.volume_db = -60
 	MusicController.play()
 	get_tree().create_tween().tween_property(MusicController, "volume_db", volume, transition_time)
 
