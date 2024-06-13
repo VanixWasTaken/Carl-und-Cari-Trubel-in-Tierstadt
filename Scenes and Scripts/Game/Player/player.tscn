@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://daswfhvjsa7jh"]
+[gd_scene load_steps=25 format=3 uid="uid://daswfhvjsa7jh"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Player/player.gd" id="1_pxkst"]
 [ext_resource type="Texture2D" uid="uid://b27ibfyikph52" path="res://Assets/Art/Characters/Cari/Headshot/icon_cari1.PNG" id="1_uekr7"]
 [ext_resource type="Texture2D" uid="uid://fji17txvsqan" path="res://Assets/Art/Characters/Cari/Headshot/icon_cari2.PNG" id="2_3hmks"]
+[ext_resource type="Texture2D" uid="uid://bemadb487koum" path="res://Assets/Art/Particles/mini_cloud1.png" id="2_l01dj"]
 [ext_resource type="AudioStream" uid="uid://dc1vs6qw5sspl" path="res://Assets/Sound/SFX/Foley/World/sfx_world_foley_footstep_var1.mp3" id="4_bip16"]
 [ext_resource type="Texture2D" uid="uid://ctcnsi4vmixqr" path="res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG" id="4_q3ciq"]
 [ext_resource type="Texture2D" uid="uid://bwahyatf0uvai" path="res://Assets/Art/Characters/Carl/Headshot/icon_carl2.PNG" id="5_5msf1"]
@@ -95,6 +96,18 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_pxkst")
+
+[node name="RunParticles" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 3
+lifetime = 0.4
+one_shot = true
+texture = ExtResource("2_l01dj")
+emission_shape = 1
+emission_sphere_radius = 15.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 100.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.2, 0.2)

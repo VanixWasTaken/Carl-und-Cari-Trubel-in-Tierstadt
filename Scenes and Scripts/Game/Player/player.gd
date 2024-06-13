@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var speed = 300
+var speed = 0
 var acceleration = 50
 @onready var nav: NavigationAgent2D = $NavigationAgent2D
 var object_name 
@@ -7,6 +7,7 @@ var scene_name
 var area_name
 var building
 var in_area = false
+
 
 func _ready():
 	$CanvasLayer/FadeAnimation.visible = true
@@ -36,6 +37,8 @@ func _physics_process(delta):
 			if position.distance_to(nav.target_position) > 10:
 				speed = 300
 
+
+
 	direction = nav.get_next_path_position() - global_position
 	direction = direction.normalized()
 	velocity = velocity.lerp(direction * speed, acceleration * delta)
@@ -45,12 +48,20 @@ func _physics_process(delta):
 			speed = 0
 			$AnimatedSprite2D.stop()
 			$Footsteps.stop()
-
 	elif nav.is_target_reachable() == true:
 		if position.distance_to(nav.target_position) <= 10:
 			speed = 0
 			$AnimatedSprite2D.stop()
 			$Footsteps.stop()
+	
+	
+	if speed > 0:
+		$RunParticles.emitting = true
+
+
+
+
+
 
 func _get_clicked_object(objects_name, scenes_name):
 	object_name = objects_name
@@ -69,6 +80,9 @@ func _on_area_2d_area_entered(area):
 		enter_building_prompt()
 
 
+
+	
+	
 
 func _on_footsteps_finished():
 	if speed > 0:
