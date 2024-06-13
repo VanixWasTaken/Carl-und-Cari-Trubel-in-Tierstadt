@@ -97,7 +97,7 @@ func add_left_dialog_box():
 		same_speaker = true
 	
 	elif dialogs == 6:
-		Global.laboratory_help_button_state += 1
+		Global.laboratory_help_button_state = 5
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
