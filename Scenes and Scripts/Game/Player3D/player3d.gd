@@ -2,6 +2,9 @@ extends CharacterBody3D
 @onready var navigation_agent:= $NavigationAgent3D
 var speed = 15
 var result
+var last_direction : String
+
+
 
 func _ready():
 	$CanvasLayer/FadeAnimation.visible = true
@@ -55,16 +58,21 @@ func move_to_target(delta):
 	if Global.character == "Carl":
 		if distance_to_target.x > 0 && !Global.dialog_playing:
 			$AnimatedSprite3D.play("carl_walk_left")
+			last_direction = "LEFT"
 			if !$Footsteps.playing:
 				$Footsteps.play()
 		if distance_to_target.x < 0 && !Global.dialog_playing:
 			$AnimatedSprite3D.play("carl_walk_right")
+			last_direction = "RIGHT"
 			if !$Footsteps.playing:
 				$Footsteps.play()
 		if navigation_agent.is_target_reachable() == true:
 			if navigation_agent.distance_to_target() <= 0.5:
 				speed = 0
-				$AnimatedSprite3D.play("carl_idle")
+				if last_direction == "LEFT":
+					$AnimatedSprite3D.play("carl_idle_left")
+				elif last_direction == "RIGHT":
+					$AnimatedSprite3D.play("carl_idle_right")
 				navigation_agent.target_position = global_position
 		elif navigation_agent.is_target_reachable() == false:
 			navigation_agent.target_position = navigation_agent.get_final_position()
@@ -73,16 +81,21 @@ func move_to_target(delta):
 	elif Global.character == "Cari" || Global.character == "":
 		if distance_to_target.x > 0 && !Global.dialog_playing :
 			$AnimatedSprite3D.play("cari_walk_left")
+			last_direction = "LEFT"
 			if !$Footsteps.playing:
 				$Footsteps.play()
 		if distance_to_target.x < 0 && !Global.dialog_playing :
 			$AnimatedSprite3D.play("cari_walk_right")
+			last_direction = "RIGHT"
 			if !$Footsteps.playing:
 				$Footsteps.play()
 		if navigation_agent.is_target_reachable() == true:
 			if navigation_agent.distance_to_target() <= 0.5:
 				speed = 0
-				$AnimatedSprite3D.play("cari_idle")
+				if last_direction == "LEFT":
+					$AnimatedSprite3D.play("cari_idle_left")
+				elif last_direction == "RIGHT":
+					$AnimatedSprite3D.play("cari_idle_right")
 				navigation_agent.target_position = global_position
 		elif navigation_agent.is_target_reachable() == false:
 			navigation_agent.target_position = navigation_agent.get_final_position()
