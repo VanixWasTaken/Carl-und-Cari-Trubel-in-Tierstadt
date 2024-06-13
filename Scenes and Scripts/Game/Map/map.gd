@@ -1,6 +1,6 @@
 extends Node2D
 
-
+@onready var main_story_dialog_1 = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn")
 @onready var laboratory_quiz = preload("res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.tscn")
 var job_buildings
 
@@ -22,7 +22,14 @@ func _ready():
 			var building_name = buildings.get_name()
 			if building_name == jobs:
 				buildings.can_enter = false
-		
+				
+	if Global.completed_jobs.size() >= 1:
+		$"HUD/Help Movement".queue_free()
+		Global.menu_open = false
+	
+	if Global.completed_jobs.size() == 1:
+		var dialog_instance = main_story_dialog_1.instantiate()
+		get_tree().get_current_scene().add_child(dialog_instance)
 
 
 
