@@ -8,7 +8,8 @@ var building_name = "null"
 @onready var no_shader = preload("res://Shader/no_shader.tres")
 var animation_frame = 0
 var next_scene 
-
+var can_enter = true
+@onready var visited_dialog = preload("res://Scenes and Scripts/Dialog/Map Dialoge/already_visited_job_dialog.tscn")
 func _ready():
 	building_name = get_tree().get_first_node_in_group("BuildingArea").get_name()
 	MusicController._play_music("adventure", "map", -20)
@@ -24,7 +25,13 @@ func _process(delta):
 		animation_frame = 0
 	if mouse_inside and Input.is_action_just_pressed("left_click"):
 		%Click.play()
-		$"../Player"._get_clicked_object(building_name, scene_name)
+		if can_enter:
+			$"../Player"._get_clicked_object(building_name, scene_name)
+		else:
+			mouse_inside = false
+			var dialog_instance
+			dialog_instance = visited_dialog.instantiate()
+			get_tree().get_current_scene().add_child(dialog_instance)
 
 # handles the input for clicking on the house to enter the level
 func _on_area_2d_mouse_entered():

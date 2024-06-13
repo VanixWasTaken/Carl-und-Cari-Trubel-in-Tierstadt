@@ -2,7 +2,7 @@ extends Node2D
 
 
 @onready var laboratory_quiz = preload("res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.tscn")
-
+var job_buildings
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,6 +15,14 @@ func _ready():
 		Global.moving_allowed = false
 		Global.inside_laboratory = false
 		$HUD/HelpProfiles.show()
+	
+	job_buildings = get_tree().get_nodes_in_group("Buildings")
+	for jobs in Global.completed_jobs:
+		for buildings in job_buildings:
+			var building_name = buildings.get_name()
+			if building_name == jobs:
+				buildings.can_enter = false
+		
 
 
 
