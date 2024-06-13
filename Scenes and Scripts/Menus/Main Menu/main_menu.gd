@@ -13,6 +13,11 @@ func _process(delta):
 
 # Input for usability
 func _on_start_button_up():
+	$Clouds.play_backwards("default")
+	$Clouds.visible = true
+	$CloudsWhoosch.play()
+	MusicController._fade_to_volume(-80, 1.125)
+	await get_tree().create_timer(1.125).timeout
 	get_tree().change_scene_to_packed(next_scene)
 
 func _on_options_button_up():

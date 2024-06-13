@@ -10,10 +10,12 @@ func _process(delta):
 	pass
 
 # Used to make the Player start a piece of music, by giving its name, the area and the volume that is needed
-func _play_music(piece_name: String, area: String, volume: float = 0):
+func _play_music(piece_name: String, area: String, volume: float = 0, transition_time: float = 1.125):
 	MusicController.stream = load("res://Assets/Sound/BGM/" + area + "/mus_" + area +"_" + piece_name + ".mp3")
-	MusicController.volume_db = volume
+	MusicController.volume_db = -80
 	MusicController.play()
+	get_tree().create_tween().tween_property(MusicController, "volume_db", volume, transition_time)
+
 
 # Used to stop the music, to make the music stop for a certain amount of time --> give the method a time (float)
 func _stop_music(time: float = 0):
@@ -27,5 +29,5 @@ func _stop_music(time: float = 0):
 ##### and the desired volume, using the tween node
 ##### https://docs.godotengine.org/de/4.x/classes/class_tween.html#class-tween-method-tween-property
 
-func _fade_to_volume(desired_volume: float = -80, transition_time: float = 1):
+func _fade_to_volume(desired_volume: float = -80, transition_time: float = 1.125):
 	get_tree().create_tween().tween_property(MusicController, "volume_db", desired_volume, transition_time)

@@ -8,7 +8,7 @@ var narrator_count = 0
 
 
 func _ready():
-	MusicController._play_music("adventure", "map", -20)
+	MusicController._play_music("adventure", "map", -18, 1.125)
 	narrator_delay()
 
 
