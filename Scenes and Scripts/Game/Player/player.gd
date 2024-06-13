@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var speed = 0
+var speed = 500
 var acceleration = 50
 @onready var nav: NavigationAgent2D = $NavigationAgent2D
 var object_name 

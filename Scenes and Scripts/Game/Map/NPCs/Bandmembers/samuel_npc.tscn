@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmhdb71htj10k"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/SamuelNPC.gd" id="1_yqone"]
+[ext_resource type="Texture2D" uid="uid://innk4oga182f" path="res://Assets/Art/Characters/Band Members/Singer Samuel/samuel_icon.png" id="2_3e1rr"]
+[ext_resource type="Texture2D" uid="uid://053oukhn0org" path="res://Assets/Art/Characters/Band Members/Singer Samuel/samuel_icon_highlight.png" id="3_p3kk0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cw4h6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3e1rr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p3kk0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8iybo"]
+radius = 63.2456
+
+[node name="SamuelNPC" type="Node2D"]
+script = ExtResource("1_yqone")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cw4h6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_8iybo")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
