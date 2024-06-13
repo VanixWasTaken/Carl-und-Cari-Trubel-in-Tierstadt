@@ -1,16 +1,24 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1vovatlehj8g"]
+[gd_scene load_steps=12 format=3 uid="uid://d1vovatlehj8g"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Tutorial Dialoge/npc_tutorial.gd" id="1_yadtb"]
-[ext_resource type="Texture2D" uid="uid://b2ei2cwej1d14" path="res://Assets/Art/Characters/Cari/Full Body/cari_animation_walk_spritesheet.png" id="2_m0q8h"]
+[ext_resource type="Texture2D" uid="uid://ccjpkhfhxb46i" path="res://Assets/Art/Characters/Cari/cari_spritesheet.png" id="2_p2h6b"]
 [ext_resource type="Texture2D" uid="uid://bxom8ndjt3opt" path="res://Assets/Art/Characters/Carl/Full Body/carl_animation_walk_spritesheet.png" id="3_qlsiw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_psdav"]
-atlas = ExtResource("2_m0q8h")
-region = Rect2(2560, 639, 320, 639)
+[sub_resource type="AtlasTexture" id="AtlasTexture_mquwc"]
+atlas = ExtResource("2_p2h6b")
+region = Rect2(0, 2397, 640, 799)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gptn4"]
-atlas = ExtResource("2_m0q8h")
-region = Rect2(0, 0, 320, 639)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vf06t"]
+atlas = ExtResource("2_p2h6b")
+region = Rect2(640, 2397, 640, 799)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ale51"]
+atlas = ExtResource("2_p2h6b")
+region = Rect2(1280, 2397, 640, 799)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05s06"]
+atlas = ExtResource("2_p2h6b")
+region = Rect2(1920, 2397, 640, 799)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lil2w"]
 atlas = ExtResource("3_qlsiw")
@@ -24,14 +32,20 @@ region = Rect2(0, 639, 320, 639)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_psdav")
+"texture": SubResource("AtlasTexture_mquwc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gptn4")
+"texture": SubResource("AtlasTexture_vf06t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ale51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05s06")
 }],
 "loop": true,
 "name": &"Cari",
-"speed": 1.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -52,7 +66,8 @@ radius = 4.04568
 script = ExtResource("1_yadtb")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 3.83803, 0)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 3.26683, 0)
+flip_h = true
 sprite_frames = SubResource("SpriteFrames_1pjmw")
 animation = &"Cari"
 autoplay = "Cari"
