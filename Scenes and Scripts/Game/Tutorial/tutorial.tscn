@@ -302,21 +302,20 @@ skeleton = NodePath("../CollisionShape3D")
 [node name="FridgeSound" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Walls/WallBack"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0879, -2.92841, 2.21109)
 stream = ExtResource("6_g226s")
-volume_db = 6.0
+volume_db = -6.0
 unit_size = 50.0
-max_db = 6.0
+max_db = -6.0
 autoplay = true
 max_distance = 50.0
 panning_strength = 0.5
 bus = &"SFX_Foley"
-attenuation_filter_cutoff_hz = 20500.0
+attenuation_filter_cutoff_hz = 12000.0
 
 [node name="FaucetSound" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Walls/WallBack"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9668, 0.049396, 2.0774)
 stream = ExtResource("7_pp3mu")
-volume_db = 6.0
 unit_size = 50.0
-max_db = 6.0
+max_db = 0.0
 autoplay = true
 max_distance = 65.0
 panning_strength = 0.5
@@ -442,7 +441,7 @@ frame_progress = 0.0150222
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPolyphonic_75e5b")
-bus = &"SFX_Foley"
+bus = &"SFX_Ambience"
 
 [node name="Objects" type="Node3D" parent="."]
 
