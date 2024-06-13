@@ -30,6 +30,20 @@ func move_to_target(delta):
 	var distance_to_target = global_position - target_position
 	velocity = direction * speed
 	
+	
+	
+	## System that spawns and deletes particles if the player moves
+	if speed > 0 and direction.x >= 0.1:
+		$RunParticles.position = Vector3(-1, 1, 0.5)
+		$RunParticles.direction.x = -1
+		$RunParticles.emitting = true
+	elif speed > 0 and direction.x <= -0.1:
+		$RunParticles.position = Vector3(1, 1, 0.5)
+		$RunParticles.direction.x = 1
+		$RunParticles.emitting = true
+
+	
+	
 	if Global.moving_allowed:
 		move_and_slide()
 
