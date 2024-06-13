@@ -91,6 +91,7 @@ func play_countdown():
 	start_game = true
 	$Bubbling.play()
 	$MiniGameTime.start()
+	MusicController._play_music("dropletdance", "laboratory", -12, 0)
 
 
 func _on_mini_game_time_timeout():

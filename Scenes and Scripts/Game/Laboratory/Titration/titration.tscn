@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://dfm6sf40klc1x"]
+[gd_scene load_steps=76 format=3 uid="uid://dfm6sf40klc1x"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Titration/titration.gd" id="1_rdept"]
 [ext_resource type="Texture2D" uid="uid://r82vd54v48ed" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG" id="1_tyn2s"]
@@ -32,9 +32,11 @@
 [ext_resource type="AudioStream" uid="uid://cv1ke855ogkwj" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_waterdrip_var3.mp3" id="24_e0hfk"]
 [ext_resource type="AudioStream" uid="uid://2x31ikjd6u6a" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakerpour_var2.mp3" id="26_wuoo5"]
 [ext_resource type="AudioStream" uid="uid://bgi8re8ixi1v" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakerpour_var3.mp3" id="27_6riyc"]
+[ext_resource type="AudioStream" uid="uid://ndlulk36ajef" path="res://Assets/Sound/SFX/UI/Titration/sfx_laboratory_ui_success.mp3" id="29_hal6r"]
 [ext_resource type="AudioStream" uid="uid://ctitmuggatwdy" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_bubbling_var1.mp3" id="30_mvddd"]
 [ext_resource type="AudioStream" uid="uid://cuvm7mdv5ihpn" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_wrongarea_var1.mp3" id="32_hy0i5"]
 [ext_resource type="Texture2D" uid="uid://8xdnh1mengaw" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_scale.png" id="33_lp8io"]
+[ext_resource type="AudioStream" uid="uid://c1841qlw5tdi0" path="res://Assets/Sound/SFX/UI/Titration/sfx_laboratory_ui_fail.mp3" id="34_rjtyy"]
 [ext_resource type="Texture2D" uid="uid://5p7kair3bh5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Skillcheck/lab_minigame2_scale_clamp.png" id="34_yqagh"]
 [ext_resource type="Texture2D" uid="uid://cmsb7vgdfcedm" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/lab_minigame1_ph_scale.png" id="35_1rmuu"]
 [ext_resource type="AudioStream" uid="uid://b4q4ivte666dp" path="res://Assets/Sound/SFX/UI/Specific/Laboratory/Countdown/sfx_ui_laboratory_countdownnumber.mp3" id="35_ba7c8"]
@@ -453,17 +455,21 @@ position = Vector2(378, 487)
 texture = ExtResource("19_vlw0g")
 
 [node name="Success" type="AudioStreamPlayer" parent="Skillcheck/Burette"]
-volume_db = -18.0
+stream = ExtResource("29_hal6r")
 bus = &"SFX_UI"
 
 [node name="Drip" type="AudioStreamPlayer" parent="Skillcheck/Burette"]
 stream = SubResource("AudioStreamRandomizer_0loq3")
-volume_db = 9.0
-bus = &"SFX_Foley"
+volume_db = 18.0
+bus = &"SFX_UI"
 
 [node name="Failure" type="AudioStreamPlayer" parent="Skillcheck/Burette"]
 stream = ExtResource("32_hy0i5")
-volume_db = 6.0
+volume_db = 24.0
+bus = &"SFX_UI"
+
+[node name="Failure2" type="AudioStreamPlayer" parent="Skillcheck/Burette"]
+stream = ExtResource("34_rjtyy")
 bus = &"SFX_UI"
 
 [node name="Bar" type="Area2D" parent="Skillcheck"]
