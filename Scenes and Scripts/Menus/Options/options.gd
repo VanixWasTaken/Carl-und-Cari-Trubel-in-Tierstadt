@@ -22,3 +22,7 @@ func _on_texture_button_mouse_entered():
 
 func _on_texture_button_button_down():
 	emit_signal("click")
+
+
+func _on_h_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(0, value)
