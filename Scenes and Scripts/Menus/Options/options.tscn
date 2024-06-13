@@ -27,6 +27,7 @@ texture = ExtResource("10_omtvn")
 
 [sub_resource type="Theme" id="Theme_6rn65"]
 OptionButton/colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
+OptionButton/colors/font_focus_color = Color(0.819608, 0.415686, 0.262745, 1)
 OptionButton/colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
 OptionButton/constants/outline_size = 20
 OptionButton/font_sizes/font_size = 60
