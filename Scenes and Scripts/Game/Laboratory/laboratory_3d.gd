@@ -60,6 +60,9 @@ func _ready():
 	if Global.lab_cutscene_played == true:
 		cutscene = false
 	
+	if picked_up_chemicals == true && !Global.return_laboratory_2 && !Global.return_laboratory_3:
+		Global.laboratory_help_button_state = 4
+	
 	
 	#var playback: AudioStreamPlaybackPolyphonic
 	#$Ambience.play()

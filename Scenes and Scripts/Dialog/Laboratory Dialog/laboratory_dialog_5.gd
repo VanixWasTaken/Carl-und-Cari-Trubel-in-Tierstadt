@@ -39,7 +39,7 @@ func _ready():
 		path = "res://Assets/Sound/VO/Laboratory/Cari/PC/vo_pc_cari_laboratory_"
 	
 	if Global.talked_to_chameleon_4 == false:
-		Global.laboratory_help_button_state += 1
+		Global.laboratory_help_button_state = 8
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
 ##########################################################################################
