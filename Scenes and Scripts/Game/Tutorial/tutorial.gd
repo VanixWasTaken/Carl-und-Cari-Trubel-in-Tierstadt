@@ -15,9 +15,9 @@ func _ready():
 	$Ambience.play()
 	$POI/Mouse.play("default")
 	playback = $Ambience.get_stream_playback()
-	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_birds_var1.mp3"))
-	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_creaks_var1.mp3"))
-	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind_var1.mp3"))
+	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_birds.mp3"))
+	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_creaks.mp3"))
+	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3"))
 	
 	MusicController._play_music("learning_by_doing", "tutorial", -18)
 	
@@ -46,6 +46,7 @@ func _process(delta):
 func _on_door_area_3d_body_entered(body):
 	if body.get_name() == "Player":
 		player.play_fade_out()
+		MusicController._fade_to_volume(-80, 1)
 
 func _on_poi_sound_finished():
 	await get_tree().create_timer(randf_range(5, 10)).timeout
