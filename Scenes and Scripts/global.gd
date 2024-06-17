@@ -38,6 +38,15 @@ var inside_laboratory : bool = false
 ###### This variable are used for storing the job stars
 var chemist_job_stars : int
 
+
+###### These variables are used for the volume control using the options menu
+var master_volume = 0.75
+var dialog_volume = 0.75
+var sfx_volume = 0.75
+var music_volume = 0.75
+
+
+
 func _ready():
 	Input.set_custom_mouse_cursor(custom_mouse_cursor)
 

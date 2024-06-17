@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ex8idjxdm1hh"]
+[gd_scene load_steps=11 format=3 uid="uid://ex8idjxdm1hh"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Options/options.gd" id="1_3861l"]
 [ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="2_keo68"]
@@ -6,13 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://cfx4mjux32qlv" path="res://Assets/Art/UI/Buttons/Zurück Button/zurück_button_dark.png" id="5_dujpj"]
 [ext_resource type="Texture2D" uid="uid://g40m4yqqgyxy" path="res://Assets/Art/UI/Buttons/Zurück Button/zurück_button_light.png" id="6_laosp"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="8_xnx2p"]
+[ext_resource type="Texture2D" uid="uid://ca7kh2pp8tm02" path="res://Assets/Art/UI/Buttons/Slider/settings_scaling_slider_inside.png" id="9_jkcmk"]
 [ext_resource type="Texture2D" uid="uid://df4g25xonhx8u" path="res://Assets/Art/UI/Buttons/Slider/settings_scaling_icon.png" id="11_mghq3"]
 [ext_resource type="Texture2D" uid="uid://frb4fky8kg4a" path="res://Assets/Art/UI/Buttons/Slider/settings_scaling_slider.png" id="12_qhgdn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n1ga5"]
-texture = ExtResource("12_qhgdn")
-expand_margin_top = 30.0
-expand_margin_bottom = 30.0
+texture = ExtResource("9_jkcmk")
+expand_margin_top = 9.0
+expand_margin_bottom = 9.0
 
 [node name="Options" type="Node2D"]
 position = Vector2(960, 540)
@@ -103,18 +104,26 @@ theme_override_font_sizes/font_size = 60
 text = "Gesamtlautstärke"
 horizontal_alignment = 2
 
-[node name="HSlider" type="HSlider" parent="Ton/VBoxContainer/Label"]
+[node name="Slider BG" type="TextureRect" parent="Ton/VBoxContainer/Label"]
 layout_mode = 0
-offset_left = 564.0
+offset_left = 555.0
+offset_top = 1.0
+offset_right = 1122.0
+offset_bottom = 122.0
+scale = Vector2(1, 0.66)
+texture = ExtResource("12_qhgdn")
+
+[node name="Master" type="HSlider" parent="Ton/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = 597.0
 offset_top = -1.0
-offset_right = 1114.0
+offset_right = 1071.0
 offset_bottom = 85.0
 theme_override_icons/grabber = ExtResource("11_mghq3")
 theme_override_icons/grabber_highlight = ExtResource("11_mghq3")
 theme_override_styles/slider = SubResource("StyleBoxTexture_n1ga5")
-min_value = -60.0
-max_value = 0.0
-value = -20.0
+max_value = 1.0
+step = 0.01
 scrollable = false
 
 [node name="Label2" type="Label" parent="Ton/VBoxContainer"]
@@ -127,18 +136,25 @@ theme_override_font_sizes/font_size = 60
 text = "Sprachausgabe"
 horizontal_alignment = 2
 
-[node name="HSlider" type="HSlider" parent="Ton/VBoxContainer/Label2"]
+[node name="Slider BG" type="TextureRect" parent="Ton/VBoxContainer/Label2"]
+offset_left = 555.0
+offset_top = 1.0
+offset_right = 1122.0
+offset_bottom = 122.0
+scale = Vector2(1, 0.66)
+texture = ExtResource("12_qhgdn")
+
+[node name="Dialog" type="HSlider" parent="Ton/VBoxContainer/Label2"]
 layout_mode = 0
-offset_left = 564.0
+offset_left = 597.0
 offset_top = -1.0
-offset_right = 1114.0
+offset_right = 1071.0
 offset_bottom = 85.0
 theme_override_icons/grabber = ExtResource("11_mghq3")
 theme_override_icons/grabber_highlight = ExtResource("11_mghq3")
 theme_override_styles/slider = SubResource("StyleBoxTexture_n1ga5")
-min_value = -60.0
-max_value = 0.0
-value = -20.0
+max_value = 1.0
+step = 0.01
 scrollable = false
 
 [node name="Label3" type="Label" parent="Ton/VBoxContainer"]
@@ -151,18 +167,25 @@ theme_override_font_sizes/font_size = 60
 text = "Geräusche"
 horizontal_alignment = 2
 
-[node name="HSlider" type="HSlider" parent="Ton/VBoxContainer/Label3"]
+[node name="Slider BG" type="TextureRect" parent="Ton/VBoxContainer/Label3"]
+offset_left = 555.0
+offset_top = 1.0
+offset_right = 1122.0
+offset_bottom = 122.0
+scale = Vector2(1, 0.66)
+texture = ExtResource("12_qhgdn")
+
+[node name="SFX" type="HSlider" parent="Ton/VBoxContainer/Label3"]
 layout_mode = 0
-offset_left = 564.0
+offset_left = 597.0
 offset_top = -1.0
-offset_right = 1114.0
+offset_right = 1071.0
 offset_bottom = 85.0
 theme_override_icons/grabber = ExtResource("11_mghq3")
 theme_override_icons/grabber_highlight = ExtResource("11_mghq3")
 theme_override_styles/slider = SubResource("StyleBoxTexture_n1ga5")
-min_value = -60.0
-max_value = 0.0
-value = -20.0
+max_value = 1.0
+step = 0.01
 scrollable = false
 
 [node name="Label4" type="Label" parent="Ton/VBoxContainer"]
@@ -175,21 +198,31 @@ theme_override_font_sizes/font_size = 60
 text = "Musik"
 horizontal_alignment = 2
 
-[node name="HSlider" type="HSlider" parent="Ton/VBoxContainer/Label4"]
+[node name="Slider BG" type="TextureRect" parent="Ton/VBoxContainer/Label4"]
+offset_left = 555.0
+offset_top = 1.0
+offset_right = 1122.0
+offset_bottom = 122.0
+scale = Vector2(1, 0.66)
+texture = ExtResource("12_qhgdn")
+
+[node name="Music" type="HSlider" parent="Ton/VBoxContainer/Label4"]
 layout_mode = 0
-offset_left = 564.0
+offset_left = 597.0
 offset_top = -1.0
-offset_right = 1114.0
+offset_right = 1071.0
 offset_bottom = 85.0
 theme_override_icons/grabber = ExtResource("11_mghq3")
 theme_override_icons/grabber_highlight = ExtResource("11_mghq3")
 theme_override_styles/slider = SubResource("StyleBoxTexture_n1ga5")
-min_value = -60.0
-max_value = 0.0
-value = -20.0
+max_value = 1.0
+step = 0.01
 scrollable = false
 
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
-[connection signal="value_changed" from="Ton/VBoxContainer/Label/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Ton/VBoxContainer/Label/Master" to="." method="_on_master_value_changed"]
+[connection signal="value_changed" from="Ton/VBoxContainer/Label2/Dialog" to="." method="_on_dialog_value_changed"]
+[connection signal="value_changed" from="Ton/VBoxContainer/Label3/SFX" to="." method="_on_sfx_value_changed"]
+[connection signal="value_changed" from="Ton/VBoxContainer/Label4/Music" to="." method="_on_music_value_changed"]
