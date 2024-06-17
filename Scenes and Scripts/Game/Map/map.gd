@@ -6,6 +6,7 @@ var job_buildings
 var player
 
 func _ready():
+	Global.last_scene = "Map"
 	Global.menu_open = true
 	
 	if Global.inside_laboratory:

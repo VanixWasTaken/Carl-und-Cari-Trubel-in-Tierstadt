@@ -9,6 +9,7 @@ var player
 
 
 func _ready():
+	Global.last_scene = "Tutorial"
 	Global.cutscene_playing = true
 	player = get_tree().get_first_node_in_group("Player")
 	var playback: AudioStreamPlaybackPolyphonic

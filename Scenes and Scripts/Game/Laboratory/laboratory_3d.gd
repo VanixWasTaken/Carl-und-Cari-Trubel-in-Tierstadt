@@ -25,7 +25,7 @@ var picked_up_chemicals = false
 
 
 func _ready():
-	
+	Global.last_scene = "Laboratory"
 	Global.inside_laboratory = true
 	#Global.lab_cutscene_played = true
 	#Global.talked_to_chameleon = true

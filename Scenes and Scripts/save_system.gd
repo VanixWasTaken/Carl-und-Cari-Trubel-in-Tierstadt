@@ -14,7 +14,9 @@ func save():  # saves the current stats as a dictionary
 		"MovingAllowed" : Global.moving_allowed,
 		"Character" : Global.character,
 		"CompletedJobs" : Global.completed_jobs,
-		"JobStarsDict" : Global.job_stars_dict
+		"JobStarsDict" : Global.job_stars_dict,
+		"LastScene" : Global.last_scene,
+		"FirstGameStart" : Global.first_game_start
 		
 	}
 	
@@ -48,7 +50,8 @@ func load_game():
 		Global.character = node_data["Character"]
 		Global.completed_jobs = node_data["CompletedJobs"]
 		Global.job_stars_dict = node_data["JobStarsDict"]
-
+		Global.last_scene = node_data["LastScene"]
+		Global.first_game_start = node_data["FirstGameStart"]
 
 
 func clear_dict(): # Is used for overwriting the whole save game file on the computer to an empty dictionary. So it basically deletes the save 

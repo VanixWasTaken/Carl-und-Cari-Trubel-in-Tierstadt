@@ -454,6 +454,8 @@ bus = &"SFX_Foley"
 [connection signal="button_down" from="VBoxContainer/New Game" to="." method="_on_button_click"]
 [connection signal="button_up" from="VBoxContainer/New Game" to="." method="_on_start_button_up"]
 [connection signal="mouse_entered" from="VBoxContainer/New Game" to="." method="_on_button_hovered"]
+[connection signal="button_down" from="VBoxContainer/Load Game" to="." method="_on_load_game_button_down"]
+[connection signal="button_up" from="VBoxContainer/Load Game" to="." method="_on_load_game_button_up"]
 [connection signal="button_down" from="VBoxContainer/Options" to="." method="_on_button_click"]
 [connection signal="button_up" from="VBoxContainer/Options" to="." method="_on_options_button_up"]
 [connection signal="mouse_entered" from="VBoxContainer/Options" to="." method="_on_button_hovered"]
