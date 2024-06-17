@@ -40,7 +40,7 @@ var chemist_job_stars : int
 
 ###### Thess variable are used to create an instance of the pause menu
 @onready var pause = preload("res://Scenes and Scripts/Menus/Pause Menu/pause_menu.tscn")
-var pause_opened = false
+var pause_opened = true
 
 
 ###### These variables are used for the volume control using the options menu
@@ -58,7 +58,8 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("escape"):
-		open_pause_menu()
+		if !pause_opened:
+			open_pause_menu()
 	if event.is_action_pressed("left_click"):
 		Input.set_custom_mouse_cursor(custom_mouse_cursor_clicked)
 	if event.is_action_released("left_click"):
@@ -119,4 +120,5 @@ func open_pause_menu():
 	if !pause_opened and !dialog_playing:
 		var child = pause.instantiate()
 		add_child(child)
+		print("ich fass es nicht")
 		pause_opened = true

@@ -6,9 +6,10 @@ func _ready():
 	$Options.visible = false
 	Global.moving_allowed = false
 
-func _process(_delta):
-	if Global.pause_opened:
-		Global.moving_allowed = false
+func _input(event):
+	if event.is_action_pressed("escape"):
+		Global.pause_opened = false
+		self.queue_free()
 
 #region ########### Sound for Local Buttons ###############
 func _button_hovered():

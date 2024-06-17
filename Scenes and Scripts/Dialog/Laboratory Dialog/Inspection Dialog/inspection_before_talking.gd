@@ -23,6 +23,7 @@ var path
 
 
 func _ready():
+	Global.pause_opened = true
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 	if Global.character == "Carl":
