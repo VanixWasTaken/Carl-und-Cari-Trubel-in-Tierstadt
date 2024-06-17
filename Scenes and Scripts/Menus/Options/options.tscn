@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ex8idjxdm1hh"]
+[gd_scene load_steps=21 format=3 uid="uid://ex8idjxdm1hh"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Options/options.gd" id="1_3861l"]
 [ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="2_keo68"]
@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://frb4fky8kg4a" path="res://Assets/Art/UI/Buttons/Slider/settings_scaling_slider.png" id="12_qhgdn"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="13_sym4i"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="14_ep24n"]
+[ext_resource type="Texture2D" uid="uid://2qwwdqwx72f6" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button.png" id="15_4b3cf"]
+[ext_resource type="Texture2D" uid="uid://dhfx6ap4mxj60" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button_dark.png" id="16_tuw4n"]
+[ext_resource type="Texture2D" uid="uid://b6a5jl8gfvl6d" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button_light.png" id="17_2clsk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n1ga5"]
 texture = ExtResource("9_jkcmk")
@@ -260,6 +263,17 @@ stream = SubResource("AudioStreamRandomizer_r0wht")
 volume_db = -3.0
 bus = &"SFX_UI"
 
+[node name="Reset" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -734.0
+offset_top = 283.0
+offset_right = 178.0
+offset_bottom = 590.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("15_4b3cf")
+texture_pressed = ExtResource("16_tuw4n")
+texture_hover = ExtResource("17_2clsk")
+
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
@@ -271,3 +285,4 @@ bus = &"SFX_UI"
 [connection signal="value_changed" from="Ton/VBoxContainer/Label3/SFX" to="." method="_on_sfx_value_changed"]
 [connection signal="mouse_entered" from="Ton/VBoxContainer/Label4/Music" to="." method="_button_hovered"]
 [connection signal="value_changed" from="Ton/VBoxContainer/Label4/Music" to="." method="_on_music_value_changed"]
+[connection signal="button_up" from="Reset" to="." method="_reset_volume"]
