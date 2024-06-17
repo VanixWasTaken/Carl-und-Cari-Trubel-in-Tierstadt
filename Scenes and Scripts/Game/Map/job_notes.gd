@@ -104,15 +104,15 @@ func _on_open_notes_button_up():
 		%Click.play()
 		note_open = true
 		Global.menu_open = true
-		if Global.chemist_job_stars == 1:
+		if Global.job_stars_dict[0] == 1:
 			$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = one_star
-		elif Global.chemist_job_stars == 2:
+		elif Global.job_stars_dict[0] == 2:
 			$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = two_star
-		elif Global.chemist_job_stars == 3:
+		elif Global.job_stars_dict[0] == 3:
 			$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = three_star
-		elif Global.chemist_job_stars == 4:
+		elif Global.job_stars_dict[0] == 4:
 			$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = four_star
-		elif Global.chemist_job_stars == 5:
+		elif Global.job_stars_dict[0] == 5:
 			$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = five_star
 
 func _on_quit_chemist_big_button_up():

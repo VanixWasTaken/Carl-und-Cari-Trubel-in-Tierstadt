@@ -14,7 +14,7 @@ func _on_star_pressed():
 	$Star4/SelectedStar.hide()
 	$Star5/SelectedStar.hide()
 	selected_something = true
-	Global.chemist_job_stars = 1
+	Global.job_stars_dict[0] = 1
 
 func _on_star_2_pressed():
 	$"../Stars".play()
@@ -24,7 +24,7 @@ func _on_star_2_pressed():
 	$Star4/SelectedStar.hide()
 	$Star5/SelectedStar.hide()
 	selected_something = true
-	Global.chemist_job_stars = 2
+	Global.job_stars_dict[0] = 2
 
 func _on_star_3_pressed():
 	$"../Stars".play()
@@ -34,7 +34,7 @@ func _on_star_3_pressed():
 	$Star4/SelectedStar.hide()
 	$Star5/SelectedStar.hide()
 	selected_something = true
-	Global.chemist_job_stars = 3
+	Global.job_stars_dict[0] = 3
 
 func _on_star_4_pressed():
 	$"../Stars".play()
@@ -44,7 +44,7 @@ func _on_star_4_pressed():
 	$Star4/SelectedStar.show()
 	$Star5/SelectedStar.hide()
 	selected_something = true
-	Global.chemist_job_stars = 4
+	Global.job_stars_dict[0] = 4
 
 func _on_star_5_pressed():
 	$"../Stars".play()
@@ -54,7 +54,7 @@ func _on_star_5_pressed():
 	$Star4/SelectedStar.show()
 	$Star5/SelectedStar.show()
 	selected_something = true
-	Global.chemist_job_stars = 5
+	Global.job_stars_dict[0] = 5
 
 func _on_weiter_button_pressed():
 	$"../Click".play()
