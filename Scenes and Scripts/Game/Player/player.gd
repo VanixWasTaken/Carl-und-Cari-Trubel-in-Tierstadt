@@ -23,6 +23,7 @@ func _ready():
 		$CanvasLayer.hide()
 		Global.moving_allowed = true
 		Global.cutscene_playing = false
+	
 
 func _physics_process(delta):
 	var direction = Vector2()
