@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	SaveSystem.save()
+	SaveSystem.save_game()
 
 var animation_counter = 0
 @onready var next_scene = preload("res://Scenes and Scripts/Menus/Title Screen/title_screen.tscn")
