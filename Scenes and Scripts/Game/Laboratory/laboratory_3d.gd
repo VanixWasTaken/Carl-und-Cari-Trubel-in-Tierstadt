@@ -19,13 +19,13 @@ var picked_up_chemicals = false
 @onready var powder_scene = preload("res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.tscn")
 @onready var titration_scene = preload("res://Scenes and Scripts/Game/Laboratory/Titration/titration.tscn")
 @onready var spray_scene = preload("res://Scenes and Scripts/Game/Laboratory/Spray Mini Game/spray_mini_game.tscn")
-
+@onready var laboratory_quiz = preload("res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.tscn")
 
 
 
 
 func _ready():
-
+	Global.inside_laboratory = true
 	Global.talked_to_chameleon = true
 	Global.talked_to_chameleon_2 = true
 	Global.talked_to_chameleon_3 = true
@@ -166,4 +166,6 @@ func change_scene():
 
 func _on_exit_body_entered(body):
 	if body.get_name() == "Player":
-		player.play_fade_out()
+		add_child(laboratory_quiz.instantiate())
+		Global.menu_open = true
+		Global.moving_allowed = false

@@ -15,9 +15,6 @@ func _ready():
 	MusicController._play_music("adventure", "map", -18)
 	await get_tree().create_timer(0.25).timeout
 	next_scene = load(scene_name)
-	
-	if Global.return_laboratory_3 == true:
-		$"../Player".position = Vector2(298,320)
 
 func _process(delta):
 	animation_frame = $AnimatedSprite2D.frame + 1

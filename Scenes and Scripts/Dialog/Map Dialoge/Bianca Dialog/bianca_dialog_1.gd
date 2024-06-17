@@ -49,6 +49,8 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 13:
 		Global.dialog_playing= false
+		if Global.completed_jobs.size() == 1:
+			get_tree().get_current_scene().explain_profiles()
 		queue_free()
 ##########################################################################################
 

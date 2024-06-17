@@ -45,7 +45,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 11:
-		Global.dialog_playing= false
+		get_tree().get_first_node_in_group("AnimationPlayer").play("BarabaMarket1")
 		queue_free()
 ##########################################################################################
 
