@@ -47,10 +47,10 @@ var pause_opened = true ### set to true, to stop the menu from opening before th
 
 
 ###### These variables are used for the volume control using the options menu
-var master_volume = 0.75
-var dialog_volume = 0.75
-var sfx_volume = 0.75
-var music_volume = 0.75
+var master_volume = 0.7
+var dialog_volume = 0.5
+var sfx_volume = 0.7
+var music_volume = 0.7
 
 
 
