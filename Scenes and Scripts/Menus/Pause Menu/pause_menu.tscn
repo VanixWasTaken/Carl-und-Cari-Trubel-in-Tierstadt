@@ -39,49 +39,41 @@ stream_2/stream = ExtResource("21_inaw8")
 stream_2/weight = 1.0
 
 [node name="Pause Menu" type="Control"]
-visibility_layer = 4
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -540.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(960, 540)
 script = ExtResource("1_hb6es")
 metadata/_edit_vertical_guides_ = [960.0]
 
 [node name="HUD" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -480.0
-offset_top = -572.0
-offset_right = 1440.0
-offset_bottom = 508.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_left = 480.0
+offset_right = 2400.0
+offset_bottom = 1080.0
 scale = Vector2(0.5, 1)
 texture = ExtResource("1_mj03o")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -296.0
-offset_top = 144.0
-offset_right = 616.0
-offset_bottom = 1293.0
-grow_horizontal = 2
+layout_mode = 0
+offset_left = 664.0
+offset_top = 184.0
+offset_right = 1576.0
+offset_bottom = 1333.0
 scale = Vector2(0.65, 0.65)
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
 theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 30
+theme_override_constants/outline_size = 40
 theme_override_fonts/font = ExtResource("3_olulg")
 theme_override_font_sizes/font_size = 160
 text = "Pausiert"
@@ -107,9 +99,10 @@ texture_hover = ExtResource("12_s47lg")
 
 [node name="XButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1208.0
-offset_right = 1439.0
-offset_bottom = 216.0
+offset_left = 1184.0
+offset_top = 56.0
+offset_right = 1415.0
+offset_bottom = 272.0
 texture_normal = ExtResource("12_ohabv")
 texture_pressed = ExtResource("13_vxrq5")
 texture_hover = ExtResource("14_oejk6")
