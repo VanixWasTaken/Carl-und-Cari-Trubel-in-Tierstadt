@@ -29,9 +29,11 @@ func _process(delta):
 			close_menu()
 
 	if $JobNoteMenu.visible:
+		Global.pause_opened = true
 		%HelpButton.visible = false
 	elif !$JobNoteMenu.visible:
 		%HelpButton.visible = true
+		Global.pause_opened = false
 
 # function to close the entire menu and reactivate the house
 func close_menu():

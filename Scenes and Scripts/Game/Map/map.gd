@@ -27,8 +27,11 @@ func _ready():
 		var dialog_instance = main_story_dialog_1.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
 	player = get_tree().get_first_node_in_group("Player")
+
+
 func _on_texture_button_button_up():
 	Global.menu_open = false
+	Global.pause_opened = false
 	if $"HUD/Help Movement".visible == true:
 		$"HUD/Help Movement".queue_free()
 
@@ -41,6 +44,7 @@ func _paper_hover():
 	%Hover.play()
 
 func explain_profiles():
+	Global.pause_opened = true
 	var profile_helper = profile_help.instantiate()
 	$HUD.add_child(profile_helper)
 
