@@ -15,6 +15,7 @@ var tutorial_help_button_state = 0
 var laboratory_help_button_state = 0
 var mini_help_button_state = 0
 var completed_jobs = []
+var exit_coordinates
 
 
 var talked_to_chameleon = false #Wird auf true gesetzt, wenn man mit dem chamäleon geredet hat auf freiwilliger basis

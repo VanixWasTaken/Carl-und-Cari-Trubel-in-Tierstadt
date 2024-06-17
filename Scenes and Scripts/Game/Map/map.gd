@@ -3,15 +3,15 @@ extends Node2D
 @onready var main_story_dialog_1 = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn")
 @onready var profile_help = preload("res://Scenes and Scripts/Menus/Map Menu/help_profiles.tscn")
 var job_buildings
+var player
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.menu_open = true
+	
 	if Global.inside_laboratory:
 		$Player.position = Vector2(776, 2256)
 		Global.inside_laboratory = false
-	
+
 	job_buildings = get_tree().get_nodes_in_group("Buildings")
 	for jobs in Global.completed_jobs:
 		for buildings in job_buildings:
@@ -26,7 +26,7 @@ func _ready():
 	if Global.completed_jobs.size() == 1:
 		var dialog_instance = main_story_dialog_1.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
-
+	player = get_tree().get_first_node_in_group("Player")
 func _on_texture_button_button_up():
 	Global.menu_open = false
 	if $"HUD/Help Movement".visible == true:
@@ -59,3 +59,14 @@ func _on_animation_player_3_animation_finished(anim_name):
 
 func _on_npc_movement_animation_finished(anim_name):
 	Global.dialog_playing = false
+
+
+func _on_market_place_animation_animation_finished(anim_name):
+	if Global.exit_coordinates != null:
+		player.global_position = Global.exit_coordinates
+	var camera = get_tree().get_first_node_in_group("Camera")
+	get_tree().get_current_scene().remove_child(camera)
+	player.add_child(camera)
+	player.visible = true
+	camera.position = Vector2(0,0)
+	Global.cutscene_playing = false

@@ -19,8 +19,8 @@ func _ready():
 	$CanvasLayer/AnimationPlayer.play("fade_in")
 	Global.moving_allowed = false
 	Global.cutscene_playing = true
+
 	if Global.inside_laboratory:
-		$CanvasLayer.hide()
 		Global.moving_allowed = true
 		Global.cutscene_playing = false
 
@@ -55,8 +55,8 @@ func _physics_process(delta):
 			$Footsteps.stop()
 	
 	
-	#if speed > 0:
-		#$RunParticles.emitting = true
+	if speed > 0:
+		$RunParticles.emitting = true
 
 
 
@@ -122,3 +122,4 @@ func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_in":
 		Global.cutscene_playing = false
 		Global.moving_allowed = true
+	$CanvasLayer.hide()
