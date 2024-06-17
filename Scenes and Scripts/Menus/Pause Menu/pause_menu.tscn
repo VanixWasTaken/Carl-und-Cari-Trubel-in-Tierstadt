@@ -1,0 +1,136 @@
+[gd_scene load_steps=24 format=3 uid="uid://reaek0i8ei2g"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Menus/Pause Menu/pause_menu.gd" id="1_hb6es"]
+[ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="1_mj03o"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="3_olulg"]
+[ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="4_573og"]
+[ext_resource type="Texture2D" uid="uid://2qwwdqwx72f6" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button.png" id="4_quk3n"]
+[ext_resource type="Texture2D" uid="uid://dhfx6ap4mxj60" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button_dark.png" id="5_jugvl"]
+[ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="5_yfitx"]
+[ext_resource type="Texture2D" uid="uid://b6a5jl8gfvl6d" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button_light.png" id="6_0txeh"]
+[ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="6_ed36a"]
+[ext_resource type="Texture2D" uid="uid://vwbp2p85gxum" path="res://Assets/Art/UI/Buttons/Spiel Beenden Button/spiel_beenden_button.png" id="10_hsxhq"]
+[ext_resource type="Texture2D" uid="uid://nn4e73tfqro5" path="res://Assets/Art/UI/Buttons/Spiel Beenden Button/spiel_beenden_button_dark.png" id="11_iwh2q"]
+[ext_resource type="Texture2D" uid="uid://7vqjfkop4ysv" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button.png" id="12_ohabv"]
+[ext_resource type="Texture2D" uid="uid://cnxktqflk3e60" path="res://Assets/Art/UI/Buttons/Spiel Beenden Button/spiel_beenden_button_light.png" id="12_s47lg"]
+[ext_resource type="PackedScene" uid="uid://ex8idjxdm1hh" path="res://Scenes and Scripts/Menus/Options/options.tscn" id="13_0lyer"]
+[ext_resource type="Texture2D" uid="uid://dpjjv7rg73iow" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button_clicked.png" id="13_vxrq5"]
+[ext_resource type="Texture2D" uid="uid://bdbjnb85fqnnx" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button_hover.png" id="14_oejk6"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="17_kypy7"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="18_wimwq"]
+[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="19_ceqp2"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="20_3wh05"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="21_inaw8"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lafcl"]
+streams_count = 2
+stream_0/stream = ExtResource("17_kypy7")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("18_wimwq")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_d5oyn"]
+streams_count = 3
+stream_0/stream = ExtResource("19_ceqp2")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("20_3wh05")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("21_inaw8")
+stream_2/weight = 1.0
+
+[node name="Pause Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hb6es")
+metadata/_edit_vertical_guides_ = [960.0]
+
+[node name="HUD" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -572.0
+offset_right = 1440.0
+offset_bottom = 508.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 1)
+texture = ExtResource("1_mj03o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -296.0
+offset_top = 144.0
+offset_right = 616.0
+offset_bottom = 1293.0
+grow_horizontal = 2
+scale = Vector2(0.65, 0.65)
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
+theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("3_olulg")
+theme_override_font_sizes/font_size = 160
+text = "Pausiert"
+horizontal_alignment = 1
+
+[node name="Continue" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_573og")
+texture_pressed = ExtResource("5_yfitx")
+texture_hover = ExtResource("6_ed36a")
+
+[node name="Settings" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_quk3n")
+texture_pressed = ExtResource("5_jugvl")
+texture_hover = ExtResource("6_0txeh")
+
+[node name="Quit" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("10_hsxhq")
+texture_pressed = ExtResource("11_iwh2q")
+texture_hover = ExtResource("12_s47lg")
+
+[node name="XButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1208.0
+offset_right = 1439.0
+offset_bottom = 216.0
+texture_normal = ExtResource("12_ohabv")
+texture_pressed = ExtResource("13_vxrq5")
+texture_hover = ExtResource("14_oejk6")
+
+[node name="Options" parent="." instance=ExtResource("13_0lyer")]
+visible = false
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_lafcl")
+bus = &"SFX_UI"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_d5oyn")
+volume_db = -3.0
+bus = &"SFX_UI"
+
+[connection signal="button_up" from="VBoxContainer/Continue" to="." method="_on_continue_button_up"]
+[connection signal="mouse_entered" from="VBoxContainer/Continue" to="." method="_button_hovered"]
+[connection signal="button_up" from="VBoxContainer/Settings" to="." method="_on_settings_button_up"]
+[connection signal="mouse_entered" from="VBoxContainer/Settings" to="." method="_button_hovered"]
+[connection signal="button_up" from="VBoxContainer/Quit" to="." method="_on_quit_button_up"]
+[connection signal="mouse_entered" from="VBoxContainer/Quit" to="." method="_button_hovered"]
+[connection signal="mouse_entered" from="XButton" to="." method="_button_hovered"]
+[connection signal="click" from="Options" to="." method="_on_options_click"]
+[connection signal="hover" from="Options" to="." method="_on_options_hover"]

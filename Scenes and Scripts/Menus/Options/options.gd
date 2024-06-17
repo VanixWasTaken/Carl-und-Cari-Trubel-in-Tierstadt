@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 # volume sliders 
 @onready var master = $Ton/VBoxContainer/Label/Master
@@ -61,3 +61,7 @@ func _on_music_value_changed(value):
 func _set_bus_volume(bus_index: int, value: float):
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
 	AudioServer.set_bus_mute(bus_index, value < 0.01)
+
+
+func _button_hovered():
+	$Hover.play()
