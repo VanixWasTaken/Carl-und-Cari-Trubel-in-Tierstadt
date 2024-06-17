@@ -34,6 +34,7 @@ func _input(event):
 		if !Global.pause_opened:
 			$"HUD/Pause Menu".visible = true
 			Global.pause_opened = true
+			Global.menu_open = true
 
 
 func _on_texture_button_button_up():
