@@ -39,6 +39,7 @@ stream_2/stream = ExtResource("21_inaw8")
 stream_2/weight = 1.0
 
 [node name="Pause Menu" type="Control"]
+visibility_layer = 4
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -125,12 +126,17 @@ stream = SubResource("AudioStreamRandomizer_d5oyn")
 volume_db = -3.0
 bus = &"SFX_UI"
 
+[connection signal="button_down" from="VBoxContainer/Continue" to="." method="_button_clicked"]
 [connection signal="button_up" from="VBoxContainer/Continue" to="." method="_on_continue_button_up"]
 [connection signal="mouse_entered" from="VBoxContainer/Continue" to="." method="_button_hovered"]
+[connection signal="button_down" from="VBoxContainer/Settings" to="." method="_button_clicked"]
 [connection signal="button_up" from="VBoxContainer/Settings" to="." method="_on_settings_button_up"]
 [connection signal="mouse_entered" from="VBoxContainer/Settings" to="." method="_button_hovered"]
+[connection signal="button_down" from="VBoxContainer/Quit" to="." method="_button_clicked"]
 [connection signal="button_up" from="VBoxContainer/Quit" to="." method="_on_quit_button_up"]
 [connection signal="mouse_entered" from="VBoxContainer/Quit" to="." method="_button_hovered"]
+[connection signal="button_down" from="XButton" to="." method="_button_clicked"]
+[connection signal="button_up" from="XButton" to="." method="_on_continue_button_up"]
 [connection signal="mouse_entered" from="XButton" to="." method="_button_hovered"]
 [connection signal="click" from="Options" to="." method="_on_options_click"]
 [connection signal="hover" from="Options" to="." method="_on_options_hover"]

@@ -4,29 +4,39 @@ extends Control
 
 func _ready():
 	$Options.visible = false
+	Global.moving_allowed = false
 
-########### Hovers ###############
+func _process(_delta):
+	if Global.pause_opened:
+		Global.moving_allowed = false
+
+#region ########### Sound for Local Buttons ###############
 func _button_hovered():
 	$Hover.play()
 
+func _button_clicked():
+	$Click.play()
+#endregion
 
-
-########### Button Functionality ###############
+#region ############## Button Functionality ###############
 func _on_settings_button_up():
 	$Options.visible = true
 
 func _on_quit_button_up():
+	Global.pause_opened = false
+	Global.moving_allowed = true
 	get_tree().change_scene_to_packed(main_menu)
 
 func _on_continue_button_up():
+	Global.pause_opened = false
+	Global.moving_allowed = true
 	self.queue_free()
+#endregion
 
-
-
-
-###### Hovers of the Settings Menu (handled weirdly idk) ##########
+#region ###### Hovers of the Settings Menu (handled weirdly idk) ##########
 func _on_options_hover():
 	$Hover.play()
 func _on_options_click():
 	$Click.play()
 	$Options.visible = false
+#endregion
