@@ -32,7 +32,7 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("escape"):
 		if !Global.pause_opened:
-			$"Player/Camera2D/Pause Menu".visible = true
+			$"HUD/Pause Menu".visible = true
 			Global.pause_opened = true
 
 

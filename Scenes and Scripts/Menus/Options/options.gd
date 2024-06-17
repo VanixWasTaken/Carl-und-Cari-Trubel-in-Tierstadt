@@ -62,8 +62,12 @@ func _on_music_value_changed(value):
 
 func _reset_volume():
 	for i in 4:
+		###### Gets the name of the AudioBus at position i
 		var name = AudioServer.get_bus_name(i)
+		###### Gets the Standard volume from standards dict and gives it to bus at position i
 		_set_bus_volume(i, standards[name])
+		###### Gets the Standard value from standards dict and gives it to the fitting slider
+		###### at position i in array names
 		names[i].value = standards[name]
 #endregion
 
