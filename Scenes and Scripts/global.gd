@@ -40,7 +40,7 @@ var chemist_job_stars : int
 
 ###### Thess variable are used to create an instance of the pause menu
 @onready var pause = preload("res://Scenes and Scripts/Menus/Pause Menu/pause_menu.tscn")
-var pause_opened = true
+var pause_opened = true ### set to true, to stop the menu from opening before the game starts
 
 
 ###### These variables are used for the volume control using the options menu
@@ -57,7 +57,7 @@ func _ready():
 
 
 func _input(event):
-	if event.is_action_pressed("escape"):
+	if event.is_action_pressed("escape"): ## when esc is pressed, pause menu is created
 		if !pause_opened:
 			open_pause_menu()
 	if event.is_action_pressed("left_click"):
@@ -116,9 +116,8 @@ func downloadFile(img: Image, filename: String) -> void:
 	var url: String = "data:image/png;base64," + base64Data
 	OS.shell_open(url)  # Opens the image in a new tab for download
 
-func open_pause_menu():
-	if !pause_opened and !dialog_playing:
+func open_pause_menu(): ### creates an instnace of the pause menu
+	if !pause_opened and !dialog_playing: ### checks if the conditions are met to instantiate
 		var child = pause.instantiate()
 		add_child(child)
-		print("ich fass es nicht")
-		pause_opened = true
+		pause_opened = true ### parameter for the scenes to check if the pause is opened
