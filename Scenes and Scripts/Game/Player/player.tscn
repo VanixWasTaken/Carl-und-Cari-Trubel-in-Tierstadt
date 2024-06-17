@@ -133,16 +133,15 @@ bus = &"SFX"
 layer = 10
 
 [node name="FadeAnimation" type="TextureRect" parent="CanvasLayer"]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -1045.0
-offset_top = -621.0
+offset_top = -610.0
 offset_right = 974.078
-offset_bottom = 528.0
+offset_bottom = 539.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(1044.93, 621.35)
