@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var main_story_dialog_1 = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn")
-@onready var laboratory_quiz = preload("res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.tscn")
 @onready var profile_help = preload("res://Scenes and Scripts/Menus/Map Menu/help_profiles.tscn")
 var job_buildings
 
@@ -10,7 +9,7 @@ var job_buildings
 func _ready():
 	Global.menu_open = true
 	if Global.inside_laboratory:
-		$Player.position = Vector2(319, 313)
+		$Player.position = Vector2(776, 2256)
 		Global.inside_laboratory = false
 	
 	job_buildings = get_tree().get_nodes_in_group("Buildings")
@@ -27,8 +26,6 @@ func _ready():
 	if Global.completed_jobs.size() == 1:
 		var dialog_instance = main_story_dialog_1.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
-		add_child(laboratory_quiz.instantiate())
-		Global.moving_allowed = false
 
 func _on_texture_button_button_up():
 	Global.menu_open = false
