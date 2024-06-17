@@ -9,12 +9,14 @@ var building_name = "null"
 var animation_frame = 0
 var next_scene 
 var can_enter = true
+var exit_coordinates
 @onready var visited_dialog = preload("res://Scenes and Scripts/Dialog/Map Dialoge/already_visited_job_dialog.tscn")
 func _ready():
 	building_name = get_tree().get_first_node_in_group("BuildingArea").get_name()
 	MusicController._play_music("adventure", "map", -18)
 	await get_tree().create_timer(0.25).timeout
 	next_scene = load(scene_name)
+	exit_coordinates = $ExitPoint.global_position
 
 func _process(delta):
 	animation_frame = $AnimatedSprite2D.frame + 1
@@ -64,6 +66,7 @@ func _on_control_help_closed():
 	$AnimatedSprite2D.material = no_shader
 
 func change_scene():
+	Global.exit_coordinates = exit_coordinates
 	Global.inside_laboratory = true
 	get_tree().change_scene_to_packed(next_scene)
 
