@@ -59,7 +59,7 @@ position = Vector2(1080, 813)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chemie Labor"]
 position = Vector2(-852, -671)
 scale = Vector2(0.6625, 0.6625)
-polygon = PackedVector2Array(-81.5094, -43.7736, -76.9811, -381.887, -21.1321, -368.302, -24.1509, 19.6226, -478.491, 19.6226, -472.453, -36.2264)
+polygon = PackedVector2Array(-81.5094, -43.7736, -76.9811, -381.887, -21.1321, -368.302, -18.1132, 92.0755, -519.245, 80, -472.453, -36.2264)
 
 [node name="Chemie Labor Maus" type="Area2D" parent="."]
 collision_layer = 128
@@ -68,6 +68,9 @@ collision_mask = 128
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chemie Labor Maus"]
 position = Vector2(32.5, -5.5)
 shape = SubResource("RectangleShape2D_351ux")
+
+[node name="ExitPoint" type="Marker2D" parent="."]
+position = Vector2(28, 181)
 
 [connection signal="mouse_entered" from="Chemie Labor Maus" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Chemie Labor Maus" to="." method="_on_area_2d_mouse_exited"]
