@@ -29,6 +29,13 @@ func _ready():
 	player = get_tree().get_first_node_in_group("Player")
 
 
+func _input(event):
+	if event.is_action_pressed("escape"):
+		if !Global.pause_opened:
+			$"Player/Camera2D/Pause Menu".visible = true
+			Global.pause_opened = true
+
+
 func _on_texture_button_button_up():
 	Global.menu_open = false
 	if $"HUD/Help Movement".visible == true:

@@ -8,8 +8,11 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("escape"):
-		Global.pause_opened = false
-		self.queue_free()
+		if get_tree().get_current_scene().name == "Map":
+			self.visible = false
+		else:
+			Global.pause_opened = false
+			self.queue_free()
 
 #region ########### Sound for Local Buttons ###############
 func _button_hovered():
@@ -31,7 +34,10 @@ func _on_quit_button_up():
 func _on_continue_button_up():
 	Global.pause_opened = false
 	Global.moving_allowed = true
-	self.queue_free()
+	if get_tree().get_current_scene().name == "Map":
+		self.visible = false
+	else:
+		self.queue_free()
 #endregion
 
 #region ###### Hovers of the Settings Menu (handled weirdly idk) ##########
