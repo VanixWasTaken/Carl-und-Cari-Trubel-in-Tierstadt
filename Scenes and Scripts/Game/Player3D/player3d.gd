@@ -8,9 +8,9 @@ var last_direction : String
 
 func _ready():
 	$CanvasLayer/FadeAnimation.visible = true
-	if Global.character == "Carl":
+	if Global.character == "Carl"|| Global.character == "":
 		$AnimatedSprite3D.play("carl_idle_left")
-	elif Global.character == "Cari" || Global.character == "":
+	elif Global.character == "Cari" :
 		$AnimatedSprite3D.play("cari_idle_right")
 	$CanvasLayer/AnimationPlayer.play("fade_in")
 
@@ -55,7 +55,7 @@ func move_to_target(delta):
 	#######################
 	#        Walk Animation
 	######################
-	if Global.character == "Carl":
+	if Global.character == "Carl" || Global.character == "":
 		if distance_to_target.x > 0 && !Global.dialog_playing:
 			$AnimatedSprite3D.play("carl_walk_left")
 			last_direction = "LEFT"
@@ -78,7 +78,7 @@ func move_to_target(delta):
 			navigation_agent.target_position = navigation_agent.get_final_position()
 			move_to_target(delta)
 
-	elif Global.character == "Cari" || Global.character == "":
+	elif Global.character == "Cari":
 		if distance_to_target.x > 0 && !Global.dialog_playing :
 			$AnimatedSprite3D.play("cari_walk_left")
 			last_direction = "LEFT"

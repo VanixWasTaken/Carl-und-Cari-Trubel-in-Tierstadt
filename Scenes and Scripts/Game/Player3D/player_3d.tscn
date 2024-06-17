@@ -114,21 +114,21 @@ region = Rect2(3840, 799, 640, 799)
 atlas = ExtResource("2_alvhl")
 region = Rect2(4480, 799, 640, 799)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ep21"]
-atlas = ExtResource("4_s34c5")
-region = Rect2(0, 1598, 640, 799)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xu07r"]
-atlas = ExtResource("4_s34c5")
-region = Rect2(640, 1598, 640, 799)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_qogbk"]
 atlas = ExtResource("4_s34c5")
 region = Rect2(1280, 1598, 640, 799)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ep21"]
+atlas = ExtResource("4_s34c5")
+region = Rect2(0, 1598, 640, 799)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_n46ft"]
 atlas = ExtResource("4_s34c5")
 region = Rect2(1920, 1598, 640, 799)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xu07r"]
+atlas = ExtResource("4_s34c5")
+region = Rect2(640, 1598, 640, 799)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fnhug"]
 atlas = ExtResource("4_s34c5")
@@ -306,16 +306,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ep21")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xu07r")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_qogbk")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_7ep21")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_n46ft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xu07r")
 }],
 "loop": true,
 "name": &"carl_idle_left",
@@ -475,6 +475,7 @@ path_max_distance = 0.31
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 3.29053, 0)
 sprite_frames = SubResource("SpriteFrames_7sd0m")
 animation = &"carl_idle_right"
+frame_progress = 0.390224
 
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
 current = true
