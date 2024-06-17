@@ -14,9 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://frb4fky8kg4a" path="res://Assets/Art/UI/Buttons/Slider/settings_scaling_slider.png" id="12_qhgdn"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="13_sym4i"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="14_ep24n"]
-[ext_resource type="Texture2D" uid="uid://2qwwdqwx72f6" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button.png" id="15_4b3cf"]
-[ext_resource type="Texture2D" uid="uid://dhfx6ap4mxj60" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button_dark.png" id="16_tuw4n"]
-[ext_resource type="Texture2D" uid="uid://b6a5jl8gfvl6d" path="res://Assets/Art/UI/Buttons/Einstellungen Button/einstellungen_button_light.png" id="17_2clsk"]
+[ext_resource type="Texture2D" uid="uid://bcmtnh0wuoumm" path="res://Assets/Art/UI/Buttons/Zuruecksetzen Buttons/zuruecksetzen_button.png" id="15_4ml5j"]
+[ext_resource type="Texture2D" uid="uid://btu8btirbfksk" path="res://Assets/Art/UI/Buttons/Zuruecksetzen Buttons/zuruecksetzen_button_dark.png" id="16_8ek80"]
+[ext_resource type="Texture2D" uid="uid://cwxlffrwxllg4" path="res://Assets/Art/UI/Buttons/Zuruecksetzen Buttons/zuruecksetzen_button_light.png" id="17_xxvmo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n1ga5"]
 texture = ExtResource("9_jkcmk")
@@ -270,9 +270,9 @@ offset_top = 283.0
 offset_right = 178.0
 offset_bottom = 590.0
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("15_4b3cf")
-texture_pressed = ExtResource("16_tuw4n")
-texture_hover = ExtResource("17_2clsk")
+texture_normal = ExtResource("15_4ml5j")
+texture_pressed = ExtResource("16_8ek80")
+texture_hover = ExtResource("17_xxvmo")
 
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
