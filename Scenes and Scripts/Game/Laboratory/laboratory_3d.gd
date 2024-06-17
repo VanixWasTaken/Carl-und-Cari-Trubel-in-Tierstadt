@@ -27,15 +27,15 @@ var picked_up_chemicals = false
 func _ready():
 	
 	Global.inside_laboratory = true
-	Global.lab_cutscene_played = true
-	Global.talked_to_chameleon = true
-	Global.talked_to_chameleon_2 = true
-	Global.talked_to_chameleon_3 = true
-	Global.talked_to_chameleon_4 = true
-	Global.return_laboratory_3 = true
-	Global.return_laboratory_1 = true
-	Global.return_laboratory_2 = true
-	Global.cutscene_playing = false
+	#Global.lab_cutscene_played = true
+	#Global.talked_to_chameleon = true
+	#Global.talked_to_chameleon_2 = true
+	#Global.talked_to_chameleon_3 = true
+	#Global.talked_to_chameleon_4 = true
+	#Global.return_laboratory_3 = true
+	#Global.return_laboratory_1 = true
+	#Global.return_laboratory_2 = true
+	#Global.cutscene_playing = false
 	player = get_tree().get_first_node_in_group("Player")
 	if Global.return_laboratory_1:
 		Global.lab_cutscene_played == true

@@ -9,9 +9,9 @@ var last_direction : String
 func _ready():
 	$CanvasLayer/FadeAnimation.visible = true
 	if Global.character == "Carl":
-		$AnimatedSprite3D.play("carl_idle")
+		$AnimatedSprite3D.play("carl_idle_left")
 	elif Global.character == "Cari" || Global.character == "":
-		$AnimatedSprite3D.play("cari_idle")
+		$AnimatedSprite3D.play("cari_idle_right")
 	$CanvasLayer/AnimationPlayer.play("fade_in")
 
 func _process(delta):
