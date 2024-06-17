@@ -127,6 +127,7 @@ func add_right_dialog_box():
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
 	
+	
 	if dialogs == 3:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
