@@ -117,7 +117,7 @@ func downloadFile(img: Image, filename: String) -> void:
 	var url: String = "data:image/png;base64," + base64Data
 	OS.shell_open(url)  # Opens the image in a new tab for download
 
-func open_pause_menu(): ### creates an instnace of the pause menu
+func open_pause_menu(): ### creates an instance of the pause menu
 	if !pause_opened and !dialog_playing and !menu_open and !cutscene_playing: ### checks if the conditions are met to instantiate
 		var child = pause.instantiate()
 		add_child(child)
