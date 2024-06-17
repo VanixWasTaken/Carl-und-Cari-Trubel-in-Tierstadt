@@ -2,21 +2,24 @@ extends Node
 
 var mouse_full = false
 var mouse_in_button = false
-var moving_allowed = true
-var character = ""
+var moving_allowed = true #save
+var character = "" #save
 var open_tutorial_door = false
 var dialog_playing = false
-var lab_cutscene_played = false
-var cutscene_playing = false
+var lab_cutscene_played = false 
+var cutscene_playing = false 
 var talked_to_chris
 var should_shoot = true
 var menu_open = false
 var tutorial_help_button_state = 0
 var laboratory_help_button_state = 0
 var mini_help_button_state = 0
-var completed_jobs = []
 var exit_coordinates
 
+var completed_jobs = [] #save
+var job_stars_dict : Dictionary = {  #save
+	"ChemistJob" : null
+}
 
 var talked_to_chameleon = false #Wird auf true gesetzt, wenn man mit dem chamäleon geredet hat auf freiwilliger basis
 var talked_to_chameleon_2 = false #wird aufn true gesetzt, wenn mann nach dem 1. Minispiel mit dem chameleon geredet hat
@@ -36,8 +39,7 @@ var custom_mouse_cursor_clicked = preload("res://Assets/Art/UI/player_mouse_clic
 var inside_laboratory : bool = false
 
 
-###### This variable are used for storing the job stars
-var chemist_job_stars : int
+
 
 ###### Thess variable are used to create an instance of the pause menu
 @onready var pause = preload("res://Scenes and Scripts/Menus/Pause Menu/pause_menu.tscn")

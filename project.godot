@@ -12,6 +12,8 @@ config_version=5
 
 config/name="Carl und Cari Trubel in Tierstadt"
 run/main_scene="res://Scenes and Scripts/Menus/StartUp/start_up.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="SaveSystem"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/fullsize=false
@@ -21,6 +23,7 @@ config/icon="res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG"
 
 MusicController="*res://Scenes and Scripts/MusicController/music_controller.tscn"
 Global="*res://Scenes and Scripts/global.gd"
+SaveSystem="*res://Scenes and Scripts/save_system.gd"
 
 [display]
 
