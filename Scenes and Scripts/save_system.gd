@@ -29,6 +29,8 @@ func save_game():
 	var json_string = JSON.stringify(save())
 	
 	save_game.store_line(json_string)
+	
+	print("ich habe gespeichert")
 
 
 func load_game():
