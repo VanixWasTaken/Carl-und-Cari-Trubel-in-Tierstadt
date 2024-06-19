@@ -29,6 +29,7 @@ func _ready():
 
 func _on_texture_button_button_up():
 	$".".visible = false
+	SaveSystem.save_game()
 
 
 func _on_texture_button_mouse_entered():
