@@ -134,7 +134,7 @@ offset_bottom = -18.083
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_pc78o")
 theme_override_font_sizes/font_size = 58
-text = "Bewerte  den Beruf"
+text = "Bewerte den Beruf"
 
 [node name="WeiterButton" type="TextureButton" parent="Question5"]
 layout_mode = 0
