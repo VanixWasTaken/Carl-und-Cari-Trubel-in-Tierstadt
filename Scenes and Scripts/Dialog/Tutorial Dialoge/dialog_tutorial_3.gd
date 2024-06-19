@@ -97,6 +97,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Bevor wir gehen, gebe ich dir noch einen Tipp."
 		short_node_rect.texture = PRESET2
+		short_node_rect.flip_h = true
 		dialogs += 1
 		same_speaker = true
 		if Global.character == "Carl":
@@ -115,6 +116,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Falls du Hilfe brauchst, kannst du mich immer fragen. Ich bin immer unten links auf dem Bildschirm zu finden."
 		short_node_rect.texture = PRESET2
+		short_node_rect.flip_h = true
 		dialogs += 1
 		same_speaker = false
 		if Global.character == "Carl":

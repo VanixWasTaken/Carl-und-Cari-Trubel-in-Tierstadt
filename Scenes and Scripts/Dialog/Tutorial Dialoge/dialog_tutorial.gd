@@ -30,7 +30,7 @@ func _ready():
 	if Global.character == "Carl":
 		PRESET1 = Carl
 		PRESET2 = Cari
-	elif Global.character == "Cari":
+	elif Global.character == "Cari" or Global.character == "":
 		PRESET2 = Carl
 		PRESET1 = Cari
 ###############################  PUT THE STARTING SIDE HERE  #############################
@@ -75,7 +75,7 @@ func add_left_dialog_box():
 			short_node_name.text = "Carl"
 			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Dialogue/Carl/PC/vo_pc_carl_tutorial01_var1.mp3")
 			$"../Voice Over".play()
-		elif Global.character == "Cari":
+		elif Global.character == "Cari" or Global.character == "":
 			short_node_name.text = "Cari"
 			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Dialogue/Cari/PC/vo_pc_cari_tutorial01_var1.mp3")
 			$"../Voice Over".play()
@@ -107,12 +107,13 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Komm schon " + str(pc) + ", es ist Zeit aufzubrechen!"
 		short_node_rect.texture = PRESET2
+		short_node_rect.flip_h = true
 		dialogs += 1
 		if Global.character == "Carl":
 			short_node_name.text = "Cari"
 			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Dialogue/Cari/NPC/vo_npc_cari_tutorial01_var1.mp3")
 			$"../Voice Over".play()
-		elif Global.character == "Cari":
+		elif Global.character == "Cari" or Global.character == "":
 			short_node_name.text = "Carl"
 			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Dialogue/Carl/NPC/vo_npc_carl_tutorial01_var1.mp3")
 			$"../Voice Over".play()
@@ -124,12 +125,13 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Vielleicht liegt er ja dort drüben. [Bewege die Maus auf den roten Kreis und Drücke die linke Maustaste, um dich dorthin zu bewegen]."
 		short_node_rect.texture = PRESET2
+		short_node_rect.flip_h = true
 		dialogs += 1
 		if Global.character == "Carl":
 			short_node_name.text = "Cari"
 			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Dialogue/Cari/NPC/vo_npc_cari_tutorial02_var1.mp3")
 			$"../Voice Over".play()
-		elif Global.character == "Cari":
+		elif Global.character == "Cari" or Global.character == "":
 			short_node_name.text = "Carl"
 			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Dialogue/Carl/NPC/vo_npc_carl_tutorial02_var1.mp3")
 			$"../Voice Over".play()
