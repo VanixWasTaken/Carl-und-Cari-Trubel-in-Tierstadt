@@ -10,6 +10,8 @@ extends Node2D
 func _ready():
 	$CloudsWhoosch.play()
 	if Global.first_game_start:
+		$"VBoxContainer/Load Game".disabled = true
+	else:
 		$"VBoxContainer/Load Game".disabled = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
