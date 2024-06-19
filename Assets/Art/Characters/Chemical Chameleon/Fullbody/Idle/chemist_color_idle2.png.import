@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lmaouvkc3f5"
-path.s3tc="res://.godot/imported/chemist_idle1.png-37aaebc9844fb81baed07fcbcf4809ee.s3tc.ctex"
-path.etc2="res://.godot/imported/chemist_idle1.png-37aaebc9844fb81baed07fcbcf4809ee.etc2.ctex"
+uid="uid://dwrx6424p83jb"
+path.s3tc="res://.godot/imported/chemist_color_idle2.png-d5c69a63253ab86e1fed82986fa95efb.s3tc.ctex"
+path.etc2="res://.godot/imported/chemist_color_idle2.png-d5c69a63253ab86e1fed82986fa95efb.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle1.png"
-dest_files=["res://.godot/imported/chemist_idle1.png-37aaebc9844fb81baed07fcbcf4809ee.s3tc.ctex", "res://.godot/imported/chemist_idle1.png-37aaebc9844fb81baed07fcbcf4809ee.etc2.ctex"]
+source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle2.png"
+dest_files=["res://.godot/imported/chemist_color_idle2.png-d5c69a63253ab86e1fed82986fa95efb.s3tc.ctex", "res://.godot/imported/chemist_color_idle2.png-d5c69a63253ab86e1fed82986fa95efb.etc2.ctex"]
 
 [params]
 
