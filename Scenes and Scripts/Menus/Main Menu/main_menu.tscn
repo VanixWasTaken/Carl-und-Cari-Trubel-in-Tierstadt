@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=63 format=3 uid="uid://ducsr1iwag28u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Main Menu/main_menu.gd" id="1_3f1tb"]
 [ext_resource type="Texture2D" uid="uid://r6osxlvpwdud" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main.png" id="2_sbqtk"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://csiuqoad3bqyt" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_003.png" id="5_wlv6i"]
 [ext_resource type="Texture2D" uid="uid://20m8sq4yw4hr" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_004.png" id="6_35oed"]
 [ext_resource type="Texture2D" uid="uid://ld2jwrr2boi7" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_005.png" id="7_p3d45"]
+[ext_resource type="PackedScene" uid="uid://n3p1kx407p77" path="res://Scenes and Scripts/Menus/Credits/credits.tscn" id="8_e5ggp"]
 [ext_resource type="Texture2D" uid="uid://bw4uijw5l3vn1" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_006.png" id="8_iclu6"]
 [ext_resource type="Texture2D" uid="uid://6y6y5emfkd32" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_007.png" id="9_2ahhp"]
 [ext_resource type="Texture2D" uid="uid://jhaad5f01wit" path="res://Assets/Art/UI/Buttons/Neues Spiel Buttons/neues_spiel_button.png" id="9_pb04c"]
@@ -405,6 +406,9 @@ texture_pressed = ExtResource("22_tloa8")
 texture_hover = ExtResource("23_qiddb")
 
 [node name="OptionsMenu" parent="." instance=ExtResource("15_nlixp")]
+visible = false
+
+[node name="CreditsMenu" parent="." instance=ExtResource("8_e5ggp")]
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="."]

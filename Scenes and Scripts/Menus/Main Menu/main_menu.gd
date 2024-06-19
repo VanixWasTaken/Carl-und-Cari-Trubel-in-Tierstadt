@@ -30,8 +30,7 @@ func _on_options_button_up():
 	$OptionsMenu.visible = true
 
 func _on_credits_button_up():
-	#$CreditsMenu.visible = true
-	pass
+	$CreditsMenu.visible = true
 
 func _on_quit_button_up():
 	get_tree().quit()
