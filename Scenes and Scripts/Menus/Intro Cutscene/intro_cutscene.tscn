@@ -429,4 +429,5 @@ bus = &"SFX_UI"
 [connection signal="mouse_entered" from="WeiterButton" to="." method="_on_weiter_button_mouse_entered"]
 [connection signal="pressed" from="WeiterButton" to="." method="_on_weiter_button_pressed"]
 [connection signal="animation_finished" from="Clouds" to="." method="_on_clouds_animation_finished"]
+[connection signal="finished" from="Narrator" to="." method="_on_narrator_finished"]
 [connection signal="finished" from="TelephoneGrab" to="." method="_on_telephone_grab_finished"]
