@@ -44,7 +44,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 12:
+	if dialogs == 15:
 		Global.dialog_playing= false
 		queue_free()
 ##########################################################################################
@@ -66,7 +66,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Bist du der Sänger, der unsere Hilfe braucht?"
+		short_node_text.text = "Bist du derjenige, der unsere Hilfe braucht?"
 		short_node_rect.texture = PRESET1
 		dialogs += 1
 		short_node_name.text = "Carl"
@@ -76,7 +76,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das ist sehr schlecht! Wenn die nicht zurückkommen, dann findet das große Konzert heute nicht statt!"
+		short_node_text.text = "WOW! Du bist der echte Samuel Samtpfote? Ich freue mich schon die ganze Woche auf euer Konzert heute Abend!"
 		short_node_rect.texture = PRESET2
 		dialogs += 1
 		short_node_name.text = "Cari"
@@ -87,12 +87,32 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Natürlich! Kannst du uns Tipps geben wo wir sie finden können?"
+		short_node_text.text = "Warum?"
 		short_node_rect.texture = PRESET1
 		dialogs += 1
 		short_node_name.text = "Carl"
 
 	elif dialogs == 7:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Die Bürgermeisterin hat uns extra geschickt, um dir zu helfen. Also, wenn wir die Bandmitglieder finden, kann das Konzert stattfinden?"
+		short_node_rect.texture = PRESET2
+		dialogs += 1
+		short_node_name.text = "Cari"
+
+	elif dialogs == 9:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Wie können wir da Nein sagen? Hast du einen Tipp wo wir sie finden können?"
+		short_node_rect.texture = PRESET1
+		dialogs += 1
+		short_node_name.text = "Carl"
+
+	elif dialogs == 11:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -103,7 +123,7 @@ func add_left_dialog_box():
 		short_node_name.text = "Carl"
 		same_speaker = true
 
-	elif dialogs == 8:
+	elif dialogs == 12:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -114,7 +134,7 @@ func add_left_dialog_box():
 		short_node_name.text = "Cari"
 		same_speaker = false
 	
-	elif dialogs == 10:
+	elif dialogs == 14:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -147,7 +167,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ja genau, der bin ich. Meine Band und ich haben uns gestern gestritten und nun kann ich sie nicht finden."
+		short_node_text.text = "Ja genau, der bin ich. Ich bin Samuel, der Sänger der Metallikatzen. Meine Band und ich haben uns gestern gestritten und nun kann ich sie nicht finden."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel der Siamkater"
 		dialogs += 1
@@ -157,7 +177,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ganz genau, könnt ihr die anderen finden und euch bei ihnen für mich entschuldigen? Ich muss hier noch einiges vorbereiten."
+		short_node_text.text = "Ihr seid wohl Fans. Ja, das bin ich. Freut mich dich kennenzulernen, aber ich fürchte, das Konzert fällt leider aus."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel"
 		dialogs += 1
@@ -167,12 +187,32 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich habe gehört, dass mein Gitarrist zuletzt in der Nähe von [Hier nächster Job der Spieler] gesehen wurde."
+		short_node_text.text = "Leider haben ich und meine Band uns gestern zerstritten und ich kann sie nicht finden."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel"
 		dialogs += 1
 
-	elif dialogs == 9:
+	elif dialogs == 8:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Ganz genau. Bitte findet die anderen und entschuldigt euch bei ihnen für mich."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Samuel"
+		dialogs += 1
+
+	elif dialogs == 10:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Ich habe gehört, dass meine Gitarristin zuletzt in der Nähe von [Hier nächster Job der Spieler] gesehen wurde."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Samuel"
+		dialogs += 1
+
+	elif dialogs == 13:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -182,7 +222,7 @@ func add_right_dialog_box():
 		short_node_name.text = "Samuel"
 		dialogs += 1
 
-	elif dialogs == 11:
+	elif dialogs == 14:
 		dialogs += 1
 		Global.moving_allowed = true
 ##########################################################################################

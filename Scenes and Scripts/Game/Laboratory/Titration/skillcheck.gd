@@ -23,7 +23,12 @@ func _process(delta):
 		if countdown == 0:
 			play_countdown()
 		
-		
+	if Global.dialog_playing && start_game:
+		$MiniGameTime.paused = true
+		$Arrow/AnimationPlayer.pause()
+	elif !Global.dialog_playing && start_game:
+		$MiniGameTime.paused = false
+		$Arrow/AnimationPlayer.play()
 	
 	if start_game == true and Global.dialog_playing == false:
 		
@@ -118,3 +123,15 @@ func reset_entire_minigame():
 
 func _on_animated_sprite_2d_animation_finished():
 	$"../AnimatedSprite2D".visible = false
+
+
+func _on_help_button_help_opened():
+	if start_game:
+		print("PENIS")
+		$MiniGameTime.paused = true
+
+
+func _on_help_button_help_closed():
+	if start_game:
+		print("GENIS")
+		$MiniGameTime.paused = false

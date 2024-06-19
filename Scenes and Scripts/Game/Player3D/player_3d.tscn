@@ -472,7 +472,7 @@ target_desired_distance = 0.1
 path_max_distance = 0.31
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 3.29053, 0)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 3.27, 0)
 sprite_frames = SubResource("SpriteFrames_7sd0m")
 animation = &"carl_idle_right"
 frame_progress = 0.390224
