@@ -486,7 +486,7 @@ shape = SubResource("RectangleShape2D_b0cak")
 
 [node name="Arrow" type="Area2D" parent="Skillcheck"]
 visible = false
-position = Vector2(918.2, 311)
+position = Vector2(1071, 311)
 scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Skillcheck/Arrow"]
