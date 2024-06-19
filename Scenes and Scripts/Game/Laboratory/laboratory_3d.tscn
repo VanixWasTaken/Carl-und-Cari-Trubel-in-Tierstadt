@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=87 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -37,13 +37,23 @@
 [ext_resource type="PackedScene" uid="uid://cg257qtiun1jh" path="res://Scenes and Scripts/Game/Laboratory/Objects/wall_hole.tscn" id="30_3am5x"]
 [ext_resource type="AudioStream" uid="uid://b8ig70axv634b" path="res://Assets/Sound/SFX/Ambience/Laboratory/sfx_laboratory_ambience_ventilation_var1.mp3" id="31_cxgd7"]
 [ext_resource type="PackedScene" uid="uid://edbe0ktmaocs" path="res://Scenes and Scripts/Game/Laboratory/Objects/back_wall_window.tscn" id="31_ssppo"]
-[ext_resource type="Texture2D" uid="uid://go2bolrvsm5n" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle Invisible/chemist_idle1.png" id="39_3oexe"]
-[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.png" id="40_4wje3"]
+[ext_resource type="Texture2D" uid="uid://lmaouvkc3f5" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle1.png" id="38_g3axl"]
+[ext_resource type="Texture2D" uid="uid://h1swtpnfwubt" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle2.png" id="39_kdbkt"]
+[ext_resource type="Texture2D" uid="uid://cpvh8pgf3feuq" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle3.png" id="40_4dr0t"]
+[ext_resource type="Texture2D" uid="uid://b4aux20w5dahw" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle1.PNG" id="40_4wje3"]
+[ext_resource type="Texture2D" uid="uid://bu77au5fg6uox" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle4.png" id="41_lcujt"]
+[ext_resource type="Texture2D" uid="uid://g6qm86oj3cu8" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle5.png" id="42_78jpp"]
+[ext_resource type="Texture2D" uid="uid://dqn1jv0dw72cf" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle6.png" id="43_kghmw"]
+[ext_resource type="Texture2D" uid="uid://dwrx6424p83jb" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle2.png" id="45_xk2hr"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="45_xk025"]
+[ext_resource type="Texture2D" uid="uid://dj166nbgi7kjh" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle3.png" id="46_4kun6"]
 [ext_resource type="AudioStream" uid="uid://crddvii1q3egk" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var2.mp3" id="46_d6ydu"]
+[ext_resource type="Texture2D" uid="uid://ion7ov1w3mcg" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle4.png" id="47_fibod"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="47_iidai"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="48_1q82o"]
+[ext_resource type="Texture2D" uid="uid://c442y07fflnba" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle5.png" id="48_670vk"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="49_7c7o0"]
+[ext_resource type="Texture2D" uid="uid://bc18d41dbuc40" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle6.png" id="49_dlvpm"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
 vertices = PackedVector3Array(-33.4777, 2.4, -5.5175, -29.7777, 2.4, -5.5175, -37.2777, 2.4, -5.5675, -37.2777, 2.4, -5.5675, -37.2777, 2.4, -2.1175, -33.5277, 2.4, -2.1175, -33.4777, 2.4, -5.5175, 29.6223, 2.4, -2.1175, 31.9723, 2.4, -2.1175, 31.9723, 2.4, -5.5675, 29.5723, 2.4, -5.5675, -29.5277, 13.18, -5.3675, -29.5277, 13.18, -4.8175, -29.3777, 13.18, -4.7675, 29.3223, 13.18, -4.6175, 29.3223, 13.18, -5.3675, -29.3777, 13.18, -4.7675, -29.3777, 13.18, -4.6175, 29.3223, 13.18, -4.6175, 12.3223, 2.4, -4.6175, 29.3223, 2.4, -4.6175, 29.3223, 2.4, -5.3675, 12.2723, 2.4, -5.2675, 1.52229, 2.4, -5.2675, 12.2723, 2.4, -5.2675, 29.3223, 2.4, -5.3675, -21.8277, 2.4, -5.3675, -21.8277, 2.4, -5.3675, -21.8277, 2.4, -4.6175, 1.47229, 2.4, -4.6175, 1.52229, 2.4, -5.2675, -29.7777, 2.93, -4.4175, -29.7777, 2.93, -5.2675, -33.2777, 2.93, -5.2675, -29.6277, 2.93, -4.3675, -29.7777, 2.93, -4.4175, -33.2777, 2.93, -5.2675, -33.2777, 2.93, 0.4325, -29.6277, 2.93, 0.4325, -29.5277, 2.93, -5.2675, -29.5277, 2.93, -4.8175, -29.3777, 2.93, -4.7675, -22.0777, 2.93, -4.6175, -22.0777, 2.93, -5.2675, -29.3777, 2.93, -4.7675, -29.3777, 2.93, -4.6175, -22.0777, 2.93, -4.6175, 1.72229, 3.31, -5.0175, 1.72229, 3.31, -4.6175, 12.0723, 3.31, -4.6175, 12.0723, 3.31, -5.0175, -29.3777, 2.93, -4.3675, -29.3777, 2.93, 0.4325, -28.9777, 2.93, 0.4325, -28.9777, 2.93, -4.3675, -28.7277, 2.93, -4.3675, -28.7277, 2.93, 0.4325, -27.9777, 2.93, 0.4325, -27.9777, 2.93, -4.3675, -28.7277, 13.21, -4.3675, -28.7277, 13.21, 6.4325, -27.9777, 13.21, 6.4325, -27.9777, 13.21, -4.3675, -27.7277, 2.93, -4.3675, -27.7277, 2.93, 0.4325, -22.0777, 2.93, 0.4325, -22.0777, 2.93, -4.3675, -21.8277, 2.4, -4.3675, -21.8277, 2.4, -2.1175, 1.47229, 2.4, -2.1175, 1.47229, 2.4, -4.3675, 1.72229, 3.31, -4.3675, 1.72229, 3.31, -1.7175, 12.0723, 3.31, -1.7175, 12.0723, 3.31, -4.3675, 12.3223, 2.4, -4.3675, 12.3223, 2.4, -2.1175, 29.3723, 2.4, -2.1175, 29.3723, 2.4, -4.3675, -7.32771, 2.25, 6.1825, -7.27771, 2.25, 4.4325, -7.62771, 2.25, 4.3825, -7.62771, 2.25, 0.5825, -7.17771, 2.25, 0.5325, -7.17771, 2.25, -1.8675, -21.8277, 2.25, -1.8675, -21.8277, 2.25, 0.6325, -21.8277, 2.25, 0.6325, -22.2777, 2.25, 0.6825, -22.2777, 2.25, 6.1825, -7.32771, 2.25, 6.1825, -7.62771, 2.25, 4.3825, -7.62771, 2.25, 4.3825, -7.62771, 2.25, 0.5825, -21.8277, 2.25, 0.6325, 7.02229, 2.25, 0.5325, 7.02229, 2.25, -1.4675, 1.52229, 2.25, -1.4675, 1.52229, 2.25, -1.4675, 1.47229, 2.25, -1.8675, -7.17771, 2.25, -1.8675, -7.17771, 2.25, 0.5325, 7.02229, 2.25, 0.5325, 1.52229, 2.25, -1.4675, -7.17771, 2.25, -1.8675, 22.0723, 2.25, 6.1825, 22.1223, 2.25, 2.6325, 21.7723, 2.25, 2.5825, 21.8223, 2.25, -0.7675, 29.3723, 2.25, -0.7675, 29.3723, 2.25, -1.8675, 12.3223, 2.25, -1.8675, 12.3223, 2.25, -1.5175, 12.3223, 2.25, -1.5175, 11.9723, 2.25, -1.4675, 12.0223, 2.25, 6.1825, 22.0723, 2.25, 6.1825, 21.7723, 2.25, 2.5825, 21.7723, 2.25, 2.5825, 21.8223, 2.25, -0.7675, 12.3223, 2.25, -1.5175, 29.6223, 2.25, -1.8675, 29.6223, 2.25, -0.7675, 30.2723, 2.25, -0.7675, 30.2723, 2.25, -1.8675, 7.47229, 2.25, 4.3825, 7.12229, 2.25, 4.4325, 7.17229, 2.25, 6.1825, 12.0223, 2.25, 6.1825, 7.02229, 2.25, -1.4675, 7.02229, 2.25, 0.5325, 7.47229, 2.25, 0.5825, 11.9723, 2.25, -1.4675, 7.47229, 2.25, 0.5825, 7.47229, 2.25, 4.3825, 12.0223, 2.25, 6.1825, 11.9723, 2.25, -1.4675, 22.0223, 3.78, -0.5175, 22.0223, 3.78, 2.3825, 29.3723, 3.78, 2.3825, 29.3723, 3.78, -0.5175, 29.6223, 3.78, -0.5175, 29.6223, 3.78, 2.3825, 30.5723, 3.78, 2.3825, 30.5723, 3.78, -0.5175, -29.3277, 2.25, 6.1825, -28.9777, 2.25, 6.1825, -28.9777, 2.25, 0.6825, -29.3777, 2.25, 0.6825, -28.7277, 2.25, 0.6825, -28.7277, 2.25, 6.1825, -27.9777, 2.25, 6.1825, -27.9777, 2.25, 0.6825, -22.2777, 2.25, 6.1825, -22.2777, 2.25, 0.6825, -27.7277, 2.25, 0.6825, -27.7277, 2.25, 6.1825, -4.82771, 3.5, 4.1825, -4.82771, 3.5, 2.6825, -5.22771, 3.5, 2.6825, -7.37771, 3.5, 4.1825, -5.27771, 3.5, 2.4825, 4.67229, 3.5, 2.4325, 4.72229, 3.5, 0.7825, -7.37771, 3.5, 0.7825, -7.37771, 3.5, 4.1825, -5.22771, 3.5, 2.6825, -5.27771, 3.5, 2.4825, -7.37771, 3.5, 0.7825, 4.72229, 3.5, 0.7825, 4.67229, 3.5, 2.4325, 4.97229, 3.5, 2.4325, 4.72229, 3.5, 0.7825, 4.97229, 3.5, 2.4325, 5.02229, 3.5, 2.6325, 7.22229, 3.5, 4.1825, 7.22229, 3.5, 0.7825, 5.02229, 3.5, 2.6325, -4.82771, 3.5, 2.6825, -4.82771, 3.5, 4.1825, 7.22229, 3.5, 4.1825, 30.2723, 2.25, 2.6325, 29.6223, 2.25, 2.6325, 29.6223, 2.25, 5.5825, 30.2723, 2.25, 6.1825, 29.4223, 2.25, 5.6325, 29.3723, 2.25, 2.6325, 22.1223, 2.25, 2.6325, 22.0723, 2.25, 6.1825, 30.2723, 2.25, 6.1825, 29.6223, 2.25, 5.5825, 29.4223, 2.25, 5.6325, 22.0723, 2.25, 6.1825, 30.2723, 2.25, 6.1825, 29.4223, 2.25, 5.6325, -7.32771, 2.25, 6.1825, 7.17229, 2.25, 6.1825, 7.12229, 2.25, 4.4325, -7.27771, 2.25, 4.4325)
@@ -195,7 +205,22 @@ _data = {
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("39_3oexe")
+"texture": ExtResource("38_g3axl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_kdbkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_4dr0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_lcujt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_78jpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_kghmw")
 }],
 "loop": true,
 "name": &"idle",
@@ -204,6 +229,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("40_4wje3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_xk2hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_4kun6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_fibod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_670vk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_dlvpm")
 }],
 "loop": true,
 "name": &"visible",
@@ -541,7 +581,7 @@ visible = false
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="NPC Chameleon"]
 transform = Transform3D(-0.831219, 0, -7.26675e-08, 0, 0.831219, 0, 7.26675e-08, 0, -0.831219, -1.16473, 5.15479, 1.18985)
 sprite_frames = SubResource("SpriteFrames_iras5")
-animation = &"visible"
+animation = &"idle"
 
 [node name="DialogArea" type="Area3D" parent="NPC Chameleon"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000160217, -0.0550776, 0.000656128)
