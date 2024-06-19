@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=63 format=3 uid="uid://ducsr1iwag28u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Main Menu/main_menu.gd" id="1_3f1tb"]
 [ext_resource type="Texture2D" uid="uid://r6osxlvpwdud" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main.png" id="2_sbqtk"]
@@ -41,7 +41,6 @@
 [ext_resource type="Texture2D" uid="uid://cnxktqflk3e60" path="res://Assets/Art/UI/Buttons/Spiel Beenden Button/spiel_beenden_button_light.png" id="23_qiddb"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="34_qyljb"]
 [ext_resource type="AudioStream" uid="uid://cmwvmt4sqlnyf" path="res://Assets/Sound/SFX/Foley/World/sfx_foley_world_cloudswhoosh.mp3" id="35_wt1q8"]
-[ext_resource type="AudioStream" uid="uid://dk0mqinit5gom" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_hosenoise_var1.mp3" id="40_d7att"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_olwb2"]
 load_path = "res://.godot/imported/bg_cloud_main2.png-1b43a7b66b21b0e6e12be24371fe2d6a.ctex"
@@ -439,11 +438,6 @@ bus = &"SFX_UI"
 stream = SubResource("AudioStreamRandomizer_itqj1")
 bus = &"SFX_UI"
 
-[node name="DisClick" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("40_d7att")
-volume_db = -12.0
-bus = &"SFX_UI"
-
 [node name="Alpha Label" type="Label" parent="."]
 offset_left = 5.0
 offset_top = 1044.0
@@ -467,8 +461,6 @@ bus = &"SFX_Foley"
 [connection signal="mouse_entered" from="VBoxContainer/New Game" to="." method="_on_button_hovered"]
 [connection signal="button_down" from="VBoxContainer/Load Game" to="." method="_on_load_game_button_down"]
 [connection signal="button_up" from="VBoxContainer/Load Game" to="." method="_on_load_game_button_up"]
-[connection signal="mouse_entered" from="VBoxContainer/Load Game" to="." method="_on_load_game_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/Load Game" to="." method="_on_load_game_mouse_exited"]
 [connection signal="button_down" from="VBoxContainer/Options" to="." method="_on_button_click"]
 [connection signal="button_up" from="VBoxContainer/Options" to="." method="_on_options_button_up"]
 [connection signal="mouse_entered" from="VBoxContainer/Options" to="." method="_on_button_hovered"]
@@ -480,6 +472,4 @@ bus = &"SFX_Foley"
 [connection signal="mouse_entered" from="VBoxContainer/Quit" to="." method="_on_button_hovered"]
 [connection signal="click" from="OptionsMenu" to="." method="_on_button_click"]
 [connection signal="hover" from="OptionsMenu" to="." method="_on_button_hovered"]
-[connection signal="click" from="CreditsMenu" to="." method="_on_button_click"]
-[connection signal="hover" from="CreditsMenu" to="." method="_on_button_hovered"]
 [connection signal="animation_finished" from="Clouds" to="." method="_on_clouds_animation_finished"]
