@@ -441,7 +441,7 @@ bus = &"SFX_UI"
 
 [node name="DisClick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("40_d7att")
-volume_db = -6.0
+volume_db = -12.0
 bus = &"SFX_UI"
 
 [node name="Alpha Label" type="Label" parent="."]
@@ -467,6 +467,7 @@ bus = &"SFX_Foley"
 [connection signal="mouse_entered" from="VBoxContainer/New Game" to="." method="_on_button_hovered"]
 [connection signal="button_down" from="VBoxContainer/Load Game" to="." method="_on_load_game_button_down"]
 [connection signal="button_up" from="VBoxContainer/Load Game" to="." method="_on_load_game_button_up"]
+[connection signal="mouse_entered" from="VBoxContainer/Load Game" to="." method="_on_load_game_mouse_entered"]
 [connection signal="button_down" from="VBoxContainer/Options" to="." method="_on_button_click"]
 [connection signal="button_up" from="VBoxContainer/Options" to="." method="_on_options_button_up"]
 [connection signal="mouse_entered" from="VBoxContainer/Options" to="." method="_on_button_hovered"]
