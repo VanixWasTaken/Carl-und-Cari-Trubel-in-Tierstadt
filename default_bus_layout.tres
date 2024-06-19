@@ -7,8 +7,8 @@ db = 3
 
 [sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_h6jm0"]
 resource_name = "LowPassFilter"
-cutoff_hz = 1600.0
-db = 3
+cutoff_hz = 1800.0
+db = 2
 
 [resource]
 bus/0/volume_db = -3.11736
