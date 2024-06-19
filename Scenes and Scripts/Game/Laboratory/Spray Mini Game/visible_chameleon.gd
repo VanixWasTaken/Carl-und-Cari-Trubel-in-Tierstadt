@@ -30,7 +30,7 @@ func _input(event):
 		gun_jam_timer.start()
 
 func _process(delta):
-	if shooting_time == 2:
+	if shooting_time == 2 and !$"../SpinMinigame".visible:
 		if should_play_dialog3:
 			add_child(dialog3.instantiate())
 			gun_in_hand.visible = false
