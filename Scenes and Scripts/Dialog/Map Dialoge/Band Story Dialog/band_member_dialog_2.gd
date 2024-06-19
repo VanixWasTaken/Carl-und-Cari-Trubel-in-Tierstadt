@@ -45,7 +45,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 11:
-		get_tree().get_first_node_in_group("AnimationPlayer").play("BarabaMarket1")
+		get_tree().get_first_node_in_group("AnimationPlayer").play("BarbaraMarket1")
 		queue_free()
 ##########################################################################################
 
@@ -76,7 +76,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Nein! Du darfst nicht aufgeben. Dieter hat uns geschickt um zu sagen, dass es ihm leid tut."
+		short_node_text.text = "Nein! Du darfst nicht aufgeben. Dieter hat uns geschickt um sich zu entschuldigen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		dialogs += 1
@@ -87,7 +87,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das hat er wirklich gesagt, er sah so aus als wär er wirklich am Boden zerstört und verloren."
+		short_node_text.text = "Wir sagen die Wahrheit. Es tut ihm aufrichtig Leid."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		dialogs += 1
@@ -107,9 +107,9 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Dankeschön, wir hoffen ihr könnt euch versöhnen."
+		short_node_text.text = "Vielen Dank, ich hoffen ihr könnt euch versöhnen."
 		short_node_rect.texture = PRESET2
-		short_node_name.text = "Carl & Cari"
+		short_node_name.text = "Cari"
 		dialogs += 1
 
 	
@@ -136,7 +136,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich war mal die Bassistin. Samuel und der Rest haben sich gestern zerstritten. Das wars mit der Band."
+		short_node_text.text = "Ich war mal die Bassistin. Aber wir haben uns zerstritten. Das wars wohl mit der Band."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Barbara die Bengalkatze"
 		dialogs += 1
@@ -146,7 +146,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das hat er wirklich gesagt? Das passt gar nicht zu ihm. Sicher, dass ihr euch das nicht eingebildet habt?"
+		short_node_text.text = "Sicher, dass ihr euch das nicht eingebildet habt? Das passt gar nicht zu ihm."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Barbara"
 		dialogs += 1
@@ -156,7 +156,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Hmmmmm… Vielleicht sollte ich mir mal anhören, was er zu sagen hat. Danke."
+		short_node_text.text = "Hört sich so an, als ob er es wirklich Ernst meinen würde. Ich rede mal mit ihm."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Barbara"
 		dialogs += 1
@@ -166,7 +166,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ausnahmsweise, aber nur weil ihr mir geholfen habt."
+		short_node_text.text = "Da ihr mir geholfen habt, gerne."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Barbara"
 		dialogs += 1

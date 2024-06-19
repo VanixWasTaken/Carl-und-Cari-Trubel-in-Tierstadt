@@ -73,7 +73,8 @@ func _on_animation_player_3_animation_finished(anim_name):
 
 
 func _on_npc_movement_animation_finished(anim_name):
-	Global.dialog_playing = false
+	if anim_name == "BarbaraMarket1":
+		Global.dialog_playing = false
 
 
 func _on_market_place_animation_animation_finished(anim_name):
