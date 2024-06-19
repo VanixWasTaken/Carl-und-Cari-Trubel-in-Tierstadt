@@ -1,6 +1,11 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://bbpwbqgieudtt"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://bbpwbqgieudtt"]
 
 [sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_i4fxu"]
+resource_name = "LowPassFilter"
+cutoff_hz = 1600.0
+db = 3
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_h6jm0"]
 resource_name = "LowPassFilter"
 cutoff_hz = 1600.0
 db = 3
@@ -51,6 +56,8 @@ bus/7/mute = false
 bus/7/bypass_fx = false
 bus/7/volume_db = -6.24739
 bus/7/send = &"Dialog"
+bus/7/effect/0/effect = SubResource("AudioEffectLowPassFilter_h6jm0")
+bus/7/effect/0/enabled = false
 bus/8/name = &"Dialog_Conv"
 bus/8/solo = false
 bus/8/mute = false

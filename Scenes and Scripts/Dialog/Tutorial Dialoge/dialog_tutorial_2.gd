@@ -99,6 +99,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Perfekt, komm kurz noch zu mir und sprich mit mir."
 		short_node_rect.texture = PRESET2
+		short_node_rect.flip_h = true
 		dialogs += 1
 		if Global.character == "Carl":
 			short_node_name.text = "Cari"
