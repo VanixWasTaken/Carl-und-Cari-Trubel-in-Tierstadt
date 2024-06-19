@@ -84,3 +84,7 @@ func _on_load_game_mouse_entered():
 		$Hover.play()
 	else:
 		$Hover.play()
+
+func _on_load_game_mouse_exited():
+	if $"VBoxContainer/Load Game".disabled:
+		mouse_inside_disabled = false
