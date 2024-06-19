@@ -13,6 +13,7 @@ var dialog4 = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/Spray M
 
 
 func _ready():
+	AudioServer.set_bus_effect_enabled(7, 0, false)
 	add_child(dialog2.instantiate())
 	$CanvasLayer/FadeAnimation.show()
 	$CanvasLayer/AnimationPlayer.play("fade_in")
