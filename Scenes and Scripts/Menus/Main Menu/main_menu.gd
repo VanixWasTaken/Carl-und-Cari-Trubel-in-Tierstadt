@@ -6,6 +6,7 @@ extends Node2D
 @onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
 @onready var laboratory_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
 
+var mouse_inside_disabled = false
 
 func _ready():
 	$CloudsWhoosch.play()
@@ -16,7 +17,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if mouse_inside_disabled and Input.is_action_just_pressed("left_click"):
+		$DisClick.play()
 
 # Input for usability
 func _on_start_button_up():
@@ -59,9 +61,6 @@ func _on_animation_player_3_animation_finished(anim_name):
 	$BackgroundClouds/AnimationPlayer6.play("new_animation")
 
 
-func _on_load_game_button_down():
-	$Click.play()
-
 
 func _on_load_game_button_up():
 	$Clouds.play_backwards("default")
@@ -77,3 +76,15 @@ func _on_load_game_button_up():
 	elif Global.last_scene == "Laboratory":
 		await get_tree().create_timer(1.125).timeout
 		get_tree().change_scene_to_packed(laboratory_scene)
+
+
+func _on_load_game_mouse_entered():
+	if $"VBoxContainer/Load Game".disabled:
+		mouse_inside_disabled = true
+		$Hover.play()
+	else:
+		$Hover.play()
+
+func _on_load_game_mouse_exited():
+	if $"VBoxContainer/Load Game".disabled:
+		mouse_inside_disabled = false

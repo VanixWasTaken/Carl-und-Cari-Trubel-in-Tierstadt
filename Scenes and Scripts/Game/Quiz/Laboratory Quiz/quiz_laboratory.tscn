@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://b7l01kbm7a7hp"]
+[gd_scene load_steps=61 format=3 uid="uid://b7l01kbm7a7hp"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_07xri"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_p4cgx"]
@@ -38,6 +38,7 @@
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="36_2nkv8"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="37_e57yk"]
 [ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="38_p52ct"]
+[ext_resource type="AudioStream" uid="uid://bxtc80jb2lxtd" path="res://Assets/Sound/SFX/Foley/Map/Quiz/sfx_foley_map_quiz_stars.mp3" id="39_dkewe"]
 
 [sub_resource type="Theme" id="Theme_b780n"]
 default_font = ExtResource("4_pc78o")
@@ -1062,8 +1063,9 @@ volume_db = -9.0
 bus = &"SFX"
 
 [node name="Stars" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("39_dkewe")
 volume_db = -6.0
-bus = &"SFX"
+bus = &"SFX_UI"
 
 [connection signal="block_input" from="Question5" to="." method="_on_question_block_input"]
 [connection signal="release_input" from="Question5" to="." method="_on_question_release_input"]
