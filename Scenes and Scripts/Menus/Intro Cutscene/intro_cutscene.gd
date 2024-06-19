@@ -9,7 +9,6 @@ var narrator_count = 0
 
 func _ready():
 	MusicController._play_music("adventure", "map", -18, 1.125)
-	narrator_delay()
 
 
 func _on_animated_sprite_2d_animation_finished():
@@ -18,6 +17,8 @@ func _on_animated_sprite_2d_animation_finished():
 	$VoiceOver.play()
 	$Dialog1.show()
 	$Dialog1/AnimationPlayer.play("new_animation")
+
+
 
 
 func _on_animation_player_animation_finished(anim_name):
@@ -54,21 +55,15 @@ func _on_animation_player_dialog2_animation_finished(anim_name):
 
 func _on_clouds_animation_finished():
 	$Clouds.hide()
-
-
-func _on_narrator_finished():
-	$TelephoneRing.play()
-
-func narrator_delay():
-	if narrator_count == 0:
-		await get_tree().create_timer(1).timeout
-		$Narrator.play()
-		narrator_count += 1
+	$Narrator.play()
 
 
 func _on_animated_sprite_2d_frame_changed():
 	if $AnimatedSprite2D.frame == 1:
 		$NailingPoster.play()
+	elif $AnimatedSprite2D.frame == 4:
+		await get_tree().create_timer(0.1).timeout
+		$TelephoneRing.play()
 	elif $AnimatedSprite2D.frame == 5:
 		$TelephoneGrab.play()
 
