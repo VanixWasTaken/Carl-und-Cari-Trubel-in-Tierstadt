@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Tutorial/tutorial.gd" id="1_trbh3"]
-[ext_resource type="Texture2D" uid="uid://cdguiyykjh7vj" path="res://Assets/Art/Random Screens/black_screen.png" id="4_gth8d"]
+[ext_resource type="Texture2D" uid="uid://dea08nl64dog" path="res://Assets/Art/Environment/Rooms/Tutorial/Room/tutorial_floor.png" id="4_cdrv7"]
 [ext_resource type="Texture2D" uid="uid://dtnvsdw1s13f5" path="res://Assets/Art/Environment/Rooms/Tutorial/Room/tutorial_wall_back.png" id="5_vdeea"]
 [ext_resource type="AudioStream" uid="uid://b2tbta31s5pt7" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_fridge.mp3" id="6_vvh7v"]
 [ext_resource type="Texture2D" uid="uid://dsfknmkhpnhps" path="res://Assets/Art/Environment/Rooms/Tutorial/POI/poi1.png" id="7_55g8d"]
@@ -60,7 +60,7 @@ size = Vector3(19.3163, 1, 0.201752)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vis0"]
-albedo_texture = ExtResource("4_gth8d")
+albedo_texture = ExtResource("4_cdrv7")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)
