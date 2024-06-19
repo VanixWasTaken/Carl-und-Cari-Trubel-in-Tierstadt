@@ -3,10 +3,6 @@ extends Node
 
 
 
-func _input(event):   
-	if event.is_action_pressed("right_click"):
-		save_game()
-
 
 func save():  # saves the current stats as a dictionary
 	var save_dict : Dictionary = {
@@ -16,7 +12,11 @@ func save():  # saves the current stats as a dictionary
 		"CompletedJobs" : Global.completed_jobs,
 		"JobStarsDict" : Global.job_stars_dict,
 		"LastScene" : Global.last_scene,
-		"FirstGameStart" : Global.first_game_start
+		"FirstGameStart" : Global.first_game_start,
+		"MasterVolume" : Global.master_volume,
+		"MusicVolume" : Global.music_volume,
+		"SFXVolume" : Global.sfx_volume,
+		"DialogVolume" : Global.dialog_volume
 		
 	}
 	
@@ -52,6 +52,10 @@ func load_game():
 		Global.job_stars_dict = node_data["JobStarsDict"]
 		Global.last_scene = node_data["LastScene"]
 		Global.first_game_start = node_data["FirstGameStart"]
+		Global.master_volume = node_data["MasterVolume"]
+		Global.music_volume = node_data["MusicVolume"]
+		Global.sfx_volume = node_data["SFXVolume"]
+		Global.dialog_volume = node_data["DialogVolume"]
 
 
 func clear_dict(): # Is used for overwriting the whole save game file on the computer to an empty dictionary. So it basically deletes the save 
