@@ -29,6 +29,10 @@ func _ready():
 		get_tree().get_current_scene().add_child(dialog_instance)
 	player = get_tree().get_first_node_in_group("Player")
 
+	SaveSystem.save_game()
+
+
+
 
 func _input(event):
 	if event.is_action_pressed("escape"):

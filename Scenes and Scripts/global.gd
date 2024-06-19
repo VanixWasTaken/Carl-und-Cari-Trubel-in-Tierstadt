@@ -42,7 +42,6 @@ var inside_laboratory : bool = false
 
 
 
-
 ###### Thess variable are used to create an instance of the pause menu
 @onready var pause = preload("res://Scenes and Scripts/Menus/Pause Menu/pause_menu.tscn")
 var pause_opened = true ### set to true, to stop the menu from opening before the game starts

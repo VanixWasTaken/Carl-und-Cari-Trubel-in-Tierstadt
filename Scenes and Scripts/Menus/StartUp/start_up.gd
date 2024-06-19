@@ -1,7 +1,6 @@
 extends Control
 
 func _ready():
-	SaveSystem.save_game()
 	SaveSystem.load_game()
 
 var animation_counter = 0

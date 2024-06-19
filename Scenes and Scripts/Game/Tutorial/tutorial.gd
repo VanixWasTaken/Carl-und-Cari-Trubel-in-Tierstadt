@@ -34,6 +34,9 @@ func _ready():
 			barkies.add_stream(i, load("res://Assets/Sound/VO/Tutorial/Barks/Cari/NPC/vo_npc_bark_cari_tutorial01_var" + str(f) + ".mp3"))
 	
 	#$UI/HelpButton/DialogTutorial.visible = false
+	
+	SaveSystem.save_game()
+
 
 func _process(delta):
 	if $Player.position.x <= 19.5 and $Player.position.x >= -19.5:

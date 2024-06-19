@@ -82,6 +82,8 @@ func _ready():
 	#playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_creaks_var1.mp3"))
 	#playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind_var1.mp3"))
 	
+	SaveSystem.save_game()
+
 
 func _process(delta):
 	if !cutscene:
