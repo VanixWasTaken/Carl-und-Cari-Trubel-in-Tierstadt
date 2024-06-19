@@ -44,24 +44,24 @@ func _process(delta):
 	if Global.open_tutorial_door:
 		$Objects/Door.rotation = (Vector3(0, 1.5707963268, 0))
 		$Objects/Door.position = (Vector3(25, 6, -1))
-		$Objects/DoorArea3D.position.z = -12
 		$NavigationRegion3D/Objects/DoorAfterOpen/CollisionShape3D.disabled = false
 
-func _on_door_area_3d_body_entered(body):
-	if body.get_name() == "Player":
-		player.play_fade_out()
-		MusicController._fade_to_volume(-80, 1)
+
 
 func _on_poi_sound_finished():
 	await get_tree().create_timer(randf_range(5, 10)).timeout
 	if !got_key:
 		$"POI/POI Sound".play()
+		
 
 func _on_poi_area_body_entered(body):
 	if body.get_name() == "Player":
 		got_key = true
 		$POI/AudioStreamPlayer3D.play()
 		Global.tutorial_help_button_state += 1
+		$Objects/LeaveThroughDoor.monitorable = true
+		$Objects/LeaveThroughDoor.monitoring = true
+
 
 func _on_audio_stream_player_3d_finished():
 	$Key.queue_free()
@@ -117,3 +117,9 @@ func _on_animation_player_animation_finished(anim_name):
 	$"NPC Tutorial".add_child(dialogue_instance)
 	$Barks/Timer.wait_time = randf_range(5, 15)
 	$Barks/Timer.start()
+
+
+func _on_leave_through_door_body_entered(body):
+	if body.get_name() == "Player":
+		player.play_fade_out()
+		MusicController._fade_to_volume(-80, 1)

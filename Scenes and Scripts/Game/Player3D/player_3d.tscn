@@ -474,8 +474,7 @@ path_max_distance = 0.31
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 3.27, 0)
 sprite_frames = SubResource("SpriteFrames_7sd0m")
-animation = &"carl_idle_right"
-frame_progress = 0.390224
+animation = &"cari_idle_left"
 
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
 current = true
@@ -498,6 +497,7 @@ offset_right = 974.078
 offset_bottom = 552.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(45, 50)
 pivot_offset = Vector2(1043.66, 620.915)
 mouse_filter = 2
 texture = ExtResource("4_iujjk")

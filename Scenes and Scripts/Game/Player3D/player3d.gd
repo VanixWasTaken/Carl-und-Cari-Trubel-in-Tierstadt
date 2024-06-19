@@ -119,7 +119,7 @@ func _input(event):
 
 func play_fade_out():
 	$CanvasLayer/AnimationPlayer.play("fade_out")
-	SaveSystem.save_game()
+
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_out":

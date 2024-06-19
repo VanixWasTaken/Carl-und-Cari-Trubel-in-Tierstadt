@@ -201,8 +201,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dbdf1"]
-size = Vector3(7.86162, 17.5703, 3.75842)
+[sub_resource type="BoxShape3D" id="BoxShape3D_ljslg"]
+size = Vector3(13.898, 14.4393, 1.70703)
 
 [sub_resource type="Animation" id="Animation_wkdwk"]
 resource_name = "intro_cutscene"
@@ -402,6 +402,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4729, 0, -5.58042)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Objects/Door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.275452, 2.94423, 1.61679)
 shape = SubResource("BoxShape3D_gokyr")
+disabled = true
 
 [node name="DoorAfterOpen" type="StaticBody3D" parent="NavigationRegion3D/Objects"]
 
@@ -504,14 +505,16 @@ texture = ExtResource("39_6u8p4")
 transform = Transform3D(0.802149, 0, 0, 0, 0.802149, 0, 0, 0, 0.802149, 10.1694, 5.98231, -1.06048)
 texture = ExtResource("36_ukp8l")
 
-[node name="DoorArea3D" type="Area3D" parent="Objects"]
-transform = Transform3D(0.512313, 0, 0, 0, 0.512313, 0, 0, 0, 0.512313, 21.9497, 4.02891, -13.1082)
-collision_layer = 9
-collision_mask = 9
+[node name="LeaveThroughDoor" type="Area3D" parent="Objects"]
+transform = Transform3D(0.512313, 0, 0, 0, 0.512313, 0, 0, 0, 0.512313, 21.9497, 4.02891, -2.04847)
+collision_layer = 8
+collision_mask = 8
+monitoring = false
+monitorable = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/DoorArea3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.391975, 1.01595, 16.2875)
-shape = SubResource("BoxShape3D_dbdf1")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/LeaveThroughDoor"]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0.267944, -1.88971, 0.353515)
+shape = SubResource("BoxShape3D_ljslg")
 
 [node name="NPC Tutorial" parent="." instance=ExtResource("31_kwirw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4152, 0.093152, 1.88371)
@@ -541,7 +544,7 @@ autoplay = "intro_cutscene"
 [connection signal="finished" from="POI/POI Sound" to="." method="_on_poi_sound_finished"]
 [connection signal="body_entered" from="POI/POI Area" to="." method="_on_poi_area_body_entered"]
 [connection signal="finished" from="POI/AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
-[connection signal="body_entered" from="Objects/DoorArea3D" to="." method="_on_door_area_3d_body_entered"]
+[connection signal="body_entered" from="Objects/LeaveThroughDoor" to="." method="_on_leave_through_door_body_entered"]
 [connection signal="body_entered" from="NPC Tutorial/DialogeArea3D" to="." method="_on_dialog_area_3d_body_entered"]
 [connection signal="body_exited" from="NPC Tutorial/DialogeArea3D" to="." method="_on_dialog_area_3d_body_exited"]
 [connection signal="timeout" from="Barks/Timer" to="." method="_on_timer_timeout"]
