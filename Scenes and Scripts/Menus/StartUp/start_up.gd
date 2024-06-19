@@ -1,6 +1,8 @@
 extends Control
 
 func _ready():
+	if FileAccess.file_exists("user://savegame.save"):
+		SaveSystem.save_game()
 	SaveSystem.load_game()
 
 var animation_counter = 0
