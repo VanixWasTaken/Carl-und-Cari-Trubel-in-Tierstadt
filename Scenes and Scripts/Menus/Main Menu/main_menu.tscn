@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=59 format=3 uid="uid://ducsr1iwag28u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Main Menu/main_menu.gd" id="1_3f1tb"]
 [ext_resource type="Texture2D" uid="uid://r6osxlvpwdud" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main.png" id="2_sbqtk"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://csiuqoad3bqyt" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_003.png" id="5_wlv6i"]
 [ext_resource type="Texture2D" uid="uid://20m8sq4yw4hr" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_004.png" id="6_35oed"]
 [ext_resource type="Texture2D" uid="uid://ld2jwrr2boi7" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_005.png" id="7_p3d45"]
-[ext_resource type="PackedScene" uid="uid://c167vkgb61a1m" path="res://Scenes and Scripts/Menus/Credits/credits.tscn" id="8_e5ggp"]
 [ext_resource type="Texture2D" uid="uid://bw4uijw5l3vn1" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_006.png" id="8_iclu6"]
 [ext_resource type="Texture2D" uid="uid://6y6y5emfkd32" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_007.png" id="9_2ahhp"]
 [ext_resource type="Texture2D" uid="uid://jhaad5f01wit" path="res://Assets/Art/UI/Buttons/Neues Spiel Buttons/neues_spiel_button.png" id="9_pb04c"]
@@ -396,13 +395,6 @@ texture_normal = ExtResource("20_ltb8o")
 texture_pressed = ExtResource("21_m1fq5")
 texture_hover = ExtResource("22_72qen")
 
-[node name="CreditsMenu" parent="." instance=ExtResource("8_e5ggp")]
-visible = false
-offset_left = 1.0
-offset_top = 9.0
-offset_right = 1.0
-offset_bottom = 9.0
-
 [node name="OptionsMenu" parent="." instance=ExtResource("15_nlixp")]
 visible = false
 
@@ -462,8 +454,6 @@ bus = &"SFX_Foley"
 [connection signal="button_down" from="VBoxContainer/Credits" to="." method="_on_button_click"]
 [connection signal="button_up" from="VBoxContainer/Credits" to="." method="_on_credits_button_up"]
 [connection signal="mouse_entered" from="VBoxContainer/Credits" to="." method="_on_button_hovered"]
-[connection signal="click" from="CreditsMenu" to="." method="_on_button_click"]
-[connection signal="hover" from="CreditsMenu" to="." method="_on_button_hovered"]
 [connection signal="click" from="OptionsMenu" to="." method="_on_button_click"]
 [connection signal="hover" from="OptionsMenu" to="." method="_on_button_hovered"]
 [connection signal="animation_finished" from="Clouds" to="." method="_on_clouds_animation_finished"]

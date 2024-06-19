@@ -1,17 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://c167vkgb61a1m"]
+[gd_scene load_steps=6 format=3 uid="uid://n3p1kx407p77"]
 
-[ext_resource type="PackedScene" uid="uid://ex8idjxdm1hh" path="res://Scenes and Scripts/Menus/Options/options.tscn" id="1_cfe8j"]
+[ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="1_h6bc1"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="2_aydq3"]
+[ext_resource type="Texture2D" uid="uid://bagfqcw5jgjg3" path="res://Assets/Art/UI/Buttons/Zurück Button/zurück_button.png" id="3_dqijv"]
+[ext_resource type="Texture2D" uid="uid://cfx4mjux32qlv" path="res://Assets/Art/UI/Buttons/Zurück Button/zurück_button_dark.png" id="4_8fmcx"]
+[ext_resource type="Texture2D" uid="uid://g40m4yqqgyxy" path="res://Assets/Art/UI/Buttons/Zurück Button/zurück_button_light.png" id="5_6r85l"]
 
-[node name="Credits" instance=ExtResource("1_cfe8j")]
+[node name="CreditsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Settings" parent="." index="0"]
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 1921.0
-offset_bottom = 1081.0
+[node name="Settings" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1010.0
+offset_top = -590.0
+offset_right = 1010.0
+offset_bottom = 590.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_h6bc1")
 
-[node name="Label" parent="Settings" index="0"]
-offset_left = -870.0
-offset_right = -97.0
-text = "Credits
-"
+[node name="Label" type="Label" parent="Settings"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -694.0
+offset_top = 182.0
+offset_right = -91.0
+offset_bottom = 318.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
+theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_aydq3")
+theme_override_font_sizes/font_size = 100
+text = "Mitwirkende"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -644.0
+offset_top = -947.0
+offset_right = 268.0
+offset_bottom = -640.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_dqijv")
+texture_pressed = ExtResource("4_8fmcx")
+texture_hover = ExtResource("5_6r85l")
