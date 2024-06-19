@@ -3,7 +3,7 @@ extends Node2D
 var mouse_inside = false
 var player_inside = false
 var clicked_on = false
-var dialog_scene = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Band Story Dialog/band_member_dialog_4.tscn")
+var dialog_scene = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Band Story Dialog/band_member_dialog_3.tscn")
 
 
 func _input(event):
