@@ -36,6 +36,7 @@ func _on_weiter_button_pressed():
 		$VoiceOver.stream = load("res://Assets/Sound/VO/Intro/vo_npc_both_intro_help_02.mp3")
 		$VoiceOver.play()
 		$Dialog2/AnimationPlayer.play("new_animation")
+		$Dialog2/AnimationPlayer2.play("shake")
 		$WeiterButton.position = Vector2(110, 703)
 	if button_pressed == 2:
 		get_tree().change_scene_to_packed(next_scene)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://skc43dl2o124"]
+[gd_scene load_steps=54 format=3 uid="uid://skc43dl2o124"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.gd" id="1_jfymc"]
 [ext_resource type="Texture2D" uid="uid://caklkhjnajqs1" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame8.png" id="2_ldyjv"]
@@ -211,6 +211,26 @@ _data = {
 "new_animation": SubResource("Animation_014u0")
 }
 
+[sub_resource type="Animation" id="Animation_h35e4"]
+resource_name = "shake"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, 0.0872665, -0.0872665, 0.0872665, -0.0872665, 0.0872665, -0.0872665, 0.0872665, -0.0872665, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ehn3g"]
+_data = {
+"shake": SubResource("Animation_h35e4")
+}
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_l7t8e"]
 animations = [{
 "frames": [{
@@ -340,10 +360,11 @@ libraries = {
 
 [node name="Dialog2" type="RichTextLabel" parent="."]
 visible = false
-offset_left = 1171.0
-offset_top = 118.0
-offset_right = 1740.0
-offset_bottom = 504.0
+offset_left = 1328.0
+offset_top = 34.0
+offset_right = 1897.0
+offset_bottom = 307.0
+pivot_offset = Vector2(284, 136)
 theme_override_fonts/normal_font = ExtResource("10_0wlxo")
 theme_override_font_sizes/normal_font_size = 100
 text = "Wir sind auf dem Weg!"
@@ -353,6 +374,11 @@ visible_ratio = 0.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Dialog2"]
 libraries = {
 "": SubResource("AnimationLibrary_j1hdd")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Dialog2"]
+libraries = {
+"": SubResource("AnimationLibrary_ehn3g")
 }
 
 [node name="WeiterButton" type="TextureButton" parent="."]
@@ -367,6 +393,7 @@ texture_pressed = ExtResource("12_vgwtq")
 texture_hover = ExtResource("13_4rwus")
 
 [node name="Clouds" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_l7t8e")
 autoplay = "default"
