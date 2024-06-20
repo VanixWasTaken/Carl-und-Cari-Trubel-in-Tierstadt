@@ -42,7 +42,8 @@ func _process(delta):
 			
 		
 		
-	if spin_round == 3:
+	if spin_round >= 3:
+		$"../../VisibleChameleon".should_play_dialog3 = true
 		gun_in_hand.visible = true
 		shooting_area.monitorable = true
 		shooting_area.monitoring = true
@@ -50,8 +51,10 @@ func _process(delta):
 		area_2d.monitoring = true
 		should_shoot.emit()
 		start_dialog4.emit()
-		spin_minigame.queue_free()
 		bottle_and_gun.queue_free()
+		spin_minigame.visible = false
+		self.queue_free()
+		spin_round += 1
 
 
 func follow_mouse():
