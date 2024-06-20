@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://ckv10od6wynv3"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_2v1vm"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/garden_center.gd" id="1_35ge2"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_wckdn"]
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_g16mw"]
 [ext_resource type="Texture2D" uid="uid://bsld80bjwoc0t" path="res://Assets/Grids/grid_floor.png" id="4_cfsk2"]
@@ -68,7 +68,7 @@ polyphony = 3
 
 [node name="Main" type="Node3D" groups=["Root"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-script = ExtResource("1_2v1vm")
+script = ExtResource("1_35ge2")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

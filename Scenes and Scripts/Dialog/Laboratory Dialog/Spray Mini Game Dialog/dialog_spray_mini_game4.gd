@@ -52,6 +52,7 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 4:
 		Global.dialog_playing = false
+		Global.should_shoot = true
 		gun_gets_visible.emit()
 		queue_free()
 ##########################################################################################

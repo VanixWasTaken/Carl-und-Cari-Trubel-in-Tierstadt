@@ -9,7 +9,7 @@ var dialog_playing = false
 var lab_cutscene_played = false 
 var cutscene_playing = false 
 var talked_to_chris
-var should_shoot = true
+var should_shoot = false
 var menu_open = false
 var tutorial_help_button_state = 0
 var laboratory_help_button_state = 0
