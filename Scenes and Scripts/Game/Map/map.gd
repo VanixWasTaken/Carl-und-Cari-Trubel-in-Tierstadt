@@ -10,6 +10,8 @@ func _ready():
 	Global.menu_open = true
 	#Global.completed_jobs.append("Laboratory Building")
 	if Global.inside_laboratory:
+		$MapTest/Firework1.visible = true
+		$MapTest/Firework2.visible = true
 		$Player.position = Vector2(776, 2256)
 		Global.inside_laboratory = false
 

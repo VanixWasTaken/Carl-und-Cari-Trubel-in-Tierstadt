@@ -13,14 +13,16 @@ var PRESET1
 var PRESET2
 var PRESET3
 var PRESET4
+var PRESET5
 var mouse_inside_area = false
 var player 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var Carl = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var Cari = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-var Phone = preload("res://Assets/Art/Characters/Mayor Bianca/phone.png")
-var Bianca = preload("res://Assets/Art/Characters/Mayor Bianca/bianca_icon.png")
+var Phone = preload("res://Assets/Art/Characters/others/phone_headshot.png.PNG")
+var Bianca = preload("res://Assets/Art/Characters/Mayor Bianca/mayor_headshot.png.PNG")
+var BiancaCari = preload("res://Assets/Art/Characters/Bainca und Cari/biancacari_headshot.png.PNG")
 ##########################################################################################
 
 
@@ -34,6 +36,7 @@ func _ready():
 	PRESET2 = Cari
 	PRESET3 = Phone
 	PRESET4 = Bianca
+	PRESET5 = BiancaCari
 
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
@@ -176,7 +179,7 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = ". . ."
-		short_node_rect.texture = PRESET4
+		short_node_rect.texture = PRESET5
 		short_node_name.text = "Bianca & Cari"
 		dialogs += 1
 		same_speaker = true
@@ -198,7 +201,7 @@ func add_right_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = ". . ."
-		short_node_rect.texture = PRESET4
+		short_node_rect.texture = PRESET5
 		short_node_name.text = "Bianca & Cari"
 		dialogs += 1
 		same_speaker = true
