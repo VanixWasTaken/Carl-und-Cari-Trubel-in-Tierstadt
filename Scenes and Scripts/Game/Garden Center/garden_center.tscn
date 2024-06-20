@@ -1,11 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://0lsquv7hjhxv"]
+[gd_scene load_steps=24 format=3 uid="uid://ckv10od6wynv3"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_wjluf"]
-[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_p3flp"]
-[ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_cifdl"]
-[ext_resource type="Texture2D" uid="uid://bsld80bjwoc0t" path="res://Assets/Grids/grid_floor.png" id="4_ar5vn"]
-[ext_resource type="Texture2D" uid="uid://0wy17083vmt4" path="res://Assets/Grids/grid_back.png" id="5_w3cxn"]
-[ext_resource type="Texture2D" uid="uid://vyj7rjd5tjnc" path="res://Assets/Grids/grid_sides.png" id="8_p66t4"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_2v1vm"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_wckdn"]
+[ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_g16mw"]
+[ext_resource type="Texture2D" uid="uid://bsld80bjwoc0t" path="res://Assets/Grids/grid_floor.png" id="4_cfsk2"]
+[ext_resource type="Texture2D" uid="uid://0wy17083vmt4" path="res://Assets/Grids/grid_back.png" id="5_0ix1t"]
+[ext_resource type="Texture2D" uid="uid://vyj7rjd5tjnc" path="res://Assets/Grids/grid_sides.png" id="6_5qy3u"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
 vertices = PackedVector3Array(-29.1293, 13.0344, -5.0675, -29.1293, 13.0344, -4.8175, 29.1207, 13.0344, -4.8175, 29.1207, 13.0344, -5.0675, -28.3793, 13.0944, -4.0675, -28.3793, 13.0944, 5.1825, -28.1293, 13.0944, 5.1825, -28.1293, 13.0944, -4.0675, -28.3793, 2.34435, -3.5675, -28.3793, 2.34435, 5.1825, -28.1293, 2.34435, 5.1825, -28.1293, 2.34435, -3.5675, -27.3793, 2.34435, -3.5675, -27.3793, 2.34435, 5.6825, 29.1207, 2.34435, 5.6825, 29.1207, 2.34435, -3.5675)
@@ -28,7 +28,7 @@ size = Vector3(19.3163, 1, 0.201752)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vis0"]
-albedo_texture = ExtResource("4_ar5vn")
+albedo_texture = ExtResource("4_cfsk2")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)
@@ -37,7 +37,7 @@ size = Vector2(59, 10)
 size = Vector3(59.08, 1, 15.4632)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wn6hy"]
-albedo_texture = ExtResource("5_w3cxn")
+albedo_texture = ExtResource("5_0ix1t")
 
 [sub_resource type="QuadMesh" id="QuadMesh_mw0nr"]
 size = Vector2(59, 16)
@@ -46,7 +46,7 @@ size = Vector2(59, 16)
 size = Vector3(10.0164, 1, 15.8657)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0t12x"]
-albedo_texture = ExtResource("8_p66t4")
+albedo_texture = ExtResource("6_5qy3u")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t24k3"]
 size = Vector2(10, 16)
@@ -55,7 +55,7 @@ size = Vector2(10, 16)
 size = Vector3(11.3256, 1, 15.9534)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r1li7"]
-albedo_texture = ExtResource("8_p66t4")
+albedo_texture = ExtResource("6_5qy3u")
 
 [sub_resource type="QuadMesh" id="QuadMesh_iqs2f"]
 size = Vector2(10, 16)
@@ -68,13 +68,13 @@ polyphony = 3
 
 [node name="Main" type="Node3D" groups=["Root"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-script = ExtResource("1_wjluf")
+script = ExtResource("1_2v1vm")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="HelpButton" parent="UI" instance=ExtResource("2_p3flp")]
+[node name="HelpButton" parent="UI" instance=ExtResource("2_wckdn")]
 
-[node name="Player" parent="." instance=ExtResource("3_cifdl")]
+[node name="Player" parent="." instance=ExtResource("3_g16mw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.857, 4.782)
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
