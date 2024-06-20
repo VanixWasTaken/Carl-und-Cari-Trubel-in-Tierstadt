@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_fgm78"]
-[ext_resource type="Texture2D" uid="uid://cdguiyykjh7vj" path="res://Assets/Art/Random Screens/black_screen.png" id="4_cy7py"]
+[ext_resource type="Texture2D" uid="uid://c3ueycy54jo72" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_floor.png" id="4_5ra4w"]
 [ext_resource type="Texture2D" uid="uid://dov3yswac8qxp" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_back.png" id="5_ivhfb"]
 [ext_resource type="Texture2D" uid="uid://bna6p1h2xyvxx" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_left.png" id="6_jfqjd"]
 [ext_resource type="Texture2D" uid="uid://bpkklfx0m5aov" path="res://Assets/Art/Environment/Rooms/Laboratory/Walls/lab_wall_right.png" id="7_klll8"]
@@ -78,7 +78,7 @@ size = Vector3(19.3163, 1, 0.201752)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vis0"]
-albedo_texture = ExtResource("4_cy7py")
+albedo_texture = ExtResource("4_5ra4w")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)
