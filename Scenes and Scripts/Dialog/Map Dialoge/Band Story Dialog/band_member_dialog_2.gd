@@ -45,6 +45,8 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 14:
+		#if Global.completed_jobs[0] == "Laboratory Building":
+			#GlobalBand.needed_animation = "BarbaraMarket1"
 		get_tree().get_first_node_in_group("AnimationPlayer").play(GlobalBand.needed_animation)
 		get_tree().get_first_node_in_group("BarbaraSprite").play("barbara_walking")
 		queue_free()
