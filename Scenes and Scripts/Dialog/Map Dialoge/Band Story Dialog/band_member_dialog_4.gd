@@ -12,12 +12,14 @@ var pc
 var PRESET1
 var PRESET2
 var PRESET3
+var PRESET4
 var mouse_inside_area = false
 var player 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var Carl = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var Cari = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
+var Carl_and_Cari = preload("res://Assets/Art/Characters/Carl und Cari/carl_und_cari_dialog_icon.png")
 var Sven = preload("res://Assets/Art/Characters/Band Members/Saxophonist Sven/sven_icon.png")
 ##########################################################################################
 
@@ -31,6 +33,7 @@ func _ready():
 	PRESET1 = Carl
 	PRESET2 = Cari
 	PRESET3 = Sven
+	PRESET4 = Carl_and_Cari
 
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
@@ -67,7 +70,7 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "*Gulp* J-ja das tun wir."
-		short_node_rect.texture = PRESET1
+		short_node_rect.texture = PRESET4
 		short_node_name.text = "Carl & Cari"
 		dialogs += 1
 

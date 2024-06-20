@@ -39,7 +39,7 @@ func start_dialog():
 		var dialog_instance
 		dialog_instance = dialog_scene.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
-		$"../BarbaraNPC".show()
+		$"..".show_barbara()
 
 func _on_area_2d_body_exited(body):
 	player_inside = false

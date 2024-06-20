@@ -14,6 +14,7 @@ var PRESET2
 var PRESET3
 var mouse_inside_area = false
 var player 
+var next_job
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var Carl = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
@@ -31,7 +32,11 @@ func _ready():
 	PRESET1 = Carl
 	PRESET2 = Cari
 	PRESET3 = Samuel
-
+	if Global.completed_jobs. size() != 0:
+		if Global.completed_jobs[0] == "Laboratory Building":
+			next_job = "der Gärtnerei"
+		else:
+			next_job = "dem Chemielabor"
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -207,7 +212,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich habe gehört, dass meine Gitarristin zuletzt in der Nähe von [Hier nächster Job der Spieler] gesehen wurde."
+		short_node_text.text = "Ich habe gehört, dass meine Gitarristin zuletzt in der Nähe von " + next_job + " gesehen wurde."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel"
 		dialogs += 1

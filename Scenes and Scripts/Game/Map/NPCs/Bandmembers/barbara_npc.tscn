@@ -1,21 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwwvy0q003fg7"]
+[gd_scene load_steps=7 format=3 uid="uid://cwwvy0q003fg7"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/barbara_npc.gd" id="1_v3qrw"]
-[ext_resource type="Texture2D" uid="uid://gocymbalmw1i" path="res://Assets/Art/Characters/Band Members/Bassist Barbara/barbara_icon.png" id="2_g2yg7"]
-[ext_resource type="Texture2D" uid="uid://dfknjrdb1wpr" path="res://Assets/Art/Characters/Band Members/Bassist Barbara/barbara_icon_highlight.png" id="3_i4say"]
+[ext_resource type="Texture2D" uid="uid://cq07iolloxolg" path="res://Assets/Art/Characters/Band Members/Bassist Barbara/barbara_map_icon_1.png" id="2_k0i5r"]
+[ext_resource type="Texture2D" uid="uid://dy40ur10wmel" path="res://Assets/Art/Characters/Band Members/Bassist Barbara/barbara_map_icon_highlight.png" id="3_e0bg7"]
+[ext_resource type="Texture2D" uid="uid://cw5j48q411fuu" path="res://Assets/Art/Characters/Band Members/Bassist Barbara/barbara_map_icon_2.png" id="4_dsg7d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cw4h6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_g2yg7")
+"texture": ExtResource("2_k0i5r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_i4say")
+"texture": ExtResource("3_e0bg7")
 }],
 "loop": true,
-"name": &"default",
+"name": &"barbara_idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k0i5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dsg7d")
+}],
+"loop": true,
+"name": &"barbara_walking",
+"speed": 3.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8iybo"]
@@ -24,8 +36,10 @@ radius = 83.1865
 [node name="BarbaraNPC" type="Node2D"]
 script = ExtResource("1_v3qrw")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["BarbaraSprite"]]
+scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_cw4h6")
+animation = &"barbara_idle"
 
 [node name="Area2D" type="Area2D" parent="."]
 

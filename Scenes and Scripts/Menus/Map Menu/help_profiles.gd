@@ -16,5 +16,6 @@ func _on_texture_button_button_up():
 	get_tree().get_first_node_in_group("Player").remove_child(camera)
 	get_tree().get_first_node_in_group("Marker").add_child(camera)
 	get_tree().get_first_node_in_group("MarketAnimation").play("cloud_reveal")
+	get_tree().get_first_node_in_group("Samuel").show()
 	Global.cutscene_playing = true
 	queue_free()

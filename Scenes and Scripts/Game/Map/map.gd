@@ -8,7 +8,7 @@ var player
 func _ready():
 	Global.last_scene = "Map"
 	Global.menu_open = true
-	
+	#Global.completed_jobs.append("Laboratory Building")
 	if Global.inside_laboratory:
 		$Player.position = Vector2(776, 2256)
 		Global.inside_laboratory = false
@@ -28,6 +28,7 @@ func _ready():
 		var dialog_instance = main_story_dialog_1.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
 	player = get_tree().get_first_node_in_group("Player")
+
 
 	SaveSystem.save_game()
 
@@ -72,9 +73,7 @@ func _on_animation_player_3_animation_finished(anim_name):
 	$CloudControl/AnimationPlayer6.play("new_animation")
 
 
-func _on_npc_movement_animation_finished(anim_name):
-	if anim_name == "BarbaraMarket1":
-		Global.dialog_playing = false
+
 
 
 func _on_market_place_animation_animation_finished(anim_name):
