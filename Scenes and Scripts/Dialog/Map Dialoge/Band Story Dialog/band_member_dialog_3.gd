@@ -20,7 +20,7 @@ var player
 var Carl = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var Cari = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
 var Samuel = preload("res://Assets/Art/Characters/Band Members/Singer Samuel/samuel_dialog_icon.png")
-var Barbara = preload("res://Assets/Art/Characters/Band Members/Bassist Barbara/barbara_icon.png")
+var Barbara = preload("res://Assets/Art/Characters/Band Members/Bassist Barbara/barbara_dialog_icon.png")
 ##########################################################################################
 
 
