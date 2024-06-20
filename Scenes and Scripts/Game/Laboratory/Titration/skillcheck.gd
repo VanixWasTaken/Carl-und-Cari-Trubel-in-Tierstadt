@@ -127,11 +127,9 @@ func _on_animated_sprite_2d_animation_finished():
 
 func _on_help_button_help_opened():
 	if start_game:
-		print("PENIS")
 		$MiniGameTime.paused = true
 
 
 func _on_help_button_help_closed():
 	if start_game:
-		print("GENIS")
 		$MiniGameTime.paused = false
