@@ -42,7 +42,7 @@ func _process(delta):
 			
 		
 		
-	if spin_round == 3:
+	if spin_round >= 3:
 		$"../../VisibleChameleon".should_play_dialog3 = true
 		gun_in_hand.visible = true
 		shooting_area.monitorable = true
