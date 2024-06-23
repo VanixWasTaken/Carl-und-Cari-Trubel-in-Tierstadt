@@ -1,0 +1,208 @@
+[gd_scene load_steps=68 format=3 uid="uid://d0sg81cbdx27u"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
+[ext_resource type="Texture2D" uid="uid://dlqnhp0ma7il5" path="res://Assets/Art/Environment/Map/Big Map/cuc_tit_map.png" id="2_1s0b1"]
+[ext_resource type="PackedScene" uid="uid://dctfgv4bxknm4" path="res://Scenes and Scripts/Game/Map/Buildings/laboratory_building.tscn" id="2_ab8es"]
+[ext_resource type="Texture2D" uid="uid://ct21gx2j251qv" path="res://Assets/Art/Environment/Map/fairground/map_pfosten.png" id="3_67aip"]
+[ext_resource type="Texture2D" uid="uid://dmwffc2jjwf8m" path="res://Assets/Art/Environment/Map/fairground/map_fireworks1.png.PNG" id="3_te8pk"]
+[ext_resource type="Texture2D" uid="uid://junv40vhknop" path="res://Assets/Art/Environment/Map/fairground/map_fireworks2.png.PNG" id="4_vxaim"]
+[ext_resource type="Texture2D" uid="uid://crrhnurucid3q" path="res://Assets/Art/Particles/Clouds/bg_cloud_main1.png" id="5_ok451"]
+[ext_resource type="PackedScene" uid="uid://reaek0i8ei2g" path="res://Scenes and Scripts/Menus/Pause Menu/pause_menu.tscn" id="5_q8qp1"]
+[ext_resource type="Texture2D" uid="uid://bbop2qlcrhqd5" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button.png" id="8_fe5cr"]
+[ext_resource type="Texture2D" uid="uid://b8fkioc55ls28" path="res://Assets/Art/Particles/leaf.png" id="8_w5011"]
+[ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="9_lq8sc"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/job_notes.gd" id="9_vqn8c"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/exit_button.gd" id="10_0oi3s"]
+[ext_resource type="Texture2D" uid="uid://drhav4j47ea2w" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button_clicked.png" id="10_s3yr3"]
+[ext_resource type="Texture2D" uid="uid://y4rakxp2wwr" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button_hovered.png" id="11_6v58m"]
+[ext_resource type="Texture2D" uid="uid://7vqjfkop4ysv" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button.png" id="11_um2ur"]
+[ext_resource type="Texture2D" uid="uid://c6mohqehk03g4" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist.png" id="12_ub25h"]
+[ext_resource type="PackedScene" uid="uid://daswfhvjsa7jh" path="res://Scenes and Scripts/Game/Player/player.tscn" id="14_0uuvf"]
+[ext_resource type="Shader" path="res://Shader/blur.gdshader" id="14_jp8ps"]
+[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="15_bdydr"]
+[ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/Art/Random Screens/white_screen.png" id="15_jo7ff"]
+[ext_resource type="Texture2D" uid="uid://dpjjv7rg73iow" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button_clicked.png" id="15_pp1ui"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="16_18o2f"]
+[ext_resource type="Texture2D" uid="uid://bdbjnb85fqnnx" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button_hover.png" id="16_ttcuk"]
+[ext_resource type="Texture2D" uid="uid://cbksoath7x8g7" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist_clicked.png" id="16_x1218"]
+[ext_resource type="Texture2D" uid="uid://bakeorbinxsrv" path="res://Assets/Art/UI/Buttons/Download Buttons/download_button.png" id="17_07hu0"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="17_hkm8s"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="17_v78te"]
+[ext_resource type="Texture2D" uid="uid://bw1t31kgrjkq0" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist_hovered.png" id="17_wo11y"]
+[ext_resource type="Texture2D" uid="uid://b6xy6cf73iyv0" path="res://Assets/Art/UI/Buttons/Download Buttons/download_button_dark.png" id="18_aj3c6"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="18_bp1yi"]
+[ext_resource type="VideoStream" path="res://Assets/Videos/moving_to_laboratory_video.ogv" id="18_dkhfr"]
+[ext_resource type="Texture2D" uid="uid://bay5hyslmqkb3" path="res://Assets/Art/UI/Buttons/Download Buttons/download_button_light.png" id="19_spaiw"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/NPCs/npc_handler.gd" id="31_1481n"]
+[ext_resource type="PackedScene" uid="uid://dmhdb71htj10k" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_npc.tscn" id="31_mll1x"]
+[ext_resource type="PackedScene" uid="uid://cwwvy0q003fg7" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/barbara_npc.tscn" id="32_683wj"]
+[ext_resource type="PackedScene" uid="uid://2d2fjj4yd732" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/sven_npc.tscn" id="33_nmhjc"]
+[ext_resource type="Texture2D" uid="uid://b7n80wgfsnaml" path="res://icon.png" id="33_s35co"]
+[ext_resource type="PackedScene" uid="uid://cfoesiummvma2" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_and_barbara.tscn" id="34_clinu"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_oxdwb"]
+vertices = PackedVector2Array(4061, 2352, 3634, 2346, 3635, 2346, 617, 2204, 616, 2204, 1165, 2189, 3293, 1772, 3591, 1571, 3590, 1572, 1874, 1175, 1873, 1176, 1933, 1082, 2803, 1856, 2726, 1832, 2701, 1756, 3009, 1837, 3184, 1889, 3514, 45, 3464, 159, 3464, 158, 3487, 45, 1749, 865, 1662, 826, 1663, 826, 1850, 875, 2397, 1602, 2456, 1613, 2504, 42, 2451, 2, 2523, -1, 2563, 32, 2583, 66, 1182, 1572, 1345, 1832, 1344, 1832, 1209, 1740, 1139, 1531, 3426, 192, 3353, 373, 3247, 467, 3246, 505, 759, 700, 78, 736, 95, 684, 1294, 653, 828, 696, 3016, 542, 3219, 577, 3103, 577, 2626, 118, 2615, 37, 2655, 79, 2680, 167, 3305, 659, 3270, 688, 3219, 677, 4649, 391, 4664, 403, 4481, 563, 4479, 531, 4345, 2385, 4384, 2593, 4307, 2595, 4239, 2413, 4089, 2290, 3400, 2270, 3297, 2322, 3290, 2189, 3248, 2222, 3281, 1875, 4343, 1373, 4655, 1431, 4657, 1492, 4218, 1461, 3884, 1412, 3745, 1571, 3412, 1770, 3411, 1771, 2655, 1974, 2738, 1994, 2635, 2018, 2504, 1994, 2562, 1965, 2530, 2163, 2449, 2131, 1407, 2155, 1416, 2268, 1377, 2288, 1355, 2269, 1355, 2145, 1422, 1981, 1327, 2108, 1397, 1978, 1172, 2257, 43, 2288, 43, 2267, 697, 1241, 43, 1256, 43, 1181, 707, 1197, 830, 1235, 796, 1164, 855, 1152, 855, 705, 1161, 697, 1345, 689, 1525, 606, 1448, 654, 1522, 683, 1577, 673, 1577, 674, 1580, 782, 1663, 771, 1996, 1077, 2041, 2329, 2228, 2229, 1793, 2293, 1489, 2329, 1274, 2327, 1231, 2269, 1231, 2145, 1237, 2116, 1313, 1861, 1313, 1860, 1242, 1418, 1192, 1410, 1352, 1394, 1296, 1363, 1368, 1332, 1457, 1288, 1358, 1276, 1455, 1261, 1559, 1317, 1571, 1352, 1829, 1320, 1824, 1284, 2186, 1252, 2753, 333, 2642, 190, 2882, 467, 2864, 499, 3027, 581, 3103, 677, 3027, 734, 3052, 753, 4181, 716, 4478, 531, 4157, 761, 3866, 789, 3808, 824, 3599, 773, 3602, 801, 3601, 801, 3205, 753, 2773, 1111, 2807, 1112, 2589, 1231, 2822, 1326, 2627, 1467, 2507, 1357, 2456, 1113, 2460, 1058, 2631, 1053, 2322, 1373, 2163, 1545, 1966, 1458, 2292, 1130, 2169, 1069, 2275, 1068)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 10, 11), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(17, 18, 19, 20), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(14, 13, 25, 26), PackedInt32Array(27, 28, 29, 30, 31), PackedInt32Array(32, 33, 34, 35, 36), PackedInt32Array(37, 20, 19, 38), PackedInt32Array(39, 37, 38, 40), PackedInt32Array(41, 42, 43, 44, 45), PackedInt32Array(46, 39, 40, 47, 48), PackedInt32Array(49, 31, 30, 50, 51, 52), PackedInt32Array(53, 54, 55, 47, 40), PackedInt32Array(56, 57, 58, 59), PackedInt32Array(60, 61, 62, 63), PackedInt32Array(64, 60, 63, 0), PackedInt32Array(65, 64, 0, 2, 66), PackedInt32Array(67, 65, 66, 68), PackedInt32Array(67, 68, 16, 69), PackedInt32Array(70, 71, 72, 73, 74), PackedInt32Array(74, 73, 75, 8), PackedInt32Array(8, 75, 76, 6), PackedInt32Array(15, 6, 76, 77, 69, 16), PackedInt32Array(78, 13, 12, 79, 80), PackedInt32Array(81, 82, 78, 80, 83, 84), PackedInt32Array(85, 86, 87, 88, 89), PackedInt32Array(90, 85, 89, 91, 92), PackedInt32Array(93, 94, 95, 3, 5), PackedInt32Array(96, 97, 98, 99, 100), PackedInt32Array(100, 99, 101, 102), PackedInt32Array(102, 101, 45, 103), PackedInt32Array(104, 103, 45, 44, 105), PackedInt32Array(105, 44, 106, 107), PackedInt32Array(108, 107, 106, 109, 110), PackedInt32Array(111, 108, 110, 112, 23), PackedInt32Array(23, 112, 24), PackedInt32Array(11, 21, 24, 113), PackedInt32Array(84, 83, 114, 115), PackedInt32Array(116, 115, 114), PackedInt32Array(86, 116, 114, 117, 87), PackedInt32Array(88, 87, 118, 119), PackedInt32Array(119, 118, 93), PackedInt32Array(120, 119, 93, 5), PackedInt32Array(120, 5, 121), PackedInt32Array(89, 120, 121, 91), PackedInt32Array(34, 90, 92, 122, 123), PackedInt32Array(34, 123, 35), PackedInt32Array(124, 32, 36, 125), PackedInt32Array(126, 124, 125, 127, 128), PackedInt32Array(129, 128, 127, 130, 131), PackedInt32Array(129, 131, 132, 133), PackedInt32Array(134, 133, 132, 135, 136), PackedInt32Array(137, 138, 49, 52, 139), PackedInt32Array(140, 137, 139), PackedInt32Array(141, 140, 139, 46), PackedInt32Array(141, 46, 48, 142), PackedInt32Array(143, 141, 142, 144), PackedInt32Array(145, 146, 59, 58, 147), PackedInt32Array(148, 145, 147, 149), PackedInt32Array(150, 148, 149, 151), PackedInt32Array(150, 151, 152, 54, 53), PackedInt32Array(142, 55, 54, 153, 144), PackedInt32Array(154, 143, 144, 155), PackedInt32Array(156, 154, 155, 157, 158, 159), PackedInt32Array(156, 160, 161, 162, 154), PackedInt32Array(163, 159, 158, 26, 25, 164), PackedInt32Array(136, 163, 164, 165, 134), PackedInt32Array(166, 136, 135, 9, 11, 113, 167, 168)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(65, 747, 89, 675, 1293, 643, 1529, 595, 1585, 667, 1669, 763, 1857, 867, 2001, 1067, 2169, 1059, 2284, 1058, 2304, 1133, 2200, 1251, 2325, 1363, 2501, 1347, 2576, 1233, 2446, 1118, 2451, 1049, 2633, 1043, 2769, 1099, 3017, 731, 3017, 587, 2857, 507, 2745, 339, 2633, 195, 2617, 123, 2577, 75, 2501, 52, 2423, -6, 2527, -12, 2567, 22, 2620, 28, 2665, 75, 2689, 163, 2889, 459, 3017, 531, 3241, 459, 3417, 187, 3481, 35, 3529, 35, 3473, 163, 3361, 379, 3257, 507, 3313, 651, 3601, 763, 3865, 779, 4177, 707, 4473, 523, 4649, 379, 4681, 403, 4489, 571, 4161, 771, 3809, 835, 3601, 811, 3273, 699, 3209, 763, 3057, 763, 2817, 1115, 2833, 1331, 2633, 1475, 2473, 1611, 2705, 1747, 3009, 1827, 3289, 1763, 3585, 1563, 3881, 1403, 4345, 1363, 4665, 1423, 4668, 1503, 4219, 1471, 3749, 1580, 3417, 1779, 3291, 1880, 3300, 2184, 3403, 2260, 4089, 2280, 4355, 2379, 4397, 2603, 4301, 2606, 4231, 2421, 4059, 2362, 3634, 2356, 3291, 2332, 3238, 2224, 3176, 1898, 2809, 1867, 2745, 2003, 2641, 2027, 2537, 2171, 2041, 2339, 1489, 2339, 1377, 2299, 1273, 2339, 1169, 2267, 33, 2299, 33, 2259, 616, 2194, 1161, 2179, 1233, 2107, 1321, 2099, 1385, 1979, 1305, 1867, 1201, 1747, 1129, 1531, 1185, 1403, 1289, 1355, 1353, 1267, 1457, 1251, 1561, 1307, 1817, 1275, 1865, 1171, 1921, 1083, 1743, 873, 1658, 835, 1573, 790, 1515, 691, 1448, 665, 1345, 699, 1161, 707, 865, 715, 865, 1155, 839, 1245, 697, 1251, 33, 1267, 33, 1171, 705, 1187, 786, 1157, 817, 707, 759.897, 710.037), PackedVector2Array(1193, 1571, 1353, 1827, 1433, 1979, 1417, 2155, 1425, 2259, 1793, 2283, 2225, 2219, 2441, 2123, 2497, 1987, 2561, 1955, 2649, 1963, 2713, 1835, 2393, 1611, 2161, 1555, 1961, 1467, 1825, 1331, 1569, 1363, 1457, 1299, 1377, 1339, 1361, 1403, 1249, 1427), PackedVector2Array(3113, 587, 3113, 667, 3209, 667, 3209, 587), PackedVector2Array(1241, 2155, 1241, 2259, 1345, 2259, 1345, 2155)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_46f6v"]
+streams_count = 3
+stream_0/stream = ExtResource("15_bdydr")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("16_18o2f")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("17_v78te")
+stream_2/weight = 1.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lc0dx"]
+load_path = "res://.godot/imported/bg_cloud_main2.png-1b43a7b66b21b0e6e12be24371fe2d6a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8m3as"]
+load_path = "res://.godot/imported/bg_cloud_main7.png-90b1949c5ea1ebcf3a0ecc6f8fc4756f.ctex"
+
+[sub_resource type="Animation" id="Animation_4rduy"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_k5jc6"]
+resource_name = "new_animation"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1540, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u2jqx"]
+_data = {
+"RESET": SubResource("Animation_4rduy"),
+"new_animation": SubResource("Animation_k5jc6")
+}
+
+[sub_resource type="Animation" id="Animation_vpobu"]
+resource_name = "new_animation"
+length = 32.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 31.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-800, -200), Vector2(2167, -144)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0lwaf"]
+_data = {
+"new_animation": SubResource("Animation_vpobu")
+}
+
+[sub_resource type="Animation" id="Animation_umt7j"]
+resource_name = "new_animation"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-800, 100), Vector2(-900, 150)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pk32j"]
+_data = {
+"new_animation": SubResource("Animation_umt7j")
+}
+
+[sub_resource type="Animation" id="Animation_e82kw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1.18921),
+"update": 0,
+"values": [Vector2(-1872, -400)]
+}
+
+[sub_resource type="Animation" id="Animation_ffopa"]
+resource_name = "new_animation"
+length = 40.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1372, 0), Vector2(1524, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t21ug"]
+_data = {
+"RESET": SubResource("Animation_e82kw"),
+"new_animation": SubResource("Animation_ffopa")
+}
+
+[sub_resource type="Animation" id="Animation_6pwf0"]
+resource_name = "new_animation"
+length = 40.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-700, -144), Vector2(2167, -144)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ndfes"]
+_data = {
+"new_animation": SubResource("Animation_6pwf0")
+}
+
+[sub_resource type="Animation" id="Animation_8hnw8"]
+resource_name = "new_animation"
+length = 40.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cloud3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-900, -300), Vector2(1444, -12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibr
