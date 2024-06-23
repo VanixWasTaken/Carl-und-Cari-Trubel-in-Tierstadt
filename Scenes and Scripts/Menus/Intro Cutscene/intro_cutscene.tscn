@@ -393,7 +393,6 @@ texture_pressed = ExtResource("12_vgwtq")
 texture_hover = ExtResource("13_4rwus")
 
 [node name="Clouds" type="AnimatedSprite2D" parent="."]
-visible = false
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_l7t8e")
 autoplay = "default"
