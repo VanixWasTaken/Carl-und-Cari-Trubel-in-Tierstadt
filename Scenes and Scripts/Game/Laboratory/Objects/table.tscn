@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/table.gd" id="2_uoknu"]
 [ext_resource type="Texture2D" uid="uid://chpmab32oht3h" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.png" id="3_tc6ml"]
 [ext_resource type="Texture2D" uid="uid://cbdxyqqksrgaf" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale.png" id="4_8bu1p"]
-[ext_resource type="Texture2D" uid="uid://c0gbk4t47sqy" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.png" id="5_t2lee"]
+[ext_resource type="Texture2D" uid="uid://djmcekkuia1l4" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.png" id="5_t2lee"]
 [ext_resource type="AudioStream" uid="uid://d3fqukof07fmk" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var4.mp3" id="6_krhok"]
 [ext_resource type="PackedScene" uid="uid://djlralvxj7j5b" path="res://Scenes and Scripts/Game/Laboratory/Objects/glass_holder.tscn" id="7_dhx6y"]
 
@@ -34,7 +34,7 @@ sorting_offset = 1.0
 texture = ExtResource("4_8bu1p")
 
 [node name="Vessel" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.33152, 3.02331, 0.474508)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.26827, 3.02331, 0.0158782)
 visible = false
 sorting_offset = 1.2
 texture = ExtResource("5_t2lee")

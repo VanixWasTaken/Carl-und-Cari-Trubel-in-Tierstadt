@@ -27,7 +27,7 @@ theme_override_constants/line_spacing = 15
 theme_override_fonts/font = ExtResource("2_vc7mt")
 theme_override_font_sizes/font_size = 25
 text = "Du hast dein erstes Profil erlangt. Klick oben links auf die Notiz um es aufzurufen.
-Du kannst auf der Karte zu jeder Zeit deine Profilen betrachten. Sie sind zusammenfassungen über die Berufe die gespielt hast. Außerdem kannst du dort noch einmal deine abgegebenen Bewertungen betrachten.
+Du kannst auf der Karte zu jeder Zeit deine Profile betrachten. Sie sind zusammenfassungen über die Berufe die du gespielt hast. Außerdem kannst du dort noch einmal deine abgegebenen Bewertungen betrachten.
 
 Bitte denke daran bevor du gehst, klicke noch einmal auf \"download\" bei deinen Lieblingsjobs, damit du diese deinen Lehrern/Eltern vorzeigen kannst."
 vertical_alignment = 1
