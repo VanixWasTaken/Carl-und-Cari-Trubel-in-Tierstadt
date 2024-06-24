@@ -98,7 +98,7 @@ func _on_chemist_symbol_button_up():
 func _on_open_notes_button_up():
 	if $JobNoteMenu.visible:
 		close_menu()
-	elif !$JobNoteMenu.visible:
+	elif !$JobNoteMenu.visible && !Global.cutscene_playing:
 		emit_signal("deactivate_house")
 		$JobNoteMenu.visible = true
 		%Click.play()

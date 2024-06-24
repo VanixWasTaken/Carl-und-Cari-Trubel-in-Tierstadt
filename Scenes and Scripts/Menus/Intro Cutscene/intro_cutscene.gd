@@ -17,6 +17,7 @@ func _on_animated_sprite_2d_animation_finished():
 	$VoiceOver.play()
 	$Dialog1.show()
 	$Dialog1/AnimationPlayer.play("new_animation")
+	$Dialog1/AnimationPlayer2.play("shake_1")
 
 
 

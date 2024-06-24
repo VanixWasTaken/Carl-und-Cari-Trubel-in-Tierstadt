@@ -32,7 +32,7 @@ func _physics_process(delta):
 			nav.target_position = get_global_mouse_position()
 			if Global.character =="Carl":
 				$AnimatedSprite2D.play("carl_animation")
-			elif Global.character == "Cari":
+			elif Global.character == "Cari" || Global.character == "":
 					$AnimatedSprite2D.play("cari_animation")
 			$Footsteps.play()
 			if position.distance_to(nav.target_position) > 10:
