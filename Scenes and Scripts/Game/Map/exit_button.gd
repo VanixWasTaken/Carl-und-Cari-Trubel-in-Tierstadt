@@ -6,10 +6,7 @@ var no_shader = preload("res://Shader/no_shader.tres")
 
 	  # for shaders
 func _on_area_2d_mouse_entered():
-	$Sprite2D.material = outline_shader
 	_hover()
-func _on_area_2d_mouse_exited():
-	$Sprite2D.material = no_shader
 
 
 func _hover():

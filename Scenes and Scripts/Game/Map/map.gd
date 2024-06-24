@@ -8,8 +8,8 @@ var player
 func _ready():
 	Global.last_scene = "Map"
 	Global.menu_open = true
-	#Global.completed_jobs.append("Laboratory Building")
-	Global.job_stars_dict[0] = 5
+	##Global.completed_jobs.append("Laboratory Building")
+	#Global.job_stars_dict[0] = 5
 	if Global.inside_laboratory:
 		$Player.position = Vector2(776, 2256)
 		Global.inside_laboratory = false

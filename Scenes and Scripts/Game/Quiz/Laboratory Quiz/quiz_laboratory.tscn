@@ -47,46 +47,46 @@ default_font = ExtResource("4_pc78o")
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bslay"]
-size = Vector2(795.321, 44.0229)
+size = Vector2(795.321, 81.7619)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ecj0j"]
-size = Vector2(795.321, 48.7729)
+size = Vector2(795.321, 53.8885)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wxct1"]
-size = Vector2(795.321, 60.6691)
+size = Vector2(795.321, 65.0379)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wf3my"]
-size = Vector2(795.321, 55.7468)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvokf"]
-size = Vector2(795.321, 55.7469)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_da1b4"]
-size = Vector2(795.321, 57.605)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5r21"]
-size = Vector2(795.321, 52.0307)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihd30"]
 size = Vector2(795.321, 61.3215)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvokf"]
+size = Vector2(795.321, 59.4633)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_da1b4"]
+size = Vector2(795.321, 63.1799)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5r21"]
+size = Vector2(795.321, 59.4641)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihd30"]
+size = Vector2(795.321, 66.8962)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ic5"]
-size = Vector2(795.321, 65.0378)
+size = Vector2(795.321, 68.7541)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tybbk"]
-size = Vector2(795.321, 55.7471)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mnn3"]
-size = Vector2(795.321, 48.3141)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhjee"]
 size = Vector2(795.321, 59.4634)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mnn3"]
+size = Vector2(795.321, 52.0305)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhjee"]
+size = Vector2(795.321, 63.1798)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ow5b"]
-size = Vector2(795.321, 55.7468)
+size = Vector2(795.321, 59.4637)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4j68t"]
-size = Vector2(795.321, 49.8851)
+size = Vector2(795.321, 53.6016)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ad64"]
 size = Vector2(194, 135)
@@ -275,6 +275,7 @@ toll gemacht"
 horizontal_alignment = 1
 
 [node name="Question4" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -400,6 +401,7 @@ etwas mehr"
 horizontal_alignment = 1
 
 [node name="Question3" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
@@ -656,28 +658,28 @@ texture = ExtResource("14_leodp")
 position = Vector2(269.443, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale14" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -351.205)
+position = Vector2(-146.8, -366.071)
 shape = SubResource("RectangleShape2D_bslay")
 
 [node name="PhScale13" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale13" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -352.546)
+position = Vector2(-146.8, -353.246)
 shape = SubResource("RectangleShape2D_ecj0j")
 
 [node name="PhScale12" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 110)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale12" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -346.598)
+position = Vector2(-146.8, -348.783)
 shape = SubResource("RectangleShape2D_wxct1")
 
 [node name="PhScale11" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 178.39)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale11" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -353.064)
+position = Vector2(-146.8, -353.993)
 shape = SubResource("RectangleShape2D_wf3my")
 
 [node name="PhScale10" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
@@ -691,63 +693,63 @@ shape = SubResource("RectangleShape2D_kvokf")
 position = Vector2(269.443, 297.316)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale9" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -348.417)
+position = Vector2(-146.8, -351.204)
 shape = SubResource("RectangleShape2D_da1b4")
 
 [node name="PhScale7" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 362.354)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale7" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -351.204)
+position = Vector2(-146.8, -354.921)
 shape = SubResource("RectangleShape2D_m5r21")
 
 [node name="PhScale6" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 425.534)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale6" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -352.134)
+position = Vector2(-146.8, -354.921)
 shape = SubResource("RectangleShape2D_ihd30")
 
 [node name="PhScale5" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 496.147)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale5" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -355.851)
+position = Vector2(-146.8, -357.709)
 shape = SubResource("RectangleShape2D_l8ic5")
 
 [node name="PhScale4" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 559.326)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale4" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -354.921)
+position = Vector2(-146.8, -356.779)
 shape = SubResource("RectangleShape2D_tybbk")
 
 [node name="PhScale3" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 615.073)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale3" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -354.921)
+position = Vector2(-146.8, -356.779)
 shape = SubResource("RectangleShape2D_1mnn3")
 
 [node name="PhScale2" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 672.678)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale2" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -354.921)
+position = Vector2(-146.8, -356.779)
 shape = SubResource("RectangleShape2D_hhjee")
 
 [node name="PhScale1" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 735.858)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale1" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -356.779)
+position = Vector2(-146.8, -358.637)
 shape = SubResource("RectangleShape2D_8ow5b")
 
 [node name="PhScale0" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 793.463)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale0" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -357.852)
+position = Vector2(-146.8, -359.71)
 shape = SubResource("RectangleShape2D_4j68t")
 
 [node name="Lemon" type="Node2D" parent="Question2"]
@@ -865,6 +867,7 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question1" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_p4cgx")
