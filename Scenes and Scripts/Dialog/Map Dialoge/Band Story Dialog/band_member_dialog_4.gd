@@ -20,7 +20,7 @@ var player
 var Carl = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var Cari = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
 var Carl_and_Cari = preload("res://Assets/Art/Characters/Carl und Cari/carl_und_cari_dialog_icon.png")
-var Sven = preload("res://Assets/Art/Characters/Band Members/Saxophonist Sven/sven_icon.png")
+var Sven = preload("res://Assets/Art/Characters/Band Members/Saxophonist Sven/sven_dialog_icon.png")
 ##########################################################################################
 
 

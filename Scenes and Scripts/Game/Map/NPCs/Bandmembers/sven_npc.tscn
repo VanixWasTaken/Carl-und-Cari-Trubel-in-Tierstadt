@@ -1,17 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://2d2fjj4yd732"]
+[gd_scene load_steps=5 format=3 uid="uid://2d2fjj4yd732"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/sven_npc.gd" id="1_btnqc"]
-[ext_resource type="Texture2D" uid="uid://dcbpry1k75b4r" path="res://Assets/Art/Characters/Band Members/Saxophonist Sven/sven_icon.png" id="2_n7ssc"]
-[ext_resource type="Texture2D" uid="uid://dmv76ppql1sv5" path="res://Assets/Art/Characters/Band Members/Saxophonist Sven/sven_icon_highlight.png" id="3_b778j"]
+[ext_resource type="Texture2D" uid="uid://d1k81impxg2hi" path="res://Assets/Art/Characters/Band Members/Saxophonist Sven/sven_dialog_icon.png" id="2_xl1le"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cw4h6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_n7ssc")
+"texture": ExtResource("2_xl1le")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_b778j")
+"texture": ExtResource("2_xl1le")
 }],
 "loop": true,
 "name": &"default",

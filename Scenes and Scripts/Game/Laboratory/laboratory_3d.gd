@@ -172,5 +172,6 @@ func change_scene():
 func _on_exit_body_entered(body):
 	if body.get_name() == "Player":
 		add_child(laboratory_quiz.instantiate())
+		$Player.navigation_agent.target_position = $Player.global_position
 		Global.menu_open = true
 		Global.moving_allowed = false

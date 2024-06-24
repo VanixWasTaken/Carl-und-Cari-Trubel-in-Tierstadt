@@ -69,10 +69,10 @@ func _paper_hover():
 
 func _on_chemist_download_button_up():
 	$DownloadExplanation.visible = true
-	downloadFile(chemist_note, "Chemielabor-Informationen.png")
+	downloadFile(chemist_note, "Chemielabor-Informationen.jpg")
 
 func downloadFile(img: Image, filename: String) -> void:
-	var buffer = img.save_png_to_buffer()
+	var buffer = img.save_jpg_to_buffer()
 	var desktop_path = OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP) + "/" + filename
 	var file = FileAccess.open(desktop_path, FileAccess.WRITE)
 	if file:
