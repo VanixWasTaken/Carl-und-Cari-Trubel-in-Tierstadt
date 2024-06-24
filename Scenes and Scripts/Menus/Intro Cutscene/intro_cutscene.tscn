@@ -387,10 +387,10 @@ libraries = {
 
 [node name="Dialog2" type="RichTextLabel" parent="."]
 visible = false
-offset_left = 1328.0
-offset_top = 34.0
-offset_right = 1897.0
-offset_bottom = 307.0
+offset_left = 1235.0
+offset_top = 118.0
+offset_right = 1804.0
+offset_bottom = 391.0
 pivot_offset = Vector2(284, 136)
 theme_override_fonts/normal_font = ExtResource("10_0wlxo")
 theme_override_font_sizes/normal_font_size = 100

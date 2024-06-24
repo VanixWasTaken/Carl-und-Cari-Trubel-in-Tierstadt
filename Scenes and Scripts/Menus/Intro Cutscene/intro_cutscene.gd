@@ -64,14 +64,14 @@ func _on_animated_sprite_2d_frame_changed():
 	if $AnimatedSprite2D.frame == 1:
 		$NailingPoster.play()
 	elif $AnimatedSprite2D.frame == 4:
-		await get_tree().create_timer(0.25).timeout
+		await get_tree().create_timer(0.35).timeout
 		$TelephoneRing.play()
 	elif $AnimatedSprite2D.frame == 5:
 		$TelephoneGrab.play()
 
 
 func _on_telephone_grab_finished():
-	await get_tree().create_timer(0.75).timeout
+	await get_tree().create_timer(0.45).timeout
 	$TelephonePickUp.play()
 
 
