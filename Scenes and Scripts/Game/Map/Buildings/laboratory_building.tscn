@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_351ux"]
-size = Vector2(281, 231)
+size = Vector2(876, 782)
 
 [node name="Laboratory Building" type="Node2D"]
 position = Vector2(263, 127)
@@ -48,6 +48,7 @@ script = ExtResource("1_eq7ey")
 scene_name = "res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(15, 15)
 sprite_frames = SubResource("SpriteFrames_unxvv")
 animation = &"house_highlight_animation"
@@ -59,14 +60,14 @@ position = Vector2(1080, 813)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chemie Labor"]
 position = Vector2(-852, -671)
 scale = Vector2(0.6625, 0.6625)
-polygon = PackedVector2Array(-81.5094, -43.7736, -76.9811, -381.887, -21.1321, -368.302, -42.2642, 43.7736, -510.189, 34.717, -499.623, -40.7547)
+polygon = PackedVector2Array(-81.5094, -43.7736, -76.9811, -381.887, 30.1887, -341.132, 36.2264, 72.4528, -1196.98, 72.4528, -1257.36, -76.9811)
 
 [node name="Chemie Labor Maus" type="Area2D" parent="."]
 collision_layer = 128
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chemie Labor Maus"]
-position = Vector2(32.5, -5.5)
+position = Vector2(-190, -281)
 shape = SubResource("RectangleShape2D_351ux")
 
 [node name="ExitPoint" type="Marker2D" parent="."]
