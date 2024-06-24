@@ -3,15 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djmcekkuia1l4"
-path="res://.godot/imported/lab_three_flasks.PNG-a4069782806cef44d8dcb67b9c041a25.ctex"
+path.s3tc="res://.godot/imported/lab_three_flasks.png-d623688b0e9e14a2afec9bf2968b33d2.s3tc.ctex"
+path.etc2="res://.godot/imported/lab_three_flasks.png-d623688b0e9e14a2afec9bf2968b33d2.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.PNG"
-dest_files=["res://.godot/imported/lab_three_flasks.PNG-a4069782806cef44d8dcb67b9c041a25.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.png"
+dest_files=["res://.godot/imported/lab_three_flasks.png-d623688b0e9e14a2afec9bf2968b33d2.s3tc.ctex", "res://.godot/imported/lab_three_flasks.png-d623688b0e9e14a2afec9bf2968b33d2.etc2.ctex"]
 
 [params]
 

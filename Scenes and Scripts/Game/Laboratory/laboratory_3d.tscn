@@ -588,8 +588,7 @@ visible = false
 transform = Transform3D(-0.831219, 0, -7.26675e-08, 0, 0.831219, 0, 7.26675e-08, 0, -0.831219, -1.16473, 5.15479, 1.18985)
 sprite_frames = SubResource("SpriteFrames_iras5")
 animation = &"idle"
-frame = 2
-frame_progress = 0.296823
+frame_progress = 0.61817
 
 [node name="DialogArea" type="Area3D" parent="NPC Chameleon"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000160217, -0.0550776, 0.000656128)
