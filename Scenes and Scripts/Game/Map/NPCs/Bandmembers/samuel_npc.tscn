@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmhdb71htj10k"]
+[gd_scene load_steps=5 format=3 uid="uid://dmhdb71htj10k"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/SamuelNPC.gd" id="1_yqone"]
 [ext_resource type="Texture2D" uid="uid://dwntfvdl0fobk" path="res://Assets/Art/Characters/Band Members/Singer Samuel/samuel_map_icon.png" id="2_8w7gx"]
@@ -18,9 +18,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8iybo"]
-radius = 63.2456
-
 [node name="SamuelNPC" type="Node2D"]
 script = ExtResource("1_yqone")
 
@@ -30,8 +27,9 @@ sprite_frames = SubResource("SpriteFrames_cw4h6")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_8iybo")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(61, 55)
+polygon = PackedVector2Array(-136, -135, -117, -69, -158, -12, -68, 45, -17, 99, 19, 56, 74, -8, 100, -69, 23, -69, 19, -135, -43, -125)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

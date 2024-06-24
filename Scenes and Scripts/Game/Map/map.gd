@@ -11,8 +11,6 @@ func _ready():
 	#Global.completed_jobs.append("Laboratory Building")
 	Global.job_stars_dict[0] = 5
 	if Global.inside_laboratory:
-		$MapTest/Firework1.visible = true
-		$MapTest/Firework2.visible = true
 		$Player.position = Vector2(776, 2256)
 		Global.inside_laboratory = false
 
@@ -26,6 +24,7 @@ func _ready():
 	if Global.completed_jobs.size() >= 1:
 		$"HUD/Help Movement".queue_free()
 		Global.menu_open = false
+		$MapTest/Objects/Fireworks.show()
 	
 	if Global.completed_jobs.size() == 1:
 		var dialog_instance = main_story_dialog_1.instantiate()
