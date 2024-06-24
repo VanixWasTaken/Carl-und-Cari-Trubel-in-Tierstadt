@@ -2,7 +2,6 @@ extends Node2D
 
 
 var mouse_inside = false
-var building_name = "null"
 @export var scene_name: String
 @onready var outline_shader = preload("res://Shader/outline.tres")
 @onready var no_shader = preload("res://Shader/no_shader.tres")
@@ -11,8 +10,8 @@ var next_scene
 var can_enter = true
 var exit_coordinates
 @onready var visited_dialog = preload("res://Scenes and Scripts/Dialog/Map Dialoge/already_visited_job_dialog.tscn")
+@export var building_name : String
 func _ready():
-	building_name = get_tree().get_first_node_in_group("BuildingArea").get_name()
 	MusicController._play_music("adventure", "map", -18)
 	await get_tree().create_timer(0.25).timeout
 	next_scene = load(scene_name)
@@ -70,3 +69,6 @@ func change_scene():
 	Global.inside_laboratory = true
 	get_tree().change_scene_to_packed(next_scene)
 
+func _input(event):
+	if Input.is_action_just_released("left_click") && mouse_inside:
+		get_tree().get_first_node_in_group("Player").nav.target_position = exit_coordinates

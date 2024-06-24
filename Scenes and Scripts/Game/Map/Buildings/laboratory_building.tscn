@@ -1,24 +1,34 @@
-[gd_scene load_steps=10 format=3 uid="uid://dctfgv4bxknm4"]
+[gd_scene load_steps=14 format=3 uid="uid://dctfgv4bxknm4"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map_house_test.gd" id="1_eq7ey"]
-[ext_resource type="Texture2D" uid="uid://bhf7mcvws0om1" path="res://Assets/Art/Environment/Map/Houses/Laboratory/chemielabor_frame_1.png" id="2_maows"]
-[ext_resource type="Texture2D" uid="uid://ptf0564yiv2g" path="res://Assets/Art/Environment/Map/Houses/Laboratory/chemielabor_frame_2.png" id="3_5cvnu"]
-[ext_resource type="Texture2D" uid="uid://b0brfbx8do4nc" path="res://Assets/Art/Environment/Map/Houses/Laboratory/chemielabor_frame_3.png" id="4_hmht8"]
-[ext_resource type="Texture2D" uid="uid://yw5dfy8ju17l" path="res://Assets/Art/Environment/Map/Houses/Laboratory/chemielabor_frame_1_highlight.png" id="5_3m4gd"]
-[ext_resource type="Texture2D" uid="uid://bmjhck0ch3cyc" path="res://Assets/Art/Environment/Map/Houses/Laboratory/chemielabor_frame_2_highlight.png" id="6_dnoe8"]
-[ext_resource type="Texture2D" uid="uid://d30037xe65ej4" path="res://Assets/Art/Environment/Map/Houses/Laboratory/chemielabor_frame_3_highlight.png" id="7_drav1"]
+[ext_resource type="Texture2D" uid="uid://32qfn226yld" path="res://Assets/Art/Environment/Map/Houses/Laboratory/map_lab_animation_001.png" id="2_pv4ly"]
+[ext_resource type="Texture2D" uid="uid://no2imgbpukxt" path="res://Assets/Art/Environment/Map/Houses/Laboratory/map_lab_animation_002.png" id="3_3bdue"]
+[ext_resource type="Texture2D" uid="uid://dqyy8twinfdus" path="res://Assets/Art/Environment/Map/Houses/Laboratory/map_lab_animation_003.png" id="4_a7wfp"]
+[ext_resource type="Texture2D" uid="uid://d071kqtlamgdp" path="res://Assets/Art/Environment/Map/Houses/Laboratory/map_lab_animation_004.png" id="5_mavot"]
+[ext_resource type="Texture2D" uid="uid://d0nf5c4ola772" path="res://Assets/Art/Environment/Map/Houses/Laboratory/map_lab_animation_005.png" id="6_b4nd2"]
+[ext_resource type="Texture2D" uid="uid://bwbc6j7ommvli" path="res://Assets/Art/Environment/Map/Houses/Laboratory/map_lab_animation_highlight_001.png" id="7_e484e"]
+[ext_resource type="Texture2D" uid="uid://dteg8qdj6k2jb" path="res://Assets/Art/Environment/Map/Houses/Laboratory/map_lab_animation_highlight_002.png" id="8_vvfwf"]
+[ext_resource type="Texture2D" uid="uid://cdm28j4r0xrtv" path="res://Assets/Art/Environment/Map/Houses/Laboratory/map_lab_animation_highlight_003.png" id="9_i8xsv"]
+[ext_resource type="Texture2D" uid="uid://im623o65x64s" path="res://Assets/Art/Environment/Map/Houses/Laboratory/map_lab_animation_highlight_004.png" id="10_34fa3"]
+[ext_resource type="Texture2D" uid="uid://bfc2gt33opa3j" path="res://Assets/Art/Environment/Map/Houses/Laboratory/map_lab_animation_highlight_005.png" id="11_ou44i"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_unxvv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_maows")
+"texture": ExtResource("2_pv4ly")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_5cvnu")
+"texture": ExtResource("3_3bdue")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_hmht8")
+"texture": ExtResource("4_a7wfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mavot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b4nd2")
 }],
 "loop": true,
 "name": &"house_animation",
@@ -26,13 +36,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_3m4gd")
+"texture": ExtResource("7_e484e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_dnoe8")
+"texture": ExtResource("8_vvfwf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_drav1")
+"texture": ExtResource("9_i8xsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_34fa3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ou44i")
 }],
 "loop": true,
 "name": &"house_highlight_animation",
@@ -46,32 +62,33 @@ size = Vector2(876, 782)
 position = Vector2(263, 127)
 script = ExtResource("1_eq7ey")
 scene_name = "res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn"
+building_name = "Chemie Labor"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(15, 15)
+position = Vector2(2061, 1170)
 sprite_frames = SubResource("SpriteFrames_unxvv")
-animation = &"house_highlight_animation"
+animation = &"house_animation"
 autoplay = "house_animation"
+frame_progress = 0.26173
 
 [node name="Chemie Labor" type="Area2D" parent="." groups=["BuildingArea"]]
 position = Vector2(1080, 813)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chemie Labor"]
-position = Vector2(-852, -671)
+position = Vector2(-384, 1285)
 scale = Vector2(0.6625, 0.6625)
-polygon = PackedVector2Array(-81.5094, -43.7736, -76.9811, -381.887, 30.1887, -341.132, 36.2264, 72.4528, -1196.98, 72.4528, -1257.36, -76.9811)
+polygon = PackedVector2Array(34.7169, -72.4526, 33.2075, 3.01904, -1286.04, 1.50952, -1292.08, -76.981)
 
 [node name="Chemie Labor Maus" type="Area2D" parent="."]
 collision_layer = 128
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chemie Labor Maus"]
-position = Vector2(-190, -281)
+position = Vector2(278, 1652)
 shape = SubResource("RectangleShape2D_351ux")
 
 [node name="ExitPoint" type="Marker2D" parent="."]
-position = Vector2(28, 181)
+position = Vector2(274, 2075)
 
 [connection signal="mouse_entered" from="Chemie Labor Maus" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Chemie Labor Maus" to="." method="_on_area_2d_mouse_exited"]
