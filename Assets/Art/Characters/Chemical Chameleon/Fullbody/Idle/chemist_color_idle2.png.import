@@ -3,27 +3,25 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwrx6424p83jb"
-path.s3tc="res://.godot/imported/chemist_color_idle2.png-d5c69a63253ab86e1fed82986fa95efb.s3tc.ctex"
-path.etc2="res://.godot/imported/chemist_color_idle2.png-d5c69a63253ab86e1fed82986fa95efb.etc2.ctex"
+path="res://.godot/imported/chemist_color_idle2.png-d5c69a63253ab86e1fed82986fa95efb.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle2.png"
-dest_files=["res://.godot/imported/chemist_color_idle2.png-d5c69a63253ab86e1fed82986fa95efb.s3tc.ctex", "res://.godot/imported/chemist_color_idle2.png-d5c69a63253ab86e1fed82986fa95efb.etc2.ctex"]
+dest_files=["res://.godot/imported/chemist_color_idle2.png-d5c69a63253ab86e1fed82986fa95efb.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
