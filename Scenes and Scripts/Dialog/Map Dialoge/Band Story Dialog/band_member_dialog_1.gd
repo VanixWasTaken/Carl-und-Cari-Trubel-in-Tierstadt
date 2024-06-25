@@ -174,7 +174,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Ja genau, der bin ich. Ich bin Samuel, der Sänger der Metallikatzen. Meine Band und ich haben uns gestern gestritten und nun kann ich sie nicht finden."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Samuel der Siamkater"
+		short_node_name.text = "Samuel Samtpfote"
 		dialogs += 1
 
 	elif dialogs == 4:
@@ -184,7 +184,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Ihr seid wohl Fans. Ja, das bin ich. Freut mich dich kennenzulernen, aber ich fürchte, das Konzert fällt leider aus."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Samuel"
+		short_node_name.text = "Samuel Samtpfote"
 		dialogs += 1
 
 	elif dialogs == 6:
@@ -194,7 +194,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Leider haben ich und meine Band uns gestern zerstritten und ich kann sie nicht finden."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Samuel"
+		short_node_name.text = "Samuel Samtpfote"
 		dialogs += 1
 
 	elif dialogs == 8:
@@ -204,7 +204,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Ganz genau. Bitte findet die anderen und entschuldigt euch bei ihnen für mich."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Samuel"
+		short_node_name.text = "Samuel Samtpfote"
 		dialogs += 1
 
 	elif dialogs == 10:
@@ -214,7 +214,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Ich habe gehört, dass meine Gitarristin zuletzt in der Nähe von " + next_job + " gesehen wurde."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Samuel"
+		short_node_name.text = "Samuel Samtpfote"
 		dialogs += 1
 
 	elif dialogs == 13:
@@ -224,7 +224,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Hmmm… Ihr dürft während des Konzerts mit auf die Bühne kommen, wie hört sich das an?"
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Samuel"
+		short_node_name.text = "Samuel Samtpfote"
 		dialogs += 1
 
 	elif dialogs == 14:

@@ -161,7 +161,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Ich glaube nicht, dass wir und jemals wieder versöhnen können."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Barbara"
+		short_node_name.text = "Barbara die Bengalkatze"
 		dialogs += 1
 
 	elif dialogs == 6:
@@ -171,7 +171,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Sicher, dass ihr euch das nicht eingebildet habt? Das passt gar nicht zu ihm."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Barbara"
+		short_node_name.text = "Barbara die Bengalkatze"
 		dialogs += 1
 
 	elif dialogs == 8:
@@ -181,7 +181,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Hört sich so an, als ob er es wirklich Ernst meinen würde. Ich werde mir mal anhören, was er zu sagen hat."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Barbara"
+		short_node_name.text = "Barbara die Bengalkatze"
 		dialogs += 1
 		same_speaker = true
 
@@ -192,7 +192,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Aber ich kann nicht verspechen, das alles wieder gut wird."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Barbara"
+		short_node_name.text = "Barbara die Bengalkatze"
 		dialogs += 1
 		same_speaker = false
 
@@ -203,7 +203,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Ok, aber wenn ihr lügt will ich die wieder haben."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Barbara"
+		short_node_name.text = "Barbara die Bengalkatze"
 		dialogs += 1
 
 	elif dialogs == 13:

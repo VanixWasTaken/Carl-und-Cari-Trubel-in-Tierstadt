@@ -129,7 +129,7 @@ func add_right_dialog_box():
 		short_node_text.text = "Dann sagt ihm, dass er seine Entschuldigung dahin schicken soll, wo der Pfeffer wächst!
 "
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Sven"
+		short_node_name.text = "Sven der Sphynxkater"
 		dialogs += 1
 
 	elif dialogs == 5:
@@ -139,7 +139,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Ich bin…, nein. WAR der SCHLAGZEUGER SVEN von METALLIKATZEN! Sagt ihm, dass ich NIE WIEDER zurückkommen werde! *Er haut ab*"
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Sven"
+		short_node_name.text = "Sven der Sphynxkater"
 		dialogs += 1
 
 	elif dialogs == 7:

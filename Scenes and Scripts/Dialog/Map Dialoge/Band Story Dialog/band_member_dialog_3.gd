@@ -122,7 +122,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Ja, dank euch, es hat sich herausgestellt, dass es sich die ganze Zeit nur um ein Missverständnis gehandelt hat."
 		short_node_rect.texture = PRESET4
-		short_node_name.text = "Barbara"
+		short_node_name.text = "Barbara die Bengalkatze"
 		dialogs += 1
 		same_speaker = true
 
@@ -133,7 +133,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Da kann ich mich nur anschließen. Ohne euch hätte ich keine Hoffnung mehr auf das Konzert, aber jetzt sehe ich wieder das Konzert vor meinen Augen."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Samuel"
+		short_node_name.text = "Samuel Samtpfote"
 		dialogs += 1
 		same_speaker = false
 
@@ -144,7 +144,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = " Im Moment nicht, wir hören uns weiterhin um. Bianca meinte, dass ihr in der Zwischenzeit schauen sollt ob noch andere Leute eure Hilfe brauchen."
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Samuel"
+		short_node_name.text = "Samuel Samtpfote"
 		dialogs += 1
 
 
