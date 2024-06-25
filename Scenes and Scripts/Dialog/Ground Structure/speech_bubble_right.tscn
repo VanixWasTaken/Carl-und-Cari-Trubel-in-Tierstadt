@@ -67,7 +67,7 @@ autoplay = "new_animation"
 layout_mode = 0
 offset_left = 96.0
 offset_top = 74.0
-offset_right = 516.0
+offset_right = 649.0
 offset_bottom = 199.0
 texture = ExtResource("3_m015v")
 
