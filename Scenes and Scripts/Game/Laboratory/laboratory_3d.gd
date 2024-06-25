@@ -175,3 +175,4 @@ func _on_exit_body_entered(body):
 		$Player.navigation_agent.target_position = $Player.global_position
 		Global.menu_open = true
 		Global.moving_allowed = false
+		Global.completed_jobs.append("Laboratory Building")

@@ -76,6 +76,5 @@ func _on_weiter_button_pressed():
 		Global.moving_allowed = true
 		Global.menu_open = false
 		Global.cutscene_playing = false
-		Global.completed_jobs.append("Laboratory Building")
 		get_tree().get_first_node_in_group("Player").play_fade_out()
 		queue_free()
