@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://j73f2vaexd64"]
+
+[ext_resource type="Texture2D" uid="uid://bjp61467wsuf4" path="res://Assets/Art/Environment/Rooms/Garden Center/CuttingTreeMinigame/scissors1.png" id="1_bl1eh"]
+[ext_resource type="Script" path="res://CuttingTreeMinigameScissor.gd" id="2_od41m"]
+
+[node name="CuttingTreeMinigameScissor" type="Sprite2D"]
+texture = ExtResource("1_bl1eh")
+script = ExtResource("2_od41m")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxjd24pu0r6yb"]
+
+[ext_resource type="Texture2D" uid="uid://15echnwkgum0" path="res://Assets/Art/Environment/Rooms/Garden Center/CuttingTreeMinigame/minigame1_tree1.png" id="1_haybs"]
+[ext_resource type="PackedScene" uid="uid://j73f2vaexd64" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame_scissor.tscn" id="2_00ekb"]
+
+[node name="CuttingTreeMinigame" type="Node2D"]
+
+[node name="Tree1" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_haybs")
+
+[node name="CuttingTreeMinigameScissor" parent="." instance=ExtResource("2_00ekb")]
+position = Vector2(1272, 468)
