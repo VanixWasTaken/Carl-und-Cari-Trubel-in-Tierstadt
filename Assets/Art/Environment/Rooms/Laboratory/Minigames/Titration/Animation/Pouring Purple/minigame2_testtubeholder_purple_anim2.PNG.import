@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh8r22b5qh00s"
-path="res://.godot/imported/minigame2_testtubeholder_purple_anim2.PNG-404b70adfe933b8057f36b3849ab387c.ctex"
+path="res://.godot/imported/minigame2_testtubeholder_purple_anim2.png-df3ed67ad77de16cd84dcc86fec45413.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Purple/minigame2_testtubeholder_purple_anim2.PNG"
-dest_files=["res://.godot/imported/minigame2_testtubeholder_purple_anim2.PNG-404b70adfe933b8057f36b3849ab387c.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Purple/minigame2_testtubeholder_purple_anim2.png"
+dest_files=["res://.godot/imported/minigame2_testtubeholder_purple_anim2.png-df3ed67ad77de16cd84dcc86fec45413.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b27ibfyikph52"
-path="res://.godot/imported/icon_cari1.PNG-af9d572139eac7545854c721be233ef2.ctex"
+path="res://.godot/imported/icon_cari1.png-55e367f8bffbe2c5835f664850a9a297.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Cari/Headshot/icon_cari1.PNG"
-dest_files=["res://.godot/imported/icon_cari1.PNG-af9d572139eac7545854c721be233ef2.ctex"]
+source_file="res://Assets/Art/Characters/Cari/Headshot/icon_cari1.png"
+dest_files=["res://.godot/imported/icon_cari1.png-55e367f8bffbe2c5835f664850a9a297.ctex"]
 
 [params]
 

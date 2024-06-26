@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2nrp6o8i48wj"
-path="res://.godot/imported/ddi_logo.PNG-80f822304e5aef923b2c7348ab7311d2.ctex"
+path="res://.godot/imported/ddi_logo.png-7701fb446ab7a4e4c10838b336262e15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/StartUp/Icons/ddi_logo.PNG"
-dest_files=["res://.godot/imported/ddi_logo.PNG-80f822304e5aef923b2c7348ab7311d2.ctex"]
+source_file="res://Assets/Art/StartUp/Icons/ddi_logo.png"
+dest_files=["res://.godot/imported/ddi_logo.png-7701fb446ab7a4e4c10838b336262e15.ctex"]
 
 [params]
 

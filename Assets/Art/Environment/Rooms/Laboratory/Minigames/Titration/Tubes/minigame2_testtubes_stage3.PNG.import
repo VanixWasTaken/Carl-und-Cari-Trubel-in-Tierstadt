@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cc8viv7e46kf3"
-path="res://.godot/imported/minigame2_testtubes_stage3.PNG-a08fd046c5696df3525c9b9ca2679b6d.ctex"
+path="res://.godot/imported/minigame2_testtubes_stage3.png-89bd8c9fe36f5b2fadb5cab8c85cc654.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtubes_stage3.PNG"
-dest_files=["res://.godot/imported/minigame2_testtubes_stage3.PNG-a08fd046c5696df3525c9b9ca2679b6d.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Tubes/minigame2_testtubes_stage3.png"
+dest_files=["res://.godot/imported/minigame2_testtubes_stage3.png-89bd8c9fe36f5b2fadb5cab8c85cc654.ctex"]
 
 [params]
 

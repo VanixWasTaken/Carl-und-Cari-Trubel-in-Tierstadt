@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dwjsgg1ola36e" path="res://Assets/Art/UI/Menus/Title Screen/Idle/titlescreen_007.png" id="8_t4nob"]
 [ext_resource type="Texture2D" uid="uid://jwo7sgonjjt0" path="res://Assets/Art/UI/Menus/Title Screen/Idle/titlescreen_008.png" id="9_6tbre"]
 [ext_resource type="Texture2D" uid="uid://dhfd8vkvnth22" path="res://Assets/Art/UI/Menus/Title Screen/Idle/titlescreen_009.png" id="10_61olo"]
-[ext_resource type="Texture2D" uid="uid://dwtqldcudipt" path="res://Assets/Art/UI/Menus/Title Screen/title_cuctit.png.PNG" id="11_552q0"]
+[ext_resource type="Texture2D" uid="uid://dwtqldcudipt" path="res://Assets/Art/UI/Menus/Title Screen/title_cuctit.png" id="11_552q0"]
 [ext_resource type="Texture2D" uid="uid://cu6t7ep8q6gca" path="res://Assets/Art/UI/Menus/Title Screen/drücke_linksklick_button.png" id="12_kg28m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4jj7q"]

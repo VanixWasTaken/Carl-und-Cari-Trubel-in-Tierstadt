@@ -17,7 +17,7 @@ config/custom_user_dir_name="SaveSystem"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/fullsize=false
-config/icon="res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG"
+config/icon="res://Assets/Art/Characters/Carl/Headshot/icon_carl1.png"
 
 [autoload]
 

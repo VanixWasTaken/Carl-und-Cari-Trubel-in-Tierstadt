@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctcnsi4vmixqr"
-path="res://.godot/imported/icon_carl1.PNG-da1b6b913f14f9118407cb682a889772.ctex"
+path="res://.godot/imported/icon_carl1.png-0c15f39d3e60e5969e2e2032fef74f1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG"
-dest_files=["res://.godot/imported/icon_carl1.PNG-da1b6b913f14f9118407cb682a889772.ctex"]
+source_file="res://Assets/Art/Characters/Carl/Headshot/icon_carl1.png"
+dest_files=["res://.godot/imported/icon_carl1.png-0c15f39d3e60e5969e2e2032fef74f1d.ctex"]
 
 [params]
 

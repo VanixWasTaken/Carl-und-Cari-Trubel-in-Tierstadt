@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgsc4yi27gqc0"
-path="res://.godot/imported/minigame2_testtubeholder_orange_anim2.PNG-80ed3c8ef97a70bd112069b76199e0d9.ctex"
+path="res://.godot/imported/minigame2_testtubeholder_orange_anim2.png-7ec593f80799b4dde46d0735600f8c3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Orange/minigame2_testtubeholder_orange_anim2.PNG"
-dest_files=["res://.godot/imported/minigame2_testtubeholder_orange_anim2.PNG-80ed3c8ef97a70bd112069b76199e0d9.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/Animation/Pouring Orange/minigame2_testtubeholder_orange_anim2.png"
+dest_files=["res://.godot/imported/minigame2_testtubeholder_orange_anim2.png-7ec593f80799b4dde46d0735600f8c3b.ctex"]
 
 [params]
 

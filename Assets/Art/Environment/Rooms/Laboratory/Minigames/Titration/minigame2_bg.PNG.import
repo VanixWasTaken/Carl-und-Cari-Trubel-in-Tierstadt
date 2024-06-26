@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r82vd54v48ed"
-path="res://.godot/imported/minigame2_bg.PNG-5ef076f416c826105167a8440a8d19bf.ctex"
+path="res://.godot/imported/minigame2_bg.png-2edee28ec43192667cf9368c1de8469d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.PNG"
-dest_files=["res://.godot/imported/minigame2_bg.PNG-5ef076f416c826105167a8440a8d19bf.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/minigame2_bg.png"
+dest_files=["res://.godot/imported/minigame2_bg.png-2edee28ec43192667cf9368c1de8469d.ctex"]
 
 [params]
 

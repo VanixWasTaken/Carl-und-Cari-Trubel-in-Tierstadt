@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/StartUp/start_up.gd" id="1_topmm"]
 [ext_resource type="Texture2D" uid="uid://bq21vibiqmg1f" path="res://Assets/Art/StartUp/Icons/hnu_logo.png" id="2_pcj5g"]
 [ext_resource type="Texture2D" uid="uid://o1s85m8c1ktb" path="res://Assets/Art/StartUp/Icons/zukunftsfuchs_logo.png" id="3_r635u"]
-[ext_resource type="Texture2D" uid="uid://2nrp6o8i48wj" path="res://Assets/Art/StartUp/Icons/ddi_logo.PNG" id="4_dpa2s"]
+[ext_resource type="Texture2D" uid="uid://2nrp6o8i48wj" path="res://Assets/Art/StartUp/Icons/ddi_logo.png" id="4_dpa2s"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2ai40"]
 

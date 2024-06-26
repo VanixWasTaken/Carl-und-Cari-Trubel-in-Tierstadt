@@ -1,7 +1,6 @@
-[gd_scene load_steps=64 format=3 uid="uid://ducsr1iwag28u"]
+[gd_scene load_steps=63 format=3 uid="uid://ducsr1iwag28u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Main Menu/main_menu.gd" id="1_3f1tb"]
-[ext_resource type="Texture2D" uid="uid://r6osxlvpwdud" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main.png" id="2_sbqtk"]
 [ext_resource type="Texture2D" uid="uid://clcn17unia2fj" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_001.png" id="3_1kg1d"]
 [ext_resource type="Texture2D" uid="uid://dr67x6uyd3ac4" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main_bg.png" id="3_ekpvj"]
 [ext_resource type="Texture2D" uid="uid://b8fkioc55ls28" path="res://Assets/Art/Particles/leaf.png" id="3_lftx2"]
@@ -20,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://0hwmjdos7ekn" path="res://Assets/Art/UI/Buttons/Neues Spiel Buttons/neues_spiel_button_dark.png" id="10_huvbb"]
 [ext_resource type="Texture2D" uid="uid://dbb2ejkecaweq" path="res://Assets/Art/UI/Menus/Title Screen/Start/titlescreen_start_009.png" id="11_5twst"]
 [ext_resource type="Texture2D" uid="uid://cqeejkdcr50nm" path="res://Assets/Art/UI/Buttons/Neues Spiel Buttons/neues_spiel_button_light.png" id="11_ngs25"]
-[ext_resource type="Texture2D" uid="uid://mtvduxk8q1am" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main_fg.png.PNG" id="12_j3bun"]
+[ext_resource type="Texture2D" uid="uid://mtvduxk8q1am" path="res://Assets/Art/UI/Menus/Main Menu/titlescreen_main_fg.png" id="12_j3bun"]
 [ext_resource type="Texture2D" uid="uid://bmh3idtmltnh7" path="res://Assets/Art/UI/Buttons/Spiel Laden Buttons/spiel_laden_button.png" id="12_ky6xm"]
 [ext_resource type="Texture2D" uid="uid://dx4w241er3u4s" path="res://Assets/Art/UI/Buttons/Spiel Laden Buttons/spiel_laden_button_dark.png" id="13_cceh3"]
 [ext_resource type="Texture2D" uid="uid://c7ja3et0af34b" path="res://Assets/Art/UI/Buttons/Spiel Laden Buttons/spiel_laden_button_light.png" id="14_b7tuj"]
@@ -273,12 +272,6 @@ stream_2/weight = 1.0
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_3f1tb")
-
-[node name="TierstadtBackground" type="TextureRect" parent="."]
-offset_top = 2.0
-offset_right = 1920.0
-offset_bottom = 1082.0
-texture = ExtResource("2_sbqtk")
 
 [node name="TierstadtBackground2" type="TextureRect" parent="."]
 offset_top = 2.0
