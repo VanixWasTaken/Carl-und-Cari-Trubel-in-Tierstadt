@@ -20,8 +20,8 @@ var player
 
 var Carl = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var Cari = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-var Phone = preload("res://Assets/Art/Characters/others/phone_headshot.png.PNG")
-var Bianca = preload("res://Assets/Art/Characters/Mayor Bianca/mayor_headshot.png.PNG")
+var Phone = preload("res://Assets/Art/Characters/others/phone_headshot.png")
+var Bianca = preload("res://Assets/Art/Characters/Mayor Bianca/mayor_headshot.png")
 var BiancaCari = preload("res://Assets/Art/Characters/Bainca und Cari/biancacari_headshot.png")
 ##########################################################################################
 

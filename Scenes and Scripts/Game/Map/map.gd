@@ -1,5 +1,6 @@
 extends Node2D
 
+
 @onready var main_story_dialog_1 = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn")
 @onready var profile_help = preload("res://Scenes and Scripts/Menus/Map Menu/help_profiles.tscn")
 var job_buildings
