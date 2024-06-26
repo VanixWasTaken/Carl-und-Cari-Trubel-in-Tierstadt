@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c02qt7oh7vhww"]
+[gd_scene load_steps=9 format=3 uid="uid://c02qt7oh7vhww"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/StartUp/start_up.gd" id="1_topmm"]
+[ext_resource type="Texture2D" uid="uid://bq21vibiqmg1f" path="res://Assets/Art/StartUp/Icons/hnu_logo.png" id="2_el03m"]
+[ext_resource type="Texture2D" uid="uid://o1s85m8c1ktb" path="res://Assets/Art/StartUp/Icons/zukunftsfuchs_logo.png" id="3_2aohr"]
+[ext_resource type="Texture2D" uid="uid://2nrp6o8i48wj" path="res://Assets/Art/StartUp/Icons/ddi_logo.png" id="4_vrxwy"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2ai40"]
 
@@ -61,6 +64,7 @@ offset_right = 1000.0
 offset_bottom = 825.5
 grow_vertical = 2
 scale = Vector2(0.961513, 0.992378)
+texture = ExtResource("2_el03m")
 expand_mode = 5
 
 [node name="ZF" type="TextureRect" parent="HNUandZF"]
@@ -76,6 +80,7 @@ offset_right = 1798.0
 offset_bottom = 866.0
 grow_horizontal = 0
 grow_vertical = 2
+texture = ExtResource("3_2aohr")
 
 [node name="DDI" type="Control" parent="."]
 visible = false
@@ -104,6 +109,7 @@ offset_right = 475.0
 offset_bottom = 396.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("4_vrxwy")
 expand_mode = 1
 
 [node name="Fade" type="TextureRect" parent="."]
