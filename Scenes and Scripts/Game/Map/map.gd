@@ -1,6 +1,7 @@
 extends Node2D
 
-
+@onready var after_lab_dialog = preload("res://Scenes and Scripts/Dialog/Map Dialoge/After Job Dialog/after_lab_dialog.tscn")
+@onready var after_garden_dialog = preload("res://Scenes and Scripts/Dialog/Map Dialoge/After Job Dialog/after_garden_dialog.tscn")
 @onready var main_story_dialog_1 = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn")
 @onready var profile_help = preload("res://Scenes and Scripts/Menus/Map Menu/help_profiles.tscn")
 var job_buildings
@@ -9,11 +10,19 @@ var player
 func _ready():
 	Global.last_scene = "Map"
 	Global.menu_open = true
-	#Global.completed_jobs.append("Laboratory Building")
-	#Global.job_stars_dict[0] = 5
-	if Global.inside_laboratory:
+	Global.completed_jobs.append("Garden Center")
+	Global.completed_jobs.append("Laboratory Building")
+	Global.job_stars_dict[0] = 5
+	Global.last_scene = "Laboratory"
+	if Global.last_scene == "Laboratory":
 		$Player.position = Vector2(776, 2256)
+		var dialog_instance = after_lab_dialog.instantiate()
+		get_tree().get_current_scene().add_child(dialog_instance)
 		Global.inside_laboratory = false
+	elif Global.last_scene == "GardenCenter":
+		$Player.position = Vector2(4140, 1434)
+		var dialog_instance = after_garden_dialog.instantiate()
+		get_tree().get_current_scene().add_child(dialog_instance)
 
 	job_buildings = get_tree().get_nodes_in_group("Buildings")
 	for jobs in Global.completed_jobs:
@@ -27,7 +36,7 @@ func _ready():
 		Global.menu_open = false
 		$MapTest/Objects/Fireworks.show()
 	
-	if Global.completed_jobs.size() == 1:
+	if Global.completed_jobs.size() ==9:
 		var dialog_instance = main_story_dialog_1.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
 	player = get_tree().get_first_node_in_group("Player")

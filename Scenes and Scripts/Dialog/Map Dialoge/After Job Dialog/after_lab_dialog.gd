@@ -13,14 +13,14 @@ var PRESET1
 var PRESET2
 var PRESET3
 var PRESET4
+var PRESET5
 var mouse_inside_area = false
 var player 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var Carl = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var Cari = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-var Carl_and_Cari = preload("res://Assets/Art/Characters/Carl und Cari/carl_und_cari_dialog_icon.png")
-var Sven = preload("res://Assets/Art/Characters/Band Members/Saxophonist Sven/sven_dialog_icon.png")
+var map_story
 ##########################################################################################
 
 
@@ -32,11 +32,9 @@ func _ready():
 	pc = Global.character
 	PRESET1 = Carl
 	PRESET2 = Cari
-	PRESET3 = Sven
-	PRESET4 = Carl_and_Cari
 
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_right_dialog_box()
+	add_left_dialog_box()
 ##########################################################################################
 
 
@@ -47,8 +45,12 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 7:
-		Global.dialog_playing= false
+	if dialogs == 4:
+		var completed_jobs_size = Global.completed_jobs.size()
+		map_story = Global.story_dialog_tracker[completed_jobs_size] 
+		var story_dialog = load(map_story)
+		var dialog_instance = story_dialog.instantiate()
+		get_tree().get_current_scene().add_child(dialog_instance)
 		queue_free()
 ##########################################################################################
 
@@ -64,29 +66,30 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 2:
-		var short_node = get_child(2)
+	if dialogs == 1:
+		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "*Gulp* J-ja das tun wir."
-		short_node_rect.texture = PRESET4
-		short_node_name.text = "Carl & Cari"
+		short_node_text.text = "Ich wusste gar nicht, dass man im Chemielabor so viel erleben kann."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
 		dialogs += 1
+		same_speaker = true
 
-	elif dialogs == 4:
+	elif dialogs == 2:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Was soll das heißen, wer sind sie überhaupt?"
+		short_node_text.text = "Du sagst es. Es war echt aufregend, die Chemikalien zu mischen und selbst Pfoten anlegen zu können."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		dialogs += 1
+		same_speaker = false
 
-	elif dialogs == 6:
-		dialogs += 1
-		Global.moving_allowed = true
+
+
 	
 ##########################################################################################
 
@@ -102,37 +105,10 @@ func add_right_dialog_box():
 	$".".add_child(node)
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
-	
-	if dialogs == 1:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "HEY IHR! Geht ihr nicht für Samuel durch die Stadt?"
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Sven der Sphynxkater"
-		dialogs += 1
 
-	elif dialogs == 3:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Dann sagt ihm, dass er seine Entschuldigung dahin schicken soll, wo der Pfeffer wächst!
-"
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Sven der Sphynxkater"
+	if dialogs == 3:
 		dialogs += 1
-
-	elif dialogs == 5:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich bin…, nein. WAR der SCHLAGZEUGER SVEN von METALLIKATZEN! Sagt ihm, dass ich NIE WIEDER zurückkommen werde! *Er haut ab*"
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Sven der Sphynxkater"
-		dialogs += 1
+		Global.moving_allowed = true
 
 ##########################################################################################
 
