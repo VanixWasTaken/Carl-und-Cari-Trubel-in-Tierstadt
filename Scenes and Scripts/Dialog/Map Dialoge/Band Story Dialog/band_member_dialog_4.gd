@@ -47,7 +47,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 8:
+	if dialogs == 7:
 		Global.dialog_playing= false
 		queue_free()
 ##########################################################################################
@@ -84,17 +84,9 @@ func add_left_dialog_box():
 		short_node_name.text = "Cari"
 		dialogs += 1
 
-
 	elif dialogs == 6:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Was war das denn? Am besten reden wir nochmal mit Samuel am Marktplatz über das was passiert ist."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
 		dialogs += 1
-
+		Global.moving_allowed = true
 	
 ##########################################################################################
 
@@ -142,9 +134,6 @@ func add_right_dialog_box():
 		short_node_name.text = "Sven der Sphynxkater"
 		dialogs += 1
 
-	elif dialogs == 7:
-		dialogs += 1
-		Global.moving_allowed = true
 ##########################################################################################
 
 

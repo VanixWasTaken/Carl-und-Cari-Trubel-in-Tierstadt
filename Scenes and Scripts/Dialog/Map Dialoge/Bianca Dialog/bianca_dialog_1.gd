@@ -39,7 +39,7 @@ func _ready():
 	PRESET5 = BiancaCari
 
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_left_dialog_box()
+	add_right_dialog_box()
 ##########################################################################################
 
 
@@ -50,7 +50,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 13:
+	if dialogs == 11:
 		Global.dialog_playing= false
 		if Global.completed_jobs.size() == 1:
 			get_tree().get_current_scene().explain_profiles()
@@ -77,30 +77,7 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 1:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich wusste gar nicht, dass man im Chemielabor so viel erleben kann."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
-		dialogs += 1
-		same_speaker = true
-
-	elif dialogs == 2:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Du sagst es. Es war echt aufregend, die Chemikalien zu mischen und selbst Pfoten anlegen zu können."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
-		dialogs += 1
-		same_speaker = false
-
-
-	elif dialogs == 4:
+	if dialogs == 2:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -110,7 +87,7 @@ func add_left_dialog_box():
 		short_node_name.text = "Cari"
 		dialogs += 1
 
-	elif dialogs == 6:
+	elif dialogs == 4:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -120,7 +97,7 @@ func add_left_dialog_box():
 		short_node_name.text = "Carl"
 		dialogs += 1
 
-	elif dialogs == 9:
+	elif dialogs == 7:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -132,7 +109,7 @@ func add_left_dialog_box():
 
 	
 
-	elif dialogs == 12:
+	elif dialogs == 10:
 		dialogs += 1
 		Global.moving_allowed = true
 
@@ -153,8 +130,8 @@ func add_right_dialog_box():
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 3:
-		var short_node = get_child(2)
+	if dialogs == 1:
+		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
@@ -163,7 +140,7 @@ func add_right_dialog_box():
 		short_node_name.text = "Telefon"
 		dialogs += 1
 
-	elif dialogs == 5:
+	elif dialogs == 3:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -173,7 +150,7 @@ func add_right_dialog_box():
 		short_node_name.text = "Bianca"
 		dialogs += 1
 
-	elif dialogs == 7:
+	elif dialogs == 5:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -184,7 +161,7 @@ func add_right_dialog_box():
 		dialogs += 1
 		same_speaker = true
 
-	elif dialogs == 8:
+	elif dialogs == 6:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -195,7 +172,7 @@ func add_right_dialog_box():
 		dialogs += 1
 		same_speaker = false
 	
-	elif dialogs == 10:
+	elif dialogs == 8:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -206,7 +183,7 @@ func add_right_dialog_box():
 		dialogs += 1
 		same_speaker = true
 
-	elif dialogs == 11:
+	elif dialogs == 9:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)

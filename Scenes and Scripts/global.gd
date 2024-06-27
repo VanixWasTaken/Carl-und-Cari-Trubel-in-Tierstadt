@@ -21,6 +21,12 @@ var completed_jobs = [] #save
 var job_stars_dict : Dictionary = {  #save
 	"ChemistJob" : null
 }
+
+var story_dialog_tracker : Dictionary = {
+	1: "res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn",
+	2: "res://Scenes and Scripts/Dialog/Map Dialoge/Band Story Dialog/band_member_dialog_4.tscn"
+}
+
 var last_scene : String 
 
 var talked_to_chameleon = false #Wird auf true gesetzt, wenn man mit dem chamäleon geredet hat auf freiwilliger basis
