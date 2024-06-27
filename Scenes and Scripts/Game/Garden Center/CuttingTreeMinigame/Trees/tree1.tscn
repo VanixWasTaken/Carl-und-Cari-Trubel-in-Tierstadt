@@ -1,0 +1,138 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8ae2gbukn3ld"]
+
+[ext_resource type="Texture2D" uid="uid://15echnwkgum0" path="res://Assets/Art/Environment/Rooms/Garden Center/CuttingTreeMinigame/minigame1_tree1.png" id="1_gv02v"]
+[ext_resource type="Texture2D" uid="uid://bruqf63lk8wsh" path="res://Assets/Art/Environment/Rooms/Garden Center/CuttingTreeMinigame/minigame1_cutouts.png" id="2_1bfk1"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/Trees/tree.gd" id="2_y2d03"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8i3gn"]
+radius = 98.0
+
+[node name="Tree1" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_gv02v")
+script = ExtResource("2_y2d03")
+
+[node name="Trims" type="Node" parent="."]
+
+[node name="Trim1" type="Sprite2D" parent="Trims"]
+position = Vector2(753, 595)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1bfk1")
+region_enabled = true
+region_rect = Rect2(116, 152, 612, 432)
+
+[node name="Trim1Area" type="Area2D" parent="Trims/Trim1"]
+position = Vector2(-138, -106)
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trims/Trim1/Trim1Area"]
+shape = SubResource("CircleShape2D_8i3gn")
+
+[node name="Trim2" type="Sprite2D" parent="Trims"]
+position = Vector2(1339, 447)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1bfk1")
+region_enabled = true
+region_rect = Rect2(857, 48, 463, 327)
+
+[node name="Trim2Area" type="Area2D" parent="Trims/Trim2"]
+position = Vector2(-120, 62)
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trims/Trim2/Trim2Area"]
+shape = SubResource("CircleShape2D_8i3gn")
+
+[node name="Trim3" type="Sprite2D" parent="Trims"]
+position = Vector2(1019, 528)
+rotation = -5.09462
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1bfk1")
+region_enabled = true
+region_rect = Rect2(1200, 99, 521, 373)
+
+[node name="Trim3Area" type="Area2D" parent="Trims/Trim3"]
+position = Vector2(127.845, -49.9173)
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trims/Trim3/Trim3Area"]
+shape = SubResource("CircleShape2D_8i3gn")
+
+[node name="Trim4" type="Sprite2D" parent="Trims"]
+position = Vector2(1023, 96)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1bfk1")
+region_enabled = true
+region_rect = Rect2(40, 600, 356, 374)
+
+[node name="Trim4Area" type="Area2D" parent="Trims/Trim4"]
+position = Vector2(66, 78)
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trims/Trim4/Trim4Area"]
+shape = SubResource("CircleShape2D_8i3gn")
+
+[node name="Trim5" type="Sprite2D" parent="Trims"]
+position = Vector2(869, 138)
+rotation = 5.09462
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1bfk1")
+region_enabled = true
+region_rect = Rect2(796, 672, 636, 307)
+
+[node name="Trim5Area" type="Area2D" parent="Trims/Trim5"]
+position = Vector2(-154.785, 49.29)
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trims/Trim5/Trim5Area"]
+shape = SubResource("CircleShape2D_8i3gn")
+
+[node name="Trim6" type="Sprite2D" parent="Trims"]
+position = Vector2(833, 437)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1bfk1")
+region_enabled = true
+region_rect = Rect2(1320, 624, 500, 367)
+
+[node name="Trim6Area" type="Area2D" parent="Trims/Trim6"]
+position = Vector2(94, 6)
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trims/Trim6/Trim6Area"]
+shape = SubResource("CircleShape2D_8i3gn")
+
+[node name="Trim7" type="Sprite2D" parent="Trims"]
+position = Vector2(1131, 318)
+rotation = 2.57436
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1bfk1")
+region_enabled = true
+region_rect = Rect2(116, 152, 306, 219)
+
+[node name="Trim7Area" type="Area2D" parent="Trims/Trim7"]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trims/Trim7/Trim7Area"]
+shape = SubResource("CircleShape2D_8i3gn")
+
+[connection signal="area_entered" from="Trims/Trim1/Trim1Area" to="." method="_on_trim_1_area_area_entered"]
+[connection signal="area_exited" from="Trims/Trim1/Trim1Area" to="." method="_on_trim_1_area_area_exited"]
+[connection signal="area_entered" from="Trims/Trim2/Trim2Area" to="." method="_on_trim_2_area_area_entered"]
+[connection signal="area_exited" from="Trims/Trim2/Trim2Area" to="." method="_on_trim_2_area_area_exited"]
+[connection signal="area_entered" from="Trims/Trim3/Trim3Area" to="." method="_on_trim_3_area_area_entered"]
+[connection signal="area_exited" from="Trims/Trim3/Trim3Area" to="." method="_on_trim_3_area_area_exited"]
+[connection signal="area_entered" from="Trims/Trim4/Trim4Area" to="." method="_on_trim_4_area_area_entered"]
+[connection signal="area_exited" from="Trims/Trim4/Trim4Area" to="." method="_on_trim_4_area_area_exited"]
+[connection signal="area_entered" from="Trims/Trim5/Trim5Area" to="." method="_on_trim_5_area_area_entered"]
+[connection signal="area_exited" from="Trims/Trim5/Trim5Area" to="." method="_on_trim_5_area_area_exited"]
+[connection signal="area_entered" from="Trims/Trim6/Trim6Area" to="." method="_on_trim_6_area_area_entered"]
+[connection signal="area_exited" from="Trims/Trim6/Trim6Area" to="." method="_on_trim_6_area_area_exited"]
+[connection signal="area_entered" from="Trims/Trim7/Trim7Area" to="." method="_on_trim_7_area_area_entered"]
+[connection signal="area_exited" from="Trims/Trim7/Trim7Area" to="." method="_on_trim_7_area_area_exited"]
