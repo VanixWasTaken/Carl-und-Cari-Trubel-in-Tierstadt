@@ -20,9 +20,7 @@ var player
 
 var Carl = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var Cari = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-var Phone = preload("res://Assets/Art/Characters/others/phone_headshot.png")
-var Bianca = preload("res://Assets/Art/Characters/Mayor Bianca/mayor_headshot.png")
-var BiancaCari = preload("res://Assets/Art/Characters/Bainca und Cari/biancacari_headshot.png")
+var map_story
 ##########################################################################################
 
 
@@ -34,12 +32,9 @@ func _ready():
 	pc = Global.character
 	PRESET1 = Carl
 	PRESET2 = Cari
-	PRESET3 = Phone
-	PRESET4 = Bianca
-	PRESET5 = BiancaCari
 
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_right_dialog_box()
+	add_left_dialog_box()
 ##########################################################################################
 
 
@@ -50,18 +45,12 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 11:
-		Global.dialog_playing= false
-		if Global.completed_jobs.size() == 1:
-			get_tree().get_current_scene().explain_profiles()
-		else: 
-			var camera = get_tree().get_first_node_in_group("Camera")
-			get_tree().get_first_node_in_group("Player").remove_child(camera)
-			get_tree().get_current_scene().add_child(camera)
-			camera.global_position = Vector2(1576,1248)
-			get_tree().get_first_node_in_group("MarketAnimation").play("cloud_reveal")
-			Global.cutscene_playing = true
-			
+	if dialogs == 9:
+		var completed_jobs_size = Global.completed_jobs.size()
+		map_story = Global.story_dialog_tracker[completed_jobs_size] 
+		var story_dialog = load(map_story)
+		var dialog_instance = story_dialog.instantiate()
+		get_tree().get_current_scene().add_child(dialog_instance)
 		queue_free()
 ##########################################################################################
 
@@ -77,14 +66,35 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 2:
+	if dialogs == 1:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Ich hätte nie gedacht, dass Pflanzen uns so ähnlich sein können."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+		same_speaker = true
+
+	elif dialogs == 2:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Hallo, Cari am Apparat."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_text.text = "Ich auch nicht!"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+
+	elif dialogs == 3:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Ich fand es cool, wie sehr sich Guido für seine Pflanzen eingesetzt hat. Fast als wären es seine eigenen Kinder."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
 		dialogs += 1
 
 	elif dialogs == 4:
@@ -92,7 +102,27 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das haben wir! Sie ist wieder sichtbar wie eine Leuchtturm Lampe bei Nacht!"
+		short_node_text.text = " Ja, seine Hingabe war inspirierend. Aber seine Witze hätte er auch lassen können."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+
+	elif dialogs == 5:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Ich fand sie eigentlich ganz lustig."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+
+	elif dialogs == 6:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Ich kann es kaum erwarten nach Hause zu kommen und die Samen einzupflanzen."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		dialogs += 1
@@ -102,16 +132,12 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Erdbeeren?"
-		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
+		short_node_text.text = "Ich auch nicht, also komm. Lass uns möglichst schnell die anderen Jobs erledigen."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
 		dialogs += 1
+		same_speaker = false
 
-	
-
-	elif dialogs == 10:
-		dialogs += 1
-		Global.moving_allowed = true
 
 
 	
@@ -129,70 +155,11 @@ func add_right_dialog_box():
 	$".".add_child(node)
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
-	
-	if dialogs == 1:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "*Ring Ring Ring*"
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Telefon"
-		dialogs += 1
 
-	elif dialogs == 3:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Hallöchen, hier ist nochmal Bianca die Bürgermeisterin. Ich habe von Christina gehört, dass ihr sehr gute Arbeit geleistet habt."
-		short_node_rect.texture = PRESET4
-		short_node_name.text = "Bianca"
+	if dialogs == 8:
 		dialogs += 1
+		Global.moving_allowed = true
 
-	elif dialogs == 5:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = ". . ."
-		short_node_rect.texture = PRESET5
-		short_node_name.text = "Bianca & Cari"
-		dialogs += 1
-		same_speaker = true
-
-	elif dialogs == 6:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Wie dem auch sei, kommt noch einmal zum Marktplatz, dort könnt ihr die Früchte eurer Arbeit ernten."
-		short_node_rect.texture = PRESET4
-		short_node_name.text = "Bianca"
-		dialogs += 1
-		same_speaker = false
-	
-	elif dialogs == 8:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = ". . ."
-		short_node_rect.texture = PRESET5
-		short_node_name.text = "Bianca & Cari"
-		dialogs += 1
-		same_speaker = true
-
-	elif dialogs == 9:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Nicht ganz, aber es wartet auch noch jemand, der euch gerne kennenlernen möchte."
-		short_node_rect.texture = PRESET4
-		short_node_name.text = "Bianca"
-		dialogs += 1
-		same_speaker = false
 ##########################################################################################
 
 
