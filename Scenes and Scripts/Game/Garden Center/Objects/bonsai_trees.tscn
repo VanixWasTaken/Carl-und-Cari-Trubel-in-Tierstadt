@@ -6,7 +6,7 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2rxnm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_swlhy"]
-size = Vector3(13.1294, 9.35379, 3.52881)
+size = Vector3(12.3144, 7.86212, 1)
 
 [node name="BonsaiTrees" type="Sprite3D"]
 texture = ExtResource("1_7ilam")
@@ -22,7 +22,7 @@ shape = SubResource("BoxShape3D_swlhy")
 [node name="MouseDetection" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MouseDetection"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.273727, 0.567337, 1.2644)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133759, -0.178497, 0)
 shape = SubResource("BoxShape3D_swlhy")
 
 [node name="Camera3D" type="Camera3D" parent="."]
