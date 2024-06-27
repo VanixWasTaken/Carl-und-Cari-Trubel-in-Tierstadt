@@ -36,6 +36,9 @@ var return_laboratory_3 = false #wird auf true gesetzt, wenn man aus dem 3 minig
 var custom_mouse_cursor = preload("res://Assets/Art/UI/player_mouse.png")
 var custom_mouse_cursor_clicked = preload("res://Assets/Art/UI/player_mouse_clicked.png")
 
+## Garden center
+var garden_cutscene_played = false
+
 
 ###### This variable are used for storing which job is currently played 
 var inside_laboratory : bool = false
