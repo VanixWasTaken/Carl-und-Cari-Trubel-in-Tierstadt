@@ -84,19 +84,6 @@ func add_left_dialog_box():
 		dialogs += 1
 	
 	elif dialogs == 5:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Damit die Mischung richtig funktioniert muss sie eine gewisse Anzahl Moleküle haben, das ist aber alles sehr kompliziert."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load(path + "titration_win_05.mp3")
-		$"../VoiceOver".play()
-		dialogs += 1
-		same_speaker = true
-	
-	elif dialogs == 6:
 		Global.laboratory_help_button_state = 5
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
@@ -108,9 +95,8 @@ func add_left_dialog_box():
 		$"../VoiceOver".stream = load(path + "titration_win_06.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
-		same_speaker = false
 	
-	elif dialogs == 8:
+	elif dialogs == 7:
 		dialogs += 1
 	
 	
@@ -172,12 +158,12 @@ func add_right_dialog_box():
 		dialogs += 1
 		same_speaker = false
 	
-	elif dialogs == 7:
+	elif dialogs == 6:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "A-a-ab gehts in die Sprühkammer!"
+		short_node_text.text = "A-A-Ab gehts in den Sprühraum!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_win_07.mp3")

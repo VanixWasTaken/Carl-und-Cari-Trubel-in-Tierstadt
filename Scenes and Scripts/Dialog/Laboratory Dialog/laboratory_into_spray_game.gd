@@ -86,7 +86,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ja. Total bereit, was ist unsere Aufgabe?"
+		short_node_text.text = "Total bereit, was ist unsere Aufgabe?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		$"../VoiceOver".stream = load(path + "dialog_before_spray_3.mp3")

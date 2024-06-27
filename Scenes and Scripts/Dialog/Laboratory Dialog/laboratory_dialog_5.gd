@@ -52,7 +52,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 11:
+	if dialogs == 10:
 		Global.moving_allowed = true
 		Global.dialog_playing = false
 		Global.talked_to_chameleon_4 = true
@@ -84,20 +84,7 @@ func add_left_dialog_box():
 		dialogs += 1
 		same_speaker = true
 
-	elif dialogs == 3:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich kann kaum glauben, dass wir es geschafft haben. Bevor wir hierhergekommen sind wusste ich fast nichts über Chemie."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
-		$"../VoiceOver".stream = load(path + "dialog_5_3.mp3")
-		$"../VoiceOver".play()
-		dialogs += 1
-		same_speaker = false
-
-	elif dialogs == 5:
+	elif dialogs == 4:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -109,12 +96,12 @@ func add_left_dialog_box():
 		$"../VoiceOver".play()
 		dialogs += 1
 
-	elif dialogs == 7:
+	elif dialogs == 6:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Da bin ich jetzt doppelt gespannt!"
+		short_node_text.text = "Jetzt bin ich doppelt gespannt!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		$"../VoiceOver".stream = load(path + "dialog_5_7.mp3")
@@ -122,7 +109,7 @@ func add_left_dialog_box():
 		dialogs += 1
 		same_speaker = true
 	
-	elif dialogs == 8:
+	elif dialogs == 7:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -136,7 +123,7 @@ func add_left_dialog_box():
 		same_speaker = false
 	
 	
-	elif dialogs == 10:
+	elif dialogs == 9:
 		dialogs += 1
 	
 	
@@ -168,7 +155,7 @@ func add_right_dialog_box():
 		$"../VoiceOver".play()
 		dialogs += 1
 	
-	elif dialogs == 4:
+	elif dialogs == 3:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -181,7 +168,7 @@ func add_right_dialog_box():
 		dialogs += 1
 
 
-	elif dialogs == 6:
+	elif dialogs == 5:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -194,7 +181,7 @@ func add_right_dialog_box():
 		dialogs += 1
 
 	
-	elif dialogs == 9:
+	elif dialogs == 8:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
