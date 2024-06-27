@@ -25,6 +25,7 @@ MusicController="*res://Scenes and Scripts/MusicController/music_controller.tscn
 Global="*res://Scenes and Scripts/global.gd"
 SaveSystem="*res://Scenes and Scripts/save_system.gd"
 GlobalBand="*res://Scenes and Scripts/global_band.gd"
+GlobalGarden="*res://Scenes and Scripts/global_garden.gd"
 
 [display]
 
