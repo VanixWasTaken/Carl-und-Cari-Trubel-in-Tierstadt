@@ -1,0 +1,241 @@
+[gd_scene load_steps=13 format=3 uid="uid://vnj4oyq32r4f"]
+
+[ext_resource type="Texture2D" uid="uid://ddlsxysgyc71t" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/minigame4_grid.png" id="1_b04vn"]
+[ext_resource type="Texture2D" uid="uid://cf6e28e7bsg1u" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/icon_bg.png" id="2_vnyvc"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="3_ef2nf"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/arrows.gd" id="4_h81sd"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/item_selection.gd" id="4_hg7h8"]
+[ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="5_k7ecq"]
+[ext_resource type="Texture2D" uid="uid://bvskmhh3yf3uc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon2.png" id="7_pamqc"]
+[ext_resource type="Texture2D" uid="uid://b4mwx3ixbev8f" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/flower/flower_icon2.png" id="8_mib7p"]
+[ext_resource type="Texture2D" uid="uid://d6sqg03v86bl" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon2.png" id="9_1r6cr"]
+
+[sub_resource type="Animation" id="Animation_f68pu"]
+resource_name = "pick_stone"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Objects/StonePlate:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1316, 898), Vector2(1664, 898)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Objects/Flower:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2011, 903), Vector2(2350, 903)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Objects/PlantPot:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1657, 890), Vector2(2005, 890)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Objects/PlantPot:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Objects/StonePlate:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.4, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Objects/Flower:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ec5ff"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Objects/StonePlate:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1664, 898)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Objects/Flower:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2011, 903)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Objects/PlantPot:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1657, 890)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6hrdr"]
+_data = {
+"RESET": SubResource("Animation_ec5ff"),
+"pick_stone": SubResource("Animation_f68pu")
+}
+
+[node name="GardenPlanningMinigame" type="Node2D"]
+
+[node name="Grid" type="TextureRect" parent="."]
+offset_left = -53.0
+offset_right = 1867.0
+offset_bottom = 1080.0
+texture = ExtResource("1_b04vn")
+
+[node name="Grid2" type="TextureRect" parent="."]
+offset_left = 1293.0
+offset_top = -104.0
+offset_right = 2026.0
+offset_bottom = 908.0
+texture = ExtResource("2_vnyvc")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Task1" type="Label" parent="Node"]
+offset_left = 1527.0
+offset_top = 200.0
+offset_right = 1781.0
+offset_bottom = 253.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ef2nf")
+theme_override_font_sizes/font_size = 28
+text = "5 verschiedene
+Plastersteine"
+
+[node name="Task2" type="Label" parent="Node"]
+offset_left = 1527.0
+offset_top = 340.0
+offset_right = 1781.0
+offset_bottom = 393.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ef2nf")
+theme_override_font_sizes/font_size = 28
+text = "3 Büsche"
+
+[node name="Task3" type="Label" parent="Node"]
+offset_left = 1527.0
+offset_top = 444.0
+offset_right = 1781.0
+offset_bottom = 497.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ef2nf")
+theme_override_font_sizes/font_size = 28
+text = "2 Mal Topfpflanze
+neben Pflastersein"
+
+[node name="IconBg" type="Sprite2D" parent="."]
+position = Vector2(1656, 892)
+texture = ExtResource("2_vnyvc")
+
+[node name="ItemSelection" type="Node" parent="."]
+script = ExtResource("4_hg7h8")
+
+[node name="Arrows" type="Node" parent="ItemSelection"]
+script = ExtResource("4_h81sd")
+
+[node name="ArrowRight" type="Sprite2D" parent="ItemSelection/Arrows"]
+position = Vector2(1848, 898)
+scale = Vector2(0.406103, 1)
+texture = ExtResource("5_k7ecq")
+
+[node name="RightArea" type="Area2D" parent="ItemSelection/Arrows/ArrowRight"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ItemSelection/Arrows/ArrowRight/RightArea"]
+polygon = PackedVector2Array(-91.1099, -13, -78.7979, 7, 51.7109, 9, 61.5605, 28, 100.959, 1, 61.5605, -33, 56.6357, -14)
+
+[node name="ArrowLeft" type="Sprite2D" parent="ItemSelection/Arrows"]
+position = Vector2(1466, 898)
+scale = Vector2(0.406103, 1)
+texture = ExtResource("5_k7ecq")
+flip_h = true
+
+[node name="LeftArea" type="Area2D" parent="ItemSelection/Arrows/ArrowLeft"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ItemSelection/Arrows/ArrowLeft/LeftArea"]
+position = Vector2(-6.43546, 0)
+scale = Vector2(0.956731, 1)
+polygon = PackedVector2Array(-62.7661, -31, -98.7991, -2, -60.1921, 27, -52.4709, 9, 83.9402, 8, 101.957, -13, -52.4709, -12)
+
+[node name="Objects" type="Node" parent="ItemSelection"]
+
+[node name="PlantPot" type="Sprite2D" parent="ItemSelection/Objects"]
+position = Vector2(1657, 890)
+texture = ExtResource("7_pamqc")
+
+[node name="Flower" type="Sprite2D" parent="ItemSelection/Objects"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2011, 903)
+texture = ExtResource("8_mib7p")
+
+[node name="StonePlate" type="Sprite2D" parent="ItemSelection/Objects"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1664, 898)
+texture = ExtResource("9_1r6cr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ItemSelection"]
+libraries = {
+"": SubResource("AnimationLibrary_6hrdr")
+}
+
+[connection signal="move_left" from="ItemSelection/Arrows" to="ItemSelection" method="_on_arrows_move_left"]
+[connection signal="move_right" from="ItemSelection/Arrows" to="ItemSelection" method="_on_arrows_move_right"]
+[connection signal="mouse_entered" from="ItemSelection/Arrows/ArrowRight/RightArea" to="ItemSelection/Arrows" method="_on_right_area_mouse_entered"]
+[connection signal="mouse_exited" from="ItemSelection/Arrows/ArrowRight/RightArea" to="ItemSelection/Arrows" method="_on_right_area_mouse_exited"]
+[connection signal="mouse_entered" from="ItemSelection/Arrows/ArrowLeft/LeftArea" to="ItemSelection/Arrows" method="_on_left_area_mouse_entered"]
+[connection signal="mouse_exited" from="ItemSelection/Arrows/ArrowLeft/LeftArea" to="ItemSelection/Arrows" method="_on_left_area_mouse_exited"]
