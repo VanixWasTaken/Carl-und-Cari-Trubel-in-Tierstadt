@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg3komba4flqd"]
+
+[ext_resource type="Texture2D" uid="uid://60gmi2cnlgrl" path="res://Assets/Art/Environment/Rooms/Garden Center/garden_bonsai.png" id="1_7ilam"]
+[ext_resource type="Script" path="res://bonsai_trees.gd" id="2_vujmo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2rxnm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_swlhy"]
+size = Vector3(13.1294, 9.35379, 3.52881)
+
+[node name="BonsaiTrees" type="Sprite3D"]
+texture = ExtResource("1_7ilam")
+script = ExtResource("2_vujmo")
+
+[node name="Hitbox" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_2rxnm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133759, -0.178497, 0)
+shape = SubResource("BoxShape3D_swlhy")
+
+[node name="MouseDetection" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MouseDetection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.273727, 0.567337, 1.2644)
+shape = SubResource("BoxShape3D_swlhy")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.27006, 12.8399)
+fov = 98.4375
+
+[connection signal="mouse_entered" from="MouseDetection" to="." method="_on_mouse_detection_mouse_entered"]
+[connection signal="mouse_exited" from="MouseDetection" to="." method="_on_mouse_detection_mouse_exited"]

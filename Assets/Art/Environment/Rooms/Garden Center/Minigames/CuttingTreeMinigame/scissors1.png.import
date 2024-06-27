@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb2nj4yibhwsr"
-path="res://.godot/imported/minigame1_tree2.png-2d539b8a9d5827fe71c0a480931cdeb5.ctex"
+uid="uid://bjp61467wsuf4"
+path="res://.godot/imported/scissors1.png-7e4048e4a46565e51c33a07c55685aa6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/CuttingTreeMinigame/minigame1_tree2.png"
-dest_files=["res://.godot/imported/minigame1_tree2.png-2d539b8a9d5827fe71c0a480931cdeb5.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/scissors1.png"
+dest_files=["res://.godot/imported/scissors1.png-7e4048e4a46565e51c33a07c55685aa6.ctex"]
 
 [params]
 

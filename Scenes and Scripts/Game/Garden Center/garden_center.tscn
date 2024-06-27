@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ckv10od6wynv3"]
+[gd_scene load_steps=31 format=3 uid="uid://ckv10od6wynv3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/garden_center.gd" id="1_35ge2"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_wckdn"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dnm0vie4ss62k" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_placeholder_wall_left.png" id="6_haull"]
 [ext_resource type="Texture2D" uid="uid://b7n80wgfsnaml" path="res://icon.png" id="7_37rk0"]
 [ext_resource type="Texture2D" uid="uid://buaon8v8j2w4a" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_placeholder_wall right.png" id="7_sywqh"]
+[ext_resource type="PackedScene" uid="uid://bg3komba4flqd" path="res://Scenes and Scripts/Game/Garden Center/Objects/bonsai_trees.tscn" id="8_mrm3e"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
 vertices = PackedVector3Array(-29.1293, 13.0344, -5.0675, -29.1293, 13.0344, -4.8175, 29.1207, 13.0344, -4.8175, 29.1207, 13.0344, -5.0675, -28.3793, 13.0944, -4.0675, -28.3793, 13.0944, 5.1825, -28.1293, 13.0944, 5.1825, -28.1293, 13.0944, -4.0675, -28.3793, 2.34435, -3.5675, -28.3793, 2.34435, 5.1825, -28.1293, 2.34435, 5.1825, -28.1293, 2.34435, -3.5675, -27.3793, 2.34435, -3.5675, -27.3793, 2.34435, 5.6825, 29.1207, 2.34435, 5.6825, 29.1207, 2.34435, -3.5675)
@@ -216,6 +217,9 @@ stream = SubResource("AudioStreamPolyphonic_75e5b")
 bus = &"SFX"
 
 [node name="Objects" type="Node3D" parent="."]
+
+[node name="BonsaiTrees" parent="Objects" instance=ExtResource("8_mrm3e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2419, 4.37417, -3.8203)
 
 [node name="CutsceneAnimation" type="AnimationPlayer" parent="."]
 root_node = NodePath("MouseBlock")
