@@ -11,8 +11,9 @@ var same_speaker = false
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
-var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
-var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
+var PRESET1 
+
+var path
 
 ##########################################################################################
 
@@ -21,8 +22,21 @@ var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.
 
 
 func _ready():
+	Global.pause_opened = true
 	Global.moving_allowed = false
 	Global.dialog_playing = true
+	if Global.character == "Cari":
+		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
+		
+		##### This is used to make the code for the dialog and voiceline combination easier
+		##### This way you only have to only type the name of the line inside the 
+		##### load function --> load(path + "linename_01_var2")
+		path = "res://Assets/Sound/VO/Laboratory/Carl/PC/vo_pc_carl_"
+	elif Global.character == "Carl" or Global.character == "":
+		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
+		
+		##### Same as in previous comment
+		path = "res://Assets/Sound/VO/Laboratory/Cari/PC/vo_pc_cari_"
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -43,6 +57,9 @@ func _process(delta):
 
 
 
+
+
+
 func add_left_dialog_box():
 	var node = l_bubble_node.instantiate()
 	$".".add_child(node)
@@ -54,20 +71,12 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Cari" or Global.character == "":
-			short_node_text.text = "Besuche einen der Berufe, indem du ein Gebäude betrittst. Die Gebäude findest du verteilt auf der gesamten Karte."
-			short_node_rect.texture = PRESET1
-			short_node_name.text = "Carl"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Help/vo_npc_carl_map_house_help_1.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
-		elif Global.character == "Carl":
-			short_node_text.text = "Besuche einen der Berufe, indem du ein Gebäude betrittst. Die Gebäude findest du verteilt auf der gesamten Karte."
-			short_node_rect.texture = PRESET2
-			short_node_name.text = "Cari"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Help/vo_npc_cari_map_house_help_1.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
+		short_node_text.text = "Kennst du Kasper Freh?"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+	
+	
 ##########################################################################################
 
 
@@ -85,6 +94,14 @@ func add_right_dialog_box():
 	
 	if dialogs == 2:
 		dialogs += 1
+		Global.moving_allowed = true
+	
+	
+	
+	
+	
+	
+	
 	
 ##########################################################################################
 
@@ -122,5 +139,3 @@ func _on_skip_button_mouse_entered():
 
 func _on_skip_button_button_down():
 	$"../Click".play()
-
-
