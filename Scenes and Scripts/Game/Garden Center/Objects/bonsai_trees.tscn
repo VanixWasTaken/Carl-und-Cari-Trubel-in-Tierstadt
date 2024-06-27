@@ -19,15 +19,5 @@ physics_material_override = SubResource("PhysicsMaterial_2rxnm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133759, -0.178497, 0)
 shape = SubResource("BoxShape3D_swlhy")
 
-[node name="MouseDetection" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MouseDetection"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133759, -0.178497, 0)
-shape = SubResource("BoxShape3D_swlhy")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.27006, 12.8399)
-fov = 98.4375
-
-[connection signal="mouse_entered" from="MouseDetection" to="." method="_on_mouse_detection_mouse_entered"]
-[connection signal="mouse_exited" from="MouseDetection" to="." method="_on_mouse_detection_mouse_exited"]
+[connection signal="mouse_entered" from="Hitbox" to="." method="_on_hitbox_mouse_entered"]
+[connection signal="mouse_exited" from="Hitbox" to="." method="_on_hitbox_mouse_exited"]

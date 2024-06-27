@@ -6,8 +6,8 @@ const GARDEN_BONSAI_HIGHLIGHTED = preload("res://Assets/Art/Environment/Rooms/Ga
 @onready var bonsai_trees = $"."
 
 
-func _on_mouse_detection_mouse_entered():
+
+func _on_hitbox_mouse_entered():
 	bonsai_trees.texture = GARDEN_BONSAI_HIGHLIGHTED
-	print("lakshdlakd")
-func _on_mouse_detection_mouse_exited():
+func _on_hitbox_mouse_exited():
 	bonsai_trees.texture = GARDEN_BONSAI

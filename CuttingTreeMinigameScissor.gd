@@ -1,7 +1,7 @@
 extends Sprite2D
 
-@onready var scissor_uncut = preload("res://Assets/Art/Environment/Rooms/Garden Center/CuttingTreeMinigame/scissors1.png")
-@onready var scissor_cut = preload("res://Assets/Art/Environment/Rooms/Garden Center/CuttingTreeMinigame/scissors2.png")
+@onready var scissor_uncut = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/scissors1.png")
+@onready var scissor_cut = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/scissors2.png")
 
 @onready var scissor_spr = $"."
 
