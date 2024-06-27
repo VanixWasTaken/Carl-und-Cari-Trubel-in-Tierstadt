@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buaon8v8j2w4a"
-path="res://.godot/imported/garden_placeholder_wall right.png-3b243e07a929a44c229284e271a53f09.ctex"
+uid="uid://btqvajcq0d58s"
+path="res://.godot/imported/floorplate_icon1.png-1503f8b495a717815f55fa0a9c6619d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_placeholder_wall right.png"
-dest_files=["res://.godot/imported/garden_placeholder_wall right.png-3b243e07a929a44c229284e271a53f09.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon1.png"
+dest_files=["res://.godot/imported/floorplate_icon1.png-1503f8b495a717815f55fa0a9c6619d4.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

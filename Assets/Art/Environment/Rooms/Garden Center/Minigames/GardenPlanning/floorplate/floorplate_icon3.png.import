@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0xkalfqixgte"
-path="res://.godot/imported/bush_icon_selected.png-7a0fe7326371fa12503350cbef11892d.ctex"
+uid="uid://ccpxo65kj8aky"
+path="res://.godot/imported/floorplate_icon3.png-7f41f7a70e3aec98e6c1ab074f68ed23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/bush_icon_selected.png"
-dest_files=["res://.godot/imported/bush_icon_selected.png-7a0fe7326371fa12503350cbef11892d.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon3.png"
+dest_files=["res://.godot/imported/floorplate_icon3.png-7f41f7a70e3aec98e6c1ab074f68ed23.ctex"]
 
 [params]
 
