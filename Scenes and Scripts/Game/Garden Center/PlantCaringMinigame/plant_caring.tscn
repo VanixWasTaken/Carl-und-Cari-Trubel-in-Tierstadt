@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://di7wffcl0ey3o"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_caring.gd" id="1_mjkcf"]
+[ext_resource type="Texture2D" uid="uid://c72xamnljg6m7" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/room_placeholder.png" id="1_s0435"]
+[ext_resource type="PackedScene" uid="uid://dt8p5adk2f06v" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant.tscn" id="2_72lyy"]
+[ext_resource type="FontFile" uid="uid://cndjys5rae2ut" path="res://Assets/Font/digital-7.ttf" id="3_48ksc"]
+[ext_resource type="PackedScene" uid="uid://c53c8e22d528s" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/watering_can.tscn" id="4_cx1dw"]
+[ext_resource type="PackedScene" uid="uid://brcdcnmm5e2em" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect_spray.tscn" id="6_61pj5"]
+
+[node name="Plant Caring" type="Node2D"]
+script = ExtResource("1_mjkcf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_s0435")
+
+[node name="Plant" parent="." instance=ExtResource("2_72lyy")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1393.0
+offset_top = 62.0
+offset_right = 2020.0
+offset_bottom = 566.0
+theme_override_colors/font_color = Color(0, 0.968627, 0, 1)
+theme_override_fonts/font = ExtResource("3_48ksc")
+theme_override_font_sizes/font_size = 36
+text = "Name: Pflanzus Latein
+Name in Bevölkerung: Rose
+Funfacts: 
+
+
+
+
+
+Anforderungen:
+Luftfeuchtigkeit: 1.5 ml
+Luftdruck: 3 bar
+Bodenfeuchtigkeit: 50 ml
+Insektenbefall: 10 Insekten"
+
+[node name="Watering Can" parent="." instance=ExtResource("4_cx1dw")]
+position = Vector2(1507, 859)
+
+[node name="Insect Spray" parent="." instance=ExtResource("6_61pj5")]
+position = Vector2(262, 849)

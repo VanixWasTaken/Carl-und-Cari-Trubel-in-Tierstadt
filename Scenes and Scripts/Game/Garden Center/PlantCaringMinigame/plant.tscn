@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt8p5adk2f06v"]
+
+[ext_resource type="Texture2D" uid="uid://41k61fwpefcf" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minigame2_bigplant_wilted.png" id="1_46bnw"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_1.gd" id="2_bemo7"]
+[ext_resource type="PackedScene" uid="uid://bcbhx165k2ljt" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect.tscn" id="3_8mass"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsswb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_46bnw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bgdb"]
+size = Vector2(515.569, 410.204)
+
+[node name="Plant1" type="AnimatedSprite2D"]
+position = Vector2(1325, 398)
+scale = Vector2(0.709896, 0.816667)
+sprite_frames = SubResource("SpriteFrames_nsswb")
+script = ExtResource("2_bemo7")
+
+[node name="WateringArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WateringArea"]
+position = Vector2(-407.102, -114.49)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_2bgdb")
+
+[node name="Insect" parent="." instance=ExtResource("3_8mass")]
+position = Vector2(2.81731, 0)
+
+[node name="Insect2" parent="." instance=ExtResource("3_8mass")]
+position = Vector2(-790.257, 265.714)
+sprite_num = 3
+
+[node name="Insect3" parent="." instance=ExtResource("3_8mass")]
+position = Vector2(-563.463, -180)
+sprite_num = 1
+
+[node name="Insect4" parent="." instance=ExtResource("3_8mass")]
+position = Vector2(-190.169, 8.57142)
+sprite_num = 2
+
+[node name="Insect5" parent="." instance=ExtResource("3_8mass")]
+position = Vector2(-500.073, 260.816)
+sprite_num = 3
+
+[node name="Insect6" parent="." instance=ExtResource("3_8mass")]
+position = Vector2(-98.606, -353.877)
+sprite_num = 1
+
+[connection signal="area_entered" from="WateringArea" to="." method="_on_watering_area_area_entered"]
+[connection signal="area_exited" from="WateringArea" to="." method="_on_watering_area_area_exited"]
