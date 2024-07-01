@@ -1,31 +1,31 @@
-[gd_scene load_steps=12 format=3 uid="uid://1p8laro2bm82"]
+[gd_scene load_steps=12 format=3 uid="uid://biysu8i48pm0g"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_4.gd" id="1_hqkhv"]
-[ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_ukp6c"]
-[ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="3_51ke7"]
-[ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="4_1vdqe"]
-[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="5_fgr2r"]
-[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="6_6hs8g"]
-[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="7_ulio8"]
-[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="8_tepsr"]
-[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="9_gliw7"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_6.gd" id="1_68yp5"]
+[ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_4w2jx"]
+[ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="3_hey7p"]
+[ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="4_tx3go"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="5_riw4b"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="6_hax4a"]
+[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="7_tafsc"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="8_6da63"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="9_3iplq"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xqye0"]
 playback_mode = 1
 streams_count = 2
-stream_0/stream = ExtResource("5_fgr2r")
+stream_0/stream = ExtResource("5_riw4b")
 stream_0/weight = 1.0
-stream_1/stream = ExtResource("6_6hs8g")
+stream_1/stream = ExtResource("6_hax4a")
 stream_1/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ve2lj"]
 playback_mode = 1
 streams_count = 3
-stream_0/stream = ExtResource("7_ulio8")
+stream_0/stream = ExtResource("7_tafsc")
 stream_0/weight = 1.0
-stream_1/stream = ExtResource("8_tepsr")
+stream_1/stream = ExtResource("8_6da63")
 stream_1/weight = 1.0
-stream_2/stream = ExtResource("9_gliw7")
+stream_2/stream = ExtResource("9_3iplq")
 stream_2/weight = 1.0
 
 [node name="DialogTutorial" type="CanvasLayer"]
@@ -37,7 +37,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hqkhv")
+script = ExtResource("1_68yp5")
 
 [node name="SkipButton" type="TextureButton" parent="DialogBox"]
 visible = false
@@ -53,9 +53,9 @@ offset_bottom = 147.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_ukp6c")
-texture_pressed = ExtResource("3_51ke7")
-texture_hover = ExtResource("4_1vdqe")
+texture_normal = ExtResource("2_4w2jx")
+texture_pressed = ExtResource("3_hey7p")
+texture_hover = ExtResource("4_tx3go")
 
 [node name="SkipButtonTimer" type="Timer" parent="."]
 wait_time = 1.5

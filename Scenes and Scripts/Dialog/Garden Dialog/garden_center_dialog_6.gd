@@ -39,7 +39,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 14:
+	if dialogs == 10:
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
@@ -61,30 +61,42 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Dann geben wir jetzt noch einmal so richtig Gras!"
-		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
-		dialogs += 1
-	
-	elif dialogs == 4:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "..."
+		short_node_text.text = "Das hat wirklich Spaß gemacht, vielleicht kannst du mir mal dieses „Clash of Cats“ zeigen Carl."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		dialogs += 1
 		same_speaker = true
 	
-	if dialogs == 5:
+	elif dialogs == 3:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Was müssen wir denn als nächstes machen?"
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
+		short_node_text.text = "Wirklich? Das mach ich auf jeden Fall, wenn wir zuhause sind!"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+		same_speaker = false
+	
+	elif dialogs == 5:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Die sind doch viel zu schwer. Wie sollen wir denn so eine Pflanze..."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+		same_speaker = true
+	
+	elif dialogs == 6:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Warte. Ist das wieder einer deiner Witze?"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
 		dialogs += 1
 		same_speaker = false
 	
@@ -93,24 +105,35 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Den richtigen Boden? Ich Pflanzen wachsen einfach so in der Erde?"
-		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
-		dialogs += 1
-	
-	elif dialogs == 11:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Als König von Floratum musst du doch eigentlich wissen, welcher Boden der richtige ist, warum sagst du es uns nicht einfach?"
+		short_node_text.text = "Vielen Dank. Wenn wir zuhause sind, werden wir sie sofort einpflanzen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		dialogs += 1
 		same_speaker = true
 	
+	elif dialogs == 9:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Wir müssen aber jetzt auch weiter. Ich bin schon gespannt, wie der Garten in echt aussehen wird. Auf Wiedersehen."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+		same_speaker = true
 	
-	elif dialogs == 13:
+	elif dialogs == 10:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Tschüssi."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+		same_speaker = false
+	
+	elif dialogs == 12:
 		dialogs += 1
 		Global.moving_allowed = true
 ##########################################################################################
@@ -133,75 +156,40 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Vorzügliche Arbeit ihr zwei. Unsere Reise durch das Pflanzenwunderland ist fast vorbei."
+		short_node_text.text = "Das war wie immer eine exzellente Leistung. Der Garten-Show steht nichts mehr im Wege."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
 	
-	elif dialogs == 3:
+	elif dialogs == 4:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "HOHOHO."
+		short_node_text.text = "Damit wäre eure Reise durch mein Königreich auch so gut wie beendet. Als letzten Schritt müsst ihr lediglich noch eine meiner Pflanzen adoptieren und mit nach Hause nehmen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
-	
-	elif dialogs == 6:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Die Vorbereitung für die Pflanzen ist nun vollzogen, jedoch fehlt noch ein wichtiger Schritt bevor wir den Garten für die Festivitäten planen können."
-		short_node_rect.texture = PRESET4
-		short_node_name.text = "Guido"
-		dialogs += 1
-		same_speaker = true
 	
 	elif dialogs == 7:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Wir müssen den richtigen Boden finden!"
+		short_node_text.text = "HOHOHO. Du hast mich erwischt. Als Belohnung für eure Arbeit schenke ich euch beiden einen Samen meiner schönsten Blume. Passt gut darauf auf."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
-		same_speaker = false
 	
-	elif dialogs == 9:
+	elif dialogs == 11:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das stimmt so nicht ganz. Es gibt zwar Pflanzen, die fast überall wachsen können wie z.B. Löwenzahn, aber viele Pflanzen benötigen einen besonderen Boden um gedeihen zu können."
+		short_node_text.text = "Gehet denn wohl!"
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
-		same_speaker = true
-	
-	elif dialogs == 10:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Dort drüben findet ihr mehrere Säcke gefüllt mit verschiedenen Bodentypen. Ich erklär euch wofür die genutzt werden und ihr sucht dann den richtigen aus."
-		short_node_rect.texture = PRESET4
-		short_node_name.text = "Guido"
-		dialogs += 1
-		same_speaker = false
-	
-	elif dialogs == 12:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das könnte ich in der tat tun, aber wo bleibt dann der Spaß? Husch, Husch an die Arbeit mit auch."
-		short_node_rect.texture = PRESET4
-		short_node_name.text = "Guido"
-		dialogs += 1
-	
 	
 	
 ##########################################################################################
