@@ -13,10 +13,8 @@ var same_speaker = false
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-##### add icon for environment here once finished
-var PRESET3 = preload("res://Assets/Art/Environment/Map/Clouds/cloud_poof1.png")
 ##### add monkey icon here once finished
-var PRESET4 = preload("res://Assets/Art/Characters/Band Members/Bassist Barbara/barbara_dialog_icon.png")
+var PRESET4 = preload("res://Assets/Art/Characters/Guido/Headshot/gardener_headshot_placeholder.png")
 
 
 ##########################################################################################
@@ -41,7 +39,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 7:
+	if dialogs == 13:
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
@@ -58,20 +56,71 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 3:
+	if dialogs == 1:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "HALLO? Geht es dir gut?"
+		short_node_text.text = "So, das wars. Die Pflanzen sehen wieder Tip-Top aus."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		dialogs += 1
-		
-	elif dialogs == 6:
+	
+	elif dialogs == 3:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Durch was wird denn Pflanzenwachstum noch eingeschränkt?"
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+	
+	if dialogs == 5:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = " Eine Müri-was-e?"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+	
+	elif dialogs == 7:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Aha… Und die wären?"
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+	
+	elif dialogs == 9:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Wow, das sind ja ne Menge an Sachen, die man beachten muss. Aber es ist wohl ähnlich wie bei uns Tieren."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+		same_speaker = true
+	
+	elif dialogs == 10:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Genau Carl. Als sind wir zwar sehr anpassungsfähig, fühlen uns aber eigentlich in Wäldern und Graslandschaften am wohlsten. Guido hingegen fühlt sich in tropischen Regenwäldern am wohlsten."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+		same_speaker = false
+	
+	elif dialogs == 12:
 		dialogs += 1
 		Global.moving_allowed = true
-	
 ##########################################################################################
 
 
@@ -87,68 +136,59 @@ func add_right_dialog_box():
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 1:
+	if dialogs == 2:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "*Krach Bumm Donk*"
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Umgebung"
-		dialogs += 1
-		same_speaker = true
-	
-	elif dialogs == 2:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "AUTSCH! Mist, doofes Teil!"
+		short_node_text.text = "Das war tadellose Arbeit. Meine floralen Freunde sind wieder in einem erstklassigen Zustand. Jedoch sind Zweige, die wild wachsen keineswegs die einzigen Beeinträchtigungen die Pflanzen in ihrem Leben überwinden müssen."
 		short_node_rect.texture = PRESET4
-		short_node_name.text = "???"
+		short_node_name.text = "Guido"
 		dialogs += 1
-		same_speaker = false
 	
 	elif dialogs == 4:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Oh, Besuch. Bitte verzeiht meine Ausdrucksweise, ich habe mich lediglich im Ton vergriffen, da mir ein Blumentopf kaputt gegangen ist."
+		short_node_text.text = "Da gibt eine Myriade an Gründen."
 		short_node_rect.texture = PRESET4
-		short_node_name.text = "???"
+		short_node_name.text = "Guido"
 		dialogs += 1
-		same_speaker = true
 	
-	elif dialogs == 5:
+	elif dialogs == 6:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Kommt doch bitte zu mir. Auf diese Entfernung lassen sich Unterhaltungen so schlecht führen."
+		short_node_text.text = "HOHO. Bitte entschuldigt meine Ausdrucksweise. Myriade bedeutet „Vielzahl“."
 		short_node_rect.texture = PRESET4
-		short_node_name.text = "???"
+		short_node_name.text = "Guido"
 		dialogs += 1
-		same_speaker = false
 	
-	elif dialogs == 7:
+	elif dialogs == 8:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Temperatur, Luftfeuchtigkeit, Lichtintensität, Pflanzendiebe, Bodenfeuchtigkeit, Insekten, Luftdruck, um ein paar Beispiele zu geben."
+		short_node_rect.texture = PRESET4
+		short_node_name.text = "Guido"
 		dialogs += 1
-		Global.moving_allowed = true
 	
-	
-	
-	
-	
+	elif dialogs == 11:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Du liegst genau richtig, junge Dame. Aber kommen wir nun zu eurer nächsten Aufgabe. Bitte begebt euch in das Gewächshaus an der hinteren Wand des Raums."
+		short_node_rect.texture = PRESET4
+		short_node_name.text = "Guido"
+		dialogs += 1
 	
 	
 	
 ##########################################################################################
-
-
-
-
-
-
 
 
 
