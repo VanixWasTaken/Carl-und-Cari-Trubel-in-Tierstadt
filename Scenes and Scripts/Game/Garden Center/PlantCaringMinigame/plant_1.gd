@@ -13,13 +13,13 @@ var needed_temperature = "20° C"
 var water_on = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_tree().get_current_scene().current_ground_wetness = str(current_ground_wetness) + " %"
-	get_tree().get_current_scene().current_temperature = str(current_temperature) + " ° C"
-	get_tree().get_current_scene().current_air_wetness = str(current_air_wetness) + " %"
+	get_tree().get_current_scene().current_ground_wetness = current_ground_wetness
+	get_tree().get_current_scene().current_temperature = current_temperature
+	get_tree().get_current_scene().current_air_wetness = current_air_wetness
 	get_tree().get_current_scene().current_alive_insects = current_alive_insects
-	get_tree().get_current_scene().needed_ground_wetness = str(needed_ground_wetness) + " %"
-	get_tree().get_current_scene().needed_temperature = str(needed_temperature) + " ° C"
-	get_tree().get_current_scene().needed_air_wetness = str(needed_air_wetness) + " %"
+	get_tree().get_current_scene().needed_ground_wetness = needed_ground_wetness
+	get_tree().get_current_scene().needed_temperature = needed_temperature
+	get_tree().get_current_scene().needed_air_wetness = needed_air_wetness
 
 func get_watered():
 	await get_tree().create_timer(0.2).timeout

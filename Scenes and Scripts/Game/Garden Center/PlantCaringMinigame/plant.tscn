@@ -28,7 +28,6 @@ script = ExtResource("2_bemo7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WateringArea"]
 position = Vector2(-407.102, -114.49)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2bgdb")
 
 [node name="Insect" parent="." instance=ExtResource("3_8mass")]

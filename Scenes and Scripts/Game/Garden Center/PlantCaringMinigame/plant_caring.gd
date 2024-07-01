@@ -14,16 +14,25 @@ var needed_temperature
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$Humidity/Label.text = str(current_air_wetness)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Label.text = "Name: " + common_name +"
-	Familie: " + family_name +"
-	Fakten: " + fun_facts +"
+	$Label.text = "Name: " + str(common_name) +"
+	Familie: " +  str(family_name) +"
+	Fakten: " +  str(fun_facts) +"
 	Aktueller Status: 
-	Bodenfeuchtigkeit: " + current_ground_wetness + " / " + needed_ground_wetness + "
-	Luftdruck: " + current_temperature + " / " + needed_temperature + "
+	Bodenfeuchtigkeit: " +  str(current_ground_wetness) + " / " +  str(needed_ground_wetness) + "
+	Luftdruck: " +  str(current_temperature) + " / " +  str(needed_temperature) + "
 	Lebende Insekten: " + str(current_alive_insects) + " / 0
-	Luftfeuchtigkeit: " + current_air_wetness + " / " + needed_air_wetness
+	Luftfeuchtigkeit: " +  str(current_air_wetness) + " / " +  str(needed_air_wetness)
+
+
+func _on_plus_humidity_button_down():
+	current_air_wetness += 1
+	$Humidity/Label.text = str(current_air_wetness) + " %"
+
+func _on_minus_humidity_button_down():
+	current_air_wetness -= 1
+	$Humidity/Label.text = str(current_air_wetness) + " %"
