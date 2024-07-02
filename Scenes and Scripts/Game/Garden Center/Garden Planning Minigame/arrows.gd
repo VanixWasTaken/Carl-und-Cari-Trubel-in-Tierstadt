@@ -3,8 +3,8 @@ extends Node
 var mouse_inside_left_arrow = false
 var mouse_inside_right_arrow = false
 
-const ARROW = preload("res://Assets/Art/Environment/Quiz/Arrow_right.png")
-const ARROW_HIGHLIGHT = preload("res://icon.png")
+const ARROW = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/arrow.png")
+const ARROW_HIGHLIGHT = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/arrow_selected.png")
 
 signal move_right
 signal move_left
