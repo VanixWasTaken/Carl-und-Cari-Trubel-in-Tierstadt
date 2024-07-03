@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://bcbhx165k2ljt"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect.gd" id="1_283bt"]
+[ext_resource type="Texture2D" uid="uid://cok2nl7v7wknt" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/Bugs/bugs.png" id="2_q6305"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bb6xj"]
+atlas = ExtResource("2_q6305")
+region = Rect2(0, 0, 475, 475)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs1xh"]
+atlas = ExtResource("2_q6305")
+region = Rect2(475, 0, 475, 475)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ght73"]
+atlas = ExtResource("2_q6305")
+region = Rect2(475, 475, 475, 475)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08ti1"]
+atlas = ExtResource("2_q6305")
+region = Rect2(0, 475, 475, 475)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aqfwy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bb6xj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bs1xh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ght73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08ti1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8h0db"]
+radius = 110.0
+height = 220.0
+
+[node name="Insect" type="Node2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_283bt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_aqfwy")
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(9, 12)
+shape = SubResource("CapsuleShape2D_8h0db")
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="area_exited" from="HitBox" to="." method="_on_hit_box_area_exited"]
