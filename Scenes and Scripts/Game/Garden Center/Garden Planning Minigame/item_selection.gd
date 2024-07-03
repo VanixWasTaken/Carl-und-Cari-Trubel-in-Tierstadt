@@ -24,6 +24,12 @@ func _input(event):
 	var item_scn_local = item_scn.instantiate()
 	if event.is_action_pressed("left_click") and mouse_inside_pick_up_area:
 		add_child(item_scn_local)
+		if current_item_selected == "PlantPot":
+			GlobalGarden.plant_pots_placed += 1
+		elif current_item_selected == "StonePlate":
+			GlobalGarden.stone_plates_placed += 1
+		elif current_item_selected == "Flower":
+			GlobalGarden.flowers_placed += 1
 		current_item_state.emit(current_item_selected)
 
 
