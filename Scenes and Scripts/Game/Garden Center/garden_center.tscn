@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_wckdn"]
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_g16mw"]
 [ext_resource type="Texture2D" uid="uid://0i52s0i7ee48" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_placeholder_floor.png" id="4_l523k"]
-[ext_resource type="Texture2D" uid="uid://co74x6tbvfnp6" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_placeholder_wall_back.png" id="5_liuer"]
+[ext_resource type="Texture2D" uid="uid://dqu2uetnhhgtr" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_back.png" id="5_nldcv"]
 [ext_resource type="Texture2D" uid="uid://dnm0vie4ss62k" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_placeholder_wall_left.png" id="6_haull"]
-[ext_resource type="Texture2D" uid="uid://buaon8v8j2w4a" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_placeholder_wall right.png" id="7_sywqh"]
+[ext_resource type="Texture2D" uid="uid://di3spopw54m1x" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_right.png" id="7_co6vq"]
 [ext_resource type="PackedScene" uid="uid://bg3komba4flqd" path="res://Scenes and Scripts/Game/Garden Center/Objects/bonsai_trees.tscn" id="8_mrm3e"]
 [ext_resource type="Texture2D" uid="uid://gci4at2p3pjb" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_desktop_desk.png" id="9_831a0"]
 [ext_resource type="Texture2D" uid="uid://bcsb6y7kyb8gy" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_trolley.png" id="10_4u12l"]
@@ -57,7 +57,7 @@ size = Vector2(59, 10)
 size = Vector3(59.08, 1, 15.4632)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wn6hy"]
-albedo_texture = ExtResource("5_liuer")
+albedo_texture = ExtResource("5_nldcv")
 
 [sub_resource type="QuadMesh" id="QuadMesh_mw0nr"]
 size = Vector2(59, 16)
@@ -75,7 +75,7 @@ size = Vector2(10, 16)
 size = Vector3(11.3256, 1, 15.9534)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r1li7"]
-albedo_texture = ExtResource("7_sywqh")
+albedo_texture = ExtResource("7_co6vq")
 
 [sub_resource type="QuadMesh" id="QuadMesh_iqs2f"]
 size = Vector2(10, 16)
