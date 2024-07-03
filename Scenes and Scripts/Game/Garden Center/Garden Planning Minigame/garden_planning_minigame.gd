@@ -3,6 +3,8 @@ extends Node2D
 
 var dialog_introduction = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Planning Minigame/garden_planning_minigame_dialog1.tscn")
 var dialog2 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Planning Minigame/garden_planning_minigame_dialog2.tscn")
+var dialog3 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Planning Minigame/garden_planning_minigame_dialog3.tscn")
+
 
 func _ready():
 	add_child(dialog_introduction.instantiate())
@@ -17,4 +19,6 @@ func _process(delta):
 func _on_texture_button_pressed():
 	if GlobalGarden.stone_plates_placed == 3 and GlobalGarden.plant_pots_placed == 2 and GlobalGarden.bushs_placed == 5 and GlobalGarden.flowers_placed == 3:
 		add_child(dialog2.instantiate())
+	if GlobalGarden.current_stage == 2 and GlobalGarden.stage2_correct_specs == 4 and GlobalGarden.plant_pots_placed >= 10:
+		add_child(dialog3.instantiate())
 

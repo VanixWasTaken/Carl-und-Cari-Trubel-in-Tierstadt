@@ -6,6 +6,18 @@ var allow_switch = true
 var mouse_inside_pick_up_area = false
 @onready var item_scn = preload("res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/item.tscn")
 
+var plantpot = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon2.png")
+var plantpot_highlight = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon_selected.png")
+var stoneplate = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon2.png")
+var stoneplate_highlight = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon_selected.png")
+var flower = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/flower/flower_icon2.png")
+var flower_highlight = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/flower/flower_icon_selected.png")
+var bush = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/bush/bush_icon2.png")
+var bush_highlight = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/bush/bush_icon_selected.png")
+
+
+
+
 
 signal current_item_state
 
@@ -74,8 +86,17 @@ func _on_animation_player_animation_finished(anim_name):
 
 func _on_pick_up_area_mouse_entered():
 	mouse_inside_pick_up_area = true
+	$Objects/PlantPot.texture = plantpot_highlight
+	$Objects/StonePlate.texture = stoneplate_highlight
+	$Objects/Flower.texture = flower_highlight
+	$Objects/Bush.texture = bush_highlight
+	
 func _on_pick_up_area_mouse_exited():
 	mouse_inside_pick_up_area = false
+	$Objects/PlantPot.texture = plantpot
+	$Objects/StonePlate.texture = stoneplate
+	$Objects/Flower.texture = flower
+	$Objects/Bush.texture = bush
 
 
 func _on_finished_button_pressed():
@@ -92,3 +113,7 @@ func _on_finished_button_pressed():
 		GlobalGarden.flowers_placed = 0
 		GlobalGarden.bushs_placed = 0
 		GlobalGarden.stone_plates_placed = 0
+		GlobalGarden.stage2_correct_specs = 0
+	
+	if GlobalGarden.current_stage == 2 and GlobalGarden.stage2_correct_specs == 4 and GlobalGarden.plant_pots_placed >= 10:
+		print("Leute ich brech zusammen, aber wenigstens funktioniert das system mittlerweile. Bevor ihr euch beschwert, ja dieser Print ist extra noch drinnen, damir ich weiß wo ich das Minispiel in Zukunft erweitern kann. Wenn du bis hierhin gelsen hast, herzlichen Glückwunsch, dein Schwanz ist klein.")

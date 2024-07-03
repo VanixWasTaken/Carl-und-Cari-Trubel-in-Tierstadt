@@ -14,6 +14,13 @@ var should_change_item_icon = true
 var should_change_current_item = true
 var local_mouse_inside_pick_up = false 
 var local_current_item_selected : String = "FILLER"
+var neighbor_item_right : String = "FILLER"
+var neighbor_item_left : String = "FILLER"
+var neighbor_item_up : String = "FILLER"
+var neighbor_item_down : String = "FILLER"
+var should_send_signal_stage2 = true
+
+
 
 
 func _ready():
@@ -28,6 +35,34 @@ func _process(delta):
 		position = get_global_mouse_position()
 	find_closest_marker()
 	check_neighbors()
+	
+	# Stage 2 checks
+	if !should_send_signal_stage2 and local_current_item_selected == "StonePlate" and !neighbor_item_right == "Bush":
+		GlobalGarden.stage2_correct_specs -= 1
+		should_send_signal_stage2 = true
+	elif !should_send_signal_stage2 and local_current_item_selected == "StonePlate" and !neighbor_item_left == "Bush":
+		GlobalGarden.stage2_correct_specs -= 1
+		should_send_signal_stage2 = true
+	elif !should_send_signal_stage2 and local_current_item_selected == "StonePlate" and !neighbor_item_up == "Bush":
+		GlobalGarden.stage2_correct_specs -= 1
+		should_send_signal_stage2 = true
+	elif !should_send_signal_stage2 and local_current_item_selected == "StonePlate" and !neighbor_item_down == "Bush":
+		GlobalGarden.stage2_correct_specs -= 1
+		should_send_signal_stage2 = true
+	
+	if should_send_signal_stage2 and local_current_item_selected == "StonePlate" and neighbor_item_down == "Bush":
+		GlobalGarden.stage2_correct_specs += 1
+		should_send_signal_stage2 = false
+	elif should_send_signal_stage2 and local_current_item_selected == "StonePlate" and neighbor_item_up == "Bush":
+		GlobalGarden.stage2_correct_specs += 1
+		should_send_signal_stage2 = false
+	elif should_send_signal_stage2 and local_current_item_selected == "StonePlate" and neighbor_item_left == "Bush":
+		GlobalGarden.stage2_correct_specs += 1
+		should_send_signal_stage2 = false
+	elif should_send_signal_stage2 and local_current_item_selected == "StonePlate" and neighbor_item_right == "Bush":
+		GlobalGarden.stage2_correct_specs += 1
+		should_send_signal_stage2 = false
+	
 
 
 
@@ -74,13 +109,71 @@ func find_closest_marker():
 			nearest_marker = i
 	script_nearest_marker = nearest_marker
 
-func check_neighbors():
-	var test = $NeighborCheck/RayCastRight.get_collider()
-	if $NeighborCheck/RayCastRight.is_colliding():
-		print(test)
+
+
+
+func check_neighbors(): # Scans the neighbor grid fields around the items and stores a variable what item is where.
+	var ray_right = $RayCastRight.get_collider()
+	var ray_left = $RayCastLeft.get_collider()
+	var ray_up = $RayCastUp.get_collider()
+	var ray_down = $RayCastDown.get_collider()
+	if !ray_right == null:
+		var ray_child = ray_right.get_child(1)
+		if str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon2.png":
+			neighbor_item_right = "PlantPot"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon2.png":
+			neighbor_item_right = "StonePlate"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/flower/flower_icon2.png":
+			neighbor_item_right = "Flower"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/bush/bush_icon2.png":
+			neighbor_item_right = "Bush"
+
+	if !$RayCastRight.is_colliding():
+		neighbor_item_right = "FILLER"
+
+	if !ray_left == null:
+		var ray_child = ray_left.get_child(1)
+		if str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon2.png":
+			neighbor_item_left = "PlantPot"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon2.png":
+			neighbor_item_left = "StonePlate"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/flower/flower_icon2.png":
+			neighbor_item_left = "Flower"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/bush/bush_icon2.png":
+			neighbor_item_left = "Bush"
+	if !$RayCastLeft.is_colliding():
+		neighbor_item_left = "FILLER"
+
+	if !ray_up == null:
+		var ray_child = ray_up.get_child(1)
+		if str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon2.png":
+			neighbor_item_up = "PlantPot"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon2.png":
+			neighbor_item_up = "StonePlate"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/flower/flower_icon2.png":
+			neighbor_item_up = "Flower"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/bush/bush_icon2.png":
+			neighbor_item_up = "Bush"
+	if !$RayCastUp.is_colliding():
+		neighbor_item_up = "FILLER"
 	
-		
-		
+	if !ray_down == null:
+		var ray_child = ray_down.get_child(1)
+		if str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon2.png":
+			neighbor_item_down = "PlantPot"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon2.png":
+			neighbor_item_down = "StonePlate"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/flower/flower_icon2.png":
+			neighbor_item_down = "Flower"
+		elif str(ray_child.texture.get_path()) == "res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/bush/bush_icon2.png":
+			neighbor_item_down = "Bush"
+	if !$RayCastDown.is_colliding():
+		neighbor_item_down = "FILLER"
+
+
+
+
+
 
 func _on_area_entered(area):
 	is_on_grid = true

@@ -7,6 +7,7 @@
 size = Vector2(173, 168)
 
 [node name="Item" type="Area2D"]
+collision_layer = 9
 collision_mask = 2
 script = ExtResource("1_xskpv")
 
@@ -16,25 +17,27 @@ shape = SubResource("RectangleShape2D_703vj")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_jev7f")
 
-[node name="NeighborCheck" type="Node" parent="."]
-
-[node name="RayCastDown" type="RayCast2D" parent="NeighborCheck"]
-target_position = Vector2(0, 100)
+[node name="RayCastDown" type="RayCast2D" parent="."]
+target_position = Vector2(0, 180)
+collision_mask = 8
 collide_with_areas = true
 
-[node name="RayCastLeft" type="RayCast2D" parent="NeighborCheck"]
+[node name="RayCastLeft" type="RayCast2D" parent="."]
 rotation = 1.5708
-target_position = Vector2(0, 100)
+target_position = Vector2(0, 180)
+collision_mask = 8
 collide_with_areas = true
 
-[node name="RayCastUp" type="RayCast2D" parent="NeighborCheck"]
+[node name="RayCastUp" type="RayCast2D" parent="."]
 rotation = 3.14159
-target_position = Vector2(0, 100)
+target_position = Vector2(0, 180)
+collision_mask = 8
 collide_with_areas = true
 
-[node name="RayCastRight" type="RayCast2D" parent="NeighborCheck"]
-rotation = 4.71239
-target_position = Vector2(0, 100)
+[node name="RayCastRight" type="RayCast2D" parent="."]
+rotation = -1.5708
+target_position = Vector2(0, 180)
+collision_mask = 8
 collide_with_areas = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

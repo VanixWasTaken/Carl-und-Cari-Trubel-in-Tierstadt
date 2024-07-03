@@ -14,3 +14,4 @@ var stone_plates_placed = 0
 var flowers_placed = 0
 var bushs_placed = 0
 var current_stage = 1
+var stage2_correct_specs = 0
