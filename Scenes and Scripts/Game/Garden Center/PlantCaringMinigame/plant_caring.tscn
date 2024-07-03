@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://di7wffcl0ey3o"]
+[gd_scene load_steps=13 format=3 uid="uid://di7wffcl0ey3o"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_caring.gd" id="1_mjkcf"]
 [ext_resource type="Texture2D" uid="uid://c72xamnljg6m7" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/room_placeholder.png" id="1_s0435"]
@@ -8,10 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://brcdcnmm5e2em" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect_spray.tscn" id="6_61pj5"]
 [ext_resource type="Texture2D" uid="uid://cteydrkongfdc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/plusbuttonplaceholder.png" id="7_2n4t6"]
 [ext_resource type="Texture2D" uid="uid://dmauooyvr5rqx" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minusbuttonplaceholder.png" id="8_lti52"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/temperature.gd" id="9_jhkj6"]
 [ext_resource type="Texture2D" uid="uid://bp24i4cfoqioc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/potentiometer.png" id="9_r43fh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jmua4"]
-radius = 162.338
+radius = 240.539
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7qwd"]
+size = Vector2(2, 133)
 
 [node name="Plant Caring" type="Node2D"]
 script = ExtResource("1_mjkcf")
@@ -22,7 +26,7 @@ offset_bottom = 1080.0
 texture = ExtResource("1_s0435")
 
 [node name="Plant" parent="." instance=ExtResource("2_72lyy")]
-position = Vector2(1304, 673)
+position = Vector2(1028, 626)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 1393.0
@@ -47,7 +51,7 @@ Bodenfeuchtigkeit: 50 ml
 Insektenbefall: 10 Insekten"
 
 [node name="Watering Can" parent="." instance=ExtResource("4_cx1dw")]
-position = Vector2(1507, 859)
+position = Vector2(1556, 865)
 
 [node name="Insect Spray" parent="." instance=ExtResource("6_61pj5")]
 position = Vector2(262, 849)
@@ -80,57 +84,85 @@ theme_override_font_sizes/font_size = 101
 text = "70 %"
 
 [node name="Temperature" type="Node2D" parent="."]
+position = Vector2(521, 614)
+script = ExtResource("9_jhkj6")
 
 [node name="40" type="Area2D" parent="Temperature"]
+position = Vector2(-524, -610)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/40"]
-polygon = PackedVector2Array(512, 617, 409, 616, 347, 618, 359, 558)
+polygon = PackedVector2Array(420, 575, 409, 611, 349, 611, 362, 554)
 
 [node name="35" type="Area2D" parent="Temperature"]
+position = Vector2(-524, -610)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/35"]
-polygon = PackedVector2Array(417, 574, 515, 614, 405, 490, 362, 552)
+polygon = PackedVector2Array(420, 570, 449, 531, 407, 486, 365, 548)
 
 [node name="30" type="Area2D" parent="Temperature"]
+position = Vector2(-524, -610)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/30"]
-polygon = PackedVector2Array(449, 536, 517, 611, 456, 455, 409, 487)
+polygon = PackedVector2Array(454, 530, 482, 511, 459, 452, 411, 483)
 
 [node name="25" type="Area2D" parent="Temperature"]
+position = Vector2(-524, -610)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/25"]
-polygon = PackedVector2Array(521, 609, 519, 507, 521, 441, 459, 454)
+polygon = PackedVector2Array(487, 509, 522, 503, 520, 438, 464, 450)
 
 [node name="20" type="Area2D" parent="Temperature"]
+position = Vector2(-524, -610)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/20"]
-polygon = PackedVector2Array(523, 443, 584, 453, 525, 609, 524, 506)
+polygon = PackedVector2Array(530, 437, 586, 449, 563, 509, 528, 503)
 
 [node name="15" type="Area2D" parent="Temperature"]
+position = Vector2(-524, -610)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/15"]
-polygon = PackedVector2Array(588, 455, 653, 502, 528, 612, 565, 516)
+polygon = PackedVector2Array(590, 451, 656, 499, 610, 537, 568, 510)
 
 [node name="10" type="Area2D" parent="Temperature"]
+position = Vector2(-524, -610)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/10"]
-polygon = PackedVector2Array(606, 545, 535, 612, 682, 550, 654, 506)
+polygon = PackedVector2Array(611, 542, 629, 568, 685, 544, 658, 502)
 
 [node name="5" type="Area2D" parent="Temperature"]
+position = Vector2(-1, 9)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/5"]
-polygon = PackedVector2Array(626, 575, 532, 617, 694, 617, 685, 553)
+position = Vector2(-521, -622)
+polygon = PackedVector2Array(626, 575, 640, 614, 698, 613, 685, 553)
 
 [node name="TemperatureRegulator" type="Sprite2D" parent="Temperature"]
-position = Vector2(523, 616)
+position = Vector2(-1, 6)
 scale = Vector2(0.616034, 0.590414)
 texture = ExtResource("9_r43fh")
 
 [node name="Area2D" type="Area2D" parent="Temperature/TemperatureRegulator"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Temperature/TemperatureRegulator/Area2D"]
-position = Vector2(6.49315, -1.69383)
+position = Vector2(1.62329, 1.69373)
 shape = SubResource("CircleShape2D_jmua4")
+
+[node name="Pointer" type="Area2D" parent="Temperature"]
+position = Vector2(1, -99)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Temperature/Pointer"]
+position = Vector2(0, -66.5)
+shape = SubResource("RectangleShape2D_n7qwd")
 
 [connection signal="button_down" from="Humidity/PlusHumidity" to="." method="_on_plus_humidity_button_down"]
 [connection signal="button_down" from="Humidity/MinusHumidity" to="." method="_on_minus_humidity_button_down"]
+[connection signal="area_entered" from="Temperature/40" to="." method="_on_40_area_entered"]
+[connection signal="area_entered" from="Temperature/35" to="." method="_on_35_area_entered"]
+[connection signal="area_entered" from="Temperature/30" to="." method="_on_30_area_entered"]
+[connection signal="area_entered" from="Temperature/25" to="." method="_on_25_area_entered"]
+[connection signal="area_entered" from="Temperature/20" to="." method="_on_20_area_entered"]
+[connection signal="area_entered" from="Temperature/15" to="." method="_on_15_area_entered"]
+[connection signal="area_entered" from="Temperature/10" to="." method="_on_10_area_entered"]
+[connection signal="area_entered" from="Temperature/5" to="." method="_on_5_area_entered"]
+[connection signal="mouse_entered" from="Temperature/TemperatureRegulator/Area2D" to="Temperature" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Temperature/TemperatureRegulator/Area2D" to="Temperature" method="_on_area_2d_mouse_exited"]

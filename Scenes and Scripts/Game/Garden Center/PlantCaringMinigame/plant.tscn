@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dt8p5adk2f06v"]
+[gd_scene load_steps=7 format=3 uid="uid://dt8p5adk2f06v"]
 
 [ext_resource type="Texture2D" uid="uid://41k61fwpefcf" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minigame2_bigplant_wilted.png" id="1_46bnw"]
+[ext_resource type="Texture2D" uid="uid://cwt8mump6dehs" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minigame2_bigplant.png" id="2_3uy47"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_1.gd" id="2_bemo7"]
 [ext_resource type="PackedScene" uid="uid://bcbhx165k2ljt" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect.tscn" id="3_8mass"]
 
@@ -9,6 +10,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_46bnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3uy47")
 }],
 "loop": true,
 "name": &"default",
@@ -27,30 +31,30 @@ script = ExtResource("2_bemo7")
 [node name="WateringArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WateringArea"]
-position = Vector2(-407.102, -114.49)
+position = Vector2(-30.9904, -150.612)
 shape = SubResource("RectangleShape2D_2bgdb")
 
 [node name="Insect" parent="." instance=ExtResource("3_8mass")]
-position = Vector2(2.81731, 0)
+position = Vector2(369.069, 12.2445)
 
 [node name="Insect2" parent="." instance=ExtResource("3_8mass")]
-position = Vector2(-790.257, 265.714)
+position = Vector2(-424.006, 277.958)
 sprite_num = 3
 
 [node name="Insect3" parent="." instance=ExtResource("3_8mass")]
-position = Vector2(-563.463, -180)
+position = Vector2(-197.212, -167.755)
 sprite_num = 1
 
 [node name="Insect4" parent="." instance=ExtResource("3_8mass")]
-position = Vector2(-190.169, 8.57142)
+position = Vector2(176.082, 20.8159)
 sprite_num = 2
 
 [node name="Insect5" parent="." instance=ExtResource("3_8mass")]
-position = Vector2(-500.073, 260.816)
+position = Vector2(-133.822, 273.061)
 sprite_num = 3
 
 [node name="Insect6" parent="." instance=ExtResource("3_8mass")]
-position = Vector2(-98.606, -353.877)
+position = Vector2(267.645, -341.633)
 sprite_num = 1
 
 [connection signal="area_entered" from="WateringArea" to="." method="_on_watering_area_area_entered"]
