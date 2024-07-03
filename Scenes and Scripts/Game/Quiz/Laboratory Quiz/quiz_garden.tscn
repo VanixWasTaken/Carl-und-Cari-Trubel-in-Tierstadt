@@ -1,0 +1,1120 @@
+[gd_scene load_steps=61 format=3 uid="uid://budv1svk408d3"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_udphn"]
+[ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_fs6gq"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question5.gd" id="3_beff1"]
+[ext_resource type="Texture2D" uid="uid://dxeb7rmw772vh" path="res://Assets/Art/Environment/Quiz/quiz_template_dialog.png" id="4_1s8s3"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_124ol"]
+[ext_resource type="Texture2D" uid="uid://bl3q3vnoh3x2f" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button.png" id="6_84vjf"]
+[ext_resource type="Texture2D" uid="uid://otmy5c0k20xl" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_dark.png" id="7_3s04w"]
+[ext_resource type="Texture2D" uid="uid://nk8ndgcpb32e" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_light.png" id="8_3o4b2"]
+[ext_resource type="Texture2D" uid="uid://crpm3xvnv3c2h" path="res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot2.png" id="9_pa1nw"]
+[ext_resource type="Texture2D" uid="uid://dteiydgqp0dk6" path="res://Assets/Art/Environment/Quiz/quiz_question5_star.png" id="10_dlwpu"]
+[ext_resource type="Texture2D" uid="uid://cwxmhfrx6dcqd" path="res://Assets/Art/Environment/Quiz/quiz_question5_star_clicked.png" id="11_e2pxq"]
+[ext_resource type="Texture2D" uid="uid://54gkdk1no2n8" path="res://Assets/Art/Environment/Quiz/quiz_question5_star_hovered.png" id="12_8u5l4"]
+[ext_resource type="Texture2D" uid="uid://c37qpidtdw5es" path="res://Assets/Art/Environment/Quiz/quiz_question5_star_selected.png" id="13_igqbq"]
+[ext_resource type="Texture2D" uid="uid://cgcu0pvpoiwo6" path="res://Assets/Art/Environment/Quiz/quiz_template_speech_bubble.png" id="14_impmd"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question4.gd" id="15_obleo"]
+[ext_resource type="Texture2D" uid="uid://d1645vqju7job" path="res://Assets/Art/Environment/Quiz/quiz_question3_box.png" id="16_cqs8l"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question3.gd" id="17_0aa6e"]
+[ext_resource type="Texture2D" uid="uid://b6hpuvseildsl" path="res://Assets/Art/Environment/Quiz/quiz_question1_checkbox.png" id="18_46i17"]
+[ext_resource type="Texture2D" uid="uid://b6fgfqiiucpjt" path="res://Assets/Art/Environment/Quiz/quiz_question1_checkbox_checked.png" id="19_bp24h"]
+[ext_resource type="Texture2D" uid="uid://cnahvtocqw6uc" path="res://Assets/Art/Environment/Quiz/quiz_question3_chef_hat.png" id="20_1byqy"]
+[ext_resource type="Texture2D" uid="uid://dhax6i23j7k5p" path="res://Assets/Art/Environment/Quiz/quiz_question3_garden_scissors.png" id="21_wo6ac"]
+[ext_resource type="Texture2D" uid="uid://bimls4otfa7uc" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_flask.png" id="22_wn1ov"]
+[ext_resource type="Texture2D" uid="uid://dgdio4aqc2t3b" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_toothbrush.png" id="23_4darh"]
+[ext_resource type="Texture2D" uid="uid://6pehn1e4mhbf" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_lab_goggles.png" id="24_vqa45"]
+[ext_resource type="Texture2D" uid="uid://c0heaobg23tw2" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_lab_coat.png" id="25_qoi5f"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question2.gd" id="26_y6tjk"]
+[ext_resource type="Texture2D" uid="uid://cmsb7vgdfcedm" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/lab_minigame1_ph_scale.png" id="27_631fn"]
+[ext_resource type="Texture2D" uid="uid://dv4j0r5i8i2j0" path="res://Assets/Art/Environment/Quiz/quiz_question2_lemon.png" id="28_jwulf"]
+[ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="29_pn43o"]
+[ext_resource type="Texture2D" uid="uid://dsuod2kvgqm0w" path="res://Assets/Art/Environment/Quiz/quiz_question2_soap.png" id="30_x3heq"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question1.gd" id="31_eno4t"]
+[ext_resource type="Texture2D" uid="uid://2uo2w7soxbgc" path="res://Assets/Art/Environment/Quiz/quiz_question1_titration icon.png" id="32_3tckm"]
+[ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/Art/Random Screens/white_screen.png" id="33_ormh8"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="34_ovvrg"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="35_8k3p7"]
+[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="36_r4lwo"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="37_40x20"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="38_4xjb6"]
+[ext_resource type="AudioStream" uid="uid://bxtc80jb2lxtd" path="res://Assets/Sound/SFX/Foley/Map/Quiz/sfx_foley_map_quiz_stars.mp3" id="39_y1hyj"]
+
+[sub_resource type="Theme" id="Theme_b780n"]
+default_font = ExtResource("5_124ol")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u63no"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bslay"]
+size = Vector2(795.321, 81.7619)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecj0j"]
+size = Vector2(795.321, 53.8885)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxct1"]
+size = Vector2(795.321, 65.0379)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wf3my"]
+size = Vector2(795.321, 61.3215)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvokf"]
+size = Vector2(795.321, 59.4633)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_da1b4"]
+size = Vector2(795.321, 63.1799)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5r21"]
+size = Vector2(795.321, 59.4641)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihd30"]
+size = Vector2(795.321, 66.8962)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ic5"]
+size = Vector2(795.321, 68.7541)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tybbk"]
+size = Vector2(795.321, 59.4634)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mnn3"]
+size = Vector2(795.321, 52.0305)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhjee"]
+size = Vector2(795.321, 63.1798)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ow5b"]
+size = Vector2(795.321, 59.4637)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j68t"]
+size = Vector2(795.321, 53.6016)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ad64"]
+size = Vector2(194, 135)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tayap"]
+size = Vector2(516.2, 0.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_047nh"]
+size = Vector2(364.873, 214.164)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cvb3i"]
+streams_count = 2
+stream_0/stream = ExtResource("34_ovvrg")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("35_8k3p7")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_m4dmh"]
+streams_count = 3
+stream_0/stream = ExtResource("36_r4lwo")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("37_40x20")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("38_4xjb6")
+stream_2/weight = 1.0
+
+[node name="QuizLaboratory" type="CanvasLayer"]
+script = ExtResource("1_udphn")
+
+[node name="Question5" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_fs6gq")
+script = ExtResource("3_beff1")
+
+[node name="Dialogbox" type="Sprite2D" parent="Question5"]
+position = Vector2(960, 263)
+scale = Vector2(0.865239, 0.865239)
+texture = ExtResource("4_1s8s3")
+
+[node name="Label" type="Label" parent="Question5/Dialogbox"]
+offset_left = -792.844
+offset_top = -97.083
+offset_right = -291.844
+offset_bottom = -18.083
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 58
+text = "Bewerte den Beruf"
+
+[node name="WeiterButton" type="TextureButton" parent="Question5"]
+layout_mode = 0
+offset_left = 1317.0
+offset_top = 831.0
+offset_right = 2229.0
+offset_bottom = 1138.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("6_84vjf")
+texture_pressed = ExtResource("7_3s04w")
+texture_hover = ExtResource("8_3o4b2")
+
+[node name="Headshot" type="Sprite2D" parent="Question5"]
+position = Vector2(1576, 279)
+scale = Vector2(1.11125, 1.11125)
+texture = ExtResource("9_pa1nw")
+
+[node name="Star" type="TextureButton" parent="Question5"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 466.0
+offset_right = 625.0
+offset_bottom = 848.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("10_dlwpu")
+texture_pressed = ExtResource("11_e2pxq")
+texture_hover = ExtResource("12_8u5l4")
+
+[node name="SelectedStar" type="Sprite2D" parent="Question5/Star"]
+visible = false
+position = Vector2(203.286, 145.857)
+texture = ExtResource("13_igqbq")
+
+[node name="Star2" type="TextureButton" parent="Question5"]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 466.0
+offset_right = 892.0
+offset_bottom = 848.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("10_dlwpu")
+texture_pressed = ExtResource("11_e2pxq")
+texture_hover = ExtResource("12_8u5l4")
+
+[node name="SelectedStar" type="Sprite2D" parent="Question5/Star2"]
+visible = false
+position = Vector2(203.286, 145.857)
+texture = ExtResource("13_igqbq")
+
+[node name="Star3" type="TextureButton" parent="Question5"]
+layout_mode = 0
+offset_left = 772.0
+offset_top = 466.0
+offset_right = 1161.0
+offset_bottom = 848.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("10_dlwpu")
+texture_pressed = ExtResource("11_e2pxq")
+texture_hover = ExtResource("12_8u5l4")
+
+[node name="SelectedStar" type="Sprite2D" parent="Question5/Star3"]
+visible = false
+position = Vector2(203.286, 145.857)
+texture = ExtResource("13_igqbq")
+
+[node name="Star4" type="TextureButton" parent="Question5"]
+layout_mode = 0
+offset_left = 1038.0
+offset_top = 466.0
+offset_right = 1427.0
+offset_bottom = 848.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("10_dlwpu")
+texture_pressed = ExtResource("11_e2pxq")
+texture_hover = ExtResource("12_8u5l4")
+
+[node name="SelectedStar" type="Sprite2D" parent="Question5/Star4"]
+visible = false
+position = Vector2(203.286, 145.857)
+texture = ExtResource("13_igqbq")
+
+[node name="Star5" type="TextureButton" parent="Question5"]
+layout_mode = 0
+offset_left = 1310.0
+offset_top = 466.0
+offset_right = 1699.0
+offset_bottom = 848.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("10_dlwpu")
+texture_pressed = ExtResource("11_e2pxq")
+texture_hover = ExtResource("12_8u5l4")
+
+[node name="SelectedStar" type="Sprite2D" parent="Question5/Star5"]
+visible = false
+position = Vector2(203.286, 145.857)
+texture = ExtResource("13_igqbq")
+
+[node name="Solutions" type="Node2D" parent="Question5"]
+
+[node name="NoSolution" type="Node2D" parent="Question5/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question5/Solutions/NoSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question5/Solutions/NoSolution"]
+offset_left = 928.0
+offset_top = 529.0
+offset_right = 1390.0
+offset_bottom = 722.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Bitte wähle eine
+Antwort aus"
+
+[node name="RightSolution" type="Node2D" parent="Question5/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question5/Solutions/RightSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question5/Solutions/RightSolution"]
+offset_left = 968.0
+offset_top = 526.0
+offset_right = 1330.0
+offset_bottom = 705.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Das  hast du 
+toll gemacht"
+horizontal_alignment = 1
+
+[node name="Question4" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_fs6gq")
+script = ExtResource("15_obleo")
+
+[node name="Dialogbox" type="Sprite2D" parent="Question4"]
+position = Vector2(960, 263)
+scale = Vector2(0.865239, 0.865239)
+texture = ExtResource("4_1s8s3")
+
+[node name="Label" type="Label" parent="Question4/Dialogbox"]
+offset_left = -814.804
+offset_top = -137.534
+offset_right = 411.196
+offset_bottom = 49.4657
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 58
+text = "Was hat dir an deinem Ausflug in das Labor
+gefallen und was nicht?"
+
+[node name="WeiterButton" type="TextureButton" parent="Question4"]
+layout_mode = 0
+offset_left = 1317.0
+offset_top = 831.0
+offset_right = 2229.0
+offset_bottom = 1138.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("6_84vjf")
+texture_pressed = ExtResource("7_3s04w")
+texture_hover = ExtResource("8_3o4b2")
+
+[node name="Headshot" type="Sprite2D" parent="Question4"]
+position = Vector2(1576, 279)
+scale = Vector2(1.11125, 1.11125)
+texture = ExtResource("9_pa1nw")
+
+[node name="TextField" type="Sprite2D" parent="Question4"]
+position = Vector2(695.708, 664)
+scale = Vector2(1.17993, 0.921189)
+texture = ExtResource("16_cqs8l")
+
+[node name="TextEdit" type="TextEdit" parent="Question4"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = 334.0
+offset_top = 462.0
+offset_right = 1042.0
+offset_bottom = 907.0
+tooltip_text = "Mit Linksklick wählst du die Box aus,
+danach kannst du mit der Tastatur deinen Text schreiben"
+theme = SubResource("Theme_b780n")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.560784)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_u63no")
+placeholder_text = "Schreibe hier deinen Text rein."
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Solutions" type="Node2D" parent="Question4"]
+
+[node name="Thanks" type="Node2D" parent="Question4/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question4/Solutions/Thanks"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question4/Solutions/Thanks"]
+offset_left = 916.0
+offset_top = 523.0
+offset_right = 1388.0
+offset_bottom = 702.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Danke, das
+merk ich mir"
+horizontal_alignment = 1
+
+[node name="NoSolution" type="Node2D" parent="Question4/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question4/Solutions/NoSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question4/Solutions/NoSolution"]
+offset_left = 923.0
+offset_top = 493.0
+offset_right = 1395.0
+offset_bottom = 763.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Bitte schreibe
+etwas in das
+Textfeld"
+horizontal_alignment = 1
+
+[node name="WrongSolution" type="Node2D" parent="Question4/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question4/Solutions/WrongSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question4/Solutions/WrongSolution"]
+offset_left = 923.0
+offset_top = 526.0
+offset_right = 1395.0
+offset_bottom = 705.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Schreibe noch
+etwas mehr"
+horizontal_alignment = 1
+
+[node name="Question3" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_fs6gq")
+script = ExtResource("17_0aa6e")
+
+[node name="Dialogbox" type="Sprite2D" parent="Question3"]
+position = Vector2(960, 263)
+scale = Vector2(0.865239, 0.865239)
+texture = ExtResource("4_1s8s3")
+
+[node name="Label" type="Label" parent="Question3/Dialogbox"]
+offset_left = -814.804
+offset_top = -137.534
+offset_right = 411.196
+offset_bottom = 49.4657
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 58
+text = "Welche Objekte gehören zur Laborausrüstung?
+[Kreuze mehrere an]"
+
+[node name="Answer2" type="Node2D" parent="Question3"]
+position = Vector2(297, 428)
+
+[node name="Answer2Button" type="TextureButton" parent="Question3/Answer2"]
+offset_left = -94.0
+offset_top = -103.0
+offset_right = 106.0
+offset_bottom = 93.0
+toggle_mode = true
+texture_normal = ExtResource("18_46i17")
+texture_pressed = ExtResource("19_bp24h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Question3/Answer2"]
+position = Vector2(210, 0)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("20_1byqy")
+
+[node name="Answer3" type="Node2D" parent="Question3"]
+position = Vector2(301, 645)
+
+[node name="Answer3Button" type="TextureButton" parent="Question3/Answer3"]
+offset_left = -92.0
+offset_top = -102.0
+offset_right = 108.0
+offset_bottom = 94.0
+toggle_mode = true
+texture_normal = ExtResource("18_46i17")
+texture_pressed = ExtResource("19_bp24h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Question3/Answer3"]
+position = Vector2(210, 0)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("21_wo6ac")
+
+[node name="Answer4" type="Node2D" parent="Question3"]
+position = Vector2(300, 871)
+
+[node name="Answer4Button" type="TextureButton" parent="Question3/Answer4"]
+offset_left = -92.0
+offset_top = -102.0
+offset_right = 108.0
+offset_bottom = 94.0
+toggle_mode = true
+texture_normal = ExtResource("18_46i17")
+texture_pressed = ExtResource("19_bp24h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Question3/Answer4"]
+position = Vector2(210, 0)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("22_wn1ov")
+
+[node name="Answer5" type="Node2D" parent="Question3"]
+position = Vector2(820, 425)
+
+[node name="Answer5Button" type="TextureButton" parent="Question3/Answer5"]
+offset_left = -92.0
+offset_top = -102.0
+offset_right = 108.0
+offset_bottom = 94.0
+toggle_mode = true
+texture_normal = ExtResource("18_46i17")
+texture_pressed = ExtResource("19_bp24h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Question3/Answer5"]
+position = Vector2(210, 0)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("23_4darh")
+
+[node name="Answer6" type="Node2D" parent="Question3"]
+position = Vector2(827, 647)
+
+[node name="Answer6Button" type="TextureButton" parent="Question3/Answer6"]
+offset_left = -92.0
+offset_top = -102.0
+offset_right = 108.0
+offset_bottom = 94.0
+toggle_mode = true
+texture_normal = ExtResource("18_46i17")
+texture_pressed = ExtResource("19_bp24h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Question3/Answer6"]
+position = Vector2(210, 0)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("24_vqa45")
+
+[node name="Answer7" type="Node2D" parent="Question3"]
+position = Vector2(823, 879)
+
+[node name="Answer7Button" type="TextureButton" parent="Question3/Answer7"]
+offset_left = -92.0
+offset_top = -102.0
+offset_right = 108.0
+offset_bottom = 94.0
+toggle_mode = true
+texture_normal = ExtResource("18_46i17")
+texture_pressed = ExtResource("19_bp24h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Question3/Answer7"]
+position = Vector2(210, 0)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("25_qoi5f")
+
+[node name="WeiterButton" type="TextureButton" parent="Question3"]
+layout_mode = 0
+offset_left = 1317.0
+offset_top = 831.0
+offset_right = 2229.0
+offset_bottom = 1138.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("6_84vjf")
+texture_pressed = ExtResource("7_3s04w")
+texture_hover = ExtResource("8_3o4b2")
+
+[node name="Headshot" type="Sprite2D" parent="Question3"]
+position = Vector2(1576, 279)
+scale = Vector2(1.11125, 1.11125)
+texture = ExtResource("9_pa1nw")
+
+[node name="Solutions" type="Node2D" parent="Question3"]
+
+[node name="WrongSolution" type="Node2D" parent="Question3/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question3/Solutions/WrongSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.808)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question3/Solutions/WrongSolution"]
+offset_left = 953.0
+offset_top = 525.0
+offset_right = 1365.0
+offset_bottom = 718.0
+theme_override_colors/font_color = Color(0.784314, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Das war leider
+nicht richtig"
+
+[node name="NoSolution" type="Node2D" parent="Question3/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question3/Solutions/NoSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question3/Solutions/NoSolution"]
+offset_left = 928.0
+offset_top = 529.0
+offset_right = 1390.0
+offset_bottom = 722.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Bitte wähle eine
+Antwort aus"
+
+[node name="RightSolution" type="Node2D" parent="Question3/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question3/Solutions/RightSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question3/Solutions/RightSolution"]
+offset_left = 928.0
+offset_top = 565.0
+offset_right = 1388.0
+offset_bottom = 653.0
+theme_override_colors/font_color = Color(0, 0.784314, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Das war richtig"
+
+[node name="Question2" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_fs6gq")
+script = ExtResource("26_y6tjk")
+
+[node name="Dialogbox" type="Sprite2D" parent="Question2"]
+position = Vector2(960, 263)
+scale = Vector2(0.865239, 0.865239)
+texture = ExtResource("4_1s8s3")
+
+[node name="Label" type="Label" parent="Question2/Dialogbox"]
+anchors_preset = -1
+anchor_left = -7.77739e-05
+anchor_top = -0.000799222
+anchor_right = 0.0116279
+anchor_bottom = 0.210788
+offset_left = -773.86
+offset_top = -131.683
+offset_right = 205.14
+offset_bottom = -50.6827
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 60
+text = "Lege die Zitrone und die Seife zu den 
+richtigen pH-Werten"
+metadata/_edit_use_anchors_ = true
+
+[node name="WeiterButton" type="TextureButton" parent="Question2"]
+layout_mode = 0
+offset_left = 1317.0
+offset_top = 831.0
+offset_right = 2229.0
+offset_bottom = 1138.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("6_84vjf")
+texture_pressed = ExtResource("7_3s04w")
+texture_hover = ExtResource("8_3o4b2")
+
+[node name="Headshot" type="Sprite2D" parent="Question2"]
+position = Vector2(1576, 279)
+scale = Vector2(1.11125, 1.11125)
+texture = ExtResource("9_pa1nw")
+
+[node name="PhScaleIcon" type="Sprite2D" parent="Question2"]
+position = Vector2(1213, 630)
+scale = Vector2(0.538147, 0.538147)
+texture = ExtResource("27_631fn")
+
+[node name="PhScale14" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale14" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -366.071)
+shape = SubResource("RectangleShape2D_bslay")
+
+[node name="PhScale13" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 55)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale13" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -353.246)
+shape = SubResource("RectangleShape2D_ecj0j")
+
+[node name="PhScale12" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale12" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -348.783)
+shape = SubResource("RectangleShape2D_wxct1")
+
+[node name="PhScale11" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 178.39)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale11" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -353.993)
+shape = SubResource("RectangleShape2D_wf3my")
+
+[node name="PhScale10" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 239.711)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale10" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_kvokf")
+
+[node name="PhScale9" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 297.316)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale9" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -351.204)
+shape = SubResource("RectangleShape2D_da1b4")
+
+[node name="PhScale7" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 362.354)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale7" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_m5r21")
+
+[node name="PhScale6" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 425.534)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale6" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -354.921)
+shape = SubResource("RectangleShape2D_ihd30")
+
+[node name="PhScale5" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 496.147)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale5" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -357.709)
+shape = SubResource("RectangleShape2D_l8ic5")
+
+[node name="PhScale4" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 559.326)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale4" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -356.779)
+shape = SubResource("RectangleShape2D_tybbk")
+
+[node name="PhScale3" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 615.073)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale3" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -356.779)
+shape = SubResource("RectangleShape2D_1mnn3")
+
+[node name="PhScale2" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 672.678)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale2" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -356.779)
+shape = SubResource("RectangleShape2D_hhjee")
+
+[node name="PhScale1" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 735.858)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale1" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -358.637)
+shape = SubResource("RectangleShape2D_8ow5b")
+
+[node name="PhScale0" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
+position = Vector2(269.443, 793.463)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale0" groups=["PhScaleAreas"]]
+position = Vector2(-146.8, -359.71)
+shape = SubResource("RectangleShape2D_4j68t")
+
+[node name="Lemon" type="Node2D" parent="Question2"]
+position = Vector2(317, 457)
+
+[node name="Sprite2D" type="Sprite2D" parent="Question2/Lemon"]
+texture = ExtResource("28_jwulf")
+region_rect = Rect2(39.1277, 16.3303, 200.388, 148.457)
+
+[node name="Arrow" type="Sprite2D" parent="Question2/Lemon/Sprite2D"]
+position = Vector2(151, -2)
+scale = Vector2(0.504, 0.504)
+texture = ExtResource("29_pn43o")
+
+[node name="PickUpArea" type="Area2D" parent="Question2/Lemon"]
+position = Vector2(-1, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/Lemon/PickUpArea"]
+position = Vector2(3, -11.5)
+shape = SubResource("RectangleShape2D_2ad64")
+
+[node name="Area2D" type="Area2D" parent="Question2/Lemon"]
+position = Vector2(151, -2)
+scale = Vector2(0.481221, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/Lemon/Area2D"]
+position = Vector2(257.256, -0.375)
+shape = SubResource("RectangleShape2D_tayap")
+
+[node name="Soap" type="Node2D" parent="Question2"]
+position = Vector2(322, 787)
+
+[node name="Sprite2D" type="Sprite2D" parent="Question2/Soap"]
+position = Vector2(-5.00001, 13)
+scale = Vector2(0.504286, 0.504286)
+texture = ExtResource("30_x3heq")
+region_rect = Rect2(199.949, 133.641, 937.333, 627.487)
+
+[node name="Arrow" type="Sprite2D" parent="Question2/Soap/Sprite2D"]
+position = Vector2(293.484, 11.898)
+texture = ExtResource("29_pn43o")
+
+[node name="PickUpArea" type="Area2D" parent="Question2/Soap"]
+position = Vector2(-5, 13)
+scale = Vector2(0.504286, 0.504286)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/Soap/PickUpArea"]
+position = Vector2(-1.98303, 9.91504)
+shape = SubResource("RectangleShape2D_047nh")
+
+[node name="Area2D" type="Area2D" parent="Question2/Soap"]
+position = Vector2(242, 19)
+scale = Vector2(0.4764, 0.909367)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/Soap/Area2D"]
+position = Vector2(78.1219, 0)
+shape = SubResource("RectangleShape2D_tayap")
+
+[node name="Solutions" type="Node2D" parent="Question2"]
+
+[node name="WrongSolution" type="Node2D" parent="Question2/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question2/Solutions/WrongSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.808)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question2/Solutions/WrongSolution"]
+offset_left = 953.0
+offset_top = 525.0
+offset_right = 1365.0
+offset_bottom = 718.0
+theme_override_colors/font_color = Color(0.784314, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Das war leider
+nicht richtig"
+
+[node name="NoSolution" type="Node2D" parent="Question2/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question2/Solutions/NoSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question2/Solutions/NoSolution"]
+offset_left = 959.0
+offset_top = 522.0
+offset_right = 1362.0
+offset_bottom = 715.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Bitte sortiere 
+beide Objekte"
+
+[node name="RightSolution" type="Node2D" parent="Question2/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question2/Solutions/RightSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question2/Solutions/RightSolution"]
+offset_left = 928.0
+offset_top = 565.0
+offset_right = 1388.0
+offset_bottom = 653.0
+theme_override_colors/font_color = Color(0, 0.784314, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Das war richtig"
+
+[node name="Question1" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_fs6gq")
+script = ExtResource("31_eno4t")
+
+[node name="Dialogbox" type="Sprite2D" parent="Question1"]
+position = Vector2(960, 263)
+scale = Vector2(0.865239, 0.865239)
+texture = ExtResource("4_1s8s3")
+
+[node name="Label" type="Label" parent="Question1"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 181.0
+offset_right = 913.0
+offset_bottom = 236.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 50
+text = "Wofür wird die Titration gebraucht?"
+
+[node name="Answer1" type="Node2D" parent="Question1"]
+position = Vector2(203, 400)
+
+[node name="Answer1Button" type="TextureButton" parent="Question1/Answer1"]
+offset_left = -93.0
+offset_top = -100.0
+offset_right = 107.0
+offset_bottom = 96.0
+toggle_mode = true
+texture_normal = ExtResource("18_46i17")
+texture_pressed = ExtResource("19_bp24h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Question1/Answer1"]
+offset_left = 104.0
+offset_top = -30.0
+offset_right = 938.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 50
+text = "Um die Farbe einer Lösung zu ändern."
+metadata/_edit_use_anchors_ = true
+
+[node name="Answer2" type="Node2D" parent="Question1"]
+position = Vector2(203, 600)
+
+[node name="Answer2Button" type="TextureButton" parent="Question1/Answer2"]
+offset_left = -94.0
+offset_top = -103.0
+offset_right = 106.0
+offset_bottom = 93.0
+toggle_mode = true
+texture_normal = ExtResource("18_46i17")
+texture_pressed = ExtResource("19_bp24h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Question1/Answer2"]
+offset_left = 100.0
+offset_top = -34.0
+offset_right = 1016.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 50
+text = "Um den pH Wert einer Lösung zu messen."
+metadata/_edit_use_anchors_ = true
+
+[node name="Answer3" type="Node2D" parent="Question1"]
+position = Vector2(203, 800)
+
+[node name="Answer3Button" type="TextureButton" parent="Question1/Answer3"]
+offset_left = -92.0
+offset_top = -102.0
+offset_right = 108.0
+offset_bottom = 94.0
+toggle_mode = true
+texture_normal = ExtResource("18_46i17")
+texture_pressed = ExtResource("19_bp24h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Question1/Answer3"]
+offset_left = 102.0
+offset_top = -22.0
+offset_right = 745.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 50
+text = "Um die Lösung zu verdünnen"
+metadata/_edit_use_anchors_ = true
+
+[node name="WeiterButton" type="TextureButton" parent="Question1"]
+layout_mode = 0
+offset_left = 1317.0
+offset_top = 831.0
+offset_right = 2229.0
+offset_bottom = 1138.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("6_84vjf")
+texture_pressed = ExtResource("7_3s04w")
+texture_hover = ExtResource("8_3o4b2")
+
+[node name="Headshot" type="Sprite2D" parent="Question1"]
+position = Vector2(1576, 279)
+scale = Vector2(1.11125, 1.11125)
+texture = ExtResource("9_pa1nw")
+
+[node name="TitrationIcon" type="Sprite2D" parent="Question1"]
+position = Vector2(1344, 559)
+scale = Vector2(0.898649, 0.898649)
+texture = ExtResource("32_3tckm")
+
+[node name="Solutions" type="Node2D" parent="Question1"]
+
+[node name="WrongSolution" type="Node2D" parent="Question1/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question1/Solutions/WrongSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.808)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question1/Solutions/WrongSolution"]
+offset_left = 953.0
+offset_top = 525.0
+offset_right = 1365.0
+offset_bottom = 718.0
+theme_override_colors/font_color = Color(0.784314, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Das war leider
+nicht richtig"
+
+[node name="NoSolution" type="Node2D" parent="Question1/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question1/Solutions/NoSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question1/Solutions/NoSolution"]
+offset_left = 928.0
+offset_top = 529.0
+offset_right = 1390.0
+offset_bottom = 722.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Bitte wähle eine
+Antwort aus"
+
+[node name="RightSolution" type="Node2D" parent="Question1/Solutions"]
+visible = false
+
+[node name="SpeechBubble" type="Sprite2D" parent="Question1/Solutions/RightSolution"]
+position = Vector2(1151, 600)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_impmd")
+
+[node name="Label" type="Label" parent="Question1/Solutions/RightSolution"]
+offset_left = 928.0
+offset_top = 565.0
+offset_right = 1388.0
+offset_bottom = 653.0
+theme_override_colors/font_color = Color(0, 0.784314, 0, 1)
+theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_font_sizes/font_size = 65
+text = "Das war richtig"
+
+[node name="InputBlock" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="InputBlock"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("33_ormh8")
+
+[node name="VoiceOver" type="AudioStreamPlayer" parent="."]
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_cvb3i")
+volume_db = -12.0
+bus = &"SFX"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_m4dmh")
+volume_db = -9.0
+bus = &"SFX"
+
+[node name="Stars" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("39_y1hyj")
+volume_db = -6.0
+bus = &"SFX_UI"
+
+[connection signal="block_input" from="Question5" to="." method="_on_question_block_input"]
+[connection signal="release_input" from="Question5" to="." method="_on_question_release_input"]
+[connection signal="mouse_entered" from="Question5/WeiterButton" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question5/WeiterButton" to="Question5" method="_on_weiter_button_pressed"]
+[connection signal="pressed" from="Question5/Star" to="Question5" method="_on_star_pressed"]
+[connection signal="pressed" from="Question5/Star2" to="Question5" method="_on_star_2_pressed"]
+[connection signal="pressed" from="Question5/Star3" to="Question5" method="_on_star_3_pressed"]
+[connection signal="pressed" from="Question5/Star4" to="Question5" method="_on_star_4_pressed"]
+[connection signal="pressed" from="Question5/Star5" to="Question5" method="_on_star_5_pressed"]
+[connection signal="block_input" from="Question4" to="." method="_on_question_block_input"]
+[connection signal="release_input" from="Question4" to="." method="_on_question_release_input"]
+[connection signal="mouse_entered" from="Question4/WeiterButton" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question4/WeiterButton" to="Question4" method="_on_weiter_button_pressed"]
+[connection signal="block_input" from="Question3" to="." method="_on_question_block_input"]
+[connection signal="release_input" from="Question3" to="." method="_on_question_release_input"]
+[connection signal="mouse_entered" from="Question3/Answer2/Answer2Button" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question3/Answer2/Answer2Button" to="Question3" method="_on_answer_2_button_pressed"]
+[connection signal="mouse_entered" from="Question3/Answer3/Answer3Button" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question3/Answer3/Answer3Button" to="Question3" method="_on_answer_3_button_pressed"]
+[connection signal="mouse_entered" from="Question3/Answer4/Answer4Button" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question3/Answer4/Answer4Button" to="Question3" method="_on_answer_4_button_pressed"]
+[connection signal="mouse_entered" from="Question3/Answer5/Answer5Button" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question3/Answer5/Answer5Button" to="Question3" method="_on_answer_5_button_pressed"]
+[connection signal="mouse_entered" from="Question3/Answer6/Answer6Button" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question3/Answer6/Answer6Button" to="Question3" method="_on_answer_6_button_pressed"]
+[connection signal="mouse_entered" from="Question3/Answer7/Answer7Button" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question3/Answer7/Answer7Button" to="Question3" method="_on_answer_7_button_pressed"]
+[connection signal="mouse_entered" from="Question3/WeiterButton" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question3/WeiterButton" to="Question3" method="_on_weiter_button_pressed"]
+[connection signal="block_input" from="Question2" to="." method="_on_question_block_input"]
+[connection signal="release_input" from="Question2" to="." method="_on_question_release_input"]
+[connection signal="mouse_entered" from="Question2/WeiterButton" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question2/WeiterButton" to="Question2" method="_on_weiter_button_pressed"]
+[connection signal="mouse_entered" from="Question2/Lemon/PickUpArea" to="Question2" method="_on_pick_up_area_mouse_entered"]
+[connection signal="mouse_exited" from="Question2/Lemon/PickUpArea" to="Question2" method="_on_pick_up_area_mouse_exited"]
+[connection signal="area_entered" from="Question2/Lemon/Area2D" to="Question2" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Question2/Lemon/Area2D" to="Question2" method="_on_area_2d_area_exited"]
+[connection signal="mouse_entered" from="Question2/Soap/PickUpArea" to="Question2" method="_on_soap_pick_up_area_mouse_entered"]
+[connection signal="mouse_exited" from="Question2/Soap/PickUpArea" to="Question2" method="_on_soap_pick_up_area_mouse_exited"]
+[connection signal="area_entered" from="Question2/Soap/Area2D" to="Question2" method="_on_soap_area_2d_area_entered"]
+[connection signal="area_exited" from="Question2/Soap/Area2D" to="Question2" method="_on_soap_area_2d_area_exited"]
+[connection signal="block_input" from="Question1" to="." method="_on_question_block_input"]
+[connection signal="release_input" from="Question1" to="." method="_on_question_release_input"]
+[connection signal="mouse_entered" from="Question1/Answer1/Answer1Button" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question1/Answer1/Answer1Button" to="Question1" method="_on_answer_1_button_pressed"]
+[connection signal="mouse_entered" from="Question1/Answer2/Answer2Button" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question1/Answer2/Answer2Button" to="Question1" method="_on_answer_2_button_pressed"]
+[connection signal="mouse_entered" from="Question1/Answer3/Answer3Button" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question1/Answer3/Answer3Button" to="Question1" method="_on_answer_3_button_pressed"]
+[connection signal="mouse_entered" from="Question1/WeiterButton" to="." method="_play_hover_sounds_buttons"]
+[connection signal="pressed" from="Question1/WeiterButton" to="Question1" method="_on_weiter_button_pressed"]
