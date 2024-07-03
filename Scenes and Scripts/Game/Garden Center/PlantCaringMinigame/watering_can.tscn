@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://c53c8e22d528s"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/watering_can.gd" id="1_mjs1g"]
+[ext_resource type="Texture2D" uid="uid://vqiin0vtmy4l" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/WateringCan/watering_can.png" id="1_xg80m"]
+[ext_resource type="Texture2D" uid="uid://dm2uhuxvu0q74" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/WateringCan/watering_can_selected.png" id="2_wxx7p"]
+[ext_resource type="Texture2D" uid="uid://c57thr7gdo32h" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/WateringCan/watering_can_anim1.png" id="3_chst4"]
+[ext_resource type="Texture2D" uid="uid://dxks7d3g0pnw3" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/WateringCan/watering_can_anim2.png" id="4_16nyr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ibnwg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xg80m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wxx7p")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_chst4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_16nyr")
+}],
+"loop": true,
+"name": &"watering",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxdpl"]
+size = Vector2(302, 296)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spjcr"]
+size = Vector2(298, 460)
+
+[node name="Watering Can" type="Node2D"]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_mjs1g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, -3)
+sprite_frames = SubResource("SpriteFrames_ibnwg")
+animation = &"standing"
+
+[node name="WaterArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterArea"]
+position = Vector2(-161.333, -154.667)
+shape = SubResource("RectangleShape2D_fxdpl")
+
+[node name="MouseArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea"]
+position = Vector2(139, 0)
+shape = SubResource("RectangleShape2D_spjcr")
+
+[connection signal="area_entered" from="WaterArea" to="." method="_on_water_area_area_entered"]
+[connection signal="area_exited" from="WaterArea" to="." method="_on_water_area_area_exited"]
+[connection signal="mouse_entered" from="MouseArea" to="." method="_on_mouse_area_mouse_entered"]
+[connection signal="mouse_exited" from="MouseArea" to="." method="_on_mouse_area_mouse_exited"]

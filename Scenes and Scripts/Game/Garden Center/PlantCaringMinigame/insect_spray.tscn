@@ -1,0 +1,85 @@
+[gd_scene load_steps=14 format=3 uid="uid://brcdcnmm5e2em"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect_spraygd.gd" id="1_03ug4"]
+[ext_resource type="Texture2D" uid="uid://03bjdiwdfna6" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_anim1.png" id="2_v02m1"]
+[ext_resource type="Texture2D" uid="uid://5ldgcm7ci43u" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_anim2.png" id="3_1lc8u"]
+[ext_resource type="Texture2D" uid="uid://c23hf7ohvtj0q" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_anim3.png" id="4_u323h"]
+[ext_resource type="Texture2D" uid="uid://cyueh25y8wexb" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_anim4.png" id="5_fiuu6"]
+[ext_resource type="Texture2D" uid="uid://dguuls8yjtnkx" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_anim5.png" id="6_mauv6"]
+[ext_resource type="Texture2D" uid="uid://cv76yr1hoxdgv" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_anim6.png" id="7_7mdlx"]
+[ext_resource type="Texture2D" uid="uid://ttolbnpwkwoh" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_anim7.png" id="8_t0j2w"]
+[ext_resource type="Texture2D" uid="uid://cdymfmy40w3dn" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_anim8.png" id="9_b1pk8"]
+[ext_resource type="Texture2D" uid="uid://dus30rrxnlohk" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray.png" id="10_6vap1"]
+[ext_resource type="Texture2D" uid="uid://dw1xy3mx167ip" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_selected.png" id="11_3q26p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_svpjf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v02m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1lc8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u323h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fiuu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mauv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7mdlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_t0j2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_b1pk8")
+}],
+"loop": false,
+"name": &"spraying",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_6vap1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3q26p")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6i5d"]
+size = Vector2(327.333, 762.667)
+
+[node name="Insect Spray" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_03ug4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-152.167, 4)
+sprite_frames = SubResource("SpriteFrames_svpjf")
+animation = &"standing"
+
+[node name="MouseArea" type="Area2D" parent="."]
+position = Vector2(-152.167, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea"]
+position = Vector2(153.667, -6.66667)
+shape = SubResource("RectangleShape2D_l6i5d")
+
+[node name="SprayArea" type="Area2D" parent="."]
+position = Vector2(-152.167, 4)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SprayArea"]
+polygon = PackedVector2Array(-132, -276, -421.333, -146.667, -449.333, -50.6667, -420, 8, -260, 65.3333, -90.6667, -224)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="mouse_entered" from="MouseArea" to="." method="_on_mouse_area_mouse_entered"]
+[connection signal="mouse_exited" from="MouseArea" to="." method="_on_mouse_area_mouse_exited"]
