@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var dialog_introduction = preload()
+#var dialog_introduction = preload()
 
 func _process(delta):
 	$Label.text = "so viele stone plates " + str(GlobalGarden.stone_plates_placed) + "     so viele plant pots " + str(GlobalGarden.plant_pots_placed) + "     so viele flowers " + str(GlobalGarden.flowers_placed) + "     so viele büsche " + str(GlobalGarden.bushs_placed)
