@@ -65,7 +65,7 @@ func add_left_dialog_box():
 			short_node_text.text = "Besuche einen der Berufe, indem du ein Gebäude betrittst. Die Gebäude findest du verteilt auf der gesamten Karte."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Help/vo_npc_cari_map_house_help_1.mp3")
+			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Help/vo_npc_cari_map_help_1.mp3")
 			$"../VoiceOver".play()
 			dialogs += 1
 ##########################################################################################
