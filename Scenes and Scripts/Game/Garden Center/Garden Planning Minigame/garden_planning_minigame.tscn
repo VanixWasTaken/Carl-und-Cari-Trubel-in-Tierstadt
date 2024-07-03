@@ -692,7 +692,7 @@ offset_right = 1867.0
 offset_bottom = 1080.0
 texture = ExtResource("1_b04vn")
 
-[node name="GridArea1" type="Area2D" parent="Grid"]
+[node name="GridArea1" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(262, 223)
 collision_layer = 2
 collision_mask = 2
@@ -702,7 +702,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea1" groups=["GridMarkers"]]
 
-[node name="GridArea2" type="Area2D" parent="Grid"]
+[node name="GridArea2" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(472, 223)
 collision_layer = 2
 collision_mask = 0
@@ -712,7 +712,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea2" groups=["GridMarkers"]]
 
-[node name="GridArea3" type="Area2D" parent="Grid"]
+[node name="GridArea3" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(682, 223)
 collision_layer = 2
 collision_mask = 0
@@ -722,7 +722,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea3" groups=["GridMarkers"]]
 
-[node name="GridArea4" type="Area2D" parent="Grid"]
+[node name="GridArea4" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(892, 223)
 collision_layer = 2
 collision_mask = 0
@@ -732,7 +732,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea4" groups=["GridMarkers"]]
 
-[node name="GridArea5" type="Area2D" parent="Grid"]
+[node name="GridArea5" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(1105, 223)
 collision_layer = 2
 collision_mask = 0
@@ -742,7 +742,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea5" groups=["GridMarkers"]]
 
-[node name="GridArea6" type="Area2D" parent="Grid"]
+[node name="GridArea6" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(1315, 223)
 collision_layer = 2
 collision_mask = 0
@@ -752,7 +752,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea6" groups=["GridMarkers"]]
 
-[node name="GridArea7" type="Area2D" parent="Grid"]
+[node name="GridArea7" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(1315, 429)
 collision_layer = 2
 collision_mask = 0
@@ -762,7 +762,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea7" groups=["GridMarkers"]]
 
-[node name="GridArea8" type="Area2D" parent="Grid"]
+[node name="GridArea8" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(1101, 429)
 collision_layer = 2
 collision_mask = 0
@@ -772,7 +772,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea8" groups=["GridMarkers"]]
 
-[node name="GridArea9" type="Area2D" parent="Grid"]
+[node name="GridArea9" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(893, 429)
 collision_layer = 2
 collision_mask = 0
@@ -782,7 +782,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea9" groups=["GridMarkers"]]
 
-[node name="GridArea10" type="Area2D" parent="Grid"]
+[node name="GridArea10" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(677, 429)
 collision_layer = 2
 collision_mask = 0
@@ -792,7 +792,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea10" groups=["GridMarkers"]]
 
-[node name="GridArea11" type="Area2D" parent="Grid"]
+[node name="GridArea11" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(477, 429)
 collision_layer = 2
 collision_mask = 0
@@ -802,7 +802,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea11" groups=["GridMarkers"]]
 
-[node name="GridArea12" type="Area2D" parent="Grid"]
+[node name="GridArea12" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(261, 429)
 collision_layer = 2
 collision_mask = 0
@@ -812,7 +812,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea12" groups=["GridMarkers"]]
 
-[node name="GridArea13" type="Area2D" parent="Grid"]
+[node name="GridArea13" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(261, 637)
 collision_layer = 2
 collision_mask = 0
@@ -822,7 +822,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea13" groups=["GridMarkers"]]
 
-[node name="GridArea14" type="Area2D" parent="Grid"]
+[node name="GridArea14" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(480, 637)
 collision_layer = 2
 collision_mask = 0
@@ -832,7 +832,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea14" groups=["GridMarkers"]]
 
-[node name="GridArea15" type="Area2D" parent="Grid"]
+[node name="GridArea15" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(680, 637)
 collision_layer = 2
 collision_mask = 0
@@ -842,7 +842,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea15" groups=["GridMarkers"]]
 
-[node name="GridArea16" type="Area2D" parent="Grid"]
+[node name="GridArea16" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(896, 637)
 collision_layer = 2
 collision_mask = 0
@@ -852,7 +852,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea16" groups=["GridMarkers"]]
 
-[node name="GridArea17" type="Area2D" parent="Grid"]
+[node name="GridArea17" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(1094, 637)
 collision_layer = 2
 collision_mask = 0
@@ -862,7 +862,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea17" groups=["GridMarkers"]]
 
-[node name="GridArea18" type="Area2D" parent="Grid"]
+[node name="GridArea18" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(1316, 637)
 collision_layer = 2
 collision_mask = 0
@@ -872,7 +872,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea18" groups=["GridMarkers"]]
 
-[node name="GridArea19" type="Area2D" parent="Grid"]
+[node name="GridArea19" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(1316, 843)
 collision_layer = 2
 collision_mask = 0
@@ -882,7 +882,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea19" groups=["GridMarkers"]]
 
-[node name="GridArea20" type="Area2D" parent="Grid"]
+[node name="GridArea20" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(1100, 843)
 collision_layer = 2
 collision_mask = 0
@@ -892,7 +892,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea20" groups=["GridMarkers"]]
 
-[node name="GridArea21" type="Area2D" parent="Grid"]
+[node name="GridArea21" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(889, 843)
 collision_layer = 2
 collision_mask = 0
@@ -902,7 +902,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea21" groups=["GridMarkers"]]
 
-[node name="GridArea22" type="Area2D" parent="Grid"]
+[node name="GridArea22" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(675, 843)
 collision_layer = 2
 collision_mask = 0
@@ -912,7 +912,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea22" groups=["GridMarkers"]]
 
-[node name="GridArea23" type="Area2D" parent="Grid"]
+[node name="GridArea23" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(472, 843)
 collision_layer = 2
 collision_mask = 0
@@ -922,7 +922,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea23" groups=["GridMarkers"]]
 
-[node name="GridArea24" type="Area2D" parent="Grid"]
+[node name="GridArea24" type="Area2D" parent="Grid" groups=["Monitorables"]]
 position = Vector2(261, 843)
 collision_layer = 2
 collision_mask = 0
@@ -939,39 +939,52 @@ offset_right = 2026.0
 offset_bottom = 769.0
 texture = ExtResource("2_vnyvc")
 
-[node name="Task1" type="Node" parent="TaskBackground"]
-
-[node name="Header" type="Label" parent="TaskBackground/Task1"]
-offset_left = 1492.0
-offset_top = 171.0
-offset_right = 1746.0
-offset_bottom = 224.0
+[node name="Header" type="Label" parent="TaskBackground"]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 206.0
+offset_right = 536.0
+offset_bottom = 261.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ef2nf")
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 40
 text = "Erfülle folgendes:"
 
-[node name="Point1" type="Label" parent="TaskBackground/Task1"]
-offset_left = 1528.0
-offset_top = 242.0
-offset_right = 1782.0
-offset_bottom = 323.0
+[node name="Task1" type="Label" parent="TaskBackground"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 262.0
+offset_right = 468.0
+offset_bottom = 595.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ef2nf")
 theme_override_font_sizes/font_size = 28
-text = "Platziere genau
-3 Steinplatten"
+text = "- Platziere genau 3
+   Steinplatten
+- Platziere genau 2
+   Blumentöpfe
+- Platziere genau 5
+   Büsche
+- Platziere genau 3
+   Blumen"
 
-[node name="Point2" type="Label" parent="TaskBackground/Task1"]
-offset_left = 1528.0
-offset_top = 341.0
-offset_right = 1840.0
-offset_bottom = 422.0
+[node name="Task2" type="Label" parent="TaskBackground"]
+visible = false
+layout_mode = 0
+offset_left = 214.0
+offset_top = 262.0
+offset_right = 468.0
+offset_bottom = 595.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ef2nf")
 theme_override_font_sizes/font_size = 28
-text = "Platziere genau
- 2 Topfpflanzen"
+text = "- Platziere mindestens 8
+   Büsche
+- Platziere genau 4
+   Steinplatten welche
+   neben einem Busch
+   stehen
+"
 
 [node name="IconBg" type="Sprite2D" parent="."]
 position = Vector2(1656, 892)
@@ -1040,7 +1053,7 @@ libraries = {
 [node name="Item" parent="ItemSelection" instance=ExtResource("10_xc6c2")]
 position = Vector2(2961, 401)
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="FinishedButton" type="TextureButton" parent="."]
 offset_left = 1520.0
 offset_top = 615.0
 offset_right = 2432.0
@@ -1066,4 +1079,5 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 [connection signal="mouse_entered" from="ItemSelection/Objects/PickUpArea" to="ItemSelection" method="_on_pick_up_area_mouse_entered"]
 [connection signal="mouse_exited" from="ItemSelection/Objects/PickUpArea" to="ItemSelection" method="_on_pick_up_area_mouse_exited"]
 [connection signal="animation_finished" from="ItemSelection/AnimationPlayer" to="ItemSelection" method="_on_animation_player_animation_finished"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="FinishedButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="FinishedButton" to="ItemSelection" method="_on_finished_button_pressed"]

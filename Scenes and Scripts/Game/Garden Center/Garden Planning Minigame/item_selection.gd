@@ -6,6 +6,7 @@ var allow_switch = true
 var mouse_inside_pick_up_area = false
 @onready var item_scn = preload("res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/item.tscn")
 
+
 signal current_item_state
 
 
@@ -19,7 +20,6 @@ func _process(delta):
 	else:
 		$Arrows/ArrowRight.show()
 	
-
 
 func _input(event):
 	var item_scn_local = item_scn.instantiate()
@@ -76,3 +76,19 @@ func _on_pick_up_area_mouse_entered():
 	mouse_inside_pick_up_area = true
 func _on_pick_up_area_mouse_exited():
 	mouse_inside_pick_up_area = false
+
+
+func _on_finished_button_pressed():
+	if GlobalGarden.stone_plates_placed == 3 and GlobalGarden.plant_pots_placed == 2 and GlobalGarden.bushs_placed == 5 and GlobalGarden.flowers_placed == 3 and GlobalGarden.current_stage == 1:
+		var areas = get_children()
+		for area in areas:
+			if area.is_in_group("Items") and !area.get_name() == "Item":
+				area.queue_free()
+		GlobalGarden.current_stage += 1
+		var monitorables = get_parent().get_child(1).get_children()
+		for i in monitorables:
+			i.monitorable = true
+		GlobalGarden.plant_pots_placed = 0
+		GlobalGarden.flowers_placed = 0
+		GlobalGarden.bushs_placed = 0
+		GlobalGarden.stone_plates_placed = 0

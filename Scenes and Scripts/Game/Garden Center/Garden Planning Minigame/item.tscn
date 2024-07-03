@@ -11,11 +11,31 @@ collision_mask = 2
 script = ExtResource("1_xskpv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.5, 7)
 shape = SubResource("RectangleShape2D_703vj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_jev7f")
+
+[node name="NeighborCheck" type="Node" parent="."]
+
+[node name="RayCastDown" type="RayCast2D" parent="NeighborCheck"]
+target_position = Vector2(0, 100)
+collide_with_areas = true
+
+[node name="RayCastLeft" type="RayCast2D" parent="NeighborCheck"]
+rotation = 1.5708
+target_position = Vector2(0, 100)
+collide_with_areas = true
+
+[node name="RayCastUp" type="RayCast2D" parent="NeighborCheck"]
+rotation = 3.14159
+target_position = Vector2(0, 100)
+collide_with_areas = true
+
+[node name="RayCastRight" type="RayCast2D" parent="NeighborCheck"]
+rotation = 4.71239
+target_position = Vector2(0, 100)
+collide_with_areas = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

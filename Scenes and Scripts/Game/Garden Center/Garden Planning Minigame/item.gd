@@ -21,11 +21,13 @@ func _ready():
 	get_parent().current_item_state.connect(_on_item_selection_current_item_state)
 	self.mouse_entered.connect(_on_mouse_entered)
 	self.mouse_exited.connect(_on_mouse_exited)
+	add_to_group("Items")
 
 func _process(delta):
 	if !get_name() == "Item" and should_follow_mouse:
 		position = get_global_mouse_position()
 	find_closest_marker()
+	check_neighbors()
 
 
 
@@ -72,7 +74,13 @@ func find_closest_marker():
 			nearest_marker = i
 	script_nearest_marker = nearest_marker
 
-
+func check_neighbors():
+	var test = $NeighborCheck/RayCastRight.get_collider()
+	if $NeighborCheck/RayCastRight.is_colliding():
+		print(test)
+	
+		
+		
 
 func _on_area_entered(area):
 	is_on_grid = true
