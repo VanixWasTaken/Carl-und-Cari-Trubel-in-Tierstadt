@@ -49,7 +49,7 @@ animation = &"standing"
 [node name="WaterArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaterArea"]
-position = Vector2(-161, -198)
+position = Vector2(-161.333, -154.667)
 shape = SubResource("RectangleShape2D_fxdpl")
 
 [node name="MouseArea" type="Area2D" parent="."]

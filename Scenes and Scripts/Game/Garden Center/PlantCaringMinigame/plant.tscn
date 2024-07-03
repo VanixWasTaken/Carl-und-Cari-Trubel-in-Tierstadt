@@ -20,18 +20,26 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2bgdb"]
-size = Vector2(515.569, 410.204)
+size = Vector2(515.569, 221.02)
 
-[node name="Plant1" type="AnimatedSprite2D"]
-position = Vector2(1325, 398)
+[node name="Plant1" type="AnimatedSprite2D" groups=["Plants"]]
+position = Vector2(1014, 658)
 scale = Vector2(0.709896, 0.816667)
 sprite_frames = SubResource("SpriteFrames_nsswb")
 script = ExtResource("2_bemo7")
+current_air_wetness = 70
+current_ground_wetness = 30.0
+current_temperature = 20
+current_alive_insects = 6
+needed_air_wetness = 79
+needed_ground_wetness = 39.0
+needed_temperature = 35
 
 [node name="WateringArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WateringArea"]
-position = Vector2(-30.9904, -150.612)
+position = Vector2(-30.9905, -245.204)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2bgdb")
 
 [node name="Insect" parent="." instance=ExtResource("3_8mass")]

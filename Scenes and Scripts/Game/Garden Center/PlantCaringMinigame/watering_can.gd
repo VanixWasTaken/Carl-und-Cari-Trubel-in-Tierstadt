@@ -12,14 +12,18 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("left_click") && mouse_on:
+	if Input.is_action_just_pressed("left_click") && mouse_on && get_tree().get_current_scene().hands_full == false:
 		follow_mouse = true
 	if follow_mouse:
+		get_tree().get_current_scene().hands_full = true
 		mouse_position = get_global_mouse_position()
 		global_position = mouse_position
 		Global.mouse_full = true
+		z_index = 99
 	if Input.is_action_just_released("left_click"):
+		get_tree().get_current_scene().hands_full = false
 		follow_mouse = false
+		z_index = 0
 		global_position = start_position
 	if Global.dialog_playing:
 		follow_mouse = false
@@ -27,8 +31,9 @@ func _process(delta):
 
 
 func _on_mouse_area_mouse_entered():
-	mouse_on = true
-	$AnimatedSprite2D.frame = 1
+	if get_tree().get_current_scene().hands_full == false:
+		mouse_on = true
+		$AnimatedSprite2D.frame = 1
 
 
 func _on_mouse_area_mouse_exited():

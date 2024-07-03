@@ -11,7 +11,7 @@ var current_temperature
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if mouse_on && Input.is_action_pressed("left_click"):
+	if mouse_on && Input.is_action_pressed("left_click") && !get_tree().get_current_scene().hands_full:
 		direction_to_mouse = (get_global_mouse_position() - global_position).normalized()
 		$Pointer.global_position = global_position + direction_to_mouse * pointer_distance
 		var angle_to_mouse = atan2(direction_to_mouse.y, direction_to_mouse.x) 
