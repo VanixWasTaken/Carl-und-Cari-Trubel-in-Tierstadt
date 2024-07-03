@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://32b1y71lasui"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/item.gd" id="1_xskpv"]
+[ext_resource type="Texture2D" uid="uid://b7n80wgfsnaml" path="res://icon.png" id="2_jev7f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_703vj"]
+size = Vector2(173, 168)
+
+[node name="Item" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_xskpv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, 7)
+shape = SubResource("RectangleShape2D_703vj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jev7f")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
