@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://bworg8flqwni1"]
+
+[ext_resource type="Texture2D" uid="uid://41k61fwpefcf" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minigame2_bigplant_wilted.png" id="1_ep7c7"]
+[ext_resource type="Texture2D" uid="uid://cwt8mump6dehs" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minigame2_bigplant.png" id="2_aakma"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_1.gd" id="3_x3cea"]
+[ext_resource type="PackedScene" uid="uid://bcbhx165k2ljt" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect.tscn" id="4_1b4jt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsswb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ep7c7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_aakma")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bgdb"]
+size = Vector2(515.569, 221.02)
+
+[node name="Plant3" type="AnimatedSprite2D" groups=["Plants"]]
+position = Vector2(1014, 658)
+scale = Vector2(0.709896, 0.816667)
+sprite_frames = SubResource("SpriteFrames_nsswb")
+script = ExtResource("3_x3cea")
+current_air_wetness = 1
+current_ground_wetness = 1.0
+current_temperature = 5
+current_alive_insects = 6
+needed_air_wetness = 2
+needed_ground_wetness = 2.0
+needed_temperature = 10
+
+[node name="WateringArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WateringArea"]
+position = Vector2(-30.9905, -245.204)
+shape = SubResource("RectangleShape2D_2bgdb")
+
+[node name="Insect" parent="." instance=ExtResource("4_1b4jt")]
+position = Vector2(369.069, 12.2445)
+
+[node name="Insect2" parent="." instance=ExtResource("4_1b4jt")]
+position = Vector2(-424.006, 277.958)
+sprite_num = 3
+
+[node name="Insect3" parent="." instance=ExtResource("4_1b4jt")]
+position = Vector2(-359.208, 266.939)
+sprite_num = 1
+
+[node name="Insect4" parent="." instance=ExtResource("4_1b4jt")]
+position = Vector2(397.241, 34.2857)
+sprite_num = 2
+
+[node name="Insect5" parent="." instance=ExtResource("4_1b4jt")]
+position = Vector2(-393.015, 219.184)
+sprite_num = 3
+
+[node name="Insect6" parent="." instance=ExtResource("4_1b4jt")]
+position = Vector2(367.659, 58.7755)
+sprite_num = 1
+
+[connection signal="area_entered" from="WateringArea" to="." method="_on_watering_area_area_entered"]
+[connection signal="area_exited" from="WateringArea" to="." method="_on_watering_area_area_exited"]

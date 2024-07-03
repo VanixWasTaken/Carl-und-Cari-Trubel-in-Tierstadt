@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cok2nl7v7wknt"
-path="res://.godot/imported/bugs.png-9a844143c3c9d1a0460e8c63e56ee94e.ctex"
+uid="uid://dm757migsg461"
+path="res://.godot/imported/bugs_selected_anim1.png-0b8f149a24ab991e3cdd4284f4788beb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/bugs.png"
-dest_files=["res://.godot/imported/bugs.png-9a844143c3c9d1a0460e8c63e56ee94e.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/Bugs/bugs_selected_anim1.png"
+dest_files=["res://.godot/imported/bugs_selected_anim1.png-0b8f149a24ab991e3cdd4284f4788beb.ctex"]
 
 [params]
 
