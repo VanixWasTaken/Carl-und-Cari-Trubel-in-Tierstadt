@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dru7285ivdiry"
-path="res://.godot/imported/garden_sacks_selected.PNG-42b836c4fb02fc22bf3c0e8a4cb5a143.ctex"
+path="res://.godot/imported/garden_sacks_selected.png-9a67cb0e630b924a95eede47a591f792.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks_selected.PNG"
-dest_files=["res://.godot/imported/garden_sacks_selected.PNG-42b836c4fb02fc22bf3c0e8a4cb5a143.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks_selected.png"
+dest_files=["res://.godot/imported/garden_sacks_selected.png-9a67cb0e630b924a95eede47a591f792.ctex"]
 
 [params]
 

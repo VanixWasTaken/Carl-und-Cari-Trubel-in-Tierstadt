@@ -1,47 +1,45 @@
-[gd_scene load_steps=61 format=3 uid="uid://budv1svk408d3"]
+[gd_scene load_steps=59 format=3 uid="uid://budv1svk408d3"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_udphn"]
-[ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_fs6gq"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question5.gd" id="3_beff1"]
-[ext_resource type="Texture2D" uid="uid://dxeb7rmw772vh" path="res://Assets/Art/Environment/Quiz/quiz_template_dialog.png" id="4_1s8s3"]
-[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_124ol"]
-[ext_resource type="Texture2D" uid="uid://bl3q3vnoh3x2f" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button.png" id="6_84vjf"]
-[ext_resource type="Texture2D" uid="uid://otmy5c0k20xl" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_dark.png" id="7_3s04w"]
-[ext_resource type="Texture2D" uid="uid://nk8ndgcpb32e" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_light.png" id="8_3o4b2"]
-[ext_resource type="Texture2D" uid="uid://crpm3xvnv3c2h" path="res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot2.png" id="9_pa1nw"]
-[ext_resource type="Texture2D" uid="uid://dteiydgqp0dk6" path="res://Assets/Art/Environment/Quiz/quiz_question5_star.png" id="10_dlwpu"]
-[ext_resource type="Texture2D" uid="uid://cwxmhfrx6dcqd" path="res://Assets/Art/Environment/Quiz/quiz_question5_star_clicked.png" id="11_e2pxq"]
-[ext_resource type="Texture2D" uid="uid://54gkdk1no2n8" path="res://Assets/Art/Environment/Quiz/quiz_question5_star_hovered.png" id="12_8u5l4"]
-[ext_resource type="Texture2D" uid="uid://c37qpidtdw5es" path="res://Assets/Art/Environment/Quiz/quiz_question5_star_selected.png" id="13_igqbq"]
-[ext_resource type="Texture2D" uid="uid://cgcu0pvpoiwo6" path="res://Assets/Art/Environment/Quiz/quiz_template_speech_bubble.png" id="14_impmd"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question4.gd" id="15_obleo"]
-[ext_resource type="Texture2D" uid="uid://d1645vqju7job" path="res://Assets/Art/Environment/Quiz/quiz_question3_box.png" id="16_cqs8l"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question3.gd" id="17_0aa6e"]
-[ext_resource type="Texture2D" uid="uid://b6hpuvseildsl" path="res://Assets/Art/Environment/Quiz/quiz_question1_checkbox.png" id="18_46i17"]
-[ext_resource type="Texture2D" uid="uid://b6fgfqiiucpjt" path="res://Assets/Art/Environment/Quiz/quiz_question1_checkbox_checked.png" id="19_bp24h"]
-[ext_resource type="Texture2D" uid="uid://cnahvtocqw6uc" path="res://Assets/Art/Environment/Quiz/quiz_question3_chef_hat.png" id="20_1byqy"]
-[ext_resource type="Texture2D" uid="uid://dhax6i23j7k5p" path="res://Assets/Art/Environment/Quiz/quiz_question3_garden_scissors.png" id="21_wo6ac"]
-[ext_resource type="Texture2D" uid="uid://bimls4otfa7uc" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_flask.png" id="22_wn1ov"]
-[ext_resource type="Texture2D" uid="uid://dgdio4aqc2t3b" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_toothbrush.png" id="23_4darh"]
-[ext_resource type="Texture2D" uid="uid://6pehn1e4mhbf" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_lab_goggles.png" id="24_vqa45"]
-[ext_resource type="Texture2D" uid="uid://c0heaobg23tw2" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_lab_coat.png" id="25_qoi5f"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question2.gd" id="26_y6tjk"]
-[ext_resource type="Texture2D" uid="uid://cmsb7vgdfcedm" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Titration/lab_minigame1_ph_scale.png" id="27_631fn"]
-[ext_resource type="Texture2D" uid="uid://dv4j0r5i8i2j0" path="res://Assets/Art/Environment/Quiz/quiz_question2_lemon.png" id="28_jwulf"]
-[ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="29_pn43o"]
-[ext_resource type="Texture2D" uid="uid://dsuod2kvgqm0w" path="res://Assets/Art/Environment/Quiz/quiz_question2_soap.png" id="30_x3heq"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question1.gd" id="31_eno4t"]
-[ext_resource type="Texture2D" uid="uid://2uo2w7soxbgc" path="res://Assets/Art/Environment/Quiz/quiz_question1_titration icon.png" id="32_3tckm"]
-[ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/Art/Random Screens/white_screen.png" id="33_ormh8"]
-[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="34_ovvrg"]
-[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="35_8k3p7"]
-[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="36_r4lwo"]
-[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="37_40x20"]
-[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="38_4xjb6"]
-[ext_resource type="AudioStream" uid="uid://bxtc80jb2lxtd" path="res://Assets/Sound/SFX/Foley/Map/Quiz/sfx_foley_map_quiz_stars.mp3" id="39_y1hyj"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_paeaj"]
+[ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_0p5ej"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question5.gd" id="3_ta375"]
+[ext_resource type="Texture2D" uid="uid://dxeb7rmw772vh" path="res://Assets/Art/Environment/Quiz/quiz_template_dialog.png" id="4_a8xe4"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_1hhxo"]
+[ext_resource type="Texture2D" uid="uid://bl3q3vnoh3x2f" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button.png" id="6_xcl16"]
+[ext_resource type="Texture2D" uid="uid://otmy5c0k20xl" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_dark.png" id="7_cvd0j"]
+[ext_resource type="Texture2D" uid="uid://nk8ndgcpb32e" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_light.png" id="8_uuy4o"]
+[ext_resource type="Texture2D" uid="uid://664vhp28nal3" path="res://Assets/Art/Characters/Guido/Headshot/gardener_headshot.png" id="9_o2mqp"]
+[ext_resource type="Texture2D" uid="uid://dteiydgqp0dk6" path="res://Assets/Art/Environment/Quiz/quiz_question5_star.png" id="10_cnpu0"]
+[ext_resource type="Texture2D" uid="uid://cwxmhfrx6dcqd" path="res://Assets/Art/Environment/Quiz/quiz_question5_star_clicked.png" id="11_3tjvt"]
+[ext_resource type="Texture2D" uid="uid://54gkdk1no2n8" path="res://Assets/Art/Environment/Quiz/quiz_question5_star_hovered.png" id="12_vi8rj"]
+[ext_resource type="Texture2D" uid="uid://c37qpidtdw5es" path="res://Assets/Art/Environment/Quiz/quiz_question5_star_selected.png" id="13_u8dln"]
+[ext_resource type="Texture2D" uid="uid://cgcu0pvpoiwo6" path="res://Assets/Art/Environment/Quiz/quiz_template_speech_bubble.png" id="14_2207t"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question4.gd" id="15_4mq4y"]
+[ext_resource type="Texture2D" uid="uid://d1645vqju7job" path="res://Assets/Art/Environment/Quiz/quiz_question3_box.png" id="16_ft4xv"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question3.gd" id="17_ald77"]
+[ext_resource type="Texture2D" uid="uid://b6hpuvseildsl" path="res://Assets/Art/Environment/Quiz/quiz_question1_checkbox.png" id="18_17d0r"]
+[ext_resource type="Texture2D" uid="uid://b6fgfqiiucpjt" path="res://Assets/Art/Environment/Quiz/quiz_question1_checkbox_checked.png" id="19_a8g3q"]
+[ext_resource type="Texture2D" uid="uid://cnahvtocqw6uc" path="res://Assets/Art/Environment/Quiz/quiz_question3_chef_hat.png" id="20_0dny1"]
+[ext_resource type="Texture2D" uid="uid://6pehn1e4mhbf" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_lab_goggles.png" id="21_bsce8"]
+[ext_resource type="Texture2D" uid="uid://dhax6i23j7k5p" path="res://Assets/Art/Environment/Quiz/quiz_question3_garden_scissors.png" id="22_ovs4s"]
+[ext_resource type="Texture2D" uid="uid://dgdio4aqc2t3b" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_toothbrush.png" id="23_spg2m"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question2.gd" id="24_ry01n"]
+[ext_resource type="Texture2D" uid="uid://dc6aqo61ul4j7" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks.png" id="25_kw5hn"]
+[ext_resource type="Texture2D" uid="uid://dv4j0r5i8i2j0" path="res://Assets/Art/Environment/Quiz/quiz_question2_lemon.png" id="26_hgxy6"]
+[ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="27_syaqf"]
+[ext_resource type="Texture2D" uid="uid://dsuod2kvgqm0w" path="res://Assets/Art/Environment/Quiz/quiz_question2_soap.png" id="28_6x1tt"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question1.gd" id="29_3wegr"]
+[ext_resource type="Texture2D" uid="uid://15echnwkgum0" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/minigame1_tree1.png" id="30_kcqny"]
+[ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/Art/Random Screens/white_screen.png" id="31_x1jbh"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="32_42n1i"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="33_706xw"]
+[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="34_rj7fn"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="35_2ylpd"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="36_swml8"]
+[ext_resource type="AudioStream" uid="uid://bxtc80jb2lxtd" path="res://Assets/Sound/SFX/Foley/Map/Quiz/sfx_foley_map_quiz_stars.mp3" id="37_5oosb"]
 
 [sub_resource type="Theme" id="Theme_b780n"]
-default_font = ExtResource("5_124ol")
+default_font = ExtResource("5_1hhxo")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u63no"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -99,33 +97,33 @@ size = Vector2(364.873, 214.164)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cvb3i"]
 streams_count = 2
-stream_0/stream = ExtResource("34_ovvrg")
+stream_0/stream = ExtResource("32_42n1i")
 stream_0/weight = 1.0
-stream_1/stream = ExtResource("35_8k3p7")
+stream_1/stream = ExtResource("33_706xw")
 stream_1/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_m4dmh"]
 streams_count = 3
-stream_0/stream = ExtResource("36_r4lwo")
+stream_0/stream = ExtResource("34_rj7fn")
 stream_0/weight = 1.0
-stream_1/stream = ExtResource("37_40x20")
+stream_1/stream = ExtResource("35_2ylpd")
 stream_1/weight = 1.0
-stream_2/stream = ExtResource("38_4xjb6")
+stream_2/stream = ExtResource("36_swml8")
 stream_2/weight = 1.0
 
 [node name="QuizLaboratory" type="CanvasLayer"]
-script = ExtResource("1_udphn")
+script = ExtResource("1_paeaj")
 
 [node name="Question5" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_fs6gq")
-script = ExtResource("3_beff1")
+texture = ExtResource("2_0p5ej")
+script = ExtResource("3_ta375")
 
 [node name="Dialogbox" type="Sprite2D" parent="Question5"]
 position = Vector2(960, 263)
 scale = Vector2(0.865239, 0.865239)
-texture = ExtResource("4_1s8s3")
+texture = ExtResource("4_a8xe4")
 
 [node name="Label" type="Label" parent="Question5/Dialogbox"]
 offset_left = -792.844
@@ -133,7 +131,7 @@ offset_top = -97.083
 offset_right = -291.844
 offset_bottom = -18.083
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 58
 text = "Bewerte den Beruf"
 
@@ -144,14 +142,14 @@ offset_top = 831.0
 offset_right = 2229.0
 offset_bottom = 1138.0
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("6_84vjf")
-texture_pressed = ExtResource("7_3s04w")
-texture_hover = ExtResource("8_3o4b2")
+texture_normal = ExtResource("6_xcl16")
+texture_pressed = ExtResource("7_cvd0j")
+texture_hover = ExtResource("8_uuy4o")
 
 [node name="Headshot" type="Sprite2D" parent="Question5"]
 position = Vector2(1576, 279)
 scale = Vector2(1.11125, 1.11125)
-texture = ExtResource("9_pa1nw")
+texture = ExtResource("9_o2mqp")
 
 [node name="Star" type="TextureButton" parent="Question5"]
 layout_mode = 0
@@ -160,14 +158,14 @@ offset_top = 466.0
 offset_right = 625.0
 offset_bottom = 848.0
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("10_dlwpu")
-texture_pressed = ExtResource("11_e2pxq")
-texture_hover = ExtResource("12_8u5l4")
+texture_normal = ExtResource("10_cnpu0")
+texture_pressed = ExtResource("11_3tjvt")
+texture_hover = ExtResource("12_vi8rj")
 
 [node name="SelectedStar" type="Sprite2D" parent="Question5/Star"]
 visible = false
 position = Vector2(203.286, 145.857)
-texture = ExtResource("13_igqbq")
+texture = ExtResource("13_u8dln")
 
 [node name="Star2" type="TextureButton" parent="Question5"]
 layout_mode = 0
@@ -176,14 +174,14 @@ offset_top = 466.0
 offset_right = 892.0
 offset_bottom = 848.0
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("10_dlwpu")
-texture_pressed = ExtResource("11_e2pxq")
-texture_hover = ExtResource("12_8u5l4")
+texture_normal = ExtResource("10_cnpu0")
+texture_pressed = ExtResource("11_3tjvt")
+texture_hover = ExtResource("12_vi8rj")
 
 [node name="SelectedStar" type="Sprite2D" parent="Question5/Star2"]
 visible = false
 position = Vector2(203.286, 145.857)
-texture = ExtResource("13_igqbq")
+texture = ExtResource("13_u8dln")
 
 [node name="Star3" type="TextureButton" parent="Question5"]
 layout_mode = 0
@@ -192,14 +190,14 @@ offset_top = 466.0
 offset_right = 1161.0
 offset_bottom = 848.0
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("10_dlwpu")
-texture_pressed = ExtResource("11_e2pxq")
-texture_hover = ExtResource("12_8u5l4")
+texture_normal = ExtResource("10_cnpu0")
+texture_pressed = ExtResource("11_3tjvt")
+texture_hover = ExtResource("12_vi8rj")
 
 [node name="SelectedStar" type="Sprite2D" parent="Question5/Star3"]
 visible = false
 position = Vector2(203.286, 145.857)
-texture = ExtResource("13_igqbq")
+texture = ExtResource("13_u8dln")
 
 [node name="Star4" type="TextureButton" parent="Question5"]
 layout_mode = 0
@@ -208,14 +206,14 @@ offset_top = 466.0
 offset_right = 1427.0
 offset_bottom = 848.0
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("10_dlwpu")
-texture_pressed = ExtResource("11_e2pxq")
-texture_hover = ExtResource("12_8u5l4")
+texture_normal = ExtResource("10_cnpu0")
+texture_pressed = ExtResource("11_3tjvt")
+texture_hover = ExtResource("12_vi8rj")
 
 [node name="SelectedStar" type="Sprite2D" parent="Question5/Star4"]
 visible = false
 position = Vector2(203.286, 145.857)
-texture = ExtResource("13_igqbq")
+texture = ExtResource("13_u8dln")
 
 [node name="Star5" type="TextureButton" parent="Question5"]
 layout_mode = 0
@@ -224,14 +222,14 @@ offset_top = 466.0
 offset_right = 1699.0
 offset_bottom = 848.0
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("10_dlwpu")
-texture_pressed = ExtResource("11_e2pxq")
-texture_hover = ExtResource("12_8u5l4")
+texture_normal = ExtResource("10_cnpu0")
+texture_pressed = ExtResource("11_3tjvt")
+texture_hover = ExtResource("12_vi8rj")
 
 [node name="SelectedStar" type="Sprite2D" parent="Question5/Star5"]
 visible = false
 position = Vector2(203.286, 145.857)
-texture = ExtResource("13_igqbq")
+texture = ExtResource("13_u8dln")
 
 [node name="Solutions" type="Node2D" parent="Question5"]
 
@@ -241,7 +239,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question5/Solutions/NoSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question5/Solutions/NoSolution"]
 offset_left = 928.0
@@ -249,7 +247,7 @@ offset_top = 529.0
 offset_right = 1390.0
 offset_bottom = 722.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Bitte wähle eine
 Antwort aus"
@@ -260,7 +258,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question5/Solutions/RightSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question5/Solutions/RightSolution"]
 offset_left = 968.0
@@ -268,7 +266,7 @@ offset_top = 526.0
 offset_right = 1330.0
 offset_bottom = 705.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Das  hast du 
 toll gemacht"
@@ -277,13 +275,13 @@ horizontal_alignment = 1
 [node name="Question4" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_fs6gq")
-script = ExtResource("15_obleo")
+texture = ExtResource("2_0p5ej")
+script = ExtResource("15_4mq4y")
 
 [node name="Dialogbox" type="Sprite2D" parent="Question4"]
 position = Vector2(960, 263)
 scale = Vector2(0.865239, 0.865239)
-texture = ExtResource("4_1s8s3")
+texture = ExtResource("4_a8xe4")
 
 [node name="Label" type="Label" parent="Question4/Dialogbox"]
 offset_left = -814.804
@@ -291,9 +289,9 @@ offset_top = -137.534
 offset_right = 411.196
 offset_bottom = 49.4657
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 58
-text = "Was hat dir an deinem Ausflug in das Labor
+text = "Was hat dir an deinem Tag im Garten
 gefallen und was nicht?"
 
 [node name="WeiterButton" type="TextureButton" parent="Question4"]
@@ -303,19 +301,19 @@ offset_top = 831.0
 offset_right = 2229.0
 offset_bottom = 1138.0
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("6_84vjf")
-texture_pressed = ExtResource("7_3s04w")
-texture_hover = ExtResource("8_3o4b2")
+texture_normal = ExtResource("6_xcl16")
+texture_pressed = ExtResource("7_cvd0j")
+texture_hover = ExtResource("8_uuy4o")
 
 [node name="Headshot" type="Sprite2D" parent="Question4"]
 position = Vector2(1576, 279)
 scale = Vector2(1.11125, 1.11125)
-texture = ExtResource("9_pa1nw")
+texture = ExtResource("9_o2mqp")
 
 [node name="TextField" type="Sprite2D" parent="Question4"]
 position = Vector2(695.708, 664)
 scale = Vector2(1.17993, 0.921189)
-texture = ExtResource("16_cqs8l")
+texture = ExtResource("16_ft4xv")
 
 [node name="TextEdit" type="TextEdit" parent="Question4"]
 custom_minimum_size = Vector2(100, 0)
@@ -329,7 +327,7 @@ danach kannst du mit der Tastatur deinen Text schreiben"
 theme = SubResource("Theme_b780n")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.560784)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_u63no")
 placeholder_text = "Schreibe hier deinen Text rein."
@@ -344,7 +342,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question4/Solutions/Thanks"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question4/Solutions/Thanks"]
 offset_left = 916.0
@@ -352,7 +350,7 @@ offset_top = 523.0
 offset_right = 1388.0
 offset_bottom = 702.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Danke, das
 merk ich mir"
@@ -364,7 +362,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question4/Solutions/NoSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question4/Solutions/NoSolution"]
 offset_left = 923.0
@@ -372,7 +370,7 @@ offset_top = 493.0
 offset_right = 1395.0
 offset_bottom = 763.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Bitte schreibe
 etwas in das
@@ -385,7 +383,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question4/Solutions/WrongSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question4/Solutions/WrongSolution"]
 offset_left = 923.0
@@ -393,7 +391,7 @@ offset_top = 526.0
 offset_right = 1395.0
 offset_bottom = 705.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Schreibe noch
 etwas mehr"
@@ -402,13 +400,13 @@ horizontal_alignment = 1
 [node name="Question3" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_fs6gq")
-script = ExtResource("17_0aa6e")
+texture = ExtResource("2_0p5ej")
+script = ExtResource("17_ald77")
 
 [node name="Dialogbox" type="Sprite2D" parent="Question3"]
 position = Vector2(960, 263)
 scale = Vector2(0.865239, 0.865239)
-texture = ExtResource("4_1s8s3")
+texture = ExtResource("4_a8xe4")
 
 [node name="Label" type="Label" parent="Question3/Dialogbox"]
 offset_left = -814.804
@@ -416,13 +414,13 @@ offset_top = -137.534
 offset_right = 411.196
 offset_bottom = 49.4657
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 58
-text = "Welche Objekte gehören zur Laborausrüstung?
+text = "Welche Objekte gehören zur Gartenausrüstung?
 [Kreuze mehrere an]"
 
 [node name="Answer2" type="Node2D" parent="Question3"]
-position = Vector2(297, 428)
+position = Vector2(304, 886)
 
 [node name="Answer2Button" type="TextureButton" parent="Question3/Answer2"]
 offset_left = -94.0
@@ -430,17 +428,17 @@ offset_top = -103.0
 offset_right = 106.0
 offset_bottom = 93.0
 toggle_mode = true
-texture_normal = ExtResource("18_46i17")
-texture_pressed = ExtResource("19_bp24h")
+texture_normal = ExtResource("18_17d0r")
+texture_pressed = ExtResource("19_a8g3q")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question3/Answer2"]
 position = Vector2(210, 0)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("20_1byqy")
+texture = ExtResource("20_0dny1")
 
 [node name="Answer3" type="Node2D" parent="Question3"]
-position = Vector2(301, 645)
+position = Vector2(826, 647)
 
 [node name="Answer3Button" type="TextureButton" parent="Question3/Answer3"]
 offset_left = -92.0
@@ -448,17 +446,17 @@ offset_top = -102.0
 offset_right = 108.0
 offset_bottom = 94.0
 toggle_mode = true
-texture_normal = ExtResource("18_46i17")
-texture_pressed = ExtResource("19_bp24h")
+texture_normal = ExtResource("18_17d0r")
+texture_pressed = ExtResource("19_a8g3q")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question3/Answer3"]
 position = Vector2(210, 0)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("21_wo6ac")
+texture = ExtResource("21_bsce8")
 
 [node name="Answer4" type="Node2D" parent="Question3"]
-position = Vector2(300, 871)
+position = Vector2(295, 424)
 
 [node name="Answer4Button" type="TextureButton" parent="Question3/Answer4"]
 offset_left = -92.0
@@ -466,14 +464,14 @@ offset_top = -102.0
 offset_right = 108.0
 offset_bottom = 94.0
 toggle_mode = true
-texture_normal = ExtResource("18_46i17")
-texture_pressed = ExtResource("19_bp24h")
+texture_normal = ExtResource("18_17d0r")
+texture_pressed = ExtResource("19_a8g3q")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question3/Answer4"]
 position = Vector2(210, 0)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("22_wn1ov")
+texture = ExtResource("22_ovs4s")
 
 [node name="Answer5" type="Node2D" parent="Question3"]
 position = Vector2(820, 425)
@@ -484,17 +482,17 @@ offset_top = -102.0
 offset_right = 108.0
 offset_bottom = 94.0
 toggle_mode = true
-texture_normal = ExtResource("18_46i17")
-texture_pressed = ExtResource("19_bp24h")
+texture_normal = ExtResource("18_17d0r")
+texture_pressed = ExtResource("19_a8g3q")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question3/Answer5"]
 position = Vector2(210, 0)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("23_4darh")
+texture = ExtResource("23_spg2m")
 
 [node name="Answer6" type="Node2D" parent="Question3"]
-position = Vector2(827, 647)
+position = Vector2(299, 649)
 
 [node name="Answer6Button" type="TextureButton" parent="Question3/Answer6"]
 offset_left = -92.0
@@ -502,14 +500,14 @@ offset_top = -102.0
 offset_right = 108.0
 offset_bottom = 94.0
 toggle_mode = true
-texture_normal = ExtResource("18_46i17")
-texture_pressed = ExtResource("19_bp24h")
+texture_normal = ExtResource("18_17d0r")
+texture_pressed = ExtResource("19_a8g3q")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question3/Answer6"]
 position = Vector2(210, 0)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("24_vqa45")
+texture = ExtResource("22_ovs4s")
 
 [node name="Answer7" type="Node2D" parent="Question3"]
 position = Vector2(823, 879)
@@ -520,14 +518,14 @@ offset_top = -102.0
 offset_right = 108.0
 offset_bottom = 94.0
 toggle_mode = true
-texture_normal = ExtResource("18_46i17")
-texture_pressed = ExtResource("19_bp24h")
+texture_normal = ExtResource("18_17d0r")
+texture_pressed = ExtResource("19_a8g3q")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question3/Answer7"]
 position = Vector2(210, 0)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("25_qoi5f")
+texture = ExtResource("22_ovs4s")
 
 [node name="WeiterButton" type="TextureButton" parent="Question3"]
 layout_mode = 0
@@ -536,14 +534,14 @@ offset_top = 831.0
 offset_right = 2229.0
 offset_bottom = 1138.0
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("6_84vjf")
-texture_pressed = ExtResource("7_3s04w")
-texture_hover = ExtResource("8_3o4b2")
+texture_normal = ExtResource("6_xcl16")
+texture_pressed = ExtResource("7_cvd0j")
+texture_hover = ExtResource("8_uuy4o")
 
 [node name="Headshot" type="Sprite2D" parent="Question3"]
 position = Vector2(1576, 279)
 scale = Vector2(1.11125, 1.11125)
-texture = ExtResource("9_pa1nw")
+texture = ExtResource("9_o2mqp")
 
 [node name="Solutions" type="Node2D" parent="Question3"]
 
@@ -553,7 +551,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question3/Solutions/WrongSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.808)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question3/Solutions/WrongSolution"]
 offset_left = 953.0
@@ -561,7 +559,7 @@ offset_top = 525.0
 offset_right = 1365.0
 offset_bottom = 718.0
 theme_override_colors/font_color = Color(0.784314, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Das war leider
 nicht richtig"
@@ -572,7 +570,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question3/Solutions/NoSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question3/Solutions/NoSolution"]
 offset_left = 928.0
@@ -580,7 +578,7 @@ offset_top = 529.0
 offset_right = 1390.0
 offset_bottom = 722.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Bitte wähle eine
 Antwort aus"
@@ -591,7 +589,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question3/Solutions/RightSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question3/Solutions/RightSolution"]
 offset_left = 928.0
@@ -599,20 +597,20 @@ offset_top = 565.0
 offset_right = 1388.0
 offset_bottom = 653.0
 theme_override_colors/font_color = Color(0, 0.784314, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question2" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_fs6gq")
-script = ExtResource("26_y6tjk")
+texture = ExtResource("2_0p5ej")
+script = ExtResource("24_ry01n")
 
 [node name="Dialogbox" type="Sprite2D" parent="Question2"]
 position = Vector2(960, 263)
 scale = Vector2(0.865239, 0.865239)
-texture = ExtResource("4_1s8s3")
+texture = ExtResource("4_a8xe4")
 
 [node name="Label" type="Label" parent="Question2/Dialogbox"]
 anchors_preset = -1
@@ -620,15 +618,15 @@ anchor_left = -7.77739e-05
 anchor_top = -0.000799222
 anchor_right = 0.0116279
 anchor_bottom = 0.210788
-offset_left = -773.86
-offset_top = -131.683
-offset_right = 205.14
-offset_bottom = -50.6827
+offset_left = -801.951
+offset_top = -133.75
+offset_right = 385.049
+offset_bottom = -52.7494
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 60
-text = "Lege die Zitrone und die Seife zu den 
-richtigen pH-Werten"
+text = " Welcher Boden ist der richtige für die beiden
+Pflanzen?"
 metadata/_edit_use_anchors_ = true
 
 [node name="WeiterButton" type="TextureButton" parent="Question2"]
@@ -638,19 +636,19 @@ offset_top = 831.0
 offset_right = 2229.0
 offset_bottom = 1138.0
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("6_84vjf")
-texture_pressed = ExtResource("7_3s04w")
-texture_hover = ExtResource("8_3o4b2")
+texture_normal = ExtResource("6_xcl16")
+texture_pressed = ExtResource("7_cvd0j")
+texture_hover = ExtResource("8_uuy4o")
 
 [node name="Headshot" type="Sprite2D" parent="Question2"]
 position = Vector2(1576, 279)
 scale = Vector2(1.11125, 1.11125)
-texture = ExtResource("9_pa1nw")
+texture = ExtResource("9_o2mqp")
 
 [node name="PhScaleIcon" type="Sprite2D" parent="Question2"]
-position = Vector2(1213, 630)
-scale = Vector2(0.538147, 0.538147)
-texture = ExtResource("27_631fn")
+position = Vector2(1234, 621)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("25_kw5hn")
 
 [node name="PhScale14" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 0)
@@ -754,13 +752,13 @@ shape = SubResource("RectangleShape2D_4j68t")
 position = Vector2(317, 457)
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Lemon"]
-texture = ExtResource("28_jwulf")
+texture = ExtResource("26_hgxy6")
 region_rect = Rect2(39.1277, 16.3303, 200.388, 148.457)
 
 [node name="Arrow" type="Sprite2D" parent="Question2/Lemon/Sprite2D"]
 position = Vector2(151, -2)
 scale = Vector2(0.504, 0.504)
-texture = ExtResource("29_pn43o")
+texture = ExtResource("27_syaqf")
 
 [node name="PickUpArea" type="Area2D" parent="Question2/Lemon"]
 position = Vector2(-1, 14)
@@ -783,12 +781,12 @@ position = Vector2(322, 787)
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Soap"]
 position = Vector2(-5.00001, 13)
 scale = Vector2(0.504286, 0.504286)
-texture = ExtResource("30_x3heq")
+texture = ExtResource("28_6x1tt")
 region_rect = Rect2(199.949, 133.641, 937.333, 627.487)
 
 [node name="Arrow" type="Sprite2D" parent="Question2/Soap/Sprite2D"]
 position = Vector2(293.484, 11.898)
-texture = ExtResource("29_pn43o")
+texture = ExtResource("27_syaqf")
 
 [node name="PickUpArea" type="Area2D" parent="Question2/Soap"]
 position = Vector2(-5, 13)
@@ -814,7 +812,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question2/Solutions/WrongSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.808)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question2/Solutions/WrongSolution"]
 offset_left = 953.0
@@ -822,7 +820,7 @@ offset_top = 525.0
 offset_right = 1365.0
 offset_bottom = 718.0
 theme_override_colors/font_color = Color(0.784314, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Das war leider
 nicht richtig"
@@ -833,7 +831,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question2/Solutions/NoSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question2/Solutions/NoSolution"]
 offset_left = 959.0
@@ -841,7 +839,7 @@ offset_top = 522.0
 offset_right = 1362.0
 offset_bottom = 715.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Bitte sortiere 
 beide Objekte"
@@ -852,7 +850,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question2/Solutions/RightSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question2/Solutions/RightSolution"]
 offset_left = 928.0
@@ -860,20 +858,20 @@ offset_top = 565.0
 offset_right = 1388.0
 offset_bottom = 653.0
 theme_override_colors/font_color = Color(0, 0.784314, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question1" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_fs6gq")
-script = ExtResource("31_eno4t")
+texture = ExtResource("2_0p5ej")
+script = ExtResource("29_3wegr")
 
 [node name="Dialogbox" type="Sprite2D" parent="Question1"]
 position = Vector2(960, 263)
 scale = Vector2(0.865239, 0.865239)
-texture = ExtResource("4_1s8s3")
+texture = ExtResource("4_a8xe4")
 
 [node name="Label" type="Label" parent="Question1"]
 layout_mode = 0
@@ -882,9 +880,9 @@ offset_top = 181.0
 offset_right = 913.0
 offset_bottom = 236.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 50
-text = "Wofür wird die Titration gebraucht?"
+text = "Wieso trimmt man Äste?"
 
 [node name="Answer1" type="Node2D" parent="Question1"]
 position = Vector2(203, 400)
@@ -895,8 +893,8 @@ offset_top = -100.0
 offset_right = 107.0
 offset_bottom = 96.0
 toggle_mode = true
-texture_normal = ExtResource("18_46i17")
-texture_pressed = ExtResource("19_bp24h")
+texture_normal = ExtResource("18_17d0r")
+texture_pressed = ExtResource("19_a8g3q")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Question1/Answer1"]
@@ -905,9 +903,9 @@ offset_top = -30.0
 offset_right = 938.0
 offset_bottom = 38.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 50
-text = "Um die Farbe einer Lösung zu ändern."
+text = "Um das nachwachsen zu verlangsamen"
 metadata/_edit_use_anchors_ = true
 
 [node name="Answer2" type="Node2D" parent="Question1"]
@@ -919,19 +917,20 @@ offset_top = -103.0
 offset_right = 106.0
 offset_bottom = 93.0
 toggle_mode = true
-texture_normal = ExtResource("18_46i17")
-texture_pressed = ExtResource("19_bp24h")
+texture_normal = ExtResource("18_17d0r")
+texture_pressed = ExtResource("19_a8g3q")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Question1/Answer2"]
 offset_left = 100.0
-offset_top = -34.0
+offset_top = -65.0
 offset_right = 1016.0
-offset_bottom = 34.0
+offset_bottom = 74.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 50
-text = "Um den pH Wert einer Lösung zu messen."
+text = "Um das Nachwachsen zu fördern und
+kranke Äste zu entfernen"
 metadata/_edit_use_anchors_ = true
 
 [node name="Answer3" type="Node2D" parent="Question1"]
@@ -943,8 +942,8 @@ offset_top = -102.0
 offset_right = 108.0
 offset_bottom = 94.0
 toggle_mode = true
-texture_normal = ExtResource("18_46i17")
-texture_pressed = ExtResource("19_bp24h")
+texture_normal = ExtResource("18_17d0r")
+texture_pressed = ExtResource("19_a8g3q")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Question1/Answer3"]
@@ -953,9 +952,9 @@ offset_top = -22.0
 offset_right = 745.0
 offset_bottom = 46.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 50
-text = "Um die Lösung zu verdünnen"
+text = "Nur um das Aussehen zu verbessern"
 metadata/_edit_use_anchors_ = true
 
 [node name="WeiterButton" type="TextureButton" parent="Question1"]
@@ -965,19 +964,19 @@ offset_top = 831.0
 offset_right = 2229.0
 offset_bottom = 1138.0
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("6_84vjf")
-texture_pressed = ExtResource("7_3s04w")
-texture_hover = ExtResource("8_3o4b2")
+texture_normal = ExtResource("6_xcl16")
+texture_pressed = ExtResource("7_cvd0j")
+texture_hover = ExtResource("8_uuy4o")
 
 [node name="Headshot" type="Sprite2D" parent="Question1"]
 position = Vector2(1576, 279)
 scale = Vector2(1.11125, 1.11125)
-texture = ExtResource("9_pa1nw")
+texture = ExtResource("9_o2mqp")
 
 [node name="TitrationIcon" type="Sprite2D" parent="Question1"]
-position = Vector2(1344, 559)
-scale = Vector2(0.898649, 0.898649)
-texture = ExtResource("32_3tckm")
+position = Vector2(1535, 586)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("30_kcqny")
 
 [node name="Solutions" type="Node2D" parent="Question1"]
 
@@ -987,7 +986,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question1/Solutions/WrongSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.808)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question1/Solutions/WrongSolution"]
 offset_left = 953.0
@@ -995,7 +994,7 @@ offset_top = 525.0
 offset_right = 1365.0
 offset_bottom = 718.0
 theme_override_colors/font_color = Color(0.784314, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Das war leider
 nicht richtig"
@@ -1006,7 +1005,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question1/Solutions/NoSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question1/Solutions/NoSolution"]
 offset_left = 928.0
@@ -1014,7 +1013,7 @@ offset_top = 529.0
 offset_right = 1390.0
 offset_bottom = 722.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Bitte wähle eine
 Antwort aus"
@@ -1025,7 +1024,7 @@ visible = false
 [node name="SpeechBubble" type="Sprite2D" parent="Question1/Solutions/RightSolution"]
 position = Vector2(1151, 600)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("14_impmd")
+texture = ExtResource("14_2207t")
 
 [node name="Label" type="Label" parent="Question1/Solutions/RightSolution"]
 offset_left = 928.0
@@ -1033,7 +1032,7 @@ offset_top = 565.0
 offset_right = 1388.0
 offset_bottom = 653.0
 theme_override_colors/font_color = Color(0, 0.784314, 0, 1)
-theme_override_fonts/font = ExtResource("5_124ol")
+theme_override_fonts/font = ExtResource("5_1hhxo")
 theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
@@ -1048,7 +1047,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
-texture = ExtResource("33_ormh8")
+texture = ExtResource("31_x1jbh")
 
 [node name="VoiceOver" type="AudioStreamPlayer" parent="."]
 
@@ -1063,7 +1062,7 @@ volume_db = -9.0
 bus = &"SFX"
 
 [node name="Stars" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("39_y1hyj")
+stream = ExtResource("37_5oosb")
 volume_db = -6.0
 bus = &"SFX_UI"
 
