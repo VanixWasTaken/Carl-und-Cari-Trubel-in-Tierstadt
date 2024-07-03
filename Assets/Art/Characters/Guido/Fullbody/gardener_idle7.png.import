@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ewl7l8kepcrm"
-path="res://.godot/imported/gardener_placeholder.png-029fb4ec2f488534275c2479e50a4911.ctex"
+uid="uid://d1o0octjdem26"
+path="res://.godot/imported/gardener_idle7.png-81ca20c0e321e79fcc0ae414229fb70a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Guido/Fullbody/gardener_placeholder.png"
-dest_files=["res://.godot/imported/gardener_placeholder.png-029fb4ec2f488534275c2479e50a4911.ctex"]
+source_file="res://Assets/Art/Characters/Guido/Fullbody/gardener_idle7.png"
+dest_files=["res://.godot/imported/gardener_idle7.png-81ca20c0e321e79fcc0ae414229fb70a.ctex"]
 
 [params]
 
