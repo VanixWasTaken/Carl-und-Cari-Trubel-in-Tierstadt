@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dynxomncnh1jq"
+path="res://.godot/imported/vo_pc_cari_snipping_dialog_10.mp3-ff2a17506b7562c469e0a355a7cccb04.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Cari/PC/vo_pc_cari_snipping_dialog_10.mp3"
+dest_files=["res://.godot/imported/vo_pc_cari_snipping_dialog_10.mp3-ff2a17506b7562c469e0a355a7cccb04.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
