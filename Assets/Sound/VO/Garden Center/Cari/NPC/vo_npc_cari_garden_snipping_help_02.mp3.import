@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://22rfn7702q27"
+path="res://.godot/imported/vo_npc_cari_garden_snipping_help_02.mp3-dc1cdfd9323b30068da36e4933c198c2.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Cari/NPC/vo_npc_cari_garden_snipping_help_02.mp3"
+dest_files=["res://.godot/imported/vo_npc_cari_garden_snipping_help_02.mp3-dc1cdfd9323b30068da36e4933c198c2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
