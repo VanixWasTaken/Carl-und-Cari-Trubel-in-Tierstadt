@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://vnj4oyq32r4f"]
+[gd_scene load_steps=35 format=3 uid="uid://vnj4oyq32r4f"]
 
 [ext_resource type="Texture2D" uid="uid://ddlsxysgyc71t" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/minigame4_grid.png" id="1_b04vn"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/garden_planning_minigame.gd" id="1_nucrw"]
@@ -8,7 +8,8 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/arrows.gd" id="4_h81sd"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/item_selection.gd" id="4_hg7h8"]
 [ext_resource type="Texture2D" uid="uid://cqlg0gq3whhjc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/arrow.png" id="6_0sg3q"]
-[ext_resource type="Texture2D" uid="uid://ce5tprkelp3ou" path="res://Assets/Art/UI/player_mouse_clicked.png" id="6_k6w0i"]
+[ext_resource type="Texture2D" uid="uid://btm1e4tlhp34o" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/checkbox_unchecked.png" id="6_fpbmj"]
+[ext_resource type="Texture2D" uid="uid://cfk5m3juolyhu" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_trashcan.png" id="7_18hto"]
 [ext_resource type="Texture2D" uid="uid://bvskmhh3yf3uc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon2.png" id="7_pamqc"]
 [ext_resource type="Texture2D" uid="uid://b4mwx3ixbev8f" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/flower/flower_icon2.png" id="8_mib7p"]
 [ext_resource type="Texture2D" uid="uid://d6sqg03v86bl" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon2.png" id="9_1r6cr"]
@@ -976,7 +977,7 @@ shape = SubResource("RectangleShape2D_lmk48")
 
 [node name="TaskBackground" type="TextureRect" parent="."]
 offset_left = 1251.0
-offset_top = -53.0
+offset_top = -152.0
 offset_right = 2073.0
 offset_bottom = 769.0
 texture = ExtResource("2_vnyvc")
@@ -984,9 +985,9 @@ texture = ExtResource("2_vnyvc")
 [node name="Header" type="Label" parent="TaskBackground"]
 layout_mode = 0
 offset_left = 222.0
-offset_top = 206.0
+offset_top = 231.0
 offset_right = 536.0
-offset_bottom = 261.0
+offset_bottom = 286.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ef2nf")
 theme_override_font_sizes/font_size = 40
@@ -995,9 +996,9 @@ text = "Erfülle folgendes:"
 [node name="Task1" type="Label" parent="TaskBackground"]
 layout_mode = 0
 offset_left = 214.0
-offset_top = 262.0
+offset_top = 326.0
 offset_right = 468.0
-offset_bottom = 595.0
+offset_bottom = 659.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ef2nf")
 theme_override_font_sizes/font_size = 28
@@ -1011,20 +1012,20 @@ text = "- Platziere genau 3
    Blumen"
 
 [node name="MinorTask1" type="Sprite2D" parent="TaskBackground/Task1"]
-position = Vector2(368, 35)
-texture = ExtResource("6_k6w0i")
+position = Vector2(353.5, 15.5)
+texture = ExtResource("6_fpbmj")
 
 [node name="MinorTask2" type="Sprite2D" parent="TaskBackground/Task1"]
-position = Vector2(367, 119)
-texture = ExtResource("6_k6w0i")
+position = Vector2(352.5, 99.5)
+texture = ExtResource("6_fpbmj")
 
 [node name="MinorTask3" type="Sprite2D" parent="TaskBackground/Task1"]
-position = Vector2(369, 205)
-texture = ExtResource("6_k6w0i")
+position = Vector2(354.5, 185.5)
+texture = ExtResource("6_fpbmj")
 
 [node name="MinorTask4" type="Sprite2D" parent="TaskBackground/Task1"]
-position = Vector2(370, 294)
-texture = ExtResource("6_k6w0i")
+position = Vector2(355.5, 274.5)
+texture = ExtResource("6_fpbmj")
 
 [node name="Task2" type="Label" parent="TaskBackground"]
 visible = false
@@ -1045,16 +1046,21 @@ text = "- Platziere genau 1
 "
 
 [node name="MinorTask1" type="Sprite2D" parent="TaskBackground/Task2"]
-position = Vector2(368, 35)
-texture = ExtResource("6_k6w0i")
+position = Vector2(353.5, 15.5)
+texture = ExtResource("6_fpbmj")
 
 [node name="MinorTask2" type="Sprite2D" parent="TaskBackground/Task2"]
-position = Vector2(368, 171)
-texture = ExtResource("6_k6w0i")
+position = Vector2(352.5, 99.5)
+texture = ExtResource("6_fpbmj")
 
 [node name="IconBg" type="Sprite2D" parent="."]
 position = Vector2(1656, 892)
 texture = ExtResource("2_vnyvc")
+
+[node name="TrashCan" type="Sprite2D" parent="."]
+position = Vector2(1497, 662)
+scale = Vector2(0.537344, 0.537344)
+texture = ExtResource("7_18hto")
 
 [node name="ItemSelection" type="Node" parent="."]
 script = ExtResource("4_hg7h8")
@@ -1120,9 +1126,9 @@ libraries = {
 position = Vector2(2961, 401)
 
 [node name="FinishedButton" type="TextureButton" parent="."]
-offset_left = 1520.0
+offset_left = 1618.0
 offset_top = 615.0
-offset_right = 2432.0
+offset_right = 2530.0
 offset_bottom = 922.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("12_ad7lj")
