@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bxjd24pu0r6yb"]
+[gd_scene load_steps=15 format=3 uid="uid://ddbqcqldm0t5b"]
 
 [ext_resource type="PackedScene" uid="uid://b8ae2gbukn3ld" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/Trees/tree1.tscn" id="1_dwdq4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame.gd" id="1_ssqej"]
