@@ -41,6 +41,7 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 15:
 		Global.dialog_playing = false
+		GlobalGarden.should_enter_minigame1 = true
 		queue_free()
 ##########################################################################################
 

@@ -37,10 +37,8 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 4:
+	if dialogs == 11:
 		Global.dialog_playing = false
-		get_tree().get_first_node_in_group("Animator").play("fade_out")
-		GlobalGarden.finished_minigame_2 = true
 		queue_free()
 ##########################################################################################
 
@@ -55,7 +53,18 @@ func add_left_dialog_box():
 	$".".add_child(node)
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
-	if dialogs == 3:
+	
+	if dialogs == 2:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Alles klar und wir müssen den verschiedenen Pflanzen einfach nur den richtigen Bodentyp zuweisen?"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+	
+	elif dialogs == 10:
 		dialogs += 1
 		Global.moving_allowed = true
 ##########################################################################################
@@ -78,22 +87,84 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Und das war es auch schon. Vielen Dank für eure Hilfe."
+		short_node_text.text = "Sodele, da wären wir. Auf der linken Seite seht ihr, was für Pflanzen wir haben und auf der rechten die verschiedenen Bodentypen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
 		dialogs += 1
-		same_speaker = true
 	
-	elif dialogs == 2:
+	elif dialogs == 3:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Nur eine gesunde und gepflegte Pflanze ist eine glückliche Pflanze!"
+		short_node_text.text = "Ganz genau! Die Pflanzen sind sich alle ähnlich und benötigen alle denselben Bodentypen. "
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Guido"
+		dialogs += 1
+		same_speaker = true
+
+	elif dialogs == 4:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Die Bodentypen lassen sich in vier Kategorien einteilen. Sandboden, Schluffboden, Tonboden und Lehmboden."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Guido"
+		dialogs += 1
+
+	elif dialogs == 5:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Jeder kommt mit eigenen Vor- und Nachteilen."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Guido"
+		dialogs += 1
+
+	elif dialogs == 6:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Wie ich schon bei dem Pflanzomat 3000 gesagt habe, fühlen sich unterschiedliche Pflanzen in unterschiedlichen Klimas wohl."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Guido"
+		dialogs += 1
+
+	elif dialogs == 7:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Dasselbe gilt auch für den Boden in dem sie wachsen."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Guido"
+		dialogs += 1
+
+	elif dialogs == 8:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Bewegt einfach die Maus über die Bodentypen und Pflanzen für mehr Informationen."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Guido"
+		dialogs += 1
+		
+
+	elif dialogs == 9:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Wenn ihr denkt, dass ihr den richtigen Bodentypen habt, klickt diesen einfach an."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
 		dialogs += 1
 		same_speaker = false
+	
 	
 ##########################################################################################
 

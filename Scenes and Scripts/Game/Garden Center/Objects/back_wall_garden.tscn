@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://7iyk4oybya7r"]
+
+[ext_resource type="Texture2D" uid="uid://da6rewoqxrcfd" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_wall_back_room.png" id="1_n5jyt"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Objects/back_wall_garden.gd" id="2_hio8s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n0j2p"]
+size = Vector3(4.94476, 2.50305, 0.403748)
+
+[node name="BackWallGarden" type="Sprite3D"]
+texture = ExtResource("1_n5jyt")
+script = ExtResource("2_hio8s")
+
+[node name="Hitbox" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00650024, 0.751526, 0.0128479)
+shape = SubResource("BoxShape3D_n0j2p")
+
+[connection signal="mouse_entered" from="Hitbox" to="." method="_on_hitbox_mouse_entered"]
+[connection signal="mouse_exited" from="Hitbox" to="." method="_on_hitbox_mouse_exited"]

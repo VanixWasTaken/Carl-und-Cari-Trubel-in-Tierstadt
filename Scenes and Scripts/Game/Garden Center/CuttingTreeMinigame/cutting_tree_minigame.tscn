@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://ddbqcqldm0t5b"]
+[gd_scene load_steps=16 format=3 uid="uid://w1u4tyshfw1l"]
 
 [ext_resource type="PackedScene" uid="uid://b8ae2gbukn3ld" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/Trees/tree1.tscn" id="1_dwdq4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame.gd" id="1_ssqej"]
 [ext_resource type="PackedScene" uid="uid://j73f2vaexd64" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame_scissor.tscn" id="2_00ekb"]
 [ext_resource type="Texture2D" uid="uid://bb2nj4yibhwsr" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/minigame1_tree2.png" id="2_5460p"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_vdnfa"]
 [ext_resource type="Texture2D" uid="uid://5t1icmclgnuk" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/minigame1_tree3.png" id="4_kn8tn"]
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="6_6xq8h"]
 
@@ -104,6 +105,10 @@ _data = {
 [node name="CuttingTreeMinigame" type="Node2D"]
 script = ExtResource("1_ssqej")
 
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HelpButton" parent="UI" instance=ExtResource("2_vdnfa")]
+
 [node name="Tree1" parent="." instance=ExtResource("1_dwdq4")]
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -202,8 +207,6 @@ metadata/_edit_use_anchors_ = true
 libraries = {
 "": SubResource("AnimationLibrary_i0a4y")
 }
-
-[node name="Test" type="Node" parent="."]
 
 [connection signal="move_camera" from="Tree1" to="." method="_on_tree_1_move_camera"]
 [connection signal="move_camera" from="Tree2" to="." method="_on_tree_2_move_camera"]

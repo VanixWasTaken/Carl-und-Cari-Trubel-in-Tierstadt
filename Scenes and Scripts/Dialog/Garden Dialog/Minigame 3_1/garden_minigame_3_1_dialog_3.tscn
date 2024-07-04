@@ -1,34 +1,34 @@
-[gd_scene load_steps=12 format=3 uid="uid://bnyp7cjhlr1e5"]
+[gd_scene load_steps=12 format=3 uid="uid://b36mpippirjfn"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_3.gd" id="1_j0rvg"]
-[ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_7u5jh"]
-[ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="3_7wc72"]
-[ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="4_h24wv"]
-[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="5_qck6t"]
-[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="6_23euv"]
-[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="7_f65py"]
-[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="8_oacoo"]
-[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="9_ca5ir"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Garden Dialog/Minigame 3_1/garden_dialog_minigame_3_1_3.gd" id="1_2qwlp"]
+[ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_r18qp"]
+[ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="3_4lbja"]
+[ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="4_0u58x"]
+[ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="5_5320o"]
+[ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="6_xbst8"]
+[ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="7_prdwa"]
+[ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="8_0ivgk"]
+[ext_resource type="AudioStream" uid="uid://bag4e5o0pn42r" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var3.mp3" id="9_pjb5w"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xqye0"]
 playback_mode = 1
 streams_count = 2
-stream_0/stream = ExtResource("5_qck6t")
+stream_0/stream = ExtResource("5_5320o")
 stream_0/weight = 1.0
-stream_1/stream = ExtResource("6_23euv")
+stream_1/stream = ExtResource("6_xbst8")
 stream_1/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ve2lj"]
 playback_mode = 1
 streams_count = 3
-stream_0/stream = ExtResource("7_f65py")
+stream_0/stream = ExtResource("7_prdwa")
 stream_0/weight = 1.0
-stream_1/stream = ExtResource("8_oacoo")
+stream_1/stream = ExtResource("8_0ivgk")
 stream_1/weight = 1.0
-stream_2/stream = ExtResource("9_ca5ir")
+stream_2/stream = ExtResource("9_pjb5w")
 stream_2/weight = 1.0
 
-[node name="DialogTutorial" type="CanvasLayer"]
+[node name="DialogMinigame312" type="CanvasLayer"]
 
 [node name="DialogBox" type="Control" parent="."]
 layout_mode = 3
@@ -37,7 +37,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_j0rvg")
+script = ExtResource("1_2qwlp")
 
 [node name="SkipButton" type="TextureButton" parent="DialogBox"]
 visible = false
@@ -53,9 +53,9 @@ offset_bottom = 147.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_7u5jh")
-texture_pressed = ExtResource("3_7wc72")
-texture_hover = ExtResource("4_h24wv")
+texture_normal = ExtResource("2_r18qp")
+texture_pressed = ExtResource("3_4lbja")
+texture_hover = ExtResource("4_0u58x")
 
 [node name="SkipButtonTimer" type="Timer" parent="."]
 wait_time = 1.5

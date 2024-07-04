@@ -695,10 +695,10 @@ texture = ExtResource("9_lq8sc")
 
 [node name="Label" type="Label" parent="HUD/Help Movement"]
 layout_mode = 0
-offset_left = 1033.0
-offset_top = 270.0
-offset_right = 1677.0
-offset_bottom = 1052.0
+offset_left = 1193.0
+offset_top = 887.0
+offset_right = 1837.0
+offset_bottom = 1669.0
 theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
 theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
 theme_override_constants/outline_size = 15
