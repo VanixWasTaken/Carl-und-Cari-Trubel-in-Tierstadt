@@ -26,7 +26,7 @@ func _on_tree_2_move_camera():
 
 
 
-
+#test
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_out":

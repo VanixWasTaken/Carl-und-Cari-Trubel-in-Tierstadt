@@ -13,6 +13,7 @@ var same_speaker = false
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
+var PRESET3 = preload("res://Assets/Art/Characters/Carl und Cari/carl_und_cari_dialog_icon.png")
 var PRESET4 = preload("res://Assets/Art/Characters/Guido/Headshot/gardener_headshot.png")
 
 
@@ -38,7 +39,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 9:
+	if dialogs == 15:
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
@@ -74,8 +75,42 @@ func add_left_dialog_box():
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		dialogs += 1
+		same_speaker = false
 	
 	elif dialogs == 8:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Das haben wir schon mitbekommen. Also Fackeln wir nicht lange rum. Was können wir für ihre dich tun?"
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+		same_speaker = false
+	
+	elif dialogs == 10:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Warte, was? Warum brauchst du Bananen? Ich dachte wir sollen dir helfen das Fest vorzubereiten?"
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+		same_speaker = false
+	
+	elif dialogs == 12:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "..."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Carl und Cari"
+		dialogs += 1
+		same_speaker = false
+	
+	elif dialogs == 14:
 		dialogs += 1
 		Global.moving_allowed = true
 	
@@ -146,8 +181,40 @@ func add_right_dialog_box():
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
+		same_speaker = false
 	
+	elif dialogs == 9:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Als erste Handlung könnt ihr mir erstmal einen Bündel Bananen bringen."
+		short_node_rect.texture = PRESET4
+		short_node_name.text = "Guido"
+		dialogs += 1
+		same_speaker = false
+		
+	elif dialogs == 11:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "HOHOHO. Ich habe mir nur ein kleines Späßchen erlaubt."
+		short_node_rect.texture = PRESET4
+		short_node_name.text = "Guido"
+		dialogs += 1
+		same_speaker = false
 	
+	elif dialogs == 13:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Als erstes müsst ihr ihr euch in die hintere rechte Ecke des Raumes begeben und dort die Pflanzen schneiden."
+		short_node_rect.texture = PRESET4
+		short_node_name.text = "Guido"
+		dialogs += 1
+		same_speaker = false
 	
 	
 ##########################################################################################
