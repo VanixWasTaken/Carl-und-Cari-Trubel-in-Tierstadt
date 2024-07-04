@@ -37,10 +37,9 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 4:
+	if dialogs == 3:
 		Global.dialog_playing = false
 		get_tree().get_first_node_in_group("Animator").play("fade_out")
-		GlobalGarden.finished_minigame_2 = true
 		queue_free()
 ##########################################################################################
 
@@ -55,7 +54,7 @@ func add_left_dialog_box():
 	$".".add_child(node)
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
-	if dialogs == 3:
+	if dialogs == 2:
 		dialogs += 1
 		Global.moving_allowed = true
 ##########################################################################################
@@ -78,22 +77,13 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Und das war es auch schon. Vielen Dank für eure Hilfe."
+		short_node_text.text = "Das ist goldrichtig! Diesen Bodentyp sollten wir für das Stadtfest benutzen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
 		dialogs += 1
-		same_speaker = true
 	
-	elif dialogs == 2:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Nur eine gesunde und gepflegte Pflanze ist eine glückliche Pflanze!"
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Guido"
-		dialogs += 1
-		same_speaker = false
+	
+	
 	
 ##########################################################################################
 

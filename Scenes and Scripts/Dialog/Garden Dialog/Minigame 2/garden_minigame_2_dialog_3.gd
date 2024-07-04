@@ -15,7 +15,6 @@ var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.
 var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
 var PRESET3 = preload("res://Assets/Art/Characters/Guido/Headshot/gardener_headshot.png")
 
-
 ##########################################################################################
 
 
