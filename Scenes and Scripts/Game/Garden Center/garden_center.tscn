@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://ckv10od6wynv3"]
+[gd_scene load_steps=60 format=3 uid="uid://ckv10od6wynv3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/garden_center.gd" id="1_35ge2"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_wckdn"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://hhiwuu2icdug" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_earth.png" id="14_72mmt"]
 [ext_resource type="Texture2D" uid="uid://13di2km8m5yv" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sand.png" id="15_fi6mb"]
 [ext_resource type="Texture2D" uid="uid://cmhl8jnselm2m" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_bark_mulch.png" id="16_0s2py"]
+[ext_resource type="PackedScene" uid="uid://7iyk4oybya7r" path="res://Scenes and Scripts/Game/Garden Center/Objects/back_wall_garden.tscn" id="17_elkqq"]
 [ext_resource type="Texture2D" uid="uid://x6ka1ix8nut1" path="res://Assets/Art/Characters/Guido/Fullbody/gardener_idle1.png" id="17_h4b52"]
 [ext_resource type="Texture2D" uid="uid://7thryindjtyj" path="res://Assets/Art/Characters/Guido/Fullbody/gardener_idle2.png" id="18_ghirq"]
 [ext_resource type="Texture2D" uid="uid://dob2di164nsu3" path="res://Assets/Art/Characters/Guido/Fullbody/gardener_idle3.png" id="19_hdafe"]
@@ -101,6 +102,9 @@ polyphony = 3
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2obbv"]
 size = Vector3(11.8885, 1, 3.73584)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l0n2v"]
+size = Vector3(14.0541, 1.23279, 1.79395)
 
 [sub_resource type="Animation" id="Animation_fxf21"]
 resource_name = "camera_pan"
@@ -360,6 +364,7 @@ texture = ExtResource("9_831a0")
 
 [node name="Trolley" type="Sprite3D" parent="Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3764, 4.04428, -2.00462)
+sorting_use_aabb_center = false
 texture = ExtResource("10_4u12l")
 
 [node name="Desk" type="Sprite3D" parent="Objects"]
@@ -367,11 +372,11 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 25.8768, 2.98103, 2.589
 texture = ExtResource("11_a52rk")
 
 [node name="door_left" type="Sprite3D" parent="Objects"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.78, 6.05, -4.653)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.78, 6.05, -4.2785)
 texture = ExtResource("12_fdwkp")
 
 [node name="door_right" type="Sprite3D" parent="Objects"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.297, 6.05, -4.528)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.297, 6.05, -4.54117)
 texture = ExtResource("13_38nce")
 
 [node name="Earth_bag" type="Sprite3D" parent="Objects"]
@@ -385,6 +390,15 @@ texture = ExtResource("15_fi6mb")
 [node name="bark_mulch_bag" type="Sprite3D" parent="Objects"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -27.9292, 2.1859, 4.35645)
 texture = ExtResource("16_0s2py")
+
+[node name="BackWallGarden" parent="Objects" instance=ExtResource("17_elkqq")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 1.508, 6.63183, -4.68399)
+
+[node name="PlayerDetection" type="Area3D" parent="Objects/BackWallGarden"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/BackWallGarden/PlayerDetection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.571136, -5.77826, 0.396973)
+shape = SubResource("BoxShape3D_l0n2v")
 
 [node name="CutsceneAnimation" type="AnimationPlayer" parent="."]
 root_node = NodePath("MouseBlock")
@@ -451,6 +465,8 @@ libraries = {
 
 [connection signal="body_entered" from="Objects/BonsaiTrees/PlayerDetection" to="Objects/BonsaiTrees" method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="Objects/BonsaiTrees/PlayerDetection" to="Objects/BonsaiTrees" method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="Objects/BackWallGarden/PlayerDetection" to="Objects/BackWallGarden" method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="Objects/BackWallGarden/PlayerDetection" to="Objects/BackWallGarden" method="_on_player_detection_body_exited"]
 [connection signal="animation_finished" from="CutsceneAnimation" to="." method="_on_cutscene_animation_animation_finished"]
 [connection signal="body_entered" from="GardenCenterNPC/DialogArea" to="." method="_on_dialog_area_body_entered"]
 [connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

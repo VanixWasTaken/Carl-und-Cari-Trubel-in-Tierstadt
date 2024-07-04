@@ -6,6 +6,7 @@ extends Node3D
 @onready var dialog3 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_3.tscn")
 
 @onready var cutting_tree_minigame_scn = preload("res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame.tscn")
+@onready var plant_caring_minigame_scn = preload("res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_caring.tscn")
 
 var player
 
@@ -47,3 +48,5 @@ func _on_dialog_area_body_entered(body):
 func _on_animation_player_animation_finished(anim_name):
 	if GlobalGarden.last_finished_minigame == "NONE":
 		get_tree().change_scene_to_packed(cutting_tree_minigame_scn)
+	elif GlobalGarden.last_finished_minigame == "Minigame1":
+		get_tree().change_scene_to_packed(plant_caring_minigame_scn)

@@ -19,11 +19,13 @@ func _process(delta):
 		get_tree().get_first_node_in_group("Animator").play("fade_out")
 
 func _on_hitbox_mouse_entered():
-	bonsai_trees.texture = GARDEN_BONSAI_HIGHLIGHTED
-	mouse_inside_bonsai_trees = true
+	if GlobalGarden.last_finished_minigame == "NONE":
+		bonsai_trees.texture = GARDEN_BONSAI_HIGHLIGHTED
+		mouse_inside_bonsai_trees = true
 func _on_hitbox_mouse_exited():
-	bonsai_trees.texture = GARDEN_BONSAI
-	mouse_inside_bonsai_trees = false
+	if GlobalGarden.last_finished_minigame == "NONE":
+		bonsai_trees.texture = GARDEN_BONSAI
+		mouse_inside_bonsai_trees = false
 
 
 func _on_player_detection_body_entered(body):
