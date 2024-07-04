@@ -1,6 +1,10 @@
 extends Node3D
 
+# Dialogs
+@onready var dialog1 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_1.tscn")
+
 var player
+
 
 func _ready():
 	MusicController._play_music("peace_and_tranquility", "garden_center", -15)
@@ -23,3 +27,7 @@ func _process(_delta):
 func _on_cutscene_animation_animation_finished(camera_pan):
 	Global.cutscene_playing = false
 	$CutsceneAnimation/MouseBlock.queue_free()
+
+
+func _on_dialog_area_body_entered(body):
+	add_child(dialog1.instantiate())

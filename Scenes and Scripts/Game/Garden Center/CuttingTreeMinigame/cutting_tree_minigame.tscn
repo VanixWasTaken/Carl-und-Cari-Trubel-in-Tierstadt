@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bxjd24pu0r6yb"]
+[gd_scene load_steps=15 format=3 uid="uid://bxjd24pu0r6yb"]
 
 [ext_resource type="PackedScene" uid="uid://b8ae2gbukn3ld" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/Trees/tree1.tscn" id="1_dwdq4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame.gd" id="1_ssqej"]
 [ext_resource type="PackedScene" uid="uid://j73f2vaexd64" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame_scissor.tscn" id="2_00ekb"]
 [ext_resource type="Texture2D" uid="uid://bb2nj4yibhwsr" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/minigame1_tree2.png" id="2_5460p"]
 [ext_resource type="Texture2D" uid="uid://5t1icmclgnuk" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/minigame1_tree3.png" id="4_kn8tn"]
+[ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="6_6xq8h"]
 
 [sub_resource type="Animation" id="Animation_yjaf6"]
 length = 0.001
@@ -58,6 +59,46 @@ _data = {
 "RESET": SubResource("Animation_yjaf6"),
 "camera_movement1": SubResource("Animation_ajhaj"),
 "camera_movement2": SubResource("Animation_30ayb")
+}
+
+[sub_resource type="Animation" id="Animation_ltsux"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeAnimation:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(49.5, 55)]
+}
+
+[sub_resource type="Animation" id="Animation_ltvyy"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeAnimation:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(45, 50), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0uxyh"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i0a4y"]
+_data = {
+"fade_in": SubResource("Animation_ltsux"),
+"fade_out": SubResource("Animation_ltvyy"),
+"new_animation": SubResource("Animation_0uxyh")
 }
 
 [node name="CuttingTreeMinigame" type="Node2D"]
@@ -135,13 +176,42 @@ libraries = {
 }
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="FadeAnimation" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.492668
+anchor_top = 0.496296
+anchor_right = 0.492668
+anchor_bottom = 0.496296
+offset_left = -1045.0
+offset_top = -594.0
+offset_right = 974.078
+offset_bottom = 555.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1043.66, 620.915)
+mouse_filter = 2
+texture = ExtResource("6_6xq8h")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" groups=["Animator"]]
+libraries = {
+"": SubResource("AnimationLibrary_i0a4y")
+}
 
 [connection signal="move_camera" from="Tree1" to="." method="_on_tree_1_move_camera"]
 [connection signal="move_camera" from="Tree2" to="." method="_on_tree_2_move_camera"]
+[connection signal="animation_finished" from="Camera2D/AnimationPlayer" to="Tree1" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="Camera2D/AnimationPlayer" to="Tree2" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="Camera2D/AnimationPlayer" to="Tree3" method="_on_animation_player_animation_finished"]
+[connection signal="animation_started" from="Camera2D/AnimationPlayer" to="Tree1" method="_on_animation_player_animation_started"]
+[connection signal="animation_started" from="Camera2D/AnimationPlayer" to="Tree2" method="_on_animation_player_animation_started"]
+[connection signal="animation_started" from="Camera2D/AnimationPlayer" to="Tree3" method="_on_animation_player_animation_started"]
+[connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
 [editable path="Tree2"]
 [editable path="Tree3"]
