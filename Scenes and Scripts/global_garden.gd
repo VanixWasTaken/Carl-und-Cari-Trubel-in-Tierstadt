@@ -1,11 +1,10 @@
 extends Node
 
-var cutscene_played = false
 
-var finished_minigame_1 = false
-var finished_minigame_2 = false
-var finished_minigame_3_1 = false
-var finished_minigame_3_2 = false
+var should_enter_minigame1 = false
+var talked_to_guido1 = false
+
+var last_finished_minigame : String = "NONE" # Possible variables: "NONE", "Minigame1", "Minigame2", "Minigame3", "Minigame4"
 
 #help button states
 var garden_help_button_state = 0

@@ -208,8 +208,6 @@ libraries = {
 "": SubResource("AnimationLibrary_i0a4y")
 }
 
-[node name="Test" type="Node" parent="."]
-
 [connection signal="move_camera" from="Tree1" to="." method="_on_tree_1_move_camera"]
 [connection signal="move_camera" from="Tree2" to="." method="_on_tree_2_move_camera"]
 [connection signal="animation_finished" from="Camera2D/AnimationPlayer" to="Tree1" method="_on_animation_player_animation_finished"]

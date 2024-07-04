@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://bnyp7cjhlr1e5"]
+[gd_scene load_steps=12 format=3 uid="uid://bnyp7cjhlr1e5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_3.gd" id="1_j0rvg"]
 [ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_7u5jh"]
 [ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="3_7wc72"]
 [ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="4_h24wv"]
-[ext_resource type="PackedScene" uid="uid://1p8laro2bm82" path="res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_4.tscn" id="5_7fgos"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="5_qck6t"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="6_23euv"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="7_f65py"]
@@ -57,8 +56,6 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_7u5jh")
 texture_pressed = ExtResource("3_7wc72")
 texture_hover = ExtResource("4_h24wv")
-
-[node name="DialogTutorial" parent="DialogBox" instance=ExtResource("5_7fgos")]
 
 [node name="SkipButtonTimer" type="Timer" parent="."]
 wait_time = 1.5
