@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/vo_npc_chameleon_laboratory_dialog_2_4.mp3-ba
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
