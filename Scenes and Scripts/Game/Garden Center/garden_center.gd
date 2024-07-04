@@ -2,6 +2,8 @@ extends Node3D
 
 # Dialogs
 @onready var dialog1 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_1.tscn")
+@onready var dialog2 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_2.tscn")
+@onready var dialog3 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_3.tscn")
 
 var player
 
@@ -15,6 +17,10 @@ func _ready():
 		Global.cutscene_playing = true
 	if GlobalGarden.finished_minigame_3_2:
 		$Player.position = Vector3(16.85, 0.85, 0.65)
+	elif GlobalGarden.finished_minigame_1:
+		$Player.position = Vector3(16.85, 0.85, 0.65)
+		add_child(dialog3.instantiate())
+		
 	
 
 func _process(_delta):
@@ -27,7 +33,12 @@ func _process(_delta):
 func _on_cutscene_animation_animation_finished(camera_pan):
 	Global.cutscene_playing = false
 	$CutsceneAnimation/MouseBlock.queue_free()
+	add_child(dialog1.instantiate())
 
 
 func _on_dialog_area_body_entered(body):
-	add_child(dialog1.instantiate())
+	add_child(dialog2.instantiate())
+
+
+func _on_animation_player_animation_finished(anim_name):
+	pass

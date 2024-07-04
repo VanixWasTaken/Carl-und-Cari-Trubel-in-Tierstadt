@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://ckv10od6wynv3"]
+[gd_scene load_steps=57 format=3 uid="uid://ckv10od6wynv3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/garden_center.gd" id="1_35ge2"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_wckdn"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://cw4aec8peprgy" path="res://Assets/Art/Characters/Guido/Fullbody/gardener_idle8.png" id="24_uoo3b"]
 [ext_resource type="Texture2D" uid="uid://cuxw6karefy32" path="res://Assets/Art/Characters/Guido/Fullbody/gardener_idle9.png" id="25_c73ih"]
 [ext_resource type="Texture2D" uid="uid://dgllrspnnc8b6" path="res://Assets/Art/Characters/Guido/Fullbody/gardener_idle10.png" id="26_use6t"]
+[ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="27_fwpvh"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
 vertices = PackedVector3Array(-36.9277, 2.39435, -5.37234, -36.9277, 2.39435, -2.37234, -29.9277, 2.39435, -2.37234, -29.9277, 2.39435, -5.37234, 29.8223, 2.39435, -5.37234, 29.8223, 2.39435, -2.37234, 31.5723, 2.39435, -2.37234, 31.5723, 2.39435, -5.37234, -29.1777, 2.39435, -5.12234, -29.1777, 2.39435, -4.87234, -17.9277, 2.39435, -4.87234, -17.9277, 2.39435, -5.12234, -29.1777, 13.0344, -5.12234, -29.1777, 13.0344, -4.87234, 29.0723, 13.0344, -4.87234, 29.0723, 13.0344, -5.12234, -17.1777, 2.96435, -5.12234, -17.1777, 2.96435, -4.87234, -7.17771, 2.96435, -4.87234, -7.17771, 2.96435, -5.12234, -6.42771, 2.39435, -5.12234, -6.42771, 2.39435, -4.87234, 29.0723, 2.39435, -4.87234, 29.0723, 2.39435, -5.12234, -28.4277, 2.39435, -4.12234, -28.4277, 2.39435, -2.37234, -28.1777, 2.39435, -2.37234, -28.1777, 2.39435, -4.12234, -28.4277, 13.0944, -4.12234, -28.4277, 13.0944, 5.12766, -28.1777, 13.0944, 5.12766, -28.1777, 13.0944, -4.12234, -27.4277, 2.39435, -4.12234, -27.4277, 2.39435, -2.37234, -17.9277, 2.39435, -2.37234, -17.9277, 2.39435, -4.12234, -17.1777, 2.96435, -4.12234, -17.1777, 2.96435, -1.12234, -7.17771, 2.96435, -1.12234, -7.17771, 2.96435, -4.12234, -6.42771, 2.39435, -4.12234, -6.42771, 2.39435, -2.37234, 29.0723, 2.39435, -2.37234, 29.0723, 2.39435, -4.12234, -28.4277, 2.34435, -1.62234, -28.4277, 2.34435, 0.37766, -28.1777, 2.34435, 0.37766, -28.1777, 2.34435, -1.62234, -17.6777, 2.34435, -0.37234, -17.6777, 2.34435, -0.62234, -17.9277, 2.34435, -0.62234, -24.4277, 2.34435, 0.12766, -24.4277, 2.34435, 0.37766, -24.1777, 2.34435, 0.37766, -17.9277, 2.34435, -0.62234, -24.1777, 2.34435, 5.62766, -24.4277, 2.34435, 5.62766, -24.4277, 2.34435, 5.87766, -16.4277, 2.34435, 5.87766, -27.4277, 2.34435, -1.62234, -27.4277, 2.34435, 0.12766, -24.4277, 2.34435, 0.12766, -17.9277, 2.34435, -0.62234, -17.9277, 2.34435, -1.62234, -16.4277, 2.34435, 5.87766, -16.1777, 2.34435, -0.37234, -17.6777, 2.34435, -0.37234, -16.4277, 2.34435, 5.87766, -17.6777, 2.34435, -0.37234, -17.9277, 2.34435, -0.62234, -24.1777, 2.34435, 0.37766, -24.1777, 2.34435, 5.62766, -3.92771, 2.34435, 3.87766, -3.92771, 2.34435, 3.62766, -4.17771, 2.34435, 3.62766, -16.4277, 2.34435, 5.87766, -6.67771, 2.34435, -0.37234, -4.17771, 2.34435, 2.12766, -3.92771, 2.34435, 2.12766, -3.92771, 2.34435, 1.87766, -6.42771, 2.34435, -0.62234, -6.67771, 2.34435, -0.62234, -4.17771, 2.34435, 3.62766, -4.17771, 2.34435, 2.12766, -6.67771, 2.34435, -0.37234, -16.1777, 2.34435, -0.37234, -16.4277, 2.34435, 5.87766, -1.92771, 2.34435, 5.87766, -1.92771, 2.34435, 3.87766, -3.92771, 2.34435, 3.87766, -16.4277, 2.34435, 5.87766, -3.92771, 2.34435, 1.87766, -1.92771, 2.34435, 1.87766, -1.92771, 2.34435, -1.62234, -6.42771, 2.34435, -1.62234, -6.42771, 2.34435, -0.62234, -1.92771, 2.34435, 1.87766, 5.57229, 2.34435, 1.87766, 5.57229, 2.34435, -1.62234, -1.92771, 2.34435, -1.62234, 7.57229, 2.34435, 1.87766, 7.57229, 2.34435, 2.12766, 7.82229, 2.34435, 2.12766, 7.82229, 2.34435, 3.62766, 7.57229, 2.34435, 3.62766, 7.57229, 2.34435, 3.87766, 21.5723, 2.34435, 4.62766, 21.3223, 2.34435, 4.37766, 21.5723, 2.34435, 4.62766, 21.5723, 2.34435, 4.37766, 21.3223, 2.34435, 4.37766, 21.3223, 2.34435, 1.87766, 21.5723, 2.34435, 1.87766, 21.5723, 2.34435, 1.62766, 23.0723, 2.34435, 5.87766, 23.3223, 2.34435, 4.62766, 21.5723, 2.34435, 4.62766, 7.57229, 2.34435, 3.87766, 5.57229, 2.34435, 3.87766, 5.57229, 2.34435, 5.87766, 23.0723, 2.34435, 5.87766, 21.5723, 2.34435, 4.62766, 21.5723, 2.34435, 1.62766, 23.0723, 2.34435, 1.62766, 22.8223, 2.34435, -1.62234, 21.3223, 2.34435, 1.87766, 21.5723, 2.34435, 1.62766, 22.8223, 2.34435, -1.62234, 5.57229, 2.34435, -1.62234, 7.57229, 2.34435, 1.87766, 7.82229, 2.34435, 2.12766, 5.57229, 2.34435, -1.62234, 5.57229, 2.34435, 1.87766, 7.57229, 2.34435, 1.87766, 21.3223, 2.34435, 1.87766, 7.82229, 2.34435, 2.12766, 7.82229, 2.34435, 3.62766, 21.3223, 2.34435, 4.37766, 23.0723, 2.34435, 1.62766, 29.0723, 2.34435, 1.62766, 29.0723, 2.34435, -1.62234, 22.8223, 2.34435, -1.62234, 29.8223, 2.34435, -1.62234, 29.8223, 2.34435, 1.87766, 30.0723, 2.34435, 1.87766, 30.0723, 2.34435, -1.62234, -27.4277, 2.85435, 0.87766, -27.4277, 2.85435, 5.12766, -24.9277, 2.85435, 5.12766, -24.9277, 2.85435, 0.87766, 22.0723, 2.96435, 2.37766, 22.0723, 2.96435, 3.87766, 29.0723, 2.96435, 3.87766, 29.0723, 2.96435, 2.37766, -3.42771, 3.18435, 2.62766, -3.42771, 3.18435, 3.12766, 7.07229, 3.18435, 3.12766, 7.07229, 3.18435, 2.62766, -1.92771, 2.34435, 5.87766, 5.57229, 2.34435, 5.87766, 5.57229, 2.34435, 3.87766, -1.92771, 2.34435, 3.87766, 29.8223, 2.34435, 5.62766, 29.5723, 2.34435, 5.62766, 29.5723, 2.34435, 5.87766, 30.0723, 2.34435, 5.87766, 30.0723, 2.34435, 4.37766, 29.8223, 2.34435, 4.37766, 29.8223, 2.34435, 5.62766, 30.0723, 2.34435, 5.87766, 29.3223, 2.34435, 5.87766, 29.3223, 2.34435, 5.62766, 29.0723, 2.34435, 5.62766, 29.0723, 2.34435, 5.62766, 29.0723, 2.34435, 4.62766, 23.3223, 2.34435, 4.62766, 23.0723, 2.34435, 5.87766, 29.3223, 2.34435, 5.87766, 29.0723, 2.34435, 5.62766, 23.3223, 2.34435, 4.62766)
@@ -158,7 +159,47 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8jp4s"]
-size = Vector3(5.9519, 1, 8.22678)
+size = Vector3(5.9519, 1, 3.75792)
+
+[sub_resource type="Animation" id="Animation_ltsux"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeAnimation:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(49.5, 55)]
+}
+
+[sub_resource type="Animation" id="Animation_ltvyy"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeAnimation:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(45, 50), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0uxyh"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i0a4y"]
+_data = {
+"fade_in": SubResource("Animation_ltsux"),
+"fade_out": SubResource("Animation_ltvyy"),
+"new_animation": SubResource("Animation_0uxyh")
+}
 
 [node name="Garden" type="Node3D" groups=["Root"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -365,10 +406,39 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GardenCenterNPC/DialogArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.436401, 0, 0.363815)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.436401, 0, -1.87061)
 shape = SubResource("BoxShape3D_8jp4s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="FadeAnimation" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.492668
+anchor_top = 0.496296
+anchor_right = 0.492668
+anchor_bottom = 0.496296
+offset_left = -1045.0
+offset_top = -594.0
+offset_right = 974.078
+offset_bottom = 555.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1043.66, 620.915)
+mouse_filter = 2
+texture = ExtResource("27_fwpvh")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" groups=["Animator"]]
+libraries = {
+"": SubResource("AnimationLibrary_i0a4y")
+}
 
 [connection signal="animation_finished" from="CutsceneAnimation" to="." method="_on_cutscene_animation_animation_finished"]
 [connection signal="body_entered" from="GardenCenterNPC/DialogArea" to="." method="_on_dialog_area_body_entered"]
+[connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
 [editable path="UI/HelpButton"]
