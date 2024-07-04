@@ -7,6 +7,8 @@ var dialogs = 1
 var dialog_side = ["left", "right"]
 var finished = false
 var same_speaker = false
+var help_name
+var vo_name
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
@@ -21,6 +23,14 @@ var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.
 
 
 func _ready():
+	if Global.character == "Cari":
+		var help_name = "Carl"
+		var vo_name = "carl"
+	
+	if Global.character == "Carl":
+		var help_name = "Cari"
+		var vo_name = "cari"
+	
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
@@ -57,20 +67,14 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Carl":
-			short_node_text.text = "Schneide die Äste und Büschel ab, die krank oder unpassend aussehen.."
-			short_node_rect.texture = PRESET2
-			short_node_name.text = "Cari"
-			#$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_powder_help_1.mp3")
-			#$"../VoiceOver".play()
-			dialogs += 1
-		elif Global.character == "Cari":
-			short_node_text.text = "Schneide die Äste und Büschel ab, die krank oder unpassend aussehen."
-			short_node_rect.texture = PRESET1
-			short_node_name.text = "Carl"
-			#$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_powder_help_1.mp3")
-			#$"../VoiceOver".play()
-			dialogs += 1
+		
+		short_node_text.text = "Schneide die Äste und Büschel ab, die krank oder unpassend aussehen."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = help_name
+		
+		load("res://Assets/Sound/VO/Garden Center/ + help_name" + "/NPC/vo_npc_" + vo_name + "_garden_snipping_help_02.mp3")
+		dialogs += 1
+		
 	
 	if dialogs == 1 and GlobalGarden.garden_mini_help_button_state == 1:
 		var short_node = get_child(1)
