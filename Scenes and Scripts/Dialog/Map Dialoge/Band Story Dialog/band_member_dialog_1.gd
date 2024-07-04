@@ -15,6 +15,11 @@ var PRESET3
 var mouse_inside_area = false
 var player 
 var next_job
+
+var path_carl
+var path_cari
+var path_sam
+
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var Carl = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")

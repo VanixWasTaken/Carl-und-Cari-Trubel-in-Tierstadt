@@ -85,6 +85,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Hallo, Cari am Apparat."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_map_bandmembers_01_02.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 4:
@@ -95,6 +97,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Das haben wir! Sie ist wieder sichtbar wie eine Leuchtturm Lampe bei Nacht!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_01_04.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 7:
@@ -105,6 +109,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Erdbeeren?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_01_07.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	
@@ -138,6 +144,7 @@ func add_right_dialog_box():
 		short_node_text.text = "*Ring Ring Ring*"
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Telefon"
+		#### hier muss ring ring sound rein
 		dialogs += 1
 
 	elif dialogs == 3:
@@ -148,6 +155,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Hallöchen, hier ist nochmal Bianca die Bürgermeisterin. Ich habe von Christina gehört, dass ihr sehr gute Arbeit geleistet habt."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Bianca"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Bianca/vo_npc_bianca_map_bandmembers_01_03.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 5:
@@ -169,6 +178,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Wie dem auch sei, kommt noch einmal zum Marktplatz, dort könnt ihr die Früchte eurer Arbeit ernten."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Bianca"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Bianca/vo_npc_bianca_map_bandmembers_01_06.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -191,6 +202,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Nicht ganz, aber es wartet auch noch jemand, der euch gerne kennenlernen möchte."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Bianca"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Bianca/vo_npc_bianca_map_bandmembers_01_09.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = false
 ##########################################################################################

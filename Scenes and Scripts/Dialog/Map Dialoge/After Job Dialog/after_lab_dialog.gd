@@ -16,6 +16,10 @@ var PRESET4
 var PRESET5
 var mouse_inside_area = false
 var player 
+
+var path_cari = "res://Assets/Sound/VO/Map/Cari/vo_pc_cari_after_lab_map_"
+var path_carl = "res://Assets/Sound/VO/Map/Carl/vo_npc_carl_map_help_1.mp3" + ".mp3"
+
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var Carl = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
@@ -74,6 +78,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Ich wusste gar nicht, dass man im Chemielabor so viel erleben kann."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		#$"../Voice Over".stream = load(path_carl + "01.mp3")
+		#$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -85,6 +91,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Du sagst es. Es war echt aufregend, die Chemikalien zu mischen und selbst Pfoten anlegen zu können."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../Voice Over".stream = load(path_cari + "02.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = false
 
