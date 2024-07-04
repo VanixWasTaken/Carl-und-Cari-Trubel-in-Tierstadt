@@ -63,22 +63,23 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("1_03ug4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-152.167, 4)
+position = Vector2(160.5, 12)
 sprite_frames = SubResource("SpriteFrames_svpjf")
 animation = &"standing"
+flip_h = true
 
 [node name="MouseArea" type="Area2D" parent="."]
-position = Vector2(-152.167, 4)
+position = Vector2(160.5, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea"]
-position = Vector2(153.667, -6.66667)
+position = Vector2(-169.833, -20)
 shape = SubResource("RectangleShape2D_l6i5d")
 
 [node name="SprayArea" type="Area2D" parent="."]
-position = Vector2(-152.167, 4)
+position = Vector2(160.5, 12)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SprayArea"]
-polygon = PackedVector2Array(-132, -276, -421.333, -146.667, -449.333, -50.6667, -420, 8, -260, 65.3333, -90.6667, -224)
+polygon = PackedVector2Array(168.167, -266, 438.167, -138, 462.167, -40, 382.167, 54, 250.167, 52, 98.167, -216)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="mouse_entered" from="MouseArea" to="." method="_on_mouse_area_mouse_entered"]

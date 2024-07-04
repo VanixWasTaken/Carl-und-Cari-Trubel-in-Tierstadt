@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgo1q230aclpt"]
+
+[ext_resource type="Texture2D" uid="uid://fd6xqqniebfs" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/soil/soil.png" id="1_rn2yv"]
+[ext_resource type="Texture2D" uid="uid://dsnv04duvceg0" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/soil/soil_selected.png" id="2_engnp"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/soil.gd" id="3_pe1om"]
+[ext_resource type="Texture2D" uid="uid://bwd8hrn7g8id6" path="res://Assets/Art/UI/Menus/background.png" id="4_ve3gr"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_7b7y1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kw0ga"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rn2yv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_engnp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmlo3"]
+size = Vector2(288, 191)
+
+[node name="Soil2" type="AnimatedSprite2D"]
+position = Vector2(1708, 252)
+sprite_frames = SubResource("SpriteFrames_kw0ga")
+script = ExtResource("3_pe1om")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-13, 2.5)
+shape = SubResource("RectangleShape2D_rmlo3")
+
+[node name="InformationLabel" type="Node2D" parent="."]
+visible = false
+position = Vector2(-346, 0)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="InformationLabel"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_ve3gr")
+
+[node name="Label" type="Label" parent="InformationLabel/Sprite2D"]
+offset_left = -805.0
+offset_top = -385.0
+offset_right = -265.0
+offset_bottom = -122.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
+theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
+theme_override_constants/outline_size = 15
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("5_7b7y1")
+theme_override_font_sizes/font_size = 34
+text = "I hob in hosn gschissen"
+autowrap_mode = 3
+text_overrun_behavior = 2
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

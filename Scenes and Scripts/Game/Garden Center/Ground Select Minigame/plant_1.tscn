@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0m2xjni56u6m"]
+
+[ext_resource type="Texture2D" uid="uid://blkwk1nwkioev" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon1.png" id="1_hav5f"]
+[ext_resource type="Texture2D" uid="uid://de5e24i441sqt" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon_selected.png" id="2_jb76v"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/ground_type_plant.gd" id="3_4sv5l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e1r6v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hav5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jb76v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Plant1" type="AnimatedSprite2D"]
+position = Vector2(139, 156)
+sprite_frames = SubResource("SpriteFrames_e1r6v")
+script = ExtResource("3_4sv5l")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

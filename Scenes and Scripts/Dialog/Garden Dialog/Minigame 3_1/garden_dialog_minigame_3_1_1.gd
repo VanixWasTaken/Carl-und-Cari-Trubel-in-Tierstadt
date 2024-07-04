@@ -15,7 +15,6 @@ var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.
 var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
 var PRESET3 = preload("res://Assets/Art/Characters/Guido/Headshot/gardener_headshot.png")
 
-
 ##########################################################################################
 
 
@@ -27,7 +26,7 @@ func _ready():
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_left_dialog_box()
+	add_right_dialog_box()
 ##########################################################################################
 
 
@@ -38,7 +37,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 17:
+	if dialogs == 11:
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
@@ -55,70 +54,17 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 1:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Da wären wir. Was müssen wir hier machen?"
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
-		dialogs += 1
-		same_speaker = true
-	
-	elif dialogs == 2:
+	if dialogs == 2:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Bitte sag nicht, dass wir alle von den Dingen, die du vorhin aufgelistet hast, jetzt beachten müssen."
+		short_node_text.text = "Alles klar und wir müssen den verschiedenen Pflanzen einfach nur den richtigen Bodentyp zuweisen?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		dialogs += 1
-		
 	
-	elif dialogs == 3:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich will mich nicht mit irgendwelchen Pflanzen Dieben anlegen müssen."
-		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
-		dialogs += 1
-		same_speaker = false
-		
-	elif dialogs == 5:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Carl, das war wieder einer seiner kleinen Witze und du bist schon wieder drauf reingefallen."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
-		dialogs += 1
-		
 	elif dialogs == 10:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Und jetzt sollen wir die Einstellungen, die kaputt sind, per Pfote einstellen?"
-		short_node_rect.texture = PRESET1
-		short_node_name.text = "Carl"
-		dialogs += 1
-		
-	elif dialogs == 13:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Dann machen wir ja die ganze Arbeit! Was genau macht dein toller Pflanzomat 3000 noch? Ich dachte es würden nur ein paar Systeme nicht funktionieren?!"
-		short_node_rect.texture = PRESET2
-		short_node_name.text = "Cari"
-		dialogs += 1
-		
-	elif dialogs == 16:
 		dialogs += 1
 		Global.moving_allowed = true
 ##########################################################################################
@@ -136,110 +82,88 @@ func add_right_dialog_box():
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 4:
-		var short_node = get_child(2)
+	if dialogs == 1:
+		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "HOHOH…"
+		short_node_text.text = "Sodele, da wären wir. Auf der linken Seite seht ihr, was für Pflanzen wir haben und auf der rechten die verschiedenen Bodentypen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
 		dialogs += 1
 	
+	elif dialogs == 3:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Ganz genau! Die Pflanzen sind sich alle ähnlich und benötigen alle denselben Bodentypen. "
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Guido"
+		dialogs += 1
+		same_speaker = true
+
+	elif dialogs == 4:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Die Bodentypen lassen sich in vier Kategorien einteilen. Sandboden, Schluffboden, Tonboden und Lehmboden."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Guido"
+		dialogs += 1
+
+	elif dialogs == 5:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Jeder kommt mit eigenen Vor- und Nachteilen."
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Guido"
+		dialogs += 1
+
 	elif dialogs == 6:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "In der Tat bist du wieder Opfer einer meiner Streiche reingefallen."
+		short_node_text.text = "Wie ich schon bei dem Pflanzomat 3000 gesagt habe, fühlen sich unterschiedliche Pflanzen in unterschiedlichen Klimas wohl."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
 		dialogs += 1
-		same_speaker = true
-	
-	
+
 	elif dialogs == 7:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ihr müsst nur einen kleinen Teil der vorher genannten Aspekte im Auge behalten, der Rest wird automatisch erledigt."
+		short_node_text.text = "Dasselbe gilt auch für den Boden in dem sie wachsen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
 		dialogs += 1
-		
+
 	elif dialogs == 8:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Letzte Nacht ereignete sich hier ein Stromausfall. Seitdem funktionieren einige Systeme meines „Pflanzomat 3000s“ nicht mehr richtig."
+		short_node_text.text = "Bewegt einfach die Maus über die Bodentypen und Pflanzen für mehr Informationen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
 		dialogs += 1
-	
+		
+
 	elif dialogs == 9:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Dieser dient eigentlich dazu, dass Wohlbefinden meiner Pflanzen automatisch zu regulieren."
+		short_node_text.text = "Wenn ihr denkt, dass ihr den richtigen Bodentypen habt, klickt diesen einfach an."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
 		dialogs += 1
 		same_speaker = false
-
-	elif dialogs == 11:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ganz richtig. Ihr müsst dafür sorgen, dass die Pflanzen keine Schädlinge auf sich tragen."
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Guido"
-		dialogs += 1
-		same_speaker = true
-
-	elif dialogs == 12:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Die Luftfeuchtigkeit stimmt, die Temperatur richtig ist und der Boden feucht genug ist."
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Guido"
-		dialogs += 1
-		same_speaker = false
-	
-	elif dialogs == 14:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Nun ja, die Lichtmenge wird immer noch komplett automatisch geregelt."
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Guido"
-		dialogs += 1
-		same_speaker = true
-		
-	elif dialogs == 15:
-		var short_node = get_child(2)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Genug rumgealbert. Die Pflanzen behandeln sich nicht von selbst."
-		short_node_rect.texture = PRESET3
-		short_node_name.text = "Guido"
-		dialogs +=1
-		same_speaker = false
-
-
-	
-	
-	
-	
-	
-	
 	
 	
 ##########################################################################################
