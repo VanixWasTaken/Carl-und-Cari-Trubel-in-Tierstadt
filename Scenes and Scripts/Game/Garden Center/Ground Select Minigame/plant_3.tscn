@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://2tv3hfl6fl7t"]
+[gd_scene load_steps=8 format=3 uid="uid://2tv3hfl6fl7t"]
 
 [ext_resource type="Texture2D" uid="uid://blkwk1nwkioev" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon1.png" id="1_ueljb"]
 [ext_resource type="Texture2D" uid="uid://de5e24i441sqt" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon_selected.png" id="2_d4pqr"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/plants.gd" id="3_hkpfl"]
-[ext_resource type="Texture2D" uid="uid://bwd8hrn7g8id6" path="res://Assets/Art/UI/Menus/background.png" id="4_x3bu4"]
+[ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="4_486ls"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_seoph"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e1r6v"]
@@ -20,7 +20,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Karrotenpflanze" type="AnimatedSprite2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v03cg"]
+size = Vector2(156, 196)
+
+[node name="Sellerie" type="AnimatedSprite2D"]
 position = Vector2(139, 156)
 sprite_frames = SubResource("SpriteFrames_e1r6v")
 script = ExtResource("3_hkpfl")
@@ -28,29 +31,35 @@ script = ExtResource("3_hkpfl")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -4)
+shape = SubResource("RectangleShape2D_v03cg")
 
 [node name="InformationLabel" type="Node2D" parent="."]
 visible = false
-position = Vector2(-346, 0)
+position = Vector2(273, -52)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="InformationLabel"]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_x3bu4")
+position = Vector2(31.5, 72)
+scale = Vector2(0.232813, 0.333333)
+texture = ExtResource("4_486ls")
 
-[node name="Label" type="Label" parent="InformationLabel/Sprite2D"]
-offset_left = -805.0
-offset_top = -385.0
-offset_right = -265.0
-offset_bottom = -122.0
-scale = Vector2(3, 3)
+[node name="Label" type="Label" parent="InformationLabel"]
+offset_left = -161.0
+offset_top = -77.0
+offset_right = 379.0
+offset_bottom = 241.0
 theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
 theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
 theme_override_constants/outline_size = 15
 theme_override_constants/line_spacing = 15
 theme_override_fonts/font = ExtResource("5_seoph")
 theme_override_font_sizes/font_size = 34
-text = "Das hier ist xy Boden, der ist cool und so Olatzhalter resttejiof<NSÜGEIFPNQK"
+text = "Sellerie bevorzugt:
+- tiefgründige,
+- wasserspeichernde,
+- nährstoffreiche
+Böden."
 autowrap_mode = 3
 text_overrun_behavior = 2
 

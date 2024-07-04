@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://vnj4oyq32r4f"]
+[gd_scene load_steps=15 format=3 uid="uid://vnj4oyq32r4f"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/ground_select_minigame.gd" id="1_pcs28"]
 [ext_resource type="Texture2D" uid="uid://dw71sigk7h684" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/minigame_3_backround.png" id="2_6jlhk"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cu18ups1561ow" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/soil_3.tscn" id="5_1qdyn"]
 [ext_resource type="PackedScene" uid="uid://gdqkhgpysj5q" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/soil_4.tscn" id="6_u6i24"]
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="7_08vl5"]
+[ext_resource type="PackedScene" uid="uid://d0m2xjni56u6m" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/plant_1.tscn" id="7_g52wn"]
+[ext_resource type="PackedScene" uid="uid://jue2a42c5keg" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/plant_2.tscn" id="8_r2wdh"]
+[ext_resource type="PackedScene" uid="uid://2tv3hfl6fl7t" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/plant_3.tscn" id="9_bnkew"]
 
 [sub_resource type="Animation" id="Animation_ltsux"]
 resource_name = "fade_in"
@@ -71,6 +74,15 @@ position = Vector2(1710, 981)
 position = Vector2(1678, 165)
 
 [node name="Plants" type="Node2D" parent="."]
+
+[node name="Sonnenblume" parent="Plants" instance=ExtResource("7_g52wn")]
+position = Vector2(173, 235)
+
+[node name="Apfelbaum" parent="Plants" instance=ExtResource("8_r2wdh")]
+position = Vector2(173, 546)
+
+[node name="Sellerie" parent="Plants" instance=ExtResource("9_bnkew")]
+position = Vector2(184, 880)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

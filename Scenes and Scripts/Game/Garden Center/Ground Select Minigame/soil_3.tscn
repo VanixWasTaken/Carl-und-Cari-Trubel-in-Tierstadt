@@ -23,7 +23,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmlo3"]
 size = Vector2(288, 191)
 
-[node name="Soil3" type="AnimatedSprite2D"]
+[node name="Sandboden" type="AnimatedSprite2D"]
 position = Vector2(1708, 252)
 sprite_frames = SubResource("SpriteFrames_kw0ga")
 script = ExtResource("3_cyeuv")

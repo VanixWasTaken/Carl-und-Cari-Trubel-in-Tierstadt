@@ -36,12 +36,12 @@ shape = SubResource("RectangleShape2D_rmlo3")
 
 [node name="InformationLabel" type="Node2D" parent="."]
 visible = false
-position = Vector2(-383, -112)
+position = Vector2(-468, -106)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="InformationLabel"]
-position = Vector2(11, 163)
-scale = Vector2(0.227083, 0.537037)
+position = Vector2(56.5001, 163)
+scale = Vector2(0.274479, 0.537037)
 texture = ExtResource("4_h8vhd")
 
 [node name="Label" type="Label" parent="InformationLabel"]
@@ -56,7 +56,7 @@ theme_override_fonts/font = ExtResource("5_mgf64")
 theme_override_font_sizes/font_size = 30
 text = "Schluffboden Fakten:
 - Sehr Humus haltig
-- Anfällig für Staunässe
+- Lässt Wasser nicht gut durch
 - Fruchtbar
 - Guter Wasser- und Nährstoffspeicher
 
