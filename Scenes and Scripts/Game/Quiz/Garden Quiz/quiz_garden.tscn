@@ -24,7 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://dhax6i23j7k5p" path="res://Assets/Art/Environment/Quiz/quiz_question3_garden_scissors.png" id="22_ovs4s"]
 [ext_resource type="Texture2D" uid="uid://dgdio4aqc2t3b" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_toothbrush.png" id="23_spg2m"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question2.gd" id="24_ry01n"]
-[ext_resource type="Texture2D" uid="uid://dc6aqo61ul4j7" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks.png" id="25_kw5hn"]
 [ext_resource type="Texture2D" uid="uid://dv4j0r5i8i2j0" path="res://Assets/Art/Environment/Quiz/quiz_question2_lemon.png" id="26_hgxy6"]
 [ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="27_syaqf"]
 [ext_resource type="Texture2D" uid="uid://dsuod2kvgqm0w" path="res://Assets/Art/Environment/Quiz/quiz_question2_soap.png" id="28_6x1tt"]
@@ -43,6 +42,8 @@ default_font = ExtResource("5_1hhxo")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u63no"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ka8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bslay"]
 size = Vector2(795.321, 81.7619)
@@ -648,7 +649,7 @@ texture = ExtResource("9_o2mqp")
 [node name="PhScaleIcon" type="Sprite2D" parent="Question2"]
 position = Vector2(1234, 621)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("25_kw5hn")
+texture = SubResource("CompressedTexture2D_6ka8r")
 
 [node name="PhScale14" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 0)

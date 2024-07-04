@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d115ywx0n62u1"
-path="res://.godot/imported/garden_sacks_selected.png-9a67cb0e630b924a95eede47a591f792.ctex"
+uid="uid://cs5yhbqihps8c"
+path="res://.godot/imported/garden_wall_left.png-2647e2677dc42bff27945ec885e731cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks_selected.png"
-dest_files=["res://.godot/imported/garden_sacks_selected.png-9a67cb0e630b924a95eede47a591f792.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_left.png"
+dest_files=["res://.godot/imported/garden_wall_left.png-2647e2677dc42bff27945ec885e731cf.ctex"]
 
 [params]
 
