@@ -1,9 +1,9 @@
-[gd_scene load_steps=57 format=3 uid="uid://ckv10od6wynv3"]
+[gd_scene load_steps=58 format=3 uid="uid://ckv10od6wynv3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/garden_center.gd" id="1_35ge2"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_wckdn"]
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_g16mw"]
-[ext_resource type="Texture2D" path="res://IMG_0178.png" id="4_fc3c6"]
+[ext_resource type="Texture2D" uid="uid://0i52s0i7ee48" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_placeholder_floor.png" id="4_l523k"]
 [ext_resource type="Texture2D" uid="uid://dqu2uetnhhgtr" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_back.png" id="5_nldcv"]
 [ext_resource type="Texture2D" uid="uid://dnm0vie4ss62k" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_placeholder_wall_left.png" id="6_haull"]
 [ext_resource type="Texture2D" uid="uid://di3spopw54m1x" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_right.png" id="7_co6vq"]
@@ -49,7 +49,7 @@ size = Vector3(19.3163, 1, 0.201752)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vis0"]
-albedo_texture = ExtResource("4_fc3c6")
+albedo_texture = ExtResource("4_l523k")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)
@@ -98,6 +98,9 @@ size = Vector3(3.48059, 1, 4.89343)
 
 [sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_75e5b"]
 polyphony = 3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2obbv"]
+size = Vector3(11.8885, 1, 3.73584)
 
 [sub_resource type="Animation" id="Animation_fxf21"]
 resource_name = "camera_pan"
@@ -155,7 +158,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 8.0
+"speed": 6.0
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8jp4s"]
@@ -342,6 +345,15 @@ bus = &"SFX"
 [node name="BonsaiTrees" parent="Objects" instance=ExtResource("8_mrm3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2419, 4.37417, -3.8203)
 
+[node name="PlayerDetection" type="Area3D" parent="Objects/BonsaiTrees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.5922, 0)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/BonsaiTrees/PlayerDetection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.518005, 0, 1.36792)
+shape = SubResource("BoxShape3D_2obbv")
+
 [node name="DeskPC" type="Sprite3D" parent="Objects"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 2.00653, 4.26527, 2.17534)
 texture = ExtResource("9_831a0")
@@ -402,7 +414,7 @@ frame = 4
 frame_progress = 0.344639
 
 [node name="DialogArea" type="Area3D" parent="GardenCenterNPC"]
-collision_layer = 8
+collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GardenCenterNPC/DialogArea"]
@@ -437,6 +449,8 @@ libraries = {
 "": SubResource("AnimationLibrary_i0a4y")
 }
 
+[connection signal="body_entered" from="Objects/BonsaiTrees/PlayerDetection" to="Objects/BonsaiTrees" method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="Objects/BonsaiTrees/PlayerDetection" to="Objects/BonsaiTrees" method="_on_player_detection_body_exited"]
 [connection signal="animation_finished" from="CutsceneAnimation" to="." method="_on_cutscene_animation_animation_finished"]
 [connection signal="body_entered" from="GardenCenterNPC/DialogArea" to="." method="_on_dialog_area_body_entered"]
 [connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

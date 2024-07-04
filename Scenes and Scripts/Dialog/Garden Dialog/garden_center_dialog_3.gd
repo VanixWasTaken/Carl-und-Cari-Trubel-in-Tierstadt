@@ -23,11 +23,11 @@ var PRESET4 = preload("res://Assets/Art/Characters/Guido/Headshot/gardener_heads
 
 
 func _ready():
-	Global.pause_opened = true
+	#Global.pause_opened = true
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_right_dialog_box()
+	add_left_dialog_box()
 ##########################################################################################
 
 
@@ -56,7 +56,7 @@ func add_left_dialog_box():
 ##################################  WRITE DIALOG HERE  ###################################
 	
 	if dialogs == 1:
-		var short_node = get_child(2)
+		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
@@ -64,6 +64,7 @@ func add_left_dialog_box():
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		dialogs += 1
+		same_speaker = false
 	
 	elif dialogs == 3:
 		var short_node = get_child(2)
@@ -75,7 +76,7 @@ func add_left_dialog_box():
 		short_node_name.text = "Cari"
 		dialogs += 1
 	
-	if dialogs == 5:
+	elif dialogs == 5:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -136,7 +137,7 @@ func add_right_dialog_box():
 ##################################  WRITE DIALOG HERE  ###################################
 	
 	if dialogs == 2:
-		var short_node = get_child(1)
+		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
