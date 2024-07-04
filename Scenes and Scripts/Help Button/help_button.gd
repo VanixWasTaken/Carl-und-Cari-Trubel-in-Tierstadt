@@ -9,7 +9,9 @@ var laboratory_help = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog
 var mini_help = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/mini_help.tscn")
 var map_help = preload("res://Scenes and Scripts/Dialog/Map Dialoge/help_map.tscn")
 var garden_help = preload("res://Scenes and Scripts/Dialog/Garden Dialog/help_garden.tscn")
+var garden_mini_help = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_mini_help.tscn")
 var help
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -63,6 +65,11 @@ func _on_texture_button_button_up():
 		var instance = garden_help.instantiate()
 		add_child(instance)
 		help = garden_help
+	elif get_tree().get_current_scene().get_name() == "CuttingTreeMinigame":
+		var instance = garden_mini_help.instantiate()
+		add_child(instance)
+		help = garden_mini_help
+	
 	if !helpbuttonopen and Global.character == "Cari":
 		emit_signal("HelpOpened")
 		$TextureButton.texture_normal = load("res://Assets/Art/UI/Buttons/HelpButton/button_help_carl_click.png")

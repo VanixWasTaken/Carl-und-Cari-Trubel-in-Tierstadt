@@ -7,6 +7,10 @@ var finished_minigame_2 = false
 var finished_minigame_3_1 = false
 var finished_minigame_3_2 = false
 
+#help button states
+var garden_help_button_state = 0
+var garden_mini_help_button_state = 0
+
 
 # Minigame 3 variables
 var plant_pots_placed = 0

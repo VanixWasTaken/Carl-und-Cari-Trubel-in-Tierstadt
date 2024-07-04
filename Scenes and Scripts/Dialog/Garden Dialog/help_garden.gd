@@ -95,6 +95,7 @@ func add_right_dialog_box():
 	if dialogs == 2:
 		dialogs += 1
 		Global.moving_allowed = true
+		Global.pause_opened = false
 	
 	
 	
