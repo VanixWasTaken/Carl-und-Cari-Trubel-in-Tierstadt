@@ -45,7 +45,7 @@ func _on_dialog_area_body_entered(body):
 		GlobalGarden.talked_to_guido1 = true
 
 
-func _on_animation_player_animation_finished(anim_name):
+func change_scene():
 	if GlobalGarden.last_finished_minigame == "NONE":
 		get_tree().change_scene_to_packed(cutting_tree_minigame_scn)
 	elif GlobalGarden.last_finished_minigame == "Minigame1":
