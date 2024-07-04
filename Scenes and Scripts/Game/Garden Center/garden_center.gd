@@ -9,6 +9,8 @@ func _ready():
 	if GlobalGarden.cutscene_played == false:
 		$CutsceneAnimation.play("camera_pan")
 		Global.cutscene_playing = true
+	if GlobalGarden.finished_minigame_3_2:
+		$Player.position = Vector3(16.85, 0.85, 0.65)
 	
 
 func _process(_delta):

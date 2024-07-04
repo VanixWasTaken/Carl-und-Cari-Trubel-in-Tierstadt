@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://vnj4oyq32r4f"]
+[gd_scene load_steps=34 format=3 uid="uid://vnj4oyq32r4f"]
 
 [ext_resource type="Texture2D" uid="uid://ddlsxysgyc71t" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/minigame4_grid.png" id="1_b04vn"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/garden_planning_minigame.gd" id="1_nucrw"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/arrows.gd" id="4_h81sd"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/item_selection.gd" id="4_hg7h8"]
 [ext_resource type="Texture2D" uid="uid://cqlg0gq3whhjc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/arrow.png" id="6_0sg3q"]
+[ext_resource type="Texture2D" uid="uid://ce5tprkelp3ou" path="res://Assets/Art/UI/player_mouse_clicked.png" id="6_k6w0i"]
 [ext_resource type="Texture2D" uid="uid://bvskmhh3yf3uc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon2.png" id="7_pamqc"]
 [ext_resource type="Texture2D" uid="uid://b4mwx3ixbev8f" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/flower/flower_icon2.png" id="8_mib7p"]
 [ext_resource type="Texture2D" uid="uid://d6sqg03v86bl" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon2.png" id="9_1r6cr"]
@@ -16,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bl3q3vnoh3x2f" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button.png" id="12_ad7lj"]
 [ext_resource type="Texture2D" uid="uid://otmy5c0k20xl" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_dark.png" id="13_6pw5n"]
 [ext_resource type="Texture2D" uid="uid://nk8ndgcpb32e" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_light.png" id="14_dshsx"]
+[ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="18_voyt2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmk48"]
 
@@ -675,6 +677,46 @@ _data = {
 "stone_plate_to_plant_pot": SubResource("Animation_w2282")
 }
 
+[sub_resource type="Animation" id="Animation_ltsux"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeAnimation:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(49.5, 55)]
+}
+
+[sub_resource type="Animation" id="Animation_ltvyy"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeAnimation:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(45, 50), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0uxyh"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i0a4y"]
+_data = {
+"fade_in": SubResource("Animation_ltsux"),
+"fade_out": SubResource("Animation_ltvyy"),
+"new_animation": SubResource("Animation_0uxyh")
+}
+
 [node name="GardenPlanningMinigame" type="Node2D"]
 script = ExtResource("1_nucrw")
 
@@ -933,9 +975,9 @@ shape = SubResource("RectangleShape2D_lmk48")
 [node name="Marker2D" type="Marker2D" parent="Grid/GridArea24" groups=["GridMarkers"]]
 
 [node name="TaskBackground" type="TextureRect" parent="."]
-offset_left = 1279.0
+offset_left = 1251.0
 offset_top = -53.0
-offset_right = 2026.0
+offset_right = 2073.0
 offset_bottom = 769.0
 texture = ExtResource("2_vnyvc")
 
@@ -968,6 +1010,22 @@ text = "- Platziere genau 3
 - Platziere genau 3
    Blumen"
 
+[node name="MinorTask1" type="Sprite2D" parent="TaskBackground/Task1"]
+position = Vector2(368, 35)
+texture = ExtResource("6_k6w0i")
+
+[node name="MinorTask2" type="Sprite2D" parent="TaskBackground/Task1"]
+position = Vector2(367, 119)
+texture = ExtResource("6_k6w0i")
+
+[node name="MinorTask3" type="Sprite2D" parent="TaskBackground/Task1"]
+position = Vector2(369, 205)
+texture = ExtResource("6_k6w0i")
+
+[node name="MinorTask4" type="Sprite2D" parent="TaskBackground/Task1"]
+position = Vector2(370, 294)
+texture = ExtResource("6_k6w0i")
+
 [node name="Task2" type="Label" parent="TaskBackground"]
 visible = false
 layout_mode = 0
@@ -985,6 +1043,14 @@ text = "- Platziere genau 1
   Blumentöpfe
 
 "
+
+[node name="MinorTask1" type="Sprite2D" parent="TaskBackground/Task2"]
+position = Vector2(368, 35)
+texture = ExtResource("6_k6w0i")
+
+[node name="MinorTask2" type="Sprite2D" parent="TaskBackground/Task2"]
+position = Vector2(368, 171)
+texture = ExtResource("6_k6w0i")
 
 [node name="IconBg" type="Sprite2D" parent="."]
 position = Vector2(1656, 892)
@@ -1063,12 +1129,33 @@ texture_normal = ExtResource("12_ad7lj")
 texture_pressed = ExtResource("13_6pw5n")
 texture_hover = ExtResource("14_dshsx")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 489.0
-offset_top = 32.0
-offset_right = 529.0
-offset_bottom = 55.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="FadeAnimation" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.492668
+anchor_top = 0.496296
+anchor_right = 0.492668
+anchor_bottom = 0.496296
+offset_left = -1045.0
+offset_top = -594.0
+offset_right = 974.078
+offset_bottom = 555.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1043.66, 620.915)
+mouse_filter = 2
+texture = ExtResource("18_voyt2")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" groups=["Animator"]]
+libraries = {
+"": SubResource("AnimationLibrary_i0a4y")
+}
 
 [connection signal="move_left" from="ItemSelection/Arrows" to="ItemSelection" method="_on_arrows_move_left"]
 [connection signal="move_right" from="ItemSelection/Arrows" to="ItemSelection" method="_on_arrows_move_right"]
@@ -1081,3 +1168,4 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 [connection signal="animation_finished" from="ItemSelection/AnimationPlayer" to="ItemSelection" method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="FinishedButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="FinishedButton" to="ItemSelection" method="_on_finished_button_pressed"]
+[connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

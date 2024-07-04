@@ -27,7 +27,7 @@ func _ready():
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
-	add_right_dialog_box()
+	add_left_dialog_box()
 ##########################################################################################
 
 
@@ -38,7 +38,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 5:
+	if dialogs == 8:
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
@@ -55,18 +55,40 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 2:
-		var short_node = get_child(2)
+	if dialogs == 1:
+		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Achso cool dann weiß ich jetzt wie das geht?"
+		short_node_text.text = "Also, was müssen wir tun? Biber-Barbaren ausbilden? Einen Zitteraal-Zauberer-Turm bauen oder …?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		dialogs += 1
 		same_speaker = false
 		
-	elif dialogs == 4:
+	if dialogs == 3:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Also sollen wir hier nur das Layout für den Garten planen? Was passiert, wenn wir die Aufgaben nicht erfüllen?"
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+		same_speaker = false
+	
+	if dialogs == 6:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Dann wollen wir mal unser Bestes geben, dass wir uns einen Garten ausdenken, den man so schnell nicht vergessen wird."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = "Carl"
+		dialogs += 1
+		same_speaker = true
+	
+	elif dialogs == 7:
 		dialogs += 1
 		Global.moving_allowed = true
 	
@@ -85,23 +107,34 @@ func add_right_dialog_box():
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 1:
-		var short_node = get_child(1)
+	if dialogs == 2:
+		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Also hier steht gerade ein fillertext welcher dir etwas erklärt"
+		short_node_text.text = "Nicht so schnell mein Junge. Eure Aufgabe ist es einfach nur die Pflanzen einzupflanzen und dabei die Angaben auf dem Zettel zu erfüllen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
 		same_speaker = false
 	
-	elif dialogs == 3:
+	elif dialogs == 4:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Nah dann mal rann an den Speck"
+		short_node_text.text = "Ganz recht, ich rufe dann meine Cousins Ginston und Gaston, die dann den Garten errichten werden."
+		short_node_rect.texture = PRESET4
+		short_node_name.text = "Guido"
+		dialogs += 1
+		same_speaker = true
+	
+	elif dialogs == 5:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Solltet ihr scheitern die Anforderungen zu erfüllen, gibt es dieser Jahr keine Gartenaustellung"
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1

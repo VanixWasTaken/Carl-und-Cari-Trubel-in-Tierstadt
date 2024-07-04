@@ -40,7 +40,8 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 3:
 		Global.dialog_playing = false
-		queue_free()
+		GlobalGarden.finished_minigame_3_2 = true
+		get_tree().get_first_node_in_group("Animator").play("fade_out")
 ##########################################################################################
 
 
@@ -79,7 +80,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Heilige Makrele,du Maschine"
+		short_node_text.text = "Die sind alle ja Wunderschön geworden."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
