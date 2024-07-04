@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://vnj4oyq32r4f"]
+[gd_scene load_steps=37 format=3 uid="uid://vnj4oyq32r4f"]
 
 [ext_resource type="Texture2D" uid="uid://ddlsxysgyc71t" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/minigame4_grid.png" id="1_b04vn"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/garden_planning_minigame.gd" id="1_nucrw"]
@@ -9,8 +9,9 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/item_selection.gd" id="4_hg7h8"]
 [ext_resource type="Texture2D" uid="uid://cqlg0gq3whhjc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/arrow.png" id="6_0sg3q"]
 [ext_resource type="Texture2D" uid="uid://btm1e4tlhp34o" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/checkbox_unchecked.png" id="6_fpbmj"]
-[ext_resource type="Texture2D" uid="uid://cfk5m3juolyhu" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_trashcan.png" id="7_18hto"]
 [ext_resource type="Texture2D" uid="uid://bvskmhh3yf3uc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon2.png" id="7_pamqc"]
+[ext_resource type="Texture2D" uid="uid://dtg7q23n7ymr1" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/trashcan_closed.png" id="7_ws6ge"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/trash_can.gd" id="8_8cpah"]
 [ext_resource type="Texture2D" uid="uid://b4mwx3ixbev8f" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/flower/flower_icon2.png" id="8_mib7p"]
 [ext_resource type="Texture2D" uid="uid://d6sqg03v86bl" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon2.png" id="9_1r6cr"]
 [ext_resource type="PackedScene" uid="uid://32b1y71lasui" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/item.tscn" id="10_xc6c2"]
@@ -21,6 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="18_voyt2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmk48"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfvca"]
+radius = 60.0
+height = 168.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bnmav"]
 size = Vector2(94.1357, 67)
@@ -1031,9 +1036,9 @@ texture = ExtResource("6_fpbmj")
 visible = false
 layout_mode = 0
 offset_left = 214.0
-offset_top = 262.0
-offset_right = 468.0
-offset_bottom = 595.0
+offset_top = 327.0
+offset_right = 559.0
+offset_bottom = 660.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ef2nf")
 theme_override_font_sizes/font_size = 28
@@ -1058,9 +1063,17 @@ position = Vector2(1656, 892)
 texture = ExtResource("2_vnyvc")
 
 [node name="TrashCan" type="Sprite2D" parent="."]
-position = Vector2(1497, 662)
-scale = Vector2(0.537344, 0.537344)
-texture = ExtResource("7_18hto")
+position = Vector2(1485, 667)
+texture = ExtResource("7_ws6ge")
+script = ExtResource("8_8cpah")
+
+[node name="Area2D" type="Area2D" parent="TrashCan"]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashCan/Area2D"]
+position = Vector2(2, 9)
+shape = SubResource("CapsuleShape2D_gfvca")
 
 [node name="ItemSelection" type="Node" parent="."]
 script = ExtResource("4_hg7h8")
@@ -1163,6 +1176,8 @@ libraries = {
 "": SubResource("AnimationLibrary_i0a4y")
 }
 
+[connection signal="area_entered" from="TrashCan/Area2D" to="TrashCan" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="TrashCan/Area2D" to="TrashCan" method="_on_area_2d_area_exited"]
 [connection signal="move_left" from="ItemSelection/Arrows" to="ItemSelection" method="_on_arrows_move_left"]
 [connection signal="move_right" from="ItemSelection/Arrows" to="ItemSelection" method="_on_arrows_move_right"]
 [connection signal="mouse_entered" from="ItemSelection/Arrows/ArrowRight/RightArea" to="ItemSelection/Arrows" method="_on_right_area_mouse_entered"]
