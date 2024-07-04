@@ -351,11 +351,14 @@ frame = 4
 frame_progress = 0.344639
 
 [node name="DialogArea" type="Area3D" parent="GardenCenterNPC"]
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GardenCenterNPC/DialogArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.436401, 0, 0.363815)
 shape = SubResource("BoxShape3D_8jp4s")
 
 [connection signal="animation_finished" from="CutsceneAnimation" to="." method="_on_cutscene_animation_animation_finished"]
+[connection signal="body_entered" from="GardenCenterNPC/DialogArea" to="." method="_on_dialog_area_body_entered"]
 
 [editable path="UI/HelpButton"]

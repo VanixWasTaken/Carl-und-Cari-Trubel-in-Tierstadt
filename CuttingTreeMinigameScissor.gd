@@ -17,4 +17,8 @@ func _input(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position = get_global_mouse_position()
+	if Global.dialog_playing:
+		self.hide()
+	else:
+		self.show()
 
