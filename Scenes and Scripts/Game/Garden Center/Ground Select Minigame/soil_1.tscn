@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dcpbewvkkohqi" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/barkmulch/barkmulch.png" id="1_e5l5m"]
 [ext_resource type="Texture2D" uid="uid://cmavl5sdy6f18" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/barkmulch/barkmulch_selected.png" id="2_k2y7r"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/soil.gd" id="3_n50fa"]
-[ext_resource type="Texture2D" uid="uid://bwd8hrn7g8id6" path="res://Assets/Art/UI/Menus/background.png" id="4_hrg5y"]
+[ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="4_h8vhd"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_mgf64"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kw0ga"]
@@ -23,11 +23,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmlo3"]
 size = Vector2(288, 191)
 
-[node name="Soil1" type="AnimatedSprite2D"]
+[node name="Schluffboden" type="AnimatedSprite2D"]
 position = Vector2(1708, 252)
 sprite_frames = SubResource("SpriteFrames_kw0ga")
 script = ExtResource("3_n50fa")
-correct_soil = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -37,26 +36,34 @@ shape = SubResource("RectangleShape2D_rmlo3")
 
 [node name="InformationLabel" type="Node2D" parent="."]
 visible = false
-position = Vector2(-346, 0)
+position = Vector2(-383, -112)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="InformationLabel"]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_hrg5y")
+position = Vector2(11, 163)
+scale = Vector2(0.227083, 0.537037)
+texture = ExtResource("4_h8vhd")
 
-[node name="Label" type="Label" parent="InformationLabel/Sprite2D"]
-offset_left = -805.0
-offset_top = -385.0
-offset_right = -265.0
-offset_bottom = -122.0
-scale = Vector2(3, 3)
+[node name="Label" type="Label" parent="InformationLabel"]
+offset_left = -161.0
+offset_top = -77.0
+offset_right = 379.0
+offset_bottom = 624.0
 theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
 theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
 theme_override_constants/outline_size = 15
-theme_override_constants/line_spacing = 15
 theme_override_fonts/font = ExtResource("5_mgf64")
-theme_override_font_sizes/font_size = 34
-text = "Das hier ist xy Boden, der ist cool und so Olatzhalter resttejiof<NSÜGEIFPNQK"
+theme_override_font_sizes/font_size = 30
+text = "Schluffboden Fakten:
+- Sehr Humus haltig
+- Anfällig für Staunässe
+- Fruchtbar
+- Guter Wasser- und Nährstoffspeicher
+
+Pflanzen:
+- Rosen
+- Beerensträucher
+- Obstbäume"
 autowrap_mode = 3
 text_overrun_behavior = 2
 
