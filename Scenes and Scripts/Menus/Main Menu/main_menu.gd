@@ -1,10 +1,11 @@
 extends Node2D
 
 @onready var sound = $UI
-@onready var intro_scene = preload("res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.tscn")
-@onready var tutorial_scene = preload("res://Scenes and Scripts/Game/Tutorial/tutorial.tscn")
-@onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
-@onready var laboratory_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
+@onready var intro_scn = preload("res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.tscn")
+@onready var tutorial_scn = preload("res://Scenes and Scripts/Game/Tutorial/tutorial.tscn")
+@onready var map_scn = preload("res://Scenes and Scripts/Game/Map/map.tscn")
+@onready var laboratory_scn = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
+@onready var garden_scn = preload("res://Scenes and Scripts/Game/Garden Center/garden_center.tscn")
 
 var mouse_inside_disabled = false
 
@@ -29,7 +30,7 @@ func _on_start_button_up():
 	$CloudsWhoosch.play()
 	MusicController._fade_to_volume(-80, 1.125)
 	await get_tree().create_timer(1.125).timeout
-	get_tree().change_scene_to_packed(intro_scene)
+	get_tree().change_scene_to_packed(intro_scn)
 
 func _on_options_button_up():
 	$OptionsMenu.visible = true
@@ -70,13 +71,16 @@ func _on_load_game_button_up():
 	MusicController._fade_to_volume(-80, 1.125)
 	if Global.last_scene == "Tutorial":
 		await get_tree().create_timer(1.125).timeout
-		get_tree().change_scene_to_packed(tutorial_scene)
+		get_tree().change_scene_to_packed(tutorial_scn)
 	elif Global.last_scene == "Map":
 		await get_tree().create_timer(1.125).timeout
-		get_tree().change_scene_to_packed(map_scene)
+		get_tree().change_scene_to_packed(map_scn)
 	elif Global.last_scene == "Laboratory":
 		await get_tree().create_timer(1.125).timeout
-		get_tree().change_scene_to_packed(laboratory_scene)
+		get_tree().change_scene_to_packed(laboratory_scn)
+	elif Global.last_scene == "GardenCenter":
+		await get_tree().create_timer(1.125).timeout
+		get_tree().change_scene_to_packed(garden_scn)
 
 
 func _on_load_game_mouse_entered():
