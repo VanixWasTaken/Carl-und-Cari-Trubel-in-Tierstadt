@@ -7,7 +7,7 @@ var scene_name
 var area_name
 var building
 var in_area = false
-
+var footsteps_playing = false
 
 func _ready():
 	$CanvasLayer.show()
@@ -34,7 +34,9 @@ func _physics_process(delta):
 				$AnimatedSprite2D.play("carl_animation")
 			elif Global.character == "Cari" || Global.character == "":
 					$AnimatedSprite2D.play("cari_animation")
-			$Footsteps.play()
+			if !footsteps_playing:
+				$Footsteps.play()
+				footsteps_playing = true
 			if position.distance_to(nav.target_position) > 10:
 				speed = 400
 
@@ -58,6 +60,9 @@ func _physics_process(delta):
 	
 	if speed > 0:
 		$RunParticles.emitting = true
+	
+	if speed == 0:
+		footsteps_playing = false
 
 
 
@@ -82,12 +87,15 @@ func _on_area_2d_area_entered(area):
 
 
 
-	
+
 	
 
 func _on_footsteps_finished():
+	footsteps_playing = false
 	if speed > 0:
 		$Footsteps.play()
+		footsteps_playing = true
+		
 
 
 func enter_building_prompt():

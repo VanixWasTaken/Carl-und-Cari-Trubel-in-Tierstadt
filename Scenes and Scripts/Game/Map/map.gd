@@ -32,7 +32,7 @@ func _ready():
 		Global.menu_open = false
 		$MapTest/Objects/Fireworks.show()
 	
-	if Global.completed_jobs.size() ==9:
+	if Global.completed_jobs.size() == 9:
 		var dialog_instance = main_story_dialog_1.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
 	player = get_tree().get_first_node_in_group("Player")
