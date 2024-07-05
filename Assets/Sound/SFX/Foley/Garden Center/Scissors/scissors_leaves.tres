@@ -1,0 +1,18 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://88365ltu1onf"]
+
+[ext_resource type="AudioStream" uid="uid://c15ntr5s8r5ju" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsleaves_var1.mp3" id="1_2a2xq"]
+[ext_resource type="AudioStream" uid="uid://co25fyogfsvaq" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsleaves_var2.mp3" id="2_newo2"]
+[ext_resource type="AudioStream" uid="uid://043vqh1ton7e" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsleaves_var3.mp3" id="3_4q5qf"]
+[ext_resource type="AudioStream" uid="uid://d0ckld0ab8h45" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsleaves_var4.mp3" id="4_4bcik"]
+
+[resource]
+playback_mode = 1
+streams_count = 4
+stream_0/stream = ExtResource("1_2a2xq")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_newo2")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_4q5qf")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_4bcik")
+stream_3/weight = 1.0

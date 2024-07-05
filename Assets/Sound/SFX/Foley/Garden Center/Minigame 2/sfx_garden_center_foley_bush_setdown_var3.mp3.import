@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dj53oi7vamlx4"
+path="res://.godot/imported/sfx_garden_center_foley_bush_setdown_var3.mp3-8a35f644482c59665b21eba70bc150ee.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/sfx_garden_center_foley_bush_setdown_var3.mp3"
+dest_files=["res://.godot/imported/sfx_garden_center_foley_bush_setdown_var3.mp3-8a35f644482c59665b21eba70bc150ee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

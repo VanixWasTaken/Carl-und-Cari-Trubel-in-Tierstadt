@@ -9,6 +9,8 @@ var dialog_side = ["left", "right"]
 var finished = false
 var same_speaker = false
 
+var guido_path = "res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_garden_groundtype_dialog_"
+
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
@@ -59,9 +61,11 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Alles klar und wir müssen den verschiedenen Pflanzen einfach nur den richtigen Bodentyp zuweisen?"
+		short_node_text.text = "Alles klar und wir müssen einfach nur den richtigen Boden zuweisen?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Garden Center/Carl/PC/vo_pc_carl_garden_groundtype_dialog_02.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 10:
@@ -87,9 +91,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Sodele, da wären wir. Auf der linken Seite seht ihr, was für Pflanzen wir haben und auf der rechten die verschiedenen Bodentypen."
+		short_node_text.text = "Sodele, da wären wir. Auf der linken Seite seht ihr, was wir für Pflanzen haben und auf der rechten die verschiedenen Bodentypen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "01.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 3:
@@ -100,6 +106,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ganz genau! Die Pflanzen sind sich alle ähnlich und benötigen alle denselben Bodentypen. "
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "03.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -111,6 +119,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Die Bodentypen lassen sich in vier Kategorien einteilen. Sandboden, Schluffboden, Tonboden und Lehmboden."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "04_var1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 	elif dialogs == 5:
@@ -121,6 +131,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Jeder kommt mit eigenen Vor- und Nachteilen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "04_var2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 	elif dialogs == 6:
@@ -131,6 +143,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Wie ich schon bei dem Pflanzomat 3000 gesagt habe, fühlen sich unterschiedliche Pflanzen in unterschiedlichen Klimas wohl."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "05_var1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 	elif dialogs == 7:
@@ -141,6 +155,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Dasselbe gilt auch für den Boden in dem sie wachsen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "05_var2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 
 	elif dialogs == 8:
@@ -151,6 +167,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Bewegt einfach die Maus über die Bodentypen und Pflanzen für mehr Informationen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "06_var1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		
 
@@ -162,6 +180,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Wenn ihr denkt, dass ihr den richtigen Bodentypen habt, klickt diesen einfach an."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "06_var2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	

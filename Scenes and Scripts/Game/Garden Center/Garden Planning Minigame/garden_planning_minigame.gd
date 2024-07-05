@@ -55,9 +55,34 @@ func _on_texture_button_pressed():
 		add_child(dialog3.instantiate())
 
 
-
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_out":
 		get_tree().change_scene_to_packed(garden_scene)
 	elif anim_name == "fade_in":
 		garden_scene = load("res://Scenes and Scripts/Game/Garden Center/garden_center.tscn")
+
+
+
+func _on_minor_task_1_texture_changed():
+	if $TaskBackground/Task1/MinorTask1.texture == check:
+		$Checkmark.play()
+
+func _on_minor_task_2_texture_changed():
+	if $TaskBackground/Task1/MinorTask2.texture == check:
+		$Checkmark.play()
+
+func _on_minor_task_3_texture_changed():
+	if $TaskBackground/Task1/MinorTask3.texture == check:
+		$Checkmark.play()
+
+func _on_minor_task_4_texture_changed():
+	if $TaskBackground/Task1/MinorTask4.texture == check:
+		$Checkmark.play()
+
+func _on_minor2_task_1_texture_changed():
+	if $TaskBackground/Task2/MinorTask1.texture == check:
+		$Checkmark.play()
+
+func _on_minor2_task_2_texture_changed():
+	if $TaskBackground/Task2/MinorTask2.texture == check:
+		$Checkmark.play()

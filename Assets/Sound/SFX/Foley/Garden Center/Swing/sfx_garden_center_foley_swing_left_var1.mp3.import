@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctnndby3pljpw"
+path="res://.godot/imported/sfx_garden_center_foley_swing_left_var1.mp3-64427ae90814199eb52255ec70d12240.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Foley/Garden Center/Swing/sfx_garden_center_foley_swing_left_var1.mp3"
+dest_files=["res://.godot/imported/sfx_garden_center_foley_swing_left_var1.mp3-64427ae90814199eb52255ec70d12240.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

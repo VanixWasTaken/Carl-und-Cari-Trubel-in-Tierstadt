@@ -9,6 +9,10 @@ var dialog_side = ["left", "right"]
 var finished = false
 var same_speaker = false
 
+var carl_path = "res://Assets/Sound/VO/Garden Center/Carl/PC/vo_pc_carl_garden_center_dialog_"
+var cari_path = "res://Assets/Sound/VO/Garden Center/Cari/PC/vo_pc_cari_garden_center_dialog_"
+var guido_path = "res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_garden_center_dialog_"
+
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
@@ -63,6 +67,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Das hat wirklich Spaß gemacht, vielleicht kannst du mir mal dieses „Clash of Cats“ zeigen Carl."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../VoiceOver".stream = load(cari_path + "6_02.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -74,6 +80,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Wirklich? Das mach ich auf jeden Fall, wenn wir zuhause sind!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "6_03.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -85,6 +93,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Die sind doch viel zu schwer. Wie sollen wir denn so eine Pflanze..."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "6_05.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -96,6 +106,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Warte. Ist das wieder einer deiner Witze?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "6_06.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -107,6 +119,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Vielen Dank. Wenn wir zuhause sind, werden wir sie sofort einpflanzen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../VoiceOver".stream = load(cari_path + "6_08.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -118,6 +132,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Wir müssen aber jetzt auch weiter. Ich bin schon gespannt, wie der Garten in echt aussehen wird. Auf Wiedersehen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../VoiceOver".stream = load(cari_path + "6_09.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 11:
@@ -128,6 +144,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Tschüssi."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "6_10.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -157,6 +175,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Das war wie immer eine exzellente Leistung. Der Garten-Show steht nichts mehr im Wege."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "6_01.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 4:
@@ -167,6 +187,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Damit wäre eure Reise durch mein Königreich auch so gut wie beendet."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "6_04_var1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 		
@@ -178,6 +200,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Als letzten Schritt müsst ihr lediglich noch eine meiner Pflanzen adoptieren und mit nach Hause nehmen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "6_04_var2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 
@@ -189,6 +213,8 @@ func add_right_dialog_box():
 		short_node_text.text = "HOHOHO. Du hast mich erwischt. Als Belohnung für eure Arbeit schenke ich euch beiden einen Samen meiner schönsten Blume. Passt gut darauf auf."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "6_07.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 12:
@@ -196,9 +222,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Gehet denn wohl!"
+		short_node_text.text = "Auf Wiedersehen!" ## wenn jasper sauer wird kann er mir das sagen, dann änder ich das wieder
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "6_11.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	

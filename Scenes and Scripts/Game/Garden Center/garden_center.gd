@@ -22,6 +22,7 @@ func _ready():
 	Global.last_scene = "GardenCenter"
 	player = get_tree().get_first_node_in_group("Player")
 	if GlobalGarden.last_finished_minigame == "NONE":
+		$Camera3D/AudioListener3D.make_current()
 		$CutsceneAnimation.play("camera_pan")
 		Global.cutscene_playing = true
 		$Player.position = Vector3(-22.362, 0.85, -0.647)
@@ -40,7 +41,6 @@ func _ready():
 		$CutsceneAnimation.queue_free()
 	
 	SaveSystem.save_game()
-	
 
 func _process(_delta):
 	if !Global.cutscene_playing:
@@ -50,6 +50,8 @@ func _process(_delta):
 
 
 func _on_cutscene_animation_animation_finished(camera_pan):
+	$Player/AudioListener3D.make_current()
+	$Camera3D/AudioListener3D.queue_free()
 	Global.cutscene_playing = false
 	$CutsceneAnimation/MouseBlock.queue_free()
 	add_child(dialog1.instantiate())
@@ -92,3 +94,12 @@ func _on_exit_body_entered(body):
 		get_tree().change_scene_to_packed(map_scene)
 		Global.completed_jobs.append("Garden Center")
 		Global.last_scene = "GardenCenter"
+
+
+func _on_animated_sprite_3d_frame_changed():
+	if $GardenCenterNPC/AnimatedSprite3D.frame == 2:
+		$GardenCenterNPC/Swing.stream = load("res://Assets/Sound/SFX/Foley/Garden Center/Swing/swing_left.tres")
+		$GardenCenterNPC/Swing.play()
+	elif $GardenCenterNPC/AnimatedSprite3D.frame == 7:
+		$GardenCenterNPC/Swing.stream = load("res://Assets/Sound/SFX/Foley/Garden Center/Swing/swing_right.tres")
+		$GardenCenterNPC/Swing.play()

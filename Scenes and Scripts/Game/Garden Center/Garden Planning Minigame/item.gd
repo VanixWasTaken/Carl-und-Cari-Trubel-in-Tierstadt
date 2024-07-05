@@ -67,6 +67,15 @@ func _physics_process(delta):
 
 
 func _input(event):
+	if event is InputEventMouseMotion and Input.is_action_pressed("left_click") and !get_name() == "Item":
+			var velocity = event.get_velocity()
+			if velocity > Vector2(100, 100) and !$Dragging.playing:
+				if should_follow_mouse:
+					play_dragging()
+			elif velocity < Vector2(-100, -100) and !$Dragging.playing:
+				if should_follow_mouse:
+					play_dragging()
+	
 	if event.is_action_released("left_click") and !$".".get_name() == "Item" and !is_on_grid:
 		$".".queue_free()
 		if local_current_item_selected == "PlantPot":
@@ -78,6 +87,9 @@ func _input(event):
 		elif local_current_item_selected == "Bush":
 			GlobalGarden.bushs_placed -= 1
 	elif event.is_action_released("left_click") and is_on_grid:
+		if should_follow_mouse == true:
+			_play_setdown()
+			$Dragging.stop()
 		should_follow_mouse = false
 		global_position = script_nearest_marker.global_position
 		script_nearest_marker.get_parent().monitorable = false
@@ -185,3 +197,20 @@ func _on_mouse_entered():
 	local_mouse_inside_pick_up = true
 func _on_mouse_exited():
 	local_mouse_inside_pick_up = false
+
+func _play_setdown():
+	var play_once = 1
+	if play_once == 1:
+		if local_current_item_selected == "Bush" or local_current_item_selected == "Flower":
+			$Setdown.stream = load("res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/bush_setdown.tres")
+		elif local_current_item_selected == "StonePlate" or local_current_item_selected == "PlantPot":
+			$Setdown.stream = load("res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/pot_setdown.tres")
+		$Setdown.play()
+		play_once += 1
+
+func play_dragging():
+	if local_current_item_selected == "Bush" or local_current_item_selected == "Flower":
+			$Dragging.stream = load("res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/bush_drag.tres")
+	elif local_current_item_selected == "StonePlate" or local_current_item_selected == "PlantPot":
+			$Dragging.stream = load("res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/pot_drag.tres")
+	$Dragging.play()

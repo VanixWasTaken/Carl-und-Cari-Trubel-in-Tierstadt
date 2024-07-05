@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqhessse1tm66"
+path="res://.godot/imported/sfx_garden_center_foley_pot_drag_var2.mp3-31cc2c4b0e1e306f19da7ceaba33178e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/sfx_garden_center_foley_pot_drag_var2.mp3"
+dest_files=["res://.godot/imported/sfx_garden_center_foley_pot_drag_var2.mp3-31cc2c4b0e1e306f19da7ceaba33178e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

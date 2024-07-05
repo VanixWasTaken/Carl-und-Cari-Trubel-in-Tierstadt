@@ -40,5 +40,12 @@ target_position = Vector2(0, 180)
 collision_mask = 8
 collide_with_areas = true
 
+[node name="Setdown" type="AudioStreamPlayer" parent="."]
+bus = &"SFX_Foley"
+
+[node name="Dragging" type="AudioStreamPlayer" parent="."]
+volume_db = -6.0
+bus = &"SFX_Foley"
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

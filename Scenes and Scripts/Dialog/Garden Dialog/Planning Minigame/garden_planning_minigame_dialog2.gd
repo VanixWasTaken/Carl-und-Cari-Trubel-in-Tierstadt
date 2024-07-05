@@ -9,6 +9,8 @@ var dialog_side = ["left", "right"]
 var finished = false
 var same_speaker = false
 
+var guido_path = "res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_planning_dialog_"
+
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")

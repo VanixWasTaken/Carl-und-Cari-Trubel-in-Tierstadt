@@ -47,7 +47,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 7:
+	if dialogs == 8:
 		Global.dialog_playing= false
 		queue_free()
 ##########################################################################################
@@ -72,6 +72,8 @@ func add_left_dialog_box():
 		short_node_text.text = "*Gulp* J-ja das tun wir."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Carl & Cari"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Both/vo_pc_carl_and_cari_map_bandmembers_05_02.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 4:
@@ -82,9 +84,11 @@ func add_left_dialog_box():
 		short_node_text.text = "Was soll das heißen, wer sind sie überhaupt?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_map_bandmembers_05_04.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
-	elif dialogs == 6:
+	elif dialogs == 7:
 		dialogs += 1
 		Global.moving_allowed = true
 	
@@ -111,6 +115,8 @@ func add_right_dialog_box():
 		short_node_text.text = "HEY IHR! Geht ihr nicht für Samuel durch die Stadt?"
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Sven der Sphynxkater"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Sven/vo_npc_sven_map_bandmembers_05_1.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 3:
@@ -122,6 +128,8 @@ func add_right_dialog_box():
 "
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Sven der Sphynxkater"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Sven/vo_npc_sven_map_bandmembers_05_03.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 5:
@@ -129,10 +137,26 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich bin…, nein. WAR der SCHLAGZEUGER SVEN von METALLIKATZEN! Sagt ihm, dass ich NIE WIEDER zurückkommen werde! *Er haut ab*"
+		short_node_text.text = "Ich bin…, nein. Ich WAR der SCHLAGZEUGER SVEN Schnurrhaar von den METALLIKATZEN!"
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Sven der Sphynxkater"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Sven/vo_npc_sven_map_bandmembers_05_05_var1.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
+		same_speaker = true
+
+	elif dialogs == 6:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Sagt Herrn Samtpfote, dass ich NIE wieder zurückkommen werde!"
+		short_node_rect.texture = PRESET3
+		short_node_name.text = "Sven der Sphynxkater"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Sven/vo_npc_sven_map_bandmembers_05_05_var2.mp3")
+		$"../Voice Over".play()
+		dialogs += 1
+		same_speaker = false
 
 ##########################################################################################
 

@@ -69,9 +69,11 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Scheint als hättet ihr euch vertragen."
+		short_node_text.text = "Scheint, als hättet ihr euch vertragen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_map_bandmembers_04_01.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 4:
@@ -79,9 +81,11 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Yeah! Dann sind wir einen Schritt näher am besten Konzert aller Zeiten."
+		short_node_text.text = "Yeah! Dann sind wir einen Schritt näher an dem besten Konzert aller Zeiten."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_04_04.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -94,6 +98,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Habt ihr eine Ahnung, wo das nächste Mitglied sein könnte?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_map_bandmembers_04_05.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = false
 
@@ -120,9 +126,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ja, dank euch, es hat sich herausgestellt, dass es sich die ganze Zeit nur um ein Missverständnis gehandelt hat."
+		short_node_text.text = "Ja, dank euch. Es hat sich herausgestellt, dass es sich die ganze Zeit nur um ein Missverständnis gehandelt hat."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Barbara die Bengalkatze"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Barbara/vo_npc_barbara_map_bandmembers_04_02.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -131,9 +139,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Da kann ich mich nur anschließen. Ohne euch hätte ich keine Hoffnung mehr auf das Konzert, aber jetzt sehe ich wieder das Konzert vor meinen Augen."
+		short_node_text.text = "Da kann ich mich nur anschließen. Ohne euch hätte ich keine Hoffnung mehr auf das Konzert, aber jetzt sehe ich es wieder vor meinen Augen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel Samtpfote"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Samuel/vo_npc_samuel_map_bandmembers_04_03.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = false
 
@@ -142,9 +152,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = " Im Moment nicht, wir hören uns weiterhin um. Bianca meinte, dass ihr in der Zwischenzeit schauen sollt ob noch andere Leute eure Hilfe brauchen."
+		short_node_text.text = " Im Moment nicht, wir hören uns weiterhin um. Bianca meinte, dass ihr in der Zwischenzeit schauen sollt, ob noch andere Leute eure Hilfe brauchen."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel Samtpfote"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Samuel/vo_npc_samuel_map_bandmembers_04_06.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 

@@ -1,11 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://j73f2vaexd64"]
+[gd_scene load_steps=9 format=3 uid="uid://j73f2vaexd64"]
 
 [ext_resource type="Texture2D" uid="uid://bjp61467wsuf4" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/scissors1.png" id="1_bl1eh"]
 [ext_resource type="Script" path="res://CuttingTreeMinigameScissor.gd" id="2_od41m"]
+[ext_resource type="AudioStream" uid="uid://ct0sx7j0o856x" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsopen_var1.mp3" id="7_aqai6"]
+[ext_resource type="AudioStream" uid="uid://cr80pivbyxe5m" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsopen_var2.mp3" id="8_kvtfc"]
+[ext_resource type="AudioStream" uid="uid://b1q3i3m27ntfd" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsopen_var3.mp3" id="9_klrp0"]
+[ext_resource type="AudioStream" uid="uid://bt4gw87aio0v4" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsopen_var4.mp3" id="10_r4ttg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3j70s"]
 radius = 31.3874
 height = 175.271
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ega50"]
+playback_mode = 1
+streams_count = 4
+stream_0/stream = ExtResource("7_aqai6")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("8_kvtfc")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("9_klrp0")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("10_r4ttg")
+stream_3/weight = 1.0
 
 [node name="CuttingTreeMinigameScissor" type="Sprite2D"]
 z_index = 1
@@ -19,3 +35,8 @@ script = ExtResource("2_od41m")
 position = Vector2(-75, -128)
 rotation = -0.698132
 shape = SubResource("CapsuleShape2D_3j70s")
+
+[node name="ScissorOpen" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_ega50")
+volume_db = 3.0
+bus = &"SFX_Foley"

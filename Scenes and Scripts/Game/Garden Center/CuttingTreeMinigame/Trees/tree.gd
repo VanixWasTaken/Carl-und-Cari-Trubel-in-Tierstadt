@@ -40,6 +40,7 @@ func _process(delta):
 	trim7_fall()
 
 	if cuts_done == 7:
+		play_ping()
 		move_camera.emit()
 		cuts_done += 1
 
@@ -49,30 +50,39 @@ func _input(event):
 			trim1_should_fall = true
 			$Trims/Trim1/Trim1Area.queue_free()
 			cuts_done += 1
+			$"../LeavesCut".play()
 		if event.is_action_pressed("left_click") and inside_trim2 and !Global.dialog_playing and !animation_playing:
 			trim2_should_fall = true
 			$Trims/Trim2/Trim2Area.queue_free()
 			cuts_done += 1
+			$"../LeavesCut".play()
 		if event.is_action_pressed("left_click") and inside_trim3 and !Global.dialog_playing and !animation_playing:
 			trim3_should_fall = true
 			$Trims/Trim3/Trim3Area.queue_free()
 			cuts_done += 1
+			$"../TwigCut".play()
 		if event.is_action_pressed("left_click") and inside_trim4 and !Global.dialog_playing and !animation_playing:
 			trim4_should_fall = true
 			$Trims/Trim4/Trim4Area.queue_free()
 			cuts_done += 1
+			$"../LeavesCut".play()
 		if event.is_action_pressed("left_click") and inside_trim5 and !Global.dialog_playing and !animation_playing:
 			trim5_should_fall = true
 			$Trims/Trim5/Trim5Area.queue_free()
 			cuts_done += 1
+			$"../TwigCut".play()
 		if event.is_action_pressed("left_click") and inside_trim6 and !Global.dialog_playing and !animation_playing:
 			trim6_should_fall = true
 			$Trims/Trim6/Trim6Area.queue_free()
 			cuts_done += 1
+			$"../TwigCut".play()
 		if event.is_action_pressed("left_click") and inside_trim7 and !Global.dialog_playing and !animation_playing:
 			trim7_should_fall = true
 			$Trims/Trim7/Trim7Area.queue_free()
 			cuts_done += 1
+			$"../LeavesCut".play()
+		elif event.is_action_pressed("left_click"):
+			$"../NothingCut".play()
 
 
 
@@ -175,3 +185,9 @@ func _on_animation_player_animation_started(anim_name):
 	animation_playing = true
 func _on_animation_player_animation_finished(anim_name):
 	animation_playing = false
+
+func play_ping():
+	var onetwothree = 1
+	if onetwothree == 1:
+		$"../TreeFinished".play()
+		onetwothree += 1

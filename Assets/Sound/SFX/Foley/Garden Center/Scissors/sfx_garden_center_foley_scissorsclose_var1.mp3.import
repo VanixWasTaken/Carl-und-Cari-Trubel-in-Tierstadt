@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhvs5q0xgw7vw"
+path="res://.godot/imported/sfx_garden_center_foley_scissorsclose_var1.mp3-3c8ce1140c49b5a4e4e5bd22a744c904.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsclose_var1.mp3"
+dest_files=["res://.godot/imported/sfx_garden_center_foley_scissorsclose_var1.mp3-3c8ce1140c49b5a4e4e5bd22a744c904.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
