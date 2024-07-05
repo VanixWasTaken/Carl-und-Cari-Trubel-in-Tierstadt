@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddrbc3iejgnsn"]
+[gd_scene load_steps=3 format=3 uid="uid://ddrbc3iejgnsn"]
 
 [ext_resource type="Texture2D" uid="uid://brxj74nuakecb" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks.png" id="1_mr557"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Objects/ground_bags.gd" id="2_mt2e4"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_n0j2p"]
-size = Vector3(11.1693, 12.0764, 9.55742)
 
 [node name="Node3D" type="Node3D"]
 
@@ -12,11 +9,11 @@ size = Vector3(11.1693, 12.0764, 9.55742)
 texture = ExtResource("1_mr557")
 script = ExtResource("2_mt2e4")
 
-[node name="Hitbox" type="StaticBody3D" parent="."]
+[node name="Hitbox" type="Area3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.123604, -0.162765, 2.15208)
-shape = SubResource("BoxShape3D_n0j2p")
+[node name="CollisionShape3D" type="CollisionPolygon3D" parent="Hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.984808, -0.831639, 0.207036)
+polygon = PackedVector2Array(-4.31928, 1.03436, -1, 4, 3, 5, 6, 2, 5, -1, 1, -4, -1, -2, -3, -2)
 
 [connection signal="mouse_entered" from="Hitbox" to="GroundBags" method="_on_hitbox_mouse_entered"]
 [connection signal="mouse_exited" from="Hitbox" to="GroundBags" method="_on_hitbox_mouse_exited"]
