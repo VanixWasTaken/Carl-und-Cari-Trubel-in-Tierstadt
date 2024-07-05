@@ -38,7 +38,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 14:
+	if dialogs == 16:
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
@@ -97,7 +97,7 @@ func add_left_dialog_box():
 		short_node_name.text = "Carl"
 		dialogs += 1
 	
-	elif dialogs == 11:
+	elif dialogs == 13:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -106,10 +106,9 @@ func add_left_dialog_box():
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		dialogs += 1
-		same_speaker = true
 	
 	
-	elif dialogs == 13:
+	elif dialogs == 15:
 		dialogs += 1
 		Global.moving_allowed = true
 ##########################################################################################
@@ -174,7 +173,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das stimmt so nicht ganz. Es gibt zwar Pflanzen, die fast überall wachsen können wie z.B. Löwenzahn, aber viele Pflanzen benötigen einen besonderen Boden um gedeihen zu können."
+		short_node_text.text = "Das stimmt so nicht ganz. Es gibt zwar Pflanzen, die fast überall wachsen können wie z.B. Löwenzahn."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
@@ -185,13 +184,33 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Dort drüben findet ihr mehrere Säcke gefüllt mit verschiedenen Bodentypen. Ich erklär euch wofür die genutzt werden und ihr sucht dann den richtigen aus."
+		short_node_text.text = "Aber viele Pflanzen benötigen einen besonderen Boden um gedeihen zu können."
+		short_node_rect.texture = PRESET4
+		short_node_name.text = "Guido"
+		dialogs += 1
+	
+	elif dialogs == 11:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Dort drüben findet ihr mehrere Säcke gefüllt mit verschiedenen Bodentypen."
+		short_node_rect.texture = PRESET4
+		short_node_name.text = "Guido"
+		dialogs += 1
+	
+	elif dialogs == 12:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Ich erklär euch wofür die genutzt werden und ihr sucht dann den richtigen aus."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
 		same_speaker = false
 	
-	elif dialogs == 12:
+	elif dialogs == 14:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)

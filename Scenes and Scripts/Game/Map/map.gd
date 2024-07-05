@@ -8,12 +8,7 @@ var job_buildings
 var player
 
 func _ready():
-	Global.last_scene = "Map"
 	Global.menu_open = true
-	Global.completed_jobs.append("Garden Center")
-	Global.completed_jobs.append("Laboratory Building")
-	Global.job_stars_dict[0] = 5
-	Global.last_scene = "Laboratory"
 	if Global.last_scene == "Laboratory":
 		$Player.position = Vector2(776, 2256)
 		var dialog_instance = after_lab_dialog.instantiate()

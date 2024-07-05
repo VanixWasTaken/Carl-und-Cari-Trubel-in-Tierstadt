@@ -8,11 +8,12 @@ extends Sprite2D
 
 
 func _input(event):
-	if event.is_action_pressed("left_click"):
-		scissor_spr.texture = scissor_cut
+	if !Global.dialog_playing && !Global.cutscene_playing:
+		if event.is_action_pressed("left_click"):
+			scissor_spr.texture = scissor_cut
 
-	if event.is_action_released("left_click"):
-		scissor_spr.texture = scissor_uncut
+		if event.is_action_released("left_click"):
+			scissor_spr.texture = scissor_uncut
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -36,7 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://bay5hyslmqkb3" path="res://Assets/Art/UI/Buttons/Download Buttons/download_button_light.png" id="19_spaiw"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/NPCs/npc_handler.gd" id="31_1481n"]
 [ext_resource type="PackedScene" uid="uid://dmhdb71htj10k" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_npc.tscn" id="31_mll1x"]
-[ext_resource type="Texture2D" uid="uid://bxpck0dk267i4" path="res://Assets/Art/UI/HUD/Map/job_note1.png" id="32_0cf56"]
+[ext_resource type="Texture2D" uid="uid://bxpck0dk267i4" path="res://Assets/Art/UI/HUD/Map/job_note1.PNG" id="32_0cf56"]
 [ext_resource type="PackedScene" uid="uid://cwwvy0q003fg7" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/barbara_npc.tscn" id="32_683wj"]
 [ext_resource type="PackedScene" uid="uid://2d2fjj4yd732" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/sven_npc.tscn" id="33_nmhjc"]
 [ext_resource type="PackedScene" uid="uid://cfoesiummvma2" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_and_barbara.tscn" id="34_clinu"]

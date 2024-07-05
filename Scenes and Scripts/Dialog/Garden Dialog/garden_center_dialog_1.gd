@@ -42,6 +42,7 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 7:
 		Global.dialog_playing = false
+		GlobalGarden.talked_to_guido1 = true
 		queue_free()
 ##########################################################################################
 

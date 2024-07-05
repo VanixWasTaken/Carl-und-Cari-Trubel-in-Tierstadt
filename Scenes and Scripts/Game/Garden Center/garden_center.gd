@@ -4,12 +4,16 @@ extends Node3D
 @onready var dialog1 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_1.tscn")
 @onready var dialog2 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_2.tscn")
 @onready var dialog3 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_3.tscn")
+@onready var dialog4 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_4.tscn")
+@onready var dialog5 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_5.tscn")
+@onready var dialog6 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_6.tscn")
+
 
 var minigame_1 = preload("res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame.tscn")
 var minigame_2 = preload("res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_caring.tscn")
 var minigame_3_1 = preload("res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/ground_select_minigame.tscn")
 var minigame_3_2 = preload("res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/garden_planning_minigame.tscn")
-
+var map_scene
 var player
 
 
@@ -20,12 +24,19 @@ func _ready():
 	if GlobalGarden.last_finished_minigame == "NONE":
 		$CutsceneAnimation.play("camera_pan")
 		Global.cutscene_playing = true
-	if GlobalGarden.last_finished_minigame == "Minigame1":
+	elif GlobalGarden.last_finished_minigame == "CuttingGame":
+		Global.dialog_playing = false
 		$Player.position = Vector3(16.85, 0.85, 0.65)
-		add_child(dialog3.instantiate())
-	#if GlobalGarden.finished_minigame_3_2:
-		#$Player.position = Vector3(16.85, 0.85, 0.65)
-
+		$CutsceneAnimation.queue_free()
+	elif GlobalGarden.last_finished_minigame == "CaringGame":
+		$Player.position = Vector3(-3.992,0.85,-1.5)
+		$CutsceneAnimation.queue_free()
+	elif GlobalGarden.last_finished_minigame == "GroundGame":
+		$Player.position = Vector3(-22.035,0.85,2.492)
+		$CutsceneAnimation.queue_free()
+	elif GlobalGarden.last_finished_minigame == "PlanningGame":
+		$Player.position = Vector3(3.901, 0.85, 0.941)
+		$CutsceneAnimation.queue_free()
 	
 
 func _process(_delta):
@@ -42,9 +53,22 @@ func _on_cutscene_animation_animation_finished(camera_pan):
 
 
 func _on_dialog_area_body_entered(body):
-	if !GlobalGarden.talked_to_guido1:
+	if GlobalGarden.last_finished_minigame == "NONE":
 		add_child(dialog2.instantiate())
-		GlobalGarden.talked_to_guido1 = true
+		GlobalGarden.talked_to_guido2 = true
+	elif GlobalGarden.last_finished_minigame == "CuttingGame":
+		add_child(dialog3.instantiate())
+		GlobalGarden.talked_to_guido3 = true
+	elif GlobalGarden.last_finished_minigame == "CaringGame":
+		add_child(dialog4.instantiate())
+		GlobalGarden.talked_to_guido4 = true
+	elif GlobalGarden.last_finished_minigame == "GroundGame":
+		add_child(dialog5.instantiate())
+		GlobalGarden.talked_to_guido5 = true
+	elif GlobalGarden.last_finished_minigame == "PlanningGame":
+		add_child(dialog6.instantiate())
+		GlobalGarden.talked_to_guido6 = true
+		map_scene = load("res://Scenes and Scripts/Game/Map/map.tscn")
 
 func change_scene():
 	if GlobalGarden.last_finished_minigame == "NONE":
@@ -58,3 +82,10 @@ func change_scene():
 	elif GlobalGarden.last_finished_minigame == "PlanningGame":
 		get_tree().change_scene_to_packed(minigame_1)
 	
+
+
+func _on_exit_body_entered(body):
+	if body.is_in_group("Player") && GlobalGarden.talked_to_guido6:
+		get_tree().change_scene_to_packed(map_scene)
+		Global.completed_jobs.append("Garden Center")
+		Global.last_scene = "GardenCenter"

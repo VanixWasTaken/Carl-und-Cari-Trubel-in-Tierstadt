@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b06jn0c0jhesu"
-path="res://.godot/imported/garden_bonsai_highlighted.png-b8c38b233b7c7bc3bd5f6364d87d7280.ctex"
+uid="uid://b8765esybhogb"
+path="res://.godot/imported/garden_bonsai.png-3a3b5cb4837b439fa2f7f060865d3ad6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/garden_bonsai_highlighted.png"
-dest_files=["res://.godot/imported/garden_bonsai_highlighted.png-b8c38b233b7c7bc3bd5f6364d87d7280.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_bonsai.png"
+dest_files=["res://.godot/imported/garden_bonsai.png-3a3b5cb4837b439fa2f7f060865d3ad6.ctex"]
 
 [params]
 

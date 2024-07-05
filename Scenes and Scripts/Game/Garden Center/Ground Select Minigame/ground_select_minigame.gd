@@ -17,6 +17,7 @@ func _process(delta):
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_out":
+		GlobalGarden.last_finished_minigame = "GroundGame"
 		get_tree().change_scene_to_packed(garden_scene)
 	elif anim_name == "fade_in":
 		garden_scene = load("res://Scenes and Scripts/Game/Garden Center/garden_center.tscn")

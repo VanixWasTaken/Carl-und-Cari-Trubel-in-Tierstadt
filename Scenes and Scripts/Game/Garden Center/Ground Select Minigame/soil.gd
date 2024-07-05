@@ -16,7 +16,7 @@ func _process(delta):
 		if correct_soil:
 			var next_dialog = finish_dialog.instantiate()
 			get_tree().get_current_scene().add_child(next_dialog)
-			GlobalGarden.finished_minigame_3_1 = true
+			GlobalGarden.last_finished_minigame = "GroundGame"
 			mouse_on = false
 		elif !correct_soil:
 			var next_dialog = wrong_dialog.instantiate()

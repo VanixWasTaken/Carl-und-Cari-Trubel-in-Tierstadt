@@ -1,14 +1,20 @@
 extends Node2D
 
-@onready var tree_1 = $Tree1
-@onready var tree_2 = $Tree2
-@onready var dialog1 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Minigame 1/minigame1_dialog1.tscn")
+var tree_1
+var tree_2 
+var dialog1 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Minigame 1/minigame1_dialog1.tscn")
+var dialog3 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Minigame 1/minigame1_dialog2.tscn")
+var dialog2 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Minigame 1/minigame1_dialog3.tscn")
+var dialog4 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Minigame 1/minigame1_dialog4.tscn")
+	
 var garden_scene
 
 func _ready():
 	$CanvasLayer/FadeAnimation.show()
 	$CanvasLayer/AnimationPlayer.play("fade_in")
 	add_child(dialog1.instantiate())
+	tree_2 = $Tree2
+	tree_1 = $Tree1
 
 func _process(delta):
 	if $Tree3.cuts_done == 8:
@@ -19,17 +25,27 @@ func _process(delta):
 
 func _on_tree_1_move_camera():
 	$Camera2D/AnimationPlayer.play("camera_movement1")
+	var next_dialog = dialog2.instantiate()
+	add_child(next_dialog)
 	
 
 func _on_tree_2_move_camera():
 	$Camera2D/AnimationPlayer.play("camera_movement2")
+	var next_dialog = dialog3.instantiate()
+	add_child(next_dialog)
 
 
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_out":
-		GlobalGarden.last_finished_minigame = "Minigame1"
+		GlobalGarden.last_finished_minigame = "CuttingGame"
+		get_tree().change_scene_to_packed(garden_scene)
 	
 	elif anim_name == "fade_in":
 		garden_scene = load("res://Scenes and Scripts/Game/Garden Center/garden_center.tscn")
 
+
+
+func _on_tree_3_move_camera():
+	var next_dialog = dialog4.instantiate()
+	add_child(next_dialog)

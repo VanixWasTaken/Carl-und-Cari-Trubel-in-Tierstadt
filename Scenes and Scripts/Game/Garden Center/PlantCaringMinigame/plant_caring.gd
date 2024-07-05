@@ -136,10 +136,10 @@ func _on_texture_button_button_up():
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_in":
-		$CanvasLayer/FadeAnimation.hide()
 		next_dialog = dialog_1.instantiate()
 		get_tree().get_current_scene().add_child(next_dialog)
 		garden_scene = load("res://Scenes and Scripts/Game/Garden Center/garden_center.tscn")
 	
 	if anim_name == "fade_out":
+		GlobalGarden.last_finished_minigame = "CaringGame"
 		get_tree().change_scene_to_packed(garden_scene)

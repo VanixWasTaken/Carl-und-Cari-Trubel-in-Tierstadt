@@ -44,34 +44,35 @@ func _process(delta):
 		cuts_done += 1
 
 func _input(event):
-	if event.is_action_pressed("left_click") and inside_trim1 and !Global.dialog_playing and !animation_playing:
-		trim1_should_fall = true
-		$Trims/Trim1/Trim1Area.queue_free()
-		cuts_done += 1
-	if event.is_action_pressed("left_click") and inside_trim2 and !Global.dialog_playing and !animation_playing:
-		trim2_should_fall = true
-		$Trims/Trim2/Trim2Area.queue_free()
-		cuts_done += 1
-	if event.is_action_pressed("left_click") and inside_trim3 and !Global.dialog_playing and !animation_playing:
-		trim3_should_fall = true
-		$Trims/Trim3/Trim3Area.queue_free()
-		cuts_done += 1
-	if event.is_action_pressed("left_click") and inside_trim4 and !Global.dialog_playing and !animation_playing:
-		trim4_should_fall = true
-		$Trims/Trim4/Trim4Area.queue_free()
-		cuts_done += 1
-	if event.is_action_pressed("left_click") and inside_trim5 and !Global.dialog_playing and !animation_playing:
-		trim5_should_fall = true
-		$Trims/Trim5/Trim5Area.queue_free()
-		cuts_done += 1
-	if event.is_action_pressed("left_click") and inside_trim6 and !Global.dialog_playing and !animation_playing:
-		trim6_should_fall = true
-		$Trims/Trim6/Trim6Area.queue_free()
-		cuts_done += 1
-	if event.is_action_pressed("left_click") and inside_trim7 and !Global.dialog_playing and !animation_playing:
-		trim7_should_fall = true
-		$Trims/Trim7/Trim7Area.queue_free()
-		cuts_done += 1
+	if !Global.dialog_playing && !Global.cutscene_playing:
+		if event.is_action_pressed("left_click") and inside_trim1 and !Global.dialog_playing and !animation_playing:
+			trim1_should_fall = true
+			$Trims/Trim1/Trim1Area.queue_free()
+			cuts_done += 1
+		if event.is_action_pressed("left_click") and inside_trim2 and !Global.dialog_playing and !animation_playing:
+			trim2_should_fall = true
+			$Trims/Trim2/Trim2Area.queue_free()
+			cuts_done += 1
+		if event.is_action_pressed("left_click") and inside_trim3 and !Global.dialog_playing and !animation_playing:
+			trim3_should_fall = true
+			$Trims/Trim3/Trim3Area.queue_free()
+			cuts_done += 1
+		if event.is_action_pressed("left_click") and inside_trim4 and !Global.dialog_playing and !animation_playing:
+			trim4_should_fall = true
+			$Trims/Trim4/Trim4Area.queue_free()
+			cuts_done += 1
+		if event.is_action_pressed("left_click") and inside_trim5 and !Global.dialog_playing and !animation_playing:
+			trim5_should_fall = true
+			$Trims/Trim5/Trim5Area.queue_free()
+			cuts_done += 1
+		if event.is_action_pressed("left_click") and inside_trim6 and !Global.dialog_playing and !animation_playing:
+			trim6_should_fall = true
+			$Trims/Trim6/Trim6Area.queue_free()
+			cuts_done += 1
+		if event.is_action_pressed("left_click") and inside_trim7 and !Global.dialog_playing and !animation_playing:
+			trim7_should_fall = true
+			$Trims/Trim7/Trim7Area.queue_free()
+			cuts_done += 1
 
 
 

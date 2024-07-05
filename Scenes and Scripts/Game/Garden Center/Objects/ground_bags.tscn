@@ -1,14 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://7iyk4oybya7r"]
+[gd_scene load_steps=4 format=3 uid="uid://ddrbc3iejgnsn"]
 
-[ext_resource type="Texture2D" uid="uid://da6rewoqxrcfd" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_wall_back_room.png" id="1_n5jyt"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Objects/back_wall_garden.gd" id="2_hio8s"]
+[ext_resource type="Texture2D" uid="uid://cbt4kufji4jpv" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks.png" id="1_mr557"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Objects/ground_bags.gd" id="2_mt2e4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n0j2p"]
 size = Vector3(15.5649, 12.0764, 4.68222)
 
-[node name="BackWallGarden" type="Sprite3D"]
-texture = ExtResource("1_n5jyt")
-script = ExtResource("2_hio8s")
+[node name="GroundBags" type="Sprite3D"]
+texture = ExtResource("1_mr557")
+script = ExtResource("2_mt2e4")
 
 [node name="Hitbox" type="StaticBody3D" parent="."]
 

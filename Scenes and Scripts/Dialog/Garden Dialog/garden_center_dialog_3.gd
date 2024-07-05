@@ -38,7 +38,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 13:
+	if dialogs == 16:
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
@@ -64,9 +64,8 @@ func add_left_dialog_box():
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		dialogs += 1
-		same_speaker = false
 	
-	elif dialogs == 3:
+	elif dialogs == 4:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -76,7 +75,7 @@ func add_left_dialog_box():
 		short_node_name.text = "Cari"
 		dialogs += 1
 	
-	elif dialogs == 5:
+	elif dialogs == 6:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -86,7 +85,7 @@ func add_left_dialog_box():
 		short_node_name.text = "Carl"
 		dialogs += 1
 	
-	elif dialogs == 7:
+	elif dialogs == 8:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -96,7 +95,7 @@ func add_left_dialog_box():
 		short_node_name.text = "Cari"
 		dialogs += 1
 	
-	elif dialogs == 9:
+	elif dialogs == 10:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -107,18 +106,28 @@ func add_left_dialog_box():
 		dialogs += 1
 		same_speaker = true
 	
-	elif dialogs == 10:
+	elif dialogs == 11:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Genau Carl. Als sind wir zwar sehr anpassungsfähig, fühlen uns aber eigentlich in Wäldern und Graslandschaften am wohlsten. Guido hingegen fühlt sich in tropischen Regenwäldern am wohlsten."
+		short_node_text.text = "Genau Carl. Als sind wir zwar sehr anpassungsfähig, fühlen uns aber eigentlich in Wäldern und Graslandschaften am wohlsten."
+		short_node_rect.texture = PRESET2
+		short_node_name.text = "Cari"
+		dialogs += 1
+	
+	elif dialogs == 12:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Guido hingegen fühlt sich in tropischen Regenwäldern am wohlsten."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		dialogs += 1
 		same_speaker = false
 	
-	elif dialogs == 12:
+	elif dialogs == 15:
 		dialogs += 1
 		Global.moving_allowed = true
 ##########################################################################################
@@ -141,12 +150,24 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das war tadellose Arbeit. Meine floralen Freunde sind wieder in einem erstklassigen Zustand. Jedoch sind Zweige, die wild wachsen keineswegs die einzigen Beeinträchtigungen die Pflanzen in ihrem Leben überwinden müssen."
+		short_node_text.text = "Das war tadellose Arbeit. Meine floralen Freunde sind wieder in einem erstklassigen Zustand."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
-	
-	elif dialogs == 4:
+		same_speaker = true
+
+	elif dialogs == 3:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Jedoch sind Zweige, die wild wachsen keineswegs die einzigen Beeinträchtigungen die Pflanzen in ihrem Leben überwinden müssen."
+		short_node_rect.texture = PRESET4
+		short_node_name.text = "Guido"
+		dialogs += 1
+		same_speaker = false
+
+	elif dialogs == 5:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -156,7 +177,7 @@ func add_right_dialog_box():
 		short_node_name.text = "Guido"
 		dialogs += 1
 	
-	elif dialogs == 6:
+	elif dialogs == 7:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -166,7 +187,7 @@ func add_right_dialog_box():
 		short_node_name.text = "Guido"
 		dialogs += 1
 	
-	elif dialogs == 8:
+	elif dialogs == 9:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -176,16 +197,27 @@ func add_right_dialog_box():
 		short_node_name.text = "Guido"
 		dialogs += 1
 	
-	elif dialogs == 11:
+	elif dialogs == 13:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Du liegst genau richtig, junge Dame. Aber kommen wir nun zu eurer nächsten Aufgabe. Bitte begebt euch in das Gewächshaus an der hinteren Wand des Raums."
+		short_node_text.text = "Du liegst genau richtig, junge Dame. Aber kommen wir nun zu eurer nächsten Aufgabe."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
+		same_speaker = true
 	
+	elif dialogs == 14:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Bitte begebt euch in das Gewächshaus an der hinteren Wand des Raums."
+		short_node_rect.texture = PRESET4
+		short_node_name.text = "Guido"
+		dialogs += 1
+		same_speaker = false
 	
 	
 ##########################################################################################

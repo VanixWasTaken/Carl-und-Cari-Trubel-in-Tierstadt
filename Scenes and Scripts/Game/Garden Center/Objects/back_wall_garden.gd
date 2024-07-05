@@ -15,16 +15,16 @@ func _input(event):
 
 
 func _process(delta):
-	if should_enter_garden and player_in_reach and GlobalGarden.last_finished_minigame == "Minigame1":
+	if should_enter_garden and player_in_reach and GlobalGarden.last_finished_minigame == "CuttingGame" && GlobalGarden.talked_to_guido3:
 		get_tree().get_first_node_in_group("Animator").play("fade_out")
 
 
 func _on_hitbox_mouse_entered():
-	if GlobalGarden.last_finished_minigame == "Minigame1":
+	if GlobalGarden.last_finished_minigame == "CuttingGame":
 		self.texture = garden_highlighted
 		mouse_inside_garden = true
 func _on_hitbox_mouse_exited():
-	if GlobalGarden.last_finished_minigame == "Minigame1":
+	if GlobalGarden.last_finished_minigame == "CuttingGame":
 		self.texture = garden
 		mouse_inside_garden = false
 

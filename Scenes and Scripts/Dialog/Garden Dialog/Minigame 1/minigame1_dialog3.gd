@@ -13,6 +13,8 @@ var same_speaker = false
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
+##### add icon for environment here once finished
+var PRESET3 = preload("res://Assets/Art/Environment/Map/Clouds/cloud_poof1.png")
 var PRESET4 = preload("res://Assets/Art/Characters/Guido/Headshot/gardener_headshot.png")
 
 
@@ -40,8 +42,7 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 3:
 		Global.dialog_playing = false
-		GlobalGarden.last_finished_minigame = "PlanningGame"
-		get_tree().get_first_node_in_group("Animator").play("fade_out")
+		queue_free()
 ##########################################################################################
 
 
@@ -55,7 +56,8 @@ func add_left_dialog_box():
 	$".".add_child(node)
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
-	
+
+		
 	if dialogs == 2:
 		dialogs += 1
 		Global.moving_allowed = true
@@ -80,13 +82,13 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Die sind alle ja Wunderschön geworden."
+		short_node_text.text = "Gute Arbeit. Die Pflanze ist wieder präsentabel."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
 		same_speaker = false
 	
-
+	
 ##########################################################################################
 
 

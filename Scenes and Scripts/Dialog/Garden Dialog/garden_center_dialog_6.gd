@@ -38,7 +38,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 10:
+	if dialogs == 14:
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
@@ -77,7 +77,7 @@ func add_left_dialog_box():
 		dialogs += 1
 		same_speaker = false
 	
-	elif dialogs == 5:
+	elif dialogs == 6:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -88,7 +88,7 @@ func add_left_dialog_box():
 		dialogs += 1
 		same_speaker = true
 	
-	elif dialogs == 6:
+	elif dialogs == 7:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -99,7 +99,7 @@ func add_left_dialog_box():
 		dialogs += 1
 		same_speaker = false
 	
-	elif dialogs == 8:
+	elif dialogs == 9:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -110,7 +110,7 @@ func add_left_dialog_box():
 		dialogs += 1
 		same_speaker = true
 	
-	elif dialogs == 9:
+	elif dialogs == 10:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -119,9 +119,8 @@ func add_left_dialog_box():
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		dialogs += 1
-		same_speaker = true
 	
-	elif dialogs == 10:
+	elif dialogs == 11:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -132,7 +131,7 @@ func add_left_dialog_box():
 		dialogs += 1
 		same_speaker = false
 	
-	elif dialogs == 12:
+	elif dialogs == 13:
 		dialogs += 1
 		Global.moving_allowed = true
 ##########################################################################################
@@ -165,12 +164,24 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Damit wäre eure Reise durch mein Königreich auch so gut wie beendet. Als letzten Schritt müsst ihr lediglich noch eine meiner Pflanzen adoptieren und mit nach Hause nehmen."
+		short_node_text.text = "Damit wäre eure Reise durch mein Königreich auch so gut wie beendet."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		dialogs += 1
-	
-	elif dialogs == 7:
+		same_speaker = true
+		
+	elif dialogs == 5:
+		var short_node = get_child(2)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Als letzten Schritt müsst ihr lediglich noch eine meiner Pflanzen adoptieren und mit nach Hause nehmen."
+		short_node_rect.texture = PRESET4
+		short_node_name.text = "Guido"
+		dialogs += 1
+		same_speaker = false
+
+	elif dialogs == 8:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -180,7 +191,7 @@ func add_right_dialog_box():
 		short_node_name.text = "Guido"
 		dialogs += 1
 	
-	elif dialogs == 11:
+	elif dialogs == 12:
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
