@@ -1151,6 +1151,10 @@ libraries = {
 [node name="Item" parent="ItemSelection" instance=ExtResource("10_xc6c2")]
 position = Vector2(2961, 401)
 
+[node name="Hover" type="AudioStreamPlayer" parent="ItemSelection"]
+volume_db = 3.0
+bus = &"SFX_UI"
+
 [node name="FinishedButton" type="TextureButton" parent="."]
 offset_left = 1618.0
 offset_top = 615.0
@@ -1191,6 +1195,9 @@ libraries = {
 
 [node name="Checkmark" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_hgh5q")
+bus = &"SFX_Foley"
+
+[node name="Setdown" type="AudioStreamPlayer" parent="."]
 bus = &"SFX_Foley"
 
 [connection signal="texture_changed" from="TaskBackground/Task1/MinorTask1" to="." method="_on_minor_task_1_texture_changed"]

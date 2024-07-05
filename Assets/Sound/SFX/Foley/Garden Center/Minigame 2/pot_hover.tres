@@ -1,0 +1,14 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://dgm6oh3ah3bgm"]
+
+[ext_resource type="AudioStream" uid="uid://dfjoobp7gfdmk" path="res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/sfx_garden_center_foley_pot_hover_var1.mp3" id="1_taceq"]
+[ext_resource type="AudioStream" uid="uid://dwmt33i7r0asj" path="res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/sfx_garden_center_foley_pot_hover_var2.mp3" id="2_oufb1"]
+[ext_resource type="AudioStream" uid="uid://corgsi6kfi56f" path="res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/sfx_garden_center_foley_pot_hover_var3.mp3" id="3_byafn"]
+
+[resource]
+streams_count = 3
+stream_0/stream = ExtResource("1_taceq")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_oufb1")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_byafn")
+stream_2/weight = 1.0

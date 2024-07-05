@@ -90,6 +90,7 @@ func _on_pick_up_area_mouse_entered():
 	$Objects/StonePlate.texture = stoneplate_highlight
 	$Objects/Flower.texture = flower_highlight
 	$Objects/Bush.texture = bush_highlight
+	_play_hover()
 	
 func _on_pick_up_area_mouse_exited():
 	mouse_inside_pick_up_area = false
@@ -117,3 +118,10 @@ func _on_finished_button_pressed():
 	
 	if GlobalGarden.current_stage == 2 and GlobalGarden.stage2_correct_specs == 4 and GlobalGarden.plant_pots_placed >= 10:
 		print("Leute ich brech zusammen, aber wenigstens funktioniert das system mittlerweile. Bevor ihr euch beschwert, ja dieser Print ist extra noch drinnen, damir ich weiß wo ich das Minispiel in Zukunft erweitern kann. Wenn du bis hierhin gelsen hast, herzlichen Glückwunsch, dein Schwanz ist klein.")
+
+func _play_hover():
+	if current_item_selected == "Flower" or current_item_selected == "Bush":
+		$Hover.stream = load("res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/bush_hover.tres")
+	elif current_item_selected == "PlantPot" or current_item_selected == "StonePlate":
+		$Hover.stream = load("res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/pot_hover.tres")
+	$Hover.play()
