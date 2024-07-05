@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://vnj4oyq32r4f"]
+[gd_scene load_steps=41 format=3 uid="uid://vnj4oyq32r4f"]
 
 [ext_resource type="Texture2D" uid="uid://ddlsxysgyc71t" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/minigame4_grid.png" id="1_b04vn"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/garden_planning_minigame.gd" id="1_nucrw"]
@@ -20,6 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://otmy5c0k20xl" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_dark.png" id="13_6pw5n"]
 [ext_resource type="Texture2D" uid="uid://nk8ndgcpb32e" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_light.png" id="14_dshsx"]
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="18_voyt2"]
+[ext_resource type="AudioStream" uid="uid://dxvhcpnwfj8hq" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var1.mp3" id="21_3tbw8"]
+[ext_resource type="AudioStream" uid="uid://f86grv1pnrfl" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var2.mp3" id="22_fk3me"]
+[ext_resource type="AudioStream" uid="uid://bqwllua46dbnm" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var3.mp3" id="23_gn78r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmk48"]
 
@@ -723,6 +726,16 @@ _data = {
 "new_animation": SubResource("Animation_0uxyh")
 }
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_hgh5q"]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("21_3tbw8")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("22_fk3me")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("23_gn78r")
+stream_2/weight = 1.0
+
 [node name="GardenPlanningMinigame" type="Node2D"]
 script = ExtResource("1_nucrw")
 
@@ -1176,6 +1189,16 @@ libraries = {
 "": SubResource("AnimationLibrary_i0a4y")
 }
 
+[node name="Checkmark" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_hgh5q")
+bus = &"SFX_Foley"
+
+[connection signal="texture_changed" from="TaskBackground/Task1/MinorTask1" to="." method="_on_minor_task_1_texture_changed"]
+[connection signal="texture_changed" from="TaskBackground/Task1/MinorTask2" to="." method="_on_minor_task_2_texture_changed"]
+[connection signal="texture_changed" from="TaskBackground/Task1/MinorTask3" to="." method="_on_minor_task_3_texture_changed"]
+[connection signal="texture_changed" from="TaskBackground/Task1/MinorTask4" to="." method="_on_minor_task_4_texture_changed"]
+[connection signal="texture_changed" from="TaskBackground/Task2/MinorTask1" to="." method="_on_minor2_task_1_texture_changed"]
+[connection signal="texture_changed" from="TaskBackground/Task2/MinorTask2" to="." method="_on_minor2_task_2_texture_changed"]
 [connection signal="area_entered" from="TrashCan/Area2D" to="TrashCan" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="TrashCan/Area2D" to="TrashCan" method="_on_area_2d_area_exited"]
 [connection signal="move_left" from="ItemSelection/Arrows" to="ItemSelection" method="_on_arrows_move_left"]
