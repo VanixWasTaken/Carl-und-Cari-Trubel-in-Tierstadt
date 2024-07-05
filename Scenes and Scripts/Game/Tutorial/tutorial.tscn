@@ -236,12 +236,6 @@ script = ExtResource("1_trbh3")
 [node name="Player" parent="." instance=ExtResource("1_ihxr4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.217525, 4.782)
 
-[node name="FadeAnimation" parent="Player/CanvasLayer" index="0"]
-offset_left = -1009.54
-offset_top = -574.5
-offset_right = 1009.54
-offset_bottom = 574.5
-
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -19.5, 8.289, 13.05)
 fov = 60.0
