@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://buo1qhmujtbd3"
+path="res://.godot/imported/vo_npc_guido_planning_dialog_05.mp3-4593c34998292f3f45cb94da1d7794d7.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_planning_dialog_05.mp3"
+dest_files=["res://.godot/imported/vo_npc_guido_planning_dialog_05.mp3-4593c34998292f3f45cb94da1d7794d7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

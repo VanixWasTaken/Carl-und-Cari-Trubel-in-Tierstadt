@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2i1ks7e2dfp2"
+path="res://.godot/imported/vo_npc_carl_garden_caring_help _02.mp3-fe238acca86ca762ccc6e58b0977cee6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Carl/NPC/vo_npc_carl_garden_caring_help _02.mp3"
+dest_files=["res://.godot/imported/vo_npc_carl_garden_caring_help _02.mp3-fe238acca86ca762ccc6e58b0977cee6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
