@@ -20,7 +20,7 @@ func _process(delta):
 
 
 func _on_hitbox_mouse_entered():
-	if GlobalGarden.last_finished_minigame == "CuttingGame":
+	if GlobalGarden.last_finished_minigame == "CuttingGame" && GlobalGarden.talked_to_guido3:
 		self.texture = garden_highlighted
 		mouse_inside_garden = true
 func _on_hitbox_mouse_exited():

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/garden_center.gd" id="1_35ge2"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_wckdn"]
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_g16mw"]
-[ext_resource type="Texture2D" uid="uid://0i52s0i7ee48" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_placeholder_floor.png" id="4_l523k"]
+[ext_resource type="Texture2D" uid="uid://cdguiyykjh7vj" path="res://Assets/Art/Random Screens/black_screen.png" id="4_eetb4"]
 [ext_resource type="Texture2D" uid="uid://dqu2uetnhhgtr" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_back.png" id="5_nldcv"]
 [ext_resource type="Texture2D" uid="uid://cs5yhbqihps8c" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_left.png" id="6_ua0jj"]
 [ext_resource type="Texture2D" uid="uid://di3spopw54m1x" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_right.png" id="7_co6vq"]
@@ -47,7 +47,7 @@ size = Vector3(19.3163, 1, 0.201752)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vis0"]
-albedo_texture = ExtResource("4_l523k")
+albedo_texture = ExtResource("4_eetb4")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)
@@ -101,13 +101,13 @@ size = Vector3(13.9856, 1, 6.65833)
 polyphony = 3
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2obbv"]
-size = Vector3(15.9589, 10.7146, 2.59918)
+size = Vector3(20.9366, 10.7146, 9.38661)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l0n2v"]
 size = Vector3(14.4533, 1.23279, 3.98767)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lvajx"]
-size = Vector3(9.32104, 1, 9.30399)
+size = Vector3(10.8774, 4.01709, 9.30399)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8dc78"]
 size = Vector3(16.0976, 2.396, 5.37695)
@@ -186,7 +186,7 @@ script = ExtResource("1_35ge2")
 [node name="HelpButton" parent="UI" instance=ExtResource("2_wckdn")]
 
 [node name="Player" parent="." instance=ExtResource("3_g16mw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4335, 3.38487, -0.651167)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite3D" parent="Player" index="2"]
@@ -339,7 +339,7 @@ collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/BonsaiTrees/PlayerDetection"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51719, -6.56702, 0.799591)
+transform = Transform3D(0.999979, 0, 0, 0, 1, 0, 0, 0, 1, 0.971649, -6.56702, -0.505043)
 shape = SubResource("BoxShape3D_2obbv")
 
 [node name="Trolley" type="Sprite3D" parent="Objects"]
@@ -376,7 +376,10 @@ shape = SubResource("BoxShape3D_l0n2v")
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -27.6113, 2.3656, 2.68515)
 
 [node name="GroundBags" parent="Objects/GroundBags" index="0"]
-transform = Transform3D(0.515032, -0.304921, 0.801103, -0.502511, 0.649737, 0.570373, -0.694425, -0.696323, 0.181409, -0.255905, 0, 0)
+transform = Transform3D(0.515032, -0.304921, 0.801103, -0.502511, 0.649737, 0.570373, -0.694425, -0.696323, 0.181409, -0.255909, 0, 1.60138)
+
+[node name="Hitbox" parent="Objects/GroundBags" index="1"]
+transform = Transform3D(0.515032, -0.304921, 0.801103, -0.502511, 0.649737, 0.570373, -0.694424, -0.696323, 0.181409, 0, 0, 0)
 
 [node name="CollisionShape3D" parent="Objects/GroundBags/Hitbox" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07419, -0.162765, -0.285519)
@@ -384,7 +387,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07419, -0.162765, -0.28551
 [node name="PlayerDetection" type="Area3D" parent="Objects/GroundBags"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/GroundBags/PlayerDetection"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104275, 0, -1.01214)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.673923, -4.11548, -1.01214)
 shape = SubResource("BoxShape3D_lvajx")
 
 [node name="Computer" parent="Objects" instance=ExtResource("16_ujcpl")]

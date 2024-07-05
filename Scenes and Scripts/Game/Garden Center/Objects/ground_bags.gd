@@ -20,7 +20,7 @@ func _process(delta):
 
 
 func _on_hitbox_mouse_entered():
-	if GlobalGarden.last_finished_minigame == "CaringGame":
+	if GlobalGarden.last_finished_minigame == "CaringGame" && GlobalGarden.talked_to_guido4:
 		texture = bags_highlighted
 		mouse_inside_bags = true
 func _on_hitbox_mouse_exited():
@@ -30,6 +30,7 @@ func _on_hitbox_mouse_exited():
 
 
 func _on_player_detection_body_entered(body):
-	player_in_reach = true
+	if body.is_in_group("Player"):
+		player_in_reach = true
 func _on_player_detection_body_exited(body):
 	player_in_reach = false
