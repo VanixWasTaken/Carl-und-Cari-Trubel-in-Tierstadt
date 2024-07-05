@@ -79,6 +79,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Weiter so! Nur noch eine Pflanze."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_planning_dialog_09.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	

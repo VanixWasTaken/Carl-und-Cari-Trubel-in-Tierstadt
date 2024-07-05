@@ -80,6 +80,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Sprüh mit dem Insektenspray die Käfer ab. [Drücke rechte Maustaste, während du die Maus in der Hand hältst.]"
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_planning_dialog_07.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	

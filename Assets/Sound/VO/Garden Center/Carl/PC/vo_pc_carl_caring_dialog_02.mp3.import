@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnhgt42jxa14u"
+path="res://.godot/imported/vo_pc_carl_caring_dialog_02.mp3-fbb157aa7cf10d07fb0aa8b1b9c221d3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Carl/PC/vo_pc_carl_caring_dialog_02.mp3"
+dest_files=["res://.godot/imported/vo_pc_carl_caring_dialog_02.mp3-fbb157aa7cf10d07fb0aa8b1b9c221d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

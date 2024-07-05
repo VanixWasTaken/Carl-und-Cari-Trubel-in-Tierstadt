@@ -80,6 +80,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Und das war es auch schon. Vielen Dank für eure Hilfe."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_planning_dialog_10.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -91,6 +93,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Nur eine gesunde und gepflegte Pflanze ist eine glückliche Pflanze!"
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_planning_dialog_11.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
