@@ -320,7 +320,7 @@ bus = &"SFX"
 [node name="Objects" type="Node3D" parent="."]
 
 [node name="BonsaiTrees" parent="Objects" instance=ExtResource("8_mrm3e")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 22.0201, 5.23647, -2.3704)
+transform = Transform3D(0.7, 0, 0, 0, 0.600017, 0.360527, 0, -0.360527, 0.600017, 22.2125, 3.98544, -2.54265)
 
 [node name="PlayerDetection" type="Area3D" parent="Objects/BonsaiTrees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.5922, 0)
@@ -377,7 +377,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13242, 0, 1.15492)
 shape = SubResource("BoxShape3D_lvajx")
 
 [node name="Computer" parent="Objects" instance=ExtResource("16_ujcpl")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 1.6011, 4.58659, 2.82199)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 1.56499, 4.58659, 2.03359)
+sorting_offset = 15.0
 
 [node name="PlayerDetection" type="Area3D" parent="Objects/Computer"]
 
