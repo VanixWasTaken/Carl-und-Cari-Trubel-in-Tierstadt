@@ -1,24 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://dev64ejl851ka"]
+[gd_scene load_steps=3 format=3 uid="uid://dev64ejl851ka"]
 
 [ext_resource type="Texture2D" uid="uid://gci4at2p3pjb" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_desktop_desk.png" id="1_eede7"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Objects/computer.gd" id="2_ybd13"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2rxnm"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_swlhy"]
-size = Vector3(12.071, 7.86212, 0.77478)
 
 [node name="Computer" type="Sprite3D"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 texture = ExtResource("1_eede7")
 script = ExtResource("2_ybd13")
 
-[node name="Hitbox" type="StaticBody3D" parent="."]
-physics_material_override = SubResource("PhysicsMaterial_2rxnm")
+[node name="Hitbox" type="Area3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+[node name="CollisionShape3D" type="CollisionPolygon3D" parent="Hitbox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50775, -0.178497, 0.114198)
-shape = SubResource("BoxShape3D_swlhy")
+polygon = PackedVector2Array(-5.79645, -4.28491, -5.52194, 0.536322, -2.85628, 2.37429, -2.86225, 4.53439, 2.38058, 4.74463, 2.84427, 2.20099, 4.76778, 2.26975, 6.20612, -4.81085)
 
 [connection signal="mouse_entered" from="Hitbox" to="." method="_on_hitbox_mouse_entered"]
 [connection signal="mouse_exited" from="Hitbox" to="." method="_on_hitbox_mouse_exited"]
