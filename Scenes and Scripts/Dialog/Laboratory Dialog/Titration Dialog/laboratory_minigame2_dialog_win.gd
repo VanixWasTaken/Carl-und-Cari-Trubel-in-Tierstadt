@@ -49,7 +49,7 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 9:
+	if dialogs == 8:
 		Global.moving_allowed = true
 		Global.dialog_playing = false
 		Global.lab_cutscene_played = true

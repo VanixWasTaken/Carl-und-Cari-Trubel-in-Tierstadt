@@ -82,7 +82,6 @@ func add_left_dialog_box():
 		$"../VoiceOver".stream = load(path + "dialog_5_2.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
-		same_speaker = true
 
 	elif dialogs == 4:
 		var short_node = get_child(2)
@@ -123,8 +122,6 @@ func add_left_dialog_box():
 		same_speaker = false
 	
 	
-	elif dialogs == 9:
-		dialogs += 1
 	
 	
 	
@@ -191,6 +188,9 @@ func add_right_dialog_box():
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_5_9.mp3")
 		$"../VoiceOver".play()
+		dialogs += 1
+	
+	elif dialogs == 9:
 		dialogs += 1
 
 
