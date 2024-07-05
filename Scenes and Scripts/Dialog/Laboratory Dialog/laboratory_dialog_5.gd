@@ -82,7 +82,6 @@ func add_left_dialog_box():
 		$"../VoiceOver".stream = load(path + "dialog_5_2.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
-		same_speaker = true
 
 	elif dialogs == 4:
 		var short_node = get_child(2)
