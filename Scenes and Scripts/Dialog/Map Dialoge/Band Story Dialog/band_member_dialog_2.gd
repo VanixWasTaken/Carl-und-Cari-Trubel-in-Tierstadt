@@ -72,6 +72,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Hey, bist du nicht ein Mitglied von Metallikatzen?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_03_01.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 3:
@@ -82,6 +84,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Willst du wirklich wegen eines kleinen Streits die Band aufgeben? Was ist mit uns Fans?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_map_bandmembers_03_03.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 
@@ -93,6 +97,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Samuel will sich entschuldigen, deswegen hat er uns geschickt!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_03_05.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 7:
@@ -103,6 +109,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Wir sagen die Wahrheit. Es tut ihm aufrichtig Leid."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_03_07.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 10:
@@ -113,6 +121,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Warte, bevor du gehst. Können wir noch ein Autogramm haben?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_map_bandmembers_03_10.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 12:
@@ -120,9 +130,11 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Vielen Dank, ich hoffen ihr könnt euch versöhnen."
+		short_node_text.text = "Vielen Dank, ich hoffe ihr könnt euch versöhnen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_map_bandmembers_03_12.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	
@@ -149,9 +161,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich war mal die Bassistin. Aber wir haben uns zerstritten. Das wars wohl mit der Band."
+		short_node_text.text = "Ich war mal die Bassistin. Aber wir haben uns zerstritten. Das wars dann wohl mit der Band."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Barbara die Bengalkatze"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Barbara/vo_npc_barbara_map_bandmembers_03_02.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 4:
@@ -159,9 +173,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich glaube nicht, dass wir und jemals wieder versöhnen können."
+		short_node_text.text = "Ich glaube nicht, dass wir uns jemals wieder versöhnen können."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Barbara die Bengalkatze"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Barbara/vo_npc_barbara_map_bandmembers_03_04.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 6:
@@ -172,6 +188,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Sicher, dass ihr euch das nicht eingebildet habt? Das passt gar nicht zu ihm."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Barbara die Bengalkatze"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Barbara/vo_npc_barbara_map_bandmembers_03_06.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 8:
@@ -179,9 +197,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Hört sich so an, als ob er es wirklich Ernst meinen würde. Ich werde mir mal anhören, was er zu sagen hat."
+		short_node_text.text = "Hört sich so an, als würde er es wirklich Ernst meinen. Ich werde mir mal anhören, was er zu sagen hat."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Barbara die Bengalkatze"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Barbara/vo_npc_barbara_map_bandmembers_03_08.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -190,9 +210,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Aber ich kann nicht verspechen, das alles wieder gut wird."
+		short_node_text.text = "Aber ich kann nicht verspechen, dass alles wieder gut wird."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Barbara die Bengalkatze"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Barbara/vo_npc_barbara_map_bandmembers_03_09.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = false
 
@@ -201,9 +223,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ok, aber wenn ihr lügt will ich die wieder haben."
+		short_node_text.text = "Ok, aber wenn ihr lügt, will ich die wieder haben."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Barbara die Bengalkatze"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Barbara/vo_npc_barbara_map_bandmembers_03_11.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 13:

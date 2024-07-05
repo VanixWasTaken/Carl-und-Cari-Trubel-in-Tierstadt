@@ -15,6 +15,7 @@ var PRESET3
 var mouse_inside_area = false
 var player 
 var next_job
+var audio_job
 
 var path_carl
 var path_cari
@@ -40,8 +41,10 @@ func _ready():
 	if Global.completed_jobs. size() != 0:
 		if Global.completed_jobs[0] == "Laboratory Building":
 			next_job = "der Gärtnerei"
+			audio_job = "garden"
 		else:
 			next_job = "dem Chemielabor"
+			audio_job = "laboratory"
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -78,6 +81,8 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Bist du derjenige, der unsere Hilfe braucht?"
 		short_node_rect.texture = PRESET1
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_02_01.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		short_node_name.text = "Carl"
 
@@ -88,6 +93,8 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "WOW! Du bist der echte Samuel Samtpfote? Ich freue mich schon die ganze Woche auf euer Konzert heute Abend!"
 		short_node_rect.texture = PRESET2
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_map_bandmembers_02_03.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		short_node_name.text = "Cari"
 
@@ -99,6 +106,8 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Warum?"
 		short_node_rect.texture = PRESET1
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_02_05.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		short_node_name.text = "Carl"
 
@@ -109,6 +118,8 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Die Bürgermeisterin hat uns extra geschickt, um dir zu helfen. Also, wenn wir die Bandmitglieder finden, kann das Konzert stattfinden?"
 		short_node_rect.texture = PRESET2
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_map_bandmembers_02_07.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		short_node_name.text = "Cari"
 
@@ -119,6 +130,8 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Wie können wir da Nein sagen? Hast du einen Tipp wo wir sie finden können?"
 		short_node_rect.texture = PRESET1
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_02_09.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		short_node_name.text = "Carl"
 
@@ -129,6 +142,8 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Da müssen wir eh als nächstes hin!"
 		short_node_rect.texture = PRESET1
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_02_11.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		short_node_name.text = "Carl"
 		same_speaker = true
@@ -140,6 +155,8 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Bevor wir irgendetwas überstürzen. Was bekommen wir für die Hilfe?"
 		short_node_rect.texture = PRESET2
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_map_bandmembers_02_12.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		short_node_name.text = "Cari"
 		same_speaker = false
@@ -151,6 +168,8 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "EINVERSTANDEN!"
 		short_node_rect.texture = PRESET2
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Both/vo_pc_carl_and_cari_map_bandmembers_02_14.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		short_node_name.text = "Carl & Cari"
 	
@@ -180,6 +199,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ja genau, der bin ich. Ich bin Samuel, der Sänger der Metallikatzen. Meine Band und ich haben uns gestern gestritten und nun kann ich sie nicht finden."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel Samtpfote"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Samuel/vo_npc_samuel_map_bandmembers_02_02.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 4:
@@ -190,6 +211,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ihr seid wohl Fans. Ja, das bin ich. Freut mich dich kennenzulernen, aber ich fürchte, das Konzert fällt leider aus."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel Samtpfote"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Samuel/vo_npc_samuel_map_bandmembers_02_04.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 6:
@@ -200,6 +223,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Leider haben ich und meine Band uns gestern zerstritten und ich kann sie nicht finden."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel Samtpfote"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Samuel/vo_npc_samuel_map_bandmembers_02_06.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 8:
@@ -210,6 +235,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ganz genau. Bitte findet die anderen und entschuldigt euch bei ihnen für mich."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel Samtpfote"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Samuel/vo_npc_samuel_map_bandmembers_02_08.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 10:
@@ -220,6 +247,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ich habe gehört, dass meine Gitarristin zuletzt in der Nähe von " + next_job + " gesehen wurde."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel Samtpfote"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Samuel/vo_npc_samuel_map_bandmembers_02_10_" + audio_job + ".mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 13:
@@ -230,6 +259,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Hmmm… Ihr dürft während des Konzerts mit auf die Bühne kommen, wie hört sich das an?"
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel Samtpfote"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Samuel/vo_npc_samuel_map_bandmembers_02_13.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 14:
