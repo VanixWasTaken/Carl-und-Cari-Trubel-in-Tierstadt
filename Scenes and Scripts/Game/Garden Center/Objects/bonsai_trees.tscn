@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bg3komba4flqd"]
+[gd_scene load_steps=4 format=3 uid="uid://bg3komba4flqd"]
 
 [ext_resource type="Texture2D" uid="uid://b8765esybhogb" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_bonsai.png" id="1_72l6t"]
 [ext_resource type="Script" path="res://bonsai_trees.gd" id="2_vujmo"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2rxnm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_swlhy"]
 size = Vector3(13.4238, 9.96897, 0.93115)
@@ -13,8 +11,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 texture = ExtResource("1_72l6t")
 script = ExtResource("2_vujmo")
 
-[node name="Hitbox" type="StaticBody3D" parent="."]
-physics_material_override = SubResource("PhysicsMaterial_2rxnm")
+[node name="Hitbox" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.420942, 0.855084, -0.0344198)

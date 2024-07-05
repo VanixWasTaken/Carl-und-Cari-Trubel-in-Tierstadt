@@ -172,7 +172,7 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8jp4s"]
-size = Vector3(5.9519, 1, 3.75792)
+size = Vector3(7.10467, 1, 5.61334)
 
 [node name="Garden" type="Node3D" groups=["Root"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -427,7 +427,7 @@ collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GardenCenterNPC/DialogArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.436401, 0, -1.87061)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77762, 0, -1.98071)
 shape = SubResource("BoxShape3D_8jp4s")
 
 [connection signal="body_entered" from="Objects/BonsaiTrees/PlayerDetection" to="Objects/BonsaiTrees" method="_on_player_detection_body_entered"]

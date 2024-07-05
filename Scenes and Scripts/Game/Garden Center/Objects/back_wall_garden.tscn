@@ -4,16 +4,16 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Objects/back_wall_garden.gd" id="2_hio8s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n0j2p"]
-size = Vector3(15.5649, 12.0764, 4.68222)
+size = Vector3(15.5649, 12.0764, 0.346336)
 
 [node name="BackWallGarden" type="Sprite3D"]
 texture = ExtResource("1_n5jyt")
 script = ExtResource("2_hio8s")
 
-[node name="Hitbox" type="StaticBody3D" parent="."]
+[node name="Hitbox" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.123604, -0.162765, 2.15208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.123604, -0.162765, -0.0158618)
 shape = SubResource("BoxShape3D_n0j2p")
 
 [connection signal="mouse_entered" from="Hitbox" to="." method="_on_hitbox_mouse_entered"]
