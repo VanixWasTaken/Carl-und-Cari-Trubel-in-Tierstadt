@@ -283,9 +283,6 @@ script = ExtResource("1_04svc")
 [node name="Player" parent="." instance=ExtResource("3_fgm78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.1371, 0.281436, 4.782)
 
-[node name="FadeAnimation" parent="Player/CanvasLayer" index="0"]
-scale = Vector2(1, 1)
-
 [node name="Footsteps" parent="Player" index="6"]
 panning_strength = 0.5
 
