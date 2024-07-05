@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bxjd24pu0r6yb"]
+[gd_scene load_steps=26 format=3 uid="uid://bxjd24pu0r6yb"]
 
 [ext_resource type="PackedScene" uid="uid://b8ae2gbukn3ld" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/Trees/tree1.tscn" id="1_dwdq4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame.gd" id="1_ssqej"]
@@ -6,6 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://bb2nj4yibhwsr" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/minigame1_tree2.png" id="2_5460p"]
 [ext_resource type="Texture2D" uid="uid://5t1icmclgnuk" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/minigame1_tree3.png" id="4_kn8tn"]
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="6_6xq8h"]
+[ext_resource type="AudioStream" uid="uid://88365ltu1onf" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/scissors_leaves.tres" id="7_ostxs"]
+[ext_resource type="AudioStream" uid="uid://c77vwf58r34xt" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/scissors_twigs.tres" id="8_whevc"]
+[ext_resource type="AudioStream" uid="uid://bhvs5q0xgw7vw" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsclose_var1.mp3" id="9_vx24u"]
+[ext_resource type="AudioStream" uid="uid://dbca65vmp7ec" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsclose_var2.mp3" id="10_rg85u"]
+[ext_resource type="AudioStream" uid="uid://krgtdkd7qitg" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsclose_var3.mp3" id="11_6fwua"]
+[ext_resource type="AudioStream" uid="uid://u8gb3ac4217h" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsclose_var4.mp3" id="12_mlraa"]
+[ext_resource type="AudioStream" uid="uid://dxvhcpnwfj8hq" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var1.mp3" id="13_urt76"]
+[ext_resource type="AudioStream" uid="uid://f86grv1pnrfl" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var2.mp3" id="14_e3a7d"]
+[ext_resource type="AudioStream" uid="uid://bqwllua46dbnm" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var3.mp3" id="15_51mua"]
 
 [sub_resource type="Animation" id="Animation_yjaf6"]
 length = 0.001
@@ -100,6 +109,27 @@ _data = {
 "fade_out": SubResource("Animation_ltvyy"),
 "new_animation": SubResource("Animation_0uxyh")
 }
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_100pl"]
+streams_count = 4
+stream_0/stream = ExtResource("9_vx24u")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("10_rg85u")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("11_6fwua")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("12_mlraa")
+stream_3/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ndaui"]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("13_urt76")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("14_e3a7d")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("15_51mua")
+stream_2/weight = 1.0
 
 [node name="CuttingTreeMinigame" type="Node2D"]
 script = ExtResource("1_ssqej")
@@ -202,6 +232,25 @@ metadata/_edit_use_anchors_ = true
 libraries = {
 "": SubResource("AnimationLibrary_i0a4y")
 }
+
+[node name="LeavesCut" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ostxs")
+volume_db = 3.0
+bus = &"SFX_Foley"
+
+[node name="TwigCut" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_whevc")
+volume_db = 3.0
+bus = &"SFX_Foley"
+
+[node name="NothingCut" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_100pl")
+volume_db = 3.0
+bus = &"SFX_Foley"
+
+[node name="TreeFinished" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_ndaui")
+bus = &"SFX_Foley"
 
 [connection signal="move_camera" from="Tree1" to="." method="_on_tree_1_move_camera"]
 [connection signal="move_camera" from="Tree2" to="." method="_on_tree_2_move_camera"]

@@ -328,7 +328,7 @@ shape = SubResource("BoxShape3D_cdh4m")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPolyphonic_tsl1n")
-volume_db = 6.0
+volume_db = 12.0
 autoplay = true
 bus = &"SFX_Ambience"
 
