@@ -1,7 +1,7 @@
 extends Sprite3D
 
-@onready var bags_highlighted = preload("res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks.png")
-@onready var bags = preload("res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks_selected.png")
+@onready var bags = preload("res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks.png")
+@onready var bags_highlighted = preload("res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks_selected.png")
 
 var mouse_inside_bags = false
 var player_in_reach = false
@@ -10,6 +10,7 @@ var should_enter_bags = false
 func _input(event):
 	if event.is_action_pressed("left_click") and mouse_inside_bags:
 		should_enter_bags = true
+		print("KLUH")
 	elif event.is_action_pressed("left_click") and !mouse_inside_bags:
 		should_enter_bags = false
 
@@ -30,7 +31,9 @@ func _on_hitbox_mouse_exited():
 
 
 func _on_player_detection_body_entered(body):
+	print("ASDADADAD")
 	if body.is_in_group("Player"):
+		print("PUPUUNDPIPI")
 		player_in_reach = true
 func _on_player_detection_body_exited(body):
 	player_in_reach = false

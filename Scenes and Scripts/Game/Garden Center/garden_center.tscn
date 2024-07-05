@@ -380,12 +380,15 @@ transform = Transform3D(0.515032, -0.304921, 0.801103, -0.502511, 0.649737, 0.57
 sorting_offset = 15.0
 
 [node name="Hitbox" parent="Objects/GroundBags" index="1"]
-transform = Transform3D(0.515032, -0.304921, 0.801103, -0.502511, 0.649737, 0.570373, -0.694424, -0.696323, 0.181409, 0, 0, 0)
+transform = Transform3D(0.515032, -0.304921, 0.801103, -0.502511, 0.649737, 0.570373, -0.694424, -0.696323, 0.181409, 0.851307, 0, 0)
 
 [node name="CollisionShape3D" parent="Objects/GroundBags/Hitbox" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07419, -0.162765, -0.285519)
+transform = Transform3D(1, 0, 1.49012e-08, 2.98023e-08, 0.999999, 5.96046e-08, 1.49012e-08, -5.96046e-08, 1, -1.21311, -0.672561, 1.05384)
+polygon = PackedVector2Array(-5.65982, 0.214873, -1.425, 3.49931, 0.828796, 3.48616, 3.22161, 1.52595, 3.96756, -2.10392, 1.17426, -5.32144, -1.56027, -6.6829, -5.6724, -2.26106, -5.87834, -0.931885)
 
 [node name="PlayerDetection" type="Area3D" parent="Objects/GroundBags"]
+collision_layer = 9
+collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/GroundBags/PlayerDetection"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.673923, -4.11548, -1.01214)
@@ -396,6 +399,8 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 1.56499, 4.58659, 2.033
 sorting_offset = 15.0
 
 [node name="PlayerDetection" type="Area3D" parent="Objects/Computer"]
+collision_layer = 9
+collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Computer/PlayerDetection"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0627902, -4.66626, -0.253906)
@@ -450,8 +455,8 @@ shape = SubResource("BoxShape3D_8jp4s")
 [connection signal="body_exited" from="Objects/BonsaiTrees/PlayerDetection" to="Objects/BonsaiTrees" method="_on_player_detection_body_exited"]
 [connection signal="body_entered" from="Objects/BackWallGarden/PlayerDetection" to="Objects/BackWallGarden" method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="Objects/BackWallGarden/PlayerDetection" to="Objects/BackWallGarden" method="_on_player_detection_body_exited"]
-[connection signal="body_entered" from="Objects/GroundBags/PlayerDetection" to="Objects/GroundBags" method="_on_player_detection_body_entered"]
-[connection signal="body_exited" from="Objects/GroundBags/PlayerDetection" to="Objects/GroundBags" method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="Objects/GroundBags/PlayerDetection" to="Objects/GroundBags/GroundBags" method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="Objects/GroundBags/PlayerDetection" to="Objects/GroundBags/GroundBags" method="_on_player_detection_body_exited"]
 [connection signal="body_entered" from="Objects/Computer/PlayerDetection" to="Objects/Computer" method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="Objects/Computer/PlayerDetection" to="Objects/Computer" method="_on_player_detection_body_exited"]
 [connection signal="body_entered" from="Objects/Exit" to="." method="_on_exit_body_entered"]
