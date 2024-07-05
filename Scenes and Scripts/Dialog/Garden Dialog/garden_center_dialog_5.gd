@@ -9,6 +9,10 @@ var dialog_side = ["left", "right"]
 var finished = false
 var same_speaker = false
 
+var carl_path = "res://Assets/Sound/VO/Garden Center/Carl/PC/vo_pc_carl_garden_center_dialog_"
+var cari_path = "res://Assets/Sound/VO/Garden Center/Cari/PC/vo_pc_cari_garden_center_dialog_"
+var guido_path = "res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_garden_center_dialog_"
+
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
@@ -60,9 +64,11 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Und der wäre? Sollen wir den Pflanzen noch ein gute Nacht Lied singen?"
+		short_node_text.text = "Und der wäre? Sollen wir den Pflanzen noch ein Gute-Nacht-Lied singen?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../VoiceOver".stream = load(cari_path + "5_02.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 5:
@@ -73,6 +79,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Das hört sich wie „Clash of Cats“ an. Mein Lieblingsspiel!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "5_05.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	if dialogs == 7:
@@ -83,6 +91,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Hehehehe."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "5_07.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -117,9 +127,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Vorzüglich! Nun fehlt nur der der letzte Schritt."
+		short_node_text.text = "Vorzüglich! Nun fehlt nur noch der letzte Schritt."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "5_01.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 3:
@@ -127,9 +139,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Nein, nein, nein. Darum vermag ich mich, selbst zu kümmern, wenn ihr von dannen gezogen seid."
+		short_node_text.text = "Nein, nein, nein. Darum vermag ich mich selbst zu kümmern, wenn ihr von dannen gezogen seid."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "5_03.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -138,9 +152,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Eure letzte Aufgabe ist es zu dem Computer in der Mitte des Raums zu gehen und die Anordnung der Pflanzen im Garten zu planen."
+		short_node_text.text = "Eure letzte Aufgabe ist es, zu dem Computer in der Mitte des Raumes zu gehen und die Anordnung der Pflanzen im Garten zu planen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "5_04.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -149,9 +165,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Dann wirst du eine pflanztastische Arbeit machen. HOHOHO"
+		short_node_text.text = "Dann wirst du eine pflanztastische Arbeit machen. HOHOHO!"
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "5_06.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 9:
