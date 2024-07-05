@@ -16,7 +16,50 @@ func save():  # saves the current stats as a dictionary
 		"MasterVolume" : Global.master_volume,
 		"MusicVolume" : Global.music_volume,
 		"SFXVolume" : Global.sfx_volume,
-		"DialogVolume" : Global.dialog_volume
+		"DialogVolume" : Global.dialog_volume,
+		"MouseFull" : Global.mouse_full,
+		"MouseInButton" : Global.mouse_in_button,
+		"OpenTutorialDoor" : Global.open_tutorial_door,
+		"DialogPlaying" : Global.dialog_playing,
+		"LabCutscenePlayed" : Global.lab_cutscene_played,
+		"CutscenePlaying" : Global.cutscene_playing,
+		"TalkedToChris" : Global.talked_to_chris,
+		"ShouldShoot" : Global.should_shoot,
+		"MenuOpen" : Global.menu_open,
+		"TutorialHelpButtonState" : Global.tutorial_help_button_state,
+		"LaboratoryHelpButtonState" : Global.laboratory_help_button_state,
+		"MiniHelpButtonState" : Global.mini_help_button_state,
+		"ExitCoordinates" : Global.exit_coordinates,
+		"StoryDialogTracker" : Global.story_dialog_tracker,
+		"TalkedToChameleon1" : Global.talked_to_chameleon,
+		"TalkedToChameleon2" : Global.talked_to_chameleon_2,
+		"TalkedToChameleon3" : Global.talked_to_chameleon_4,
+		"ReturnLaboratory1" : Global.return_laboratory_1,
+		"ReturnLaboratory2" : Global.return_laboratory_2,
+		"ReturnLaboratory3" : Global.return_laboratory_3,
+		"InsideLaboratory" : Global.inside_laboratory,
+		"PauseOpened" : Global.pause_opened,
+		"GotBarbara" : GlobalBand.got_barbara,
+		"GotSven" : GlobalBand.got_sven,
+		"TalkedToSven1" : GlobalBand.talked_to_sven_1,
+		"CompletedQuest" : GlobalBand.completed_quest,
+		"NeededAnimation" : GlobalBand.needed_animation,
+		"ShouldEnterMinigame1" : GlobalGarden.should_enter_minigame1,
+		"TalkedToGuido1" : GlobalGarden.talked_to_guido1,
+		"TalkedToGuido2" : GlobalGarden.talked_to_guido2,
+		"TalkedToGuido3" : GlobalGarden.talked_to_guido3,
+		"TalkedToGuido4" : GlobalGarden.talked_to_guido4,
+		"TalkedToGuido5" : GlobalGarden.talked_to_guido5,
+		"TalkedToGuido6" : GlobalGarden.talked_to_guido6,
+		"LastFinishedMinigame" : GlobalGarden.last_finished_minigame,
+		"GardenHelpButtonState" : GlobalGarden.garden_help_button_state,
+		"GardenMiniHelpButtonState" : GlobalGarden.garden_mini_help_button_state,
+		"PlantPotsPlaced" : GlobalGarden.plant_pots_placed,
+		"StonePlatesPlaced" : GlobalGarden.stone_plates_placed,
+		"FlowersPlaced" : GlobalGarden.flowers_placed,
+		"BushsPlaced" : GlobalGarden.bushs_placed,
+		"CurrentStage" : GlobalGarden.current_stage,
+		"Stage2CorrectSpecs" : GlobalGarden.stage2_correct_specs
 		
 	}
 	
@@ -56,6 +99,49 @@ func load_game():
 		Global.music_volume = node_data["MusicVolume"]
 		Global.sfx_volume = node_data["SFXVolume"]
 		Global.dialog_volume = node_data["DialogVolume"]
+		Global.mouse_full = node_data["MouseFull"]
+		Global.mouse_in_button = node_data["MouseInButton"]
+		Global.open_tutorial_door = node_data["OpenTutorialDoor"]
+		Global.dialog_playing = node_data["DialogPlaying"]
+		Global.lab_cutscene_played = node_data["LabCutscenePlayed"]
+		Global.cutscene_playing = node_data["CutscenePlaying"]
+		Global.talked_to_chris = node_data["TalkedToChris"]
+		Global.should_shoot = node_data["ShouldShoot"]
+		Global.menu_open = node_data["MenuOpen"]
+		Global.tutorial_help_button_state = node_data["TutorialHelpButtonState"]
+		Global.laboratory_help_button_state = node_data["LaboratoryHelpButtonState"]
+		Global.mini_help_button_state = node_data["MiniHelpButtonState"]
+		Global.exit_coordinates = node_data["ExitCoordinates"]
+		Global.story_dialog_tracker = node_data["StoryDialogTracker" ]
+		Global.talked_to_chameleon = node_data["TalkedToChameleon1"]
+		Global.talked_to_chameleon_2 = node_data["TalkedToChameleon2"]
+		Global.talked_to_chameleon_4 = node_data["TalkedToChameleon3"]
+		Global.return_laboratory_1 = node_data["ReturnLaboratory1"]
+		Global.return_laboratory_2 = node_data["ReturnLaboratory2"]
+		Global.return_laboratory_3 = node_data["ReturnLaboratory3"]
+		Global.inside_laboratory = node_data["InsideLaboratory"]
+		Global.pause_opened = node_data["PauseOpened"]
+		GlobalBand.got_barbara = node_data["GotBarbara"]
+		GlobalBand.got_sven = node_data["GotSven"]
+		GlobalBand.talked_to_sven_1 = node_data["TalkedToSven1"]
+		GlobalBand.completed_quest = node_data["CompletedQuest"]
+		GlobalBand.needed_animation = node_data["NeededAnimation"]
+		GlobalGarden.should_enter_minigame1 = node_data["ShouldEnterMinigame1"]
+		GlobalGarden.talked_to_guido1 = node_data["TalkedToGuido1"]
+		GlobalGarden.talked_to_guido2 = node_data["TalkedToGuido2"]
+		GlobalGarden.talked_to_guido3 = node_data["TalkedToGuido3" ]
+		GlobalGarden.talked_to_guido4 = node_data["TalkedToGuido4"]
+		GlobalGarden.talked_to_guido5 = node_data["TalkedToGuido5"]
+		GlobalGarden.talked_to_guido6 = node_data["TalkedToGuido6"]
+		GlobalGarden.last_finished_minigame = node_data["LastFinishedMinigame"]
+		GlobalGarden.garden_help_button_state = node_data["GardenHelpButtonState"]
+		GlobalGarden.garden_mini_help_button_state = node_data["GardenMiniHelpButtonState"]
+		GlobalGarden.plant_pots_placed = node_data["PlantPotsPlaced"]
+		GlobalGarden.stone_plates_placed = node_data["StonePlatesPlaced"]
+		GlobalGarden.flowers_placed = node_data["FlowersPlaced"]
+		GlobalGarden.bushs_placed = node_data["BushsPlaced"]
+		GlobalGarden.current_stage = node_data["CurrentStage" ]
+		GlobalGarden.stage2_correct_specs = node_data["Stage2CorrectSpecs"]
 
 
 func clear_dict(): # Is used for overwriting the whole save game file on the computer to an empty dictionary. So it basically deletes the save 

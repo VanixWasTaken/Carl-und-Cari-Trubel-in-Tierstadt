@@ -1,7 +1,7 @@
 extends Node
 
-var got_barbara = false
-var got_sven = false
-var talked_to_sven_1 = false
-var completed_quest = false
-var needed_animation = ""
+var got_barbara = false #save
+var got_sven = false #save
+var talked_to_sven_1 = false #save
+var completed_quest = false #save
+var needed_animation = "" #save

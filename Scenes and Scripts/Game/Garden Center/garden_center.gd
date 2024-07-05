@@ -39,6 +39,8 @@ func _ready():
 		$Player.position = Vector3(3.901, 0.85, 0.941)
 		$CutsceneAnimation.queue_free()
 	
+	SaveSystem.save_game()
+	
 
 func _process(_delta):
 	if !Global.cutscene_playing:
