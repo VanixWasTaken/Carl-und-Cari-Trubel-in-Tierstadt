@@ -18,7 +18,7 @@ func _process(delta):
 		get_tree().get_first_node_in_group("Animator").play("fade_out")
 
 func _on_hitbox_mouse_entered():
-	if GlobalGarden.last_finished_minigame == "GroundGame":
+	if GlobalGarden.last_finished_minigame == "GroundGame" && GlobalGarden.talked_to_guido5:
 		texture = GARDEN_COMPUTER_HIGHLIGHTED
 		mouse_inside_computer = true
 func _on_hitbox_mouse_exited():

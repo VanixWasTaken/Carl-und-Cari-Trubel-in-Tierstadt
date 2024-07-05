@@ -18,7 +18,7 @@ func _process(delta):
 		get_tree().get_first_node_in_group("Animator").play("fade_out")
 
 func _on_hitbox_mouse_entered():
-	if GlobalGarden.last_finished_minigame == "NONE":
+	if GlobalGarden.last_finished_minigame == "NONE" && GlobalGarden.talked_to_guido2:
 		texture = GARDEN_BONSAI_HIGHLIGHTED
 		mouse_inside_bonsai_trees = true
 func _on_hitbox_mouse_exited():
