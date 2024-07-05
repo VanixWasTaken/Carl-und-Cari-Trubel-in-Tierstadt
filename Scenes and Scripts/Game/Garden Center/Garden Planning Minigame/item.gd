@@ -30,7 +30,7 @@ func _ready():
 	self.mouse_exited.connect(_on_mouse_exited)
 	add_to_group("Items")
 
-func _process(delta):
+func _physics_process(delta):
 	if !get_name() == "Item" and should_follow_mouse:
 		position = get_global_mouse_position()
 	find_closest_marker()

@@ -186,10 +186,11 @@ script = ExtResource("1_35ge2")
 [node name="HelpButton" parent="UI" instance=ExtResource("2_wckdn")]
 
 [node name="Player" parent="." instance=ExtResource("3_g16mw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4335, 0.873432, -0.651167)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4335, 3.38487, -0.651167)
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite3D" parent="Player" index="2"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
 sorting_offset = 15.0
 
 [node name="FadeAnimation" parent="Player/CanvasLayer" index="0"]
