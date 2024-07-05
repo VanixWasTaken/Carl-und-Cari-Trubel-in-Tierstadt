@@ -9,6 +9,10 @@ var dialog_side = ["left", "right"]
 var finished = false
 var same_speaker = false
 
+var carl_path = "res://Assets/Sound/VO/Garden Center/Carl/PC/vo_pc_carl_garden_center_dialog_"
+var cari_path = "res://Assets/Sound/VO/Garden Center/Cari/PC/vo_pc_cari_garden_center_dialog_"
+var guido_path = "res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_garden_center_dialog_"
+
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
@@ -63,6 +67,8 @@ func add_left_dialog_box():
 		short_node_text.text = "So, das wars. Die Pflanzen sehen wieder Tip-Top aus."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "3_01.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 4:
@@ -73,6 +79,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Durch was wird denn Pflanzenwachstum noch eingeschränkt?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../VoiceOver".stream = load(cari_path + "3_03.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 6:
@@ -83,6 +91,8 @@ func add_left_dialog_box():
 		short_node_text.text = " Eine Müri-was-e?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "3_05.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 8:
@@ -93,6 +103,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Aha… Und die wären?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		#$"../VoiceOver".stream = load(cari_path + "3_7.mp3")
+		#$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 10:
@@ -103,6 +115,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Wow, das sind ja ne Menge an Sachen, die man beachten muss. Aber es ist wohl ähnlich wie bei uns Tieren."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "3_09.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -111,9 +125,11 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Genau Carl. Als sind wir zwar sehr anpassungsfähig, fühlen uns aber eigentlich in Wäldern und Graslandschaften am wohlsten."
+		short_node_text.text = "Genau Carl. Als Füchse sind wir zwar sehr anpassungsfähig, fühlen uns aber eigentlich in Wäldern und Graslandschaften am wohlsten."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../VoiceOver".stream = load(cari_path + "3_10_var1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 12:
@@ -124,6 +140,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Guido hingegen fühlt sich in tropischen Regenwäldern am wohlsten."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../VoiceOver".stream = load(cari_path + "3_10_var2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -153,6 +171,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Das war tadellose Arbeit. Meine floralen Freunde sind wieder in einem erstklassigen Zustand."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "3_02_var1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -164,6 +184,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Jedoch sind Zweige, die wild wachsen keineswegs die einzigen Beeinträchtigungen die Pflanzen in ihrem Leben überwinden müssen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "3_02_var2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 
@@ -172,9 +194,11 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Da gibt eine Myriade an Gründen."
+		short_node_text.text = "Da gibt es eine Myriade an Gründen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "3_04.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 7:
@@ -185,6 +209,8 @@ func add_right_dialog_box():
 		short_node_text.text = "HOHO. Bitte entschuldigt meine Ausdrucksweise. Myriade bedeutet „Vielzahl“."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "3_06.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 9:
@@ -195,6 +221,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Temperatur, Luftfeuchtigkeit, Lichtintensität, Pflanzendiebe, Bodenfeuchtigkeit, Insekten, Luftdruck, um ein paar Beispiele zu geben."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "3_08.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 13:
@@ -205,6 +233,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Du liegst genau richtig, junge Dame. Aber kommen wir nun zu eurer nächsten Aufgabe."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "3_11_var1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -216,6 +246,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Bitte begebt euch in das Gewächshaus an der hinteren Wand des Raums."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "3_11_var2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
