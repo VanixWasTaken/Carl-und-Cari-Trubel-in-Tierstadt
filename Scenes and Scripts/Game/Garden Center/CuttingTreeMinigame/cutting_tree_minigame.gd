@@ -3,7 +3,7 @@ extends Node2D
 @onready var tree_1 = $Tree1
 @onready var tree_2 = $Tree2
 @onready var dialog1 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Minigame 1/minigame1_dialog1.tscn")
-@onready var garden_scn = preload("res://Scenes and Scripts/Game/Garden Center/garden_center.tscn")
+var garden_scene
 
 func _ready():
 	$CanvasLayer/FadeAnimation.show()
@@ -29,4 +29,7 @@ func _on_tree_2_move_camera():
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_out":
 		GlobalGarden.last_finished_minigame = "Minigame1"
-		get_tree().change_scene_to_packed(garden_scn)
+	
+	elif anim_name == "fade_in":
+		garden_scene = load("res://Scenes and Scripts/Game/Garden Center/garden_center.tscn")
+

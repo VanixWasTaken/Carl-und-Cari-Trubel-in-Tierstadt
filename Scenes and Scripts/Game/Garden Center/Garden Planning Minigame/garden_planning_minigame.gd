@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var garden_scn = preload("res://Scenes and Scripts/Game/Garden Center/garden_center.tscn")
+var garden_scene 
 var dialog_introduction = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Planning Minigame/garden_planning_minigame_dialog1.tscn")
 var dialog2 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Planning Minigame/garden_planning_minigame_dialog2.tscn")
 var dialog3 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Planning Minigame/garden_planning_minigame_dialog3.tscn")
@@ -58,4 +58,6 @@ func _on_texture_button_pressed():
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_out":
-		get_tree().change_scene_to_packed(garden_scn)
+		get_tree().change_scene_to_packed(garden_scene)
+	elif anim_name == "fade_in":
+		garden_scene = load("res://Scenes and Scripts/Game/Garden Center/garden_center.tscn")

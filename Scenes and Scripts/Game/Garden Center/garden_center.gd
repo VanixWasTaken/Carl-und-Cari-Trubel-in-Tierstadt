@@ -5,8 +5,10 @@ extends Node3D
 @onready var dialog2 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_2.tscn")
 @onready var dialog3 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/garden_center_dialog_3.tscn")
 
-@onready var cutting_tree_minigame_scn = preload("res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame.tscn")
-@onready var plant_caring_minigame_scn = preload("res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_caring.tscn")
+var minigame_1 = preload("res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame.tscn")
+var minigame_2 = preload("res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_caring.tscn")
+var minigame_3_1 = preload("res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/ground_select_minigame.tscn")
+var minigame_3_2 = preload("res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/garden_planning_minigame.tscn")
 
 var player
 
@@ -44,9 +46,15 @@ func _on_dialog_area_body_entered(body):
 		add_child(dialog2.instantiate())
 		GlobalGarden.talked_to_guido1 = true
 
-
 func change_scene():
 	if GlobalGarden.last_finished_minigame == "NONE":
-		get_tree().change_scene_to_packed(cutting_tree_minigame_scn)
-	elif GlobalGarden.last_finished_minigame == "Minigame1":
-		get_tree().change_scene_to_packed(plant_caring_minigame_scn)
+		get_tree().change_scene_to_packed(minigame_1)
+	elif GlobalGarden.last_finished_minigame == "CuttingGame":
+		get_tree().change_scene_to_packed(minigame_2)
+	elif GlobalGarden.last_finished_minigame == "CaringGame":
+		get_tree().change_scene_to_packed(minigame_3_1)
+	elif GlobalGarden.last_finished_minigame == "GroundGame":
+		get_tree().change_scene_to_packed(minigame_3_2)
+	elif GlobalGarden.last_finished_minigame == "PlanningGame":
+		get_tree().change_scene_to_packed(minigame_1)
+	
