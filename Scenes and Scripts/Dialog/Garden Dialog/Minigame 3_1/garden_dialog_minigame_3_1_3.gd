@@ -79,6 +79,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Nein, das ist leider der falsche Bodentyp. Lies dir die Informationen noch einmal genau durch."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_garden_groundtype_dialog_04.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	
