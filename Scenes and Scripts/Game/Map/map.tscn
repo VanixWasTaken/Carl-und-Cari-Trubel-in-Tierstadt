@@ -436,10 +436,12 @@ position = Vector2(1000, 688)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" groups=["Camera"]]
+process_callback = 0
 limit_left = 0
 limit_top = 0
 limit_right = 4667
 limit_bottom = 2625
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]

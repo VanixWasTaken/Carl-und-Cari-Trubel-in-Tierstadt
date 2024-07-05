@@ -8,6 +8,7 @@ var job_buildings
 var player
 
 func _ready():
+	Global.last_scene = "Map"
 	Global.menu_open = true
 	if Global.last_scene == "Laboratory":
 		$Player.position = Vector2(776, 2256)
