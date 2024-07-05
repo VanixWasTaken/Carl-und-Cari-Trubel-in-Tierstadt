@@ -9,6 +9,8 @@ var dialog_side = ["left", "right"]
 var finished = false
 var same_speaker = false
 
+var guido_path = "res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_planning_dialog_"
+
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
@@ -63,6 +65,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Also, was müssen wir tun? Biber-Barbaren ausbilden? Einen Zitteraal-Zauberer-Turm bauen oder …?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Garden Center/Carl/PC/vo_pc_carl_planning_dialog_01.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 		
@@ -74,6 +78,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Also sollen wir hier nur das Layout für den Garten planen? Was passiert, wenn wir die Aufgaben nicht erfüllen?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Garden Center/Cari/PC/vo_pc_cari_planning_dialog_03.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -85,6 +91,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Dann wollen wir mal unser Bestes geben, dass wir uns einen Garten ausdenken, den man so schnell nicht vergessen wird."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Garden Center/Carl/PC/vo_pc_carl_planning_dialog_06.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -115,6 +123,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Nicht so schnell mein Junge. Eure Aufgabe ist es einfach nur die Pflanzen einzupflanzen und dabei die Angaben auf dem Zettel zu erfüllen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "02.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -126,6 +136,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Ganz recht, ich rufe dann meine Cousins Ginston und Gaston, die dann den Garten errichten werden."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "04.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -137,6 +149,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Solltet ihr scheitern die Anforderungen zu erfüllen, gibt es dieser Jahr keine Gartenaustellung"
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "05.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
