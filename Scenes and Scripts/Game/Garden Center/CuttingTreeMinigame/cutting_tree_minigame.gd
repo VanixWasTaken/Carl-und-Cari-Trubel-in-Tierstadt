@@ -18,8 +18,6 @@ func _ready():
 
 func _process(delta):
 	if $Tree3.cuts_done == 8:
-		await get_tree().create_timer(1).timeout
-		$CanvasLayer/AnimationPlayer.play("fade_out")
 		$Tree3.cuts_done += 1
 
 
@@ -44,7 +42,8 @@ func _on_animation_player_animation_finished(anim_name):
 	elif anim_name == "fade_in":
 		garden_scene = load("res://Scenes and Scripts/Game/Garden Center/garden_center.tscn")
 
-
+func fade_out():
+	$CanvasLayer/AnimationPlayer.play("fade_out")
 
 func _on_tree_3_move_camera():
 	var next_dialog = dialog4.instantiate()

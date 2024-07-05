@@ -13,8 +13,6 @@ var same_speaker = false
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
 var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-##### add icon for environment here once finished
-var PRESET3 = preload("res://Assets/Art/Environment/Map/Clouds/cloud_poof1.png")
 var PRESET4 = preload("res://Assets/Art/Characters/Guido/Headshot/gardener_headshot.png")
 
 
