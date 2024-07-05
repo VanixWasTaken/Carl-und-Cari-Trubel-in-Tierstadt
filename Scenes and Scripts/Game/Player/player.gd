@@ -10,7 +10,7 @@ var in_area = false
 
 
 func _ready():
-	$CanvasLayer/FadeAnimation.visible = true
+	$CanvasLayer.show()
 	if Global.character =="Carl":
 		$AnimatedSprite2D.play("carl_animation")
 	elif Global.character == "Cari":

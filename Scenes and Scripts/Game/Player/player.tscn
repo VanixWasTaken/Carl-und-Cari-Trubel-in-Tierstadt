@@ -131,6 +131,7 @@ bus = &"SFX"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 10
+visible = false
 
 [node name="FadeAnimation" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 8
