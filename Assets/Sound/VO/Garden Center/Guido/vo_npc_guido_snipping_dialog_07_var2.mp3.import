@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bo11r4p3li8w2"
+path="res://.godot/imported/vo_npc_guido_snipping_dialog_07_var2.mp3-677b3922f53bdd3f8e43a8ffef789a94.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_snipping_dialog_07_var2.mp3"
+dest_files=["res://.godot/imported/vo_npc_guido_snipping_dialog_07_var2.mp3-677b3922f53bdd3f8e43a8ffef789a94.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

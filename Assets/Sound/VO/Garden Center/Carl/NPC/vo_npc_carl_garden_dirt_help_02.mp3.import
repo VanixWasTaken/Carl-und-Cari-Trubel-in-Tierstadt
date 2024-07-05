@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://r01v2u5fn2t2"
+path="res://.godot/imported/vo_npc_carl_garden_dirt_help_02.mp3-2d2691db73fed740701301af5dbe41d8.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Carl/NPC/vo_npc_carl_garden_dirt_help_02.mp3"
+dest_files=["res://.godot/imported/vo_npc_carl_garden_dirt_help_02.mp3-2d2691db73fed740701301af5dbe41d8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

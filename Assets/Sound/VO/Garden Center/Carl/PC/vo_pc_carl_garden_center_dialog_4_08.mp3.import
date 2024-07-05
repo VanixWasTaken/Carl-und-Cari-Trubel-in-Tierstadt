@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cf1d8houy4cif"
+path="res://.godot/imported/vo_pc_carl_garden_center_dialog_4_08.mp3-4fffba4d72908de09292a60430c334ab.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Carl/PC/vo_pc_carl_garden_center_dialog_4_08.mp3"
+dest_files=["res://.godot/imported/vo_pc_carl_garden_center_dialog_4_08.mp3-4fffba4d72908de09292a60430c334ab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

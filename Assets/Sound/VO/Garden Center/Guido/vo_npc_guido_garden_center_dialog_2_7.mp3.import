@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coa7lm81bwsyk"
+path="res://.godot/imported/vo_npc_guido_garden_center_dialog_2_7.mp3-ee83eae7127ea2a1668d5b1ad884320e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_garden_center_dialog_2_7.mp3"
+dest_files=["res://.godot/imported/vo_npc_guido_garden_center_dialog_2_7.mp3-ee83eae7127ea2a1668d5b1ad884320e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

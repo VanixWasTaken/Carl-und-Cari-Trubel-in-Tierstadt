@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4lnry2o0o0e8"
+path="res://.godot/imported/vo_npc_carl_garden_snipping_help_01.mp3-6384b327798273ba44c542d1a4e8d1c4.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Carl/NPC/vo_npc_carl_garden_snipping_help_01.mp3"
+dest_files=["res://.godot/imported/vo_npc_carl_garden_snipping_help_01.mp3-6384b327798273ba44c542d1a4e8d1c4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
