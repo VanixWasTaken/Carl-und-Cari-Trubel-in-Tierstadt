@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7p1t31gehc1d"
+path="res://.godot/imported/vo_npc_guido_caring_dialog_09.mp3-db52bad92e0c3aa77b2a88a433013902.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_caring_dialog_09.mp3"
+dest_files=["res://.godot/imported/vo_npc_guido_caring_dialog_09.mp3-db52bad92e0c3aa77b2a88a433013902.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
