@@ -14,6 +14,7 @@ func _input(event):
 
 		if event.is_action_released("left_click"):
 			scissor_spr.texture = scissor_uncut
+			$ScissorOpen.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

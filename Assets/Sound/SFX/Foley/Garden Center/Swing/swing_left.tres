@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://cpy6cgllxx1ld"]
+
+[ext_resource type="AudioStream" uid="uid://ctnndby3pljpw" path="res://Assets/Sound/SFX/Foley/Garden Center/Swing/sfx_garden_center_foley_swing_left_var1.mp3" id="1_td8tw"]
+[ext_resource type="AudioStream" uid="uid://bi24nb8vped30" path="res://Assets/Sound/SFX/Foley/Garden Center/Swing/sfx_garden_center_foley_swing_left_var2.mp3" id="2_spuj2"]
+[ext_resource type="AudioStream" uid="uid://b6qgkedojoh7w" path="res://Assets/Sound/SFX/Foley/Garden Center/Swing/sfx_garden_center_foley_swing_left_var3.mp3" id="3_iw1y5"]
+
+[resource]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("1_td8tw")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_spuj2")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_iw1y5")
+stream_2/weight = 1.0

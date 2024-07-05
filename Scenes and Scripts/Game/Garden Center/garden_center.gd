@@ -18,6 +18,7 @@ var player
 
 
 func _ready():
+	$Camera3D/AudioListener3D.make_current()
 	MusicController._play_music("peace_and_tranquility", "garden_center", -15)
 	Global.last_scene = "GardenCenter"
 	player = get_tree().get_first_node_in_group("Player")
@@ -41,6 +42,10 @@ func _ready():
 	
 	SaveSystem.save_game()
 	
+	var playback: AudioStreamPlaybackPolyphonic
+	$Ambience.play()
+	playback = $Ambience.get_stream_playback()
+	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind_var1.mp3"))
 
 func _process(_delta):
 	if !Global.cutscene_playing:
@@ -50,6 +55,8 @@ func _process(_delta):
 
 
 func _on_cutscene_animation_animation_finished(camera_pan):
+	$Player/AudioListener3D.make_current()
+	$Camera3D/AudioListener3D.queue_free()
 	Global.cutscene_playing = false
 	$CutsceneAnimation/MouseBlock.queue_free()
 	add_child(dialog1.instantiate())
@@ -92,3 +99,12 @@ func _on_exit_body_entered(body):
 		get_tree().change_scene_to_packed(map_scene)
 		Global.completed_jobs.append("Garden Center")
 		Global.last_scene = "GardenCenter"
+
+
+func _on_animated_sprite_3d_frame_changed():
+	if $GardenCenterNPC/AnimatedSprite3D.frame == 2:
+		$GardenCenterNPC/Swing.stream = load("res://Assets/Sound/SFX/Foley/Garden Center/Swing/swing_left.tres")
+		$GardenCenterNPC/Swing.play()
+	elif $GardenCenterNPC/AnimatedSprite3D.frame == 7:
+		$GardenCenterNPC/Swing.stream = load("res://Assets/Sound/SFX/Foley/Garden Center/Swing/swing_right.tres")
+		$GardenCenterNPC/Swing.play()

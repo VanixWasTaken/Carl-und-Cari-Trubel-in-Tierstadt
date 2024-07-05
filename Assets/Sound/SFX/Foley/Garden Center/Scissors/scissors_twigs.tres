@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://c77vwf58r34xt"]
+
+[ext_resource type="AudioStream" uid="uid://y1rmhifgtdw1" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorstwig_var1.mp3" id="1_fanji"]
+[ext_resource type="AudioStream" uid="uid://fxxvigwra0ba" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorstwig_var2.mp3" id="2_mfnav"]
+[ext_resource type="AudioStream" uid="uid://dh1wbm7e0cw4f" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorstwig_var3.mp3" id="3_44qv6"]
+[ext_resource type="AudioStream" uid="uid://dwyksujtdvi7u" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorstwig_var4.mp3" id="4_6st2n"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_fanji")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_mfnav")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_44qv6")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_6st2n")
+stream_3/weight = 1.0
