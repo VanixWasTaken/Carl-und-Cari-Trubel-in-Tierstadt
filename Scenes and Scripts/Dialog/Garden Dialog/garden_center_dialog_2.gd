@@ -9,6 +9,10 @@ var dialog_side = ["left", "right"]
 var finished = false
 var same_speaker = false
 
+var carl_path = "res://Assets/Sound/VO/Garden Center/Carl/PC/vo_pc_carl_garden_center_dialog_"
+var cari_path = "res://Assets/Sound/VO/Garden Center/Cari/PC/vo_pc_cari_garden_center_dialog_"
+var guido_path = "res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_garden_center_dialog_"
+
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
@@ -65,6 +69,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Sie haben die Ehre in der Gegenwart von den Geschwistern Carl und Cari zu stehen. Wir wurden entsandt, um ihnen unter die Arme zu greifen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../VoiceOver".stream = load(cari_path + "2_3.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 6:
@@ -75,6 +81,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Du wurdest von einer Hexe angegriffen? Wie ist das passiert? Wo ist die Hexe jetzt?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "2_5.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -83,9 +91,11 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das haben wir schon mitbekommen. Also Fackeln wir nicht lange rum. Was können wir für ihre dich tun?"
+		short_node_text.text = "Das haben wir schon mitbekommen. Also Fackeln wir nicht lange rum. Was können wir für dich tun?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../VoiceOver".stream = load(cari_path + "2_8.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -97,6 +107,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Warte, was? Warum brauchst du Bananen? Ich dachte wir sollen dir helfen das Fest vorzubereiten?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "2_10.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -138,6 +150,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Willkommen im Königreich „Floratius“, oder wie die anderen sagen: Die Gärtnerei."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido Gänseblümchen"
+		$"../VoiceOver".stream = load(guido_path + "2_1_var1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -149,6 +163,8 @@ func add_right_dialog_box():
 		short_node_text.text = " Mein Name lautet „Guido Gänseblümchen“ und ich bin hier der Regent."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "2_1_var2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 3:
@@ -159,6 +175,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Mit wem habe ich die Ehre?"
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "2_2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -170,6 +188,8 @@ func add_right_dialog_box():
 		short_node_text.text = "In der Tat habe ich eure Ankunft schon erwartet. Bei den Vorbereitungen für das Stadtfest habe ich mir einen Hexenschuss eingeholt."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "2_4.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 7:
@@ -180,6 +200,8 @@ func add_right_dialog_box():
 		short_node_text.text = "HOHOHO. Nein mein Junge, ich habe zu schwere Sachen getragen und vergessen aus den Knien zu heben. Eine echte Hexe war nicht involviert."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "2_6.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -191,6 +213,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Nun aber zurück zum Geschäftlichen. Ich benötige eure Hilfe um meine Vorbereitungen zu beenden."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "2_7.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 9:
@@ -201,6 +225,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Meine Verletzung hindert leider meine Fähigkeiten."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "2_8.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -212,6 +238,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Als erste Handlung könnt ihr mir erstmal einen Bündel Bananen bringen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "2_9.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		
 	elif dialogs == 13:
@@ -222,6 +250,8 @@ func add_right_dialog_box():
 		short_node_text.text = "HOHOHO. Ich habe mir nur ein kleines Späßchen erlaubt."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "2_11.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 15:
@@ -232,6 +262,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Als erstes müsst ihr ihr euch in die hintere rechte Ecke des Raumes begeben und dort die Pflanzen schneiden."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
+		$"../VoiceOver".stream = load(guido_path + "2_13.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	

@@ -9,6 +9,10 @@ var dialog_side = ["left", "right"]
 var finished = false
 var same_speaker = false
 
+var carl_path = "res://Assets/Sound/VO/Garden Center/Carl/PC/vo_pc_carl_garden_center_dialog_"
+var cari_path = "res://Assets/Sound/VO/Garden Center/Cari/PC/vo_pc_cari_garden_center_dialog_"
+var guido_path = "res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_garden_center_dialog_"
+
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
@@ -66,6 +70,8 @@ func add_left_dialog_box():
 		short_node_text.text = "HALLO? Geht es dir gut?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../VoiceOver".stream = load(carl_path + "1_3.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		
 	elif dialogs == 6:
@@ -95,6 +101,8 @@ func add_right_dialog_box():
 		short_node_text.text = "*Krach Bumm Donk*"
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Umgebung"
+		$"../VoiceOver".stream = load("res://Assets/Sound/SFX/Foley/Garden Center/vo_sfx_garden_center_foley_dialog_1_1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -106,6 +114,8 @@ func add_right_dialog_box():
 		short_node_text.text = "AUTSCH! Mist, doofes Teil!"
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "???"
+		$"../VoiceOver".stream = load(guido_path + "1_2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
@@ -117,6 +127,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Oh, Besuch. Bitte verzeiht meine Ausdrucksweise, ich habe mich lediglich im Ton vergriffen, da mir ein Blumentopf kaputt gegangen ist."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "???"
+		$"../VoiceOver".stream = load(guido_path + "1_4.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
 	
@@ -128,6 +140,8 @@ func add_right_dialog_box():
 		short_node_text.text = "Kommt doch bitte zu mir. Auf diese Entfernung lassen sich Unterhaltungen so schlecht führen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "???"
+		$"../VoiceOver".stream = load(guido_path + "1_5.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = false
 	
