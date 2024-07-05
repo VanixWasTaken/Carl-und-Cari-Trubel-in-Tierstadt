@@ -40,3 +40,7 @@ func _on_watering_area_area_exited(area):
 
 func set_humidity():
 	get_tree().get_first_node_in_group("HumidityText").text = str(current_air_wetness)
+
+
+func _on_insect_deadge():
+	$DeathSound.play()

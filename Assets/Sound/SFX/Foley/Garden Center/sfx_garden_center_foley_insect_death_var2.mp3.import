@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1xm4bflad5u6"
+path="res://.godot/imported/sfx_garden_center_foley_insect_death_var2.mp3-8a1545f904d7c1388748e17289c5c2cb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var2.mp3"
+dest_files=["res://.godot/imported/sfx_garden_center_foley_insect_death_var2.mp3-8a1545f904d7c1388748e17289c5c2cb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

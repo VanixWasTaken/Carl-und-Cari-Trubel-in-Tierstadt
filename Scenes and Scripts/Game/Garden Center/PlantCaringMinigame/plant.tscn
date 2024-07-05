@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt8p5adk2f06v"]
+[gd_scene load_steps=11 format=3 uid="uid://dt8p5adk2f06v"]
 
 [ext_resource type="Texture2D" uid="uid://41k61fwpefcf" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minigame2_bigplant_wilted.png" id="1_46bnw"]
 [ext_resource type="Texture2D" uid="uid://cwt8mump6dehs" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minigame2_bigplant.png" id="2_3uy47"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_1.gd" id="2_bemo7"]
 [ext_resource type="PackedScene" uid="uid://bcbhx165k2ljt" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect.tscn" id="3_8mass"]
+[ext_resource type="AudioStream" uid="uid://dn7qgqd2owhp3" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var1.mp3" id="5_7i8uk"]
+[ext_resource type="AudioStream" uid="uid://1xm4bflad5u6" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var2.mp3" id="6_5c53y"]
+[ext_resource type="AudioStream" uid="uid://bv4vit21kafmr" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var3.mp3" id="7_3qowr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nsswb"]
 animations = [{
@@ -21,6 +24,15 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2bgdb"]
 size = Vector2(515.569, 221.02)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xmkw3"]
+streams_count = 3
+stream_0/stream = ExtResource("5_7i8uk")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("6_5c53y")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("7_3qowr")
+stream_2/weight = 1.0
 
 [node name="Plant1" type="AnimatedSprite2D" groups=["Plants"]]
 position = Vector2(1014, 658)
@@ -65,6 +77,15 @@ position = Vector2(267.645, -341.633)
 sprite_num = 1
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_xmkw3")
+volume_db = -6.0
+bus = &"SFX_Foley"
 
 [connection signal="area_entered" from="WateringArea" to="." method="_on_watering_area_area_entered"]
 [connection signal="area_exited" from="WateringArea" to="." method="_on_watering_area_area_exited"]
+[connection signal="deadge" from="Insect" to="." method="_on_insect_deadge"]
+[connection signal="deadge" from="Insect2" to="." method="_on_insect_deadge"]
+[connection signal="deadge" from="Insect3" to="." method="_on_insect_deadge"]
+[connection signal="deadge" from="Insect4" to="." method="_on_insect_deadge"]
+[connection signal="deadge" from="Insect5" to="." method="_on_insect_deadge"]
+[connection signal="deadge" from="Insect6" to="." method="_on_insect_deadge"]
