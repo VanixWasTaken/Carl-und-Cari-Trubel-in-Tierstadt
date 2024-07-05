@@ -53,19 +53,19 @@ func _on_cutscene_animation_animation_finished(camera_pan):
 
 
 func _on_dialog_area_body_entered(body):
-	if GlobalGarden.last_finished_minigame == "NONE":
+	if GlobalGarden.last_finished_minigame == "NONE" and !GlobalGarden.talked_to_guido2:
 		add_child(dialog2.instantiate())
 		GlobalGarden.talked_to_guido2 = true
-	elif GlobalGarden.last_finished_minigame == "CuttingGame":
+	elif GlobalGarden.last_finished_minigame == "CuttingGame" and !GlobalGarden.talked_to_guido3:
 		add_child(dialog3.instantiate())
 		GlobalGarden.talked_to_guido3 = true
-	elif GlobalGarden.last_finished_minigame == "CaringGame":
+	elif GlobalGarden.last_finished_minigame == "CaringGame" and !GlobalGarden.talked_to_guido4:
 		add_child(dialog4.instantiate())
 		GlobalGarden.talked_to_guido4 = true
-	elif GlobalGarden.last_finished_minigame == "GroundGame":
+	elif GlobalGarden.last_finished_minigame == "GroundGame" and !GlobalGarden.talked_to_guido5:
 		add_child(dialog5.instantiate())
 		GlobalGarden.talked_to_guido5 = true
-	elif GlobalGarden.last_finished_minigame == "PlanningGame":
+	elif GlobalGarden.last_finished_minigame == "PlanningGame" and !GlobalGarden.talked_to_guido6:
 		add_child(dialog6.instantiate())
 		GlobalGarden.talked_to_guido6 = true
 		map_scene = load("res://Scenes and Scripts/Game/Map/map.tscn")
