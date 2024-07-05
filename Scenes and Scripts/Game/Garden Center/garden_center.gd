@@ -24,6 +24,7 @@ func _ready():
 	if GlobalGarden.last_finished_minigame == "NONE":
 		$CutsceneAnimation.play("camera_pan")
 		Global.cutscene_playing = true
+		$Player.position = Vector3(-22.362, 0.85, -0.647)
 	elif GlobalGarden.last_finished_minigame == "CuttingGame":
 		Global.dialog_playing = false
 		$Player.position = Vector3(16.85, 0.85, 0.65)
