@@ -57,7 +57,6 @@ size = Vector2(495, 42)
 position = Vector2(263, 127)
 script = ExtResource("1_1e6tj")
 scene_name = "res://Scenes and Scripts/Game/Garden Center/garden_center.tscn"
-building_name = "Gärtnerei"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2061, 1170)
