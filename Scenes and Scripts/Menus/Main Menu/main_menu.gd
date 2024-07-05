@@ -11,7 +11,6 @@ var mouse_inside_disabled = false
 
 func _ready():
 	$CloudsWhoosch.play()
-	SaveSystem.load_game()
 	if Global.first_game_start:
 		$"VBoxContainer/Load Game".disabled = true
 	else:
