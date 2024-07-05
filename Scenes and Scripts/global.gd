@@ -1,62 +1,62 @@
 extends Node
 
-var mouse_full = false
-var mouse_in_button = false
+var mouse_full = false #save
+var mouse_in_button = false # save
 var moving_allowed = true #save
 var character = "" #save
-var open_tutorial_door = false
-var dialog_playing = false
-var lab_cutscene_played = false 
-var cutscene_playing = false 
-var talked_to_chris
-var should_shoot = false
-var menu_open = false
-var tutorial_help_button_state = 0
-var laboratory_help_button_state = 0
-var mini_help_button_state = 0
-var exit_coordinates
+var open_tutorial_door = false #save
+var dialog_playing = false #save
+var lab_cutscene_played = false #save
+var cutscene_playing = false #save
+var talked_to_chris #save
+var should_shoot = false #save
+var menu_open = false #save
+var tutorial_help_button_state = 0 #save
+var laboratory_help_button_state = 0 #save
+var mini_help_button_state = 0 #save
+var exit_coordinates #save
 var first_game_start = true #save
 var completed_jobs = [] #save
 var job_stars_dict : Dictionary = {  #save
 	"ChemistJob" : null
 }
 
-var story_dialog_tracker : Dictionary = {
+var story_dialog_tracker : Dictionary = { #save
 	1: "res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn",
 	2: "res://Scenes and Scripts/Dialog/Map Dialoge/Band Story Dialog/band_member_dialog_4.tscn"
 }
 
-var last_scene : String 
+var last_scene : String  #save
 
-var talked_to_chameleon = false #Wird auf true gesetzt, wenn man mit dem chamäleon geredet hat auf freiwilliger basis
-var talked_to_chameleon_2 = false #wird aufn true gesetzt, wenn mann nach dem 1. Minispiel mit dem chameleon geredet hat
-var talked_to_chameleon_3 = false #wird aufn true gesetzt, wenn mann nach dem 2. Minispiel mit dem chameleon geredet hat
-var talked_to_chameleon_4 = false #wird aufn true gesetzt, wenn mann nach dem 3. Minispiel mit dem chameleon geredet hat
-var return_laboratory_1 = false #wird auf true gesetzt, wenn man aus dem ersten minispiel zurück kommt
-var return_laboratory_2 = false #wird auf true gesetzt, wenn man aus dem 2 minigame kommt
-var return_laboratory_3 = false #wird auf true gesetzt, wenn man aus dem 3 minigame kommt
+var talked_to_chameleon = false #Wird auf true gesetzt, wenn man mit dem chamäleon geredet hat auf freiwilliger basis                 #save
+var talked_to_chameleon_2 = false #wird aufn true gesetzt, wenn mann nach dem 1. Minispiel mit dem chameleon geredet hat                #save
+var talked_to_chameleon_3 = false #wird aufn true gesetzt, wenn mann nach dem 2. Minispiel mit dem chameleon geredet hat                 #save
+var talked_to_chameleon_4 = false #wird aufn true gesetzt, wenn mann nach dem 3. Minispiel mit dem chameleon geredet hat                  #save
+var return_laboratory_1 = false #wird auf true gesetzt, wenn man aus dem ersten minispiel zurück kommt                                     #save
+var return_laboratory_2 = false #wird auf true gesetzt, wenn man aus dem 2 minigame kommt                                                  #save
+var return_laboratory_3 = false #wird auf true gesetzt, wenn man aus dem 3 minigame kommt                                                    #save
 @onready var map_scene = preload("res://Scenes and Scripts/Game/Map/map.tscn")
 @onready var laboratory_scene = preload("res://Scenes and Scripts/Game/Laboratory/laboratory_3d.tscn")
-@onready var start_scene = preload("res://Scenes and Scripts/Menus/StartUp/start_up.tscn")                                                                                         
+@onready var start_scene = preload("res://Scenes and Scripts/Menus/StartUp/start_up.tscn")                                                                          
 var custom_mouse_cursor = preload("res://Assets/Art/UI/player_mouse.png")
 var custom_mouse_cursor_clicked = preload("res://Assets/Art/UI/player_mouse_clicked.png")
 
 
 ###### This variable are used for storing which job is currently played 
-var inside_laboratory : bool = false
+var inside_laboratory : bool = false #save
 
 
 
 ###### Thess variable are used to create an instance of the pause menu
 @onready var pause = preload("res://Scenes and Scripts/Menus/Pause Menu/pause_menu.tscn")
-var pause_opened = true ### set to true, to stop the menu from opening before the game starts
+var pause_opened = true ### set to true, to stop the menu from opening before the game starts               #save
 
 
 ###### These variables are used for the volume control using the options menu
-var master_volume = 0.7
-var dialog_volume = 0.5
-var sfx_volume = 0.7
-var music_volume = 0.7
+var master_volume = 0.7 #save
+var dialog_volume = 0.5 #save
+var sfx_volume = 0.7 #save
+var music_volume = 0.7 #save
 
 
 
