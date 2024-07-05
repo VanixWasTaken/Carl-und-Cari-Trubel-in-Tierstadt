@@ -24,6 +24,7 @@ var garden_scene
 var finished_dialog = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Minigame 2/garden_minigame_2_dialog_4.tscn")
 var new_plant 
 var next_dialog
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Humidity/Label.text = str(current_air_wetness) + "%"
@@ -42,12 +43,24 @@ func _process(delta):
 	Lebende Insekten: " + str(current_alive_insects) + " / 0
 	Luftfeuchtigkeit: " +  str(current_air_wetness) + "% / " +  str(needed_air_wetness) + "%"
 	if current_air_wetness == needed_air_wetness && current_alive_insects == needed_alive_insects && current_ground_wetness == needed_ground_wetness && current_temperature == needed_temperature && !current_plant_done:
-		current_plant_done = true
-		plants_done += 1
-		finish_plant()
-		$TextureButton.show()
-	
+		next_plant_ready()
+	elif current_air_wetness != needed_air_wetness || current_alive_insects != needed_alive_insects || current_ground_wetness != needed_ground_wetness || current_temperature != needed_temperature:
+		if current_plant_done:
+			messed_up_again()
 
+func next_plant_ready():
+	current_plant_done = true
+	plants_done += 1
+	$TextureButton.show()
+	get_tree().get_first_node_in_group("Plants").frame = 1
+
+func messed_up_again():
+	current_plant_done = false
+	plants_done -= 1
+	$TextureButton.hide()
+	get_tree().get_first_node_in_group("Plants").frame = 0
+	
+	
 
 func _on_plus_humidity_button_down():
 	current_air_wetness += 1
@@ -104,12 +117,6 @@ func _on_5_area_entered(area):
 	if area.get_name() == "Pointer":
 		$Temperature/TemperatureRegulator.rotation_degrees = 80
 		current_temperature = 5
-
-func finish_plant():
-	current_plant_done = true
-	get_tree().get_first_node_in_group("Plants").frame = 1
-	$TextureButton.visible = true
-	
 
 
 
