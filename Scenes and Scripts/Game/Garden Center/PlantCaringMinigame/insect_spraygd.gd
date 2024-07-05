@@ -36,6 +36,7 @@ func _process(delta):
 		follow_mouse = false
 		mouse_on = false
 	if Input.is_action_just_pressed("right_click") && follow_mouse && should_spray:
+		$Spraying.play()
 		$AnimatedSprite2D.play("spraying")
 		should_spray = false
 

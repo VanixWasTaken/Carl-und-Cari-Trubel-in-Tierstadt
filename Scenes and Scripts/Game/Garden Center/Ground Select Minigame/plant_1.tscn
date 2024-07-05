@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0m2xjni56u6m"]
+[gd_scene load_steps=9 format=3 uid="uid://d0m2xjni56u6m"]
 
 [ext_resource type="Texture2D" uid="uid://blkwk1nwkioev" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon1.png" id="1_hav5f"]
 [ext_resource type="Texture2D" uid="uid://de5e24i441sqt" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon_selected.png" id="2_jb76v"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/plants.gd" id="3_ahbjt"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="4_ouauk"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_47ruh"]
+[ext_resource type="AudioStream" uid="uid://dgm6oh3ah3bgm" path="res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/pot_hover.tres" id="6_sjf55"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e1r6v"]
 animations = [{
@@ -62,6 +63,11 @@ text = "Sonnenblumen brauchen
 Böden."
 autowrap_mode = 3
 text_overrun_behavior = 2
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_sjf55")
+volume_db = 3.0
+bus = &"SFX_UI"
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

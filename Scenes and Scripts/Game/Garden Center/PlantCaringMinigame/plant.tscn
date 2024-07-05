@@ -39,7 +39,6 @@ needed_temperature = 35
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WateringArea"]
 position = Vector2(-30.9905, -245.204)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2bgdb")
 
 [node name="Insect" parent="." instance=ExtResource("3_8mass")]
@@ -64,6 +63,8 @@ sprite_num = 3
 [node name="Insect6" parent="." instance=ExtResource("3_8mass")]
 position = Vector2(267.645, -341.633)
 sprite_num = 1
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
 
 [connection signal="area_entered" from="WateringArea" to="." method="_on_watering_area_area_entered"]
 [connection signal="area_exited" from="WateringArea" to="." method="_on_watering_area_area_exited"]

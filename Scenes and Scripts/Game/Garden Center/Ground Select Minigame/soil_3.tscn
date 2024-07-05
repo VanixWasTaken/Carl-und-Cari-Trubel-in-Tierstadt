@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://cu18ups1561ow"]
+[gd_scene load_steps=14 format=3 uid="uid://cu18ups1561ow"]
 
 [ext_resource type="Texture2D" uid="uid://bvntfuk1naqsj" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sand/sand.png" id="1_hbkj2"]
 [ext_resource type="Texture2D" uid="uid://cjvjqlrfet3wc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sand/sand_selected.png" id="2_me85p"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/soil.gd" id="3_cyeuv"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="4_mdf2k"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_rvde4"]
+[ext_resource type="AudioStream" uid="uid://dv2xetlq4jibf" path="res://Assets/Sound/SFX/UI/Hover/hover.tres" id="6_q8nxu"]
+[ext_resource type="AudioStream" uid="uid://ddd3yfiy8owft" path="res://Assets/Sound/SFX/Foley/Garden Center/Minigame 2/bush_setdown.tres" id="7_ld7jq"]
+[ext_resource type="AudioStream" uid="uid://dxvhcpnwfj8hq" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var1.mp3" id="8_5nl7n"]
+[ext_resource type="AudioStream" uid="uid://f86grv1pnrfl" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var2.mp3" id="9_em6rc"]
+[ext_resource type="AudioStream" uid="uid://bqwllua46dbnm" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var3.mp3" id="10_1ty04"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kw0ga"]
 animations = [{
@@ -22,6 +27,15 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmlo3"]
 size = Vector2(288, 191)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yh8lk"]
+streams_count = 3
+stream_0/stream = ExtResource("8_5nl7n")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("9_em6rc")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("10_1ty04")
+stream_2/weight = 1.0
 
 [node name="Sandboden" type="AnimatedSprite2D"]
 position = Vector2(1708, 252)
@@ -66,6 +80,18 @@ Pflanzen:
 - Echtes Labkraut"
 autowrap_mode = 3
 text_overrun_behavior = 2
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_q8nxu")
+bus = &"SFX_UI"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ld7jq")
+bus = &"SFX_Foley"
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_yh8lk")
+bus = &"SFX_Foley"
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -25,6 +25,11 @@ var finished_dialog = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Min
 var new_plant 
 var next_dialog
 
+var play_air = true
+var play_insects = true
+var play_ground = true
+var play_temperature = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Humidity/Label.text = str(current_air_wetness) + "%"
@@ -47,8 +52,28 @@ func _process(delta):
 	elif current_air_wetness != needed_air_wetness || current_alive_insects != needed_alive_insects || current_ground_wetness != needed_ground_wetness || current_temperature != needed_temperature:
 		if current_plant_done:
 			messed_up_again()
+	
+	if current_air_wetness == needed_air_wetness and play_air:
+		play_correct()
+		play_air = false
+	elif current_air_wetness != needed_air_wetness:
+		play_air = true
+	if current_alive_insects == needed_alive_insects and play_insects:
+		play_correct()
+		play_insects = false
+	if current_ground_wetness == needed_ground_wetness and play_ground:
+		play_correct()
+		play_ground = false
+	elif current_ground_wetness != needed_ground_wetness:
+		play_ground = true
+	if current_temperature == needed_temperature and play_temperature:
+		play_correct()
+		play_temperature = false
+	elif current_temperature != needed_temperature:
+		play_temperature = true
 
 func next_plant_ready():
+	play_finished()
 	current_plant_done = true
 	plants_done += 1
 	$TextureButton.show()
@@ -73,48 +98,56 @@ func _on_minus_humidity_button_down():
 
 func _on_40_area_entered(area):
 	if area.get_name() == "Pointer":
+		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = -80
 		current_temperature = 40
 
 
 func _on_35_area_entered(area):
 	if area.get_name() == "Pointer":
+		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = -55
 		current_temperature = 35
 
 
 func _on_30_area_entered(area):
 	if area.get_name() == "Pointer":
+		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees =-35
 		current_temperature = 30
 
 
 func _on_25_area_entered(area):
 	if area.get_name() == "Pointer":
+		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = -10
 		current_temperature = 25
 
 
 func _on_20_area_entered(area):
 	if area.get_name() == "Pointer":
+		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = 10
 		current_temperature = 20
 
 
 func _on_15_area_entered(area):
 	if area.get_name() == "Pointer":
+		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = 35
 		current_temperature = 15
 
 
 func _on_10_area_entered(area):
 	if area.get_name() == "Pointer":
+		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = 55 
 		current_temperature = 10
 
 
 func _on_5_area_entered(area):
 	if area.get_name() == "Pointer":
+		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = 80
 		current_temperature = 5
 
@@ -150,3 +183,29 @@ func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_out":
 		GlobalGarden.last_finished_minigame = "CaringGame"
 		get_tree().change_scene_to_packed(garden_scene)
+
+func play_correct():
+	var play_once = 1
+	if play_once == 1:
+		$Correct.play()
+		play_once += 1
+
+func play_finished():
+	await get_tree().create_timer(0.5).timeout
+	$Correct.play()
+	await get_tree().create_timer(0.5).timeout
+	$Correct.play()
+
+
+func _on_plus_humidity_pressed():
+	$AirWetnessBeep.play()
+
+func _on_minus_humidity_pressed():
+	$AirWetnessBeep.play()
+
+
+func _on_plus_humidity_mouse_entered():
+	$Temperature/Hover.play()
+
+func _on_minus_humidity_mouse_entered():
+	$Temperature/Hover.play()

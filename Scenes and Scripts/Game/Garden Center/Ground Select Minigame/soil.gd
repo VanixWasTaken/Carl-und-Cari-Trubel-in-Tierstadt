@@ -13,7 +13,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("left_click") && mouse_on:
+		$Click.play()
 		if correct_soil:
+			$Correct.play()
 			var next_dialog = finish_dialog.instantiate()
 			get_tree().get_current_scene().add_child(next_dialog)
 			GlobalGarden.last_finished_minigame = "GroundGame"
@@ -26,6 +28,7 @@ func _process(delta):
 
 
 func _on_area_2d_mouse_entered():
+	$Hover.play()
 	frame = 1
 	mouse_on = true
 	$InformationLabel.show()

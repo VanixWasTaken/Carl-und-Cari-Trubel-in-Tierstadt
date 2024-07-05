@@ -64,5 +64,7 @@ sprite_num = 3
 position = Vector2(367.659, 58.7755)
 sprite_num = 1
 
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+
 [connection signal="area_entered" from="WateringArea" to="." method="_on_watering_area_area_entered"]
 [connection signal="area_exited" from="WateringArea" to="." method="_on_watering_area_area_exited"]

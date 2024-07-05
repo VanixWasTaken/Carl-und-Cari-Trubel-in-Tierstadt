@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://brcdcnmm5e2em"]
+[gd_scene load_steps=17 format=3 uid="uid://brcdcnmm5e2em"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect_spraygd.gd" id="1_03ug4"]
 [ext_resource type="Texture2D" uid="uid://03bjdiwdfna6" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_anim1.png" id="2_v02m1"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://cdymfmy40w3dn" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_anim8.png" id="9_b1pk8"]
 [ext_resource type="Texture2D" uid="uid://dus30rrxnlohk" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray.png" id="10_6vap1"]
 [ext_resource type="Texture2D" uid="uid://dw1xy3mx167ip" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/InsectSpray/insect_spray_selected.png" id="11_3q26p"]
+[ext_resource type="AudioStream" uid="uid://e33c047dkq6w" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_bug_spray_var1.mp3" id="12_klwtv"]
+[ext_resource type="AudioStream" uid="uid://dbmogok1txxiw" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_bug_spray_var2.mp3" id="13_h5dmu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_svpjf"]
 animations = [{
@@ -58,6 +60,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6i5d"]
 size = Vector2(327.333, 762.667)
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_honb8"]
+streams_count = 2
+stream_0/stream = ExtResource("12_klwtv")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("13_h5dmu")
+stream_1/weight = 1.0
+
 [node name="Insect Spray" type="Node2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_03ug4")
@@ -80,6 +89,10 @@ position = Vector2(160.5, 12)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SprayArea"]
 polygon = PackedVector2Array(168.167, -266, 438.167, -138, 462.167, -40, 382.167, 54, 250.167, 52, 98.167, -216)
+
+[node name="Spraying" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_honb8")
+bus = &"SFX_Foley"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="mouse_entered" from="MouseArea" to="." method="_on_mouse_area_mouse_entered"]

@@ -29,6 +29,14 @@ func _process(delta):
 		follow_mouse = false
 		mouse_on = false
 
+func _input(event):
+	if event is InputEventMouseMotion:
+		if follow_mouse:
+			var velocity = event.get_velocity()
+			if velocity > Vector2(100, 100) and !$Sloshing.playing and follow_mouse:
+				$Sloshing.play()
+			elif velocity < Vector2(-100, -100) and !$Sloshing.playing and follow_mouse:
+				$Sloshing.play()
 
 func _on_mouse_area_mouse_entered():
 	if get_tree().get_current_scene().hands_full == false:
@@ -44,12 +52,16 @@ func _on_mouse_area_mouse_exited():
 func _on_water_area_area_entered(area):
 	var area_name = area.get_name()
 	if area_name == "WateringArea":
+		$Watering.play()
 		$AnimatedSprite2D.play("watering")
 
 
 func _on_water_area_area_exited(area):
 	var area_name = area.get_name()
 	if area_name == "WateringArea":
+		$Watering.stop()
+		$Sloshing.stop()
+		$StopPouring.play()
 		$AnimatedSprite2D.play("standing")
 		$AnimatedSprite2D.frame = 0
 		$AnimatedSprite2D.stop()

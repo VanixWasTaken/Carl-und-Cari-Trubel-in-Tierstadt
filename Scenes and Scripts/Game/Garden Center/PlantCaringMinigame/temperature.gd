@@ -21,7 +21,9 @@ func _process(delta):
 
 
 func _on_area_2d_mouse_entered():
+	$Hover.play()
 	mouse_on = true
+	
 
 
 func _on_area_2d_mouse_exited():

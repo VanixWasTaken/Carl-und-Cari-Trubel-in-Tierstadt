@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://di7wffcl0ey3o"]
+[gd_scene load_steps=29 format=3 uid="uid://di7wffcl0ey3o"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_caring.gd" id="1_mjkcf"]
 [ext_resource type="Texture2D" uid="uid://c72xamnljg6m7" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/room_placeholder.png" id="1_s0435"]
@@ -7,11 +7,20 @@
 [ext_resource type="PackedScene" uid="uid://c53c8e22d528s" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/watering_can.tscn" id="4_cx1dw"]
 [ext_resource type="PackedScene" uid="uid://brcdcnmm5e2em" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect_spray.tscn" id="6_61pj5"]
 [ext_resource type="Texture2D" uid="uid://cteydrkongfdc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/plusbuttonplaceholder.png" id="7_2n4t6"]
+[ext_resource type="AudioStream" uid="uid://dv2xetlq4jibf" path="res://Assets/Sound/SFX/UI/Hover/hover.tres" id="7_atalh"]
 [ext_resource type="Texture2D" uid="uid://dmauooyvr5rqx" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minusbuttonplaceholder.png" id="8_lti52"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/temperature.gd" id="9_jhkj6"]
 [ext_resource type="Texture2D" uid="uid://bp24i4cfoqioc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/potentiometer.png" id="9_r43fh"]
 [ext_resource type="Texture2D" uid="uid://b7it6lk702yx5" path="res://Assets/Art/UI/Buttons/Nächste Pflanze Button/next_button.png" id="11_f3oed"]
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="13_fmplx"]
+[ext_resource type="AudioStream" uid="uid://bn8r5dj7kj5yh" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3" id="14_yxeto"]
+[ext_resource type="AudioStream" uid="uid://d0lmco7mcudt" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_crow.mp3" id="15_va3qb"]
+[ext_resource type="AudioStream" uid="uid://buos730w4du22" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_birds.mp3" id="16_dlyjq"]
+[ext_resource type="AudioStream" uid="uid://bkqyni6br8jm6" path="res://Assets/Sound/SFX/UI/Click/click.tres" id="17_n33ll"]
+[ext_resource type="AudioStream" uid="uid://dxvhcpnwfj8hq" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var1.mp3" id="18_s3cx3"]
+[ext_resource type="AudioStream" uid="uid://f86grv1pnrfl" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var2.mp3" id="19_i84vy"]
+[ext_resource type="AudioStream" uid="uid://bqwllua46dbnm" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var3.mp3" id="20_vcayw"]
+[ext_resource type="AudioStream" uid="uid://bc4l1pbtr5kmu" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_air_wetness_var1.mp3" id="21_g1x66"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jmua4"]
 radius = 240.539
@@ -58,6 +67,15 @@ _data = {
 "fade_out": SubResource("Animation_ltvyy"),
 "new_animation": SubResource("Animation_0uxyh")
 }
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w0kpb"]
+streams_count = 3
+stream_0/stream = ExtResource("18_s3cx3")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("19_i84vy")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("20_vcayw")
+stream_2/weight = 1.0
 
 [node name="Plant Caring" type="Node2D"]
 script = ExtResource("1_mjkcf")
@@ -162,6 +180,11 @@ position = Vector2(1, -99)
 position = Vector2(0, -66.5)
 shape = SubResource("RectangleShape2D_n7qwd")
 
+[node name="Hover" type="AudioStreamPlayer" parent="Temperature"]
+stream = ExtResource("7_atalh")
+volume_db = 3.0
+bus = &"SFX_UI"
+
 [node name="Watering Can" parent="." instance=ExtResource("4_cx1dw")]
 position = Vector2(1556, 865)
 
@@ -236,6 +259,37 @@ libraries = {
 "": SubResource("AnimationLibrary_i0a4y")
 }
 
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_yxeto")
+volume_db = 3.0
+autoplay = true
+bus = &"SFX_Ambience"
+
+[node name="Crows" type="AudioStreamPlayer" parent="Ambience"]
+stream = ExtResource("15_va3qb")
+volume_db = -6.0
+autoplay = true
+bus = &"SFX_Foley"
+
+[node name="Birds" type="AudioStreamPlayer" parent="Ambience"]
+stream = ExtResource("16_dlyjq")
+volume_db = -6.0
+autoplay = true
+bus = &"SFX_Foley"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_n33ll")
+bus = &"SFX_UI"
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_w0kpb")
+max_polyphony = 3
+bus = &"SFX_Foley"
+
+[node name="AirWetnessBeep" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_g1x66")
+bus = &"SFX_Foley"
+
 [connection signal="area_entered" from="Temperature/40" to="." method="_on_40_area_entered"]
 [connection signal="area_entered" from="Temperature/35" to="." method="_on_35_area_entered"]
 [connection signal="area_entered" from="Temperature/30" to="." method="_on_30_area_entered"]
@@ -247,6 +301,10 @@ libraries = {
 [connection signal="mouse_entered" from="Temperature/TemperatureRegulator/Area2D" to="Temperature" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Temperature/TemperatureRegulator/Area2D" to="Temperature" method="_on_area_2d_mouse_exited"]
 [connection signal="button_down" from="Humidity/PlusHumidity" to="." method="_on_plus_humidity_button_down"]
+[connection signal="mouse_entered" from="Humidity/PlusHumidity" to="." method="_on_plus_humidity_mouse_entered"]
+[connection signal="pressed" from="Humidity/PlusHumidity" to="." method="_on_plus_humidity_pressed"]
 [connection signal="button_down" from="Humidity/MinusHumidity" to="." method="_on_minus_humidity_button_down"]
+[connection signal="mouse_entered" from="Humidity/MinusHumidity" to="." method="_on_minus_humidity_mouse_entered"]
+[connection signal="pressed" from="Humidity/MinusHumidity" to="." method="_on_minus_humidity_pressed"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbmogok1txxiw"
+path="res://.godot/imported/sfx_garden_center_foley_bug_spray_var2.mp3-4e968e79b2dcdedb8f5ea0e0035f07c1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_bug_spray_var2.mp3"
+dest_files=["res://.godot/imported/sfx_garden_center_foley_bug_spray_var2.mp3-4e968e79b2dcdedb8f5ea0e0035f07c1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
