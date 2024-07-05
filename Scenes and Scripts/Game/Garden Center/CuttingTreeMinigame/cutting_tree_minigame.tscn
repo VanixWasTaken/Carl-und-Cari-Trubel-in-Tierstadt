@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bxjd24pu0r6yb"]
+[gd_scene load_steps=29 format=3 uid="uid://bxjd24pu0r6yb"]
 
 [ext_resource type="PackedScene" uid="uid://b8ae2gbukn3ld" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/Trees/tree1.tscn" id="1_dwdq4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame.gd" id="1_ssqej"]
@@ -15,6 +15,9 @@
 [ext_resource type="AudioStream" uid="uid://dxvhcpnwfj8hq" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var1.mp3" id="13_urt76"]
 [ext_resource type="AudioStream" uid="uid://f86grv1pnrfl" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var2.mp3" id="14_e3a7d"]
 [ext_resource type="AudioStream" uid="uid://bqwllua46dbnm" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var3.mp3" id="15_51mua"]
+[ext_resource type="AudioStream" uid="uid://bn8r5dj7kj5yh" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3" id="16_htkqf"]
+[ext_resource type="AudioStream" uid="uid://d0lmco7mcudt" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_crow.mp3" id="17_yliwh"]
+[ext_resource type="AudioStream" uid="uid://buos730w4du22" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_birds.mp3" id="18_qt67x"]
 
 [sub_resource type="Animation" id="Animation_yjaf6"]
 length = 0.001
@@ -250,6 +253,24 @@ bus = &"SFX_Foley"
 
 [node name="TreeFinished" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_ndaui")
+bus = &"SFX_Foley"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_htkqf")
+volume_db = 3.0
+autoplay = true
+bus = &"SFX_Ambience"
+
+[node name="Crows" type="AudioStreamPlayer" parent="Ambience"]
+stream = ExtResource("17_yliwh")
+volume_db = -6.0
+autoplay = true
+bus = &"SFX_Foley"
+
+[node name="Birds" type="AudioStreamPlayer" parent="Ambience"]
+stream = ExtResource("18_qt67x")
+volume_db = -6.0
+autoplay = true
 bus = &"SFX_Foley"
 
 [connection signal="move_camera" from="Tree1" to="." method="_on_tree_1_move_camera"]

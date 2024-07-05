@@ -18,11 +18,11 @@ var player
 
 
 func _ready():
-	$Camera3D/AudioListener3D.make_current()
 	MusicController._play_music("peace_and_tranquility", "garden_center", -15)
 	Global.last_scene = "GardenCenter"
 	player = get_tree().get_first_node_in_group("Player")
 	if GlobalGarden.last_finished_minigame == "NONE":
+		$Camera3D/AudioListener3D.make_current()
 		$CutsceneAnimation.play("camera_pan")
 		Global.cutscene_playing = true
 		$Player.position = Vector3(-22.362, 0.85, -0.647)
@@ -41,11 +41,6 @@ func _ready():
 		$CutsceneAnimation.queue_free()
 	
 	SaveSystem.save_game()
-	
-	var playback: AudioStreamPlaybackPolyphonic
-	$Ambience.play()
-	playback = $Ambience.get_stream_playback()
-	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind_var1.mp3"))
 
 func _process(_delta):
 	if !Global.cutscene_playing:

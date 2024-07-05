@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cs5yhbqihps8c" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_left.png" id="6_ua0jj"]
 [ext_resource type="Texture2D" uid="uid://di3spopw54m1x" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_right.png" id="7_co6vq"]
 [ext_resource type="PackedScene" uid="uid://bg3komba4flqd" path="res://Scenes and Scripts/Game/Garden Center/Objects/bonsai_trees.tscn" id="8_mrm3e"]
+[ext_resource type="AudioStream" uid="uid://bn8r5dj7kj5yh" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3" id="8_o5lhw"]
 [ext_resource type="AudioStream" uid="uid://d0lmco7mcudt" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_crow.mp3" id="8_yl3iu"]
 [ext_resource type="AudioStream" uid="uid://buos730w4du22" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_birds.mp3" id="9_hrx48"]
 [ext_resource type="Texture2D" uid="uid://bcsb6y7kyb8gy" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_trolley.png" id="10_4u12l"]
@@ -99,8 +100,6 @@ size = Vector3(5.65224, 1, 6.3349)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cdh4m"]
 size = Vector3(13.9856, 1, 6.65833)
-
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_tsl1n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2obbv"]
 size = Vector3(20.9366, 10.7146, 9.38661)
@@ -200,7 +199,6 @@ current = true
 fov = 60.0
 
 [node name="AudioListener3D" type="AudioListener3D" parent="Camera3D"]
-current = true
 
 [node name="Lights" type="Node3D" parent="."]
 
@@ -327,8 +325,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.724, 0, -2.68744)
 shape = SubResource("BoxShape3D_cdh4m")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_tsl1n")
-volume_db = 12.0
+stream = ExtResource("8_o5lhw")
+volume_db = 3.0
 autoplay = true
 bus = &"SFX_Ambience"
 
