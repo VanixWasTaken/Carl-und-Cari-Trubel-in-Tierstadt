@@ -114,7 +114,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "HEY IHR! Geht ihr nicht für Samuel durch die Stadt?"
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Sven der Sphynxkater"
+		short_node_name.text = "???"
 		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Sven/vo_npc_sven_map_bandmembers_05_1.mp3")
 		$"../Voice Over".play()
 		dialogs += 1
@@ -127,7 +127,7 @@ func add_right_dialog_box():
 		short_node_text.text = "Dann sagt ihm, dass er seine Entschuldigung dahin schicken soll, wo der Pfeffer wächst!
 "
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Sven der Sphynxkater"
+		short_node_name.text = "???"
 		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Sven/vo_npc_sven_map_bandmembers_05_03.mp3")
 		$"../Voice Over".play()
 		dialogs += 1
@@ -139,7 +139,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Ich bin…, nein. Ich WAR der SCHLAGZEUGER SVEN Schnurrhaar von den METALLIKATZEN!"
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Sven der Sphynxkater"
+		short_node_name.text = "Sven Schnurrhaar"
 		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Sven/vo_npc_sven_map_bandmembers_05_05_var1.mp3")
 		$"../Voice Over".play()
 		dialogs += 1
@@ -152,7 +152,7 @@ func add_right_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Sagt Herrn Samtpfote, dass ich NIE wieder zurückkommen werde!"
 		short_node_rect.texture = PRESET3
-		short_node_name.text = "Sven der Sphynxkater"
+		short_node_name.text = "Sven Schnurrhaar"
 		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Sven/vo_npc_sven_map_bandmembers_05_05_var2.mp3")
 		$"../Voice Over".play()
 		dialogs += 1

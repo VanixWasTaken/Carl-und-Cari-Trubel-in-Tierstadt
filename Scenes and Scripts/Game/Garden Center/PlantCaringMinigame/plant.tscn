@@ -39,13 +39,19 @@ position = Vector2(1014, 658)
 scale = Vector2(0.709896, 0.816667)
 sprite_frames = SubResource("SpriteFrames_nsswb")
 script = ExtResource("2_bemo7")
-current_air_wetness = 70
-current_ground_wetness = 30.0
-current_temperature = 20
+family_name = "Rudbeckia hirta"
+common_name = "Rauer Sonnenhut"
+fact_1 = "Höhe: 30 - 60cm"
+fact_2 = "Blühtezeit: Juni - Oktober"
+fact_3 = "Standort: Sonnig- Halbschatten"
+fact_4 = "Heimat: Nordamerika"
+current_air_wetness = 58
+current_ground_wetness = 72.0
+current_temperature = 16
 current_alive_insects = 6
-needed_air_wetness = 79
-needed_ground_wetness = 39.0
-needed_temperature = 35
+needed_air_wetness = 70
+needed_ground_wetness = 80.0
+needed_temperature = 20
 
 [node name="WateringArea" type="Area2D" parent="."]
 

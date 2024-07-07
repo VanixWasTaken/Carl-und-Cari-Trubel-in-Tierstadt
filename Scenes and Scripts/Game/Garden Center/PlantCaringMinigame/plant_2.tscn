@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cysn43gegpw0b"]
 
-[ext_resource type="Texture2D" uid="uid://41k61fwpefcf" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minigame2_bigplant_wilted.png" id="1_0fynq"]
-[ext_resource type="Texture2D" uid="uid://cwt8mump6dehs" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minigame2_bigplant.png" id="2_4urnj"]
+[ext_resource type="Texture2D" uid="uid://cfjslfnkgjmsh" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/kaktus tod.png" id="1_aakkb"]
+[ext_resource type="Texture2D" uid="uid://bqr7e24btbrdl" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/kaktus heile.png" id="2_iuieu"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_1.gd" id="3_ar3r6"]
 [ext_resource type="PackedScene" uid="uid://bcbhx165k2ljt" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect.tscn" id="4_3r0yf"]
 [ext_resource type="AudioStream" uid="uid://dn7qgqd2owhp3" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var1.mp3" id="5_um61q"]
@@ -12,10 +12,10 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_0fynq")
+"texture": ExtResource("1_aakkb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_4urnj")
+"texture": ExtResource("2_iuieu")
 }],
 "loop": true,
 "name": &"default",
@@ -23,7 +23,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2bgdb"]
-size = Vector2(515.569, 221.02)
+size = Vector2(408.51, 221.02)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_u5xnc"]
 streams_count = 3
@@ -35,46 +35,45 @@ stream_2/stream = ExtResource("7_a1hww")
 stream_2/weight = 1.0
 
 [node name="Plant2" type="AnimatedSprite2D" groups=["Plants"]]
-position = Vector2(1014, 658)
+position = Vector2(972, 816)
 scale = Vector2(0.709896, 0.816667)
 sprite_frames = SubResource("SpriteFrames_nsswb")
 script = ExtResource("3_ar3r6")
-current_air_wetness = 34
+family_name = "Armatocereus"
+common_name = "Bewaffneter Cereus"
+fact_1 = "Höhe: bis zu 3m"
+fact_2 = "Blütezeit: Sommer"
+fact_3 = "Standort: Sonnig & Warm"
+fact_4 = "Heimat: Peru"
+current_air_wetness = 70
 current_ground_wetness = 26.0
-current_temperature = 35
-current_alive_insects = 6
-needed_air_wetness = 40
+current_temperature = 20
+current_alive_insects = 4
+needed_air_wetness = 75
 needed_ground_wetness = 30.0
-needed_temperature = 5
+needed_temperature = 24
 
 [node name="WateringArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WateringArea"]
-position = Vector2(-30.9905, -245.204)
+position = Vector2(8.45203, -245.204)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2bgdb")
 
 [node name="Insect" parent="." instance=ExtResource("4_3r0yf")]
-position = Vector2(-450.77, 364.898)
+position = Vector2(-277.505, 74.6939)
 
 [node name="Insect2" parent="." instance=ExtResource("4_3r0yf")]
-position = Vector2(-101.423, 57.551)
+position = Vector2(-170.448, -90.6122)
 sprite_num = 3
 
 [node name="Insect3" parent="." instance=ExtResource("4_3r0yf")]
-position = Vector2(-45.077, -73.4693)
+position = Vector2(-5.6346, -37.9592)
 sprite_num = 1
 
 [node name="Insect4" parent="." instance=ExtResource("4_3r0yf")]
-position = Vector2(176.082, 20.8159)
+position = Vector2(287.366, -56.3265)
 sprite_num = 2
-
-[node name="Insect5" parent="." instance=ExtResource("4_3r0yf")]
-position = Vector2(-276.097, 28.1632)
-sprite_num = 3
-
-[node name="Insect6" parent="." instance=ExtResource("4_3r0yf")]
-position = Vector2(119.736, 183.673)
-sprite_num = 1
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_u5xnc")
@@ -87,5 +86,3 @@ bus = &"SFX_Foley"
 [connection signal="deadge" from="Insect2" to="." method="_on_insect_deadge"]
 [connection signal="deadge" from="Insect3" to="." method="_on_insect_deadge"]
 [connection signal="deadge" from="Insect4" to="." method="_on_insect_deadge"]
-[connection signal="deadge" from="Insect5" to="." method="_on_insect_deadge"]
-[connection signal="deadge" from="Insect6" to="." method="_on_insect_deadge"]

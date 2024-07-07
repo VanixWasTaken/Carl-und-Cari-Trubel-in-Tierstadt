@@ -86,17 +86,18 @@ offset_bottom = 1080.0
 texture = ExtResource("1_s0435")
 
 [node name="Plant" parent="." instance=ExtResource("2_72lyy")]
+position = Vector2(988, 678)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 1393.0
-offset_top = 62.0
-offset_right = 2020.0
-offset_bottom = 566.0
+offset_left = 1318.0
+offset_top = 14.0
+offset_right = 1791.0
+offset_bottom = 604.0
 theme_override_colors/font_color = Color(0, 0.968627, 0, 1)
 theme_override_fonts/font = ExtResource("3_48ksc")
 theme_override_font_sizes/font_size = 36
 text = "Name: Pflanzus Latein
-Name in Bevölkerung: Rose
+Wissenschaftliche Name: Rose
 Funfacts: 
 
 
@@ -110,8 +111,9 @@ Bodenfeuchtigkeit: 50 ml
 Insektenbefall: 10 Insekten"
 
 [node name="Temperature" type="Node2D" parent="."]
-position = Vector2(521, 614)
+position = Vector2(432, 684)
 script = ExtResource("9_jhkj6")
+metadata/_edit_group_ = true
 
 [node name="40" type="Area2D" parent="Temperature"]
 position = Vector2(-524, -610)
@@ -164,8 +166,10 @@ polygon = PackedVector2Array(626, 575, 640, 614, 698, 613, 685, 553)
 
 [node name="TemperatureRegulator" type="Sprite2D" parent="Temperature"]
 position = Vector2(-1, 6)
+rotation = 1.29479
 scale = Vector2(0.616034, 0.590414)
 texture = ExtResource("9_r43fh")
+metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="Temperature/TemperatureRegulator"]
 
@@ -186,13 +190,14 @@ volume_db = 3.0
 bus = &"SFX_UI"
 
 [node name="Watering Can" parent="." instance=ExtResource("4_cx1dw")]
-position = Vector2(1556, 865)
+position = Vector2(1598, 883)
 
 [node name="Insect Spray" parent="." instance=ExtResource("6_61pj5")]
-position = Vector2(262, 849)
+position = Vector2(170, 877)
 
 [node name="Humidity" type="Node2D" parent="."]
-position = Vector2(495, 266)
+position = Vector2(355, 262)
+metadata/_edit_group_ = true
 
 [node name="PlusHumidity" type="TextureButton" parent="Humidity"]
 offset_left = 176.0

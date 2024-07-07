@@ -1,8 +1,11 @@
 extends AnimatedSprite2D
 
-var family_name = ""
-var common_name = ""
-var fun_facts = ""
+@export var family_name : String
+@export var common_name : String
+@export var fact_1 : String
+@export var fact_2 : String
+@export var fact_3 : String
+@export var fact_4 : String
 @export var current_air_wetness :int
 @export var current_ground_wetness :float
 @export var current_temperature :int
@@ -13,6 +16,12 @@ var fun_facts = ""
 var water_on = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_tree().get_current_scene().common_name = common_name
+	get_tree().get_current_scene().family_name = family_name
+	get_tree().get_current_scene().fact_1 = fact_1
+	get_tree().get_current_scene().fact_2 = fact_2
+	get_tree().get_current_scene().fact_3 = fact_3
+	get_tree().get_current_scene().fact_4 = fact_4
 	get_tree().get_current_scene().current_ground_wetness = current_ground_wetness
 	get_tree().get_current_scene().current_temperature = current_temperature
 	get_tree().get_current_scene().current_air_wetness = current_air_wetness

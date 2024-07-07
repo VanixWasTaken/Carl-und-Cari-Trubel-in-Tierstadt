@@ -2,7 +2,10 @@ extends Node2D
 
 var family_name = ""
 var common_name = ""
-var fun_facts = ""
+var fact_1 = ""
+var  fact_2 = ""
+var fact_3 = ""
+var fact_4 = ""
 var current_air_wetness 
 var current_ground_wetness 
 var current_temperature 
@@ -40,8 +43,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$Label.text = "Name: " + str(common_name) +"
-	Familie: " +  str(family_name) +"
-	Fakten: " +  str(fun_facts) +"
+	Wissenschaftlicher Name: 
+	" +  str(family_name) +"
+	
+	Fakten: " + "
+	" + fact_1 + " 
+	"+ fact_2 + " 
+	"+ fact_3 + " 
+	"+ fact_4 + "
+	 
 	Aktueller Status: 
 	Bodenfeuchtigkeit: " +  str(current_ground_wetness) + "% / " +  str(needed_ground_wetness) + "%
 	Temperatur: " +  str(current_temperature) + "°C / " +  str(needed_temperature) + "°C
@@ -100,56 +110,56 @@ func _on_40_area_entered(area):
 	if area.get_name() == "Pointer":
 		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = -80
-		current_temperature = 40
+		current_temperature = 30
 
 
 func _on_35_area_entered(area):
 	if area.get_name() == "Pointer":
 		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = -55
-		current_temperature = 35
+		current_temperature = 28
 
 
 func _on_30_area_entered(area):
 	if area.get_name() == "Pointer":
 		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees =-35
-		current_temperature = 30
+		current_temperature = 26
 
 
 func _on_25_area_entered(area):
 	if area.get_name() == "Pointer":
 		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = -10
-		current_temperature = 25
+		current_temperature = 24
 
 
 func _on_20_area_entered(area):
 	if area.get_name() == "Pointer":
 		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = 10
-		current_temperature = 20
+		current_temperature = 22
 
 
 func _on_15_area_entered(area):
 	if area.get_name() == "Pointer":
 		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = 35
-		current_temperature = 15
+		current_temperature = 20
 
 
 func _on_10_area_entered(area):
 	if area.get_name() == "Pointer":
 		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = 55 
-		current_temperature = 10
+		current_temperature = 18
 
 
 func _on_5_area_entered(area):
 	if area.get_name() == "Pointer":
 		$Click.play()
 		$Temperature/TemperatureRegulator.rotation_degrees = 80
-		current_temperature = 5
+		current_temperature = 16
 
 
 
