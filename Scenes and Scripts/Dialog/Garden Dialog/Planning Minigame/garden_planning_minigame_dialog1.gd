@@ -146,7 +146,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Solltet ihr scheitern die Anforderungen zu erfüllen, gibt es dieser Jahr keine Gartenaustellung"
+		short_node_text.text = "Solltet ihr scheitern die Anforderungen zu erfüllen, gibt es dieser Jahr keine Gartenaustellung..."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		$"../VoiceOver".stream = load(guido_path + "05.mp3")
