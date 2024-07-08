@@ -65,7 +65,7 @@ func _ready():
 			$CameraPan.play("camera pan")
 			Global.cutscene_playing = true
 			Global.moving_allowed = false
-			MusicController._play_music("titration_trap", "laboratory", -18)
+			MusicController._play_music("titration_trap", "laboratory", -24)
 		
 		#Camera is glitching out after reentering the scene (didnt work at all before)
 	if Global.lab_cutscene_played == true:
