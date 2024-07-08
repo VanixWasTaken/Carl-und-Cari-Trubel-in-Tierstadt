@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cysn43gegpw0b"]
+[gd_scene load_steps=17 format=3 uid="uid://cysn43gegpw0b"]
 
 [ext_resource type="Texture2D" uid="uid://cfjslfnkgjmsh" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/kaktus tod.png" id="1_aakkb"]
 [ext_resource type="Texture2D" uid="uid://bqr7e24btbrdl" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/kaktus heile.png" id="2_iuieu"]
@@ -7,6 +7,12 @@
 [ext_resource type="AudioStream" uid="uid://dn7qgqd2owhp3" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var1.mp3" id="5_um61q"]
 [ext_resource type="AudioStream" uid="uid://1xm4bflad5u6" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var2.mp3" id="6_r1jyq"]
 [ext_resource type="AudioStream" uid="uid://bv4vit21kafmr" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var3.mp3" id="7_a1hww"]
+[ext_resource type="AudioStream" uid="uid://dh0086wnajc38" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var4.mp3" id="8_pd0ih"]
+[ext_resource type="AudioStream" uid="uid://bhc8g3w2qxyg6" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var5.mp3" id="9_ahvhb"]
+[ext_resource type="AudioStream" uid="uid://bxus0m4dm8h1s" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var6.mp3" id="10_nl5mv"]
+[ext_resource type="AudioStream" uid="uid://4synxfb18t6h" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var7.mp3" id="11_bkwkn"]
+[ext_resource type="AudioStream" uid="uid://bkb3njrju81c6" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var8.mp3" id="12_obrd5"]
+[ext_resource type="AudioStream" uid="uid://t2hblif6ifvu" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var9.mp3" id="13_u70bl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nsswb"]
 animations = [{
@@ -26,13 +32,26 @@ animations = [{
 size = Vector2(408.51, 221.02)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_u5xnc"]
-streams_count = 3
+playback_mode = 1
+streams_count = 9
 stream_0/stream = ExtResource("5_um61q")
 stream_0/weight = 1.0
 stream_1/stream = ExtResource("6_r1jyq")
 stream_1/weight = 1.0
 stream_2/stream = ExtResource("7_a1hww")
 stream_2/weight = 1.0
+stream_3/stream = ExtResource("8_pd0ih")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("9_ahvhb")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("10_nl5mv")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("11_bkwkn")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("12_obrd5")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("13_u70bl")
+stream_8/weight = 1.0
 
 [node name="Plant2" type="AnimatedSprite2D" groups=["Plants"]]
 position = Vector2(972, 816)
@@ -57,7 +76,6 @@ needed_temperature = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WateringArea"]
 position = Vector2(8.45203, -245.204)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2bgdb")
 
 [node name="Insect" parent="." instance=ExtResource("4_3r0yf")]
