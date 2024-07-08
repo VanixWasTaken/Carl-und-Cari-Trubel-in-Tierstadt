@@ -8,7 +8,6 @@ var dialog_side = ["left", "right"]
 var finished = false
 var same_speaker = false
 var help_name
-var vo_name
 var path
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
@@ -29,16 +28,16 @@ func _ready():
 	Global.dialog_playing = true
 	if Global.character == "Cari":
 		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
-		
+		help_name = "Carl"
 		##### This is used to make the code for the dialog and voiceline combination easier
 		##### This way you only have to only type the name of the line inside the 
 		##### load function --> load(path + "linename_01_var2")
-		path = "res://Assets/Sound/VO/Laboratory/Carl/PC/vo_pc_carl_"
+		path = "res://Assets/Sound/VO/Garden Center/Carl/NPC/vo_npc_carl_garden_"
 	elif Global.character == "Carl" or Global.character == "":
 		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-		
+		help_name = "Cari"
 		##### Same as in previous comment
-		path = "res://Assets/Sound/VO/Laboratory/Cari/PC/vo_pc_cari_"
+		path = "res://Assets/Sound/VO/Garden Center/Cari/NPC/vo_npc_cari_garden_"
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -78,7 +77,9 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Schneide die Äste und Büschel ab, die krank oder unpassend aussehen."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_name.text = help_name
+		$"../VoiceOver".stream = load(path + "snipping_help_02.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1 
 	
 	elif GlobalGarden.garden_mini_help_button_state == 1:
@@ -89,7 +90,9 @@ func add_left_dialog_box():
 			var short_node_name = short_node.get_child(3).get_child(0)
 			short_node_text.text = "Achte darauf, dass die Pflanze keine Insekten mehr hat."
 			short_node_rect.texture = PRESET1
-			short_node_name.text = Global.character
+			short_node_name.text = help_name
+			$"../VoiceOver".stream = load(path + "caring_help_01.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 			same_speaker = true 
 		elif dialogs == 2:
@@ -99,7 +102,9 @@ func add_left_dialog_box():
 			var short_node_name = short_node.get_child(3).get_child(0)
 			short_node_text.text = "Beachte auch die Anforderungen der Pflanze. Stelle dann die entsprechenden Werte mithilfe der Schalter und Regler ein."
 			short_node_rect.texture = PRESET1
-			short_node_name.text = Global.character
+			short_node_name.text = help_name
+			$"../VoiceOver".stream = load(path + "caring_help_02.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 			same_speaker = false 
 	 
@@ -111,7 +116,9 @@ func add_left_dialog_box():
 			var short_node_name = short_node.get_child(3).get_child(0)
 			short_node_text.text = "Bewege die Maus über die Böden und Pflanzen, falls du mehr Informationen brauchst."
 			short_node_rect.texture = PRESET1
-			short_node_name.text = Global.character
+			short_node_name.text = help_name
+			$"../VoiceOver".stream = load(path + "dirt_help_01.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 			same_speaker = true 
 		elif dialogs == 2:
@@ -121,7 +128,9 @@ func add_left_dialog_box():
 			var short_node_name = short_node.get_child(3).get_child(0)
 			short_node_text.text = "Wenn du eine Entscheidung getroffen hast. Klick einfach auf den Bodentypen, den du für richtig hältst."
 			short_node_rect.texture = PRESET1
-			short_node_name.text = Global.character
+			short_node_name.text = help_name
+			$"../VoiceOver".stream = load(path + "dirt_help_02.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 			same_speaker = false
 	
@@ -133,7 +142,9 @@ func add_left_dialog_box():
 			var short_node_name = short_node.get_child(3).get_child(0)
 			short_node_text.text = "Ziehe die Pflanzen auf die Gartenfläche."
 			short_node_rect.texture = PRESET1
-			short_node_name.text = Global.character
+			short_node_name.text = help_name
+			$"../VoiceOver".stream = load(path + "coc_help_01.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 			same_speaker = true 
 		elif dialogs == 2:
@@ -143,7 +154,9 @@ func add_left_dialog_box():
 			var short_node_name = short_node.get_child(3).get_child(0)
 			short_node_text.text = "Achte dabei darauf, dass du die Anforderungen auf dem Zettel erfüllst."
 			short_node_rect.texture = PRESET1
-			short_node_name.text = Global.character
+			short_node_name.text = help_name
+			$"../VoiceOver".stream = load(path + "coc_help_02.mp3")
+			$"../VoiceOver".play()
 			dialogs += 1
 			same_speaker = false
 ##########################################################################################

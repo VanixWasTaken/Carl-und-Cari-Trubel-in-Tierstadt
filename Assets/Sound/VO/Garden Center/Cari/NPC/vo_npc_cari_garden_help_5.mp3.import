@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://doqsa1h42njr4"
+path="res://.godot/imported/vo_npc_cari_garden_help_5.mp3-026a17d17c289768a349ab0ec8c2efce.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Cari/NPC/vo_npc_cari_garden_help_5.mp3"
+dest_files=["res://.godot/imported/vo_npc_cari_garden_help_5.mp3-026a17d17c289768a349ab0ec8c2efce.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
