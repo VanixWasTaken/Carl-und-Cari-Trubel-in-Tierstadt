@@ -173,6 +173,7 @@ func add_right_dialog_box():
 		dialogs += 1
 	
 	elif dialogs == 9:
+		GlobalGarden.garden_help_button_state = 7
 		dialogs += 1
 		Global.moving_allowed = true
 	

@@ -38,6 +38,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 3:
+		GlobalGarden.garden_help_button_state = 6
 		Global.dialog_playing = false
 		get_tree().get_first_node_in_group("Animator").play("fade_out")
 		queue_free()

@@ -66,7 +66,7 @@ func add_left_dialog_box():
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
-	if dialogs == 1:
+	if dialogs == 1 and GlobalGarden.garden_help_button_state == 0:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -76,7 +76,95 @@ func add_left_dialog_box():
 		short_node_name.text = Global.character
 		dialogs += 1
 	
+	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 1:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Begib dich zu den Bäumen. Sie stehen hinten rechts im Raum."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
 	
+	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 2:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Unterhalte dich nochmal mit Guido."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+	
+	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 3:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Geh in das Gartenhaus auf der Rückseite des Raums."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+	
+	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 4:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Sprich nochmal mit dem Gorilla."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+	
+	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 5:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Gehe zu den Säcken an der linken Wand."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+	
+	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 6:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Rede noch einmal mit Guido."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+	
+	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 7:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Benutze den Computer in der Mitte des Raums."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+	
+	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 8:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Verabschiede dich von Guido Gänseblümchen."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
+	
+	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 9:
+		var short_node = get_child(1)
+		var short_node_text = short_node.get_child(0)
+		var short_node_rect = short_node.get_child(1)
+		var short_node_name = short_node.get_child(3).get_child(0)
+		short_node_text.text = "Verlasse die Gärtnerei durch die Tür."
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
+		dialogs += 1
 ##########################################################################################
 
 
