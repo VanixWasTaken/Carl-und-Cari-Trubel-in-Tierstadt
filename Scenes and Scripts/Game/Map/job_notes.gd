@@ -106,15 +106,25 @@ func _on_open_notes_button_up():
 		Global.menu_open = true
 		if Global.job_stars_dict.size() > 0:
 			if Global.job_stars_dict["ChemistJob"] == 1:
-				$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = one_star
+				$JobNoteMenu/ChemistNoteSmall/Stars.texture = one_star
 			elif Global.job_stars_dict["ChemistJob"] == 2:
-				$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = two_star
+				$JobNoteMenu/ChemistNoteSmall/Stars.texture = two_star
 			elif Global.job_stars_dict["ChemistJob"] == 3:
-				$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = three_star
+				$JobNoteMenu/ChemistNoteSmall/Stars.texture = three_star
 			elif Global.job_stars_dict["ChemistJob"] == 4:
-				$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = four_star
+				$JobNoteMenu/ChemistNoteSmall/Stars.texture = four_star
 			elif Global.job_stars_dict["ChemistJob"] == 5:
-				$JobNoteMenu/ChemistNoteSmall/Sprite2D.texture = five_star
+				$JobNoteMenu/ChemistNoteSmall/Stars.texture = five_star
+			if Global.job_stars_dict["GardenJob"] == 1:
+				$JobNoteMenu/ChemistNoteSmall/Stars.texture = one_star
+			elif Global.job_stars_dict["GardenJob"] == 2:
+				$JobNoteMenu/ChemistNoteSmall/Stars.texture = two_star
+			elif Global.job_stars_dict["GardenJob"] == 3:
+				$JobNoteMenu/ChemistNoteSmall/Stars.texture = three_star
+			elif Global.job_stars_dict["GardenJob"] == 4:
+				$JobNoteMenu/ChemistNoteSmall/Stars.texture = four_star
+			elif Global.job_stars_dict["GardenJob"] == 5:
+				$JobNoteMenu/ChemistNoteSmall/Stars.texture = five_star
 
 
 
@@ -132,3 +142,16 @@ func _on_open_notes_mouse_entered():
 func _on_open_notes_mouse_exited():
 	Global.moving_allowed = true
 	Global.mouse_in_button = false
+
+
+func _on_gardener_download_button_up():
+	$DownloadExplanation.visible = true
+	downloadFile(chemist_note, "Chemielabor-Informationen.jpg")
+
+
+func _on_open_profile_button_up():
+	$JobNoteMenu/Gardener/GardenerNodeBig.show()
+
+
+func _on_close_big_gardener_button_up():
+	$JobNoteMenu/Gardener/GardenerNodeBig.hide()

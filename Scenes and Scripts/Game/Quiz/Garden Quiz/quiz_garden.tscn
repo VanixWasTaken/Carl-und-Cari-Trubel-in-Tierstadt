@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_paeaj"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_0p5ej"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question5.gd" id="3_ta375"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Garden Quiz/Question5Gardener.gd" id="3_bd2n0"]
 [ext_resource type="Texture2D" uid="uid://dxeb7rmw772vh" path="res://Assets/Art/Environment/Quiz/quiz_template_dialog.png" id="4_a8xe4"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_1hhxo"]
 [ext_resource type="Texture2D" uid="uid://bl3q3vnoh3x2f" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button.png" id="6_xcl16"]
@@ -121,7 +121,7 @@ script = ExtResource("1_paeaj")
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_0p5ej")
-script = ExtResource("3_ta375")
+script = ExtResource("3_bd2n0")
 
 [node name="Dialogbox" type="Sprite2D" parent="Question5"]
 position = Vector2(960, 263)

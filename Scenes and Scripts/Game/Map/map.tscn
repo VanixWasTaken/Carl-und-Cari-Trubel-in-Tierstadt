@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=79 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
 [ext_resource type="Texture2D" uid="uid://p003wtefrdrs" path="res://Assets/Art/Environment/Map/Big Map/map_no_lab_no_gardencenter.png" id="2_0t1vf"]
@@ -40,7 +40,11 @@
 [ext_resource type="PackedScene" uid="uid://dmhdb71htj10k" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_npc.tscn" id="31_mll1x"]
 [ext_resource type="PackedScene" uid="uid://cwwvy0q003fg7" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/barbara_npc.tscn" id="32_683wj"]
 [ext_resource type="PackedScene" uid="uid://2d2fjj4yd732" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/sven_npc.tscn" id="33_nmhjc"]
+[ext_resource type="Texture2D" uid="uid://bxpck0dk267i4" path="res://Assets/Art/UI/HUD/Map/job_note1.PNG" id="34_2c2iy"]
 [ext_resource type="PackedScene" uid="uid://cfoesiummvma2" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_and_barbara.tscn" id="34_clinu"]
+[ext_resource type="Texture2D" uid="uid://1d7sok60uf2" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener.png" id="35_pb8cy"]
+[ext_resource type="Texture2D" uid="uid://ctxk5ymgd82bg" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener_left_clicked.png" id="36_qpwuk"]
+[ext_resource type="Texture2D" uid="uid://c2rgecv620lsc" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener_hovered.png" id="37_4jol3"]
 [ext_resource type="Texture2D" uid="uid://bnp15vxbd7j0o" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof1.png" id="38_45lni"]
 [ext_resource type="Texture2D" uid="uid://cqsgr47ctm5ry" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof2.png" id="39_f5aq0"]
 [ext_resource type="Texture2D" uid="uid://bc6tyunen4shb" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof3.png" id="40_askvk"]
@@ -762,7 +766,6 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="JobNoteMenu" type="Node2D" parent="HUD/JobNotes"]
-visible = false
 position = Vector2(-36, -15)
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu"]
@@ -791,6 +794,7 @@ position = Vector2(1635, 295)
 shape = SubResource("CircleShape2D_h683o")
 
 [node name="ChemistNoteSmall" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
+visible = false
 position = Vector2(149, -4)
 
 [node name="ChemistDownload" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall"]
@@ -813,7 +817,7 @@ texture_normal = ExtResource("12_ub25h")
 texture_pressed = ExtResource("16_x1218")
 texture_hover = ExtResource("17_wo11y")
 
-[node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall"]
+[node name="Stars" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall"]
 position = Vector2(415, 517)
 scale = Vector2(0.1, 0.1)
 
@@ -827,20 +831,70 @@ scale = Vector2(7.6125, 7.29445)
 texture = ExtResource("15_jo7ff")
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig"]
+z_index = 3
 position = Vector2(1054, 606)
 scale = Vector2(1.01, 1.01)
-
-[node name="PaperQuit" type="Area2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D"]
-
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D/PaperQuit"]
-position = Vector2(235.667, -406.28)
-polygon = PackedVector2Array(-47.8698, 29.4583, -51.5521, -57.6892, -81.0104, -103.104, -33.1406, -87.1476, 15.9565, -49.0972, 50.3246, -7.36458, 81.0104, 47.8698, 94.5121, 105.559, 96.967, 157.111, 67.5087, 100.649, 22.0938, 56.4618)
+texture = ExtResource("34_2c2iy")
 
 [node name="QuitChemistBig" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D"]
+z_index = 3
 offset_left = 173.267
 offset_top = -466.337
 offset_right = 289.267
 offset_bottom = -356.337
+texture_normal = ExtResource("11_um2ur")
+texture_pressed = ExtResource("15_pp1ui")
+texture_hover = ExtResource("16_ttcuk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Gardener" type="Node2D" parent="HUD/JobNotes/JobNoteMenu"]
+
+[node name="GardenerNoteSmall" type="Node2D" parent="HUD/JobNotes/JobNoteMenu/Gardener"]
+visible = false
+
+[node name="GardenerDownload" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNoteSmall"]
+offset_left = 904.0
+offset_top = 540.0
+offset_right = 1248.0
+offset_bottom = 667.0
+texture_normal = ExtResource("17_07hu0")
+texture_pressed = ExtResource("18_aj3c6")
+texture_hover = ExtResource("19_spaiw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="OpenProfile" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNoteSmall"]
+offset_left = 960.41
+offset_top = 251.0
+offset_right = 1169.41
+offset_bottom = 511.0
+texture_normal = ExtResource("35_pb8cy")
+texture_pressed = ExtResource("36_qpwuk")
+texture_hover = ExtResource("37_4jol3")
+
+[node name="Stars" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNoteSmall"]
+
+[node name="GardenerNodeBig" type="Node2D" parent="HUD/JobNotes/JobNoteMenu/Gardener"]
+visible = false
+
+[node name="WhiteScreen" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNodeBig"]
+material = SubResource("ShaderMaterial_myy3n")
+position = Vector2(925, 561.5)
+scale = Vector2(7.6125, 7.29445)
+texture = ExtResource("15_jo7ff")
+
+[node name="BigNote" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNodeBig"]
+z_index = 3
+position = Vector2(1044, 605)
+texture = ExtResource("34_2c2iy")
+
+[node name="CloseBigGardener" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNodeBig"]
+z_index = 3
+offset_left = 1214.0
+offset_top = 119.0
+offset_right = 1349.0
+offset_bottom = 249.0
 texture_normal = ExtResource("11_um2ur")
 texture_pressed = ExtResource("15_pp1ui")
 texture_hover = ExtResource("16_ttcuk")
@@ -1039,9 +1093,10 @@ position = Vector2(1576, 1248)
 [connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/ExitButton/Area2D" to="HUD/JobNotes/JobNoteMenu/ExitButton" method="_on_area_2d_mouse_exited"]
 [connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall/ChemistDownload" to="HUD/JobNotes" method="_on_chemist_download_button_up"]
 [connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/ChemistNoteSmall/ChemistSymbol" to="HUD/JobNotes" method="_on_chemist_symbol_button_up"]
-[connection signal="mouse_entered" from="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D/PaperQuit" to="HUD/JobNotes" method="_on_paper_quit_mouse_entered"]
-[connection signal="mouse_exited" from="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D/PaperQuit" to="HUD/JobNotes" method="_on_paper_quit_mouse_exited"]
 [connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D/QuitChemistBig" to="HUD/JobNotes" method="_on_quit_chemist_big_button_up"]
+[connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNoteSmall/GardenerDownload" to="HUD/JobNotes" method="_on_gardener_download_button_up"]
+[connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNoteSmall/OpenProfile" to="HUD/JobNotes" method="_on_open_profile_button_up"]
+[connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNodeBig/CloseBigGardener" to="HUD/JobNotes" method="_on_close_big_gardener_button_up"]
 [connection signal="button_up" from="HUD/JobNotes/DownloadExplanation/TextureButton" to="HUD/JobNotes" method="_on_texture_button_button_up"]
 [connection signal="button_up" from="HUD/Help Movement/TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="animation_finished" from="Npcs/NPCMovement" to="Npcs" method="_on_npc_movement_animation_finished"]
