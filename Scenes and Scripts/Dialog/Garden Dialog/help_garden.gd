@@ -12,7 +12,7 @@ var same_speaker = false
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
 var PRESET1 
-
+var help_name
 var path
 
 ##########################################################################################
@@ -27,16 +27,16 @@ func _ready():
 	Global.dialog_playing = true
 	if Global.character == "Cari":
 		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
-		
+		help_name = "Carl"
 		##### This is used to make the code for the dialog and voiceline combination easier
 		##### This way you only have to only type the name of the line inside the 
 		##### load function --> load(path + "linename_01_var2")
-		path = "res://Assets/Sound/VO/Laboratory/Carl/PC/vo_pc_carl_"
+		path = "res://Assets/Sound/VO/Garden Center/Carl/NPC/vo_npc_carl_garden_help_"
 	elif Global.character == "Carl" or Global.character == "":
 		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
-		
+		help_name = "Cari"
 		##### Same as in previous comment
-		path = "res://Assets/Sound/VO/Laboratory/Cari/PC/vo_pc_cari_"
+		path = "res://Assets/Sound/VO/Garden Center/Cari/NPC/vo_npc_cari_garden_help_"
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -73,7 +73,9 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Rede mit dem Gärtner."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_name.text = help_name
+		$"../VoiceOver".stream = load(path + "1.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 1:
@@ -83,7 +85,9 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Begib dich zu den Bäumen. Sie stehen hinten rechts im Raum."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_name.text = help_name
+		$"../VoiceOver".stream = load(path + "2.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 2:
@@ -93,7 +97,9 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Unterhalte dich nochmal mit Guido."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_name.text = help_name
+		$"../VoiceOver".stream = load(path + "3.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 3:
@@ -103,7 +109,9 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Geh in das Gartenhaus auf der Rückseite des Raums."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_name.text = help_name
+		$"../VoiceOver".stream = load(path + "4.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 4:
@@ -113,7 +121,9 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Sprich nochmal mit dem Gorilla."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_name.text = help_name
+		$"../VoiceOver".stream = load(path + "5.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 5:
@@ -123,7 +133,9 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Gehe zu den Säcken an der linken Wand."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_name.text = help_name
+		$"../VoiceOver".stream = load(path + "6.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 6:
@@ -133,7 +145,9 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Rede noch einmal mit Guido."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_name.text = help_name
+		$"../VoiceOver".stream = load(path + "7.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 7:
@@ -143,7 +157,9 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Benutze den Computer in der Mitte des Raums."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_name.text = help_name
+		$"../VoiceOver".stream = load(path + "8.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 8:
@@ -153,7 +169,9 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Verabschiede dich von Guido Gänseblümchen."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_name.text = help_name
+		$"../VoiceOver".stream = load(path + "9.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 	
 	elif dialogs == 1 and GlobalGarden.garden_help_button_state == 9:
@@ -163,7 +181,7 @@ func add_left_dialog_box():
 		var short_node_name = short_node.get_child(3).get_child(0)
 		short_node_text.text = "Verlasse die Gärtnerei durch die Tür."
 		short_node_rect.texture = PRESET1
-		short_node_name.text = Global.character
+		short_node_name.text = help_name
 		dialogs += 1
 ##########################################################################################
 
