@@ -69,6 +69,18 @@ func _on_texture_button_button_up():
 		var instance = garden_mini_help.instantiate()
 		add_child(instance)
 		help = garden_mini_help
+	elif get_tree().get_current_scene().get_name() == "GardenPlanningMinigame":
+		var instance = garden_mini_help.instantiate()
+		add_child(instance)
+		help = garden_mini_help
+	elif get_tree().get_current_scene().get_name() == "GroundSelectMinigame":
+		var instance = garden_mini_help.instantiate()
+		add_child(instance)
+		help = garden_mini_help
+	elif get_tree().get_current_scene().get_name() == "Plant Caring":
+		var instance = garden_mini_help.instantiate()
+		add_child(instance)
+		help = garden_mini_help
 	
 	if !helpbuttonopen and Global.character == "Cari":
 		emit_signal("HelpOpened")

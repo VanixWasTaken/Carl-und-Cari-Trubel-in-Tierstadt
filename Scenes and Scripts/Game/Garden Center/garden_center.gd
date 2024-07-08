@@ -13,13 +13,12 @@ var minigame_1 = preload("res://Scenes and Scripts/Game/Garden Center/CuttingTre
 var minigame_2 = preload("res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_caring.tscn")
 var minigame_3_1 = preload("res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/ground_select_minigame.tscn")
 var minigame_3_2 = preload("res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/garden_planning_minigame.tscn")
+var garden_quiz = preload("res://Scenes and Scripts/Game/Quiz/Garden Quiz/quiz_garden.tscn")
 var map_scene
 var player
 
 
 func _ready():
-	GlobalGarden.talked_to_guido6 = true
-	GlobalGarden.last_finished_minigame = "PlanningGame"
 	MusicController._play_music("peace_and_tranquility", "garden_center", -15)
 	Global.last_scene = "GardenCenter"
 	player = get_tree().get_first_node_in_group("Player")
@@ -75,7 +74,6 @@ func _on_dialog_area_body_entered(body):
 	elif GlobalGarden.last_finished_minigame == "PlanningGame" and !GlobalGarden.talked_to_guido6:
 		add_child(dialog6.instantiate())
 		GlobalGarden.talked_to_guido6 = true
-		map_scene = load("res://Scenes and Scripts/Game/Map/map.tscn")
 
 func change_scene():
 	if GlobalGarden.last_finished_minigame == "NONE":
@@ -86,16 +84,17 @@ func change_scene():
 		get_tree().change_scene_to_packed(minigame_3_1)
 	elif GlobalGarden.last_finished_minigame == "GroundGame":
 		get_tree().change_scene_to_packed(minigame_3_2)
-	elif GlobalGarden.last_finished_minigame == "PlanningGame":
+	elif GlobalGarden.last_finished_minigame == "Quiz":
 		get_tree().change_scene_to_packed(map_scene)
-
 
 func _on_exit_body_entered(body):
 	if body.is_in_group("Player") && GlobalGarden.talked_to_guido6:
 		map_scene = load("res://Scenes and Scripts/Game/Map/map.tscn")
 		Global.completed_jobs.append("GardenCenterBuilding")
 		Global.last_scene = "GardenCenter"
-		$Player/CanvasLayer/AnimationPlayer.play("fade_out")
+		var quiz = garden_quiz.instantiate()
+		get_tree().get_current_scene().add_child(quiz)
+		GlobalGarden.last_finished_minigame = "Quiz"
 
 
 func _on_animated_sprite_3d_frame_changed():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://di7wffcl0ey3o"]
+[gd_scene load_steps=30 format=3 uid="uid://di7wffcl0ey3o"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_caring.gd" id="1_mjkcf"]
 [ext_resource type="Texture2D" uid="uid://c72xamnljg6m7" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/room_placeholder.png" id="1_s0435"]
@@ -21,6 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://f86grv1pnrfl" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var2.mp3" id="19_i84vy"]
 [ext_resource type="AudioStream" uid="uid://bqwllua46dbnm" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var3.mp3" id="20_vcayw"]
 [ext_resource type="AudioStream" uid="uid://bc4l1pbtr5kmu" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_air_wetness_var1.mp3" id="21_g1x66"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="22_f70yn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jmua4"]
 radius = 240.539
@@ -193,7 +194,7 @@ bus = &"SFX_UI"
 position = Vector2(1598, 883)
 
 [node name="Insect Spray" parent="." instance=ExtResource("6_61pj5")]
-position = Vector2(170, 877)
+position = Vector2(1358, 876)
 
 [node name="Humidity" type="Node2D" parent="."]
 position = Vector2(355, 262)
@@ -294,6 +295,8 @@ bus = &"SFX_Foley"
 [node name="AirWetnessBeep" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_g1x66")
 bus = &"SFX_Foley"
+
+[node name="HelpButton" parent="." instance=ExtResource("22_f70yn")]
 
 [connection signal="area_entered" from="Temperature/40" to="." method="_on_40_area_entered"]
 [connection signal="area_entered" from="Temperature/35" to="." method="_on_35_area_entered"]

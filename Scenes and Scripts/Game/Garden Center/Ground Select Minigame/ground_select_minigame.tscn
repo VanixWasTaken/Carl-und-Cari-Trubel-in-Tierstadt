@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://vnj4oyq32r4f"]
+[gd_scene load_steps=19 format=3 uid="uid://vnj4oyq32r4f"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/ground_select_minigame.gd" id="1_pcs28"]
 [ext_resource type="Texture2D" uid="uid://dw71sigk7h684" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/minigame_3_backround.png" id="2_6jlhk"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://bn8r5dj7kj5yh" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3" id="11_ja3fl"]
 [ext_resource type="AudioStream" uid="uid://d0lmco7mcudt" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_crow.mp3" id="12_m1eww"]
 [ext_resource type="AudioStream" uid="uid://buos730w4du22" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_birds.mp3" id="13_wvclg"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="14_rrlsn"]
 
 [sub_resource type="Animation" id="Animation_ltsux"]
 resource_name = "fade_in"
@@ -131,5 +132,7 @@ stream = ExtResource("13_wvclg")
 volume_db = -6.0
 autoplay = true
 bus = &"SFX_Foley"
+
+[node name="HelpButton" parent="." instance=ExtResource("14_rrlsn")]
 
 [connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

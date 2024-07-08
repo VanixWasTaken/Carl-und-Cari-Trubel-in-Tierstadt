@@ -69,6 +69,7 @@ func add_left_dialog_box():
 		dialogs += 1
 	
 	elif dialogs == 10:
+		GlobalGarden.garden_mini_help_button_state = 2
 		dialogs += 1
 		Global.moving_allowed = true
 ##########################################################################################
