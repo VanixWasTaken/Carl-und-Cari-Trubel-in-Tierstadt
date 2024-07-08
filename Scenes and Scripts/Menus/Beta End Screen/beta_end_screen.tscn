@@ -71,6 +71,7 @@ theme_override_font_sizes/font_size = 100
 text = "Ende der Beta"
 
 [node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 316.0
 offset_top = -407.0
 offset_right = 1228.0
@@ -87,9 +88,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -622.5
-offset_top = -190.0
-offset_right = 622.5
+offset_left = -622.0
+offset_top = -208.0
+offset_right = 623.0
 offset_bottom = 422.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -97,13 +98,15 @@ theme_override_colors/default_color = Color(0.819608, 0.415686, 0.262745, 1)
 theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
 theme_override_constants/outline_size = 25
 theme_override_fonts/normal_font = ExtResource("3_gvfmi")
-theme_override_font_sizes/normal_font_size = 55
+theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "[center]Vielen Dank dass Du die Beta von Carl und Cari: Trubel in Tierstadt gespielt hast!
 
 Leider endet die Reise hier vorerst...
 
-Aber keine Sorge, Carl und Cari machen sich bestimmt bald weiter auf das Stadtfest zu retten!"
+Aber keine Sorge, Carl und Cari machen sich bestimmt bald weiter auf das Stadtfest zu retten!
+
+ Du wirst aber in dieser Version keine weiteren Jobs finden. Du kannst die Stadt noch weiter erkunden oder zum Hauptmenü zurückzukehren."
 
 [node name="Hover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_jptaw")
