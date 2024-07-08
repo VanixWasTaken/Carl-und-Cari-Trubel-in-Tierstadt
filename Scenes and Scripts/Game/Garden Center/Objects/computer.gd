@@ -8,7 +8,7 @@ var should_enter_computer = false
 
 
 func _input(event):
-	if event.is_action_pressed("left_click") and mouse_inside_computer:
+	if event.is_action_pressed("left_click") and mouse_inside_computer && !Global.dialog_playing:
 		should_enter_computer = true
 	elif event.is_action_pressed("left_click") and !mouse_inside_computer:
 		should_enter_computer = false

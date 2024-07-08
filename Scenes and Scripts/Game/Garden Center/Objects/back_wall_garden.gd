@@ -8,7 +8,7 @@ var player_in_reach = false
 var should_enter_garden = false
 
 func _input(event):
-	if event.is_action_pressed("left_click") and mouse_inside_garden:
+	if event.is_action_pressed("left_click") and mouse_inside_garden && !Global.dialog_playing:
 		should_enter_garden = true
 	elif event.is_action_pressed("left_click") and !mouse_inside_garden:
 		should_enter_garden = false

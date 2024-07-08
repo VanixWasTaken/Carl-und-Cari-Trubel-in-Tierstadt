@@ -22,7 +22,7 @@ func _on_area_3d_mouse_exited():
 	mouse_inside = false
 
 func _input(event):
-	if Input.is_action_just_pressed("left_click"):
+	if Input.is_action_just_pressed("left_click")&& !Global.dialog_playing:
 		if mouse_inside:
 			$"../../Click".play()
 			can_interact = true

@@ -10,7 +10,7 @@ var filler_dialog = preload("res://Scenes and Scripts/Dialog/Laboratory Dialog/I
 var can_interact = false
 
 func _input(event):
-	if Input.is_action_just_pressed("left_click"):
+	if Input.is_action_just_pressed("left_click") && !Global.dialog_playing:
 		if mouse_inside:
 			$"../../Click".play()
 			can_interact = true
