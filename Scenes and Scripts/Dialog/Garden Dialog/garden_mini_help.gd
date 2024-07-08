@@ -9,11 +9,12 @@ var finished = false
 var same_speaker = false
 var help_name
 var vo_name
+var path
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 
-var PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
-var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
+var PRESET1
+
 
 ##########################################################################################
 
@@ -23,16 +24,21 @@ var PRESET2 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.
 
 
 func _ready():
-	if Global.character == "Cari":
-		var help_name = "Carl"
-		var vo_name = "carl"
-	
-	if Global.character == "Carl":
-		var help_name = "Cari"
-		var vo_name = "cari"
-	
+	Global.pause_opened = true
 	Global.moving_allowed = false
 	Global.dialog_playing = true
+	if Global.character == "Cari":
+		PRESET1 = preload("res://Assets/Art/Characters/Carl/Dialog Icon/carl_dialog.png")
+		
+		##### This is used to make the code for the dialog and voiceline combination easier
+		##### This way you only have to only type the name of the line inside the 
+		##### load function --> load(path + "linename_01_var2")
+		path = "res://Assets/Sound/VO/Laboratory/Carl/PC/vo_pc_carl_"
+	elif Global.character == "Carl" or Global.character == "":
+		PRESET1 = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png")
+		
+		##### Same as in previous comment
+		path = "res://Assets/Sound/VO/Laboratory/Cari/PC/vo_pc_cari_"
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################
@@ -45,7 +51,11 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
-	if dialogs == 3:
+	if dialogs == 3 and GlobalGarden.garden_mini_help_button_state == 0:
+		Global.dialog_playing = false
+		queue_free()
+	
+	elif dialogs == 4 and !GlobalGarden.garden_mini_help_button_state == 0:
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################
@@ -61,160 +71,81 @@ func add_left_dialog_box():
 	$".".add_child(node)
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
-	
 	if dialogs == 1 and GlobalGarden.garden_mini_help_button_state == 0:
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		
 		short_node_text.text = "Schneide die Äste und Büschel ab, die krank oder unpassend aussehen."
-		short_node_rect.texture = PRESET2
-		short_node_name.text = help_name
-		
-		load("res://Assets/Sound/VO/Garden Center/ + help_name" + "/NPC/vo_npc_" + vo_name + "_garden_snipping_help_02.mp3")
+		short_node_rect.texture = PRESET1
+		short_node_name.text = Global.character
 		dialogs += 1
-		
 	
-	if dialogs == 1 and GlobalGarden.garden_mini_help_button_state == 1:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Carl":
-			short_node_text.text = "Schütte Wasser und 1,3 - 1,5 Gramm des roten Pulvers in das mittlere Reagenzglas."
-			short_node_rect.texture = PRESET2
-			short_node_name.text = "Cari"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_powder_help_2.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
-		elif Global.character == "Cari":
-			short_node_text.text = "Schütte Wasser und 1,3 - 1,5 Gramm des roten Pulvers in das mittlere Reagenzglas."
+	elif GlobalGarden.garden_mini_help_button_state == 1:
+		if dialogs == 1:
+			var short_node = get_child(1)
+			var short_node_text = short_node.get_child(0)
+			var short_node_rect = short_node.get_child(1)
+			var short_node_name = short_node.get_child(3).get_child(0)
+			short_node_text.text = "Bewege die Maus über die Böden und Pflanzen, falls du mehr Informationen brauchst."
 			short_node_rect.texture = PRESET1
-			short_node_name.text = "Carl"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_powder_help_2.mp3")
-			$"../VoiceOver".play()
+			short_node_name.text = Global.character
 			dialogs += 1
+			same_speaker = true 
+		elif dialogs == 2:
+			var short_node = get_child(2)
+			var short_node_text = short_node.get_child(0)
+			var short_node_rect = short_node.get_child(1)
+			var short_node_name = short_node.get_child(3).get_child(0)
+			short_node_text.text = "Wenn du eine Entscheidung getroffen hast. Klick einfach auf den Bodentypen, den du für richtig hältst."
+			short_node_rect.texture = PRESET1
+			short_node_name.text = Global.character
+			dialogs += 1
+			same_speaker = false
 	
-	if dialogs == 1 and GlobalGarden.garden_mini_help_button_state == 2:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Carl":
-			short_node_text.text = "Jetzt noch Wasser und 1,5 - 2,0 Gramm gelbes Pulver in das letzte Glas."
-			short_node_rect.texture = PRESET2
-			short_node_name.text = "Cari"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_powder_help_3.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
-		elif Global.character == "Cari":
-			short_node_text.text = "Jetzt noch Wasser und 1,5 - 2,0 Gramm gelbes Pulver in das letzte Glas."
+	elif GlobalGarden.garden_mini_help_button_state == 2:
+		if dialogs == 1:
+			var short_node = get_child(1)
+			var short_node_text = short_node.get_child(0)
+			var short_node_rect = short_node.get_child(1)
+			var short_node_name = short_node.get_child(3).get_child(0)
+			short_node_text.text = "Achte darauf, dass die Pflanze keine Insekten mehr hat."
 			short_node_rect.texture = PRESET1
-			short_node_name.text = "Carl"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_powder_help_3.mp3")
-			$"../VoiceOver".play()
+			short_node_name.text = Global.character
 			dialogs += 1
+			same_speaker = true 
+		elif dialogs == 2:
+			var short_node = get_child(2)
+			var short_node_text = short_node.get_child(0)
+			var short_node_rect = short_node.get_child(1)
+			var short_node_name = short_node.get_child(3).get_child(0)
+			short_node_text.text = "Beachte auch die Anforderungen der Pflanze. Stelle dann die entsprechenden Werte mithilfe der Schalter und Regler ein."
+			short_node_rect.texture = PRESET1
+			short_node_name.text = Global.character
+			dialogs += 1
+			same_speaker = false
 	
-	if dialogs == 1 and Global.mini_help_button_state == 3:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Carl":
-			short_node_text.text = "Schütte die Reagenzgläser mit Hilfe der Zange in den Behälter auf der linken Seite."
-			short_node_rect.texture = PRESET2
-			short_node_name.text = "Cari"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_titration_help_01.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
-		elif Global.character == "Cari":
-			short_node_text.text = "Schütte die Reagenzgläser mit Hilfe der Zange in den Behälter auf der linken Seite."
+	elif GlobalGarden.garden_mini_help_button_state == 3:
+		if dialogs == 1:
+			var short_node = get_child(1)
+			var short_node_text = short_node.get_child(0)
+			var short_node_rect = short_node.get_child(1)
+			var short_node_name = short_node.get_child(3).get_child(0)
+			short_node_text.text = "Ziehe die Pflanzen auf die Gartenfläche."
 			short_node_rect.texture = PRESET1
-			short_node_name.text = "Carl"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_titration_help_01.mp3")
-			$"../VoiceOver".play()
+			short_node_name.text = Global.character
 			dialogs += 1
-	
-	if dialogs == 1 and Global.mini_help_button_state == 4:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Carl":
-			short_node_text.text = "Halte den pH-Wert zwischen 5 und 7 auf der Skala rechts oben. (Benutze dafür die Leertaste)"
-			short_node_rect.texture = PRESET2
-			short_node_name.text = "Cari"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_titration_help_02.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
-		elif Global.character == "Cari":
-			short_node_text.text = "Halte den pH-Wert zwischen 5 und 7 auf der Skala rechts oben. (Benutze dafür die Leertaste)"
+			same_speaker = true 
+		elif dialogs == 2:
+			var short_node = get_child(2)
+			var short_node_text = short_node.get_child(0)
+			var short_node_rect = short_node.get_child(1)
+			var short_node_name = short_node.get_child(3).get_child(0)
+			short_node_text.text = "Achte dabei darauf, dass du die Anforderungen auf dem Zettel erfüllst."
 			short_node_rect.texture = PRESET1
-			short_node_name.text = "Carl"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_titration_help_02.mp3")
-			$"../VoiceOver".play()
+			short_node_name.text = Global.character
 			dialogs += 1
-	
-	if dialogs == 1 and Global.mini_help_button_state == 5:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Carl":
-			short_node_text.text = "Schraube die Mischung an die Spritzpistole."
-			short_node_rect.texture = PRESET2
-			short_node_name.text = "Cari"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_spray_help_1.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
-		elif Global.character == "Cari":
-			short_node_text.text = "Schraube die Mischung an die Spritzpistole."
-			short_node_rect.texture = PRESET1
-			short_node_name.text = "Carl"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_spray_help_1.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
-	
-	if dialogs == 1 and Global.mini_help_button_state == 6:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Carl":
-			short_node_text.text = "Sprüh Christina mit der Spritzpistole ab."
-			short_node_rect.texture = PRESET2
-			short_node_name.text = "Cari"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_spray_help_2.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
-		elif Global.character == "Cari":
-			short_node_text.text = "Sprüh Christina mit der Spritzpistole ab."
-			short_node_rect.texture = PRESET1
-			short_node_name.text = "Carl"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_spray_help_2.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
-	
-	if dialogs == 1 and Global.mini_help_button_state == 7:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Carl":
-			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab. Falls die Spritzpistole verklemmt, schüttel die Maus."
-			short_node_rect.texture = PRESET2
-			short_node_name.text = "Cari"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_spray_help_3.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
-		elif Global.character == "Cari":
-			short_node_text.text = "Sprühe Christina mit der Spritzpistole ab. Falls die Spritzpistole verklemmt, schüttel die Maus."
-			short_node_rect.texture = PRESET1
-			short_node_name.text = "Carl"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_spray_help_3.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
+			same_speaker = false
 ##########################################################################################
 
 
@@ -229,8 +160,14 @@ func add_right_dialog_box():
 	$".".add_child(node)
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
-	if dialogs == 2:
+	if dialogs == 2 and GlobalGarden.garden_mini_help_button_state == 0:
 		dialogs += 1
+		Global.moving_allowed = true
+	
+	if dialogs == 3 and !GlobalGarden.garden_mini_help_button_state == 0:
+		dialogs += 1
+		Global.moving_allowed = true
+	
 ##########################################################################################
 
 

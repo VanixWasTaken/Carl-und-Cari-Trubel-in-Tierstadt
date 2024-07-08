@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bxjd24pu0r6yb"]
+[gd_scene load_steps=21 format=3 uid="uid://bxjd24pu0r6yb"]
 
 [ext_resource type="PackedScene" uid="uid://b8ae2gbukn3ld" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/Trees/tree1.tscn" id="1_dwdq4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame.gd" id="1_ssqej"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="6_6xq8h"]
 [ext_resource type="AudioStream" uid="uid://88365ltu1onf" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/scissors_leaves.tres" id="7_ostxs"]
 [ext_resource type="AudioStream" uid="uid://c77vwf58r34xt" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/scissors_twigs.tres" id="8_whevc"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="10_h4ydn"]
 [ext_resource type="AudioStream" uid="uid://bn8r5dj7kj5yh" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3" id="16_htkqf"]
 
 [sub_resource type="Animation" id="Animation_yjaf6"]
@@ -254,6 +255,10 @@ bus = &"SFX_Foley"
 volume_db = -6.0
 autoplay = true
 bus = &"SFX_Foley"
+
+[node name="UIHelpButton" type="CanvasLayer" parent="."]
+
+[node name="HelpButton" parent="UIHelpButton" instance=ExtResource("10_h4ydn")]
 
 [connection signal="move_camera" from="Tree1" to="." method="_on_tree_1_move_camera"]
 [connection signal="move_camera" from="Tree2" to="." method="_on_tree_2_move_camera"]

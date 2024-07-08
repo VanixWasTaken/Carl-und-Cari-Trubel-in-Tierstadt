@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://vnj4oyq32r4f"]
+[gd_scene load_steps=42 format=3 uid="uid://vnj4oyq32r4f"]
 
 [ext_resource type="Texture2D" uid="uid://ddlsxysgyc71t" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/minigame4_grid.png" id="1_b04vn"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/garden_planning_minigame.gd" id="1_nucrw"]
@@ -23,6 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://dxvhcpnwfj8hq" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var1.mp3" id="21_3tbw8"]
 [ext_resource type="AudioStream" uid="uid://f86grv1pnrfl" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var2.mp3" id="22_fk3me"]
 [ext_resource type="AudioStream" uid="uid://bqwllua46dbnm" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var3.mp3" id="23_gn78r"]
+[ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="24_bucrq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmk48"]
 
@@ -1199,6 +1200,8 @@ bus = &"SFX_Foley"
 
 [node name="Setdown" type="AudioStreamPlayer" parent="."]
 bus = &"SFX_Foley"
+
+[node name="HelpButton" parent="." instance=ExtResource("24_bucrq")]
 
 [connection signal="texture_changed" from="TaskBackground/Task1/MinorTask1" to="." method="_on_minor_task_1_texture_changed"]
 [connection signal="texture_changed" from="TaskBackground/Task1/MinorTask2" to="." method="_on_minor_task_2_texture_changed"]
