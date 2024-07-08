@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://ckv10od6wynv3"]
+[gd_scene load_steps=60 format=3 uid="uid://ckv10od6wynv3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/garden_center.gd" id="1_35ge2"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_wckdn"]
@@ -9,8 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://di3spopw54m1x" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_right.png" id="7_co6vq"]
 [ext_resource type="PackedScene" uid="uid://bg3komba4flqd" path="res://Scenes and Scripts/Game/Garden Center/Objects/bonsai_trees.tscn" id="8_mrm3e"]
 [ext_resource type="AudioStream" uid="uid://bn8r5dj7kj5yh" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3" id="8_o5lhw"]
+[ext_resource type="AudioStream" uid="uid://d0lmco7mcudt" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_crow.mp3" id="9_m2mp1"]
 [ext_resource type="Texture2D" uid="uid://bcsb6y7kyb8gy" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_trolley.png" id="10_4u12l"]
+[ext_resource type="AudioStream" uid="uid://codly2i0d8n1a" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_birds.mp3" id="10_f8ftx"]
 [ext_resource type="Texture2D" uid="uid://cst6q8x8g3j7k" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_cabinet.png" id="11_a52rk"]
+[ext_resource type="AudioStream" uid="uid://1acxyhxwhm7n" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_computer.mp3" id="11_s1qpx"]
 [ext_resource type="Texture2D" uid="uid://boei16aaa4g7d" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_slide_door_left.png" id="12_fdwkp"]
 [ext_resource type="Texture2D" uid="uid://c0e4dhkb4gkha" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_slide_door_right.png" id="13_38nce"]
 [ext_resource type="PackedScene" uid="uid://ddrbc3iejgnsn" path="res://Scenes and Scripts/Game/Garden Center/Objects/ground_bags.tscn" id="15_sedvm"]
@@ -323,32 +326,35 @@ shape = SubResource("BoxShape3D_cdh4m")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_o5lhw")
-volume_db = 3.0
+volume_db = -15.0
 autoplay = true
 bus = &"SFX_Ambience"
 
 [node name="Crows" type="AudioStreamPlayer3D" parent="Ambience"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.305732, 4.70141, -6.3986)
+stream = ExtResource("9_m2mp1")
 volume_db = -6.0
 unit_size = 50.0
 autoplay = true
 max_distance = 65.0
 panning_strength = 0.5
-bus = &"SFX_Foley"
+bus = &"SFX_Ambience"
 attenuation_filter_cutoff_hz = 1600.0
 
 [node name="Birds" type="AudioStreamPlayer3D" parent="Ambience"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.305732, 4.70141, -6.3986)
+stream = ExtResource("10_f8ftx")
 volume_db = -6.0
 unit_size = 50.0
 autoplay = true
 max_distance = 65.0
 panning_strength = 0.5
-bus = &"SFX_Foley"
+bus = &"SFX_Ambience"
 attenuation_filter_cutoff_hz = 4575.0
 
 [node name="Computer" type="AudioStreamPlayer3D" parent="Ambience"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.305732, 3.46205, 2.2345)
+stream = ExtResource("11_s1qpx")
 volume_db = -12.0
 unit_size = 50.0
 max_db = 0.0
