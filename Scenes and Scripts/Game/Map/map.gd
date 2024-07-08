@@ -14,12 +14,10 @@ func _ready():
 		var dialog_instance = after_lab_dialog.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
 		Global.inside_laboratory = false
-		$MapTest/Objects/Fireworks.show()
 	elif Global.last_scene == "GardenCenter":
 		$Player.global_position = Vector2(4140, 1434)
 		var dialog_instance = after_garden_dialog.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
-		$MapTest/Objects/Plantpots.show()
 
 	job_buildings = get_tree().get_nodes_in_group("Buildings")
 	for jobs in Global.completed_jobs: #Garden Center
@@ -27,6 +25,10 @@ func _ready():
 			var building_name = buildings.get_name()
 			if building_name == jobs:
 				buildings.can_enter = false
+			if jobs == "GardenCenterBuilding":
+				$MapTest/Objects/Plantpots.show()
+			if jobs == "Laboratory Building":
+				$MapTest/Objects/Fireworks.show()
 
 	if Global.completed_jobs.size() >= 1:
 		$"HUD/Help Movement".queue_free()

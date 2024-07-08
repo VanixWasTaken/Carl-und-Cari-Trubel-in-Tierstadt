@@ -18,6 +18,8 @@ var player
 
 
 func _ready():
+	GlobalGarden.talked_to_guido6 = true
+	GlobalGarden.last_finished_minigame = "PlanningGame"
 	MusicController._play_music("peace_and_tranquility", "garden_center", -15)
 	Global.last_scene = "GardenCenter"
 	player = get_tree().get_first_node_in_group("Player")
@@ -90,6 +92,7 @@ func change_scene():
 
 func _on_exit_body_entered(body):
 	if body.is_in_group("Player") && GlobalGarden.talked_to_guido6:
+		map_scene = load("res://Scenes and Scripts/Game/Map/map.tscn")
 		Global.completed_jobs.append("GardenCenterBuilding")
 		Global.last_scene = "GardenCenter"
 		$Player/CanvasLayer/AnimationPlayer.play("fade_out")
