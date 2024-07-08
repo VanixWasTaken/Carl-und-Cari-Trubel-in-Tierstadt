@@ -973,7 +973,7 @@ theme_override_fonts/font = ExtResource("17_hkm8s")
 theme_override_font_sizes/font_size = 34
 text = "Im fertigen Spiel kann man ganz Tierstadt frei erkunden und die verschiedensten Ausbildungsberufe ausprobieren.
 
- In der jetzigen Version existiert aber nur das Chemie-Labor. Du kannst die Stadt zwar jetzt schon erkunden, aber den meisten Spaß findest du im Labor."
+ In der jetzigen Version existieren aber nur das Chemie-Labor und die Gärtnerei. Du kannst die Stadt zwar jetzt schon erkunden, aber den meisten Spaß findest du in diesen Berufen."
 vertical_alignment = 1
 autowrap_mode = 3
 
