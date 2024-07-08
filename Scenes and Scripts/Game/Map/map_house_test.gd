@@ -22,14 +22,10 @@ func _process(delta):
 	if animation_frame == 3:
 		animation_frame = 0
 	if mouse_inside and Input.is_action_just_pressed("left_click"):
-		%Click.play()
 		if can_enter:
+			%Click.play()
 			$"../Player"._get_clicked_object(building_name, scene_name)
-		else:
-			mouse_inside = false
-			var dialog_instance
-			dialog_instance = visited_dialog.instantiate()
-			get_tree().get_current_scene().add_child(dialog_instance)
+
 
 # handles the input for clicking on the house to enter the level
 func _on_area_2d_mouse_entered():

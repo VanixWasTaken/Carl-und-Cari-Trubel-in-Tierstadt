@@ -17,6 +17,7 @@ var mini_help_button_state = 0 #save
 var exit_coordinates #save
 var first_game_start = true #save
 var completed_jobs = [] #save
+var showed_profile_help =  false #save
 var job_stars_dict : Dictionary = {  #save
 	"ChemistJob" : null
 }

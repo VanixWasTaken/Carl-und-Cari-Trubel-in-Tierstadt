@@ -1,7 +1,7 @@
 extends Sprite3D
 
 const GARDEN_COMPUTER = preload("res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_desktop_desk.png")
-const GARDEN_COMPUTER_HIGHLIGHTED = preload("res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_bonsai_highlighted.png")
+const GARDEN_COMPUTER_HIGHLIGHTED = preload("res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_desktop_desk_highlights.png")
 var mouse_inside_computer = false
 var player_in_reach = false
 var should_enter_computer = false

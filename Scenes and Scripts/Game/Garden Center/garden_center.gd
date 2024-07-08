@@ -85,15 +85,14 @@ func change_scene():
 	elif GlobalGarden.last_finished_minigame == "GroundGame":
 		get_tree().change_scene_to_packed(minigame_3_2)
 	elif GlobalGarden.last_finished_minigame == "PlanningGame":
-		get_tree().change_scene_to_packed(minigame_1)
-	
+		get_tree().change_scene_to_packed(map_scene)
 
 
 func _on_exit_body_entered(body):
 	if body.is_in_group("Player") && GlobalGarden.talked_to_guido6:
-		get_tree().change_scene_to_packed(map_scene)
-		Global.completed_jobs.append("Garden Center")
+		Global.completed_jobs.append("GardenCenterBuilding")
 		Global.last_scene = "GardenCenter"
+		$Player/CanvasLayer/AnimationPlayer.play("fade_out")
 
 
 func _on_animated_sprite_3d_frame_changed():

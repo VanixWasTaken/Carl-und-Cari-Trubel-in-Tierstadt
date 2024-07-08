@@ -8,20 +8,21 @@ var job_buildings
 var player
 
 func _ready():
-	Global.last_scene = "Map"
 	Global.menu_open = true
 	if Global.last_scene == "Laboratory":
-		$Player.position = Vector2(776, 2256)
+		$Player.global_position = Vector2(776, 2256)
 		var dialog_instance = after_lab_dialog.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
 		Global.inside_laboratory = false
+		$MapTest/Objects/Fireworks.show()
 	elif Global.last_scene == "GardenCenter":
-		$Player.position = Vector2(4140, 1434)
+		$Player.global_position = Vector2(4140, 1434)
 		var dialog_instance = after_garden_dialog.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
+		$MapTest/Objects/Plantpots.show()
 
 	job_buildings = get_tree().get_nodes_in_group("Buildings")
-	for jobs in Global.completed_jobs:
+	for jobs in Global.completed_jobs: #Garden Center
 		for buildings in job_buildings:
 			var building_name = buildings.get_name()
 			if building_name == jobs:
@@ -30,15 +31,11 @@ func _ready():
 	if Global.completed_jobs.size() >= 1:
 		$"HUD/Help Movement".queue_free()
 		Global.menu_open = false
-		$MapTest/Objects/Fireworks.show()
 	
-	if Global.completed_jobs.size() == 9:
-		var dialog_instance = main_story_dialog_1.instantiate()
-		get_tree().get_current_scene().add_child(dialog_instance)
+	if Global.completed_jobs.size() == 1:
+		$Npcs/SamuelNPC.show()
 	player = get_tree().get_first_node_in_group("Player")
 
-
-	SaveSystem.save_game()
 
 
 
@@ -80,7 +77,18 @@ func _on_animation_player_2_animation_finished(anim_name):
 func _on_animation_player_3_animation_finished(anim_name):
 	$CloudControl/AnimationPlayer6.play("new_animation")
 
-
+func reveal_changes():
+	var camera = $Player/Camera2D
+	var reveal_animation = $CloudReveal/MarketPlaceAnimation
+	Global.cutscene_playing = true
+	$Player.remove_child(camera)
+	$CloudReveal/PanMarker.add_child(camera)
+	if Global.last_scene == "Laboratory":
+		reveal_animation.play("cloud_reveal_fireworks")
+	elif Global.last_scene == "GardenCenter":
+		reveal_animation.play("cloud_reveal_plants")
+	Global.last_scene = "Map"
+	SaveSystem.save_game()
 
 
 
