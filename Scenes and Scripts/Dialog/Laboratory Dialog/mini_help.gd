@@ -154,6 +154,9 @@ func add_left_dialog_box():
 			dialogs += 1
 	
 	if dialogs == 1 and Global.mini_help_button_state == 5:
+		
+		AudioServer.set_bus_bypass_effects(1, true) ### bypass so its not muffled
+		
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -174,6 +177,9 @@ func add_left_dialog_box():
 			dialogs += 1
 	
 	if dialogs == 1 and Global.mini_help_button_state == 6:
+		
+		AudioServer.set_bus_bypass_effects(1, true) ### bypass so its not muffled
+		
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -194,6 +200,9 @@ func add_left_dialog_box():
 			dialogs += 1
 	
 	if dialogs == 1 and Global.mini_help_button_state == 7:
+		
+		AudioServer.set_bus_bypass_effects(1, true) ### bypass so its not muffled
+		
 		var short_node = get_child(1)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
@@ -227,6 +236,7 @@ func add_right_dialog_box():
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
 	if dialogs == 2:
+		AudioServer.set_bus_bypass_effects(1, false) ### stops the bypass, so the effects are active again on christina
 		dialogs += 1
 ##########################################################################################
 

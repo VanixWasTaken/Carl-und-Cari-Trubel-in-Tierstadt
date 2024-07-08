@@ -182,8 +182,7 @@ func add_right_dialog_box():
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_4_7.mp3")
-		$"../VoiceOver".bus = "Dialog_Barks"
-		AudioServer.set_bus_effect_enabled(7, 0, true)
+		AudioServer.set_bus_effect_enabled(1, 0, true)
 		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true

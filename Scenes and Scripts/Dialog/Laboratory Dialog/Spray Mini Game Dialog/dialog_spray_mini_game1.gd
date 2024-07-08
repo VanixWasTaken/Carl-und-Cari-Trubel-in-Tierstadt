@@ -59,6 +59,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 4:
+		AudioServer.set_bus_effect_enabled(1, 0, false)
 		Global.dialog_playing = false
 		Global.lab_cutscene_played = true
 		Global.return_laboratory_1 = true
@@ -79,6 +80,9 @@ func add_left_dialog_box():
 	$".".add_child(node)
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
+	
+	if dialogs <= 2:
+		AudioServer.set_bus_bypass_effects(1, true)
 	
 	if dialogs == 2:
 		var short_node = get_child(2)
@@ -161,6 +165,7 @@ func _on_skip_button_pressed():
 	if dialog_side == "left" and !finished and same_speaker:
 		add_left_dialog_box()
 	elif dialog_side == "left" and !finished:
+		AudioServer.set_bus_bypass_effects(1, false)
 		add_right_dialog_box()
 	elif dialog_side == "right" and !finished and same_speaker:
 		add_right_dialog_box()
