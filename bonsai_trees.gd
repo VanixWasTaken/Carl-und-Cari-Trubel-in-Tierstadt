@@ -8,7 +8,7 @@ var should_enter_bonsai = false
 
 
 func _input(event):
-	if event.is_action_pressed("left_click") and mouse_inside_bonsai_trees:
+	if event.is_action_pressed("left_click") and mouse_inside_bonsai_trees && !Global.dialog_playing:
 		should_enter_bonsai = true
 	elif event.is_action_pressed("left_click") and !mouse_inside_bonsai_trees:
 		should_enter_bonsai = false

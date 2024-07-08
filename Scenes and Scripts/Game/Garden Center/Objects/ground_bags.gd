@@ -8,7 +8,7 @@ var player_in_reach = false
 var should_enter_bags = false
 
 func _input(event):
-	if event.is_action_pressed("left_click") and mouse_inside_bags:
+	if event.is_action_pressed("left_click") and mouse_inside_bags && !Global.dialog_playing:
 		should_enter_bags = true
 		print("KLUH")
 	elif event.is_action_pressed("left_click") and !mouse_inside_bags:

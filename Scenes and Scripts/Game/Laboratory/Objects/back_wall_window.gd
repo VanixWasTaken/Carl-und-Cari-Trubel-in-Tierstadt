@@ -21,7 +21,7 @@ func _on_area_3d_mouse_exited():
 		frame = 0
 
 func _input(event):
-	if Input.is_action_just_pressed("left_click"):
+	if Input.is_action_just_pressed("left_click")&& !Global.dialog_playing:
 		if mouse_inside:
 			can_interact = true
 			if player_inside:
