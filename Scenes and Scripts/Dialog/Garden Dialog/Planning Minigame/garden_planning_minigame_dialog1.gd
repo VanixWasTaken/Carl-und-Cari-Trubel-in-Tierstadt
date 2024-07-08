@@ -97,6 +97,7 @@ func add_left_dialog_box():
 		same_speaker = true
 	
 	elif dialogs == 7:
+		GlobalGarden.garden_mini_help_button_state == 3
 		dialogs += 1
 		Global.moving_allowed = true
 	
