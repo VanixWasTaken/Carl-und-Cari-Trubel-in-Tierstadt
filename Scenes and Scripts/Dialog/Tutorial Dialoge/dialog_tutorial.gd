@@ -81,6 +81,7 @@ func add_left_dialog_box():
 			$"../Voice Over".play()
 	
 	elif dialogs == 4:
+		Global.tutorial_help_button_state = 0
 		dialogs += 1
 		Global.moving_allowed = true
 

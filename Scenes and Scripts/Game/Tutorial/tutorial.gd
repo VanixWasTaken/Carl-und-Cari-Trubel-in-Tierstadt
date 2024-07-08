@@ -57,7 +57,6 @@ func _on_poi_area_body_entered(body):
 	if body.get_name() == "Player":
 		got_key = true
 		$POI/AudioStreamPlayer3D.play()
-		Global.tutorial_help_button_state += 1
 		$Objects/LeaveThroughDoor.monitorable = true
 		$Objects/LeaveThroughDoor.monitoring = true
 

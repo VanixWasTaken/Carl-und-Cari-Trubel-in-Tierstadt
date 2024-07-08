@@ -79,31 +79,9 @@ func add_left_dialog_box():
 		short_node_text.text = "Schneide die Äste und Büschel ab, die krank oder unpassend aussehen."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
-		dialogs += 1
+		dialogs += 1 
 	
 	elif GlobalGarden.garden_mini_help_button_state == 1:
-		if dialogs == 1:
-			var short_node = get_child(1)
-			var short_node_text = short_node.get_child(0)
-			var short_node_rect = short_node.get_child(1)
-			var short_node_name = short_node.get_child(3).get_child(0)
-			short_node_text.text = "Bewege die Maus über die Böden und Pflanzen, falls du mehr Informationen brauchst."
-			short_node_rect.texture = PRESET1
-			short_node_name.text = Global.character
-			dialogs += 1
-			same_speaker = true 
-		elif dialogs == 2:
-			var short_node = get_child(2)
-			var short_node_text = short_node.get_child(0)
-			var short_node_rect = short_node.get_child(1)
-			var short_node_name = short_node.get_child(3).get_child(0)
-			short_node_text.text = "Wenn du eine Entscheidung getroffen hast. Klick einfach auf den Bodentypen, den du für richtig hältst."
-			short_node_rect.texture = PRESET1
-			short_node_name.text = Global.character
-			dialogs += 1
-			same_speaker = false
-	
-	elif GlobalGarden.garden_mini_help_button_state == 2:
 		if dialogs == 1:
 			var short_node = get_child(1)
 			var short_node_text = short_node.get_child(0)
@@ -120,6 +98,28 @@ func add_left_dialog_box():
 			var short_node_rect = short_node.get_child(1)
 			var short_node_name = short_node.get_child(3).get_child(0)
 			short_node_text.text = "Beachte auch die Anforderungen der Pflanze. Stelle dann die entsprechenden Werte mithilfe der Schalter und Regler ein."
+			short_node_rect.texture = PRESET1
+			short_node_name.text = Global.character
+			dialogs += 1
+			same_speaker = false 
+	 
+	elif GlobalGarden.garden_mini_help_button_state == 2:
+		if dialogs == 1:
+			var short_node = get_child(1)
+			var short_node_text = short_node.get_child(0)
+			var short_node_rect = short_node.get_child(1)
+			var short_node_name = short_node.get_child(3).get_child(0)
+			short_node_text.text = "Bewege die Maus über die Böden und Pflanzen, falls du mehr Informationen brauchst."
+			short_node_rect.texture = PRESET1
+			short_node_name.text = Global.character
+			dialogs += 1
+			same_speaker = true 
+		elif dialogs == 2:
+			var short_node = get_child(2)
+			var short_node_text = short_node.get_child(0)
+			var short_node_rect = short_node.get_child(1)
+			var short_node_name = short_node.get_child(3).get_child(0)
+			short_node_text.text = "Wenn du eine Entscheidung getroffen hast. Klick einfach auf den Bodentypen, den du für richtig hältst."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = Global.character
 			dialogs += 1
