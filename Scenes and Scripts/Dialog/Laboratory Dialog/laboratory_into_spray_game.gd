@@ -23,6 +23,7 @@ var path
 
 
 func _ready():
+	AudioServer.set_bus_effect_enabled(1, 0, true)
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 	if Global.character == "Carl":
@@ -68,6 +69,8 @@ func add_left_dialog_box():
 	$".".add_child(node)
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
+	if dialogs <= 3:
+		AudioServer.set_bus_bypass_effects(1, true) #### this makes carl and caris voices not muffled
 	
 	if dialogs == 1:
 		var short_node = get_child(1)
@@ -156,6 +159,7 @@ func _on_skip_button_pressed():
 		add_left_dialog_box()
 	elif dialog_side == "left" and !finished:
 		add_right_dialog_box()
+		AudioServer.set_bus_bypass_effects(1, false) ### this makes christinas voice muffled, after carl and cari are done talking
 	elif dialog_side == "right" and !finished and same_speaker:
 		add_right_dialog_box()
 	elif dialog_side == "right" and !finished:
