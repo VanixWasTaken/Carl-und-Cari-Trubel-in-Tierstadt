@@ -10,7 +10,8 @@ var mouse_inside = false
 var in_stand = false
 var tube_counter = 0
 var interactible = true
-
+var follow_mouse = false
+var mouse_position
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	interactible = true
@@ -21,16 +22,16 @@ func _process(delta):
 	if !Global.dialog_playing:
 		
 		if mouse_inside and Input.is_action_pressed("left_click"):
-			
+			follow_mouse = true
+			$"../HoverWood".play()
+		if follow_mouse:
+			mouse_position = get_global_mouse_position()
+			global_position = mouse_position
+			Global.mouse_full = true
 			$ClampArea/Clamp.material = no_shader
-			if Input.is_action_just_pressed("left_click"):
-				$"../HoverWood".play()
-			
-			var new_position = get_global_mouse_position()
-			global_position = new_position
 		
-		elif Input.is_action_just_released("left_click"):
-			
+		if Input.is_action_just_released("left_click"):
+			follow_mouse = false
 			if mouse_inside and !in_stand:
 				$SetDown.play()
 			
