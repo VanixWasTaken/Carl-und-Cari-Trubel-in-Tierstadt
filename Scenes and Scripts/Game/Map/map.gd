@@ -4,6 +4,7 @@ extends Node2D
 @onready var after_garden_dialog = preload("res://Scenes and Scripts/Dialog/Map Dialoge/After Job Dialog/after_garden_dialog.tscn")
 @onready var main_story_dialog_1 = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn")
 @onready var profile_help = preload("res://Scenes and Scripts/Menus/Map Menu/help_profiles.tscn")
+var beta_end = preload("res://Scenes and Scripts/Menus/Beta End Screen/beta_end_screen.tscn")
 var job_buildings
 var player
 
@@ -37,6 +38,7 @@ func _ready():
 	
 	if Global.completed_jobs.size() == 1:
 		$Npcs/SamuelNPC.show()
+
 	player = get_tree().get_first_node_in_group("Player")
 
 
@@ -104,3 +106,7 @@ func _on_market_place_animation_animation_finished(anim_name):
 	player.visible = true
 	camera.position = Vector2(0,0)
 	Global.cutscene_playing = false
+	Global.showed_reveals += 1
+	if Global.showed_reveals == 2:
+		var instance = beta_end.instantiate()
+		$HUD.add_child(instance)
