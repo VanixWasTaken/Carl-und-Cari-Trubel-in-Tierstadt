@@ -1,7 +1,8 @@
 extends CanvasLayer
 
 
-
+func _ready():
+	Global.menu_open = true
 
 func _on_question_block_input():
 	$InputBlock.show()

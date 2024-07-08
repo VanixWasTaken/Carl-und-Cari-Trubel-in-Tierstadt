@@ -27,9 +27,10 @@ func _ready():
 				buildings.can_enter = false
 			if jobs == "GardenCenterBuilding":
 				$MapTest/Objects/Plantpots.show()
+				$HUD/JobNotes/JobNoteMenu/Gardener/GardenerNoteSmall.show()
 			if jobs == "Laboratory Building":
 				$MapTest/Objects/Fireworks.show()
-
+				$HUD/JobNotes/JobNoteMenu/ChemistNoteSmall.show()
 	if Global.completed_jobs.size() >= 1:
 		$"HUD/Help Movement".queue_free()
 		Global.menu_open = false
