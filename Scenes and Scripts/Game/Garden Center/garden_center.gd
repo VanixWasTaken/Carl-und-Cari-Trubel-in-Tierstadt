@@ -19,7 +19,7 @@ var player
 
 
 func _ready():
-	MusicController._play_music("peace_and_tranquility", "garden_center", -15)
+	MusicController._play_music("peace_and_tranquility", "garden_center", -21)
 	Global.last_scene = "GardenCenter"
 	player = get_tree().get_first_node_in_group("Player")
 	if GlobalGarden.last_finished_minigame == "NONE":
