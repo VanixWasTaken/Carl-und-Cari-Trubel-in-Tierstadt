@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://budv1svk408d3"]
+[gd_scene load_steps=61 format=3 uid="uid://budv1svk408d3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_paeaj"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_0p5ej"]
@@ -19,10 +19,12 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question3.gd" id="17_ald77"]
 [ext_resource type="Texture2D" uid="uid://b6hpuvseildsl" path="res://Assets/Art/Environment/Quiz/quiz_question1_checkbox.png" id="18_17d0r"]
 [ext_resource type="Texture2D" uid="uid://b6fgfqiiucpjt" path="res://Assets/Art/Environment/Quiz/quiz_question1_checkbox_checked.png" id="19_a8g3q"]
-[ext_resource type="Texture2D" uid="uid://cnahvtocqw6uc" path="res://Assets/Art/Environment/Quiz/quiz_question3_chef_hat.png" id="20_0dny1"]
+[ext_resource type="Texture2D" uid="uid://xyiifjnst0m0" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_fire_exstingishuer.png" id="20_3yxss"]
 [ext_resource type="Texture2D" uid="uid://6pehn1e4mhbf" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_lab_goggles.png" id="21_bsce8"]
+[ext_resource type="Texture2D" uid="uid://rqft0ljgy2wu" path="res://Assets/Art/Environment/Quiz/quiz_garden_watering_can_icon.png" id="22_h2q03"]
 [ext_resource type="Texture2D" uid="uid://dhax6i23j7k5p" path="res://Assets/Art/Environment/Quiz/quiz_question3_garden_scissors.png" id="22_ovs4s"]
 [ext_resource type="Texture2D" uid="uid://dgdio4aqc2t3b" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_toothbrush.png" id="23_spg2m"]
+[ext_resource type="Texture2D" uid="uid://vgvy6d7qguns" path="res://Assets/Art/Environment/Quiz/quiz_garden_potted_plant_icon.png" id="24_1bjhf"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question2.gd" id="24_ry01n"]
 [ext_resource type="Texture2D" uid="uid://dv4j0r5i8i2j0" path="res://Assets/Art/Environment/Quiz/quiz_question2_lemon.png" id="26_hgxy6"]
 [ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="27_syaqf"]
@@ -436,7 +438,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Question3/Answer2"]
 position = Vector2(210, 0)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("20_0dny1")
+texture = ExtResource("20_3yxss")
 
 [node name="Answer3" type="Node2D" parent="Question3"]
 position = Vector2(826, 647)
@@ -472,7 +474,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Question3/Answer4"]
 position = Vector2(210, 0)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("22_ovs4s")
+texture = ExtResource("22_h2q03")
 
 [node name="Answer5" type="Node2D" parent="Question3"]
 position = Vector2(820, 425)
@@ -508,7 +510,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Question3/Answer6"]
 position = Vector2(210, 0)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("22_ovs4s")
+texture = ExtResource("24_1bjhf")
 
 [node name="Answer7" type="Node2D" parent="Question3"]
 position = Vector2(823, 879)
@@ -603,7 +605,6 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question2" type="TextureRect" parent="."]
-visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_0p5ej")
@@ -911,7 +912,8 @@ text = "Um das nachwachsen zu verlangsamen"
 metadata/_edit_use_anchors_ = true
 
 [node name="Answer2" type="Node2D" parent="Question1"]
-position = Vector2(203, 600)
+position = Vector2(203, 800)
+metadata/_edit_group_ = true
 
 [node name="Answer2Button" type="TextureButton" parent="Question1/Answer2"]
 offset_left = -94.0
@@ -936,7 +938,8 @@ kranke Äste zu entfernen"
 metadata/_edit_use_anchors_ = true
 
 [node name="Answer3" type="Node2D" parent="Question1"]
-position = Vector2(203, 800)
+position = Vector2(201, 597)
+metadata/_edit_group_ = true
 
 [node name="Answer3Button" type="TextureButton" parent="Question1/Answer3"]
 offset_left = -92.0
