@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=78 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
 [ext_resource type="Texture2D" uid="uid://p003wtefrdrs" path="res://Assets/Art/Environment/Map/Big Map/map_no_lab_no_gardencenter.png" id="2_0t1vf"]
@@ -40,7 +40,6 @@
 [ext_resource type="PackedScene" uid="uid://dmhdb71htj10k" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_npc.tscn" id="31_mll1x"]
 [ext_resource type="PackedScene" uid="uid://cwwvy0q003fg7" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/barbara_npc.tscn" id="32_683wj"]
 [ext_resource type="PackedScene" uid="uid://2d2fjj4yd732" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/sven_npc.tscn" id="33_nmhjc"]
-[ext_resource type="Texture2D" uid="uid://bxpck0dk267i4" path="res://Assets/Art/UI/HUD/Map/job_note1.PNG" id="34_2c2iy"]
 [ext_resource type="PackedScene" uid="uid://cfoesiummvma2" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_and_barbara.tscn" id="34_clinu"]
 [ext_resource type="Texture2D" uid="uid://1d7sok60uf2" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener.png" id="35_pb8cy"]
 [ext_resource type="Texture2D" uid="uid://ctxk5ymgd82bg" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener_left_clicked.png" id="36_qpwuk"]
@@ -766,6 +765,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="JobNoteMenu" type="Node2D" parent="HUD/JobNotes"]
+visible = false
 position = Vector2(-36, -15)
 
 [node name="Sprite2D" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu"]
@@ -834,7 +834,6 @@ texture = ExtResource("15_jo7ff")
 z_index = 3
 position = Vector2(1054, 606)
 scale = Vector2(1.01, 1.01)
-texture = ExtResource("34_2c2iy")
 
 [node name="QuitChemistBig" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D"]
 z_index = 3
@@ -887,7 +886,6 @@ texture = ExtResource("15_jo7ff")
 [node name="BigNote" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNodeBig"]
 z_index = 3
 position = Vector2(1044, 605)
-texture = ExtResource("34_2c2iy")
 
 [node name="CloseBigGardener" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNodeBig"]
 z_index = 3

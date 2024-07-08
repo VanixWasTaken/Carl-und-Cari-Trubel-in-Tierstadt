@@ -60,7 +60,8 @@ func save():  # saves the current stats as a dictionary
 		"BushsPlaced" : GlobalGarden.bushs_placed,
 		"CurrentStage" : GlobalGarden.current_stage,
 		"Stage2CorrectSpecs" : GlobalGarden.stage2_correct_specs,
-		"ShowedHelpProfiles" : Global.showed_profile_help
+		"ShowedHelpProfiles" : Global.showed_profile_help,
+		"MarketReveals" : Global.showed_reveals
 		
 	}
 	
