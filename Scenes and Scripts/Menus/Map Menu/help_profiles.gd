@@ -11,11 +11,7 @@ func _process(delta):
 
 
 func _on_texture_button_button_up():
+	get_tree().get_current_scene().reveal_changes()
 	Global.menu_open = false
-	var camera = get_tree().get_first_node_in_group("Camera")
-	get_tree().get_first_node_in_group("Player").remove_child(camera)
-	get_tree().get_first_node_in_group("Marker").add_child(camera)
-	get_tree().get_first_node_in_group("MarketAnimation").play("cloud_reveal")
-	get_tree().get_first_node_in_group("Samuel").show()
-	Global.cutscene_playing = true
+	Global.showed_profile_help = true
 	queue_free()

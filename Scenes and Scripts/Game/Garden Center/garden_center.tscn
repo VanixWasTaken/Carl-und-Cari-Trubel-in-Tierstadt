@@ -386,12 +386,12 @@ texture = ExtResource("11_a52rk")
 [node name="door_left" type="Sprite3D" parent="Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.78, 6.05, -4.2785)
 sorting_offset = 10.0
-texture = ExtResource("12_fdwkp")
+texture = ExtResource("13_38nce")
 
 [node name="door_right" type="Sprite3D" parent="Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.297, 6.05, -4.54117)
 sorting_offset = 10.0
-texture = ExtResource("13_38nce")
+texture = ExtResource("12_fdwkp")
 
 [node name="BackWallGarden" parent="Objects" instance=ExtResource("17_elkqq")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 1.508, 6.63183, -4.68399)

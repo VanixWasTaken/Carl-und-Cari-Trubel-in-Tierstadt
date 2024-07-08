@@ -52,16 +52,7 @@ func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 11:
 		Global.dialog_playing= false
-		if Global.completed_jobs.size() == 1:
-			get_tree().get_current_scene().explain_profiles()
-		else: 
-			var camera = get_tree().get_first_node_in_group("Camera")
-			get_tree().get_first_node_in_group("Player").remove_child(camera)
-			get_tree().get_current_scene().add_child(camera)
-			camera.global_position = Vector2(1576,1248)
-			get_tree().get_first_node_in_group("MarketAnimation").play("cloud_reveal")
-			Global.cutscene_playing = true
-			
+		get_tree().get_current_scene().explain_profiles()
 		queue_free()
 ##########################################################################################
 
