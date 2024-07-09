@@ -121,8 +121,8 @@ func add_left_dialog_box():
 		dialogs += 1
 		same_speaker = false
 	
-	
-	
+	elif dialogs == 9:
+		dialogs += 1
 	
 	
 ##########################################################################################
@@ -189,21 +189,9 @@ func add_right_dialog_box():
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_5_9.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
-	
-	elif dialogs == 9:
-		dialogs += 1
 
 
 ##########################################################################################
-
-
-
-
-
-
-
-
-
 
 func _on_skip_button_pressed():
 	var short_node = get_child(1)
@@ -219,8 +207,6 @@ func _on_skip_button_pressed():
 		add_left_dialog_box()
 	await get_tree().create_timer(1).timeout
 	$SkipButton.visible = true
-
-
 
 func _on_skip_button_timer_timeout():
 	$SkipButton.visible = true

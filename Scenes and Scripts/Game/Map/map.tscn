@@ -1,23 +1,15 @@
-[gd_scene load_steps=85 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=74 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
 [ext_resource type="Texture2D" uid="uid://p003wtefrdrs" path="res://Assets/Art/Environment/Map/Big Map/map_no_lab_no_gardencenter.png" id="2_0t1vf"]
 [ext_resource type="PackedScene" uid="uid://dctfgv4bxknm4" path="res://Scenes and Scripts/Game/Map/Buildings/laboratory_building.tscn" id="2_ab8es"]
-[ext_resource type="Texture2D" uid="uid://b3y8bt52yhxhx" path="res://Assets/Art/Environment/Map/RiverAnim/map_river_animation001.png" id="3_d4byd"]
 [ext_resource type="Texture2D" uid="uid://dmwffc2jjwf8m" path="res://Assets/Art/Environment/Map/fairground/map_fireworks1.png" id="3_oe0ft"]
-[ext_resource type="Texture2D" uid="uid://vspwaxhmymse" path="res://Assets/Art/Environment/Map/RiverAnim/map_river_animation002.png" id="4_1o17y"]
 [ext_resource type="Texture2D" uid="uid://junv40vhknop" path="res://Assets/Art/Environment/Map/fairground/map_fireworks2.png" id="4_1ukqo"]
 [ext_resource type="Texture2D" uid="uid://ct21gx2j251qv" path="res://Assets/Art/Environment/Map/fairground/map_poles.png" id="5_o2ljt"]
 [ext_resource type="Texture2D" uid="uid://crrhnurucid3q" path="res://Assets/Art/Particles/Clouds/bg_cloud_main1.png" id="5_ok451"]
 [ext_resource type="PackedScene" uid="uid://reaek0i8ei2g" path="res://Scenes and Scripts/Menus/Pause Menu/pause_menu.tscn" id="5_q8qp1"]
-[ext_resource type="Texture2D" uid="uid://c1kpulefltlsy" path="res://Assets/Art/Environment/Map/RiverAnim/map_river_animation003.png" id="5_qv0by"]
-[ext_resource type="Texture2D" uid="uid://dkttgj6hkck7f" path="res://Assets/Art/Environment/Map/RiverAnim/map_river_animation004.png" id="6_fkduc"]
-[ext_resource type="Texture2D" uid="uid://c124ct6jnbrb0" path="res://Assets/Art/Environment/Map/fairground/map_flowerpots1.png" id="6_skm2q"]
 [ext_resource type="PackedScene" uid="uid://bhb5312a6xrce" path="res://Scenes and Scripts/Game/Map/Buildings/garden_center_map.tscn" id="7_fpr7h"]
-[ext_resource type="Texture2D" uid="uid://c7uj7p8ldeabb" path="res://Assets/Art/Environment/Map/fairground/map_flowerpots2.png" id="7_isvqi"]
-[ext_resource type="Texture2D" uid="uid://cfcrw15dxvc4g" path="res://Assets/Art/Environment/Map/RiverAnim/map_river_animation005.png" id="7_m2k7g"]
 [ext_resource type="Texture2D" uid="uid://bbop2qlcrhqd5" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button.png" id="8_fe5cr"]
-[ext_resource type="Texture2D" uid="uid://6lg1w6tt7ehj" path="res://Assets/Art/Environment/Map/Big Map/map_street.png" id="8_ntpd6"]
 [ext_resource type="Texture2D" uid="uid://b8fkioc55ls28" path="res://Assets/Art/Particles/leaf.png" id="8_w5011"]
 [ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="9_lq8sc"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/job_notes.gd" id="9_vqn8c"]
@@ -47,9 +39,6 @@
 [ext_resource type="PackedScene" uid="uid://cwwvy0q003fg7" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/barbara_npc.tscn" id="32_683wj"]
 [ext_resource type="PackedScene" uid="uid://2d2fjj4yd732" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/sven_npc.tscn" id="33_nmhjc"]
 [ext_resource type="PackedScene" uid="uid://cfoesiummvma2" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_and_barbara.tscn" id="34_clinu"]
-[ext_resource type="Texture2D" uid="uid://1d7sok60uf2" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener.png" id="35_pb8cy"]
-[ext_resource type="Texture2D" uid="uid://ctxk5ymgd82bg" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener_left_clicked.png" id="36_qpwuk"]
-[ext_resource type="Texture2D" uid="uid://c2rgecv620lsc" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener_hovered.png" id="37_4jol3"]
 [ext_resource type="Texture2D" uid="uid://bnp15vxbd7j0o" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof1.png" id="38_45lni"]
 [ext_resource type="Texture2D" uid="uid://cqsgr47ctm5ry" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof2.png" id="39_f5aq0"]
 [ext_resource type="Texture2D" uid="uid://bc6tyunen4shb" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof3.png" id="40_askvk"]
@@ -60,19 +49,19 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_d4byd")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_1o17y")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_qv0by")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_fkduc")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_m2k7g")
+"texture": null
 }],
 "loop": true,
 "name": &"default",
@@ -622,7 +611,6 @@ offset_left = -1080.0
 offset_top = -813.0
 offset_right = 3587.0
 offset_bottom = 1812.0
-texture = ExtResource("8_ntpd6")
 
 [node name="Objects" type="Node2D" parent="MapTest"]
 
@@ -661,27 +649,21 @@ visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1302, 346)
-texture = ExtResource("6_skm2q")
 
 [node name="Sprite2D6" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1221, 404)
-texture = ExtResource("7_isvqi")
 
 [node name="Sprite2D2" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1386, 404)
-texture = ExtResource("7_isvqi")
 
 [node name="Sprite2D3" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1305, 484)
-texture = ExtResource("6_skm2q")
 
 [node name="Sprite2D4" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1197, 790)
-texture = ExtResource("7_isvqi")
 
 [node name="Sprite2D5" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1564, 757)
-texture = ExtResource("6_skm2q")
 
 [node name="Laboratory Building" parent="." groups=["Buildings"] instance=ExtResource("2_ab8es")]
 position = Vector2(272, 142)
@@ -911,9 +893,6 @@ offset_left = 960.41
 offset_top = 251.0
 offset_right = 1169.41
 offset_bottom = 511.0
-texture_normal = ExtResource("35_pb8cy")
-texture_pressed = ExtResource("36_qpwuk")
-texture_hover = ExtResource("37_4jol3")
 
 [node name="Stars" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNoteSmall"]
 
