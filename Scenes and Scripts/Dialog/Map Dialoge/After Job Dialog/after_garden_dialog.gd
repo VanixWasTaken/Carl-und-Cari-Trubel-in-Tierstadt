@@ -46,7 +46,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 9:
-		var completed_jobs_size = Global.completed_jobs.size()
+		var completed_jobs_size = str(Global.completed_jobs.size())
 		map_story = Global.story_dialog_tracker[completed_jobs_size] 
 		var story_dialog = load(map_story)
 		var dialog_instance = story_dialog.instantiate()
