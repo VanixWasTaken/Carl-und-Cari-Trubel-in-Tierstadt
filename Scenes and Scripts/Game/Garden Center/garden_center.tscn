@@ -1,8 +1,9 @@
-[gd_scene load_steps=59 format=3 uid="uid://ckv10od6wynv3"]
+[gd_scene load_steps=61 format=3 uid="uid://ckv10od6wynv3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/garden_center.gd" id="1_35ge2"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_wckdn"]
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_g16mw"]
+[ext_resource type="Texture2D" uid="uid://bvbsvx0c7rdo2" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_floor.png" id="4_u25j6"]
 [ext_resource type="Texture2D" uid="uid://dqu2uetnhhgtr" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_back.png" id="5_nldcv"]
 [ext_resource type="Texture2D" uid="uid://cs5yhbqihps8c" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_left.png" id="6_ua0jj"]
 [ext_resource type="Texture2D" uid="uid://di3spopw54m1x" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_right.png" id="7_co6vq"]
@@ -50,6 +51,9 @@ size = Vector3(19.3163, 1, 0.201752)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vis0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_03sl7"]
+albedo_texture = ExtResource("4_u25j6")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)
@@ -238,6 +242,7 @@ shape = SubResource("WorldBoundaryShape3D_858ri")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Walls/Ground"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.716671, 0.5)
 material_override = SubResource("StandardMaterial3D_7vis0")
+material_overlay = SubResource("StandardMaterial3D_03sl7")
 mesh = SubResource("QuadMesh_t244t")
 skeleton = NodePath("../CollisionShape3D")
 
