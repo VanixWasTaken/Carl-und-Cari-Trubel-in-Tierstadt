@@ -24,8 +24,8 @@ var job_stars_dict : Dictionary = {  #save
 }
 
 var story_dialog_tracker : Dictionary = { #save
-	1: "res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn",
-	2: "res://Scenes and Scripts/Dialog/Map Dialoge/Band Story Dialog/band_member_dialog_4.tscn"
+	"1": "res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn",
+	"2": "res://Scenes and Scripts/Dialog/Map Dialoge/Band Story Dialog/band_member_dialog_4.tscn"
 }
 
 var last_scene : String  #save
