@@ -99,6 +99,7 @@ func reveal_changes():
 
 func _on_market_place_animation_animation_finished(anim_name):
 	if Global.exit_coordinates != null:
+		print(Global.exit_coordinates)
 		player.global_position = Global.exit_coordinates
 	var camera = get_tree().get_first_node_in_group("Camera")
 	get_tree().get_first_node_in_group("Marker").remove_child(camera)

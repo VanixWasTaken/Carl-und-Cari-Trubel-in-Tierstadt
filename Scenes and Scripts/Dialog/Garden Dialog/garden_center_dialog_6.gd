@@ -129,7 +129,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Wir müssen aber jetzt auch weiter. Ich bin schon gespannt, wie der Garten in echt aussehen wird. Auf Wiedersehen."
+		short_node_text.text = "Wir müssen jetzt aber auch weiter. Ich bin schon gespannt, wie der Garten in echt aussehen wird. Auf Wiedersehen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		$"../VoiceOver".stream = load(cari_path + "6_09.mp3")
