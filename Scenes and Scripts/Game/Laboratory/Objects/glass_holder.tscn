@@ -1,18 +1,18 @@
 [gd_scene load_steps=7 format=3 uid="uid://djlralvxj7j5b"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/glass_holder.gd" id="1_y4w7s"]
-[ext_resource type="Texture2D" uid="uid://c5y5pjca633gs" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_mix_3.png" id="2_3brv1"]
-[ext_resource type="Texture2D" uid="uid://djydjbgnkx537" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/drink_holder_mix_3_highlight.png" id="3_iboj6"]
+[ext_resource type="Texture2D" uid="uid://c2b277nln1xp5" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_red_yellow_room.png" id="2_mas5b"]
+[ext_resource type="Texture2D" uid="uid://f4o8qpdgb6n7" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_red_yellow_room_highlight.png" id="3_af5gf"]
 [ext_resource type="AudioStream" uid="uid://c3uxb7jsi3av7" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var5.mp3" id="4_4f7xd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6wgwi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_3brv1")
+"texture": ExtResource("2_mas5b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_iboj6")
+"texture": ExtResource("3_af5gf")
 }],
 "loop": true,
 "name": &"default",
