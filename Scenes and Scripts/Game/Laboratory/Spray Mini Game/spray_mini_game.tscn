@@ -519,22 +519,19 @@ bus = &"SFX_Foley"
 
 [node name="ShakeSound" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("18_ulme6")
-volume_db = 9.0
 bus = &"SFX_Foley"
 
 [node name="Jamming" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("19_v6irx")
-volume_db = 3.0
 bus = &"SFX_Foley"
 
 [node name="Trigger" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("19_rmeio")
-volume_db = 6.0
 bus = &"SFX_Foley"
 
 [node name="HoseNoise" type="AudioStreamPlayer" parent="GunInHand"]
 stream = ExtResource("21_5el5d")
-volume_db = -9.0
+volume_db = -12.0
 bus = &"SFX_Foley"
 
 [node name="SpinMinigame" type="TextureRect" parent="."]
@@ -642,7 +639,7 @@ bus = &"SFX_UI"
 
 [node name="PickUp" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("43_g3024")
-volume_db = 6.0
+volume_db = 9.0
 bus = &"SFX_Foley"
 
 [node name="ProgressBar" type="Node2D" parent="."]
@@ -670,7 +667,7 @@ texture = ExtResource("50_oyde6")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("51_cbeo8")
-volume_db = -12.0
+volume_db = -15.0
 autoplay = true
 bus = &"SFX_Foley"
 

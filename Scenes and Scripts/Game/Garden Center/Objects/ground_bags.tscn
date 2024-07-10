@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ddrbc3iejgnsn"]
 
-[ext_resource type="Texture2D" uid="uid://brxj74nuakecb" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks.PNG" id="1_ntrxw"]
+[ext_resource type="Texture2D" uid="uid://brxj74nuakecb" path="res://Assets/Art/Environment/Rooms/Garden Center/Objects/garden_sacks.png" id="1_ntrxw"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Objects/ground_bags.gd" id="2_mt2e4"]
 
 [node name="GroundBags" type="Node3D"]

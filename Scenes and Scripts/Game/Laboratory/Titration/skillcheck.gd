@@ -97,7 +97,7 @@ func play_countdown():
 	start_game = true
 	$Bubbling.play()
 	$MiniGameTime.start()
-	MusicController._play_music("dropletdance", "laboratory", -6, 0)
+	MusicController._play_music("dropletdance", "laboratory", -12, 0)
 
 
 func _on_mini_game_time_timeout():
@@ -105,7 +105,7 @@ func _on_mini_game_time_timeout():
 	$Arrow/AnimationPlayer.stop()
 	$Bubbling.stop()
 	if current_time >= needed_time || $"PH-Scale/Arrow".position.y >= 30 and $"PH-Scale/Arrow".position.y <= 121: #Gewinn Werte
-		MusicController._play_music("titration_trap", "laboratory", -18)
+		MusicController._play_music("titration_trap", "laboratory", -24)
 		var dialog_instance = win_dialog.instantiate()
 		add_child(dialog_instance)
 	else:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=74 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
 [ext_resource type="Texture2D" uid="uid://p003wtefrdrs" path="res://Assets/Art/Environment/Map/Big Map/map_no_lab_no_gardencenter.png" id="2_0t1vf"]
@@ -8,9 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ct21gx2j251qv" path="res://Assets/Art/Environment/Map/fairground/map_poles.png" id="5_o2ljt"]
 [ext_resource type="Texture2D" uid="uid://crrhnurucid3q" path="res://Assets/Art/Particles/Clouds/bg_cloud_main1.png" id="5_ok451"]
 [ext_resource type="PackedScene" uid="uid://reaek0i8ei2g" path="res://Scenes and Scripts/Menus/Pause Menu/pause_menu.tscn" id="5_q8qp1"]
-[ext_resource type="Texture2D" uid="uid://c124ct6jnbrb0" path="res://Assets/Art/Environment/Map/fairground/map_flowerpots1.png" id="6_skm2q"]
 [ext_resource type="PackedScene" uid="uid://bhb5312a6xrce" path="res://Scenes and Scripts/Game/Map/Buildings/garden_center_map.tscn" id="7_fpr7h"]
-[ext_resource type="Texture2D" uid="uid://c7uj7p8ldeabb" path="res://Assets/Art/Environment/Map/fairground/map_flowerpots2.png" id="7_isvqi"]
 [ext_resource type="Texture2D" uid="uid://bbop2qlcrhqd5" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button.png" id="8_fe5cr"]
 [ext_resource type="Texture2D" uid="uid://b8fkioc55ls28" path="res://Assets/Art/Particles/leaf.png" id="8_w5011"]
 [ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="9_lq8sc"]
@@ -41,14 +39,34 @@
 [ext_resource type="PackedScene" uid="uid://cwwvy0q003fg7" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/barbara_npc.tscn" id="32_683wj"]
 [ext_resource type="PackedScene" uid="uid://2d2fjj4yd732" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/sven_npc.tscn" id="33_nmhjc"]
 [ext_resource type="PackedScene" uid="uid://cfoesiummvma2" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_and_barbara.tscn" id="34_clinu"]
-[ext_resource type="Texture2D" uid="uid://1d7sok60uf2" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener.png" id="35_pb8cy"]
-[ext_resource type="Texture2D" uid="uid://ctxk5ymgd82bg" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener_left_clicked.png" id="36_qpwuk"]
-[ext_resource type="Texture2D" uid="uid://c2rgecv620lsc" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener_hovered.png" id="37_4jol3"]
 [ext_resource type="Texture2D" uid="uid://bnp15vxbd7j0o" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof1.png" id="38_45lni"]
 [ext_resource type="Texture2D" uid="uid://cqsgr47ctm5ry" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof2.png" id="39_f5aq0"]
 [ext_resource type="Texture2D" uid="uid://bc6tyunen4shb" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof3.png" id="40_askvk"]
 [ext_resource type="Texture2D" uid="uid://b14g3edwos5r3" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof4.png" id="41_1kfbd"]
 [ext_resource type="Texture2D" uid="uid://c0dmkr4thtyne" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof5.png" id="42_71eha"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pad4y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_oxdwb"]
 vertices = PackedVector2Array(4061, 2352, 3634, 2346, 3635, 2346, 617, 2204, 616, 2204, 1165, 2189, 1843, 1310, 1574, 1302, 1576, 1302, 3293, 1772, 3591, 1571, 3590, 1572, 1874, 1175, 1873, 1176, 1930, 1087, 2803, 1856, 2726, 1832, 2701, 1756, 3009, 1837, 3184, 1889, 3514, 45, 3464, 159, 3464, 158, 3487, 45, 1748, 864, 1662, 826, 1663, 826, 1849, 874, 2402, 1605, 2464, 1617, 2504, 42, 2451, 2, 2523, -1, 2563, 32, 2583, 66, 1182, 1572, 1345, 1832, 1344, 1832, 1209, 1740, 1139, 1531, 3426, 192, 3353, 373, 3247, 467, 3246, 505, 759, 700, 78, 736, 95, 684, 1294, 653, 828, 696, 2451, 1541, 2400, 1572, 3016, 542, 3219, 577, 3103, 577, 2626, 118, 2615, 37, 2655, 79, 2680, 167, 3305, 659, 3270, 688, 3219, 677, 4649, 391, 4664, 403, 4481, 563, 4479, 531, 4345, 2385, 4384, 2593, 4307, 2595, 4239, 2413, 4089, 2290, 3400, 2270, 3297, 2322, 3290, 2189, 3248, 2222, 3281, 1875, 4343, 1373, 4655, 1431, 4657, 1492, 4218, 1461, 3884, 1412, 3745, 1571, 3412, 1770, 3411, 1771, 2655, 1974, 2738, 1994, 2635, 2018, 2504, 1994, 2562, 1965, 2530, 2163, 2449, 2131, 1407, 2155, 1416, 2268, 1377, 2288, 1355, 2269, 1355, 2145, 1422, 1981, 1327, 2108, 1397, 1978, 2822, 1326, 2588, 1233, 2532, 1154, 2574, 1127, 2773, 1110, 2807, 1112, 1172, 2257, 43, 2288, 43, 2267, 697, 1241, 43, 1256, 43, 1181, 707, 1197, 830, 1235, 796, 1164, 855, 1152, 855, 705, 1161, 697, 1345, 689, 1525, 606, 1448, 654, 1522, 683, 1577, 673, 1577, 674, 1580, 782, 1663, 771, 1901, 993, 2041, 2329, 2228, 2229, 1793, 2293, 1489, 2329, 1274, 2327, 1231, 2269, 1231, 2145, 1237, 2116, 1313, 1861, 1313, 1860, 1241, 1420, 1192, 1410, 1296, 1363, 1309, 1378, 1342, 1322, 1333, 1287, 1385, 1270, 1401, 1249, 1489, 1262, 1452, 1242, 1535, 1280, 1529, 1294, 2753, 333, 2642, 190, 2882, 467, 2864, 499, 3027, 581, 3103, 677, 3027, 734, 3052, 753, 4181, 716, 4478, 531, 4157, 761, 3866, 789, 3808, 824, 3599, 773, 3602, 801, 3601, 801, 3205, 753, 2596, 1067, 2507, 1357, 2629, 1465, 2513, 1478, 2322, 1373, 2363, 1526, 2325, 1526, 2186, 1252, 2162, 1544, 1967, 1459, 2172, 1068, 2275, 1068, 2292, 1130, 2106, 1122, 2031, 1130, 1986, 1130, 1956, 1100, 1824, 1285, 1536, 1280, 1563, 1298, 1956, 1067, 1936, 1055, 1927, 1027)
@@ -581,6 +599,19 @@ offset_right = 3587.0
 offset_bottom = 1812.0
 texture = ExtResource("2_0t1vf")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MapTest"]
+visible = false
+position = Vector2(1144, 499)
+sprite_frames = SubResource("SpriteFrames_pad4y")
+autoplay = "default"
+
+[node name="TextureRect2" type="TextureRect" parent="MapTest"]
+visible = false
+offset_left = -1080.0
+offset_top = -813.0
+offset_right = 3587.0
+offset_bottom = 1812.0
+
 [node name="Objects" type="Node2D" parent="MapTest"]
 
 [node name="Fireworks" type="Node2D" parent="MapTest/Objects"]
@@ -618,33 +649,27 @@ visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1302, 346)
-texture = ExtResource("6_skm2q")
 
 [node name="Sprite2D6" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1221, 404)
-texture = ExtResource("7_isvqi")
 
 [node name="Sprite2D2" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1386, 404)
-texture = ExtResource("7_isvqi")
 
 [node name="Sprite2D3" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1305, 484)
-texture = ExtResource("6_skm2q")
 
 [node name="Sprite2D4" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1197, 790)
-texture = ExtResource("7_isvqi")
 
 [node name="Sprite2D5" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1564, 757)
-texture = ExtResource("6_skm2q")
 
 [node name="Laboratory Building" parent="." groups=["Buildings"] instance=ExtResource("2_ab8es")]
 position = Vector2(272, 142)
 
 [node name="GardenCenterBuilding" parent="." groups=["Buildings"] instance=ExtResource("7_fpr7h")]
-position = Vector2(274, 143)
+position = Vector2(75, 220)
 building_name = "Gärtnerei"
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("14_0uuvf")]
@@ -868,9 +893,6 @@ offset_left = 960.41
 offset_top = 251.0
 offset_right = 1169.41
 offset_bottom = 511.0
-texture_normal = ExtResource("35_pb8cy")
-texture_pressed = ExtResource("36_qpwuk")
-texture_hover = ExtResource("37_4jol3")
 
 [node name="Stars" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNoteSmall"]
 

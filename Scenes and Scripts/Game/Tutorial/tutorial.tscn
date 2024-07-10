@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://b1kmuljs1xwg4"]
+[gd_scene load_steps=69 format=3 uid="uid://b1kmuljs1xwg4"]
 
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="1_ihxr4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Tutorial/tutorial.gd" id="1_trbh3"]
@@ -21,8 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://dusv6uqmsj2s3" path="res://Assets/Art/Environment/Rooms/Tutorial/POI/poi9.png" id="18_4y4yu"]
 [ext_resource type="AudioStream" uid="uid://daefyhpqmvx8c" path="res://Assets/Sound/SFX/UI/Specific/Tutorial/sfx_tutorial_ui_poi_var3.mp3" id="18_6228x"]
 [ext_resource type="AudioStream" uid="uid://cl7u1nc357hhq" path="res://Assets/Sound/SFX/Foley/Tutorial/sfx_tutorial_foley_keyjingle_var1.mp3" id="19_422gf"]
-[ext_resource type="AudioStream" uid="uid://ryytyr4ae8eh" path="res://Assets/Sound/SFX/Foley/Tutorial/sfx_tutorial_foley_keyjingle_var2.mp3" id="20_gxt36"]
-[ext_resource type="AudioStream" uid="uid://buqs1583t6vuw" path="res://Assets/Sound/SFX/Foley/Tutorial/sfx_tutorial_foley_keyjingle_var3.mp3" id="21_tdi0n"]
 [ext_resource type="Texture2D" uid="uid://pkbt4uivo72d" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse_pressed.png" id="24_llxkm"]
 [ext_resource type="Texture2D" uid="uid://sipuj2avuffd" path="res://Assets/Art/Environment/Rooms/Tutorial/Mouse/poi_mouse.png" id="25_8y1ie"]
 [ext_resource type="PackedScene" uid="uid://buakyojlgjurd" path="res://Scenes and Scripts/Game/Tutorial/garden_highlight.tscn" id="26_auvv0"]
@@ -164,15 +162,6 @@ stream_2/weight = 1.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_ccovc"]
 size = Vector3(5.53083, 1, 5.19611)
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_e7jq4"]
-streams_count = 3
-stream_0/stream = ExtResource("19_422gf")
-stream_0/weight = 1.0
-stream_1/stream = ExtResource("20_gxt36")
-stream_1/weight = 1.0
-stream_2/stream = ExtResource("21_tdi0n")
-stream_2/weight = 1.0
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_62bun"]
 animations = [{
 "frames": [{
@@ -299,11 +288,11 @@ skeleton = NodePath("../CollisionShape3D")
 [node name="FridgeSound" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Walls/WallBack"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0879, -2.92841, 2.21109)
 stream = ExtResource("6_vvh7v")
-volume_db = -6.0
-unit_size = 50.0
-max_db = -6.0
+volume_db = -24.0
+unit_size = 20.0
+max_db = -12.0
 autoplay = true
-max_distance = 50.0
+max_distance = 70.0
 panning_strength = 0.5
 bus = &"SFX_Foley"
 attenuation_filter_cutoff_hz = 20500.0
@@ -311,9 +300,9 @@ attenuation_filter_cutoff_hz = 20500.0
 [node name="FaucetSound" type="AudioStreamPlayer3D" parent="NavigationRegion3D/Walls/WallBack"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9668, 0.049396, 2.0774)
 stream = ExtResource("7_gy7wt")
-volume_db = -3.0
+volume_db = -24.0
 unit_size = 50.0
-max_db = 0.0
+max_db = -12.0
 autoplay = true
 max_distance = 65.0
 panning_strength = 0.5
@@ -415,9 +404,9 @@ frame_progress = 0.00285532
 
 [node name="POI Sound" type="AudioStreamPlayer3D" parent="POI"]
 stream = SubResource("AudioStreamRandomizer_g3j5u")
-volume_db = -12.0
-unit_size = 40.0
-max_db = -3.0
+volume_db = -18.0
+unit_size = 20.0
+max_db = -12.0
 autoplay = true
 max_distance = 65.0
 panning_strength = 0.5
@@ -433,8 +422,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190083, -0.261691, 0.511967
 shape = SubResource("BoxShape3D_ccovc")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="POI"]
-stream = SubResource("AudioStreamRandomizer_e7jq4")
-volume_db = -18.0
+stream = ExtResource("19_422gf")
+unit_size = 20.0
+max_db = 6.0
+max_distance = 65.0
+panning_strength = 0.5
 bus = &"SFX_Foley"
 attenuation_filter_cutoff_hz = 20500.0
 
@@ -446,6 +438,7 @@ frame_progress = 0.0150222
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPolyphonic_75e5b")
+volume_db = -6.0
 bus = &"SFX_Ambience"
 
 [node name="Objects" type="Node3D" parent="."]

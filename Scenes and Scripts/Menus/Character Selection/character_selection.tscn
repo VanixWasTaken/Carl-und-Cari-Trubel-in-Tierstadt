@@ -174,7 +174,6 @@ volume_db = -3.0
 bus = &"SFX_UI"
 
 [node name="VO" type="AudioStreamPlayer" parent="."]
-bus = &"Dialog_Conv"
 
 [node name="CharacterSelectionBackgroundBedCut" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
