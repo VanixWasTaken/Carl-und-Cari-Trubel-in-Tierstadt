@@ -85,10 +85,11 @@ stream = SubResource("AudioStreamRandomizer_sinve")
 
 [node name="Sloshing" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_rxmyq")
-volume_db = 6.0
+volume_db = 3.0
 
 [node name="StopPouring" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_ktqln")
+volume_db = 3.0
 bus = &"SFX_Foley"
 
 [connection signal="area_entered" from="WaterArea" to="." method="_on_water_area_area_entered"]

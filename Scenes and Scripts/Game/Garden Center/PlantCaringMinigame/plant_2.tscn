@@ -7,12 +7,12 @@
 [ext_resource type="AudioStream" uid="uid://dn7qgqd2owhp3" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var1.mp3" id="5_um61q"]
 [ext_resource type="AudioStream" uid="uid://1xm4bflad5u6" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var2.mp3" id="6_r1jyq"]
 [ext_resource type="AudioStream" uid="uid://bv4vit21kafmr" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var3.mp3" id="7_a1hww"]
-[ext_resource type="AudioStream" uid="uid://dh0086wnajc38" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var4.mp3" id="8_pd0ih"]
-[ext_resource type="AudioStream" uid="uid://bhc8g3w2qxyg6" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var5.mp3" id="9_ahvhb"]
-[ext_resource type="AudioStream" uid="uid://bxus0m4dm8h1s" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var6.mp3" id="10_nl5mv"]
-[ext_resource type="AudioStream" uid="uid://4synxfb18t6h" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var7.mp3" id="11_bkwkn"]
-[ext_resource type="AudioStream" uid="uid://bkb3njrju81c6" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var8.mp3" id="12_obrd5"]
-[ext_resource type="AudioStream" uid="uid://t2hblif6ifvu" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var9.mp3" id="13_u70bl"]
+[ext_resource type="AudioStream" uid="uid://dh0086wnajc38" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var4.mp3" id="8_r7ji7"]
+[ext_resource type="AudioStream" uid="uid://bhc8g3w2qxyg6" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var5.mp3" id="9_n8oex"]
+[ext_resource type="AudioStream" uid="uid://bxus0m4dm8h1s" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var6.mp3" id="10_w6gva"]
+[ext_resource type="AudioStream" uid="uid://4synxfb18t6h" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var7.mp3" id="11_lyc6u"]
+[ext_resource type="AudioStream" uid="uid://bkb3njrju81c6" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var8.mp3" id="12_rsrq8"]
+[ext_resource type="AudioStream" uid="uid://t2hblif6ifvu" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var9.mp3" id="13_yguvb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nsswb"]
 animations = [{
@@ -32,7 +32,6 @@ animations = [{
 size = Vector2(408.51, 221.02)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_u5xnc"]
-playback_mode = 1
 streams_count = 9
 stream_0/stream = ExtResource("5_um61q")
 stream_0/weight = 1.0
@@ -40,17 +39,17 @@ stream_1/stream = ExtResource("6_r1jyq")
 stream_1/weight = 1.0
 stream_2/stream = ExtResource("7_a1hww")
 stream_2/weight = 1.0
-stream_3/stream = ExtResource("8_pd0ih")
+stream_3/stream = ExtResource("8_r7ji7")
 stream_3/weight = 1.0
-stream_4/stream = ExtResource("9_ahvhb")
+stream_4/stream = ExtResource("9_n8oex")
 stream_4/weight = 1.0
-stream_5/stream = ExtResource("10_nl5mv")
+stream_5/stream = ExtResource("10_w6gva")
 stream_5/weight = 1.0
-stream_6/stream = ExtResource("11_bkwkn")
+stream_6/stream = ExtResource("11_lyc6u")
 stream_6/weight = 1.0
-stream_7/stream = ExtResource("12_obrd5")
+stream_7/stream = ExtResource("12_rsrq8")
 stream_7/weight = 1.0
-stream_8/stream = ExtResource("13_u70bl")
+stream_8/stream = ExtResource("13_yguvb")
 stream_8/weight = 1.0
 
 [node name="Plant2" type="AnimatedSprite2D" groups=["Plants"]]
@@ -95,6 +94,7 @@ sprite_num = 2
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_u5xnc")
+volume_db = 3.0
 bus = &"SFX_Foley"
 
 [connection signal="area_entered" from="WateringArea" to="." method="_on_watering_area_area_entered"]

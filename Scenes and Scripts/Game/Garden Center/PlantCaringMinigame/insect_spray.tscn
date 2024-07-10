@@ -92,6 +92,7 @@ polygon = PackedVector2Array(168.167, -266, 438.167, -138, 462.167, -40, 382.167
 
 [node name="Spraying" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_honb8")
+volume_db = 3.0
 bus = &"SFX_Foley"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bxjd24pu0r6yb"]
+[gd_scene load_steps=30 format=3 uid="uid://bxjd24pu0r6yb"]
 
 [ext_resource type="PackedScene" uid="uid://b8ae2gbukn3ld" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/Trees/tree1.tscn" id="1_dwdq4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/CuttingTreeMinigame/cutting_tree_minigame.gd" id="1_ssqej"]
@@ -8,8 +8,17 @@
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="6_6xq8h"]
 [ext_resource type="AudioStream" uid="uid://88365ltu1onf" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/scissors_leaves.tres" id="7_ostxs"]
 [ext_resource type="AudioStream" uid="uid://c77vwf58r34xt" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/scissors_twigs.tres" id="8_whevc"]
+[ext_resource type="AudioStream" uid="uid://bhvs5q0xgw7vw" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsclose_var1.mp3" id="9_xduav"]
+[ext_resource type="AudioStream" uid="uid://dbca65vmp7ec" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsclose_var2.mp3" id="10_51bp7"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="10_h4ydn"]
+[ext_resource type="AudioStream" uid="uid://krgtdkd7qitg" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsclose_var3.mp3" id="11_eolgk"]
+[ext_resource type="AudioStream" uid="uid://u8gb3ac4217h" path="res://Assets/Sound/SFX/Foley/Garden Center/Scissors/sfx_garden_center_foley_scissorsclose_var4.mp3" id="12_ogj84"]
+[ext_resource type="AudioStream" uid="uid://dxvhcpnwfj8hq" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var1.mp3" id="13_fxwd7"]
+[ext_resource type="AudioStream" uid="uid://f86grv1pnrfl" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var2.mp3" id="14_4fqcq"]
+[ext_resource type="AudioStream" uid="uid://bqwllua46dbnm" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var3.mp3" id="15_x2bkq"]
 [ext_resource type="AudioStream" uid="uid://bn8r5dj7kj5yh" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3" id="16_htkqf"]
+[ext_resource type="AudioStream" uid="uid://d0lmco7mcudt" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_crow.mp3" id="17_n05qf"]
+[ext_resource type="AudioStream" uid="uid://buos730w4du22" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_birds.mp3" id="18_ttxfx"]
 
 [sub_resource type="Animation" id="Animation_yjaf6"]
 length = 0.001
@@ -107,16 +116,22 @@ _data = {
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_100pl"]
 streams_count = 4
+stream_0/stream = ExtResource("9_xduav")
 stream_0/weight = 1.0
+stream_1/stream = ExtResource("10_51bp7")
 stream_1/weight = 1.0
+stream_2/stream = ExtResource("11_eolgk")
 stream_2/weight = 1.0
+stream_3/stream = ExtResource("12_ogj84")
 stream_3/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ndaui"]
-playback_mode = 1
 streams_count = 3
+stream_0/stream = ExtResource("13_fxwd7")
 stream_0/weight = 1.0
+stream_1/stream = ExtResource("14_4fqcq")
 stream_1/weight = 1.0
+stream_2/stream = ExtResource("15_x2bkq")
 stream_2/weight = 1.0
 
 [node name="CuttingTreeMinigame" type="Node2D"]
@@ -223,12 +238,10 @@ libraries = {
 
 [node name="LeavesCut" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_ostxs")
-volume_db = 3.0
 bus = &"SFX_Foley"
 
 [node name="TwigCut" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_whevc")
-volume_db = 3.0
 bus = &"SFX_Foley"
 
 [node name="NothingCut" type="AudioStreamPlayer" parent="."]
@@ -238,21 +251,24 @@ bus = &"SFX_Foley"
 
 [node name="TreeFinished" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_ndaui")
+volume_db = -3.0
 bus = &"SFX_Foley"
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_htkqf")
-volume_db = 3.0
+volume_db = -6.0
 autoplay = true
 bus = &"SFX_Ambience"
 
 [node name="Crows" type="AudioStreamPlayer" parent="Ambience"]
-volume_db = -6.0
+stream = ExtResource("17_n05qf")
+volume_db = -15.0
 autoplay = true
 bus = &"SFX_Foley"
 
 [node name="Birds" type="AudioStreamPlayer" parent="Ambience"]
-volume_db = -6.0
+stream = ExtResource("18_ttxfx")
+volume_db = -9.0
 autoplay = true
 bus = &"SFX_Foley"
 

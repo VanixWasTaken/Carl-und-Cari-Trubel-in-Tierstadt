@@ -267,19 +267,19 @@ libraries = {
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_yxeto")
-volume_db = 3.0
+volume_db = -6.0
 autoplay = true
 bus = &"SFX_Ambience"
 
 [node name="Crows" type="AudioStreamPlayer" parent="Ambience"]
 stream = ExtResource("15_va3qb")
-volume_db = -6.0
+volume_db = -15.0
 autoplay = true
 bus = &"SFX_Foley"
 
 [node name="Birds" type="AudioStreamPlayer" parent="Ambience"]
 stream = ExtResource("16_dlyjq")
-volume_db = -6.0
+volume_db = -9.0
 autoplay = true
 bus = &"SFX_Foley"
 
@@ -289,11 +289,13 @@ bus = &"SFX_UI"
 
 [node name="Correct" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_w0kpb")
+volume_db = -3.0
 max_polyphony = 3
 bus = &"SFX_Foley"
 
 [node name="AirWetnessBeep" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_g1x66")
+volume_db = -3.0
 bus = &"SFX_Foley"
 
 [node name="HelpButton" parent="." instance=ExtResource("22_f70yn")]
