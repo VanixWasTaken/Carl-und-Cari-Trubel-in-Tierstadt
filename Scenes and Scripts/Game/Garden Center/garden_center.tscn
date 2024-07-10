@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/garden_center.gd" id="1_35ge2"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_wckdn"]
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="3_g16mw"]
-[ext_resource type="Texture2D" uid="uid://0i52s0i7ee48" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_placeholder_floor.png" id="4_gcsqm"]
+[ext_resource type="Texture2D" uid="uid://bvbsvx0c7rdo2" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_floor.png" id="4_fcl40"]
 [ext_resource type="Texture2D" uid="uid://dqu2uetnhhgtr" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_back.png" id="5_nldcv"]
 [ext_resource type="Texture2D" uid="uid://cs5yhbqihps8c" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_left.png" id="6_ua0jj"]
 [ext_resource type="Texture2D" uid="uid://di3spopw54m1x" path="res://Assets/Art/Environment/Rooms/Garden Center/Walls/garden_wall_right.png" id="7_co6vq"]
@@ -51,7 +51,7 @@ size = Vector3(19.3163, 1, 0.201752)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vis0"]
-albedo_texture = ExtResource("4_gcsqm")
+albedo_texture = ExtResource("4_fcl40")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)

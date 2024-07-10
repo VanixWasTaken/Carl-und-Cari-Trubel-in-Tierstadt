@@ -1,13 +1,18 @@
-[gd_scene load_steps=74 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=79 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
 [ext_resource type="Texture2D" uid="uid://p003wtefrdrs" path="res://Assets/Art/Environment/Map/Big Map/map_no_lab_no_gardencenter.png" id="2_0t1vf"]
 [ext_resource type="PackedScene" uid="uid://dctfgv4bxknm4" path="res://Scenes and Scripts/Game/Map/Buildings/laboratory_building.tscn" id="2_ab8es"]
+[ext_resource type="Texture2D" uid="uid://vdptd8sujobq" path="res://Assets/Art/Environment/Map/Big Map/map_animation001.png" id="2_bxt3a"]
+[ext_resource type="Texture2D" uid="uid://dmkgj6f7euv2m" path="res://Assets/Art/Environment/Map/Big Map/map_animation002.png" id="3_g1lio"]
 [ext_resource type="Texture2D" uid="uid://dmwffc2jjwf8m" path="res://Assets/Art/Environment/Map/fairground/map_fireworks1.png" id="3_oe0ft"]
 [ext_resource type="Texture2D" uid="uid://junv40vhknop" path="res://Assets/Art/Environment/Map/fairground/map_fireworks2.png" id="4_1ukqo"]
+[ext_resource type="Texture2D" uid="uid://cwttn1gue0i21" path="res://Assets/Art/Environment/Map/Big Map/map_animation003.png" id="4_thin0"]
+[ext_resource type="Texture2D" uid="uid://dg3h7o21hq2" path="res://Assets/Art/Environment/Map/Big Map/map_animation004.png" id="5_7n54m"]
 [ext_resource type="Texture2D" uid="uid://ct21gx2j251qv" path="res://Assets/Art/Environment/Map/fairground/map_poles.png" id="5_o2ljt"]
 [ext_resource type="Texture2D" uid="uid://crrhnurucid3q" path="res://Assets/Art/Particles/Clouds/bg_cloud_main1.png" id="5_ok451"]
 [ext_resource type="PackedScene" uid="uid://reaek0i8ei2g" path="res://Scenes and Scripts/Menus/Pause Menu/pause_menu.tscn" id="5_q8qp1"]
+[ext_resource type="Texture2D" uid="uid://x2jqntg6d5fj" path="res://Assets/Art/Environment/Map/Big Map/map_animation005.png" id="6_yx6gt"]
 [ext_resource type="PackedScene" uid="uid://bhb5312a6xrce" path="res://Scenes and Scripts/Game/Map/Buildings/garden_center_map.tscn" id="7_fpr7h"]
 [ext_resource type="Texture2D" uid="uid://bbop2qlcrhqd5" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button.png" id="8_fe5cr"]
 [ext_resource type="Texture2D" uid="uid://b8fkioc55ls28" path="res://Assets/Art/Particles/leaf.png" id="8_w5011"]
@@ -45,27 +50,27 @@
 [ext_resource type="Texture2D" uid="uid://b14g3edwos5r3" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof4.png" id="41_1kfbd"]
 [ext_resource type="Texture2D" uid="uid://c0dmkr4thtyne" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof5.png" id="42_71eha"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_pad4y"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_llcyl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("2_bxt3a")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("3_g1lio")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("4_thin0")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("5_7n54m")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("6_yx6gt")
 }],
 "loop": true,
 "name": &"default",
-"speed": 8.0
+"speed": 5.0
 }]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_oxdwb"]
@@ -592,25 +597,18 @@ script = ExtResource("1_quchc")
 [node name="MapTest" type="Node2D" parent="."]
 position = Vector2(1080, 813)
 
+[node name="MapAnim" type="AnimatedSprite2D" parent="MapTest"]
+position = Vector2(1253.5, 499.5)
+sprite_frames = SubResource("SpriteFrames_llcyl")
+autoplay = "default"
+
 [node name="TextureRect" type="TextureRect" parent="MapTest"]
+visible = false
 offset_left = -1080.0
 offset_top = -813.0
 offset_right = 3587.0
 offset_bottom = 1812.0
 texture = ExtResource("2_0t1vf")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MapTest"]
-visible = false
-position = Vector2(1144, 499)
-sprite_frames = SubResource("SpriteFrames_pad4y")
-autoplay = "default"
-
-[node name="TextureRect2" type="TextureRect" parent="MapTest"]
-visible = false
-offset_left = -1080.0
-offset_top = -813.0
-offset_right = 3587.0
-offset_bottom = 1812.0
 
 [node name="Objects" type="Node2D" parent="MapTest"]
 
