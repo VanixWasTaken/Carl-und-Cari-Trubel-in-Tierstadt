@@ -75,6 +75,8 @@ func _input(event):
 			elif velocity < Vector2(-100, -100) and !$Dragging.playing:
 				if should_follow_mouse:
 					play_dragging()
+			elif velocity == Vector2(0, 0):
+				$Dragging.stop()
 	
 	if event.is_action_released("left_click") and !$".".get_name() == "Item" and !is_on_grid:
 		$".".queue_free()

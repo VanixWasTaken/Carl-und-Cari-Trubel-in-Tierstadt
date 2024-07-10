@@ -35,6 +35,7 @@ var play_temperature = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	MusicController._play_music("peace_and_tranquility", "garden_center", -24)
 	$Humidity/Label.text = str(current_air_wetness) + "%"
 	$CanvasLayer/FadeAnimation.show()
 	$CanvasLayer/AnimationPlayer.play("fade_in")

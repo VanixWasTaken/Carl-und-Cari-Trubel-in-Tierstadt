@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://vnj4oyq32r4f"]
+[gd_scene load_steps=47 format=3 uid="uid://vnj4oyq32r4f"]
 
 [ext_resource type="Texture2D" uid="uid://ddlsxysgyc71t" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/minigame4_grid.png" id="1_b04vn"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/garden_planning_minigame.gd" id="1_nucrw"]
@@ -16,7 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://d6sqg03v86bl" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/floorplate/floorplate_icon2.png" id="9_1r6cr"]
 [ext_resource type="PackedScene" uid="uid://32b1y71lasui" path="res://Scenes and Scripts/Game/Garden Center/Garden Planning Minigame/item.tscn" id="10_xc6c2"]
 [ext_resource type="Texture2D" uid="uid://h4rnj0urbw57" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/bush/bush_icon2.png" id="11_lx4yl"]
+[ext_resource type="AudioStream" uid="uid://dv2xetlq4jibf" path="res://Assets/Sound/SFX/UI/Hover/hover.tres" id="12_acv7s"]
 [ext_resource type="Texture2D" uid="uid://bl3q3vnoh3x2f" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button.png" id="12_ad7lj"]
+[ext_resource type="AudioStream" uid="uid://bkqyni6br8jm6" path="res://Assets/Sound/SFX/UI/Click/click.tres" id="13_5shyq"]
 [ext_resource type="Texture2D" uid="uid://otmy5c0k20xl" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_dark.png" id="13_6pw5n"]
 [ext_resource type="Texture2D" uid="uid://nk8ndgcpb32e" path="res://Assets/Art/UI/Buttons/Fertig Button/fertig_button_light.png" id="14_dshsx"]
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="18_voyt2"]
@@ -24,6 +26,9 @@
 [ext_resource type="AudioStream" uid="uid://f86grv1pnrfl" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var2.mp3" id="22_fk3me"]
 [ext_resource type="AudioStream" uid="uid://bqwllua46dbnm" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var3.mp3" id="23_gn78r"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="24_bucrq"]
+[ext_resource type="AudioStream" uid="uid://bn8r5dj7kj5yh" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3" id="27_qj7dw"]
+[ext_resource type="AudioStream" uid="uid://d0lmco7mcudt" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_crow.mp3" id="28_30lkc"]
+[ext_resource type="AudioStream" uid="uid://buos730w4du22" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_birds.mp3" id="29_tuv30"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmk48"]
 
@@ -1116,6 +1121,15 @@ texture = ExtResource("6_0sg3q")
 position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_bnmav")
 
+[node name="Hover" type="AudioStreamPlayer" parent="ItemSelection/Arrows"]
+stream = ExtResource("12_acv7s")
+bus = &"SFX_UI"
+
+[node name="Click" type="AudioStreamPlayer" parent="ItemSelection/Arrows"]
+stream = ExtResource("13_5shyq")
+volume_db = -3.0
+bus = &"SFX_UI"
+
 [node name="Objects" type="Node" parent="ItemSelection"]
 
 [node name="PlantPot" type="Sprite2D" parent="ItemSelection/Objects"]
@@ -1202,6 +1216,24 @@ bus = &"SFX_Foley"
 bus = &"SFX_Foley"
 
 [node name="HelpButton" parent="." instance=ExtResource("24_bucrq")]
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_qj7dw")
+volume_db = -6.0
+autoplay = true
+bus = &"SFX_Ambience"
+
+[node name="Crows" type="AudioStreamPlayer" parent="Ambience"]
+stream = ExtResource("28_30lkc")
+volume_db = -15.0
+autoplay = true
+bus = &"SFX_Foley"
+
+[node name="Birds" type="AudioStreamPlayer" parent="Ambience"]
+stream = ExtResource("29_tuv30")
+volume_db = -9.0
+autoplay = true
+bus = &"SFX_Foley"
 
 [connection signal="texture_changed" from="TaskBackground/Task1/MinorTask1" to="." method="_on_minor_task_1_texture_changed"]
 [connection signal="texture_changed" from="TaskBackground/Task1/MinorTask2" to="." method="_on_minor_task_2_texture_changed"]

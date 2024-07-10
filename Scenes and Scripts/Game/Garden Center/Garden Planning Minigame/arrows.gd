@@ -13,11 +13,14 @@ signal move_left
 func _input(event):
 	if event.is_action_pressed("left_click") and mouse_inside_right_arrow:
 		move_right.emit()
+		$Click.play()
 	if event.is_action_pressed("left_click") and mouse_inside_left_arrow:
 		move_left.emit()
+		$Click.play()
 
 func _on_right_area_mouse_entered():
 	mouse_inside_right_arrow = true
+	$Hover.play()
 	$ArrowRight.texture = ARROW_HIGHLIGHT
 func _on_right_area_mouse_exited():
 	mouse_inside_right_arrow = false
@@ -25,6 +28,7 @@ func _on_right_area_mouse_exited():
 
 func _on_left_area_mouse_entered():
 	mouse_inside_left_arrow = true
+	$Hover.play()
 	$ArrowLeft.texture = ARROW_HIGHLIGHT
 func _on_left_area_mouse_exited():
 	mouse_inside_left_arrow = false
