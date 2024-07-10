@@ -132,10 +132,12 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "*Ring Ring Ring*"
+		short_node_text.text = "*Ring Ring*"
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Telefon"
-		#### hier muss ring ring sound rein
+		#### hier muss ring ring sound rein -- ist jetzt kinda drin aber suckt maybe wann anders ändern
+		$"../Voice Over".stream = load("res://Assets/Sound/SFX/Foley/World/sfx_foley_world_telephone_ring_cutscene.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 3:

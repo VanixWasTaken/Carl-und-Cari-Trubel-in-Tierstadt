@@ -18,7 +18,7 @@ var mouse_inside_area = false
 var player 
 
 var path_cari = "res://Assets/Sound/VO/Map/Cari/vo_pc_cari_after_lab_map_"
-var path_carl = "res://Assets/Sound/VO/Map/Carl/vo_npc_carl_map_help_1.mp3" + ".mp3"
+var path_carl = "res://Assets/Sound/VO/Map/Carl/vo_pc_carl_after_lab_map_"
 
 ################################  PUT CHARACTER ICONS HERE  ###############################
 

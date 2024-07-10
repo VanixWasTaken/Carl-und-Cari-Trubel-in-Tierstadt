@@ -103,7 +103,7 @@ func add_left_dialog_box():
 		short_node_text.text = "Aha… Und die wären?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
-		#$"../VoiceOver".stream = load(cari_path + "3_7.mp3")
+		#$"../VoiceOver".stream = load(cari_path + "3_07.mp3")
 		#$"../VoiceOver".play()
 		dialogs += 1
 	
