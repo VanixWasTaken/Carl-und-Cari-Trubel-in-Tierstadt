@@ -23,7 +23,6 @@ var PRESET1
 
 
 func _ready():
-	Global.pause_opened = true
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 	if Global.character == "Cari":
@@ -53,10 +52,12 @@ func _process(delta):
 	if dialogs == 3 and GlobalGarden.garden_mini_help_button_state == 0:
 		$"../VoiceOver".stop()
 		Global.dialog_playing = false
+		Global.pause_opened = false
 		queue_free()
 	
 	elif dialogs == 4 and !GlobalGarden.garden_mini_help_button_state == 0:
 		$"../VoiceOver".stop()
+		Global.pause_opened = false
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################

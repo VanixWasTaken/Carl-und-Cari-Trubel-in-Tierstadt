@@ -101,6 +101,7 @@ func _on_door_area_3d_body_entered(body):
 
 func _on_camera_pan_animation_finished(anim_name):
 	cutscene = false
+	Global.pause_opened = false
 	Global.lab_cutscene_played = true
 	Global.cutscene_playing = false
 	Global.dialog_playing = true

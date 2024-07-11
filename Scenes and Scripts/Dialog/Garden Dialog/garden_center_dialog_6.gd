@@ -27,7 +27,6 @@ var PRESET4 = preload("res://Assets/Art/Characters/Guido/Headshot/gardener_heads
 
 
 func _ready():
-	Global.pause_opened = true
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
@@ -45,6 +44,7 @@ func _process(delta):
 	if dialogs == 14:
 		$"../VoiceOver".stop()
 		Global.dialog_playing = false
+		Global.pause_opened = false
 		queue_free()
 ##########################################################################################
 

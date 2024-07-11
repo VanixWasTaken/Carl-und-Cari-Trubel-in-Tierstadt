@@ -134,6 +134,6 @@ func open_pause_menu(): ### creates an instance of the pause menu
 			pass
 		else:
 			var child = pause.instantiate()
-			add_child(child)
+			scene.add_child(child)
 			menu_open = true
 			pause_opened = true ### parameter for the scenes to check if the pause is opened
