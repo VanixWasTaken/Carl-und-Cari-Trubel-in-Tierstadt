@@ -78,8 +78,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Ich wusste gar nicht, dass man im Chemielabor so viel erleben kann."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
-		#$"../Voice Over".stream = load(path_carl + "01.mp3")
-		#$"../Voice Over".play()
+		$"../Voice Over".stream = load(path_carl + "01.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = true
 
