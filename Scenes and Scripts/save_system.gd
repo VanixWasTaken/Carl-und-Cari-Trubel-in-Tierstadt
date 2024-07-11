@@ -145,6 +145,7 @@ func load_game():
 		GlobalGarden.current_stage = node_data["CurrentStage" ]
 		GlobalGarden.stage2_correct_specs = node_data["Stage2CorrectSpecs"]
 		
+		############# USED IN LOAD GAME TO HAVE THE VOLUME SET TO LAST SAVED VOLUME ###############
 		_set_bus_volume(0, Global.master_volume)
 		_set_bus_volume(1, Global.dialog_volume)
 		_set_bus_volume(2, Global.sfx_volume)
