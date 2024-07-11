@@ -65,6 +65,7 @@ func _on_animation_player_3_animation_finished(anim_name):
 
 
 func _on_load_game_button_up():
+	Global.comes_from_savefile = true
 	$Clouds.play_backwards("default")
 	$Clouds.visible = true
 	$CloudsWhoosch.play()

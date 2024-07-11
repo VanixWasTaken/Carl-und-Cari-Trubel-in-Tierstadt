@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://bworg8flqwni1"]
 
-[ext_resource type="Texture2D" uid="uid://bh0sb6an7vv3c" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/bienstockrank.png" id="1_yxb2o"]
-[ext_resource type="Texture2D" uid="uid://2piqrut8wcvw" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/bienstock.png" id="2_o1rxy"]
+[ext_resource type="Texture2D" uid="uid://cj4uikvkhlqaa" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/gingerhoney2.png" id="1_hbayy"]
+[ext_resource type="Texture2D" uid="uid://cjp3g3hmyk80h" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/gingerhoney1.png" id="2_y5o0q"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_1.gd" id="3_x3cea"]
 [ext_resource type="PackedScene" uid="uid://bcbhx165k2ljt" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect.tscn" id="4_1b4jt"]
 [ext_resource type="AudioStream" uid="uid://dn7qgqd2owhp3" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var1.mp3" id="5_myoyu"]
@@ -18,10 +18,10 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_yxb2o")
+"texture": ExtResource("1_hbayy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_o1rxy")
+"texture": ExtResource("2_y5o0q")
 }],
 "loop": true,
 "name": &"default",
@@ -53,7 +53,7 @@ stream_8/stream = ExtResource("13_eslth")
 stream_8/weight = 1.0
 
 [node name="Plant3" type="AnimatedSprite2D" groups=["Plants"]]
-position = Vector2(987, 738)
+position = Vector2(936, 668)
 scale = Vector2(0.709896, 0.816667)
 sprite_frames = SubResource("SpriteFrames_nsswb")
 script = ExtResource("3_x3cea")
@@ -66,7 +66,7 @@ fact_4 = "Heimat: Südostasien"
 current_air_wetness = 90
 current_ground_wetness = 75.0
 current_temperature = 24
-current_alive_insects = 4
+current_alive_insects = 8
 needed_air_wetness = 78
 needed_ground_wetness = 80.0
 needed_temperature = 30
@@ -74,23 +74,38 @@ needed_temperature = 30
 [node name="WateringArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WateringArea"]
-position = Vector2(123.254, -301.688)
+position = Vector2(71.8416, -1.22449)
 rotation = 0.0160452
 shape = SubResource("RectangleShape2D_2bgdb")
 
 [node name="Insect" parent="." instance=ExtResource("4_1b4jt")]
-position = Vector2(101.423, -247.347)
+position = Vector2(-264.827, 399.183)
 
 [node name="Insect2" parent="." instance=ExtResource("4_1b4jt")]
-position = Vector2(249.332, -323.265)
+position = Vector2(305.679, 377.143)
 sprite_num = 3
 
 [node name="Insect3" parent="." instance=ExtResource("4_1b4jt")]
-position = Vector2(-7.0433, 15.9183)
+position = Vector2(118.327, 413.877)
 sprite_num = 1
 
 [node name="Insect4" parent="." instance=ExtResource("4_1b4jt")]
-position = Vector2(80.2935, -107.755)
+position = Vector2(71.8416, 146.939)
+sprite_num = 2
+
+[node name="Insect5" parent="." instance=ExtResource("4_1b4jt")]
+position = Vector2(66.207, 225.306)
+sprite_num = 3
+
+[node name="Insect7" parent="." instance=ExtResource("4_1b4jt")]
+position = Vector2(150.726, 139.592)
+sprite_num = 1
+
+[node name="Insect8" parent="." instance=ExtResource("4_1b4jt")]
+position = Vector2(249.332, 262.041)
+
+[node name="Insect6" parent="." instance=ExtResource("4_1b4jt")]
+position = Vector2(-161.995, 220.408)
 sprite_num = 2
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
@@ -104,3 +119,7 @@ bus = &"SFX_Foley"
 [connection signal="deadge" from="Insect2" to="." method="_on_insect_deadge"]
 [connection signal="deadge" from="Insect3" to="." method="_on_insect_deadge"]
 [connection signal="deadge" from="Insect4" to="." method="_on_insect_deadge"]
+[connection signal="deadge" from="Insect5" to="." method="_on_insect_deadge"]
+[connection signal="deadge" from="Insect7" to="." method="_on_insect_deadge"]
+[connection signal="deadge" from="Insect8" to="." method="_on_insect_deadge"]
+[connection signal="deadge" from="Insect6" to="." method="_on_insect_deadge"]

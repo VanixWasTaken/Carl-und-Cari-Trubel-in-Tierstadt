@@ -16,6 +16,7 @@ var laboratory_help_button_state = 0 #save
 var mini_help_button_state = 0 #save
 var exit_coordinates #save
 var first_game_start = true #save
+var comes_from_savefile = false
 var showed_reveals = 0
 var completed_jobs = [] #save
 var showed_profile_help =  false #save
