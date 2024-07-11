@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://di7wffcl0ey3o"]
+[gd_scene load_steps=32 format=3 uid="uid://di7wffcl0ey3o"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_caring.gd" id="1_mjkcf"]
 [ext_resource type="Texture2D" uid="uid://c72xamnljg6m7" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/room_placeholder.png" id="1_s0435"]
@@ -11,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://dmauooyvr5rqx" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minusbuttonplaceholder.png" id="8_lti52"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/temperature.gd" id="9_jhkj6"]
 [ext_resource type="Texture2D" uid="uid://bp24i4cfoqioc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/potentiometer.png" id="9_r43fh"]
-[ext_resource type="Texture2D" uid="uid://b7it6lk702yx5" path="res://Assets/Art/UI/Buttons/Nächste Pflanze Button/next_button.png" id="11_f3oed"]
+[ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="12_spc17"]
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="13_fmplx"]
+[ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="13_hba8v"]
+[ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="14_wy0jw"]
 [ext_resource type="AudioStream" uid="uid://bn8r5dj7kj5yh" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3" id="14_yxeto"]
 [ext_resource type="AudioStream" uid="uid://d0lmco7mcudt" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_crow.mp3" id="15_va3qb"]
 [ext_resource type="AudioStream" uid="uid://buos730w4du22" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_birds.mp3" id="16_dlyjq"]
@@ -230,11 +232,20 @@ position = Vector2(1556, 865)
 [node name="TextureButton" type="TextureButton" parent="."]
 visible = false
 z_index = 200
-offset_left = 1034.0
-offset_top = 240.0
-offset_right = 1896.0
-offset_bottom = 747.0
-texture_normal = ExtResource("11_f3oed")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 540.0
+offset_top = 379.0
+offset_right = 1452.0
+offset_bottom = 686.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("12_spc17")
+texture_pressed = ExtResource("13_hba8v")
+texture_hover = ExtResource("14_wy0jw")
 
 [node name="PlantMarker" type="Marker2D" parent="." groups=["PlantMarker"]]
 
