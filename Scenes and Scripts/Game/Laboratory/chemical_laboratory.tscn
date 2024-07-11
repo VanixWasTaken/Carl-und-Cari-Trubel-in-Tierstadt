@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=93 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
 [ext_resource type="Texture2D" uid="uid://dwuywvtsnqew" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/lab_minigame1_desk.png" id="2_ckcvh"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cpnhalp2rm4nf" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_red_empty.png" id="7_3d18c"]
 [ext_resource type="Texture2D" uid="uid://c8b4688csb3u0" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_red_water.png" id="8_7d3u6"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/PowderMixing/drink_holder.gd" id="9_hvdtc"]
+[ext_resource type="Texture2D" uid="uid://dypp6l6my81qe" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_red_yellow.png" id="10_ggwv1"]
 [ext_resource type="AudioStream" uid="uid://cqqv5sjph5jnh" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakerpour_var1.mp3" id="10_gmevd"]
 [ext_resource type="AudioStream" uid="uid://dd2mln4san8k3" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_powderpour_var1.mp3" id="11_5gyvt"]
 [ext_resource type="FontFile" uid="uid://cndjys5rae2ut" path="res://Assets/Font/digital-7.ttf" id="11_g8n2i"]
@@ -89,7 +90,7 @@ animations = [{
 "texture": ExtResource("8_7d3u6")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("10_ggwv1")
 }],
 "loop": true,
 "name": &"default",
