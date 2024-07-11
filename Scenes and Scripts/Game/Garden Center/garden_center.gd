@@ -36,6 +36,7 @@ func _ready():
 		$Player.position = Vector3(-3.992,0.85,-1.5)
 		$CutsceneAnimation.queue_free()
 	elif GlobalGarden.last_finished_minigame == "GroundGame":
+		$Camera3D.global_position.x = -19.5
 		$Player.position = Vector3(-22.035,0.85,2.492)
 		$CutsceneAnimation.queue_free()
 	elif GlobalGarden.last_finished_minigame == "PlanningGame":
@@ -45,7 +46,6 @@ func _ready():
 	SaveSystem.save_game()
 
 func _process(_delta):
-	print(Global.pause_opened)
 	if !Global.cutscene_playing:
 		if $Player.position.x <= 19.5 and $Player.position.x >= -19.5:
 			$Camera3D.position.x = $Player.position.x
