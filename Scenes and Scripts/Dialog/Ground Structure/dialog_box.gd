@@ -21,7 +21,7 @@ var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/c
 
 
 func _ready():
-	Global.pause_opened = true
+	#Global.pause_opened = true
 	Global.moving_allowed = false
 	Global.dialog_playing = true
 ###############################  PUT THE STARTING SIDE HERE  #############################
