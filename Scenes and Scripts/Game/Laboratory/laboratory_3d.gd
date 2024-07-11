@@ -25,6 +25,23 @@ var picked_up_chemicals = false
 
 
 func _ready():
+	if Global.comes_from_savefile:
+		if !Global.return_laboratory_1:
+			$Camera3D.global_position.x = 19.5
+
+		Global.cutscene_playing = false
+		Global.dialog_playing = false
+		Global.menu_open = false
+		Global.lab_cutscene_played == true
+		cutscene = false
+		$"NPC Chameleon".visible = true
+		$Objects/Chameleon.queue_free()
+		$NavigationRegion3D/Walls/WallRight/CutsceneFootsteps.queue_free()
+		$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.queue_free()
+		$CameraPan/MouseClickBlock.queue_free()
+		$Objects/Chameleon.queue_free()
+		Global.comes_from_savefile = false
+		
 	Global.last_scene = "Laboratory"
 	Global.inside_laboratory = true
 	MusicController._play_music("titration_trap", "laboratory", -24)
@@ -51,15 +68,18 @@ func _ready():
 		$NavigationRegion3D/Walls/WallRight/CutsceneDoorOpen.queue_free()
 		if !Global.return_laboratory_2 && !Global.return_laboratory_3:
 			$Player.global_position = Vector3(0.285038, 2.349433, 4.709138)
+			$Camera3D.global_position.x = $Player.global_position.x
 			$"NPC Chameleon/AnimatedSprite3D".play("idle")
 		elif Global.return_laboratory_2 && !Global.return_laboratory_3:
 			$Player.global_position = Vector3(-27.47779, 2.349433, 2.097231)
+			$Camera3D.global_position.x = -19.5
 			$"NPC Chameleon/AnimatedSprite3D".play("idle")
 		elif Global.return_laboratory_2 && Global.return_laboratory_3:
 			$Player.global_position = Vector3(-12.14836, 2.349433, -2.04137)
+			$Camera3D.global_position.x = $Player.global_position.x
 			$"NPC Chameleon/AnimatedSprite3D".play("visible")
 
-	elif !Global.return_laboratory_1:
+	elif !Global.return_laboratory_1 && !Global.lab_cutscene_played:
 		$"NPC Chameleon/AnimatedSprite3D".play("idle")
 		if Global.lab_cutscene_played == false:
 			Global.lab_cutscene_played = true

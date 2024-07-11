@@ -19,6 +19,7 @@ var player
 
 
 func _ready():
+	Global.pause_opened = false
 	MusicController._play_music("peace_and_tranquility", "garden_center", -21)
 	Global.last_scene = "GardenCenter"
 	player = get_tree().get_first_node_in_group("Player")
@@ -35,6 +36,7 @@ func _ready():
 		$Player.position = Vector3(-3.992,0.85,-1.5)
 		$CutsceneAnimation.queue_free()
 	elif GlobalGarden.last_finished_minigame == "GroundGame":
+		$Camera3D.global_position.x = -19.5
 		$Player.position = Vector3(-22.035,0.85,2.492)
 		$CutsceneAnimation.queue_free()
 	elif GlobalGarden.last_finished_minigame == "PlanningGame":

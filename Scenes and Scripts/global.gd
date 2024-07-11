@@ -16,6 +16,7 @@ var laboratory_help_button_state = 0 #save
 var mini_help_button_state = 0 #save
 var exit_coordinates #save
 var first_game_start = true #save
+var comes_from_savefile = false
 var showed_reveals = 0
 var completed_jobs = [] #save
 var showed_profile_help =  false #save
@@ -69,7 +70,9 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("escape"): ## when esc is pressed, pause menu is created
+		print("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ")
 		if !pause_opened:
+			print("GUGUGAGA")
 			open_pause_menu()
 	if event.is_action_pressed("left_click"):
 		Input.set_custom_mouse_cursor(custom_mouse_cursor_clicked)

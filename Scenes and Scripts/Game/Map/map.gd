@@ -19,6 +19,10 @@ func _ready():
 		$Player.global_position = Vector2(4140, 1434)
 		var dialog_instance = after_garden_dialog.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
+		
+	if Global.last_scene == "Tutorial":
+		Global.last_scene = "Map"
+		SaveSystem.save_game()
 
 	job_buildings = get_tree().get_nodes_in_group("Buildings")
 	for jobs in Global.completed_jobs: #Garden Center
