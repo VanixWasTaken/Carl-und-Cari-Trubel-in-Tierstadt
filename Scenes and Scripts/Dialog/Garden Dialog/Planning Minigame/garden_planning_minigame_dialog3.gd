@@ -52,8 +52,6 @@ func _process(delta):
 
 
 func add_left_dialog_box():
-	var node = l_bubble_node.instantiate()
-	$".".add_child(node)
 	dialog_side = "left"
 ##################################  WRITE DIALOG HERE  ###################################
 	
