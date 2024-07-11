@@ -27,6 +27,7 @@ var picked_up_chemicals = false
 func _ready():
 	Global.last_scene = "Laboratory"
 	Global.inside_laboratory = true
+	MusicController._play_music("titration_trap", "laboratory", -24)
 	#Global.lab_cutscene_played = true
 	#Global.talked_to_chameleon = true
 	#Global.talked_to_chameleon_2 = true
@@ -65,7 +66,6 @@ func _ready():
 			$CameraPan.play("camera pan")
 			Global.cutscene_playing = true
 			Global.moving_allowed = false
-			MusicController._play_music("titration_trap", "laboratory", -24)
 		
 		#Camera is glitching out after reentering the scene (didnt work at all before)
 	if Global.lab_cutscene_played == true:
