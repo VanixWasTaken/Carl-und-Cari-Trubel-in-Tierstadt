@@ -130,8 +130,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Dann machen wir ja die ganze Arbeit! Was genau macht dein toller Pflanzomat 3000 noch? Ich dachte es würden nur ein paar Systeme nicht funktionieren?!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
-		#$"../VoiceOver".stream = load(cari_path + "09.mp3")
-		#$"../VoiceOver".play()
+		$"../VoiceOver".stream = load(cari_path + "09.mp3")
+		$"../VoiceOver".play()
 		dialogs += 1
 		
 	elif dialogs == 16:
