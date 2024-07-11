@@ -9,6 +9,9 @@ var dialog4 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Minigame 1/
 	
 var garden_scene
 
+@onready var scissor_uncut = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/scissors1.png")
+@onready var scissor_cut = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/scissors2.png")
+
 func _ready():
 	$CanvasLayer/FadeAnimation.show()
 	$CanvasLayer/AnimationPlayer.play("fade_in")
@@ -25,12 +28,13 @@ func _on_tree_1_move_camera():
 	$Camera2D/AnimationPlayer.play("camera_movement1")
 	var next_dialog = dialog2.instantiate()
 	add_child(next_dialog)
-	
+	$CuttingTreeMinigameScissor.texture = scissor_uncut
 
 func _on_tree_2_move_camera():
 	$Camera2D/AnimationPlayer.play("camera_movement2")
 	var next_dialog = dialog3.instantiate()
 	add_child(next_dialog)
+	$CuttingTreeMinigameScissor.texture = scissor_uncut
 
 
 
