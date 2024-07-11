@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cenk56k5odi8x"]
+[gd_scene load_steps=10 format=3 uid="uid://cenk56k5odi8x"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/scale.gd" id="1_sq6c2"]
 [ext_resource type="Texture2D" uid="uid://cbdxyqqksrgaf" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale.png" id="2_2aogq"]
 [ext_resource type="Texture2D" uid="uid://db7vi4lxj1otc" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale_highlight.png" id="3_8t2rj"]
-[ext_resource type="AudioStream" uid="uid://dxs6n623s8kuw" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var3.mp3" id="4_kqnd0"]
+[ext_resource type="AudioStream" uid="uid://dxvhcpnwfj8hq" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var1.mp3" id="4_3ukaa"]
+[ext_resource type="AudioStream" uid="uid://f86grv1pnrfl" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var2.mp3" id="5_bonvd"]
+[ext_resource type="AudioStream" uid="uid://bqwllua46dbnm" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var3.mp3" id="6_03eib"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6wgwi"]
 animations = [{
@@ -21,6 +23,15 @@ animations = [{
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nleoc"]
 size = Vector3(2.51461, 8.66539, 5.96048)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_juugj"]
+streams_count = 3
+stream_0/stream = ExtResource("4_3ukaa")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("5_bonvd")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("6_03eib")
+stream_2/weight = 1.0
 
 [node name="Scale" type="Node3D"]
 script = ExtResource("1_sq6c2")
@@ -46,10 +57,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0606024, -9.66409, 1.70491)
 shape = SubResource("BoxShape3D_nleoc")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_kqnd0")
-volume_db = -12.0
-pitch_scale = 1.22
-bus = &"SFX"
+stream = SubResource("AudioStreamRandomizer_juugj")
+volume_db = -6.0
+bus = &"SFX_Foley"
 
 [connection signal="mouse_entered" from="Mouse_area" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="Mouse_area" to="." method="_on_area_3d_mouse_exited"]
