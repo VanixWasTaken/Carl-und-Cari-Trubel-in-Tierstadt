@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://cysn43gegpw0b"]
 
-[ext_resource type="Texture2D" uid="uid://cfjslfnkgjmsh" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/kaktus tod.png" id="1_aakkb"]
-[ext_resource type="Texture2D" uid="uid://bqr7e24btbrdl" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/kaktus heile.png" id="2_iuieu"]
+[ext_resource type="Texture2D" uid="uid://c61oe1hfpxa0i" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/cactus2.png" id="1_d3qb1"]
+[ext_resource type="Texture2D" uid="uid://cp0m8l5ouqiqo" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/cactus1.png" id="2_06sun"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_1.gd" id="3_ar3r6"]
 [ext_resource type="PackedScene" uid="uid://bcbhx165k2ljt" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect.tscn" id="4_3r0yf"]
 [ext_resource type="AudioStream" uid="uid://dn7qgqd2owhp3" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_insect_death_var1.mp3" id="5_um61q"]
@@ -18,10 +18,10 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_aakkb")
+"texture": ExtResource("1_d3qb1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_iuieu")
+"texture": ExtResource("2_06sun")
 }],
 "loop": true,
 "name": &"default",
@@ -78,18 +78,18 @@ position = Vector2(8.45203, -245.204)
 shape = SubResource("RectangleShape2D_2bgdb")
 
 [node name="Insect" parent="." instance=ExtResource("4_3r0yf")]
-position = Vector2(-277.505, 74.6939)
+position = Vector2(-277.505, -46.5306)
 
 [node name="Insect2" parent="." instance=ExtResource("4_3r0yf")]
-position = Vector2(-170.448, -90.6122)
+position = Vector2(-107.058, -140.816)
 sprite_num = 3
 
 [node name="Insect3" parent="." instance=ExtResource("4_3r0yf")]
-position = Vector2(-5.6346, -37.9592)
+position = Vector2(140.866, -145.714)
 sprite_num = 1
 
 [node name="Insect4" parent="." instance=ExtResource("4_3r0yf")]
-position = Vector2(287.366, -56.3265)
+position = Vector2(212.707, 28.1633)
 sprite_num = 2
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]

@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://c53c8e22d528s" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/watering_can.tscn" id="4_cx1dw"]
 [ext_resource type="Texture2D" uid="uid://365llbihna5" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/display2.png" id="4_maiep"]
 [ext_resource type="PackedScene" uid="uid://brcdcnmm5e2em" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect_spray.tscn" id="6_61pj5"]
+[ext_resource type="Texture2D" uid="uid://dqrwuwl2e4sqf" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/moisture_scale.png" id="7_7g7gv"]
 [ext_resource type="AudioStream" uid="uid://dv2xetlq4jibf" path="res://Assets/Sound/SFX/UI/Hover/hover.tres" id="7_atalh"]
-[ext_resource type="Texture2D" uid="uid://bkp5u6sxiujed" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/thermometer.png" id="7_gymr8"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/temperature.gd" id="9_jhkj6"]
 [ext_resource type="Texture2D" uid="uid://bp24i4cfoqioc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/potentiometer.png" id="9_r43fh"]
 [ext_resource type="Texture2D" uid="uid://buabb0yksrix4" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/button_plus.png" id="12_8dru7"]
@@ -99,10 +99,10 @@ texture = ExtResource("3_isv1i")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="."]
-offset_left = 1120.0
-offset_top = 22.0
-offset_right = 1605.0
-offset_bottom = 360.0
+offset_left = 1102.0
+offset_top = 25.0
+offset_right = 1587.0
+offset_bottom = 363.0
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("4_maiep")
 expand_mode = 1
@@ -134,66 +134,68 @@ position = Vector2(1213, 478)
 script = ExtResource("9_jhkj6")
 
 [node name="TextureRect" type="TextureRect" parent="Temperature"]
-offset_left = -232.0
-offset_top = -229.0
-offset_right = 434.0
-offset_bottom = 90.0
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("7_gymr8")
+offset_left = -183.0
+offset_top = -194.0
+offset_right = 483.0
+offset_bottom = 125.0
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("7_7g7gv")
 
 [node name="40" type="Area2D" parent="Temperature"]
 position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/40"]
 position = Vector2(12, -3)
-polygon = PackedVector2Array(420, 575, 409, 611, 349, 611, 362, 554)
+polygon = PackedVector2Array(420, 574, 415, 596, 379, 596, 389, 562)
 
 [node name="35" type="Area2D" parent="Temperature"]
 position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/35"]
-position = Vector2(8, 6)
-polygon = PackedVector2Array(424, 559, 443, 533, 398, 491, 368, 538)
+position = Vector2(9, 26)
+polygon = PackedVector2Array(427, 538, 444, 513, 418, 489, 398, 524)
 
 [node name="30" type="Area2D" parent="Temperature"]
 position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/30"]
-position = Vector2(4, 5)
-polygon = PackedVector2Array(454, 530, 482, 511, 459, 452, 411, 483)
+position = Vector2(3, 29)
+polygon = PackedVector2Array(457, 506, 481, 488, 471, 453, 429, 482)
 
 [node name="25" type="Area2D" parent="Temperature"]
 position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/25"]
-position = Vector2(0, 3)
-polygon = PackedVector2Array(487, 509, 522, 503, 520, 438, 464, 450)
+position = Vector2(4, 10)
+polygon = PackedVector2Array(491, 505, 517, 499, 516, 460, 476, 469)
 
 [node name="20" type="Area2D" parent="Temperature"]
 position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/20"]
-polygon = PackedVector2Array(530, 437, 586, 449, 563, 509, 528, 503)
+position = Vector2(3, 10)
+polygon = PackedVector2Array(525, 461, 567, 468, 551, 505, 524, 499)
 
 [node name="15" type="Area2D" parent="Temperature"]
 position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/15"]
-polygon = PackedVector2Array(590, 451, 632, 490, 596, 526, 568, 510)
+position = Vector2(1, 26)
+polygon = PackedVector2Array(573, 456, 616, 484, 589, 507, 561, 490)
 
 [node name="10" type="Area2D" parent="Temperature"]
 position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/10"]
-position = Vector2(-10, -6)
-polygon = PackedVector2Array(611, 542, 629, 568, 685, 544, 651, 501)
+position = Vector2(-3, 16)
+polygon = PackedVector2Array(599, 520, 620, 547, 642, 536, 623, 501)
 
 [node name="5" type="Area2D" parent="Temperature"]
 position = Vector2(1, -2)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/5"]
-position = Vector2(-525, -625)
-polygon = PackedVector2Array(626, 575, 640, 614, 698, 613, 685, 553)
+position = Vector2(-538, -621)
+polygon = PackedVector2Array(638, 570, 642, 595, 669, 592, 660, 561)
 
 [node name="TemperatureRegulator" type="Sprite2D" parent="Temperature"]
 position = Vector2(4.99999, -7)
@@ -226,7 +228,8 @@ position = Vector2(1420, 851)
 position = Vector2(367, 840)
 
 [node name="Humidity" type="Node2D" parent="."]
-position = Vector2(1178, 143)
+position = Vector2(1160, 146)
+metadata/_edit_group_ = true
 
 [node name="PlusHumidity" type="TextureButton" parent="Humidity"]
 offset_left = 156.0
@@ -243,10 +246,10 @@ offset_bottom = 1.0
 texture_normal = ExtResource("13_88har")
 
 [node name="Label" type="Label" parent="Humidity" groups=["HumidityText"]]
-offset_left = -33.0
-offset_top = -83.0
-offset_right = 146.0
-offset_bottom = -4.0
+offset_left = -37.0
+offset_top = -87.0
+offset_right = 142.0
+offset_bottom = -8.0
 theme_override_colors/font_color = Color(0, 0.968627, 0, 1)
 theme_override_fonts/font = ExtResource("3_48ksc")
 theme_override_font_sizes/font_size = 101
@@ -276,7 +279,7 @@ texture_hover = ExtResource("14_wy0jw")
 [node name="PlantMarker" type="Marker2D" parent="." groups=["PlantMarker"]]
 
 [node name="Plant" parent="." instance=ExtResource("2_72lyy")]
-position = Vector2(826, 742)
+position = Vector2(949, 733)
 scale = Vector2(0.6, 0.69)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

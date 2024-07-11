@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqr7e24btbrdl"
-path="res://.godot/imported/kaktus heile.png-9a8c06b9ffc2cc90df622797acd25109.ctex"
+uid="uid://c61oe1hfpxa0i"
+path="res://.godot/imported/cactus2.png-04e09742b00e460beb06d003cca6f9c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/kaktus heile.png"
-dest_files=["res://.godot/imported/kaktus heile.png-9a8c06b9ffc2cc90df622797acd25109.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/cactus2.png"
+dest_files=["res://.godot/imported/cactus2.png-04e09742b00e460beb06d003cca6f9c9.ctex"]
 
 [params]
 

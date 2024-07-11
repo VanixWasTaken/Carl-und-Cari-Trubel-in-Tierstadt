@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://budv1svk408d3"]
+[gd_scene load_steps=49 format=3 uid="uid://budv1svk408d3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_paeaj"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_0p5ej"]
@@ -23,10 +23,12 @@
 [ext_resource type="Texture2D" uid="uid://6pehn1e4mhbf" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_lab_goggles.png" id="21_bsce8"]
 [ext_resource type="Texture2D" uid="uid://dhax6i23j7k5p" path="res://Assets/Art/Environment/Quiz/quiz_question3_garden_scissors.png" id="22_ovs4s"]
 [ext_resource type="Texture2D" uid="uid://dgdio4aqc2t3b" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_toothbrush.png" id="23_spg2m"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question2.gd" id="24_ry01n"]
-[ext_resource type="Texture2D" uid="uid://dv4j0r5i8i2j0" path="res://Assets/Art/Environment/Quiz/quiz_question2_lemon.png" id="26_hgxy6"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Garden Quiz/question2.gd" id="24_5vf07"]
+[ext_resource type="Texture2D" uid="uid://fd6xqqniebfs" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/soil/soil.png" id="25_nma1p"]
+[ext_resource type="Texture2D" uid="uid://bvntfuk1naqsj" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sand/sand.png" id="26_k23hm"]
 [ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="27_syaqf"]
-[ext_resource type="Texture2D" uid="uid://dsuod2kvgqm0w" path="res://Assets/Art/Environment/Quiz/quiz_question2_soap.png" id="28_6x1tt"]
+[ext_resource type="Texture2D" uid="uid://bgdlnyeqc8271" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/celery.png" id="27_u41gf"]
+[ext_resource type="Texture2D" uid="uid://cp0m8l5ouqiqo" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/cactus1.png" id="27_vjlr5"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question1.gd" id="29_3wegr"]
 [ext_resource type="Texture2D" uid="uid://15echnwkgum0" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/minigame1_tree1.png" id="30_kcqny"]
 [ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/Art/Random Screens/white_screen.png" id="31_x1jbh"]
@@ -46,55 +48,19 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ka8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bslay"]
-size = Vector2(795.321, 81.7619)
+size = Vector2(368.076, 282)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ecj0j"]
-size = Vector2(795.321, 53.8885)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxct1"]
-size = Vector2(795.321, 65.0379)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wf3my"]
-size = Vector2(795.321, 61.3215)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvokf"]
-size = Vector2(795.321, 59.4633)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_da1b4"]
-size = Vector2(795.321, 63.1799)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5r21"]
-size = Vector2(795.321, 59.4641)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihd30"]
-size = Vector2(795.321, 66.8962)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ic5"]
-size = Vector2(795.321, 68.7541)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tybbk"]
-size = Vector2(795.321, 59.4634)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mnn3"]
-size = Vector2(795.321, 52.0305)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhjee"]
-size = Vector2(795.321, 63.1798)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ow5b"]
-size = Vector2(795.321, 59.4637)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j68t"]
-size = Vector2(795.321, 53.6016)
+size = Vector2(368, 238)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ad64"]
-size = Vector2(194, 135)
+size = Vector2(141, 199)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tayap"]
 size = Vector2(516.2, 0.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_047nh"]
-size = Vector2(364.873, 214.164)
+size = Vector2(364.873, 592.918)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cvb3i"]
 streams_count = 2
@@ -116,6 +82,7 @@ stream_2/weight = 1.0
 script = ExtResource("1_paeaj")
 
 [node name="Question5" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_0p5ej")
@@ -274,6 +241,7 @@ toll gemacht"
 horizontal_alignment = 1
 
 [node name="Question4" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_0p5ej")
@@ -399,6 +367,7 @@ etwas mehr"
 horizontal_alignment = 1
 
 [node name="Question3" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_0p5ej")
@@ -604,7 +573,7 @@ text = "Das war richtig"
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_0p5ej")
-script = ExtResource("24_ry01n")
+script = ExtResource("24_5vf07")
 
 [node name="Dialogbox" type="Sprite2D" parent="Question2"]
 position = Vector2(960, 263)
@@ -653,108 +622,34 @@ texture = SubResource("CompressedTexture2D_6ka8r")
 position = Vector2(269.443, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale14" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -366.071)
+position = Vector2(228.557, 193)
 shape = SubResource("RectangleShape2D_bslay")
+
+[node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale14"]
+position = Vector2(210.557, -292)
+texture = ExtResource("25_nma1p")
 
 [node name="PhScale13" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale13" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -353.246)
+position = Vector2(210.557, -341)
 shape = SubResource("RectangleShape2D_ecj0j")
 
-[node name="PhScale12" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 110)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale12" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -348.783)
-shape = SubResource("RectangleShape2D_wxct1")
-
-[node name="PhScale11" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 178.39)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale11" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -353.993)
-shape = SubResource("RectangleShape2D_wf3my")
-
-[node name="PhScale10" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 239.711)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale10" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -354.921)
-shape = SubResource("RectangleShape2D_kvokf")
-
-[node name="PhScale9" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 297.316)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale9" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -351.204)
-shape = SubResource("RectangleShape2D_da1b4")
-
-[node name="PhScale7" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 362.354)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale7" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -354.921)
-shape = SubResource("RectangleShape2D_m5r21")
-
-[node name="PhScale6" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 425.534)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale6" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -354.921)
-shape = SubResource("RectangleShape2D_ihd30")
-
-[node name="PhScale5" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 496.147)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale5" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -357.709)
-shape = SubResource("RectangleShape2D_l8ic5")
-
-[node name="PhScale4" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 559.326)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale4" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -356.779)
-shape = SubResource("RectangleShape2D_tybbk")
-
-[node name="PhScale3" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 615.073)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale3" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -356.779)
-shape = SubResource("RectangleShape2D_1mnn3")
-
-[node name="PhScale2" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 672.678)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale2" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -356.779)
-shape = SubResource("RectangleShape2D_hhjee")
-
-[node name="PhScale1" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 735.858)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale1" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -358.637)
-shape = SubResource("RectangleShape2D_8ow5b")
-
-[node name="PhScale0" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
-position = Vector2(269.443, 793.463)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale0" groups=["PhScaleAreas"]]
-position = Vector2(-146.8, -359.71)
-shape = SubResource("RectangleShape2D_4j68t")
+[node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale13"]
+position = Vector2(212.557, 145)
+texture = ExtResource("26_k23hm")
 
 [node name="Lemon" type="Node2D" parent="Question2"]
 position = Vector2(317, 457)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Lemon"]
-texture = ExtResource("26_hgxy6")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("27_vjlr5")
 region_rect = Rect2(39.1277, 16.3303, 200.388, 148.457)
 
-[node name="Arrow" type="Sprite2D" parent="Question2/Lemon/Sprite2D"]
+[node name="Arrow" type="Sprite2D" parent="Question2/Lemon"]
 position = Vector2(151, -2)
 scale = Vector2(0.504, 0.504)
 texture = ExtResource("27_syaqf")
@@ -763,7 +658,7 @@ texture = ExtResource("27_syaqf")
 position = Vector2(-1, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/Lemon/PickUpArea"]
-position = Vector2(3, -11.5)
+position = Vector2(-1.5, -17)
 shape = SubResource("RectangleShape2D_2ad64")
 
 [node name="Area2D" type="Area2D" parent="Question2/Lemon"]
@@ -776,15 +671,17 @@ shape = SubResource("RectangleShape2D_tayap")
 
 [node name="Soap" type="Node2D" parent="Question2"]
 position = Vector2(322, 787)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Soap"]
 position = Vector2(-5.00001, 13)
-scale = Vector2(0.504286, 0.504286)
-texture = ExtResource("28_6x1tt")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("27_u41gf")
 region_rect = Rect2(199.949, 133.641, 937.333, 627.487)
 
-[node name="Arrow" type="Sprite2D" parent="Question2/Soap/Sprite2D"]
-position = Vector2(293.484, 11.898)
+[node name="Arrow" type="Sprite2D" parent="Question2/Soap"]
+position = Vector2(143, 19)
+scale = Vector2(0.504286, 0.504286)
 texture = ExtResource("27_syaqf")
 
 [node name="PickUpArea" type="Area2D" parent="Question2/Soap"]
@@ -792,7 +689,7 @@ position = Vector2(-5, 13)
 scale = Vector2(0.504286, 0.504286)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/Soap/PickUpArea"]
-position = Vector2(-1.98303, 9.91504)
+position = Vector2(-1.98279, 6.94031)
 shape = SubResource("RectangleShape2D_047nh")
 
 [node name="Area2D" type="Area2D" parent="Question2/Soap"]
@@ -862,6 +759,7 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question1" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_0p5ej")
