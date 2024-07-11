@@ -74,6 +74,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Ich hätte nie gedacht, dass Pflanzen uns so ähnlich sein können."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_after_garden_map_01.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = true
 
@@ -85,6 +87,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Ich auch nicht!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_after_garden_map_02.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 3:
@@ -92,9 +96,11 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich fand es cool, wie sehr sich Guido für seine Pflanzen eingesetzt hat. Fast als wären es seine eigenen Kinder."
+		short_node_text.text = "Ich fand es cool, wie sehr Guido sich für seine Pflanzen eingesetzt hat. Fast als wären es seine eigenen Kinder."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_after_garden_map_03.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 4:
@@ -102,9 +108,11 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = " Ja, seine Hingabe war inspirierend. Aber seine Witze hätte er auch lassen können."
+		short_node_text.text = "Ja, seine Hingabe war inspirierend. Aber seine Witze hätte er auch lassen können."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_after_garden_map_04.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 5:
@@ -115,6 +123,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Ich fand sie eigentlich ganz lustig."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_after_garden_map_05.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 6:
@@ -125,6 +135,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Ich kann es kaum erwarten nach Hause zu kommen und die Samen einzupflanzen."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_after_garden_map_06.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 
 	elif dialogs == 7:
@@ -135,6 +147,8 @@ func add_left_dialog_box():
 		short_node_text.text = "Ich auch nicht, also komm. Lass uns möglichst schnell die anderen Jobs erledigen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
+		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Cari/vo_pc_cari_after_garden_map_07.mp3")
+		$"../Voice Over".play()
 		dialogs += 1
 		same_speaker = false
 
