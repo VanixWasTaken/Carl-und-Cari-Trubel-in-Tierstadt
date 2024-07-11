@@ -418,7 +418,6 @@ libraries = {
 autoplay = "new_animation"
 
 [node name="Clouds" type="AnimatedSprite2D" parent="."]
-visible = false
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_17etq")
 autoplay = "default"
