@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://2tv3hfl6fl7t"]
+[gd_scene load_steps=8 format=3 uid="uid://2tv3hfl6fl7t"]
 
-[ext_resource type="Texture2D" uid="uid://blkwk1nwkioev" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon1.png" id="1_ueljb"]
-[ext_resource type="Texture2D" uid="uid://de5e24i441sqt" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/plantpot/plantpot_icon_selected.png" id="2_d4pqr"]
+[ext_resource type="Texture2D" uid="uid://bgdlnyeqc8271" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/celery.png" id="1_dw8d3"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/plants.gd" id="3_hkpfl"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="4_486ls"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_seoph"]
@@ -11,10 +10,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ueljb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_d4pqr")
+"texture": ExtResource("1_dw8d3")
 }],
 "loop": true,
 "name": &"default",
@@ -22,22 +18,24 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v03cg"]
-size = Vector2(156, 196)
+size = Vector2(526, 1014)
 
 [node name="Sellerie" type="AnimatedSprite2D"]
 position = Vector2(139, 156)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_e1r6v")
 script = ExtResource("3_hkpfl")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1, -4)
+position = Vector2(-7, 9)
 shape = SubResource("RectangleShape2D_v03cg")
 
 [node name="InformationLabel" type="Node2D" parent="."]
 visible = false
 position = Vector2(273, -52)
+scale = Vector2(2, 2)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="InformationLabel"]

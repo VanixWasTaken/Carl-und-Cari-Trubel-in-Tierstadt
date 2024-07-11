@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cteydrkongfdc"
-path="res://.godot/imported/plusbuttonplaceholder.png-0819a2ffe5d94cb62b8974d44e3fced3.ctex"
+uid="uid://bgdlnyeqc8271"
+path="res://.godot/imported/celery.png-3f27ac1f9392d7cdac973b883bb28cf8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/plusbuttonplaceholder.png"
-dest_files=["res://.godot/imported/plusbuttonplaceholder.png-0819a2ffe5d94cb62b8974d44e3fced3.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/celery.png"
+dest_files=["res://.godot/imported/celery.png-3f27ac1f9392d7cdac973b883bb28cf8.ctex"]
 
 [params]
 
