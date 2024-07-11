@@ -2,17 +2,17 @@
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
 [ext_resource type="Texture2D" uid="uid://p003wtefrdrs" path="res://Assets/Art/Environment/Map/Big Map/map_no_lab_no_gardencenter.png" id="2_0t1vf"]
+[ext_resource type="Texture2D" uid="uid://dgeyaw3nd5erx" path="res://Assets/Art/Environment/Map/Big Map/map_animation001.png" id="2_350vm"]
 [ext_resource type="PackedScene" uid="uid://dctfgv4bxknm4" path="res://Scenes and Scripts/Game/Map/Buildings/laboratory_building.tscn" id="2_ab8es"]
-[ext_resource type="Texture2D" uid="uid://clcnrkm1yiei6" path="res://Assets/Art/Environment/Map/Big Map/map_animation_001.png" id="2_k55uk"]
-[ext_resource type="Texture2D" uid="uid://sqkfybjjhsxu" path="res://Assets/Art/Environment/Map/Big Map/map_animation_002.png" id="3_i7nyt"]
 [ext_resource type="Texture2D" uid="uid://dmwffc2jjwf8m" path="res://Assets/Art/Environment/Map/fairground/map_fireworks1.png" id="3_oe0ft"]
+[ext_resource type="Texture2D" uid="uid://dmidpa8vukw55" path="res://Assets/Art/Environment/Map/Big Map/map_animation002.png" id="3_s6dct"]
 [ext_resource type="Texture2D" uid="uid://junv40vhknop" path="res://Assets/Art/Environment/Map/fairground/map_fireworks2.png" id="4_1ukqo"]
-[ext_resource type="Texture2D" uid="uid://jjjp5tjdaedg" path="res://Assets/Art/Environment/Map/Big Map/map_animation_003.png" id="4_5o8f2"]
-[ext_resource type="Texture2D" uid="uid://dqenwdtww5muc" path="res://Assets/Art/Environment/Map/Big Map/map_animation_004.png" id="5_20apd"]
+[ext_resource type="Texture2D" uid="uid://dhp1qaonavtys" path="res://Assets/Art/Environment/Map/Big Map/map_animation003.png" id="4_6jngu"]
 [ext_resource type="Texture2D" uid="uid://ct21gx2j251qv" path="res://Assets/Art/Environment/Map/fairground/map_poles.png" id="5_o2ljt"]
 [ext_resource type="Texture2D" uid="uid://crrhnurucid3q" path="res://Assets/Art/Particles/Clouds/bg_cloud_main1.png" id="5_ok451"]
+[ext_resource type="Texture2D" uid="uid://buhjcnfap0e3" path="res://Assets/Art/Environment/Map/Big Map/map_animation004.png" id="5_p7e4k"]
 [ext_resource type="PackedScene" uid="uid://reaek0i8ei2g" path="res://Scenes and Scripts/Menus/Pause Menu/pause_menu.tscn" id="5_q8qp1"]
-[ext_resource type="Texture2D" uid="uid://dwwt6is08dquu" path="res://Assets/Art/Environment/Map/Big Map/map_animation_005.png" id="6_tgsx4"]
+[ext_resource type="Texture2D" uid="uid://dvyq1gpfcw4re" path="res://Assets/Art/Environment/Map/Big Map/map_animation005.png" id="6_jjj2r"]
 [ext_resource type="PackedScene" uid="uid://bhb5312a6xrce" path="res://Scenes and Scripts/Game/Map/Buildings/garden_center_map.tscn" id="7_fpr7h"]
 [ext_resource type="Texture2D" uid="uid://bbop2qlcrhqd5" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button.png" id="8_fe5cr"]
 [ext_resource type="Texture2D" uid="uid://b8fkioc55ls28" path="res://Assets/Art/Particles/leaf.png" id="8_w5011"]
@@ -54,19 +54,19 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_k55uk")
+"texture": ExtResource("2_350vm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_i7nyt")
+"texture": ExtResource("3_s6dct")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_5o8f2")
+"texture": ExtResource("4_6jngu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_20apd")
+"texture": ExtResource("5_p7e4k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_tgsx4")
+"texture": ExtResource("6_jjj2r")
 }],
 "loop": true,
 "name": &"default",

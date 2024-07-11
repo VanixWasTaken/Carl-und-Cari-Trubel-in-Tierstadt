@@ -5,7 +5,7 @@ var dialog_introduction = preload("res://Scenes and Scripts/Dialog/Garden Dialog
 var dialog2 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Planning Minigame/garden_planning_minigame_dialog2.tscn")
 var dialog3 = preload("res://Scenes and Scripts/Dialog/Garden Dialog/Planning Minigame/garden_planning_minigame_dialog3.tscn")
 
-var check = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/checkbox_checked.png")
+var check = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/garden_minigame4_checkbox_checked_green.png")
 var uncheck = preload("res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GardenPlanning/checkbox_unchecked.png")
 
 func _ready():
