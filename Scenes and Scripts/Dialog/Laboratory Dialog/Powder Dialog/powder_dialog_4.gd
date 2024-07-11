@@ -37,6 +37,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 3:
+		$"../VoiceOver".stop()
 		Global.dialog_playing = false
 		Global.moving_allowed = true
 		Global.return_laboratory_1 = true

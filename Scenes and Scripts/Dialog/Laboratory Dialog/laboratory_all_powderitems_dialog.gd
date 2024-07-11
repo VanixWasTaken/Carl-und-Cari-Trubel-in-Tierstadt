@@ -50,6 +50,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 6:
+		$"../VoiceOver".stop()
 		Global.dialog_playing = false
 		Global.moving_allowed = true
 		get_tree().get_first_node_in_group("Animator").play("fade_out")

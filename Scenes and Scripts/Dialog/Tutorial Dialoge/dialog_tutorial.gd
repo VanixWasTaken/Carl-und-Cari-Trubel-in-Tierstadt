@@ -46,6 +46,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 5:
+		$"../Voice Over".stop()
 		Global.dialog_playing = false
 		Global.pause_opened = false
 		queue_free()

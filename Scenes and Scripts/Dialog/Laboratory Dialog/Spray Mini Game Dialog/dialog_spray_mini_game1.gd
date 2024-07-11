@@ -59,6 +59,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 4:
+		$"../VoiceOver".stop()
 		AudioServer.set_bus_effect_enabled(1, 0, false)
 		Global.dialog_playing = false
 		Global.lab_cutscene_played = true
