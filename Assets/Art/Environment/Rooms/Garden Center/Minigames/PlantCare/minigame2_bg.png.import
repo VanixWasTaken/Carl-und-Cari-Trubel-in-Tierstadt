@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c72xamnljg6m7"
-path="res://.godot/imported/room_placeholder.png-8abcefa25ef5db86595ed3fa90475898.ctex"
+uid="uid://bm8kok4qwxg36"
+path="res://.godot/imported/minigame2_bg.png-0b2c441b54633617ef4218333ec25eef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/room_placeholder.png"
-dest_files=["res://.godot/imported/room_placeholder.png-8abcefa25ef5db86595ed3fa90475898.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minigame2_bg.png"
+dest_files=["res://.godot/imported/minigame2_bg.png-0b2c441b54633617ef4218333ec25eef.ctex"]
 
 [params]
 

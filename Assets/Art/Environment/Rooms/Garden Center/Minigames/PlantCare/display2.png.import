@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmauooyvr5rqx"
-path="res://.godot/imported/minusbuttonplaceholder.png-5abe4346f17c2c76380f64dc46da17b2.ctex"
+uid="uid://365llbihna5"
+path="res://.godot/imported/display2.png-1219e8899aa213ec6433fa4293aa116a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minusbuttonplaceholder.png"
-dest_files=["res://.godot/imported/minusbuttonplaceholder.png-5abe4346f17c2c76380f64dc46da17b2.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/display2.png"
+dest_files=["res://.godot/imported/display2.png-1219e8899aa213ec6433fa4293aa116a.ctex"]
 
 [params]
 

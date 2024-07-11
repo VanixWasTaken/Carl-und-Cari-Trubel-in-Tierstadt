@@ -1,17 +1,20 @@
-[gd_scene load_steps=32 format=3 uid="uid://di7wffcl0ey3o"]
+[gd_scene load_steps=35 format=3 uid="uid://di7wffcl0ey3o"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant_caring.gd" id="1_mjkcf"]
-[ext_resource type="Texture2D" uid="uid://c72xamnljg6m7" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/room_placeholder.png" id="1_s0435"]
 [ext_resource type="PackedScene" uid="uid://dt8p5adk2f06v" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/plant.tscn" id="2_72lyy"]
+[ext_resource type="Texture2D" uid="uid://bm8kok4qwxg36" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minigame2_bg.png" id="2_as0bo"]
 [ext_resource type="FontFile" uid="uid://cndjys5rae2ut" path="res://Assets/Font/digital-7.ttf" id="3_48ksc"]
+[ext_resource type="Texture2D" uid="uid://c8rup5eujedwl" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/display1.png" id="3_isv1i"]
 [ext_resource type="PackedScene" uid="uid://c53c8e22d528s" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/watering_can.tscn" id="4_cx1dw"]
+[ext_resource type="Texture2D" uid="uid://365llbihna5" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/display2.png" id="4_maiep"]
 [ext_resource type="PackedScene" uid="uid://brcdcnmm5e2em" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/insect_spray.tscn" id="6_61pj5"]
-[ext_resource type="Texture2D" uid="uid://cteydrkongfdc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/plusbuttonplaceholder.png" id="7_2n4t6"]
+[ext_resource type="Texture2D" uid="uid://dqrwuwl2e4sqf" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/moisture_scale.png" id="7_7g7gv"]
 [ext_resource type="AudioStream" uid="uid://dv2xetlq4jibf" path="res://Assets/Sound/SFX/UI/Hover/hover.tres" id="7_atalh"]
-[ext_resource type="Texture2D" uid="uid://dmauooyvr5rqx" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/minusbuttonplaceholder.png" id="8_lti52"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/temperature.gd" id="9_jhkj6"]
 [ext_resource type="Texture2D" uid="uid://bp24i4cfoqioc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/potentiometer.png" id="9_r43fh"]
+[ext_resource type="Texture2D" uid="uid://buabb0yksrix4" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/button_plus.png" id="12_8dru7"]
 [ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="12_spc17"]
+[ext_resource type="Texture2D" uid="uid://ciqjakx5ixijm" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/button_minus.png" id="13_88har"]
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="13_fmplx"]
 [ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="13_hba8v"]
 [ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="14_wy0jw"]
@@ -86,19 +89,32 @@ script = ExtResource("1_mjkcf")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("1_s0435")
+texture = ExtResource("2_as0bo")
 
-[node name="Plant" parent="." instance=ExtResource("2_72lyy")]
-position = Vector2(988, 678)
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 467.0
+offset_right = 1008.0
+offset_bottom = 563.0
+texture = ExtResource("3_isv1i")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = 1102.0
+offset_top = 25.0
+offset_right = 1587.0
+offset_bottom = 363.0
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("4_maiep")
+expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
-offset_left = 1318.0
-offset_top = 14.0
-offset_right = 1791.0
-offset_bottom = 604.0
+offset_left = 519.0
+offset_top = 39.0
+offset_right = 992.0
+offset_bottom = 629.0
 theme_override_colors/font_color = Color(0, 0.968627, 0, 1)
 theme_override_fonts/font = ExtResource("3_48ksc")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 33
 text = "Name: Pflanzus Latein
 Wissenschaftliche Name: Rose
 Funfacts: 
@@ -114,65 +130,78 @@ Bodenfeuchtigkeit: 50 ml
 Insektenbefall: 10 Insekten"
 
 [node name="Temperature" type="Node2D" parent="."]
-position = Vector2(432, 684)
+position = Vector2(1213, 478)
 script = ExtResource("9_jhkj6")
-metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Temperature"]
+offset_left = -183.0
+offset_top = -194.0
+offset_right = 483.0
+offset_bottom = 125.0
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("7_7g7gv")
 
 [node name="40" type="Area2D" parent="Temperature"]
-position = Vector2(-524, -610)
+position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/40"]
-polygon = PackedVector2Array(420, 575, 409, 611, 349, 611, 362, 554)
+position = Vector2(12, -3)
+polygon = PackedVector2Array(420, 574, 415, 596, 379, 596, 389, 562)
 
 [node name="35" type="Area2D" parent="Temperature"]
-position = Vector2(-524, -610)
+position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/35"]
-polygon = PackedVector2Array(420, 570, 449, 531, 407, 486, 365, 548)
+position = Vector2(9, 26)
+polygon = PackedVector2Array(427, 538, 444, 513, 418, 489, 398, 524)
 
 [node name="30" type="Area2D" parent="Temperature"]
-position = Vector2(-524, -610)
+position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/30"]
-polygon = PackedVector2Array(454, 530, 482, 511, 459, 452, 411, 483)
+position = Vector2(3, 29)
+polygon = PackedVector2Array(457, 506, 481, 488, 471, 453, 429, 482)
 
 [node name="25" type="Area2D" parent="Temperature"]
-position = Vector2(-524, -610)
+position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/25"]
-polygon = PackedVector2Array(487, 509, 522, 503, 520, 438, 464, 450)
+position = Vector2(4, 10)
+polygon = PackedVector2Array(491, 505, 517, 499, 516, 460, 476, 469)
 
 [node name="20" type="Area2D" parent="Temperature"]
-position = Vector2(-524, -610)
+position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/20"]
-polygon = PackedVector2Array(530, 437, 586, 449, 563, 509, 528, 503)
+position = Vector2(3, 10)
+polygon = PackedVector2Array(525, 461, 567, 468, 551, 505, 524, 499)
 
 [node name="15" type="Area2D" parent="Temperature"]
-position = Vector2(-524, -610)
+position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/15"]
-polygon = PackedVector2Array(590, 451, 656, 499, 610, 537, 568, 510)
+position = Vector2(1, 26)
+polygon = PackedVector2Array(573, 456, 616, 484, 589, 507, 561, 490)
 
 [node name="10" type="Area2D" parent="Temperature"]
-position = Vector2(-524, -610)
+position = Vector2(-522, -621)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/10"]
-polygon = PackedVector2Array(611, 542, 629, 568, 685, 544, 658, 502)
+position = Vector2(-3, 16)
+polygon = PackedVector2Array(599, 520, 620, 547, 642, 536, 623, 501)
 
 [node name="5" type="Area2D" parent="Temperature"]
-position = Vector2(-1, 9)
+position = Vector2(1, -2)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temperature/5"]
-position = Vector2(-521, -622)
-polygon = PackedVector2Array(626, 575, 640, 614, 698, 613, 685, 553)
+position = Vector2(-538, -621)
+polygon = PackedVector2Array(638, 570, 642, 595, 669, 592, 660, 561)
 
 [node name="TemperatureRegulator" type="Sprite2D" parent="Temperature"]
-position = Vector2(-1, 6)
-rotation = 1.29479
-scale = Vector2(0.616034, 0.590414)
+position = Vector2(4.99999, -7)
+rotation = 1.29154
+scale = Vector2(0.588608, 0.590414)
 texture = ExtResource("9_r43fh")
-metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="Temperature/TemperatureRegulator"]
 
@@ -181,10 +210,10 @@ position = Vector2(1.62329, 1.69373)
 shape = SubResource("CircleShape2D_jmua4")
 
 [node name="Pointer" type="Area2D" parent="Temperature"]
-position = Vector2(1, -99)
+position = Vector2(6, -4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Temperature/Pointer"]
-position = Vector2(0, -66.5)
+position = Vector2(0, -71)
 shape = SubResource("RectangleShape2D_n7qwd")
 
 [node name="Hover" type="AudioStreamPlayer" parent="Temperature"]
@@ -193,34 +222,34 @@ volume_db = 3.0
 bus = &"SFX_UI"
 
 [node name="Watering Can" parent="." instance=ExtResource("4_cx1dw")]
-position = Vector2(1598, 883)
+position = Vector2(1420, 851)
 
 [node name="Insect Spray" parent="." instance=ExtResource("6_61pj5")]
-position = Vector2(1358, 876)
+position = Vector2(367, 840)
 
 [node name="Humidity" type="Node2D" parent="."]
-position = Vector2(355, 262)
+position = Vector2(1160, 146)
 metadata/_edit_group_ = true
 
 [node name="PlusHumidity" type="TextureButton" parent="Humidity"]
-offset_left = 176.0
-offset_top = -79.0
-offset_right = 246.0
-offset_bottom = -9.0
-texture_normal = ExtResource("7_2n4t6")
+offset_left = 156.0
+offset_top = -99.0
+offset_right = 261.0
+offset_bottom = 6.0
+texture_normal = ExtResource("12_8dru7")
 
 [node name="MinusHumidity" type="TextureButton" parent="Humidity"]
-offset_left = -127.0
-offset_top = -74.0
-offset_right = -57.0
-offset_bottom = -4.0
-texture_normal = ExtResource("8_lti52")
+offset_left = -160.0
+offset_top = -104.0
+offset_right = -55.0
+offset_bottom = 1.0
+texture_normal = ExtResource("13_88har")
 
 [node name="Label" type="Label" parent="Humidity" groups=["HumidityText"]]
-offset_left = -33.0
-offset_top = -83.0
-offset_right = 146.0
-offset_bottom = -4.0
+offset_left = -37.0
+offset_top = -87.0
+offset_right = 142.0
+offset_bottom = -8.0
 theme_override_colors/font_color = Color(0, 0.968627, 0, 1)
 theme_override_fonts/font = ExtResource("3_48ksc")
 theme_override_font_sizes/font_size = 101
@@ -248,6 +277,10 @@ texture_pressed = ExtResource("13_hba8v")
 texture_hover = ExtResource("14_wy0jw")
 
 [node name="PlantMarker" type="Marker2D" parent="." groups=["PlantMarker"]]
+
+[node name="Plant" parent="." instance=ExtResource("2_72lyy")]
+position = Vector2(949, 733)
+scale = Vector2(0.6, 0.69)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

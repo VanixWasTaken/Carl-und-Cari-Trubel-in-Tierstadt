@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfjslfnkgjmsh"
-path="res://.godot/imported/kaktus tod.png-4bddd6dfd0603c663d6c164e0b3a995a.ctex"
+uid="uid://buabb0yksrix4"
+path="res://.godot/imported/button_plus.png-20cd481b6aa4e01d042b17c0d16b6114.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/kaktus tod.png"
-dest_files=["res://.godot/imported/kaktus tod.png-4bddd6dfd0603c663d6c164e0b3a995a.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/button_plus.png"
+dest_files=["res://.godot/imported/button_plus.png-20cd481b6aa4e01d042b17c0d16b6114.ctex"]
 
 [params]
 
