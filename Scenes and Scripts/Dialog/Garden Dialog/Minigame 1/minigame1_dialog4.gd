@@ -39,6 +39,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 3:
+		$"../VoiceOver".stop()
 		Global.dialog_playing = false
 		GlobalGarden.last_finished_minigame == "CuttingGame"
 		get_tree().get_first_node_in_group("Animator").play("fade_out")

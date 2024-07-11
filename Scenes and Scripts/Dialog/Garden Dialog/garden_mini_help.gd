@@ -51,10 +51,12 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 3 and GlobalGarden.garden_mini_help_button_state == 0:
+		$"../VoiceOver".stop()
 		Global.dialog_playing = false
 		queue_free()
 	
 	elif dialogs == 4 and !GlobalGarden.garden_mini_help_button_state == 0:
+		$"../VoiceOver".stop()
 		Global.dialog_playing = false
 		queue_free()
 ##########################################################################################

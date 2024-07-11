@@ -44,6 +44,7 @@ func _ready():
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################
 	if dialogs == 17:
+		$"../VoiceOver".stop()
 		Global.dialog_playing = false
 		GlobalGarden.should_enter_minigame1 = true
 		queue_free()
