@@ -25,6 +25,7 @@ func _process(delta):
 		if can_enter:
 			%Click.play()
 			$"../Player"._get_clicked_object(building_name, scene_name)
+			Global.pause_opened = false
 
 
 # handles the input for clicking on the house to enter the level

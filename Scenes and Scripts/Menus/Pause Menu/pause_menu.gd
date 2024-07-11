@@ -10,11 +10,11 @@ func _input(event):
 	if event.is_action_pressed("escape"):
 		if get_tree().get_current_scene().name == "Map":
 			Global.menu_open = false
-			self.visible = false
+			visible = false
 		else:
 			Global.pause_opened = false
 			Global.menu_open = false
-			self.queue_free()
+			queue_free()
 
 #region ########### Sound for Local Buttons ###############
 func _button_hovered():

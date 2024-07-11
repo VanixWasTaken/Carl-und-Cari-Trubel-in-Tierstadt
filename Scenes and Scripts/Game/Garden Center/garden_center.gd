@@ -19,6 +19,7 @@ var player
 
 
 func _ready():
+	Global.pause_opened = false
 	MusicController._play_music("peace_and_tranquility", "garden_center", -21)
 	Global.last_scene = "GardenCenter"
 	player = get_tree().get_first_node_in_group("Player")
@@ -44,6 +45,7 @@ func _ready():
 	SaveSystem.save_game()
 
 func _process(_delta):
+	print(Global.pause_opened)
 	if !Global.cutscene_playing:
 		if $Player.position.x <= 19.5 and $Player.position.x >= -19.5:
 			$Camera3D.position.x = $Player.position.x
