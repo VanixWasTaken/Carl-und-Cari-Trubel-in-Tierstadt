@@ -144,6 +144,11 @@ func load_game():
 		GlobalGarden.bushs_placed = node_data["BushsPlaced"]
 		GlobalGarden.current_stage = node_data["CurrentStage" ]
 		GlobalGarden.stage2_correct_specs = node_data["Stage2CorrectSpecs"]
+		
+		_set_bus_volume(0, Global.master_volume)
+		_set_bus_volume(1, Global.dialog_volume)
+		_set_bus_volume(2, Global.sfx_volume)
+		_set_bus_volume(3, Global.music_volume)
 
 
 func clear_dict(): # Is used for overwriting the whole save game file on the computer to an empty dictionary. So it basically deletes the save 
@@ -151,3 +156,8 @@ func clear_dict(): # Is used for overwriting the whole save game file on the com
 	var empty_dict : Dictionary = {}
 	var json_string = JSON.stringify(empty_dict)
 	clear_dict.store_line(json_string)
+
+
+func _set_bus_volume(bus_index: int, value: float): #### helper function to set the last saved volume
+	AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
+	AudioServer.set_bus_mute(bus_index, value < 0.01)
