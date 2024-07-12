@@ -504,7 +504,7 @@ frame_progress = 0.656502
 [node name="ChameleonFoley" type="AudioStreamPlayer3D" parent="Objects/Chameleon"]
 stream = ExtResource("30_1cvbp")
 unit_size = 50.0
-max_db = 0.0
+max_db = -3.0
 autoplay = true
 max_distance = 65.0
 panning_strength = 0.5
