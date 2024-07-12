@@ -5,6 +5,7 @@ var selected_something : bool = false
 signal block_input
 signal release_input
 
+var path
 
 func _on_star_pressed():
 	$"../Stars".play()
@@ -60,7 +61,7 @@ func _on_weiter_button_pressed():
 	$"../Click".play()
 	if !selected_something:
 		$Solutions/NoSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Quiz/vo_npc_chameleon_quiz_no_answer_selected.mp3")
+		$"../VoiceOver".stream = load(path + "no_answer_selected.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout
@@ -68,7 +69,7 @@ func _on_weiter_button_pressed():
 		emit_signal("release_input")
 	elif selected_something:
 		$Solutions/RightSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Quiz/vo_npc_chameleon_quiz_well_done.mp3")
+		$"../VoiceOver".stream = load(path + "well_done.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout

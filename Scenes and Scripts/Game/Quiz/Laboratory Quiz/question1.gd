@@ -12,6 +12,10 @@ var box3_checked : bool = false
 signal block_input
 signal release_input
 
+var path
+
+func _ready():
+	pass
 
 func _process(delta):
 	if $Answer1/Answer1Button.is_pressed() == true:
@@ -43,7 +47,7 @@ func _on_weiter_button_pressed():
 		$Answer1/Label.add_theme_color_override("font_color", Color(0.8,0,0))
 		$Answer1/Answer1Button.set_disabled(true)
 		$Solutions/WrongSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Quiz/vo_npc_chameleon_quiz_incorrect.mp3")
+		$"../VoiceOver".stream = load(path + "incorrect.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout
@@ -54,7 +58,7 @@ func _on_weiter_button_pressed():
 		$Answer3/Label.add_theme_color_override("font_color", Color(0.8,0,0))
 		$Answer3/Answer3Button.set_disabled(true)
 		$Solutions/WrongSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Quiz/vo_npc_chameleon_quiz_incorrect.mp3")
+		$"../VoiceOver".stream = load(path + "incorrect.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout
@@ -63,7 +67,7 @@ func _on_weiter_button_pressed():
 	elif answer2_pressed and !box1_checked and box2_checked and !box3_checked:
 		$Answer2/Label.add_theme_color_override("font_color", Color(0,0.8,0))
 		$Solutions/RightSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Quiz/vo_npc_chameleon_quiz_correct.mp3")
+		$"../VoiceOver".stream = load(path + "correct.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout
@@ -72,7 +76,7 @@ func _on_weiter_button_pressed():
 		$".".queue_free()
 	elif !box1_checked and !box2_checked and !box3_checked:
 		$Solutions/NoSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Quiz/vo_npc_chameleon_quiz_no_answer_selected.mp3")
+		$"../VoiceOver".stream = load(path + "no_answer_selected.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout

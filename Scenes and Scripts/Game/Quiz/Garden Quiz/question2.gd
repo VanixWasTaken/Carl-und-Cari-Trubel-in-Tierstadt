@@ -1,5 +1,6 @@
 extends TextureRect
 
+var path
 
 ###### Variables for lemon
 var mouse_inside : bool = false
@@ -127,7 +128,7 @@ func _on_soap_area_2d_area_exited(area):
 func _on_weiter_button_pressed():
 	if $Lemon.global_position == Vector2(1231, 726) and $Soap.global_position == Vector2(1231, 457):
 		$Solutions/RightSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Quiz/Laboratory/vo_npc_chameleon_quiz_correct.mp3")
+		$"../VoiceOver".stream = load(path + "correct.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout
@@ -136,7 +137,7 @@ func _on_weiter_button_pressed():
 		$".".queue_free()
 	elif $Lemon.global_position == Vector2(317, 457) or $Soap.global_position == Vector2(322, 787):
 		$Solutions/NoSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Quiz/Laboratory/vo_npc_chameleon_quiz_sort_objects.mp3")
+		$"../VoiceOver".stream = load(path + "sort_objects.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout
@@ -144,7 +145,7 @@ func _on_weiter_button_pressed():
 		emit_signal("release_input")
 	else:
 		$Solutions/WrongSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Quiz/Laboratory/vo_npc_chameleon_quiz_incorrect.mp3")
+		$"../VoiceOver".stream = load(path + "incorrect.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout
