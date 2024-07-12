@@ -22,7 +22,7 @@ func _on_weiter_button_pressed():
 	if !answer2_pressed and !answer3_pressed and answer4_pressed and !answer5_pressed and answer6_pressed and answer7_pressed:
 		correct_answer = true
 		$Solutions/RightSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Quiz/Laboratory/vo_npc_chameleon_quiz_correct.mp3")
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Quiz/vo_npc_chameleon_quiz_correct.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout
@@ -31,7 +31,7 @@ func _on_weiter_button_pressed():
 		$".".queue_free()
 	if !answer2_pressed and !answer3_pressed and !answer4_pressed and !answer5_pressed and !answer6_pressed and !answer7_pressed:
 		$Solutions/NoSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Quiz/Laboratory/vo_npc_chameleon_quiz_no_answer_selected.mp3")
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Quiz/vo_npc_chameleon_quiz_no_answer_selected.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout
@@ -39,7 +39,7 @@ func _on_weiter_button_pressed():
 		emit_signal("release_input")
 	elif !correct_answer:
 		$Solutions/WrongSolution.show()
-		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Map/Quiz/Laboratory/vo_npc_chameleon_quiz_incorrect.mp3")
+		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Quiz/vo_npc_chameleon_quiz_incorrect.mp3")
 		$"../VoiceOver".play()
 		emit_signal("block_input")
 		await get_tree().create_timer(2).timeout
