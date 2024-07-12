@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdwwenvyj4dgc"
+path="res://.godot/imported/vo_npc_gorilla_quiz_enter_text.mp3-c6e61124fcf73d2a0977640e543ef9a7.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Quiz/vo_npc_gorilla_quiz_enter_text.mp3"
+dest_files=["res://.godot/imported/vo_npc_gorilla_quiz_enter_text.mp3-c6e61124fcf73d2a0977640e543ef9a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

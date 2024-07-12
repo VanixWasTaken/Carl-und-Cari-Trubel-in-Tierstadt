@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d01u3t2p5huik"
+path="res://.godot/imported/vo_npc_gorilla_quiz_well_done.mp3-9d9db98d68a498863ca0f4351c59b228.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/Garden Center/Quiz/vo_npc_gorilla_quiz_well_done.mp3"
+dest_files=["res://.godot/imported/vo_npc_gorilla_quiz_well_done.mp3-9d9db98d68a498863ca0f4351c59b228.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
