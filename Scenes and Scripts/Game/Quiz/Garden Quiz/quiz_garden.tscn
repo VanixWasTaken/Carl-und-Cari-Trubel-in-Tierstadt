@@ -24,8 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://dhax6i23j7k5p" path="res://Assets/Art/Environment/Quiz/quiz_question3_garden_scissors.png" id="22_ovs4s"]
 [ext_resource type="Texture2D" uid="uid://dgdio4aqc2t3b" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_toothbrush.png" id="23_spg2m"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Garden Quiz/question2.gd" id="24_5vf07"]
-[ext_resource type="Texture2D" uid="uid://fd6xqqniebfs" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/soil/soil.png" id="25_nma1p"]
-[ext_resource type="Texture2D" uid="uid://bvntfuk1naqsj" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sand/sand.png" id="26_k23hm"]
+[ext_resource type="Texture2D" uid="uid://cfjvwxeoxqr05" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sac_sand.png" id="25_qy2rg"]
+[ext_resource type="Texture2D" uid="uid://cfg41t2lkybvf" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sac_clay.png" id="26_q5tbg"]
 [ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="27_syaqf"]
 [ext_resource type="Texture2D" uid="uid://bgdlnyeqc8271" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/celery.png" id="27_u41gf"]
 [ext_resource type="Texture2D" uid="uid://cp0m8l5ouqiqo" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/cactus1.png" id="27_vjlr5"]
@@ -48,10 +48,10 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ka8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bslay"]
-size = Vector2(368.076, 282)
+size = Vector2(500, 406)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ecj0j"]
-size = Vector2(368, 238)
+size = Vector2(582, 426)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ad64"]
 size = Vector2(141, 199)
@@ -618,24 +618,24 @@ texture = SubResource("CompressedTexture2D_6ka8r")
 [node name="PhScale14" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale14" groups=["PhScaleAreas"]]
-position = Vector2(314.557, 104)
-shape = SubResource("RectangleShape2D_bslay")
-
 [node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale14"]
-position = Vector2(264.557, -226)
-texture = ExtResource("25_nma1p")
+position = Vector2(216.557, -208)
+texture = ExtResource("25_qy2rg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale14" groups=["PhScaleAreas"]]
+position = Vector2(210.557, 202)
+shape = SubResource("RectangleShape2D_bslay")
 
 [node name="PhScale13" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 55)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale13" groups=["PhScaleAreas"]]
-position = Vector2(138.557, -409)
-shape = SubResource("RectangleShape2D_ecj0j")
-
 [node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale13"]
-position = Vector2(30.557, 169)
-texture = ExtResource("26_k23hm")
+position = Vector2(212.557, 177)
+texture = ExtResource("26_q5tbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale13" groups=["PhScaleAreas"]]
+position = Vector2(206.557, -287)
+shape = SubResource("RectangleShape2D_ecj0j")
 
 [node name="Lemon" type="Node2D" parent="Question2"]
 position = Vector2(314, 496)
@@ -756,7 +756,6 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question1" type="TextureRect" parent="."]
-visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_0p5ej")
