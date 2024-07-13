@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://skc43dl2o124"]
+[gd_scene load_steps=57 format=3 uid="uid://skc43dl2o124"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Intro Cutscene/intro_cutscene.gd" id="1_jfymc"]
 [ext_resource type="Texture2D" uid="uid://caklkhjnajqs1" path="res://Assets/Art/Cutscenes/Intro Cutsene/cutscene_frame8.png" id="2_ldyjv"]
@@ -31,6 +31,7 @@
 [ext_resource type="AudioStream" uid="uid://v1j3pusr7vyi" path="res://Assets/Sound/SFX/Foley/World/sfx_foley_world_nailing_poster_cutscene.mp3" id="28_i63ya"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="29_bq3xu"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="30_645e1"]
+[ext_resource type="AudioStream" uid="uid://dq16tittw385v" path="res://Assets/Sound/SFX/Foley/World/sfx_world_foley_rain.mp3" id="30_mxmxn"]
 [ext_resource type="AudioStream" uid="uid://crddvii1q3egk" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var2.mp3" id="31_f5y7t"]
 [ext_resource type="AudioStream" uid="uid://c8hfjs6trma73" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var1.mp3" id="32_u1fo4"]
 [ext_resource type="AudioStream" uid="uid://2rj1ayk1kdtp" path="res://Assets/Sound/SFX/UI/Click/sfx_hub_ui_click_var2.mp3" id="33_yu2kf"]
@@ -453,6 +454,12 @@ bus = &"SFX_Foley"
 
 [node name="NailingPoster" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("28_i63ya")
+bus = &"SFX_Foley"
+
+[node name="RainSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_mxmxn")
+volume_db = -4.0
+autoplay = true
 bus = &"SFX_Foley"
 
 [node name="Alpha Label" type="Label" parent="."]
