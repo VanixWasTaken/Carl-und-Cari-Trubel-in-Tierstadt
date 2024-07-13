@@ -44,7 +44,7 @@ func _ready():
 		
 	Global.last_scene = "Laboratory"
 	Global.inside_laboratory = true
-	MusicController._play_music("titration_trap", "laboratory", -24)
+	MusicController._play_music("titration_trap", "laboratory", -21)
 	#Global.lab_cutscene_played = true
 	#Global.talked_to_chameleon = true
 	#Global.talked_to_chameleon_2 = true
