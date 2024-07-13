@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://budv1svk408d3"]
+[gd_scene load_steps=47 format=3 uid="uid://budv1svk408d3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_paeaj"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_0p5ej"]
@@ -24,8 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://dhax6i23j7k5p" path="res://Assets/Art/Environment/Quiz/quiz_question3_garden_scissors.png" id="22_ovs4s"]
 [ext_resource type="Texture2D" uid="uid://dgdio4aqc2t3b" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_toothbrush.png" id="23_spg2m"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Garden Quiz/question2.gd" id="24_5vf07"]
-[ext_resource type="Texture2D" uid="uid://cfjvwxeoxqr05" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sac_sand.png" id="25_qy2rg"]
-[ext_resource type="Texture2D" uid="uid://cfg41t2lkybvf" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sac_clay.png" id="26_q5tbg"]
 [ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="27_syaqf"]
 [ext_resource type="Texture2D" uid="uid://bgdlnyeqc8271" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/celery.png" id="27_u41gf"]
 [ext_resource type="Texture2D" uid="uid://cp0m8l5ouqiqo" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/cactus1.png" id="27_vjlr5"]
@@ -620,7 +618,6 @@ position = Vector2(269.443, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale14"]
 position = Vector2(216.557, -208)
-texture = ExtResource("25_qy2rg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale14" groups=["PhScaleAreas"]]
 position = Vector2(210.557, 202)
@@ -631,7 +628,6 @@ position = Vector2(269.443, 55)
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale13"]
 position = Vector2(212.557, 177)
-texture = ExtResource("26_q5tbg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale13" groups=["PhScaleAreas"]]
 position = Vector2(206.557, -287)

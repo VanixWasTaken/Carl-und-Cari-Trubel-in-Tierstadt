@@ -102,7 +102,7 @@ func add_right_dialog_box():
 		short_node_text.text = "*Krach Bumm Donk*"
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Umgebung"
-		$"../VoiceOver".stream = load("res://Assets/Sound/SFX/Foley/Garden Center/vo_sfx_garden_center_foley_dialog_1_1.mp3")
+		$"../VoiceOver".stream = load("res://Assets/Sound/SFX/Foley/Garden Center/vo_sfx_garden_center_foley_dialog_1_1_var2.mp3")
 		$"../VoiceOver".play()
 		dialogs += 1
 		same_speaker = true
