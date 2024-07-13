@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://drdpdo2jnglf1"]
+[gd_scene load_steps=13 format=3 uid="uid://drdpdo2jnglf1"]
 
-[ext_resource type="Texture2D" uid="uid://dcpbewvkkohqi" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/barkmulch/barkmulch.png" id="1_e5l5m"]
-[ext_resource type="Texture2D" uid="uid://cmavl5sdy6f18" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/barkmulch/barkmulch_selected.png" id="2_k2y7r"]
+[ext_resource type="Texture2D" uid="uid://dofvi5ropu5gr" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sac_silty_earth.png" id="1_3o3ni"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/soil.gd" id="3_n50fa"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="4_h8vhd"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="5_mgf64"]
@@ -15,10 +14,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_e5l5m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_k2y7r")
+"texture": ExtResource("1_3o3ni")
 }],
 "loop": true,
 "name": &"default",
@@ -26,7 +22,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmlo3"]
-size = Vector2(288, 191)
+size = Vector2(621.667, 426.667)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rnp8l"]
 streams_count = 3
@@ -39,13 +35,14 @@ stream_2/weight = 1.0
 
 [node name="Schluffboden" type="AnimatedSprite2D"]
 position = Vector2(1708, 252)
+scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_kw0ga")
 script = ExtResource("3_n50fa")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-13, 2.5)
+position = Vector2(0.83374, -15)
 shape = SubResource("RectangleShape2D_rmlo3")
 
 [node name="InformationLabel" type="Node2D" parent="."]

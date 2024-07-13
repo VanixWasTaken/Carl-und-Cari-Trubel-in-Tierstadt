@@ -66,16 +66,16 @@ texture = ExtResource("2_6jlhk")
 [node name="Soils" type="Node2D" parent="."]
 
 [node name="Soil1" parent="Soils" instance=ExtResource("3_6fhl2")]
-position = Vector2(1703, 461)
+position = Vector2(1700, 678)
 
 [node name="Soil2" parent="Soils" instance=ExtResource("4_ptr2u")]
-position = Vector2(1705, 713)
+position = Vector2(1712, 954)
 
 [node name="Soil3" parent="Soils" instance=ExtResource("5_1qdyn")]
-position = Vector2(1710, 981)
+position = Vector2(1706, 152)
 
 [node name="Soil4" parent="Soils" instance=ExtResource("6_u6i24")]
-position = Vector2(1678, 165)
+position = Vector2(1706, 418)
 
 [node name="Plants" type="Node2D" parent="."]
 
