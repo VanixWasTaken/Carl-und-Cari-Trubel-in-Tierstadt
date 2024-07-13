@@ -193,6 +193,9 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite3D" parent="Player" index="2"]
 sorting_offset = 15.0
 
+[node name="Footsteps" parent="Player" index="6"]
+max_db = -6.0
+
 [node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 19.5, 8.289, 13.05)
 current = true
@@ -326,7 +329,7 @@ shape = SubResource("BoxShape3D_cdh4m")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_o5lhw")
-volume_db = -15.0
+volume_db = -12.0
 autoplay = true
 bus = &"SFX_Ambience"
 
@@ -335,6 +338,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.305732, 4.70141, -6.3986)
 stream = ExtResource("9_m2mp1")
 volume_db = -6.0
 unit_size = 50.0
+max_db = 6.0
 autoplay = true
 max_distance = 65.0
 panning_strength = 0.5
@@ -346,6 +350,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.305732, 4.70141, -6.3986)
 stream = ExtResource("10_f8ftx")
 volume_db = -6.0
 unit_size = 50.0
+max_db = 6.0
 autoplay = true
 max_distance = 65.0
 panning_strength = 0.5
@@ -357,7 +362,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.305732, 3.46205, 2.2345)
 stream = ExtResource("11_s1qpx")
 volume_db = -12.0
 unit_size = 50.0
-max_db = 0.0
 autoplay = true
 max_distance = 50.0
 panning_strength = 0.5
@@ -491,7 +495,7 @@ shape = SubResource("BoxShape3D_8jp4s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9563, 16.7862, -1.67016)
 volume_db = -6.0
 unit_size = 20.0
-max_db = -3.0
+max_db = 0.0
 max_distance = 65.0
 panning_strength = 0.25
 bus = &"SFX_Foley"
