@@ -619,26 +619,26 @@ texture = SubResource("CompressedTexture2D_6ka8r")
 position = Vector2(269.443, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale14" groups=["PhScaleAreas"]]
-position = Vector2(228.557, 193)
+position = Vector2(314.557, 104)
 shape = SubResource("RectangleShape2D_bslay")
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale14"]
-position = Vector2(210.557, -292)
+position = Vector2(264.557, -226)
 texture = ExtResource("25_nma1p")
 
 [node name="PhScale13" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale13" groups=["PhScaleAreas"]]
-position = Vector2(210.557, -341)
+position = Vector2(138.557, -409)
 shape = SubResource("RectangleShape2D_ecj0j")
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale13"]
-position = Vector2(212.557, 145)
+position = Vector2(30.557, 169)
 texture = ExtResource("26_k23hm")
 
 [node name="Lemon" type="Node2D" parent="Question2"]
-position = Vector2(317, 457)
+position = Vector2(314, 496)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Lemon"]
@@ -667,7 +667,7 @@ position = Vector2(257.256, -0.375)
 shape = SubResource("RectangleShape2D_tayap")
 
 [node name="Soap" type="Node2D" parent="Question2"]
-position = Vector2(322, 787)
+position = Vector2(313, 751)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Soap"]
@@ -756,6 +756,7 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question1" type="TextureRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_0p5ej")
