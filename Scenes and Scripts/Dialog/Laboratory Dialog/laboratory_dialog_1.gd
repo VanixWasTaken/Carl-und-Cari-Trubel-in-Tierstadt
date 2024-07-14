@@ -134,7 +134,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "H-H-Hallo, ich b-b-bin hier."
+		short_node_text.text = "Ha-Hallo, ich b-bin hier."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "???"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory01_var1.mp3")
@@ -146,7 +146,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich s-s-stehe hier hinten, auf der a-a-anderen Seite des Raums! Komm doch k-k-kurz zu mir."
+		short_node_text.text = "I-Ich stehe hier hinten, a-a-auf der anderen Seite des Raums! Komm doch k-kurz zu mir."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "???"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory02_var1.mp3")

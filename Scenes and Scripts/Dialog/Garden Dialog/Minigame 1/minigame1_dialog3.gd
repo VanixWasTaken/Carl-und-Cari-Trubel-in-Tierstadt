@@ -83,7 +83,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Gute Arbeit. Die Pflanze ist wieder präsentabel."
+		short_node_text.text = "Gute Arbeit! Die Pflanze ist wieder präsentabel."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Garden Center/Guido/vo_npc_guido_snipping_dialog_12.mp3")

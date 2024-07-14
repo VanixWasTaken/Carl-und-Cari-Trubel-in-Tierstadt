@@ -122,7 +122,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ohje, d-d-das hat leider nicht ganz funktioniert..."
+		short_node_text.text = "Ohje, d-das hat leider nicht ganz funktioniert..."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_fail_01.mp3")
@@ -134,7 +134,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ja, d-d-der pH-Wert ist nicht der gleiche den ich d-d-dir gesagt habe."
+		short_node_text.text = "Ja, d-d-der p-pH-Wert ist nicht ganz der Gleiche, den ich dir gesagt habe."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_fail_03.mp3")
@@ -147,7 +147,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Er m-m-müsste zwischen 5 und 7 liegen, also zwischen d-d-diesen beiden Linien hier."
+		short_node_text.text = "Er m-m-müsste zwischen 5 und 7 liegen, also zwischen diesen beiden Linien hier."
 		# hier highlighten wo die area ist in der der pfeil sein muss bei der ph-scala :)
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
@@ -163,7 +163,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Okay, wir h-h-haben ja n-n-noch mehr von den Chemikalien."
+		short_node_text.text = "Okay, wir haben ja noch mehr von den Chemikalien."
 		# hier highlighten wo die area ist in der der pfeil sein muss bei der ph-scala :)
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"

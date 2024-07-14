@@ -126,7 +126,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Perfekt! D-d-der pH-Wert ist zwischen 5 und 7. D-d-das heißt wir können sie benutzen!"
+		short_node_text.text = "Perfekt! D-d-der p-p-pH-Wert ist zwischen 5 und 7. D-d-das heißt wir können sie benutzen!"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_win_01.mp3")
@@ -138,7 +138,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ja, j-j-jetzt ist der pH-Wert nämlich gleich wie der von meiner Haut."
+		short_node_text.text = "Ja, j-jetzt ist der p-p-pH-Wert nämlich gleich wie der von meiner Haut."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_win_03.mp3")

@@ -91,7 +91,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Und die wären?"
+		short_node_text.text = "Und... die wären?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		$"../VoiceOver".stream = load(carl_path + "05.mp3")
@@ -115,7 +115,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Jetzt wo wir den theoretischen Teil kennen, können wir ja auch mit der praktischen Arbeit anfangen. Was genau müssen wir jetzt machen?"
+		short_node_text.text = "Jetzt wo wir den theoretischen Teil können, können wir ja auch mit der praktischen Arbeit anfangen. Was genau müssen wir jetzt machen?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		$"../VoiceOver".stream = load(cari_path + "10.mp3")
@@ -252,7 +252,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Eure Aufgabe ist es die Äste und Büschel von der Pflanze abzutrennen, die kränklich oder unpassend aussehen."
+		short_node_text.text = "Eure Aufgabe ist es, die Äste und Büschel von der Pflanze abzutrennen, die kränklich oder unpassend aussehen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		$"../VoiceOver".stream = load(guido_path + "11_var2.mp3")

@@ -184,6 +184,7 @@ func add_right_dialog_box():
 
 
 func _on_skip_button_pressed():
+	$"../VoiceOver".stop()
 	var short_node = get_child(1)
 	$SkipButton.visible = false
 	short_node.queue_free()

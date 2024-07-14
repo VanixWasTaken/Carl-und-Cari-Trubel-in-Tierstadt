@@ -66,7 +66,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "So, das wars. Die Pflanzen sehen wieder Tip-Top aus."
+		short_node_text.text = "So, das wars. Die Pflanzen sehen wieder tip-top aus." ## tip top ist ein adjektiv
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		$"../VoiceOver".stream = load(carl_path + "3_01.mp3")
@@ -184,7 +184,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Jedoch sind Zweige, die wild wachsen keineswegs die einzigen Beeinträchtigungen die Pflanzen in ihrem Leben überwinden müssen."
+		short_node_text.text = "Jedoch sind Zweige, die wild wachsen, keineswegs die einzige Beeinträchtigung die Pflanzen in ihrem Leben überwinden müssen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		$"../VoiceOver".stream = load(guido_path + "3_02_var2.mp3")
@@ -220,8 +220,8 @@ func add_right_dialog_box():
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Temperatur, Luftfeuchtigkeit, Lichtintensität, Pflanzendiebe, Bodenfeuchtigkeit, Insekten, Luftdruck, um ein paar Beispiele zu geben."
+		var short_node_name = short_node.get_child(3).get_child(0) ## muss luftdruck hier trennen sonst passt das nicht in die box
+		short_node_text.text = "Temperatur, Luftfeuchtigkeit, Lichtintensität, Pflanzendiebe, Bodenfeuchtigkeit, Insekten und Luft- druck, um ein paar Beispiele zu geben."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		$"../VoiceOver".stream = load(guido_path + "3_08.mp3")

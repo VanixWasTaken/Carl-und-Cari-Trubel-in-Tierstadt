@@ -40,10 +40,10 @@ func _ready():
 	PRESET3 = Samuel
 	if Global.completed_jobs. size() != 0:
 		if Global.completed_jobs[0] == "Laboratory Building":
-			next_job = "der Gärtnerei"
+			next_job = "von der Gärtnerei"
 			audio_job = "garden"
 		else:
-			next_job = "dem Chemielabor"
+			next_job = "vom Chemielabor"
 			audio_job = "laboratory"
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
@@ -245,7 +245,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich habe gehört, dass meine Gitarristin zuletzt in der Nähe von " + next_job + " gesehen wurde."
+		short_node_text.text = "Ich habe gehört, dass meine Gitarristin zuletzt in der Nähe " + next_job + " gesehen wurde."
 		short_node_rect.texture = PRESET3
 		short_node_name.text = "Samuel Samtpfote"
 		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Samuel/vo_npc_samuel_map_bandmembers_02_10_" + audio_job + ".mp3")

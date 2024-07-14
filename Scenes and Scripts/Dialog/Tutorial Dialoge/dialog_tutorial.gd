@@ -69,7 +69,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ist ja gut, bin ja gleich so weit, hast du meinen Schlüssel irgendwo gesehen?"
+		short_node_text.text = "Ist ja gut, ich bin ja gleich so weit, hast du meinen Schlüssel irgendwo gesehen?"
 		short_node_rect.texture = PRESET1
 		dialogs += 1
 		if Global.character == "Carl":

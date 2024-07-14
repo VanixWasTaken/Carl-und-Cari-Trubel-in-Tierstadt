@@ -92,7 +92,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das haben wir schon mitbekommen. Also Fackeln wir nicht lange rum. Was können wir für dich tun?"
+		short_node_text.text = "Das haben wir schon mitbekommen. Also fackeln wir nicht lange rum. Was können wir für dich tun?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		$"../VoiceOver".stream = load(cari_path + "2_8.mp3")
@@ -105,7 +105,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Warte, was? Warum brauchst du Bananen? Ich dachte wir sollen dir helfen das Fest vorzubereiten?"
+		short_node_text.text = "Warte, was? Warum brauchst du Bananen? Ich dachte wir sollen dir helfen das Fest vorzubereiten."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		$"../VoiceOver".stream = load(carl_path + "2_10.mp3")
@@ -237,7 +237,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Als erste Handlung könnt ihr mir erstmal einen Bündel Bananen bringen."
+		short_node_text.text = "Als erste Handlung könnt ihr mir erstmal ein Bündel Bananen bringen."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		$"../VoiceOver".stream = load(guido_path + "2_9.mp3")
@@ -260,8 +260,8 @@ func add_right_dialog_box():
 		var short_node = get_child(2)
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Als erstes müsst ihr ihr euch in die hintere rechte Ecke des Raumes begeben und dort die Pflanzen schneiden."
+		var short_node_name = short_node.get_child(3).get_child(0) ## als erstes schreibt man hier groß ich hab nachgeschlagen
+		short_node_text.text = "Als Erstes müsst ihr ihr euch in die hintere rechte Ecke des Raumes begeben und dort die Pflanzen schneiden."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		$"../VoiceOver".stream = load(guido_path + "2_13.mp3")
@@ -281,6 +281,7 @@ func add_right_dialog_box():
 
 
 func _on_skip_button_pressed():
+	$"../VoiceOver".stop()
 	var short_node = get_child(1)
 	$SkipButton.visible = false
 	short_node.queue_free()

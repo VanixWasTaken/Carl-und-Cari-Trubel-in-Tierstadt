@@ -60,14 +60,14 @@ func add_left_dialog_box():
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
 		if Global.character == "Carl":
-			short_node_text.text = "Hilf Carl dabei seine Schlüssel wieder zu finden."
+			short_node_text.text = "Hilf Carl dabei, seine Schlüssel wieder zu finden."
 			short_node_rect.texture = PRESET2
 			short_node_name.text = "Cari"
 			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Help/vo_npc_cari_tutorialhelp01_var1.mp3")
 			$"../Voice Over".play()
 			dialogs += 1
 		elif Global.character == "Cari":
-			short_node_text.text = "Hilf Cari dabei ihre Schlüssel wieder zu finden."
+			short_node_text.text = "Hilf Cari dabei, ihre Schlüssel wieder zu finden."
 			short_node_rect.texture = PRESET1
 			short_node_name.text = "Carl"
 			$"../Voice Over".stream = load("res://Assets/Sound/VO/Tutorial/Help/vo_npc_carl_tutorialhelp01_var1.mp3")

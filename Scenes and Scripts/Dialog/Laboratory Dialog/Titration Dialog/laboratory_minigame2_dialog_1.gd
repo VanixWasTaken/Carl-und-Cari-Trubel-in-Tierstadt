@@ -184,7 +184,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Der pH-Wert ist eine Skala von 1 bis 14, die uns sagt, wie sauer oder basisch eine Flüssigkeit ist."
+		short_node_text.text = "Der p-p-pH-Wert ist eine Skala von 1 bis 14, die uns sagt, wie sauer oder basisch eine Flüssigkeit ist."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_06.mp3")
@@ -210,7 +210,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Stoffe mit einem pH-Wert unter 7 sind sauer, während Stoffe mit einem pH-Wert über 7 basisch sind."
+		short_node_text.text = "Stoffe mit einem p-p-pH-Wert unter 7 sind sauer, während Stoffe mit einem p-p-pH-Wert über 7 basisch sind."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_09.mp3")
@@ -223,7 +223,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Eine Zitrone hat einen sehr niedrigen pH-Wert, deswegen schmeckt sie so sauer."
+		short_node_text.text = "Eine Zitrone hat einen sehr niedrigen p-p-pH-Wert, deswegen schmeckt sie so sauer."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_01_10.mp3")

@@ -105,7 +105,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das sind Laborkittel, die g-g-gehören zur Schutzausrüstung."
+		short_node_text.text = "Das ist ein Laborkittel, der g-g-gehört zur Schutzausrüstung."
 		if !Global.return_laboratory_3:
 			short_node_rect.texture = PRESET2
 		else:
@@ -121,7 +121,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Genau, denn sie m-m-müssen unseren ganzen Körper vor G-G-Gefahrenstoffen schützen."
+		short_node_text.text = "Genau, denn sie m-m-müssen unseren ganzen Körper vor Gefahrenstoffen schützen."
 		if !Global.return_laboratory_3:
 			short_node_rect.texture = PRESET2
 		else:

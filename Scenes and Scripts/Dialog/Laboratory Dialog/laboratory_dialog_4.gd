@@ -90,7 +90,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Was kommt als nächstes?"
+		short_node_text.text = "Was kommt als Nächstes?"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = Global.character
 		$"../VoiceOver".stream = load(path + "dialog_4_3.mp3")
@@ -139,7 +139,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "V-V-Vielen Dank. Das war schon w-w-wieder sehr gute Arbeit."
+		short_node_text.text = "V-V-Vielen Dank. Das war schon wieder sehr gute Arbeit."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_4_1.mp3")
@@ -151,7 +151,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Als nächstes k-k-kommt schon der letzte Schritt. Ihr m-m-müsst mich nur noch mit der Mischung absprühen."
+		short_node_text.text = "Als Nächstes k-k-kommt schon der letzte Schritt. Ihr m-m-müsst mich nur noch mit der Mischung absprühen."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_4_4.mp3")
@@ -165,7 +165,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Wenn meine B-B-Berechnungen richtig sind, sollte ich dann wieder s-s-sichtbar werden."
+		short_node_text.text = "Wenn meine B-Berechnungen richtig sind, sollte ich dann wieder s-s-sichtbar werden."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_dialog_4_5.mp3")

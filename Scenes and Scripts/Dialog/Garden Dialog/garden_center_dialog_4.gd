@@ -88,7 +88,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Was müssen wir denn als nächstes machen?"
+		short_node_text.text = "Was müssen wir denn als Nächstes machen?"
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Cari"
 		$"../VoiceOver".stream = load(cari_path + "4_05.mp3")
@@ -195,7 +195,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das stimmt so nicht ganz. Es gibt zwar Pflanzen, die fast überall wachsen können wie zum Beispiel Löwenzahn."
+		short_node_text.text = "Das stimmt so nicht ganz. Es gibt zwar Pflanzen, die fast überall wachsen können wie zum Beispiel Löwenzahn..."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		$"../VoiceOver".stream = load(guido_path + "4_09_var1.mp3")
@@ -208,7 +208,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Aber viele Pflanzen benötigen einen besonderen Boden um gedeihen zu können."
+		short_node_text.text = "...aber viele Pflanzen benötigen einen besonderen Boden um gedeihen zu können."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		$"../VoiceOver".stream = load(guido_path + "4_09_var2.mp3")
@@ -232,7 +232,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Ich erklär euch, wofür die genutzt werden und ihr sucht dann den richtigen aus."
+		short_node_text.text = "Ich erklär euch, wofür die genutzt werden und ihr sucht dann den Richtigen aus."
 		short_node_rect.texture = PRESET4
 		short_node_name.text = "Guido"
 		$"../VoiceOver".stream = load(guido_path + "4_10_var2.mp3")
@@ -260,6 +260,7 @@ func add_right_dialog_box():
 
 
 func _on_skip_button_pressed():
+	$"../VoiceOver".stop()
 	var short_node = get_child(1)
 	$SkipButton.visible = false
 	short_node.queue_free()

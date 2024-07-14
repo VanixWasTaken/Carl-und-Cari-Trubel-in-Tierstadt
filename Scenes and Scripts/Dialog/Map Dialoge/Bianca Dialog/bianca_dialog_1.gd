@@ -85,7 +85,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Das haben wir! Sie ist wieder sichtbar wie eine Leuchtturm Lampe bei Nacht!"
+		short_node_text.text = "Das haben wir! Sie ist wieder sichtbar wie eine Leuchtturm-Lampe bei Nacht!"
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_01_04.mp3")
@@ -97,7 +97,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Erdbeeren?"
+		short_node_text.text = "Erdbeeren!                         "
 		short_node_rect.texture = PRESET1
 		short_node_name.text = "Carl"
 		$"../Voice Over".stream = load("res://Assets/Sound/VO/Map/Carl/vo_pc_carl_map_bandmembers_01_07.mp3")
@@ -223,12 +223,16 @@ func _on_skip_button_pressed():
 	$SkipButton.visible = false
 	short_node.queue_free()
 	if dialog_side == "left" and !finished and same_speaker:
+		$"../Voice Over".stop()
 		add_left_dialog_box()
 	elif dialog_side == "left" and !finished:
+		$"../Voice Over".stop()
 		add_right_dialog_box()
 	elif dialog_side == "right" and !finished and same_speaker:
+		$"../Voice Over".stop()
 		add_right_dialog_box()
 	elif dialog_side == "right" and !finished:
+		$"../Voice Over".stop()
 		add_left_dialog_box()
 	await get_tree().create_timer(1).timeout
 	$SkipButton.visible = true

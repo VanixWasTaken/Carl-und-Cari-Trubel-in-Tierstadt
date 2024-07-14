@@ -120,7 +120,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Okay, jetzt w-w-wirds spannend, wir müssen dafür sorgen dass der pH-Wert im Bereich z-z-zwischen 5 bis 7 bleibt."
+		short_node_text.text = "Okay, jetzt w-w-wirds spannend, wir müssen dafür sorgen dass der p-p-pH-Wert im Bereich zwischen 5 und 7 bleibt."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_02_01.mp3")
@@ -132,7 +132,7 @@ func add_right_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Hier r-r-rechts ist die Skala des pH-Werts, diese sollte im Bereich zwischen 5 und 7 bleiben."
+		short_node_text.text = "Hier rechts ist die Skala des p-p-pH-Werts, diese sollte im Bereich zwischen 5 und 7 bleiben."
 		short_node_rect.texture = PRESET2
 		short_node_name.text = "Christina"
 		$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Chameleon/vo_npc_chameleon_laboratory_titration_02_03.mp3")
