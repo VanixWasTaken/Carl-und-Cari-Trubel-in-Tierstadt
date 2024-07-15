@@ -28,6 +28,7 @@ func _ready():
 	if Global.comes_from_savefile:
 		if !Global.return_laboratory_1:
 			$Camera3D.global_position.x = 19.5
+			$"NPC Chameleon".show()
 
 		Global.cutscene_playing = false
 		Global.dialog_playing = false
