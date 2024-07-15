@@ -34,7 +34,7 @@ shape = SubResource("RectangleShape2D_v03cg")
 
 [node name="InformationLabel" type="Node2D" parent="."]
 visible = false
-position = Vector2(273, -52)
+position = Vector2(-20, 10)
 scale = Vector2(2, 2)
 metadata/_edit_group_ = true
 

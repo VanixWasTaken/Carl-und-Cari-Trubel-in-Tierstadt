@@ -63,30 +63,30 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_6jlhk")
 
-[node name="Soils" type="Node2D" parent="."]
-
-[node name="Soil1" parent="Soils" instance=ExtResource("3_6fhl2")]
-position = Vector2(1700, 678)
-
-[node name="Soil2" parent="Soils" instance=ExtResource("4_ptr2u")]
-position = Vector2(1712, 954)
-
-[node name="Soil3" parent="Soils" instance=ExtResource("5_1qdyn")]
-position = Vector2(1706, 152)
-
-[node name="Soil4" parent="Soils" instance=ExtResource("6_u6i24")]
-position = Vector2(1706, 418)
-
 [node name="Plants" type="Node2D" parent="."]
 
 [node name="Sonnenblume" parent="Plants" instance=ExtResource("7_g52wn")]
-position = Vector2(173, 235)
+position = Vector2(1472, 671)
 
 [node name="Apfelbaum" parent="Plants" instance=ExtResource("8_r2wdh")]
-position = Vector2(173, 546)
+position = Vector2(948, 690)
 
 [node name="Sellerie" parent="Plants" instance=ExtResource("9_bnkew")]
-position = Vector2(330, 797)
+position = Vector2(421, 657)
+
+[node name="Soils" type="Node2D" parent="."]
+
+[node name="Soil1" parent="Soils" instance=ExtResource("3_6fhl2")]
+position = Vector2(1259, 157)
+
+[node name="Soil2" parent="Soils" instance=ExtResource("4_ptr2u")]
+position = Vector2(1720, 157)
+
+[node name="Soil3" parent="Soils" instance=ExtResource("5_1qdyn")]
+position = Vector2(239, 157)
+
+[node name="Soil4" parent="Soils" instance=ExtResource("6_u6i24")]
+position = Vector2(739, 157)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

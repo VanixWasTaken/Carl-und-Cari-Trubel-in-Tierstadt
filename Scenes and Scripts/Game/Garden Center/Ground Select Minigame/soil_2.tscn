@@ -48,7 +48,8 @@ shape = SubResource("RectangleShape2D_rmlo3")
 
 [node name="InformationLabel" type="Node2D" parent="."]
 visible = false
-position = Vector2(-435, -144)
+position = Vector2(-198.333, 356.667)
+scale = Vector2(2, 2)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="InformationLabel"]
