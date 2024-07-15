@@ -12,7 +12,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("left_click") && mouse_on:
+	if Input.is_action_just_pressed("left_click") && mouse_on && !Global.dialog_playing:
 		$Click.play()
 		if correct_soil:
 			$Correct.play()
@@ -28,10 +28,11 @@ func _process(delta):
 
 
 func _on_area_2d_mouse_entered():
-	$Hover.play()
-	frame = 1
-	mouse_on = true
-	$InformationLabel.show()
+	if Global.dialog_playing == false:
+		$Hover.play()
+		frame = 1
+		mouse_on = true
+		$InformationLabel.show()
 
 
 func _on_area_2d_mouse_exited():

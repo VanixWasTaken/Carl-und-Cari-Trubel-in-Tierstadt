@@ -3,10 +3,10 @@ extends AnimatedSprite2D
 var mouse_on = false
 
 func _on_area_2d_mouse_entered():
-	$Hover.play()
-	frame = 1
-	mouse_on = true
-	$InformationLabel.show()
+	if Global.dialog_playing == false:
+		$Hover.play()
+		mouse_on = true
+		$InformationLabel.show()
 
 
 func _on_area_2d_mouse_exited():
