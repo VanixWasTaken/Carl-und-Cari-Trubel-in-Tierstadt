@@ -9,12 +9,16 @@ func _ready():
 	match sprite_num:
 		0:
 			$AnimatedSprite2D.play("insect_1")
+			$AnimationPlayer.play("moving_" + str(randi_range(1, 4)))
 		1:
 			$AnimatedSprite2D.play("insect_2")
+			$AnimationPlayer.play("moving_" + str(randi_range(1, 4)))
 		2:
 			$AnimatedSprite2D.play("insect_3")
+			$AnimationPlayer.play("moving_" + str(randi_range(1, 4)))
 		3:
 			$AnimatedSprite2D.play("insect_4")
+			$AnimationPlayer.play("moving_" + str(randi_range(1, 4)))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
