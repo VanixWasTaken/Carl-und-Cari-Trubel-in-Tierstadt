@@ -106,26 +106,30 @@ func _on_open_notes_button_up():
 		note_open = true
 		Global.menu_open = true
 		if Global.job_stars_dict.size() > 0:
-			if Global.job_stars_dict["ChemistJob"] == 1:
-				$JobNoteMenu/ChemistNoteSmall/Stars.texture = one_star
-			elif Global.job_stars_dict["ChemistJob"] == 2:
-				$JobNoteMenu/ChemistNoteSmall/Stars.texture = two_star
-			elif Global.job_stars_dict["ChemistJob"] == 3:
-				$JobNoteMenu/ChemistNoteSmall/Stars.texture = three_star
-			elif Global.job_stars_dict["ChemistJob"] == 4:
-				$JobNoteMenu/ChemistNoteSmall/Stars.texture = four_star
-			elif Global.job_stars_dict["ChemistJob"] == 5:
-				$JobNoteMenu/ChemistNoteSmall/Stars.texture = five_star
-			if Global.job_stars_dict["GardenJob"] == 1:
-				$JobNoteMenu/ChemistNoteSmall/Stars.texture = one_star
-			elif Global.job_stars_dict["GardenJob"] == 2:
-				$JobNoteMenu/ChemistNoteSmall/Stars.texture = two_star
-			elif Global.job_stars_dict["GardenJob"] == 3:
-				$JobNoteMenu/ChemistNoteSmall/Stars.texture = three_star
-			elif Global.job_stars_dict["GardenJob"] == 4:
-				$JobNoteMenu/ChemistNoteSmall/Stars.texture = four_star
-			elif Global.job_stars_dict["GardenJob"] == 5:
-				$JobNoteMenu/ChemistNoteSmall/Stars.texture = five_star
+			print(Global.job_stars_dict)
+			for jobs in Global.job_stars_dict:
+				if jobs == "ChemistJob":
+					if Global.job_stars_dict["ChemistJob"] == 1:
+						$JobNoteMenu/ChemistNoteSmall/Stars.texture = one_star
+					elif Global.job_stars_dict["ChemistJob"] == 2:
+						$JobNoteMenu/ChemistNoteSmall/Stars.texture = two_star
+					elif Global.job_stars_dict["ChemistJob"] == 3:
+						$JobNoteMenu/ChemistNoteSmall/Stars.texture = three_star
+					elif Global.job_stars_dict["ChemistJob"] == 4:
+						$JobNoteMenu/ChemistNoteSmall/Stars.texture = four_star
+					elif Global.job_stars_dict["ChemistJob"] == 5:
+						$JobNoteMenu/ChemistNoteSmall/Stars.texture = five_star
+				elif jobs == "GardenJob":
+					if Global.job_stars_dict["GardenJob"] == 1:
+						$JobNoteMenu/ChemistNoteSmall/Stars.texture = one_star
+					elif Global.job_stars_dict["GardenJob"] == 2:
+						$JobNoteMenu/ChemistNoteSmall/Stars.texture = two_star
+					elif Global.job_stars_dict["GardenJob"] == 3:
+						$JobNoteMenu/ChemistNoteSmall/Stars.texture = three_star
+					elif Global.job_stars_dict["GardenJob"] == 4:
+						$JobNoteMenu/ChemistNoteSmall/Stars.texture = four_star
+					elif Global.job_stars_dict["GardenJob"] == 5:
+						$JobNoteMenu/ChemistNoteSmall/Stars.texture = five_star
 
 
 
