@@ -6,7 +6,15 @@ var in_danger = false
 @export var sprite_num : int
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimatedSprite2D.frame = sprite_num
+	match sprite_num:
+		0:
+			$AnimatedSprite2D.play("insect_1")
+		1:
+			$AnimatedSprite2D.play("insect_2")
+		2:
+			$AnimatedSprite2D.play("insect_3")
+		3:
+			$AnimatedSprite2D.play("insect_4")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
