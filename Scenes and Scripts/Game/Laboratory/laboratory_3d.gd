@@ -30,6 +30,7 @@ func _ready():
 		if !Global.return_laboratory_1:
 			$Camera3D.global_position.x = 19.5
 			$"NPC Chameleon".show()
+			$"NPC Chameleon/AnimatedSprite3D".show()
 
 		Global.cutscene_playing = false
 		Global.dialog_playing = false
