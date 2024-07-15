@@ -9,7 +9,8 @@ var mouse_inside_big_note = false
 var outline_shader = preload("res://Shader/outline.tres")
 var no_shader = preload("res://Shader/no_shader.tres")
 var open_note1 = 0
-var chemist_note = preload("res://Assets/Art/UI/HUD/Map/job_note_image.jpg")
+var chemist_note = preload("res://Assets/Art/UI/HUD/Map/chemist_note_image.jpg")
+var gardener_note = preload("res://Assets/Art/UI/HUD/Map/gardener_note_image.jpg")
 var one_star  = preload("res://Assets/Art/UI/HUD/Map/Stars/profile_stars1.png")
 var two_star  = preload("res://Assets/Art/UI/HUD/Map/Stars/profile_stars2.png")
 var three_star  = preload("res://Assets/Art/UI/HUD/Map/Stars/profile_stars3.png")
@@ -146,7 +147,7 @@ func _on_open_notes_mouse_exited():
 
 func _on_gardener_download_button_up():
 	$DownloadExplanation.visible = true
-	downloadFile(chemist_note, "Chemielabor-Informationen.jpg")
+	downloadFile(gardener_note, "Gärtnerei-Informationen.jpg")
 
 
 func _on_open_profile_button_up():

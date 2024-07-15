@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://cu3p2pxcohnld"
+path="res://.godot/imported/gardener_note_image.jpg-a6fbf24b0c95cc85e12d96901e5132ce.image"
+
+[deps]
+
+source_file="res://Assets/Art/UI/HUD/Map/gardener_note_image.jpg"
+dest_files=["res://.godot/imported/gardener_note_image.jpg-a6fbf24b0c95cc85e12d96901e5132ce.image"]
+
+[params]
+
