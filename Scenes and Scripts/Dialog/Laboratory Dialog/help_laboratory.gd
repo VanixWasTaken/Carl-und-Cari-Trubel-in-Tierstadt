@@ -50,7 +50,12 @@ func _ready():
 
 func _process(delta):
 ################################  PUT DIALOG NUMBER HERE  ################################	
-	if dialogs == 3:
+	if dialogs == 3 and !Global.laboratory_help_button_state == 3:
+		$"../VoiceOver".stop()
+		Global.dialog_playing = false
+		queue_free()
+	
+	elif dialogs == 4:
 		$"../VoiceOver".stop()
 		Global.dialog_playing = false
 		queue_free()
@@ -126,26 +131,51 @@ func add_left_dialog_box():
 			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_3.mp3")
 			$"../VoiceOver".play()
 			dialogs += 1
+			
 	
-	if dialogs == 1 and Global.laboratory_help_button_state == 3:
-		var short_node = get_child(1)
-		var short_node_text = short_node.get_child(0)
-		var short_node_rect = short_node.get_child(1)
-		var short_node_name = short_node.get_child(3).get_child(0)
-		if Global.character == "Carl":
-			short_node_text.text = "Hole die Mischungen vom Tisch."
-			short_node_rect.texture = PRESET2
-			short_node_name.text = "Cari"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_4.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
-		elif Global.character == "Cari":
-			short_node_text.text = "Hole die Mischungen vom Tisch."
-			short_node_rect.texture = PRESET1
-			short_node_name.text = "Carl"
-			$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_4.mp3")
-			$"../VoiceOver".play()
-			dialogs += 1
+	elif Global.laboratory_help_button_state == 3:
+		if dialogs == 1:
+			var short_node = get_child(1)
+			var short_node_text = short_node.get_child(0)
+			var short_node_rect = short_node.get_child(1)
+			var short_node_name = short_node.get_child(3).get_child(0)
+			if Global.character == "Carl":
+				short_node_text.text = "Hole die Mischungen vom Tisch."
+				short_node_rect.texture = PRESET2
+				short_node_name.text = "Cari"
+				$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_4.mp3")
+				$"../VoiceOver".play()
+				same_speaker = true
+				dialogs += 1
+			elif Global.character == "Cari":
+				short_node_text.text = "Hole die Mischungen vom Tisch."
+				short_node_rect.texture = PRESET1
+				short_node_name.text = "Carl"
+				$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_4.mp3")
+				$"../VoiceOver".play()
+				same_speaker = true
+				dialogs += 1
+		elif dialogs == 2:
+			var short_node = get_child(2)
+			var short_node_text = short_node.get_child(0)
+			var short_node_rect = short_node.get_child(1)
+			var short_node_name = short_node.get_child(3).get_child(0)
+			if Global.character == "Carl":
+				short_node_text.text = "Trage die Mischungen zur Laborabzugshaube. Die ist links in die Wand eingelassen."
+				short_node_rect.texture = PRESET2
+				short_node_name.text = "Cari"
+				$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Cari/NPC/vo_npc_cari_laboratory_help_5.mp3")
+				$"../VoiceOver".play()
+				same_speaker = false
+				dialogs += 1
+			elif Global.character == "Cari":
+				short_node_text.text = "Trage die Mischungen zur Laborabzugshaube. Die ist links in die Wand eingelassen."
+				short_node_rect.texture = PRESET1
+				short_node_name.text = "Carl"
+				$"../VoiceOver".stream = load("res://Assets/Sound/VO/Laboratory/Carl/NPC/vo_npc_carl_laboratory_help_5.mp3")
+				$"../VoiceOver".play()
+				same_speaker = false
+				dialogs += 1
 	
 	if dialogs == 1 and Global.laboratory_help_button_state == 4:
 		var short_node = get_child(1)
@@ -260,7 +290,10 @@ func add_right_dialog_box():
 	$".".add_child(node)
 	dialog_side = "right"
 ##################################  WRITE DIALOG HERE  ###################################
-	if dialogs == 2:
+	if dialogs == 2 and !Global.laboratory_help_button_state == 3:
+		dialogs += 1
+	
+	elif dialogs == 3:
 		dialogs += 1
 ##########################################################################################
 
