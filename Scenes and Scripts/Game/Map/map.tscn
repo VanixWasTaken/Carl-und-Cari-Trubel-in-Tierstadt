@@ -1,18 +1,18 @@
-[gd_scene load_steps=80 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=79 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
 [ext_resource type="Texture2D" uid="uid://p003wtefrdrs" path="res://Assets/Art/Environment/Map/Big Map/map_no_lab_no_gardencenter.png" id="2_0t1vf"]
-[ext_resource type="Texture2D" uid="uid://dgeyaw3nd5erx" path="res://Assets/Art/Environment/Map/Big Map/map_animation001.png" id="2_350vm"]
+[ext_resource type="Texture2D" uid="uid://bs5orug6buco1" path="res://Assets/Art/Environment/Map/Big Map/map_animation001.png" id="2_350vm"]
 [ext_resource type="PackedScene" uid="uid://dctfgv4bxknm4" path="res://Scenes and Scripts/Game/Map/Buildings/laboratory_building.tscn" id="2_ab8es"]
 [ext_resource type="Texture2D" uid="uid://dmwffc2jjwf8m" path="res://Assets/Art/Environment/Map/fairground/map_fireworks1.png" id="3_oe0ft"]
-[ext_resource type="Texture2D" uid="uid://dmidpa8vukw55" path="res://Assets/Art/Environment/Map/Big Map/map_animation002.png" id="3_s6dct"]
+[ext_resource type="Texture2D" uid="uid://ca0n7eatvfna4" path="res://Assets/Art/Environment/Map/Big Map/map_animation002.png" id="3_s6dct"]
 [ext_resource type="Texture2D" uid="uid://junv40vhknop" path="res://Assets/Art/Environment/Map/fairground/map_fireworks2.png" id="4_1ukqo"]
-[ext_resource type="Texture2D" uid="uid://dhp1qaonavtys" path="res://Assets/Art/Environment/Map/Big Map/map_animation003.png" id="4_6jngu"]
+[ext_resource type="Texture2D" uid="uid://jllsm60pia6l" path="res://Assets/Art/Environment/Map/Big Map/map_animation003.png" id="4_6jngu"]
 [ext_resource type="Texture2D" uid="uid://ct21gx2j251qv" path="res://Assets/Art/Environment/Map/fairground/map_poles.png" id="5_o2ljt"]
 [ext_resource type="Texture2D" uid="uid://crrhnurucid3q" path="res://Assets/Art/Particles/Clouds/bg_cloud_main1.png" id="5_ok451"]
-[ext_resource type="Texture2D" uid="uid://buhjcnfap0e3" path="res://Assets/Art/Environment/Map/Big Map/map_animation004.png" id="5_p7e4k"]
+[ext_resource type="Texture2D" uid="uid://1e1ife6f0ptg" path="res://Assets/Art/Environment/Map/Big Map/map_animation004.png" id="5_p7e4k"]
 [ext_resource type="PackedScene" uid="uid://reaek0i8ei2g" path="res://Scenes and Scripts/Menus/Pause Menu/pause_menu.tscn" id="5_q8qp1"]
-[ext_resource type="Texture2D" uid="uid://dvyq1gpfcw4re" path="res://Assets/Art/Environment/Map/Big Map/map_animation005.png" id="6_jjj2r"]
+[ext_resource type="Texture2D" uid="uid://ctk2jjfcwkixn" path="res://Assets/Art/Environment/Map/Big Map/map_animation005.png" id="6_jjj2r"]
 [ext_resource type="PackedScene" uid="uid://bhb5312a6xrce" path="res://Scenes and Scripts/Game/Map/Buildings/garden_center_map.tscn" id="7_fpr7h"]
 [ext_resource type="Texture2D" uid="uid://bbop2qlcrhqd5" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button.png" id="8_fe5cr"]
 [ext_resource type="Texture2D" uid="uid://b8fkioc55ls28" path="res://Assets/Art/Particles/leaf.png" id="8_w5011"]
@@ -44,7 +44,6 @@
 [ext_resource type="PackedScene" uid="uid://cwwvy0q003fg7" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/barbara_npc.tscn" id="32_683wj"]
 [ext_resource type="PackedScene" uid="uid://2d2fjj4yd732" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/sven_npc.tscn" id="33_nmhjc"]
 [ext_resource type="PackedScene" uid="uid://cfoesiummvma2" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_and_barbara.tscn" id="34_clinu"]
-[ext_resource type="Texture2D" uid="uid://bxpck0dk267i4" path="res://Assets/Art/UI/HUD/Map/chemist_note.png" id="37_7cveg"]
 [ext_resource type="Texture2D" uid="uid://bnp15vxbd7j0o" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof1.png" id="38_45lni"]
 [ext_resource type="Texture2D" uid="uid://cqsgr47ctm5ry" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof2.png" id="39_f5aq0"]
 [ext_resource type="Texture2D" uid="uid://bc6tyunen4shb" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof3.png" id="40_askvk"]
@@ -858,7 +857,6 @@ texture = ExtResource("15_jo7ff")
 z_index = 3
 position = Vector2(1054, 606)
 scale = Vector2(1.01, 1.01)
-texture = ExtResource("37_7cveg")
 
 [node name="QuitChemistBig" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D"]
 z_index = 3
