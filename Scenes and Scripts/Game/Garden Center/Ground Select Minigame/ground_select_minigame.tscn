@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://vnj4oyq32r4f"]
+[gd_scene load_steps=20 format=3 uid="uid://vnj4oyq32r4f"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/Ground Select Minigame/ground_select_minigame.gd" id="1_pcs28"]
 [ext_resource type="Texture2D" uid="uid://dw71sigk7h684" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/minigame_3_backround.png" id="2_6jlhk"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://d0lmco7mcudt" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_crow.mp3" id="12_m1eww"]
 [ext_resource type="AudioStream" uid="uid://buos730w4du22" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_birds.mp3" id="13_wvclg"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="14_rrlsn"]
+[ext_resource type="Texture2D" uid="uid://ds6xkiyo6dixn" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/cupboard.png" id="15_2ttod"]
 
 [sub_resource type="Animation" id="Animation_ltsux"]
 resource_name = "fade_in"
@@ -63,6 +64,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_6jlhk")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 352)
+scale = Vector2(1.13647, 1)
+texture = ExtResource("15_2ttod")
+
 [node name="Plants" type="Node2D" parent="."]
 
 [node name="Sonnenblume" parent="Plants" instance=ExtResource("7_g52wn")]
@@ -77,16 +83,16 @@ position = Vector2(421, 657)
 [node name="Soils" type="Node2D" parent="."]
 
 [node name="Soil1" parent="Soils" instance=ExtResource("3_6fhl2")]
-position = Vector2(1259, 157)
+position = Vector2(1244, 191)
 
 [node name="Soil2" parent="Soils" instance=ExtResource("4_ptr2u")]
-position = Vector2(1720, 157)
+position = Vector2(1713, 194)
 
 [node name="Soil3" parent="Soils" instance=ExtResource("5_1qdyn")]
-position = Vector2(239, 157)
+position = Vector2(253, 191)
 
 [node name="Soil4" parent="Soils" instance=ExtResource("6_u6i24")]
-position = Vector2(739, 157)
+position = Vector2(727, 192)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
