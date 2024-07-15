@@ -642,7 +642,7 @@ position = Vector2(206.557, -287)
 shape = SubResource("RectangleShape2D_ecj0j")
 
 [node name="Lemon" type="Node2D" parent="Question2"]
-position = Vector2(314, 496)
+position = Vector2(317, 457)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Lemon"]
@@ -671,7 +671,7 @@ position = Vector2(257.256, -0.375)
 shape = SubResource("RectangleShape2D_tayap")
 
 [node name="Soap" type="Node2D" parent="Question2"]
-position = Vector2(313, 751)
+position = Vector2(322, 787)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Soap"]
