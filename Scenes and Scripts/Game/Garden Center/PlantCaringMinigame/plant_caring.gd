@@ -171,12 +171,14 @@ func _on_texture_button_button_up():
 		get_tree().get_current_scene().add_child(new_plant)
 		next_dialog = dialog_2.instantiate()
 		get_tree().get_current_scene().add_child(next_dialog)
+		$Humidity/Label.text = str(current_air_wetness) + " %"
 	elif plants_done == 2:
 		new_plant.queue_free()
 		new_plant = plant_3.instantiate()
 		get_tree().get_current_scene().add_child(new_plant)
 		next_dialog = dialog_3.instantiate()
 		get_tree().get_current_scene().add_child(next_dialog)
+		$Humidity/Label.text = str(current_air_wetness) + " %"
 	elif plants_done == 3:
 		var dialog_instance = finished_dialog.instantiate()
 		next_dialog = dialog_4.instantiate()
