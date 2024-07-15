@@ -25,6 +25,7 @@ var picked_up_chemicals = false
 
 
 func _ready():
+	Global.pause_opened = false
 	if Global.comes_from_savefile:
 		if !Global.return_laboratory_1:
 			$Camera3D.global_position.x = 19.5

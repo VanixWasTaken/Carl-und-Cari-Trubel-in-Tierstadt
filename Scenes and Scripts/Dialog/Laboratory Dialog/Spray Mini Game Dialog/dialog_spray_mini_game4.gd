@@ -27,6 +27,7 @@ var Cari = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png
 
 
 func _ready():
+	Global.pause_opened = true
 	Global.moving_allowed = false
 	Global.dialog_playing= true
 	pc = Global.character

@@ -39,6 +39,7 @@ func _process(delta):
 	if dialogs == 4:
 		$"../VoiceOver".stop()
 		Global.dialog_playing = false
+		Global.pause_opened = true
 		queue_free()
 ##########################################################################################
 
