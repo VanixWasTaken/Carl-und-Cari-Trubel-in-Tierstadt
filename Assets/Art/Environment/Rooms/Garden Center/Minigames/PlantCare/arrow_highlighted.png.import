@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2piqrut8wcvw"
-path="res://.godot/imported/bienstock.png-5e93185e892a819d5864ad6856a27190.ctex"
+uid="uid://ysdhyq7skcij"
+path="res://.godot/imported/arrow_highlighted.png-be8cefc5758562c25d2ca8b9b3f64d9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/bienstock.png"
-dest_files=["res://.godot/imported/bienstock.png-5e93185e892a819d5864ad6856a27190.ctex"]
+source_file="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/arrow_highlighted.png"
+dest_files=["res://.godot/imported/arrow_highlighted.png-be8cefc5758562c25d2ca8b9b3f64d9e.ctex"]
 
 [params]
 

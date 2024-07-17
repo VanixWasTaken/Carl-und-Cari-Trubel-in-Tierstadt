@@ -30,7 +30,7 @@ func _ready():
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
 ##########################################################################################
-
+	get_parent().get_parent().get_child(7).queue_free() # deletes the Input Block inside GroundSelect, because without input block the player was able to open a plant description before the dialog started 
 
 
 

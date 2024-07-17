@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://f7184fce05kn"]
+[gd_scene load_steps=88 format=3 uid="uid://f7184fce05kn"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/laboratory_3d.gd" id="1_04svc"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="2_yggko"]
@@ -44,7 +44,6 @@
 [ext_resource type="Texture2D" uid="uid://bu77au5fg6uox" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle4.png" id="41_lcujt"]
 [ext_resource type="Texture2D" uid="uid://g6qm86oj3cu8" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle5.png" id="42_78jpp"]
 [ext_resource type="Texture2D" uid="uid://dqn1jv0dw72cf" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle6.png" id="43_kghmw"]
-[ext_resource type="Texture2D" uid="uid://d3cqi7ktho3iu" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_idle7.png" id="45_bg05y"]
 [ext_resource type="Texture2D" uid="uid://dwrx6424p83jb" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle2.png" id="45_xk2hr"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="45_xk025"]
 [ext_resource type="Texture2D" uid="uid://dj166nbgi7kjh" path="res://Assets/Art/Characters/Chemical Chameleon/Fullbody/Idle/chemist_color_idle3.png" id="46_4kun6"]
@@ -225,7 +224,7 @@ animations = [{
 "texture": ExtResource("43_kghmw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_bg05y")
+"texture": null
 }],
 "loop": true,
 "name": &"idle",

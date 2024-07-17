@@ -109,7 +109,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Geh in das Gartenhaus auf der Rückseite des Raums."
+		short_node_text.text = "Geh in das Gartenhaus auf der Rückseite des Raumes."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = help_name
 		$"../VoiceOver".stream = load(path + "4.mp3")
@@ -157,7 +157,7 @@ func add_left_dialog_box():
 		var short_node_text = short_node.get_child(0)
 		var short_node_rect = short_node.get_child(1)
 		var short_node_name = short_node.get_child(3).get_child(0)
-		short_node_text.text = "Benutze den Computer in der Mitte des Raums."
+		short_node_text.text = "Benutze den Computer in der Mitte des Raumes."
 		short_node_rect.texture = PRESET1
 		short_node_name.text = help_name
 		$"../VoiceOver".stream = load(path + "8.mp3")

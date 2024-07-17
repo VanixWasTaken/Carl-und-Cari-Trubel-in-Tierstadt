@@ -9,7 +9,6 @@ var job_buildings
 var player
 
 func _ready():
-	Global.menu_open = true
 	if Global.last_scene == "Laboratory":
 		$Player.global_position = Vector2(776, 2256)
 		var dialog_instance = after_lab_dialog.instantiate()
@@ -36,9 +35,6 @@ func _ready():
 			if jobs == "Laboratory Building":
 				$MapTest/Objects/Fireworks.show()
 				$HUD/JobNotes/JobNoteMenu/ChemistNoteSmall.show()
-	if Global.completed_jobs.size() >= 1:
-		$"HUD/Help Movement".queue_free()
-		Global.menu_open = false
 	
 	if Global.completed_jobs.size() == 1:
 		$Npcs/SamuelNPC.show()
@@ -56,11 +52,6 @@ func _input(event):
 			Global.pause_opened = true
 			Global.menu_open = true
 
-
-func _on_texture_button_button_up():
-	Global.menu_open = false
-	if $"HUD/Help Movement".visible == true:
-		$"HUD/Help Movement".queue_free()
 
 func _paper_hover():
 	var stream = AudioStreamRandomizer.new()

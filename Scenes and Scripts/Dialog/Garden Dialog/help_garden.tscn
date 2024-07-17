@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://resvpun25fo4"]
+[gd_scene load_steps=12 format=3 uid="uid://duif5lsi5oxd0"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Garden Dialog/help_garden.gd" id="1_88dxq"]
 [ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="2_rryqx"]

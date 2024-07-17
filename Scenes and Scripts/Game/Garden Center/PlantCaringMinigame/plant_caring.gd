@@ -88,12 +88,14 @@ func next_plant_ready():
 	current_plant_done = true
 	plants_done += 1
 	$TextureButton.show()
+	$InputBlock.show()
 	get_tree().get_first_node_in_group("Plants").frame = 1
 
 func messed_up_again():
 	current_plant_done = false
 	plants_done -= 1
 	$TextureButton.hide()
+	$InputBlock.hide()
 	get_tree().get_first_node_in_group("Plants").frame = 0
 	
 	
@@ -184,6 +186,7 @@ func _on_texture_button_button_up():
 		next_dialog = dialog_4.instantiate()
 		get_tree().get_current_scene().add_child(next_dialog)
 	$TextureButton.hide()
+	$InputBlock.hide()
 	current_plant_done = false
 
 

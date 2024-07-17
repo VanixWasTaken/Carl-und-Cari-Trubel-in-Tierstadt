@@ -107,7 +107,7 @@ func _on_finished_button_pressed():
 			if area.is_in_group("Items") and !area.get_name() == "Item":
 				area.queue_free()
 		GlobalGarden.current_stage += 1
-		var monitorables = get_parent().get_child(1).get_children()
+		var monitorables = get_parent().get_child(2).get_children()
 		for i in monitorables:
 			i.monitorable = true
 		GlobalGarden.plant_pots_placed = 0

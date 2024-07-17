@@ -13,14 +13,14 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Garden Center/PlantCaringMinigame/temperature.gd" id="9_jhkj6"]
 [ext_resource type="Texture2D" uid="uid://bp24i4cfoqioc" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/potentiometer.png" id="9_r43fh"]
 [ext_resource type="Texture2D" uid="uid://buabb0yksrix4" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/button_plus.png" id="12_8dru7"]
-[ext_resource type="Texture2D" uid="uid://b2gxkqhejx0ar" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button.png" id="12_spc17"]
 [ext_resource type="Texture2D" uid="uid://ciqjakx5ixijm" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/button_minus.png" id="13_88har"]
 [ext_resource type="Texture2D" uid="uid://b1cnehfemkycx" path="res://Assets/Art/UI/Hole.png" id="13_fmplx"]
-[ext_resource type="Texture2D" uid="uid://cnty107xvtuqv" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_dark.png" id="13_hba8v"]
-[ext_resource type="Texture2D" uid="uid://ct3w6scrg08y8" path="res://Assets/Art/UI/Buttons/Weiter Button/weiter_button_light.png" id="14_wy0jw"]
+[ext_resource type="Texture2D" uid="uid://bw2ulnnh05k0d" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/arrow.png" id="14_nwx6w"]
 [ext_resource type="AudioStream" uid="uid://bn8r5dj7kj5yh" path="res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3" id="14_yxeto"]
 [ext_resource type="AudioStream" uid="uid://d0lmco7mcudt" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_crow.mp3" id="15_va3qb"]
+[ext_resource type="Texture2D" uid="uid://ysdhyq7skcij" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/arrow_highlighted.png" id="15_x38x5"]
 [ext_resource type="AudioStream" uid="uid://buos730w4du22" path="res://Assets/Sound/SFX/Ambience/Garden/sfx_garden_center_ambience_birds.mp3" id="16_dlyjq"]
+[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="16_q43q4"]
 [ext_resource type="AudioStream" uid="uid://bkqyni6br8jm6" path="res://Assets/Sound/SFX/UI/Click/click.tres" id="17_n33ll"]
 [ext_resource type="AudioStream" uid="uid://dxvhcpnwfj8hq" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var1.mp3" id="18_s3cx3"]
 [ext_resource type="AudioStream" uid="uid://f86grv1pnrfl" path="res://Assets/Sound/SFX/Foley/Garden Center/sfx_garden_center_foley_tree_finished_var2.mp3" id="19_i84vy"]
@@ -86,25 +86,25 @@ stream_2/weight = 1.0
 [node name="Plant Caring" type="Node2D"]
 script = ExtResource("1_mjkcf")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_as0bo")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="Display1" type="TextureRect" parent="."]
 offset_left = 467.0
 offset_right = 1008.0
 offset_bottom = 563.0
-texture = ExtResource("3_isv1i")
+texture = ExtResource("4_maiep")
 expand_mode = 1
 
-[node name="TextureRect3" type="TextureRect" parent="."]
+[node name="Display2" type="TextureRect" parent="."]
 offset_left = 1102.0
 offset_top = 25.0
 offset_right = 1587.0
 offset_bottom = 363.0
 scale = Vector2(0.45, 0.45)
-texture = ExtResource("4_maiep")
+texture = ExtResource("3_isv1i")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
@@ -133,7 +133,7 @@ Insektenbefall: 10 Insekten"
 position = Vector2(1213, 478)
 script = ExtResource("9_jhkj6")
 
-[node name="TextureRect" type="TextureRect" parent="Temperature"]
+[node name="Temperature" type="TextureRect" parent="Temperature"]
 offset_left = -183.0
 offset_top = -194.0
 offset_right = 483.0
@@ -266,16 +266,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 1277.0
-offset_top = 374.0
-offset_right = 2189.0
-offset_bottom = 681.0
+offset_left = 1445.0
+offset_top = 342.0
+offset_right = 1877.0
+offset_bottom = 630.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("12_spc17")
-texture_pressed = ExtResource("13_hba8v")
-texture_hover = ExtResource("14_wy0jw")
+texture_normal = ExtResource("14_nwx6w")
+texture_hover = ExtResource("15_x38x5")
+flip_h = true
+
+[node name="Label" type="Label" parent="TextureButton"]
+offset_left = 49.0
+offset_top = 94.0
+offset_right = 271.0
+offset_bottom = 187.0
+theme_override_colors/font_color = Color(0.996078, 0.905882, 0.760784, 1)
+theme_override_fonts/font = ExtResource("16_q43q4")
+theme_override_font_sizes/font_size = 69
+text = " Weiter"
 
 [node name="PlantMarker" type="Marker2D" parent="." groups=["PlantMarker"]]
 
@@ -344,6 +353,28 @@ volume_db = -3.0
 bus = &"SFX_Foley"
 
 [node name="HelpButton" parent="." instance=ExtResource("22_f70yn")]
+
+[node name="InputBlock" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="InputBlock"]
+offset_right = 1920.0
+offset_bottom = 302.0
+mouse_filter = 0
+
+[node name="TextureRect2" type="TextureRect" parent="InputBlock"]
+offset_left = -1.0
+offset_top = 595.0
+offset_right = 1918.0
+offset_bottom = 1081.0
+mouse_filter = 0
+
+[node name="TextureRect3" type="TextureRect" parent="InputBlock"]
+offset_left = 1.0
+offset_top = 156.0
+offset_right = 1393.0
+offset_bottom = 749.0
+mouse_filter = 0
 
 [connection signal="area_entered" from="Temperature/40" to="." method="_on_40_area_entered"]
 [connection signal="area_entered" from="Temperature/35" to="." method="_on_35_area_entered"]

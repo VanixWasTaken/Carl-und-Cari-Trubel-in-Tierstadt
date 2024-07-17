@@ -148,25 +148,31 @@ offset_bottom = 1080.0
 texture = ExtResource("2_5460p")
 
 [node name="Trim1" parent="Tree2/Trims" index="0"]
-position = Vector2(2520, 552)
+position = Vector2(2759, 315)
 
 [node name="Trim2" parent="Tree2/Trims" index="1"]
-position = Vector2(2760, 408)
+position = Vector2(2671, 380)
 
 [node name="Trim3" parent="Tree2/Trims" index="2"]
-position = Vector2(2880, 136)
+position = Vector2(3107, 233)
+flip_v = true
+
+[node name="Trim3Area" parent="Tree2/Trims/Trim3" index="0"]
+position = Vector2(124.832, 32.8163)
 
 [node name="Trim4" parent="Tree2/Trims" index="3"]
-position = Vector2(3168, 456)
+position = Vector2(3090, 511)
 
 [node name="Trim5" parent="Tree2/Trims" index="4"]
-position = Vector2(2896, 352)
+position = Vector2(2870, 336)
+rotation = 5.45415
 
 [node name="Trim6" parent="Tree2/Trims" index="5"]
-position = Vector2(2752, 608)
+position = Vector2(2819, 530)
+rotation = 1.31772
 
 [node name="Trim7" parent="Tree2/Trims" index="6"]
-position = Vector2(3088, 304)
+position = Vector2(2858, 136)
 
 [node name="Tree3" parent="." instance=ExtResource("1_dwdq4")]
 offset_left = 3840.0
@@ -175,25 +181,28 @@ offset_bottom = 1080.0
 texture = ExtResource("4_kn8tn")
 
 [node name="Trim1" parent="Tree3/Trims" index="0"]
-position = Vector2(5032, 368)
+position = Vector2(5071, 321)
 
 [node name="Trim2" parent="Tree3/Trims" index="1"]
-position = Vector2(4640, 544)
+position = Vector2(4610, 374)
 
 [node name="Trim3" parent="Tree3/Trims" index="2"]
-position = Vector2(4688, 320)
+position = Vector2(4754, 417)
+rotation = -5.09462
 
 [node name="Trim4" parent="Tree3/Trims" index="3"]
 position = Vector2(4624, 128)
 
 [node name="Trim5" parent="Tree3/Trims" index="4"]
-position = Vector2(4880, 504)
+position = Vector2(4865, 174)
+rotation = 5.69326
 
 [node name="Trim6" parent="Tree3/Trims" index="5"]
-position = Vector2(4840, 168)
+position = Vector2(4648, 290)
+rotation = 0.71733
 
 [node name="Trim7" parent="Tree3/Trims" index="6"]
-position = Vector2(5168, 448)
+position = Vector2(5034, 471)
 
 [node name="CuttingTreeMinigameScissor" parent="." instance=ExtResource("2_00ekb")]
 position = Vector2(1272, 468)

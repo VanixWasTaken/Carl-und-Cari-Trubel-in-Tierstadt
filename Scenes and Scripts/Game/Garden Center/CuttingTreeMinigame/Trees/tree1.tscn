@@ -16,7 +16,7 @@ script = ExtResource("2_y2d03")
 [node name="Trims" type="Node" parent="."]
 
 [node name="Trim1" type="Sprite2D" parent="Trims"]
-position = Vector2(753, 595)
+position = Vector2(699, 541)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_1bfk1")
 region_enabled = true
@@ -31,7 +31,7 @@ monitorable = false
 shape = SubResource("CircleShape2D_8i3gn")
 
 [node name="Trim2" type="Sprite2D" parent="Trims"]
-position = Vector2(1339, 447)
+position = Vector2(1431, 329)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_1bfk1")
 region_enabled = true
@@ -46,8 +46,8 @@ monitorable = false
 shape = SubResource("CircleShape2D_8i3gn")
 
 [node name="Trim3" type="Sprite2D" parent="Trims"]
-position = Vector2(1019, 528)
-rotation = -5.09462
+position = Vector2(1058, 540)
+rotation = -3.17999
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_1bfk1")
 region_enabled = true
@@ -62,7 +62,7 @@ monitorable = false
 shape = SubResource("CircleShape2D_8i3gn")
 
 [node name="Trim4" type="Sprite2D" parent="Trims"]
-position = Vector2(1023, 96)
+position = Vector2(1079, 95)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_1bfk1")
 region_enabled = true
@@ -77,8 +77,8 @@ monitorable = false
 shape = SubResource("CircleShape2D_8i3gn")
 
 [node name="Trim5" type="Sprite2D" parent="Trims"]
-position = Vector2(869, 138)
-rotation = 5.09462
+position = Vector2(866, 81)
+rotation = 4.49597
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_1bfk1")
 region_enabled = true
@@ -93,7 +93,7 @@ monitorable = false
 shape = SubResource("CircleShape2D_8i3gn")
 
 [node name="Trim6" type="Sprite2D" parent="Trims"]
-position = Vector2(833, 437)
+position = Vector2(854, 353)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_1bfk1")
 region_enabled = true
@@ -108,7 +108,7 @@ monitorable = false
 shape = SubResource("CircleShape2D_8i3gn")
 
 [node name="Trim7" type="Sprite2D" parent="Trims"]
-position = Vector2(1131, 318)
+position = Vector2(1109, 273)
 rotation = 2.57436
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_1bfk1")

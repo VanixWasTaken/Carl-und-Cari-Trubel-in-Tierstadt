@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=78 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
 [ext_resource type="Texture2D" uid="uid://p003wtefrdrs" path="res://Assets/Art/Environment/Map/Big Map/map_no_lab_no_gardencenter.png" id="2_0t1vf"]
@@ -37,14 +37,12 @@
 [ext_resource type="Texture2D" uid="uid://bw1t31kgrjkq0" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist_hovered.png" id="17_wo11y"]
 [ext_resource type="Texture2D" uid="uid://b6xy6cf73iyv0" path="res://Assets/Art/UI/Buttons/Download Buttons/download_button_dark.png" id="18_aj3c6"]
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="18_bp1yi"]
-[ext_resource type="VideoStream" path="res://Assets/Videos/moving_to_laboratory_video.ogv" id="18_dkhfr"]
 [ext_resource type="Texture2D" uid="uid://bay5hyslmqkb3" path="res://Assets/Art/UI/Buttons/Download Buttons/download_button_light.png" id="19_spaiw"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/NPCs/npc_handler.gd" id="31_1481n"]
 [ext_resource type="PackedScene" uid="uid://dmhdb71htj10k" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_npc.tscn" id="31_mll1x"]
 [ext_resource type="PackedScene" uid="uid://cwwvy0q003fg7" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/barbara_npc.tscn" id="32_683wj"]
 [ext_resource type="PackedScene" uid="uid://2d2fjj4yd732" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/sven_npc.tscn" id="33_nmhjc"]
 [ext_resource type="PackedScene" uid="uid://cfoesiummvma2" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_and_barbara.tscn" id="34_clinu"]
-[ext_resource type="Texture2D" uid="uid://ctl0nsihtjfqv" path="res://Assets/Art/UI/HUD/Map/gardener_note.png" id="37_pespd"]
 [ext_resource type="Texture2D" uid="uid://bnp15vxbd7j0o" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof1.png" id="38_45lni"]
 [ext_resource type="Texture2D" uid="uid://cqsgr47ctm5ry" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof2.png" id="39_f5aq0"]
 [ext_resource type="Texture2D" uid="uid://bc6tyunen4shb" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof3.png" id="40_askvk"]
@@ -907,7 +905,6 @@ texture = ExtResource("15_jo7ff")
 [node name="BigNote" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNodeBig"]
 z_index = 3
 position = Vector2(1044, 605)
-texture = ExtResource("37_pespd")
 
 [node name="CloseBigGardener" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNodeBig"]
 z_index = 3
@@ -975,64 +972,6 @@ anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Help Movement" type="TextureRect" parent="HUD"]
-offset_left = -1.0
-offset_right = 1919.0
-offset_bottom = 1080.0
-texture = ExtResource("9_lq8sc")
-
-[node name="Label" type="Label" parent="HUD/Help Movement"]
-layout_mode = 0
-offset_left = 1000.0
-offset_top = 256.0
-offset_right = 1644.0
-offset_bottom = 1038.0
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 15
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("17_hkm8s")
-theme_override_font_sizes/font_size = 34
-text = "Im fertigen Spiel kann man ganz Tierstadt frei erkunden und die verschiedensten Ausbildungsberufe ausprobieren.
-
- In der jetzigen Version existieren aber nur das Chemie-Labor und die Gärtnerei. Du kannst die Stadt zwar jetzt schon erkunden, aber den meisten Spaß findest du in diesen Berufen."
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="HUD/Help Movement"]
-layout_mode = 0
-offset_left = 292.0
-offset_top = 426.0
-offset_right = 1572.0
-offset_bottom = 1146.0
-scale = Vector2(0.55, 0.55)
-stream = ExtResource("18_dkhfr")
-autoplay = true
-loop = true
-
-[node name="TextureButton" type="TextureButton" parent="HUD/Help Movement"]
-layout_mode = 0
-offset_left = 1459.0
-offset_top = 163.0
-offset_right = 1690.0
-offset_bottom = 379.0
-texture_normal = ExtResource("11_um2ur")
-texture_pressed = ExtResource("15_pp1ui")
-texture_hover = ExtResource("16_ttcuk")
-
-[node name="Headline" type="Label" parent="HUD/Help Movement"]
-layout_mode = 0
-offset_left = 311.0
-offset_top = 189.0
-offset_right = 1414.0
-offset_bottom = 339.0
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("17_hkm8s")
-theme_override_font_sizes/font_size = 111
-text = "DER NÄCHSTE SCHRITT"
-
 [node name="Npcs" type="Node2D" parent="."]
 script = ExtResource("31_1481n")
 
@@ -1073,24 +1012,20 @@ position = Vector2(1464, 2184)
 [node name="CloudReveal" type="Node2D" parent="."]
 
 [node name="Cloud1" type="AnimatedSprite2D" parent="CloudReveal"]
-visible = false
 z_index = 100
-position = Vector2(2369, 1233)
-scale = Vector2(1.3, 1.3)
+position = Vector2(1554, 1159)
 sprite_frames = SubResource("SpriteFrames_lsavy")
 animation = &"cloud_open"
 
 [node name="Cloud2" type="AnimatedSprite2D" parent="CloudReveal"]
-visible = false
 z_index = 100
-position = Vector2(2301, 1625)
+position = Vector2(2138, 1040)
 sprite_frames = SubResource("SpriteFrames_lsavy")
 animation = &"cloud_open"
 
 [node name="Cloud3" type="AnimatedSprite2D" parent="CloudReveal"]
-visible = false
 z_index = 100
-position = Vector2(2640, 1596)
+position = Vector2(2808, 1286)
 sprite_frames = SubResource("SpriteFrames_lsavy")
 animation = &"cloud_open"
 
@@ -1100,7 +1035,7 @@ libraries = {
 }
 
 [node name="PanMarker" type="Marker2D" parent="CloudReveal" groups=["Marker"]]
-position = Vector2(1576, 1248)
+position = Vector2(1524, 1168)
 
 [connection signal="animation_finished" from="CloudControl/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="CloudControl/AnimationPlayer2" to="." method="_on_animation_player_2_animation_finished"]
@@ -1118,6 +1053,5 @@ position = Vector2(1576, 1248)
 [connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNoteSmall/OpenProfile" to="HUD/JobNotes" method="_on_open_profile_button_up"]
 [connection signal="button_up" from="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNodeBig/CloseBigGardener" to="HUD/JobNotes" method="_on_close_big_gardener_button_up"]
 [connection signal="button_up" from="HUD/JobNotes/DownloadExplanation/TextureButton" to="HUD/JobNotes" method="_on_texture_button_button_up"]
-[connection signal="button_up" from="HUD/Help Movement/TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="animation_finished" from="Npcs/NPCMovement" to="Npcs" method="_on_npc_movement_animation_finished"]
 [connection signal="animation_finished" from="CloudReveal/MarketPlaceAnimation" to="." method="_on_market_place_animation_animation_finished"]

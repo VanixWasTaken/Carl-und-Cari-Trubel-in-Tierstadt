@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://budv1svk408d3"]
+[gd_scene load_steps=47 format=3 uid="uid://budv1svk408d3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_paeaj"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_0p5ej"]
@@ -26,11 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://dgdio4aqc2t3b" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_toothbrush.png" id="23_spg2m"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Garden Quiz/question2.gd" id="24_5vf07"]
 [ext_resource type="Texture2D" uid="uid://rqft0ljgy2wu" path="res://Assets/Art/Environment/Quiz/quiz_garden_watering_can_icon.png" id="24_66l3b"]
-[ext_resource type="Texture2D" uid="uid://cfg41t2lkybvf" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sac_clay.png" id="27_7dxm6"]
 [ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="27_syaqf"]
-[ext_resource type="Texture2D" uid="uid://bgdlnyeqc8271" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/celery.png" id="27_u41gf"]
-[ext_resource type="Texture2D" uid="uid://cp0m8l5ouqiqo" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/cactus1.png" id="27_vjlr5"]
-[ext_resource type="Texture2D" uid="uid://cfjvwxeoxqr05" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sac_sand.png" id="28_tu3p5"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question1.gd" id="29_3wegr"]
 [ext_resource type="Texture2D" uid="uid://15echnwkgum0" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/minigame1_tree1.png" id="30_kcqny"]
 [ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/Art/Random Screens/white_screen.png" id="31_x1jbh"]
@@ -378,13 +374,13 @@ scale = Vector2(0.865239, 0.865239)
 texture = ExtResource("4_a8xe4")
 
 [node name="Label" type="Label" parent="Question3/Dialogbox"]
-offset_left = -814.804
+offset_left = -820.582
 offset_top = -137.534
-offset_right = 411.196
-offset_bottom = 49.4657
+offset_right = 415.418
+offset_bottom = 49.4655
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_1hhxo")
-theme_override_font_sizes/font_size = 58
+theme_override_font_sizes/font_size = 57
 text = "Welche Objekte gehören zur Gartenausrüstung?
 [Kreuze mehrere an]"
 
@@ -624,7 +620,6 @@ position = Vector2(269.443, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale14"]
 position = Vector2(216.557, -208)
-texture = ExtResource("27_7dxm6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale14" groups=["PhScaleAreas"]]
 position = Vector2(210.557, 202)
@@ -635,7 +630,6 @@ position = Vector2(269.443, 55)
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale13"]
 position = Vector2(212.557, 177)
-texture = ExtResource("28_tu3p5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale13" groups=["PhScaleAreas"]]
 position = Vector2(206.557, -287)
@@ -647,7 +641,6 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Lemon"]
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("27_vjlr5")
 region_rect = Rect2(39.1277, 16.3303, 200.388, 148.457)
 
 [node name="Arrow" type="Sprite2D" parent="Question2/Lemon"]
@@ -677,7 +670,6 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Soap"]
 position = Vector2(-5.00001, 13)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("27_u41gf")
 region_rect = Rect2(199.949, 133.641, 937.333, 627.487)
 
 [node name="Arrow" type="Sprite2D" parent="Question2/Soap"]
