@@ -70,9 +70,7 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("escape"): ## when esc is pressed, pause menu is created
-		print("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ")
 		if !pause_opened:
-			print("GUGUGAGA")
 			open_pause_menu()
 	if event.is_action_pressed("left_click"):
 		Input.set_custom_mouse_cursor(custom_mouse_cursor_clicked)

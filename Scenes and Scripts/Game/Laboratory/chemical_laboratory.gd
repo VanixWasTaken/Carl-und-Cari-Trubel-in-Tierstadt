@@ -8,6 +8,7 @@ var no_shader = preload("res://Shader/no_shader.tres")
 
 
 func _ready():
+	get_tree().change_scene_to_packed(next_scene)
 	var playback: AudioStreamPlaybackPolyphonic
 	$Ambience.play()
 	playback = $Ambience.get_stream_playback()
