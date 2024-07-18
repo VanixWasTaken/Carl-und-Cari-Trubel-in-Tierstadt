@@ -3,7 +3,7 @@ extends Control
 func _ready():
 	if !FileAccess.file_exists("user://savegame.save"):
 		SaveSystem.save_game()
-	SaveSystem.load_game()
+	#SaveSystem.load_game()
 
 var animation_counter = 0
 @onready var next_scene = preload("res://Scenes and Scripts/Menus/Title Screen/title_screen.tscn")

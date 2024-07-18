@@ -10,7 +10,7 @@ extends Node2D
 var mouse_inside_disabled = false
 
 func _ready():
-	SaveSystem.load_game()
+	#SaveSystem.load_game()
 	$CloudsWhoosch.play()
 	if Global.first_game_start:
 		$"VBoxContainer/Load Game".disabled = true

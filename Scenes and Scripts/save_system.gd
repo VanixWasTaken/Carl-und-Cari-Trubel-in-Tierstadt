@@ -153,10 +153,67 @@ func load_game():
 
 
 func clear_dict(): # Is used for overwriting the whole save game file on the computer to an empty dictionary. So it basically deletes the save 
-	var clear_dict = FileAccess.open("user://savegame.save", FileAccess.WRITE)
-	var empty_dict : Dictionary = {}
-	var json_string = JSON.stringify(empty_dict)
-	clear_dict.store_line(json_string)
+	var clear_dict : Dictionary = {
+		
+		"MovingAllowed" : true,
+		"Character" : "",
+		"CompletedJobs" : Global.completed_jobs,
+		"JobStarsDict" : Global.job_stars_dict,
+		"LastScene" : Global.last_scene,
+		"FirstGameStart" : true,
+		"MasterVolume" : Global.master_volume,
+		"MusicVolume" : Global.music_volume,
+		"SFXVolume" : Global.sfx_volume,
+		"DialogVolume" : Global.dialog_volume,
+		"MouseFull" : false,
+		"MouseInButton" : false,
+		"OpenTutorialDoor" : false,
+		"DialogPlaying" : false,
+		"LabCutscenePlayed" : false,
+		"CutscenePlaying" : false,
+		"TalkedToChris" : null,
+		"ShouldShoot" : false,
+		"MenuOpen" : false,
+		"TutorialHelpButtonState" : 0,
+		"LaboratoryHelpButtonState" : 0,
+		"MiniHelpButtonState" : 0,
+		"ExitCoordinates" : null,
+		"StoryDialogTracker" : Global.story_dialog_tracker,
+		"TalkedToChameleon1" : Global.talked_to_chameleon,
+		"TalkedToChameleon2" : Global.talked_to_chameleon_2,
+		"TalkedToChameleon3" : Global.talked_to_chameleon_4,
+		"ReturnLaboratory1" : Global.return_laboratory_1,
+		"ReturnLaboratory2" : Global.return_laboratory_2,
+		"ReturnLaboratory3" : Global.return_laboratory_3,
+		"InsideLaboratory" : Global.inside_laboratory,
+		"PauseOpened" : Global.pause_opened,
+		"GotBarbara" : GlobalBand.got_barbara,
+		"GotSven" : GlobalBand.got_sven,
+		"TalkedToSven1" : GlobalBand.talked_to_sven_1,
+		"CompletedQuest" : GlobalBand.completed_quest,
+		"NeededAnimation" : GlobalBand.needed_animation,
+		"ShouldEnterMinigame1" : GlobalGarden.should_enter_minigame1,
+		"TalkedToGuido1" : GlobalGarden.talked_to_guido1,
+		"TalkedToGuido2" : GlobalGarden.talked_to_guido2,
+		"TalkedToGuido3" : GlobalGarden.talked_to_guido3,
+		"TalkedToGuido4" : GlobalGarden.talked_to_guido4,
+		"TalkedToGuido5" : GlobalGarden.talked_to_guido5,
+		"TalkedToGuido6" : GlobalGarden.talked_to_guido6,
+		"LastFinishedMinigame" : GlobalGarden.last_finished_minigame,
+		"GardenHelpButtonState" : GlobalGarden.garden_help_button_state,
+		"GardenMiniHelpButtonState" : GlobalGarden.garden_mini_help_button_state,
+		"PlantPotsPlaced" : GlobalGarden.plant_pots_placed,
+		"StonePlatesPlaced" : GlobalGarden.stone_plates_placed,
+		"FlowersPlaced" : GlobalGarden.flowers_placed,
+		"BushsPlaced" : GlobalGarden.bushs_placed,
+		"CurrentStage" : GlobalGarden.current_stage,
+		"Stage2CorrectSpecs" : GlobalGarden.stage2_correct_specs,
+		"ShowedHelpProfiles" : Global.showed_profile_help,
+		"MarketReveals" : Global.showed_reveals
+		
+	}
+	
+	return clear_dict
 
 
 func _set_bus_volume(bus_index: int, value: float): #### helper function to set the last saved volume
