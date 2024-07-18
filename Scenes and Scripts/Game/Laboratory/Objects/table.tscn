@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/Objects/table.gd" id="2_uoknu"]
 [ext_resource type="Texture2D" uid="uid://chpmab32oht3h" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_thing_small.png" id="3_tc6ml"]
 [ext_resource type="Texture2D" uid="uid://cbdxyqqksrgaf" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_scale.png" id="4_8bu1p"]
-[ext_resource type="Texture2D" uid="uid://djmcekkuia1l4" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.PNG" id="5_t2lee"]
+[ext_resource type="Texture2D" uid="uid://djmcekkuia1l4" path="res://Assets/Art/Environment/Rooms/Laboratory/Objects/lab_three_flasks.png" id="5_t2lee"]
 [ext_resource type="AudioStream" uid="uid://d3fqukof07fmk" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakersetdown_var4.mp3" id="6_krhok"]
 [ext_resource type="PackedScene" uid="uid://djlralvxj7j5b" path="res://Scenes and Scripts/Game/Laboratory/Objects/glass_holder.tscn" id="7_dhx6y"]
 
