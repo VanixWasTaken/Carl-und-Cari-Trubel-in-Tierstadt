@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=3 uid="uid://v8l885c1xsm5"]
+[gd_scene load_steps=91 format=3 uid="uid://v8l885c1xsm5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/chemical_laboratory.gd" id="1_b2cfh"]
 [ext_resource type="Texture2D" uid="uid://dwuywvtsnqew" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/lab_minigame1_desk.png" id="2_ckcvh"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://cpnhalp2rm4nf" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_red_empty.png" id="7_3d18c"]
 [ext_resource type="Texture2D" uid="uid://c8b4688csb3u0" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_red_water.png" id="8_7d3u6"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Laboratory/PowderMixing/drink_holder.gd" id="9_hvdtc"]
-[ext_resource type="Texture2D" uid="uid://dypp6l6my81qe" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Drink Holder/lab_minigame1_three_flasks_purple_red_yellow.png" id="10_ggwv1"]
 [ext_resource type="AudioStream" uid="uid://cqqv5sjph5jnh" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_beakerpour_var1.mp3" id="10_gmevd"]
 [ext_resource type="AudioStream" uid="uid://dd2mln4san8k3" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_powderpour_var1.mp3" id="11_5gyvt"]
 [ext_resource type="FontFile" uid="uid://cndjys5rae2ut" path="res://Assets/Font/digital-7.ttf" id="11_g8n2i"]
@@ -55,7 +54,6 @@
 [ext_resource type="Texture2D" uid="uid://ds0bpueqrmtq6" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Powders/Yellow/lab_minigame1_pulver_container_yellow_0002.png" id="50_qrjok"]
 [ext_resource type="Texture2D" uid="uid://brm4imayxoqiu" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Water/lab_minigame1_water_container.png" id="52_mao2c"]
 [ext_resource type="Texture2D" uid="uid://ivk83onlyqfx" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Water/lab_minigame1_water_container_0001.png" id="53_5a7c7"]
-[ext_resource type="PackedScene" uid="uid://hvla4dyxh56b" path="res://Scenes and Scripts/Dialog/Laboratory Dialog/Powder Dialog/powder_dialog_1.tscn" id="54_l6ekg"]
 [ext_resource type="Texture2D" uid="uid://p2ilk57dnw46" path="res://Assets/Art/Environment/Rooms/Laboratory/Minigames/Powder Mixing/Water/lab_minigame1_water_container_0002.png" id="54_oodol"]
 [ext_resource type="AudioStream" uid="uid://4jn1hqfjg8gj" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var1.mp3" id="56_1kyrl"]
 [ext_resource type="AudioStream" uid="uid://gx0o4f5bq21g" path="res://Assets/Sound/SFX/Foley/Laboratory/sfx_laboratory_foley_watersloshing_var2.mp3" id="57_o03af"]
@@ -90,7 +88,7 @@ animations = [{
 "texture": ExtResource("8_7d3u6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_ggwv1")
+"texture": null
 }],
 "loop": true,
 "name": &"default",
@@ -480,8 +478,6 @@ unique_name_in_owner = true
 stream = ExtResource("11_5gyvt")
 volume_db = -15.0
 bus = &"SFX_Foley"
-
-[node name="DialogPowder1" parent="." instance=ExtResource("54_l6ekg")]
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(514, 473)

@@ -26,6 +26,7 @@ func _input(event):
 func _ready():
 	Global.moving_allowed = false
 	Global.dialog_playing = true
+	
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_right_dialog_box()
 ##########################################################################################
