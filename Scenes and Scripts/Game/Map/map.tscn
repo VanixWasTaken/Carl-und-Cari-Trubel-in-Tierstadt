@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://d0sg81cbdx27u"]
+[gd_scene load_steps=85 format=3 uid="uid://d0sg81cbdx27u"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/map.gd" id="1_quchc"]
 [ext_resource type="Texture2D" uid="uid://p003wtefrdrs" path="res://Assets/Art/Environment/Map/Big Map/map_no_lab_no_gardencenter.png" id="2_0t1vf"]
@@ -21,7 +21,9 @@
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Map/exit_button.gd" id="10_0oi3s"]
 [ext_resource type="Texture2D" uid="uid://drhav4j47ea2w" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button_clicked.png" id="10_s3yr3"]
 [ext_resource type="Texture2D" uid="uid://y4rakxp2wwr" path="res://Assets/Art/UI/Buttons/Profile Buttons/profile_blank_button_hovered.png" id="11_6v58m"]
+[ext_resource type="Texture2D" uid="uid://c124ct6jnbrb0" path="res://Assets/Art/Environment/Map/fairground/map_flowerpots1.png" id="11_n54vu"]
 [ext_resource type="Texture2D" uid="uid://7vqjfkop4ysv" path="res://Assets/Art/UI/Buttons/Exit Button/exit_button.png" id="11_um2ur"]
+[ext_resource type="Texture2D" uid="uid://c7uj7p8ldeabb" path="res://Assets/Art/Environment/Map/fairground/map_flowerpots2.png" id="12_jenij"]
 [ext_resource type="Texture2D" uid="uid://c6mohqehk03g4" path="res://Assets/Art/UI/Buttons/Profile Buttons/Chemist/profile_chemist.png" id="12_ub25h"]
 [ext_resource type="PackedScene" uid="uid://daswfhvjsa7jh" path="res://Scenes and Scripts/Game/Player/player.tscn" id="14_0uuvf"]
 [ext_resource type="Shader" path="res://Shader/blur.gdshader" id="14_jp8ps"]
@@ -45,9 +47,14 @@
 [ext_resource type="PackedScene" uid="uid://cfoesiummvma2" path="res://Scenes and Scripts/Game/Map/NPCs/Bandmembers/samuel_and_barbara.tscn" id="34_clinu"]
 [ext_resource type="Texture2D" uid="uid://bnp15vxbd7j0o" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof1.png" id="38_45lni"]
 [ext_resource type="Texture2D" uid="uid://cqsgr47ctm5ry" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof2.png" id="39_f5aq0"]
+[ext_resource type="Texture2D" uid="uid://bxpck0dk267i4" path="res://Assets/Art/UI/HUD/Map/chemist_note.png" id="39_kwjq7"]
 [ext_resource type="Texture2D" uid="uid://bc6tyunen4shb" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof3.png" id="40_askvk"]
+[ext_resource type="Texture2D" uid="uid://1d7sok60uf2" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener.png" id="40_pq0tf"]
 [ext_resource type="Texture2D" uid="uid://b14g3edwos5r3" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof4.png" id="41_1kfbd"]
+[ext_resource type="Texture2D" uid="uid://ctxk5ymgd82bg" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener_left_clicked.png" id="41_irx8l"]
+[ext_resource type="Texture2D" uid="uid://c2rgecv620lsc" path="res://Assets/Art/UI/Buttons/Profile Buttons/Gardener/profile_gardener_hovered.png" id="42_7kdeu"]
 [ext_resource type="Texture2D" uid="uid://c0dmkr4thtyne" path="res://Assets/Art/Environment/Map/Clouds/cloud_poof5.png" id="42_71eha"]
+[ext_resource type="Texture2D" uid="uid://ctl0nsihtjfqv" path="res://Assets/Art/UI/HUD/Map/gardener_note.png" id="43_y58f8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_llcyl"]
 animations = [{
@@ -646,21 +653,27 @@ visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1302, 346)
+texture = ExtResource("11_n54vu")
 
 [node name="Sprite2D6" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1221, 404)
+texture = ExtResource("12_jenij")
 
 [node name="Sprite2D2" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1386, 404)
+texture = ExtResource("12_jenij")
 
 [node name="Sprite2D3" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1305, 484)
+texture = ExtResource("11_n54vu")
 
 [node name="Sprite2D4" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1197, 790)
+texture = ExtResource("11_n54vu")
 
 [node name="Sprite2D5" type="Sprite2D" parent="MapTest/Objects/Plantpots"]
 position = Vector2(1564, 757)
+texture = ExtResource("11_n54vu")
 
 [node name="Laboratory Building" parent="." groups=["Buildings"] instance=ExtResource("2_ab8es")]
 position = Vector2(272, 142)
@@ -856,6 +869,7 @@ texture = ExtResource("15_jo7ff")
 z_index = 3
 position = Vector2(1054, 606)
 scale = Vector2(1.01, 1.01)
+texture = ExtResource("39_kwjq7")
 
 [node name="QuitChemistBig" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/ChemistNoteBig/Sprite2D"]
 z_index = 3
@@ -890,6 +904,9 @@ offset_left = 960.41
 offset_top = 251.0
 offset_right = 1169.41
 offset_bottom = 511.0
+texture_normal = ExtResource("40_pq0tf")
+texture_pressed = ExtResource("41_irx8l")
+texture_hover = ExtResource("42_7kdeu")
 
 [node name="Stars" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNoteSmall"]
 
@@ -905,6 +922,7 @@ texture = ExtResource("15_jo7ff")
 [node name="BigNote" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNodeBig"]
 z_index = 3
 position = Vector2(1044, 605)
+texture = ExtResource("43_y58f8")
 
 [node name="CloseBigGardener" type="TextureButton" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNodeBig"]
 z_index = 3
@@ -1012,18 +1030,21 @@ position = Vector2(1464, 2184)
 [node name="CloudReveal" type="Node2D" parent="."]
 
 [node name="Cloud1" type="AnimatedSprite2D" parent="CloudReveal"]
+visible = false
 z_index = 100
 position = Vector2(1554, 1159)
 sprite_frames = SubResource("SpriteFrames_lsavy")
 animation = &"cloud_open"
 
 [node name="Cloud2" type="AnimatedSprite2D" parent="CloudReveal"]
+visible = false
 z_index = 100
 position = Vector2(2138, 1040)
 sprite_frames = SubResource("SpriteFrames_lsavy")
 animation = &"cloud_open"
 
 [node name="Cloud3" type="AnimatedSprite2D" parent="CloudReveal"]
+visible = false
 z_index = 100
 position = Vector2(2808, 1286)
 sprite_frames = SubResource("SpriteFrames_lsavy")

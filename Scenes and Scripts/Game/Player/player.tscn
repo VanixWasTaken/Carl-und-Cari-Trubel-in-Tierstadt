@@ -134,6 +134,7 @@ layer = 10
 visible = false
 
 [node name="FadeAnimation" type="TextureRect" parent="CanvasLayer"]
+z_index = 4096
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

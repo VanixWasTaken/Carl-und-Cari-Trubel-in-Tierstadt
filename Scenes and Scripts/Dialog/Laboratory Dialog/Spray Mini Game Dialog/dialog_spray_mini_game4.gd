@@ -23,7 +23,9 @@ var Cari = preload("res://Assets/Art/Characters/Cari/Dialog Icon/cari_dialog.png
 ##########################################################################################
 
 
-
+func _input(event):
+	if Input.is_action_pressed("Tastatur2"):
+		_on_skip_button_pressed()
 
 
 func _ready():

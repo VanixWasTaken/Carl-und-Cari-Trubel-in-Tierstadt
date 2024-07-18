@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://budv1svk408d3"]
+[gd_scene load_steps=50 format=3 uid="uid://budv1svk408d3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/quiz_laboratory.gd" id="1_paeaj"]
 [ext_resource type="Texture2D" uid="uid://hshs1ivfmoqj" path="res://Assets/Art/UI/Menus/whole_screen_hud.png" id="2_0p5ej"]
@@ -26,9 +26,13 @@
 [ext_resource type="Texture2D" uid="uid://dgdio4aqc2t3b" path="res://Assets/Art/Environment/Quiz/quiz_question3_icon_toothbrush.png" id="23_spg2m"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Garden Quiz/question2.gd" id="24_5vf07"]
 [ext_resource type="Texture2D" uid="uid://rqft0ljgy2wu" path="res://Assets/Art/Environment/Quiz/quiz_garden_watering_can_icon.png" id="24_66l3b"]
+[ext_resource type="Texture2D" uid="uid://cfg41t2lkybvf" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sac_clay.png" id="27_84bgk"]
 [ext_resource type="Texture2D" uid="uid://dwsj3bbhrbbxo" path="res://Assets/Art/Environment/Quiz/Arrow_right.png" id="27_syaqf"]
+[ext_resource type="Texture2D" uid="uid://cfjvwxeoxqr05" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sac_sand.png" id="28_0dw3g"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Game/Quiz/Laboratory Quiz/question1.gd" id="29_3wegr"]
+[ext_resource type="Texture2D" uid="uid://cp0m8l5ouqiqo" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/PlantCare/cactus1.png" id="29_g70ee"]
 [ext_resource type="Texture2D" uid="uid://15echnwkgum0" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/CuttingTreeMinigame/minigame1_tree1.png" id="30_kcqny"]
+[ext_resource type="Texture2D" uid="uid://cbyw3mmh3mns2" path="res://Assets/Art/Environment/Rooms/Garden Center/Minigames/GroundSelect/sunflower.png" id="31_q3q6x"]
 [ext_resource type="Texture2D" uid="uid://drjbdelntho08" path="res://Assets/Art/Random Screens/white_screen.png" id="31_x1jbh"]
 [ext_resource type="AudioStream" uid="uid://c0au4soqh3llb" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var1.mp3" id="32_42n1i"]
 [ext_resource type="AudioStream" uid="uid://ccy6mhwriygjc" path="res://Assets/Sound/SFX/UI/Hover/sfx_hub_ui_hover_var3.mp3" id="33_706xw"]
@@ -42,8 +46,6 @@ default_font = ExtResource("5_1hhxo")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u63no"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ka8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bslay"]
 size = Vector2(500, 406)
@@ -613,13 +615,13 @@ texture = ExtResource("9_o2mqp")
 [node name="PhScaleIcon" type="Sprite2D" parent="Question2"]
 position = Vector2(1234, 621)
 scale = Vector2(0.5, 0.5)
-texture = SubResource("CompressedTexture2D_6ka8r")
 
 [node name="PhScale14" type="Area2D" parent="Question2/PhScaleIcon" groups=["PhScaleAreas"]]
 position = Vector2(269.443, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale14"]
 position = Vector2(216.557, -208)
+texture = ExtResource("27_84bgk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale14" groups=["PhScaleAreas"]]
 position = Vector2(210.557, 202)
@@ -630,6 +632,7 @@ position = Vector2(269.443, 55)
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/PhScaleIcon/PhScale13"]
 position = Vector2(212.557, 177)
+texture = ExtResource("28_0dw3g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question2/PhScaleIcon/PhScale13" groups=["PhScaleAreas"]]
 position = Vector2(206.557, -287)
@@ -641,6 +644,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Lemon"]
 scale = Vector2(0.3, 0.3)
+texture = ExtResource("29_g70ee")
 region_rect = Rect2(39.1277, 16.3303, 200.388, 148.457)
 
 [node name="Arrow" type="Sprite2D" parent="Question2/Lemon"]
@@ -670,6 +674,7 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Question2/Soap"]
 position = Vector2(-5.00001, 13)
 scale = Vector2(0.3, 0.3)
+texture = ExtResource("31_q3q6x")
 region_rect = Rect2(199.949, 133.641, 937.333, 627.487)
 
 [node name="Arrow" type="Sprite2D" parent="Question2/Soap"]
@@ -752,7 +757,6 @@ theme_override_font_sizes/font_size = 65
 text = "Das war richtig"
 
 [node name="Question1" type="TextureRect" parent="."]
-visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_0p5ej")

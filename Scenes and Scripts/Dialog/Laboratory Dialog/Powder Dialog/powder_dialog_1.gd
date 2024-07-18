@@ -16,7 +16,9 @@ var PRESET2 = preload("res://Assets/Art/Characters/Carl/Headshot/icon_carl1.PNG"
 var PRESET3 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/chemist_headshot1.png")
 
 ##########################################################################################
-
+func _input(event):
+	if Input.is_action_pressed("Tastatur2"):
+		_on_skip_button_pressed()
 
 
 

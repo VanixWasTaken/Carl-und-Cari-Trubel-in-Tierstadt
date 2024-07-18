@@ -17,7 +17,9 @@ var PRESET2 = preload("res://Assets/Art/Characters/Chemical Chameleon/Headshot/c
 ##########################################################################################
 
 
-
+func _input(event):
+	if Input.is_action_pressed("Tastatur2"):
+		_on_skip_button_pressed()
 
 
 func _ready():

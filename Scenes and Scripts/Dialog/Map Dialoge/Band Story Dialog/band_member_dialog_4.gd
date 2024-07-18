@@ -164,18 +164,6 @@ func add_right_dialog_box():
 
 
 
-func _input(event):
-	if mouse_inside_area == true:
-		if Input.is_action_just_pressed("left_click") && dialogs == 4:
-			Global.dialog_playing = false
-			Global.moving_allowed = true
-			dialogs == 5
-			player.navigation_agent.target_position = Vector3(-21.27536, 2.513487, -0.298849) 
-			$"../Area2D".queue_free()
-			queue_free()
-
-
-
 
 
 

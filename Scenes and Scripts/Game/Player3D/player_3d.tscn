@@ -493,6 +493,7 @@ shape = SubResource("CylinderShape3D_064v7")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="FadeAnimation" type="TextureRect" parent="CanvasLayer"]
+z_index = 4096
 anchors_preset = -1
 anchor_left = 0.493
 anchor_top = 0.518

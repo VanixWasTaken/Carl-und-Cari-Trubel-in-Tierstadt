@@ -24,7 +24,9 @@ var PRESET4 = preload("res://Assets/Art/Characters/Guido/Headshot/gardener_heads
 
 ##########################################################################################
 
-
+func _input(event):
+	if Input.is_action_pressed("Tastatur2"):
+		_on_skip_button_pressed()
 
 
 

@@ -9,6 +9,9 @@ var job_buildings
 var player
 
 func _ready():
+	#Global.last_scene = "Laboratory"
+	#Global.completed_jobs.append("Laboratory Building")
+	
 	if Global.last_scene == "Laboratory":
 		$Player.global_position = Vector2(776, 2256)
 		var dialog_instance = after_lab_dialog.instantiate()
@@ -18,8 +21,7 @@ func _ready():
 		$Player.global_position = Vector2(4140, 1434)
 		var dialog_instance = after_garden_dialog.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
-		
-	if Global.last_scene == "Tutorial":
+	elif Global.last_scene == "Tutorial":
 		Global.last_scene = "Map"
 		SaveSystem.save_game()
 

@@ -277,6 +277,7 @@ texture_hover = ExtResource("15_x38x5")
 flip_h = true
 
 [node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
 offset_left = 49.0
 offset_top = 94.0
 offset_right = 271.0

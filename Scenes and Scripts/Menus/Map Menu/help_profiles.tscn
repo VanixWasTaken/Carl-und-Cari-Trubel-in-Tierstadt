@@ -33,28 +33,6 @@ Bitte denke daran bevor du gehst, klicke noch einmal auf \"download\" bei deinen
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-layout_mode = 0
-offset_left = 292.0
-offset_top = 404.0
-offset_right = 2212.0
-offset_bottom = 1492.0
-scale = Vector2(0.35, 0.35)
-stream = ExtResource("3_makcr")
-volume_db = -80.0
-autoplay = true
-loop = true
-
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 1459.0
-offset_top = 163.0
-offset_right = 1690.0
-offset_bottom = 379.0
-texture_normal = ExtResource("4_ltiuw")
-texture_pressed = ExtResource("5_6c7i7")
-texture_hover = ExtResource("6_iewgx")
-
 [node name="Headline" type="Label" parent="."]
 layout_mode = 0
 offset_left = 311.0
@@ -68,4 +46,33 @@ theme_override_fonts/font = ExtResource("2_vc7mt")
 theme_override_font_sizes/font_size = 111
 text = "Was ist ein Profil?"
 
-[connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 404.0
+offset_right = 2212.0
+offset_bottom = 1492.0
+scale = Vector2(0.35, 0.35)
+stream = ExtResource("3_makcr")
+volume_db = -80.0
+autoplay = true
+loop = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = -108.0
+offset_top = -60.0
+offset_right = 1962.0
+offset_bottom = 1151.0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 1459.0
+offset_top = 163.0
+offset_right = 1690.0
+offset_bottom = 379.0
+texture_normal = ExtResource("4_ltiuw")
+texture_pressed = ExtResource("5_6c7i7")
+texture_hover = ExtResource("6_iewgx")
+
+[connection signal="button_up" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_button_up"]
