@@ -15,7 +15,6 @@ func _ready():
 	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Laboratory/sfx_laboratory_ambience_ventilation_var1.mp3"), 0, -12)
 	$CanvasLayer/FadeAnimation.show()
 	$CanvasLayer/AnimationPlayer.play("fade_in")
-	add_child(first_dialog.instantiate())
 
 func _process(delta):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) && mouse_on == true:
@@ -32,3 +31,7 @@ func _on_labor_area_2d_mouse_exited():
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_out":
 		get_tree().change_scene_to_packed(next_scene)
+	elif anim_name == "fade_in":
+		print("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ")
+		var dialog = first_dialog.instantiate()
+		get_tree().get_current_scene().add_child(dialog)

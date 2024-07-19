@@ -58,15 +58,7 @@ volume_db = -80.0
 autoplay = true
 loop = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = -108.0
-offset_top = -60.0
-offset_right = 1962.0
-offset_bottom = 1151.0
-
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+[node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 1459.0
 offset_top = 163.0
 offset_right = 1690.0
@@ -75,4 +67,27 @@ texture_normal = ExtResource("4_ltiuw")
 texture_pressed = ExtResource("5_6c7i7")
 texture_hover = ExtResource("6_iewgx")
 
-[connection signal="button_up" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_button_up"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = -103.0
+offset_top = -57.0
+offset_right = 1486.0
+offset_bottom = 1141.0
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+offset_left = 1673.0
+offset_right = 1965.0
+offset_bottom = 1066.0
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer"]
+offset_top = 360.0
+offset_right = 2023.0
+offset_bottom = 1174.0
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer"]
+offset_top = -71.0
+offset_right = 2134.0
+offset_bottom = 174.0
+
+[connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
