@@ -9,10 +9,10 @@ extends Node2D
 
 var mouse_inside_disabled = false
 
+
 func _ready():
-	#SaveSystem.load_game()
 	$CloudsWhoosch.play()
-	if Global.first_game_start:
+	if !FileAccess.file_exists("user://savegame.save"):
 		$"VBoxContainer/Load Game".disabled = true
 	else:
 		$"VBoxContainer/Load Game".disabled = false
@@ -24,6 +24,8 @@ func _process(delta):
 
 # Input for usability
 func _on_start_button_up():
+	SaveSystem.reset_game()
+	
 	Global.first_game_start = false
 	$Clouds.play_backwards("default")
 	$Clouds.visible = true

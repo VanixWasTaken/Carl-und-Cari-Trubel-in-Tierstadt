@@ -152,19 +152,19 @@ func load_game():
 		_set_bus_volume(3, Global.music_volume)
 
 
-func clear_dict(): # Is used for overwriting the whole save game file on the computer to an empty dictionary. So it basically deletes the save 
-	var clear_dict : Dictionary = {
+func reset(): # Is used for deleting the existing save
+	var reset_dict : Dictionary = {
 		
 		"MovingAllowed" : true,
 		"Character" : "",
-		"CompletedJobs" : Global.completed_jobs,
-		"JobStarsDict" : Global.job_stars_dict,
-		"LastScene" : Global.last_scene,
+		"CompletedJobs" : [],
+		"JobStarsDict" : {"ChemistJob" : null},
+		"LastScene" : null,
 		"FirstGameStart" : true,
-		"MasterVolume" : Global.master_volume,
-		"MusicVolume" : Global.music_volume,
-		"SFXVolume" : Global.sfx_volume,
-		"DialogVolume" : Global.dialog_volume,
+		"MasterVolume" : 0.7,
+		"MusicVolume" : 0.7,
+		"SFXVolume" : 0.7,
+		"DialogVolume" : 0.5,
 		"MouseFull" : false,
 		"MouseInButton" : false,
 		"OpenTutorialDoor" : false,
@@ -178,42 +178,52 @@ func clear_dict(): # Is used for overwriting the whole save game file on the com
 		"LaboratoryHelpButtonState" : 0,
 		"MiniHelpButtonState" : 0,
 		"ExitCoordinates" : null,
-		"StoryDialogTracker" : Global.story_dialog_tracker,
-		"TalkedToChameleon1" : Global.talked_to_chameleon,
-		"TalkedToChameleon2" : Global.talked_to_chameleon_2,
-		"TalkedToChameleon3" : Global.talked_to_chameleon_4,
-		"ReturnLaboratory1" : Global.return_laboratory_1,
-		"ReturnLaboratory2" : Global.return_laboratory_2,
-		"ReturnLaboratory3" : Global.return_laboratory_3,
-		"InsideLaboratory" : Global.inside_laboratory,
-		"PauseOpened" : Global.pause_opened,
-		"GotBarbara" : GlobalBand.got_barbara,
-		"GotSven" : GlobalBand.got_sven,
-		"TalkedToSven1" : GlobalBand.talked_to_sven_1,
-		"CompletedQuest" : GlobalBand.completed_quest,
-		"NeededAnimation" : GlobalBand.needed_animation,
-		"ShouldEnterMinigame1" : GlobalGarden.should_enter_minigame1,
-		"TalkedToGuido1" : GlobalGarden.talked_to_guido1,
-		"TalkedToGuido2" : GlobalGarden.talked_to_guido2,
-		"TalkedToGuido3" : GlobalGarden.talked_to_guido3,
-		"TalkedToGuido4" : GlobalGarden.talked_to_guido4,
-		"TalkedToGuido5" : GlobalGarden.talked_to_guido5,
-		"TalkedToGuido6" : GlobalGarden.talked_to_guido6,
-		"LastFinishedMinigame" : GlobalGarden.last_finished_minigame,
-		"GardenHelpButtonState" : GlobalGarden.garden_help_button_state,
-		"GardenMiniHelpButtonState" : GlobalGarden.garden_mini_help_button_state,
-		"PlantPotsPlaced" : GlobalGarden.plant_pots_placed,
-		"StonePlatesPlaced" : GlobalGarden.stone_plates_placed,
-		"FlowersPlaced" : GlobalGarden.flowers_placed,
-		"BushsPlaced" : GlobalGarden.bushs_placed,
-		"CurrentStage" : GlobalGarden.current_stage,
-		"Stage2CorrectSpecs" : GlobalGarden.stage2_correct_specs,
-		"ShowedHelpProfiles" : Global.showed_profile_help,
-		"MarketReveals" : Global.showed_reveals
+		"StoryDialogTracker" : { "1": "res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn", "2": "res://Scenes and Scripts/Dialog/Map Dialoge/Band Story Dialog/band_member_dialog_4.tscn" },
+		"TalkedToChameleon1" : false,
+		"TalkedToChameleon2" : false,
+		"TalkedToChameleon3" : false,
+		"ReturnLaboratory1" : false,
+		"ReturnLaboratory2" : false,
+		"ReturnLaboratory3" : false,
+		"InsideLaboratory" : false,
+		"PauseOpened" : true,
+		"GotBarbara" : false,
+		"GotSven" : false,
+		"TalkedToSven1" : false,
+		"CompletedQuest" : false,
+		"NeededAnimation" : "",
+		"ShouldEnterMinigame1" : false,
+		"TalkedToGuido1" : false,
+		"TalkedToGuido2" : false,
+		"TalkedToGuido3" : false,
+		"TalkedToGuido4" : false,
+		"TalkedToGuido5" : false,
+		"TalkedToGuido6" : false,
+		"LastFinishedMinigame" : "NONE",
+		"GardenHelpButtonState" : 0,
+		"GardenMiniHelpButtonState" : 0,
+		"PlantPotsPlaced" : 0,
+		"StonePlatesPlaced" : 0,
+		"FlowersPlaced" : 0,
+		"BushsPlaced" : 0,
+		"CurrentStage" : 1,
+		"Stage2CorrectSpecs" : 0,
+		"ShowedHelpProfiles" : false,
+		"MarketReveals" : 0
 		
 	}
 	
-	return clear_dict
+	return reset_dict
+
+func reset_game():
+	var reset_game = FileAccess.open("user://savegame.save", FileAccess.WRITE)
+	
+	var json_string = JSON.stringify(reset())
+	
+	reset_game.store_line(json_string)
+	
+	print("ich habe resetet")
+	load_game()
 
 
 func _set_bus_volume(bus_index: int, value: float): #### helper function to set the last saved volume
