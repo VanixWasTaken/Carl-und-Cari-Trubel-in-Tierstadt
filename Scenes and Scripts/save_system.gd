@@ -159,7 +159,7 @@ func reset(): # Is used for deleting the existing save
 		"Character" : "",
 		"CompletedJobs" : [],
 		"JobStarsDict" : {"ChemistJob" : null},
-		"LastScene" : null,
+		"LastScene" : "",
 		"FirstGameStart" : true,
 		"MasterVolume" : 0.7,
 		"MusicVolume" : 0.7,
