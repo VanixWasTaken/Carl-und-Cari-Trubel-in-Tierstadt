@@ -1,13 +1,30 @@
-[gd_scene load_steps=8 format=3 uid="uid://e4r7tr4ehdvf"]
+[gd_scene load_steps=12 format=3 uid="uid://e4r7tr4ehdvf"]
 
 [ext_resource type="Texture2D" uid="uid://bpywfhfuipagx" path="res://Assets/Art/UI/Dialogue/dialog_box_right.png" id="1_0vqlu"]
 [ext_resource type="Texture2D" uid="uid://qjonkcxii7on" path="res://Assets/Art/UI/Dialogue/character_profile.png" id="2_udd3f"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Dialog/Ground Structure/speech_bubble_right.gd" id="2_vrf23"]
 [ext_resource type="Texture2D" uid="uid://qo6lddnymkei" path="res://Assets/Art/UI/Dialogue/dialog_box_name.png" id="3_m015v"]
 [ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="4_r4dgm"]
 [ext_resource type="Texture2D" uid="uid://cdguiyykjh7vj" path="res://Assets/Art/Random Screens/black_screen.png" id="5_hf1xl"]
 
+[sub_resource type="Animation" id="Animation_hw3f2"]
+resource_name = "line2"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
 [sub_resource type="Animation" id="Animation_3wviw"]
-resource_name = "new_animation"
+resource_name = "line1"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -21,9 +38,44 @@ tracks/0/keys = {
 "values": [0.0, 1.0]
 }
 
+[sub_resource type="Animation" id="Animation_00o33"]
+resource_name = "line3"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_66u0e"]
+resource_name = "line4"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ou2b2"]
 _data = {
-"new_animation": SubResource("Animation_3wviw")
+"line1": SubResource("Animation_3wviw"),
+"line2": SubResource("Animation_hw3f2"),
+"line3": SubResource("Animation_00o33"),
+"line4": SubResource("Animation_66u0e")
 }
 
 [node name="SpeechBubbleRight" type="TextureRect"]
@@ -33,6 +85,7 @@ offset_right = 1876.0
 offset_bottom = 1011.0
 mouse_filter = 2
 texture = ExtResource("1_0vqlu")
+script = ExtResource("2_vrf23")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -43,6 +96,7 @@ offset_bottom = 422.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_r4dgm")
 theme_override_font_sizes/normal_font_size = 36
+text = "Textaa"
 scroll_active = false
 visible_characters = 0
 visible_characters_behavior = 1
@@ -61,7 +115,6 @@ root_node = NodePath("../RichTextLabel")
 libraries = {
 "": SubResource("AnimationLibrary_ou2b2")
 }
-autoplay = "new_animation"
 
 [node name="NameBubble" type="TextureRect" parent="."]
 layout_mode = 0
@@ -92,3 +145,5 @@ offset_right = 1161.0
 offset_bottom = 644.0
 mouse_filter = 2
 texture = ExtResource("5_hf1xl")
+
+[connection signal="finished" from="RichTextLabel" to="." method="_on_rich_text_label_finished"]
