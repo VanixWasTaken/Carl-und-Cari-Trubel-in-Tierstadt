@@ -3,6 +3,7 @@ extends Node2D
 @onready var next_scene = preload("res://Scenes and Scripts/Menus/Main Menu/main_menu.tscn")
 
 func _ready():
+	$"Alpha Label".text = Global.version
 	MusicController._play_music("welcome", "title", -9, 0)
 	await get_tree().create_timer(0.5).timeout
 	$Button.global_position = Vector2.ZERO

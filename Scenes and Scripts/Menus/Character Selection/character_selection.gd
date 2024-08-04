@@ -1,6 +1,9 @@
 extends Node2D
 @onready var tutorial_scene = preload("res://Scenes and Scripts/Game/Tutorial/tutorial.tscn")
 
+func _ready():
+	$"Alpha Label".text = Global.version
+
 func _on_carl_button_button_up():
 	Global.character = "Carl"
 	$CanvasLayer/AnimationPlayer.play("fade_out")

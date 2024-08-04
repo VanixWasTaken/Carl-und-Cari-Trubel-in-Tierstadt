@@ -62,7 +62,6 @@ func save():  # saves the current stats as a dictionary
 		"Stage2CorrectSpecs" : GlobalGarden.stage2_correct_specs,
 		"ShowedHelpProfiles" : Global.showed_profile_help,
 		"MarketReveals" : Global.showed_reveals,
-		"Version" : Global.version
 	}
 	
 	return save_dict
@@ -123,7 +122,6 @@ func load_game():
 		Global.return_laboratory_3 = node_data["ReturnLaboratory3"]
 		Global.inside_laboratory = node_data["InsideLaboratory"]
 		Global.pause_opened = node_data["PauseOpened"]
-		Global.version = node_data["Version"]
 		GlobalBand.got_barbara = node_data["GotBarbara"]
 		GlobalBand.got_sven = node_data["GotSven"]
 		GlobalBand.talked_to_sven_1 = node_data["TalkedToSven1"]
@@ -211,7 +209,6 @@ func reset(): # Is used for deleting the existing save
 		"Stage2CorrectSpecs" : 0,
 		"ShowedHelpProfiles" : false,
 		"MarketReveals" : 0,
-		"Version" : "Version Error"
 	}
 	
 	return reset_dict
