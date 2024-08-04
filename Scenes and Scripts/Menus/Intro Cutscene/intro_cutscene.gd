@@ -6,8 +6,8 @@ var button_pressed = 0
 var narrator_count = 0
 
 
-
 func _ready():
+	$"Alpha Label".text = Global.version
 	MusicController._play_music("adventure", "map", -21, 1.125)
 
 

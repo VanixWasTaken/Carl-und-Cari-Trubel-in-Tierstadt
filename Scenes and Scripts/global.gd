@@ -1,5 +1,7 @@
 extends Node
 
+var version = "Version 1.3.0" #save
+
 var mouse_full = false #save
 var mouse_in_button = false # save
 var moving_allowed = true #save

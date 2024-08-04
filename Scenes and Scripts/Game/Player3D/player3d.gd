@@ -7,6 +7,7 @@ var last_direction : String
 
 
 func _ready():
+	$"CanvasLayer/Alpha Label".text = Global.version
 	$CanvasLayer/FadeAnimation.visible = true
 	if Global.character == "Carl"|| Global.character == "":
 		$AnimatedSprite3D.play("carl_idle_left")

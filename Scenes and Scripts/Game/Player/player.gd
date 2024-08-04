@@ -11,6 +11,7 @@ var footsteps_playing = false
 
 func _ready():
 	$CanvasLayer.show()
+	$"CanvasLayer/Alpha Label".text = Global.version
 	if Global.character =="Carl":
 		$AnimatedSprite2D.play("carl_animation")
 	elif Global.character == "Cari":

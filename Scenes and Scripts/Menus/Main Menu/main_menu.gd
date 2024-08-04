@@ -11,6 +11,7 @@ var mouse_inside_disabled = false
 
 
 func _ready():
+	$"Alpha Label".text = Global.version
 	MusicController._play_music("welcome", "title", -18, 0)
 	$CloudsWhoosch.play()
 	if !FileAccess.file_exists("user://savegame.save"):

@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	$"Alpha Label".text = Global.version
 	if !FileAccess.file_exists("user://savegame.save"):
 		SaveSystem.save_game()
 	SaveSystem.load_game()
