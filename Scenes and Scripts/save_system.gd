@@ -109,7 +109,12 @@ func load_game():
 		Global.talked_to_chris = node_data["TalkedToChris"]
 		Global.should_shoot = node_data["ShouldShoot"]
 		Global.menu_open = node_data["MenuOpen"]
-		Global.tutorial_help_button_state = node_data["TutorialHelpButtonState"]
+		
+		if Global.tutorial_help_button_state == node_data["TutorialHelpButtonState"]:
+			Global.tutorial_help_button_state = node_data["TutorialHelpButtonState"]
+		else:
+			Global.tutorial_help_button_state = 0
+		
 		Global.laboratory_help_button_state = node_data["LaboratoryHelpButtonState"]
 		Global.mini_help_button_state = node_data["MiniHelpButtonState"]
 		Global.exit_coordinates = node_data["ExitCoordinates"]
