@@ -8,7 +8,7 @@ var area = "Garden"
 ### area = get_tree().get_current_scene().name auskommentieren und die area oben auf
 ### die entsprechende szene setzen (Garten = Garden, Labor = Laboratory)
 func _ready():
-	#area = get_tree().get_current_scene().name ### findet raus wo wir grade sind
+	area = get_tree().get_current_scene().name ### findet raus wo wir grade sind
 	Global.menu_open = true
 	match area:
 		"Laboratory":

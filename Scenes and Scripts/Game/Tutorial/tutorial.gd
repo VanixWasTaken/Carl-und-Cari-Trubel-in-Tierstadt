@@ -20,7 +20,7 @@ func _ready():
 	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_creaks.mp3"))
 	playback.play_stream(load("res://Assets/Sound/SFX/Ambience/Tutorial/sfx_tutorial_ambience_wind.mp3"))
 	
-	MusicController._play_music("learning_by_doing", "tutorial", -18)
+	MusicController._play_music("learning_by_doing", "tutorial", -18, 0)
 	
 	#                   BARKS
 	var barkies = AudioStreamRandomizer.new()
