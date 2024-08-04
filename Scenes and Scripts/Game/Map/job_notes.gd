@@ -121,15 +121,16 @@ func _on_open_notes_button_up():
 						$JobNoteMenu/ChemistNoteSmall/Stars.texture = five_star
 				elif jobs == "GardenJob":
 					if Global.job_stars_dict["GardenJob"] == 1:
-						$JobNoteMenu/ChemistNoteSmall/Stars.texture = one_star
+						$JobNoteMenu/Gardener/GardenerNoteSmall/Stars.texture = one_star
 					elif Global.job_stars_dict["GardenJob"] == 2:
-						$JobNoteMenu/ChemistNoteSmall/Stars.texture = two_star
+						print("pimmel")
+						$JobNoteMenu/Gardener/GardenerNoteSmall/Stars.texture = two_star
 					elif Global.job_stars_dict["GardenJob"] == 3:
-						$JobNoteMenu/ChemistNoteSmall/Stars.texture = three_star
+						$JobNoteMenu/Gardener/GardenerNoteSmall/Stars.texture = three_star
 					elif Global.job_stars_dict["GardenJob"] == 4:
-						$JobNoteMenu/ChemistNoteSmall/Stars.texture = four_star
+						$JobNoteMenu/Gardener/GardenerNoteSmall/Stars.texture = four_star
 					elif Global.job_stars_dict["GardenJob"] == 5:
-						$JobNoteMenu/ChemistNoteSmall/Stars.texture = five_star
+						$JobNoteMenu/Gardener/GardenerNoteSmall/Stars.texture = five_star
 
 
 

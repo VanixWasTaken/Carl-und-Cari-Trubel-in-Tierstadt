@@ -59,6 +59,7 @@ autoplay = true
 loop = true
 
 [node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1459.0
 offset_top = 163.0
 offset_right = 1690.0

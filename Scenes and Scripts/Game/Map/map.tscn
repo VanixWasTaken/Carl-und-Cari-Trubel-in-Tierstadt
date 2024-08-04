@@ -909,6 +909,8 @@ texture_pressed = ExtResource("41_irx8l")
 texture_hover = ExtResource("42_7kdeu")
 
 [node name="Stars" type="Sprite2D" parent="HUD/JobNotes/JobNoteMenu/Gardener/GardenerNoteSmall"]
+position = Vector2(1068, 513)
+scale = Vector2(0.1, 0.1)
 
 [node name="GardenerNodeBig" type="Node2D" parent="HUD/JobNotes/JobNoteMenu/Gardener"]
 visible = false
