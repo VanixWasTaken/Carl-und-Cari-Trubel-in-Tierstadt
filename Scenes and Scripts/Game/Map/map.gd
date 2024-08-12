@@ -4,6 +4,7 @@ extends Node2D
 @onready var after_garden_dialog = preload("res://Scenes and Scripts/Dialog/Map Dialoge/After Job Dialog/after_garden_dialog.tscn")
 @onready var main_story_dialog_1 = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Bianca Dialog/bianca_dialog_1.tscn")
 @onready var profile_help = preload("res://Scenes and Scripts/Menus/Map Menu/help_profiles.tscn")
+@onready var already_visited_dialog = preload("res://Scenes and Scripts/Dialog/Map Dialoge/already_visited_job_dialog.tscn")
 var beta_end = preload("res://Scenes and Scripts/Menus/Beta End Screen/beta_end_screen.tscn")
 var job_buildings
 var player

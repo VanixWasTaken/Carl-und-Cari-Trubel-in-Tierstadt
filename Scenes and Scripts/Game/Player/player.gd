@@ -134,3 +134,14 @@ func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_in":
 		Global.cutscene_playing = false
 		Global.moving_allowed = true
+
+#func check_jobs(building_name: String):
+	#if Global.completed_jobs.size() != 0:
+		#for job in Global.completed_jobs:
+			#print(job)
+			#if job == building_name:
+				#return true
+			#else:
+				#return false
+	#else:
+		#return false
