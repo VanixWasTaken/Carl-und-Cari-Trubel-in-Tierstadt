@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://c7d1nwvtnotji" path="res://Scenes and Scripts/Help Button/help_button.tscn" id="1_qjf5a"]
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="2_j6fr8"]
-[ext_resource type="Texture2D" uid="uid://bsld80bjwoc0t" path="res://Assets/Grids/grid_floor.png" id="3_2qcod"]
-[ext_resource type="Texture2D" uid="uid://0wy17083vmt4" path="res://Assets/Grids/grid_back.png" id="4_ywast"]
+[ext_resource type="Texture2D" uid="uid://bsrxe404bcema" path="res://Assets/Art/Environment/Rooms/Workshop/Walls/workshop_floor.png" id="3_og8ll"]
+[ext_resource type="Texture2D" uid="uid://dcxfn06x3knlr" path="res://Assets/Art/Environment/Rooms/Workshop/Walls/workshop_back.png" id="4_8bwva"]
 [ext_resource type="Texture2D" uid="uid://vyj7rjd5tjnc" path="res://Assets/Grids/grid_sides.png" id="5_e7smd"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5mby5"]
@@ -27,7 +27,7 @@ size = Vector3(19.3163, 1, 0.201752)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_858ri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vis0"]
-albedo_texture = ExtResource("3_2qcod")
+albedo_texture = ExtResource("3_og8ll")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t244t"]
 size = Vector2(59, 10)
@@ -36,7 +36,7 @@ size = Vector2(59, 10)
 size = Vector3(59.08, 1, 15.4632)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wn6hy"]
-albedo_texture = ExtResource("4_ywast")
+albedo_texture = ExtResource("4_8bwva")
 
 [sub_resource type="QuadMesh" id="QuadMesh_mw0nr"]
 size = Vector2(59, 16)
@@ -176,6 +176,8 @@ stream = SubResource("AudioStreamPolyphonic_75e5b")
 bus = &"SFX"
 
 [node name="Objects" type="Node3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="Objects"]
 
 [editable path="UI/HelpButton"]
 [editable path="Player"]
