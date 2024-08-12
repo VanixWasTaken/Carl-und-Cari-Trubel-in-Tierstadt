@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://1qmkagu18oq0" path="res://Scenes and Scripts/Game/Player3D/player_3d.tscn" id="2_j6fr8"]
 [ext_resource type="Texture2D" uid="uid://bsrxe404bcema" path="res://Assets/Art/Environment/Rooms/Workshop/Walls/workshop_floor.png" id="3_og8ll"]
 [ext_resource type="Texture2D" uid="uid://dcxfn06x3knlr" path="res://Assets/Art/Environment/Rooms/Workshop/Walls/workshop_back.png" id="4_8bwva"]
-[ext_resource type="Texture2D" uid="uid://vyj7rjd5tjnc" path="res://Assets/Grids/grid_sides.png" id="5_e7smd"]
+[ext_resource type="Texture2D" uid="uid://8iv5u3e412fm" path="res://Assets/Art/Environment/Rooms/Workshop/Walls/workshop_left.png" id="5_rxnf1"]
 [ext_resource type="Texture2D" uid="uid://b35gekn5s4peo" path="res://Assets/Art/Environment/Rooms/Workshop/Walls/workshop_right.png" id="6_0rqii"]
 [ext_resource type="Texture2D" uid="uid://fuyhf2fx2coc" path="res://Assets/Art/Environment/Rooms/Workshop/Objects/workshop_sawtable.png" id="7_88k3y"]
 [ext_resource type="Texture2D" uid="uid://dbl5ydbvhpcxg" path="res://Assets/Art/Environment/Rooms/Workshop/Objects/workshop_pipepit.png" id="8_lnwyw"]
@@ -52,7 +52,7 @@ size = Vector2(59, 16)
 size = Vector3(10.0164, 1, 15.8657)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0t12x"]
-albedo_texture = ExtResource("5_e7smd")
+albedo_texture = ExtResource("5_rxnf1")
 
 [sub_resource type="QuadMesh" id="QuadMesh_t24k3"]
 size = Vector2(10, 16)
