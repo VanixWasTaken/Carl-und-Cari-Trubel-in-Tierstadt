@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://n3p1kx407p77"]
+[gd_scene load_steps=6 format=3 uid="uid://n3p1kx407p77"]
 
-[ext_resource type="Texture2D" uid="uid://ciiuci5no27wg" path="res://Assets/Art/UI/HUD/Map/map_hud.png" id="1_h6bc1"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Menus/Credits/credits.gd" id="1_u2qbn"]
-[ext_resource type="FontFile" uid="uid://dchkjqker6h15" path="res://Assets/Font/Margarine-Regular.ttf" id="2_aydq3"]
+[ext_resource type="Texture2D" uid="uid://c428es58p50q7" path="res://Assets/Art/UI/Menus/Credits/credits_menu.png" id="2_x4q5v"]
 [ext_resource type="Texture2D" uid="uid://bagfqcw5jgjg3" path="res://Assets/Art/UI/Buttons/Zurück Button/zurück_button.png" id="3_dqijv"]
 [ext_resource type="Texture2D" uid="uid://cfx4mjux32qlv" path="res://Assets/Art/UI/Buttons/Zurück Button/zurück_button_dark.png" id="4_8fmcx"]
 [ext_resource type="Texture2D" uid="uid://g40m4yqqgyxy" path="res://Assets/Art/UI/Buttons/Zurück Button/zurück_button_light.png" id="5_6r85l"]
@@ -10,263 +9,24 @@
 [node name="Credits" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 960.0
-offset_top = 540.0
-offset_right = 960.0
-offset_bottom = 540.0
 script = ExtResource("1_u2qbn")
 
 [node name="Credits" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -1010.0
-offset_top = -590.0
-offset_right = 1010.0
-offset_bottom = 590.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("1_h6bc1")
-
-[node name="Label" type="Label" parent="Credits"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -694.0
-offset_top = 182.0
-offset_right = -91.0
-offset_bottom = 318.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 100
-text = "Mitwirkende"
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_x4q5v")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 316.0
-offset_top = -407.0
-offset_right = 1228.0
-offset_bottom = -100.0
+offset_left = 1449.0
+offset_top = 15.0
+offset_right = 2361.0
+offset_bottom = 322.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_dqijv")
 texture_pressed = ExtResource("4_8fmcx")
 texture_hover = ExtResource("5_6r85l")
-
-[node name="Name" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -642.0
-offset_top = -147.0
-offset_right = 642.0
-offset_bottom = 227.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(642, 187)
-theme_override_constants/separation = 200
-
-[node name="Top Row" type="HBoxContainer" parent="Name"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 120
-alignment = 1
-
-[node name="Yoshi" type="Label" parent="Name/Top Row"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 25
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 64
-text = "Yusuf Möller"
-
-[node name="Rolle" type="Label" parent="Name/Top Row/Yoshi"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 34.5
-offset_right = 150.0
-offset_bottom = 95.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 45
-text = "Technische Leitung"
-
-[node name="Simon" type="Label" parent="Name/Top Row"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 25
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 64
-text = "Simon Hübsch"
-
-[node name="Rolle" type="Label" parent="Name/Top Row/Simon"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 34.5
-offset_right = 150.0
-offset_bottom = 95.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 45
-text = "Kreative Leitung"
-horizontal_alignment = 1
-
-[node name="Lars" type="Label" parent="Name/Top Row"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 25
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 64
-text = "Lars Kling"
-
-[node name="Rolle" type="Label" parent="Name/Top Row/Lars"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 34.5
-offset_right = 150.0
-offset_bottom = 95.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 45
-text = "Geräusche und Musik"
-horizontal_alignment = 1
-
-[node name="Lower Row" type="HBoxContainer" parent="Name"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 120
-alignment = 1
-
-[node name="Josef" type="Label" parent="Name/Lower Row"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 25
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 64
-text = "Josef Killinger"
-
-[node name="Rolle" type="Label" parent="Name/Lower Row/Josef"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 34.5
-offset_right = 150.0
-offset_bottom = 95.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 45
-text = "Grafische Leitung"
-horizontal_alignment = 1
-
-[node name="Lena" type="Label" parent="Name/Lower Row"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 25
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 64
-text = "Lena Wölk"
-
-[node name="Rolle" type="Label" parent="Name/Lower Row/Lena"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 34.5
-offset_right = 150.0
-offset_bottom = 95.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 45
-text = "Grafiken"
-horizontal_alignment = 1
-
-[node name="Jasper" type="Label" parent="Name/Lower Row"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 25
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 64
-text = "Jasper Freh"
-
-[node name="Rolle" type="Label" parent="Name/Lower Row/Jasper"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 34.5
-offset_right = 150.0
-offset_bottom = 95.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.819608, 0.415686, 0.262745, 1)
-theme_override_colors/font_outline_color = Color(0.227451, 0.223529, 0.290196, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("2_aydq3")
-theme_override_font_sizes/font_size = 45
-text = "Erzählung"
-horizontal_alignment = 1
 
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
