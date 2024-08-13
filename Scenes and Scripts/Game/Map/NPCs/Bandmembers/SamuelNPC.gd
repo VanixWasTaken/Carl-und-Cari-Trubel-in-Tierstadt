@@ -36,8 +36,7 @@ func _on_area_2d_body_entered(body):
 
 func start_dialog():
 	if !Global.dialog_playing:
-		var dialog_instance
-		dialog_instance = dialog_scene.instantiate()
+		var dialog_instance = dialog_scene.instantiate()
 		get_tree().get_current_scene().add_child(dialog_instance)
 		$"..".show_barbara()
 
