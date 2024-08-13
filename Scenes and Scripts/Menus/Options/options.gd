@@ -16,15 +16,14 @@ signal click
 func _ready():
 	
 	names = [Master, Dialog, SFX, Music]
-	
-	Master.value = Global.master_volume
-	Music.value = Global.music_volume
-	SFX.value = Global.sfx_volume
-	Dialog.value = Global.dialog_volume
 	_set_bus_volume(0, Global.master_volume)
-	_set_bus_volume(1, Global.music_volume)
+	_set_bus_volume(1, Global.dialog_volume)
 	_set_bus_volume(2, Global.sfx_volume)
-	_set_bus_volume(3, Global.dialog_volume)
+	_set_bus_volume(3, Global.music_volume)
+	Master.value = Global.master_volume
+	Dialog.value = Global.dialog_volume
+	SFX.value = Global.sfx_volume
+	Music.value = Global.music_volume
 
 
 func _on_texture_button_button_up():
