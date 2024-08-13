@@ -41,12 +41,13 @@ func _ready():
 	PRESET2 = Cari
 	PRESET3 = Samuel
 	if Global.completed_jobs. size() != 0:
-		if Global.completed_jobs[0] == "Laboratory Building":
-			next_job = "von der Gärtnerei"
-			audio_job = "garden"
-		else:
-			next_job = "vom Chemielabor"
-			audio_job = "laboratory"
+		match Global.completed_jobs[0]:
+			"Laboratory Building":
+				next_job = "von der Gärtnerei"
+				audio_job = "garden"
+			"GardenCenterBuilding":
+				next_job = "vom Chemielabor"
+				audio_job = "laboratory"
 ###############################  PUT THE STARTING SIDE HERE  #############################
 	add_left_dialog_box()
 ##########################################################################################

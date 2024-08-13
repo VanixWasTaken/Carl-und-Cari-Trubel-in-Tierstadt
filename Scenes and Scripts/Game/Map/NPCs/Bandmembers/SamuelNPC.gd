@@ -6,7 +6,7 @@ var clicked_on = false
 var dialog_scene = preload("res://Scenes and Scripts/Dialog/Map Dialoge/Band Story Dialog/band_member_dialog_1.tscn")
 
 func _ready():
-	if Global.completed_jobs.size() >= 1:
+	if Global.completed_jobs.size() == 1:
 		show()
 
 func _input(event):
@@ -42,3 +42,4 @@ func start_dialog():
 
 func _on_area_2d_body_exited(body):
 	player_inside = false
+xv

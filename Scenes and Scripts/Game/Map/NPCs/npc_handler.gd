@@ -28,11 +28,11 @@ func _on_npc_movement_animation_finished(anim_name):
 
 func show_barbara():
 	barbara.show()
-	if Global.completed_jobs.size() != 0:
+	if Global.completed_jobs.size() == 1:
 		if Global.completed_jobs[0] == "Laboratory Building":
 			GlobalBand.needed_animation = "BarbaraMarket1"
 			barbara.global_position = $BarbaraMarkers/GardenMarker.global_position
-		else:
+		elif Global.completed_jobs[0] == "GardenCenterBuilding":
 			global_position = $BarbaraMarkers/LaboratoryMarker.global_position
 			GlobalBand.needed_animation = "BarbaraMarket2"
 			barbara.global_position = $BarbaraMarkers/LaboratoryMarker.global_position
