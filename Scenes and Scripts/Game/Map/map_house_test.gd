@@ -71,9 +71,9 @@ func change_scene():
 	Global.inside_laboratory = true
 	get_tree().change_scene_to_packed(next_scene)
 
-func already_visited():
-	var visited = visited_dialog.instantiate()
-	add_child(visited)
+#func already_visited():
+	#var visited = visited_dialog.instantiate()
+	#add_child(visited)
 
 func _input(event):
 	if Input.is_action_just_released("left_click") && mouse_inside:
