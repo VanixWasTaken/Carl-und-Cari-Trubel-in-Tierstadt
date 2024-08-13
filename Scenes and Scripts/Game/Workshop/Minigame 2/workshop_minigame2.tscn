@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://kwg67shid4e3"]
+
+[ext_resource type="Texture2D" uid="uid://dqh7wr6tk2cw5" path="res://Assets/Art/Environment/Rooms/Workshop/Minigames/Minigame 2/minigame2_bg.png" id="1_t7sp7"]
+[ext_resource type="Texture2D" uid="uid://dqekygrxkv88h" path="res://Assets/Art/Environment/Rooms/Workshop/Minigames/Minigame 2/minigame2_bigpipe.png" id="3_620k3"]
+[ext_resource type="Texture2D" uid="uid://dr2uo0qfvnf6e" path="res://Assets/Art/Environment/Rooms/Workshop/Minigames/Minigame 2/minigame2_clamps.png" id="3_h4gv2"]
+[ext_resource type="Texture2D" uid="uid://dmbot2d36k5xh" path="res://Assets/Art/Environment/Rooms/Workshop/Minigames/Minigame 2/minigame2_saw.png" id="4_01paw"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Workshop/Minigame 2/pipe1.gd" id="4_6mtqt"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Workshop/Minigame 2/pipe2.gd" id="6_co7k3"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Game/Workshop/Minigame 2/pipe3.gd" id="7_kxtw2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uhdrg"]
+radius = 112.223
+height = 367.062
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_10n4g"]
+radius = 32.4117
+height = 948.042
+
+[node name="Workshop Minigame 2" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_t7sp7")
+
+[node name="Saw" type="Node2D" parent="."]
+position = Vector2(488, 558)
+
+[node name="SawSprite" type="Sprite2D" parent="Saw"]
+texture = ExtResource("4_01paw")
+
+[node name="HandleSprite" type="Sprite2D" parent="Saw"]
+z_index = 1
+position = Vector2(68, 162)
+texture = ExtResource("3_h4gv2")
+region_enabled = true
+region_rect = Rect2(34.8322, 32.1208, 92.3685, 133.1)
+
+[node name="HandleSprite2" type="Sprite2D" parent="Saw"]
+z_index = 1
+position = Vector2(211, 123)
+texture = ExtResource("3_h4gv2")
+region_enabled = true
+region_rect = Rect2(172.94, -7.05658, 98.7265, 130.393)
+
+[node name="Area2D" type="Area2D" parent="Saw"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saw/Area2D"]
+position = Vector2(85, 156)
+rotation = 1.309
+shape = SubResource("CapsuleShape2D_uhdrg")
+
+[node name="Pipes" type="Node2D" parent="."]
+
+[node name="Pipe 1" type="Area2D" parent="Pipes"]
+position = Vector2(1424, 629)
+script = ExtResource("4_6mtqt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pipes/Pipe 1"]
+texture = ExtResource("3_620k3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pipes/Pipe 1"]
+position = Vector2(-1, 6)
+rotation = 1.29689
+shape = SubResource("CapsuleShape2D_10n4g")
+
+[node name="Pipe 2" type="Area2D" parent="Pipes"]
+position = Vector2(1447, 736)
+script = ExtResource("6_co7k3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pipes/Pipe 2"]
+texture = ExtResource("3_620k3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pipes/Pipe 2"]
+position = Vector2(-1, 6)
+rotation = 1.29689
+shape = SubResource("CapsuleShape2D_10n4g")
+
+[node name="Pipe 3" type="Area2D" parent="Pipes"]
+position = Vector2(1454, 851)
+script = ExtResource("7_kxtw2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pipes/Pipe 3"]
+texture = ExtResource("3_620k3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pipes/Pipe 3"]
+position = Vector2(-1, 6)
+rotation = 1.29689
+shape = SubResource("CapsuleShape2D_10n4g")
+
+[connection signal="mouse_entered" from="Pipes/Pipe 1" to="Pipes/Pipe 1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pipes/Pipe 1" to="Pipes/Pipe 1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Pipes/Pipe 2" to="Pipes/Pipe 2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pipes/Pipe 2" to="Pipes/Pipe 2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Pipes/Pipe 3" to="Pipes/Pipe 3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pipes/Pipe 3" to="Pipes/Pipe 3" method="_on_mouse_exited"]
