@@ -42,4 +42,4 @@ func start_dialog():
 
 func _on_area_2d_body_exited(body):
 	player_inside = false
-xv
+
